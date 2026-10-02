@@ -1,0 +1,29 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 4ב
+% points: 9
+% categories: ode
+% source: exams/מבחנים/תשפב/מועד ב תשפב.pdf
+
+\begin{question}
+(9 נק') פתרו את המשוואה הדיפרנציאלית
+\[ xe^y=(x^2+1)y' \]
+\end{question}
+
+\begin{hint}
+זו משוואה פרידה: $e^{-y}y'=\frac{x}{x^2+1}$.
+\end{hint}
+
+\begin{solution}
+כיוון ש-$x^2+1>0$ ו-$e^y>0$, נוכל לכתוב
+\[ e^{-y}\,y'=\frac{x}{x^2+1}. \]
+(אין פתרונות קבועים: עבור $y\equiv c$ נקבל $xe^c=0$ לכל $x$, וזה בלתי אפשרי.) נבצע אינטגרציה של שני האגפים:
+\[ \int e^{-y}dy=\int\frac{x}{x^2+1}dx\ \Longrightarrow\ -e^{-y}=\frac12\ln(x^2+1)-C. \]
+לכן $e^{-y}=C-\frac12\ln(x^2+1)$, ומכאן
+\[ \boxed{y=-\ln\left(C-\tfrac12\ln(x^2+1)\right)},\qquad C\in\R, \]
+בתחום שבו $C-\frac12\ln(x^2+1)>0$ (בפרט נדרש $C>0$; התחום הוא $|x|<\sqrt{e^{2C}-1}$).
+
+בדיקה: $y'=\frac{\frac{x}{x^2+1}}{C-\frac12\ln(x^2+1)}=\frac{x}{x^2+1}e^{y}$, ולכן $(x^2+1)y'=xe^y$.
+\end{solution}

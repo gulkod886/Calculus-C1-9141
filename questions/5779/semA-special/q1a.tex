@@ -1,0 +1,32 @@
+% year: תשע"ט
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 1א
+% points: 10
+% categories: func-limits
+% source: exams/מבחנים/תשעט/מועד מיוחד תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle \lim_{x\to\infty}\left(1+2x-4x^2+x^4\right)^{1/\ln(2x^2+1)}$.
+\end{question}
+
+\begin{hint}
+כתבו את הביטוי בצורה $e^{\ln(\cdots)/\ln(2x^2+1)}$ והוציאו את החזקה הגבוהה ביותר מתוך כל לוגריתם.
+\end{hint}
+
+\begin{solution}
+נסמן $p(x)=1+2x-4x^2+x^4$. עבור $x$ גדול מספיק $p(x)>0$ (כי $p(x)\to\infty$), ולכן
+\[ p(x)^{1/\ln(2x^2+1)} = \exp\left(\frac{\ln p(x)}{\ln(2x^2+1)}\right). \]
+נוציא את החזקה המובילה מכל לוגריתם:
+\[ \ln p(x) = \ln\left(x^4\left(1+\tfrac{2}{x^3}-\tfrac{4}{x^2}+\tfrac{1}{x^4}\right)\right) = 4\ln x + \ln\left(1+\tfrac{2}{x^3}-\tfrac{4}{x^2}+\tfrac{1}{x^4}\right), \]
+\[ \ln(2x^2+1) = 2\ln x + \ln\left(2+\tfrac{1}{x^2}\right). \]
+כאשר $x\to\infty$, הביטויים $\ln\left(1+\tfrac{2}{x^3}-\tfrac{4}{x^2}+\tfrac{1}{x^4}\right)\to \ln 1 = 0$ ו-$\ln\left(2+\tfrac1{x^2}\right)\to\ln 2$ (רציפות הלוגריתם), ואילו $\ln x\to\infty$. נחלק מונה ומכנה ב-$\ln x$:
+\[ \frac{\ln p(x)}{\ln(2x^2+1)} = \frac{4 + \frac{\ln\left(1+\frac{2}{x^3}-\frac{4}{x^2}+\frac{1}{x^4}\right)}{\ln x}}{2+\frac{\ln\left(2+\frac{1}{x^2}\right)}{\ln x}} \xrightarrow[x\to\infty]{} \frac{4+0}{2+0}=2. \]
+(אפשר גם להשתמש בכלל לופיטל במקרה $\frac{\infty}{\infty}$: $\frac{p'(x)/p(x)}{4x/(2x^2+1)}=\frac{(4x^3-8x+2)(2x^2+1)}{4x\,p(x)}\to\frac{8}{4}=2$.)
+
+מרציפות פונקציית האקספוננט נקבל
+\[ \lim_{x\to\infty}\left(1+2x-4x^2+x^4\right)^{1/\ln(2x^2+1)} = e^{2}. \]
+\textbf{תשובה:} $e^2$.
+\end{solution}

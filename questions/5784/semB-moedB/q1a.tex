@@ -1,0 +1,25 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ב
+% number: 1א
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשפד/מועד ב תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \lim_{x\to0}\sqrt[x]{1-2x} \]
+\end{question}
+
+\begin{hint}
+כתבו $\sqrt[x]{1-2x}=(1-2x)^{1/x}=e^{\frac{\ln(1-2x)}{x}}$.
+\end{hint}
+
+\begin{solution}
+לכל $x\neq0$ קרוב ל-$0$ מתקיים $1-2x>0$, ולכן
+\[ \sqrt[x]{1-2x}=(1-2x)^{1/x}=e^{\frac{\ln(1-2x)}{x}}. \]
+נחשב את גבול המעריך. זהו גבול מהצורה $\frac00$, ולפי כלל לופיטל:
+\[ \lim_{x\to0}\frac{\ln(1-2x)}{x}=\lim_{x\to0}\frac{\frac{-2}{1-2x}}{1}=-2. \]
+מרציפות פונקציית האקספוננט נקבל
+\[ \lim_{x\to0}\sqrt[x]{1-2x}=e^{-2}=\boxed{\frac1{e^2}}. \]
+(זו גם צורה של הגבול היסודי $\lim_{t\to0}(1+t)^{1/t}=e$ עם $t=-2x$.)
+\end{solution}

@@ -1,0 +1,27 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 6ב
+% points: 9
+% categories: improper-integrals
+% source: exams/מבחנים/תשפב/מועד ב תשפב.pdf
+
+\begin{question}
+(9 נק') בדקו התכנסות של האינטגרל הלא אמיתי
+\[ \int_1^\infty\frac{\sin(\frac1x)}{2+x\sqrt{x}}dx \]
+\end{question}
+
+\begin{hint}
+האינטגרנד חיובי בקטע. השתמשו במבחן ההשוואה, עם $0<\sin t\le t$ עבור $0<t\le1$.
+\end{hint}
+
+\begin{solution}
+עבור $x\ge1$ מתקיים $0<\frac1x\le1<\pi$, ולכן $\sin\frac1x>0$, והאינטגרנד חיובי ורציף ב-$[1,\infty)$ (כך שהבעיה היחידה היא באינסוף). מהאי-שוויון $\sin t\le t$ עבור $t\ge0$:
+\[ 0<\frac{\sin(1/x)}{2+x\sqrt x}\le\frac{1/x}{x\sqrt x}=\frac{1}{x^{5/2}}. \]
+האינטגרל $\int_1^\infty\frac{dx}{x^{p}}$ מתכנס עבור $p>1$, ובפרט עבור $p=\frac52$. לפי \textbf{מבחן ההשוואה} לאינטגרלים לא אמיתיים של פונקציות אי-שליליות, האינטגרל
+\[ \int_1^\infty\frac{\sin(1/x)}{2+x\sqrt x}dx \]
+\textbf{מתכנס}.
+
+(דרך חלופית: מבחן ההשוואה הגבולי עם $g(x)=x^{-5/2}$: $\lim_{x\to\infty}\frac{f(x)}{g(x)}=\lim\frac{\sin(1/x)}{1/x}\cdot\frac{x^{3/2}}{2+x^{3/2}}=1$.)
+\end{solution}

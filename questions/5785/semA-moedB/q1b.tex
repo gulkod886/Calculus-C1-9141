@@ -1,0 +1,27 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1ב
+% points: 10
+% categories: derivatives
+% source: exams/מבחנים/תשפה/מועד ב תשפה.pdf
+
+\begin{question}
+עבור מספר ממשי $a$ נגדיר פונקציה על ידי
+\[ f(x) = \begin{cases} \dfrac{\sqrt{x+4} - 2}{x^2 + 2x}, & \text{if } x < 0 \\ a\cdot|x - 1|, & \text{if } x \ge 0 \end{cases} \]
+(10 נק') לאיזה ערך של $a$ הפונקציה גזירה בנקודה $x = 1$? נמקו.
+\end{question}
+
+\begin{hint}
+חשבו את הנגזרות החד-צדדיות של $a|x-1|$ ב-$x=1$.
+\end{hint}
+
+\begin{solution}
+בסביבה של $x = 1$ (למשל עבור $x>0$) $f(x) = a|x - 1|$, ו-$f(1) = 0$. נחשב נגזרות חד-צדדיות:
+\[ f'_+(1) = \lim_{h\to0^+}\frac{a|h| - 0}{h} = a, \qquad f'_-(1) = \lim_{h\to0^-}\frac{a|h|}{h} = \lim_{h\to 0^-}\frac{-ah}{h} = -a. \]
+$f$ גזירה ב-$1$ אם ורק אם שתי הנגזרות החד-צדדיות קיימות ושוות: $a = -a$, כלומר $a = 0$.
+במקרה זה $f \equiv 0$ ב-$[0,\infty)$ ו-$f'(1) = 0$.
+
+\textbf{תשובה:} $f$ גזירה ב-$x=1$ אם ורק אם $a = 0$.
+\end{solution}

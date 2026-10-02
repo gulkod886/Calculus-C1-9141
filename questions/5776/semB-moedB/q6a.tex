@@ -1,0 +1,47 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעו/מועד ב תשעו.pdf
+% number: 6א
+% points: 20
+% categories: func-analysis
+
+\begin{question}
+(20 נק') מצאו את תחום ההגדרה, נקודות חיתוך עם הצירים, תחומי עליה וירידה, נקודות קיצון, אסימפטוטות ותחומי קמירות וקעירות של הפונקציה הבאה:
+\[ f(x)=(x+2)e^{\frac1x}. \]
+\end{question}
+
+\begin{hint}
+לאסימפטוטה המשופעת חשבו $\lim\frac{f(x)}{x}$ ואחר כך $\lim (f(x)-x)$; השתמשו בהצבה $t=\frac1x$ ובגבול $\frac{e^t-1}{t}\to1$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} $x\neq0$.
+
+\textbf{חיתוך עם הצירים:} אין חיתוך עם ציר ה-$y$ (כי $0$ אינו בתחום). $f(x)=0\iff x+2=0$ (כי $e^{1/x}>0$), ולכן נקודת החיתוך עם ציר ה-$x$ היא $(-2,0)$. בנוסף $f<0$ עבור $x<-2$ ו-$f>0$ עבור $x>-2,\ x\ne0$.
+
+\textbf{נגזרת ראשונה:}
+\[ f'(x)=e^{1/x}+(x+2)e^{1/x}\cdot\left(-\frac1{x^2}\right)=e^{1/x}\,\frac{x^2-x-2}{x^2}=\frac{(x-2)(x+1)}{x^2}e^{1/x}. \]
+הסימן נקבע ע"י $(x-2)(x+1)$:
+\begin{itemize}
+  \item $f'>0$ ב-$(-\infty,-1)$ וב-$(2,\infty)$ -- \textbf{עולה};
+  \item $f'<0$ ב-$(-1,0)$ וב-$(0,2)$ -- \textbf{יורדת}.
+\end{itemize}
+\textbf{קיצון:} ב-$x=-1$ הנגזרת מחליפה סימן מ-$+$ ל-$-$: מקסימום מקומי $f(-1)=e^{-1}=\frac1e$. ב-$x=2$ מ-$-$ ל-$+$: מינימום מקומי $f(2)=4e^{1/2}=4\sqrt e$.
+
+\textbf{אסימפטוטות אנכיות:} כאשר $x\to0^+$, $\frac1x\to+\infty$ ולכן $e^{1/x}\to\infty$ ו-$f(x)\to 2\cdot\infty=+\infty$: $x=0$ אסימפטוטה אנכית (מימין). כאשר $x\to0^-$, $\frac1x\to-\infty$, $e^{1/x}\to0$ ו-$f(x)\to 0$ (אין אסימפטוטה משמאל; לגרף "חור" בראשית).
+
+\textbf{אסימפטוטות משופעות:} $\frac{f(x)}{x}=\left(1+\frac2x\right)e^{1/x}\to1$ כאשר $x\to\pm\infty$. כמו כן
+\[ f(x)-x=x\left(e^{1/x}-1\right)+2e^{1/x}=\frac{e^{t}-1}{t}+2e^{t}\Big|_{t=1/x}\;\xrightarrow[t\to0]{}\;1+2=3. \]
+לכן $y=x+3$ אסימפטוטה משופעת גם ב-$+\infty$ וגם ב-$-\infty$. (אין אסימפטוטה אופקית.)
+
+\textbf{נגזרת שנייה:} גוזרים את $f'(x)=\left(1-\frac1x-\frac2{x^2}\right)e^{1/x}$:
+\[ f''(x)=\left(\frac1{x^2}+\frac4{x^3}\right)e^{1/x}-\frac1{x^2}\left(1-\frac1x-\frac2{x^2}\right)e^{1/x}=\frac{5x+2}{x^4}e^{1/x}. \]
+הסימן נקבע ע"י $5x+2$:
+\begin{itemize}
+  \item $f''<0$ ב-$(-\infty,-\frac25)$ -- \textbf{קעורה} ($\cap$);
+  \item $f''>0$ ב-$(-\frac25,0)$ וב-$(0,\infty)$ -- \textbf{קמורה} ($\cup$).
+\end{itemize}
+נקודת פיתול: $x=-\frac25$, $f(-\frac25)=\frac85e^{-5/2}$.
+\end{solution}

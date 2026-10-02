@@ -1,0 +1,30 @@
+% year: תשע"ט
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 3ב
+% points: 10
+% categories: continuity, lhopital
+% source: exams/מבחנים/תשעט/מועד מיוחד תשעט.pdf
+
+\begin{question}
+(10 נק') עבור איזה ערך של $a$ פונקציה
+\[ f(x)=\begin{cases} \dfrac{1}{\ln x}-\dfrac{1}{x-1} & x\neq 1\\[2mm] a & x=1\end{cases} \]
+רציפה בתחום הגדרתה?
+\end{question}
+
+\begin{hint}
+יש לחשב $\lim_{x\to1}\left(\frac{1}{\ln x}-\frac{1}{x-1}\right)$: הביאו למכנה משותף וקבלו מקרה $\frac00$.
+\end{hint}
+
+\begin{solution}
+תחום ההגדרה של $f$ הוא $x>0$ (נדרש $\ln x$ מוגדר; בנקודה $x=1$ הפונקציה מוגדרת להיות $a$). בכל נקודה $x>0$, $x\ne1$, הפונקציה רציפה כהרכבה, הפרש ומנה של פונקציות רציפות עם מכנים שונים מאפס ($\ln x\ne0$ ו-$x-1\ne0$). לכן $f$ רציפה בתחום הגדרתה אם ורק אם היא רציפה ב-$x=1$, כלומר אם ורק אם $a=\lim_{x\to1}f(x)$.
+
+נחשב: $\displaystyle \frac{1}{\ln x}-\frac{1}{x-1} = \frac{x-1-\ln x}{(x-1)\ln x}$, מקרה $\frac{0}{0}$. לפי כלל לופיטל (המונה והמכנה גזירים בסביבה של 1):
+\[ \lim_{x\to1}\frac{x-1-\ln x}{(x-1)\ln x} = \lim_{x\to1}\frac{1-\frac1x}{\ln x+\frac{x-1}{x}} = \lim_{x\to1}\frac{x-1}{x\ln x + x-1}, \]
+שוב מקרה $\frac00$, ולפי לופיטל שוב:
+\[ \lim_{x\to1}\frac{1}{\ln x + 1 + 1} = \frac{1}{2}. \]
+(לחלופין, עם $x=1+h$: $\ln(1+h)=h-\frac{h^2}{2}+o(h^2)$, והמונה הוא $\frac{h^2}{2}+o(h^2)$ והמכנה $h^2+o(h^2)$.)
+
+\textbf{תשובה:} $a=\dfrac12$.
+\end{solution}

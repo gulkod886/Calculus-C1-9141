@@ -1,0 +1,27 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: א
+% number: 4ב
+% points: 10
+% categories: ode
+% source: exams/מבחנים/תשפה/מועד א תשפה.pdf
+
+\begin{question}
+(10 נק') מצאו את הפתרון הכללי של המשוואה הדיפרנציאלית
+\[ y' = e^{x+y} \]
+\end{question}
+
+\begin{hint}
+$e^{x+y} = e^x e^y$, ולכן זו משוואה פרידה (מפרידת משתנים).
+\end{hint}
+
+\begin{solution}
+$y' = e^x e^y$. מכיוון ש-$e^y > 0$ תמיד, אין פתרונות קבועים (עבור $y\equiv c$ היינו מקבלים $0 = e^{x+c}$, סתירה), ומותר לחלק ב-$e^y$:
+\[ e^{-y}\,y' = e^x \quad\Longrightarrow\quad \int e^{-y}\,dy = \int e^x\,dx \quad\Longrightarrow\quad -e^{-y} = e^x + c. \]
+נסמן $C = -c$: $e^{-y} = C - e^x$. הצד השמאלי חיובי, ולכן הפתרון מוגדר רק עבור $x$ שמקיימים $e^x < C$ (בפרט נדרש $C > 0$), ושם
+\[ y = -\ln\left(C - e^x\right), \qquad C > 0,\ x < \ln C. \]
+\textbf{בדיקה:} $y' = \frac{e^x}{C - e^x}$, ומצד שני $e^{x+y} = e^x\cdot\frac{1}{C - e^x}$. שווה.
+
+\textbf{תשובה:} הפתרון הכללי $y(x) = -\ln(C - e^x)$ (באופן שקול: $e^{-y} + e^x = C$), עם קבוע $C>0$, בתחום $x < \ln C$.
+\end{solution}

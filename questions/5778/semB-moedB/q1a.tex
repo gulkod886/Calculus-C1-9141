@@ -1,0 +1,27 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 1א
+% points: 10
+% categories: derivatives
+% source: exams/מבחנים/תשעח/מועד ב תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') חשבו את הנגזרת של הפונקציה $f(x)=\sin2x$ בנקודה $x$ לפי הגדרת הנגזרת (תשובה לפי טבלת הנגזרות לא תתקבל).
+\end{question}
+
+\begin{hint}
+השתמשו בזהות $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה ולפי הזהות $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$:
+\[
+\frac{\sin(2x+2h)-\sin2x}{h}=\frac{2\cos(2x+h)\sin h}{h}=2\cos(2x+h)\cdot\frac{\sin h}{h}.
+\]
+כאשר $h\to0$: $\cos(2x+h)\to\cos2x$ (רציפות הקוסינוס) ו-$\frac{\sin h}{h}\to1$ (הגבול היסודי). לכן
+\[
+(\sin2x)'=\lim_{h\to0}\frac{\sin2(x+h)-\sin2x}{h}=2\cos2x.
+\]
+\end{solution}

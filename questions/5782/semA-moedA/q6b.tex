@@ -1,0 +1,25 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 6ב
+% points: 9
+% categories: improper-integrals
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+(9 נק') חשבו את האינטגרל הלא אמיתי $\int_0^\infty xe^{-x}dx$, או הראו שאינו מתכנס.
+\end{question}
+
+\begin{hint}
+חשבו את $\int_0^R xe^{-x}dx$ באינטגרציה בחלקים, ואז השאיפו $R\to\infty$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה, $\int_0^\infty xe^{-x}dx=\lim_{R\to\infty}\int_0^R xe^{-x}dx$.
+באינטגרציה בחלקים ($u=x$, $v'=e^{-x}$, כלומר $u'=1$, $v=-e^{-x}$):
+\[ \int_0^R xe^{-x}dx=\Big[-xe^{-x}\Big]_0^R+\int_0^R e^{-x}dx=-Re^{-R}+\Big[-e^{-x}\Big]_0^R=-Re^{-R}-e^{-R}+1. \]
+כאשר $R\to\infty$: $e^{-R}\to0$, וגם $Re^{-R}=\frac{R}{e^R}\to0$ (למשל לפי כלל לופיטל: $\lim\frac{R}{e^R}=\lim\frac1{e^R}=0$). לכן
+\[ \int_0^\infty xe^{-x}dx=\lim_{R\to\infty}\left(1-Re^{-R}-e^{-R}\right)=\boxed{1}, \]
+והאינטגרל מתכנס.
+\end{solution}

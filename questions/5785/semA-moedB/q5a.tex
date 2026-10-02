@@ -1,0 +1,24 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 5א
+% points: 11
+% categories: integral-applications
+% source: exams/מבחנים/תשפה/מועד ב תשפה.pdf
+
+\begin{question}
+(11 נק') חשבו את נפח גוף הסיבוב סביב ציר ה-$x$ בקטע $[1,4]$ של הפונקציה
+\[ f(x) = \frac{\sqrt{2x+1}}{x^2 + x} \]
+\end{question}
+
+\begin{hint}
+נפח גוף הסיבוב הוא $V = \pi\int_a^b f^2(x)\,dx$. שימו לב ש-$(x^2 + x)' = 2x + 1$.
+\end{hint}
+
+\begin{solution}
+נפח גוף הסיבוב של גרף $f$ סביב ציר ה-$x$ מעל $[a,b]$ הוא $V = \pi\int_a^b f(x)^2\,dx$. כאן
+$f(x)^2 = \frac{2x+1}{(x^2 + x)^2}$, רציפה על $[1,4]$. נציב $u = x^2 + x$, $du = (2x + 1)\,dx$; כאשר $x$ עובר מ-$1$ ל-$4$, $u$ עובר מ-$2$ ל-$20$:
+\[ V = \pi\int_1^4\frac{2x+1}{(x^2+x)^2}\,dx = \pi\int_2^{20}\frac{du}{u^2} = \pi\left[-\frac1u\right]_2^{20} = \pi\left(\frac12 - \frac1{20}\right) = \frac{9\pi}{20}. \]
+\textbf{תשובה:} $V = \frac{9\pi}{20}$.
+\end{solution}

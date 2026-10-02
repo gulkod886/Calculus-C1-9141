@@ -1,0 +1,29 @@
+% year: תשפ"ג
+% semester: ב
+% moed: א
+% note: ד"ר פיטר סמובול
+% source: exams/מבחנים/תשפג/מועד א תשפג סמסטר ב.pdf
+% number: 5א
+% points: 20
+% categories: derivatives, polar-parametric
+
+\begin{question}
+(20 נק') מצאו את משוואת המשיק לגרף הפונקציה-
+\[ \begin{cases} x=\ln\left(3t^2+e\cdot t-3\right)\\ y=t^3-3t\end{cases} \]
+בנקודה $M_0(1,-2)$.
+\end{question}
+
+\begin{hint}
+מצאו תחילה את ערך הפרמטר $t_0$ המתאים לנקודה $M_0$ (שתי המשוואות צריכות להתקיים בו-זמנית), ואז השתמשו ב-$\frac{dy}{dx}=\frac{y'(t)}{x'(t)}$.
+\end{hint}
+
+\begin{solution}
+\textbf{מציאת הפרמטר:} מ-$y=-2$: $t^3-3t+2=0\iff(t-1)^2(t+2)=0$, כלומר $t=1$ או $t=-2$.
+מ-$x=1$: $3t^2+et-3=e$. עבור $t=1$: $3+e-3=e$ \checkmark. עבור $t=-2$: $12-2e-3=9-2e\neq e$ (כי $e\neq3$). לכן $t_0=1$.
+
+\textbf{הנגזרת:} לפי נוסחת הנגזרת של פונקציה הנתונה פרמטרית,
+\[ x'(t)=\frac{6t+e}{3t^2+et-3},\qquad y'(t)=3t^2-3. \]
+ב-$t_0=1$: $x'(1)=\frac{6+e}{e}\neq 0$ ו-$y'(1)=0$, ולכן
+\[ \frac{dy}{dx}\Big|_{M_0}=\frac{y'(1)}{x'(1)}=0. \]
+\textbf{משוואת המשיק:} $y-(-2)=0\cdot(x-1)$, כלומר $\boxed{y=-2}$ (משיק אופקי).
+\end{solution}

@@ -1,0 +1,42 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 1
+% points: 17
+% categories: continuity, derivatives
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+נגדיר פונקציה על ידי
+\[ f(x)=\begin{cases} x^3 \sin(\frac{5}{x}), & \text{if } x\neq 0,\\ 0, & \text{if } x=0 \end{cases} \]
+\begin{enumerate}
+  \item (6 נק') האם $f$ רציפה בנקודה $x=0$ ? נמקו.
+  \item (6 נק') האם $f$ גזירה בנקודה $x=0$ ? נמקו.
+  \item (5 נק') האם הנגזרת $f'(x)$ רציפה בנקודה $x=0$ ? נמקו.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+"אפסה כפול חסומה": $\left|\sin(\frac{5}{x})\right|\le 1$ לכל $x\neq 0$.
+\end{hint}
+
+\begin{hint}
+בסעיף ב' חשבו את הנגזרת ב-$0$ לפי ההגדרה (גבול מנת ההפרשים). בסעיף ג' חשבו את $f'(x)$ עבור $x\neq0$ לפי כללי הגזירה ובדקו את הגבול כאשר $x\to 0$.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item \textbf{כן.} לכל $x\neq 0$ מתקיים
+  \[ 0\le |f(x)| = |x|^3\left|\sin\left(\tfrac{5}{x}\right)\right| \le |x|^3 \xrightarrow[x\to0]{} 0, \]
+  ולכן לפי משפט הסנדוויץ' $\lim_{x\to0} f(x)=0=f(0)$. כלומר $f$ רציפה ב-$0$.
+  \item \textbf{כן.} לפי הגדרת הנגזרת:
+  \[ f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\frac{h^3\sin(5/h)}{h}=\lim_{h\to0} h^2\sin\left(\tfrac{5}{h}\right). \]
+  כאן $h^2\to0$ ו-$\sin(5/h)$ חסומה, ולכן (אפסה כפול חסומה) הגבול שווה $0$. לכן $f$ גזירה ב-$0$ ו-$f'(0)=0$.
+  \item \textbf{כן.} עבור $x\neq0$, לפי כלל המכפלה וכלל השרשרת:
+  \[ f'(x)=3x^2\sin\left(\tfrac{5}{x}\right)+x^3\cos\left(\tfrac{5}{x}\right)\cdot\left(-\tfrac{5}{x^2}\right)=3x^2\sin\left(\tfrac{5}{x}\right)-5x\cos\left(\tfrac{5}{x}\right). \]
+  שני המחוברים הם מהצורה "אפסה כפול חסומה" ($3x^2\to0$, $5x\to0$ ו-$|\sin|,|\cos|\le1$), ולכן
+  \[ \lim_{x\to0}f'(x)=0=f'(0). \]
+  מכאן ש-$f'$ רציפה בנקודה $x=0$.
+\end{enumerate}
+\end{solution}

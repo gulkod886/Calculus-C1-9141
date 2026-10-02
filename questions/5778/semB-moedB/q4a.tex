@@ -1,0 +1,38 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 4א
+% points: 15
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשעח/מועד ב תשעח סמסטר ב.pdf
+
+\begin{question}
+(15 נק') לאילו ערכים של של הפרמטרים $a$ ו-$b$ הפונקציה
+\[
+f(x)=\begin{cases}\dfrac{\tan(2x)-x}{x+\sin(2x)}, & -\frac\pi4<x<0\\[1ex] ax+b, & 0\le x\le1\\[0.5ex] x^{1/(x-1)}, & x>1\end{cases}
+\]
+תהיה רציפה בתחום $x>-\frac\pi4$?
+\end{question}
+
+\begin{hint}
+הפונקציה רציפה בתוך כל אחד משלושת הקטעים; יש לבדוק רק את נקודות התפר $x=0$ ו-$x=1$. ב-$x=0$ חלקו מונה ומכנה ב-$x$; ב-$x=1$ זהו גבול מהצורה $1^\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{רציפות בתוך הקטעים.} ב-$\left(-\frac\pi4,0\right)$: $\tan2x$ מוגדרת ורציפה (כי $2x\in\left(-\frac\pi2,0\right)$), והמכנה $x+\sin2x$ שלילי ממש (שני המחוברים שליליים), ולכן $f$ רציפה שם כמנה של רציפות. ב-$(0,1)$ $f$ פולינום. ב-$(1,\infty)$: $x^{1/(x-1)}=e^{\frac{\ln x}{x-1}}$ רציפה. נותר לבדוק את $x=0$ ו-$x=1$.
+
+\textbf{הנקודה $x=0$.} $f(0)=b$, והגבול מימין הוא $b$. משמאל, נחלק מונה ומכנה ב-$x$:
+\[
+\lim_{x\to0^-}\frac{\tan2x-x}{x+\sin2x}=\lim_{x\to0^-}\frac{2\cdot\frac{\tan2x}{2x}-1}{1+2\cdot\frac{\sin2x}{2x}}=\frac{2-1}{1+2}=\frac13,
+\]
+לפי הגבולות היסודיים $\frac{\sin t}{t}\to1$, $\frac{\tan t}{t}\to1$. לכן צריך $b=\frac13$.
+
+\textbf{הנקודה $x=1$.} $f(1)=a+b$, והגבול משמאל הוא $a+b$. מימין:
+\[
+\lim_{x\to1^+}x^{1/(x-1)}=\lim_{x\to1^+}e^{\frac{\ln x}{x-1}}=e^1=e,
+\]
+כי $\lim_{x\to1}\frac{\ln x}{x-1}=1$ (למשל לפי לופיטל: $\frac{1/x}{1}\to1$, או לפי $\ln(1+t)/t\to1$ עם $t=x-1$), ולפי רציפות האקספוננט. לכן צריך $a+b=e$, כלומר $a=e-\frac13$.
+
+\textbf{תשובה:} $a=e-\frac13$, $b=\frac13$.
+\end{solution}

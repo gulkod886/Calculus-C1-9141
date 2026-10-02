@@ -1,0 +1,32 @@
+% year: תשפ"ד
+% semester: א
+% moed: א
+% number: 1
+% points: 14
+% categories: func-limits
+% source: exams/מבחנים/תשפד/מועד א תשפד.pdf
+
+\begin{question}
+(14 נק') חשבו את הגבול הבא:
+\[ \lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4} \]
+\end{question}
+
+\begin{hint}
+זהו גבול מהצורה $1^\infty$. כתבו את הבסיס בצורה $1+\frac{1}{x^2+x+1}$ והשתמשו בגבול $\lim_{t\to\infty}\left(1+\frac1t\right)^t=e$.
+\end{hint}
+
+\begin{solution}
+כאשר $x\to\infty$ הבסיס שואף ל-$1$ והמעריך שואף ל-$\infty$, כלומר זהו ביטוי לא מוגדר מהצורה $1^\infty$.
+נכתוב את הבסיס בצורה
+\[ \frac{x^2+x+2}{x^2+x+1} = 1+\frac{1}{x^2+x+1}. \]
+נסמן $t=x^2+x+1$; כאשר $x\to\infty$ גם $t\to\infty$. אז
+\[ \left(1+\frac{1}{x^2+x+1}\right)^{2x^2+4} = \left[\left(1+\frac1t\right)^{t}\right]^{\frac{2x^2+4}{x^2+x+1}}. \]
+הביטוי שבסוגריים המרובעים שואף ל-$e$ (הגבול המפורסם $\lim_{t\to\infty}(1+\frac1t)^t=e$), והמעריך מקיים
+\[ \lim_{x\to\infty}\frac{2x^2+4}{x^2+x+1} = \lim_{x\to\infty}\frac{2+\frac{4}{x^2}}{1+\frac1x+\frac1{x^2}} = 2. \]
+מרציפות הפונקציה $(u,v)\mapsto u^v=e^{v\ln u}$ עבור $u>0$ (או: לפי $e^{v\ln u}$ ורציפות $\ln$ ו-$\exp$) נקבל
+\[ \lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4} = e^{2}. \]
+
+\textbf{דרך נוספת:} נכתוב את הביטוי כ-$e^{(2x^2+4)\ln\left(1+\frac{1}{x^2+x+1}\right)}$. מכיוון ש-$\ln(1+s)\sim s$ כאשר $s\to0$,
+\[ (2x^2+4)\ln\left(1+\frac{1}{x^2+x+1}\right) \sim \frac{2x^2+4}{x^2+x+1}\xrightarrow[x\to\infty]{}2, \]
+ושוב מרציפות האקספוננט מתקבל הגבול $\boxed{e^2}$.
+\end{solution}

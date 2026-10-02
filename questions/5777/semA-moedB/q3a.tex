@@ -1,0 +1,26 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 3א
+% points: 8
+% categories: continuity
+% source: exams/מבחנים/תשעז/מועד ב תשעז.pdf
+
+\begin{question}
+(8 נקודות) האם קיים ערך $c$ כך ש-
+\[
+f(x)=\begin{cases}\dfrac1x, & x\ge1\\[1ex] 2x+c, & x<1\end{cases}
+\]
+תהיה רציפה ב-$x=1$?
+\end{question}
+
+\begin{solution}
+$f$ רציפה ב-$x=1$ אם ורק אם $\lim_{x\to1^-}f(x)=\lim_{x\to1^+}f(x)=f(1)$.
+\[
+f(1)=\frac11=1,\qquad \lim_{x\to1^+}\frac1x=1,\qquad \lim_{x\to1^-}(2x+c)=2+c.
+\]
+לכן צריך $2+c=1$, כלומר $c=-1$.
+
+\textbf{תשובה:} כן, עבור $c=-1$ (ורק עבורו).
+\end{solution}

@@ -1,0 +1,21 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 1ג
+% points: 5
+% categories: definite-integrals, derivatives
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(5 נק') מהו שיפוע המשיק לקו $y=\int_0^{x+1}e^{-2t^2}\,dt$ בנקודה עליו $x=0$.
+\end{question}
+
+\begin{hint}
+השתמשו במשפט היסודי של החשבון האינטגרלי יחד עם כלל השרשרת.
+\end{hint}
+
+\begin{solution}
+נסמן $F(u)=\int_0^u e^{-2t^2}\,dt$. הפונקציה $e^{-2t^2}$ רציפה, ולכן לפי המשפט היסודי $F'(u)=e^{-2u^2}$. מכאן $y(x)=F(x+1)$ ולפי כלל השרשרת
+\[ y'(x)=F'(x+1)\cdot 1=e^{-2(x+1)^2}. \]
+שיפוע המשיק בנקודה $x=0$ הוא $y'(0)=e^{-2}=\dfrac{1}{e^2}$.
+\end{solution}

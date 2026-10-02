@@ -1,0 +1,38 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: א
+% number: 4ב
+% points: 8
+% categories: integral-applications
+% source: exams/מבחנים/תשעז/מועד א תשעז.pdf
+
+\begin{question}
+(8 נק') חשבו אורך העקום $y=\frac25x\sqrt[4]{x}-\frac23\sqrt[4]{x^3}$ בין נקודות חיתוך עם ציר ה-$x$.
+\end{question}
+
+\begin{hint}
+כתבו $y=\frac25x^{5/4}-\frac23x^{3/4}$ ובדקו ש-$1+(y')^2$ הוא ריבוע שלם.
+\end{hint}
+
+\begin{solution}
+נכתוב $y=\frac25x^{5/4}-\frac23x^{3/4}$, המוגדרת עבור $x\ge0$.
+
+\textbf{חיתוך עם ציר $x$:} $y=x^{3/4}\left(\frac25x^{1/2}-\frac23\right)=0\iff x=0$ או $\sqrt{x}=\frac53$, כלומר $x=0$ ו-$x=\frac{25}{9}$.
+
+\textbf{נגזרת:}
+\[
+y'=\frac25\cdot\frac54x^{1/4}-\frac23\cdot\frac34x^{-1/4}=\frac12\left(x^{1/4}-x^{-1/4}\right),
+\]
+\[
+1+(y')^2=1+\frac14\left(x^{1/2}-2+x^{-1/2}\right)=\frac14\left(x^{1/2}+2+x^{-1/2}\right)=\left(\frac{x^{1/4}+x^{-1/4}}{2}\right)^2.
+\]
+\textbf{אורך העקום} (לפי הנוסחה $L=\int_a^b\sqrt{1+(y')^2}\,dx$; האינטגרל לא אמיתי ב-$0$ אך מתכנס כי $x^{-1/4}$ אינטגרבילית שם):
+\[
+L=\int_0^{25/9}\frac{x^{1/4}+x^{-1/4}}{2}\,dx=\frac12\left[\frac45x^{5/4}+\frac43x^{3/4}\right]_0^{25/9}.
+\]
+עבור $x=\frac{25}{9}$: $x^{1/4}=\sqrt{\frac53}$, $x^{5/4}=\frac{25}{9}\sqrt{\frac53}$, $x^{3/4}=\frac53\sqrt{\frac53}$. לכן
+\[
+L=\frac12\left(\frac{20}{9}+\frac{20}{9}\right)\sqrt{\frac53}=\frac{20}{9}\sqrt{\frac53}=\frac{20\sqrt{15}}{27}\approx2.869.
+\]
+\end{solution}

@@ -1,0 +1,25 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעו/מועד ב תשעו.pdf
+% number: 2
+% points: 10
+% categories: true-false, derivatives
+
+\begin{question}
+\textbf{הוכיחו או הפריכו:} הפונקציה הבאה גזירה באפס:
+\[ f(x)=\begin{cases} x\sqrt{|x|}\cos(\frac{1}{x}), & x\neq 0\\ 0, & x=0\end{cases}. \]
+\end{question}
+
+\begin{hint}
+חשבו את הנגזרת לפי ההגדרה, כגבול של מנת ההפרשים, והשתמשו בכך ש"חסומה כפול שואפת לאפס שואפת לאפס".
+\end{hint}
+
+\begin{solution}
+\textbf{הטענה נכונה.} נחשב לפי הגדרת הנגזרת. עבור $h\neq 0$:
+\[ \frac{f(h)-f(0)}{h}=\frac{h\sqrt{|h|}\cos(\frac1h)-0}{h}=\sqrt{|h|}\cos\!\left(\frac1h\right). \]
+מתקיים $\left|\sqrt{|h|}\cos(\frac1h)\right|\le \sqrt{|h|}$, ו-$\sqrt{|h|}\to 0$ כאשר $h\to 0$. לפי כלל הסנדוויץ' (או: פונקציה חסומה, $\cos(\frac1h)$, כפול פונקציה השואפת לאפס, $\sqrt{|h|}$, שואפת לאפס):
+\[ f'(0)=\lim_{h\to 0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\sqrt{|h|}\cos\!\left(\frac1h\right)=0. \]
+הגבול קיים וסופי, ולכן $f$ גזירה באפס ו-$\boxed{f'(0)=0}$.
+\end{solution}

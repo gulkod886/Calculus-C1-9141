@@ -1,0 +1,30 @@
+% year: תשפ"ו
+% semester: א
+% moed: ב
+% number: 5א
+% points: 10
+% categories: integral-applications, definite-integrals
+% official_solution: yes
+% source: exams/מבחנים/תשפו/sol B.pdf
+
+\begin{question}
+(10 נק') חשבו את השטח החסום בין ציר ה-$x$ ובין גרף הפונקציה
+\[ f(x) = xe^x \]
+בקטע $[-1, 1]$.
+\end{question}
+
+\begin{hint}
+שימו לב ש-$f$ מחליפה סימן ב-$x = 0$: השטח הוא $\int_{-1}^1 |f(x)|\,dx$. את הפונקציה הקדומה מצאו באינטגרציה בחלקים.
+\end{hint}
+
+\begin{solution}
+מכיוון ש-$e^x > 0$, הסימן של $f(x) = xe^x$ הוא הסימן של $x$: $f \le 0$ ב-$[-1, 0]$ ו-$f \ge 0$ ב-$[0, 1]$. לכן השטח הוא
+\[ S = \int_{-1}^1 |f(x)|\,dx = -\int_{-1}^0 f(x)\,dx + \int_0^1 f(x)\,dx. \]
+\textbf{פונקציה קדומה} באינטגרציה בחלקים, עם $u = x$, $v' = e^x$ (כלומר $u' = 1$, $v = e^x$):
+\[ F(x) = \int xe^x\,dx = xe^x - \int e^x\,dx = xe^x - e^x + C = (x - 1)e^x + C. \]
+לפי ניוטון-לייבניץ:
+\[ S = -\bigl(F(0) - F(-1)\bigr) + \bigl(F(1) - F(0)\bigr) = F(1) - 2F(0) + F(-1). \]
+כאן $F(1) = 0$, $F(0) = -1$, $F(-1) = -2e^{-1}$, ולכן
+\[ S = 0 - 2\cdot(-1) - \frac{2}{e} = 2 - \frac{2}{e}. \]
+\textbf{תשובה:} $\boxed{S = 2\left(1 - \frac1e\right)}$.
+\end{solution}

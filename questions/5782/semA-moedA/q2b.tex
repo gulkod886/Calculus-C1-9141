@@ -1,0 +1,31 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 2ב
+% points: 9
+% categories: func-analysis
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+(9 נק') מצאו תחומי קמירות ונקודות פיתול של הפונקציה
+\[ f(x)=x^2\cdot e^{-x} \]
+\end{question}
+
+\begin{hint}
+חשבו את $f''$ ובדקו את סימנה; שימו לב ש-$e^{-x}>0$ תמיד.
+\end{hint}
+
+\begin{solution}
+$f$ מוגדרת וגזירה פעמיים בכל $\R$.
+\[ f'(x)=2xe^{-x}-x^2e^{-x}=(2x-x^2)e^{-x}, \]
+\[ f''(x)=(2-2x)e^{-x}-(2x-x^2)e^{-x}=(x^2-4x+2)e^{-x}. \]
+כיוון ש-$e^{-x}>0$, סימן $f''$ הוא סימן $x^2-4x+2$, שאפסיו $x=2\pm\sqrt2$. זהו טרינום עם מקדם מוביל חיובי, ולכן:
+\begin{itemize}
+  \item $f''>0$ ב-$(-\infty,\,2-\sqrt2)$ וב-$(2+\sqrt2,\,\infty)$: שם $f$ \textbf{קמורה} (קעורה כלפי מעלה).
+  \item $f''<0$ ב-$(2-\sqrt2,\,2+\sqrt2)$: שם $f$ \textbf{קעורה} (קעורה כלפי מטה).
+\end{itemize}
+בנקודות $x=2\pm\sqrt2$ הפונקציה רציפה ו-$f''$ מחליפה סימן, ולכן אלו \textbf{נקודות פיתול}:
+\[ \left(2-\sqrt2,\ (2-\sqrt2)^2e^{-(2-\sqrt2)}\right)=\left(2-\sqrt2,\ (6-4\sqrt2)e^{\sqrt2-2}\right), \]
+\[ \left(2+\sqrt2,\ (6+4\sqrt2)e^{-2-\sqrt2}\right). \]
+\end{solution}

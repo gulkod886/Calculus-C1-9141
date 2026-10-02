@@ -1,0 +1,26 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 3ב
+% points: 10
+% categories: taylor
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') רשמו פולינום מקלורן מסדר 2 עבור הפונקציה $f(x)=\cos(2x)-\arctan(x+1)$.
+\end{question}
+
+\begin{hint}
+פתחו כל מחובר בנפרד: ל-$\cos(2x)$ השתמשו בפיתוח הידוע של $\cos t$, ול-$\arctan(x+1)$ חשבו את $g(0),g'(0),g''(0)$.
+\end{hint}
+
+\begin{solution}
+פולינום מקלורן מסדר 2: $P_2(x)=f(0)+f'(0)x+\frac{f''(0)}{2}x^2$. נחשב בנפרד לכל מחובר.
+
+עבור $\cos(2x)$: לפי הפיתוח $\cos t=1-\frac{t^2}{2}+o(t^2)$ נקבל $\cos 2x=1-2x^2+o(x^2)$.
+
+עבור $g(x)=\arctan(x+1)$:
+\[ g(0)=\arctan1=\frac\pi4,\quad g'(x)=\frac{1}{1+(x+1)^2}\Rightarrow g'(0)=\frac12,\quad g''(x)=-\frac{2(x+1)}{\big(1+(x+1)^2\big)^2}\Rightarrow g''(0)=-\frac24=-\frac12. \]
+לכן $\arctan(x+1)=\frac\pi4+\frac x2-\frac{x^2}{4}+o(x^2)$. בחיסור:
+\[ P_2(x)=\left(1-\frac\pi4\right)-\frac12x-\frac74x^2. \]
+\end{solution}

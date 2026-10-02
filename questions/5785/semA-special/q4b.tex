@@ -1,0 +1,29 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 4ב
+% points: 10
+% categories: ode
+% source: exams/מבחנים/תשפה/מועד ג תשפה.pdf
+
+\begin{question}
+(10 נק') מצאו את הפתרון הכללי של המשוואה הדיפרנציאלית
+\[ y' - xy^2 = 4x \]
+\end{question}
+
+\begin{hint}
+העבירו אגף: $y' = x(y^2 + 4)$ — זו משוואה פרידה.
+\end{hint}
+
+\begin{solution}
+נעביר אגף: $y' = xy^2 + 4x = x(y^2 + 4)$. זו משוואה פרידה. מכיוון ש-$y^2 + 4 > 0$ תמיד, אין פתרונות קבועים (עבור $y\equiv c$: $0 = x(c^2+4)$ לא מתקיים לכל $x$), ומותר לחלק:
+\[ \frac{y'}{y^2 + 4} = x \quad\Longrightarrow\quad \int\frac{dy}{y^2 + 4} = \int x\,dx \quad\Longrightarrow\quad \frac12\arctan\frac y2 = \frac{x^2}{2} + c. \]
+נכפול ב-$2$ ונסמן $C = 2c$: $\arctan\frac y2 = x^2 + C$, ולכן
+\[ y = 2\tan\left(x^2 + C\right), \]
+בתחום שבו $x^2 + C \in (-\frac\pi2, \frac\pi2)$ (כי $\arctan$ מקבלת ערכים רק בקטע זה).
+
+\textbf{בדיקה:} $y' = 2\cdot 2x\left(1 + \tan^2(x^2 + C)\right) = 4x + x\cdot 4\tan^2(x^2+C) = 4x + xy^2$. מתקיים.
+
+\textbf{תשובה:} $y(x) = 2\tan(x^2 + C)$, $C \in \R$.
+\end{solution}

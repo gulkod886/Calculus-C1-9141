@@ -1,0 +1,24 @@
+% year: תשפ"ג
+% semester: ב
+% moed: א
+% note: ד"ר פיטר סמובול
+% source: exams/מבחנים/תשפג/מועד א תשפג סמסטר ב.pdf
+% number: 2א
+% categories: antiderivatives
+
+\begin{question}
+(שאלה חובה)
+פתרו את האינטגרל הבא:
+$\displaystyle\int\frac{(x^2+1)\cdot dx}{x^3-x}$
+\end{question}
+
+\begin{hint}
+פרקו לשברים חלקיים: $x^3-x=x(x-1)(x+1)$.
+\end{hint}
+
+\begin{solution}
+$x^3-x=x(x-1)(x+1)$, ודרגת המונה קטנה מדרגת המכנה. נפרק:
+\[ \frac{x^2+1}{x(x-1)(x+1)}=\frac{A}{x}+\frac{B}{x-1}+\frac{C}{x+1}. \]
+בשיטת הכיסוי: $A=\frac{0+1}{(0-1)(0+1)}=-1$, $B=\frac{1+1}{1\cdot 2}=1$, $C=\frac{1+1}{(-1)(-2)}=1$. לכן
+\[ \int\frac{x^2+1}{x^3-x}dx=-\ln|x|+\ln|x-1|+\ln|x+1|+C=\boxed{\ln\left|\frac{x^2-1}{x}\right|+C}. \]
+\end{solution}

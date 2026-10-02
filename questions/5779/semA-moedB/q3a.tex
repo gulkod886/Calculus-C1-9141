@@ -1,0 +1,27 @@
+% year: תשע"ט
+% semester: א
+% moed: ב
+% number: 3א
+% points: 10
+% categories: derivatives, taylor
+% source: exams/מבחנים/תשעט/מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') האם פונקציה
+\[ f(x)=\begin{cases}\dfrac{1}{\tan x}-\dfrac1x & x\neq0\\[2mm] 0 & x=0\end{cases} \]
+גזירה בנקודה $x=0$? הסבירו.
+\end{question}
+
+\begin{hint}
+חשבו את גבול מנת ההפרשים $\frac{f(h)-f(0)}{h}=\frac{h-\tan h}{h^2\tan h}$, למשל בעזרת פיתוח $\tan h=h+\frac{h^3}{3}+o(h^3)$.
+\end{hint}
+
+\begin{solution}
+(הפונקציה מוגדרת בסביבה מנוקבת $0<|x|<\frac\pi2$ של $0$, ושם $\tan x\ne0$.) לפי הגדרת הנגזרת:
+\[ f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\frac{\frac1{\tan h}-\frac1h}{h}=\lim_{h\to0}\frac{h-\tan h}{h^2\tan h}. \]
+לפי פיתוח מקלורן $\tan h=h+\frac{h^3}{3}+o(h^3)$, ולכן $h-\tan h=-\frac{h^3}{3}+o(h^3)$. כמו כן $h^2\tan h=h^3\cdot\frac{\tan h}{h}$ ו-$\frac{\tan h}{h}\to1$. לכן
+\[ f'(0)=\lim_{h\to0}\frac{-\frac13+\frac{o(h^3)}{h^3}}{\frac{\tan h}{h}}=-\frac13. \]
+(אפשר גם בלופיטל: $\lim\frac{h-\tan h}{h^3}=\lim\frac{1-\frac1{\cos^2h}}{3h^2}=\lim\frac{-\tan^2h}{3h^2}=-\frac13$.)
+
+\textbf{תשובה:} כן, $f$ גזירה ב-$0$ ו-$f'(0)=-\frac13$. (בפרט $f$ רציפה ב-$0$: $\lim_{x\to0}f(x)=\lim\frac{x-\tan x}{x\tan x}=0=f(0)$.)
+\end{solution}

@@ -1,0 +1,29 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: א
+% source: exams/מבחנים/תשעז/מועד א תשעז סמסטר ב.pdf
+% number: 8
+% points: 10
+% categories: improper-integrals, true-false
+
+\begin{question}
+(10 נק') יהיו $f(x),g(x)$ פונקציות המוגדרות ורציפות בקרן $[0,+\infty)$. נתון שהאינטגרל הלא אמיתי $\int_0^\infty(f(x)+g(x))\,dx$ מתכנס.
+הוכיחו או הפריכו:
+האינטגרל הלא אמיתי $\int_0^\infty(f(x)-g(x))\,dx$ מתכנס.
+\end{question}
+
+\begin{hint}
+נסו פונקציות שסכומן אפס.
+\end{hint}
+
+\begin{solution}
+\textbf{הטענה אינה נכונה.} דוגמה נגדית: $f(x)=1$, $g(x)=-1$ (שתיהן רציפות ב-$[0,\infty)$).
+\begin{itemize}
+  \item $f+g\equiv0$, ולכן $\int_0^\infty(f+g)\,dx=\lim_{R\to\infty}\int_0^R0\,dx=0$ -- מתכנס.
+  \item $f-g\equiv2$, ולכן $\int_0^R(f-g)\,dx=2R\xrightarrow[R\to\infty]{}\infty$ -- מתבדר.
+\end{itemize}
+לכן התכנסות $\int_0^\infty(f+g)$ אינה גוררת התכנסות $\int_0^\infty(f-g)$.
+
+(הערה: אם \emph{שני} האינטגרלים $\int_0^\infty f$ ו-$\int_0^\infty g$ היו מתכנסים, אז לפי לינאריות גם $\int_0^\infty(f-g)$ היה מתכנס. כאן נתונה רק התכנסות הסכום.)
+\end{solution}

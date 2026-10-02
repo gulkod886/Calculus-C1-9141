@@ -1,0 +1,27 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 3ב
+% points: 10
+% categories: func-analysis
+% source: exams/מבחנים/תשפג/מועד ב תשפג.docx
+
+\begin{question}
+(10 נק') למשוואה $e^x=x+1$ הוכיחו כי קיים פתרון או הוכיחו כי לא קיים פתרון בתחום $x\neq0$.
+\end{question}
+
+\begin{hint}
+חקרו את הפונקציה $g(x)=e^x-x-1$: מצאו את נקודת המינימום שלה.
+\end{hint}
+
+\begin{solution}
+נוכיח ש\textbf{אין} פתרון עם $x\neq 0$. נגדיר $g(x)=e^x-x-1$, גזירה על $\R$, עם $g(0)=0$ ו-
+\[ g'(x)=e^x-1. \]
+עבור $x<0$: $g'(x)<0$, ולכן $g$ יורדת ממש ב-$(-\infty,0]$; עבור $x>0$: $g'(x)>0$, ולכן $g$ עולה ממש ב-$[0,\infty)$. (מונוטוניות ממש נובעת ממשפט לגרנז'.) לכן:
+\begin{itemize}
+  \item לכל $x<0$: $g(x)>g(0)=0$;
+  \item לכל $x>0$: $g(x)>g(0)=0$.
+\end{itemize}
+כלומר $e^x>x+1$ לכל $x\neq0$, ולמשוואה $e^x=x+1$ אין פתרון בתחום $x\ne 0$ (הפתרון היחיד שלה הוא $x=0$). $\blacksquare$
+\end{solution}

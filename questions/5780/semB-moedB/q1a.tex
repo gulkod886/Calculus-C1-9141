@@ -1,0 +1,24 @@
+% year: תש"פ
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 1א
+% points: 10
+% categories: derivatives
+% source: exams/מבחנים/תשפ/מועד ב סמסטר ב תשפ.pdf
+
+\begin{question}
+(10 נק') חשבו את הנגזרת של הפונקציה $f(x)=\sin(2x+1)$ בנקודה $x$ לפי הגדרת הנגזרת (תשובה לפי טבלת הנגזרות לא תתקבל).
+\end{question}
+
+\begin{hint}
+השתמשו בזהות $\sin\alpha-\sin\beta=2\sin\frac{\alpha-\beta}{2}\cos\frac{\alpha+\beta}{2}$ ובגבול $\lim_{t\to0}\frac{\sin t}{t}=1$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה, $f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$. לפי הזהות לסכום והפרש פונקציות,
+\[ \sin(2x+2h+1)-\sin(2x+1)=2\sin(h)\cos(2x+1+h). \]
+לכן
+\[ f'(x)=\lim_{h\to0}\frac{2\sin h\cos(2x+1+h)}{h}=2\lim_{h\to0}\frac{\sin h}{h}\cdot\lim_{h\to0}\cos(2x+1+h)=2\cdot1\cdot\cos(2x+1), \]
+כאשר השתמשנו בגבול היסודי $\frac{\sin h}{h}\to1$ וברציפות $\cos$. כלומר $\boxed{f'(x)=2\cos(2x+1)}$.
+\end{solution}

@@ -1,0 +1,27 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 4ג
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') האם האינטגרל הלא אמיתי $\displaystyle\int_0^{+\infty}\frac{x\cdot e^{-x}}{(x+1)^4}dx$ מתכנס?
+\end{question}
+
+\begin{hint}
+השוו ל-$e^{-x}$.
+\end{hint}
+
+\begin{solution}
+האינטגרנד $g(x)=\frac{xe^{-x}}{(x+1)^4}$ רציף ואי-שלילי על $[0,\infty)$, ולכן האינטגרל לא אמיתי רק בגלל הגבול האינסופי, ואפשר להשתמש במבחן ההשוואה.
+עבור $x\ge0$: $0\le x<x+1\le(x+1)^4$, ולכן $\frac{x}{(x+1)^4}\le1$ ו-
+\[
+0\le g(x)\le e^{-x}.
+\]
+האינטגרל $\int_0^\infty e^{-x}dx=\lim_{R\to\infty}\left(1-e^{-R}\right)=1$ מתכנס. לפי \emph{מבחן ההשוואה} לאינטגרלים לא אמיתיים של פונקציות אי-שליליות, גם $\int_0^\infty g(x)\,dx$ מתכנס (וערכו בין $0$ ל-$1$).
+
+\textbf{תשובה:} כן, האינטגרל מתכנס.
+\end{solution}

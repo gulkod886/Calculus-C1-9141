@@ -1,0 +1,23 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 6א
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשעח/מועד ב תשעח.pdf
+
+\begin{question}
+(10 נק') האם האינטגרל הלא-אמיתי $\displaystyle\int_1^\infty\frac{e^x}{e^{e^x}}\,dx$ מתכנס? אם כן, יש לחשב את ערכו של האינטגרל. אם לא, יש לנמק מדוע.
+\end{question}
+
+\begin{hint}
+הציבו $u=e^x$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה $\int_1^\infty\frac{e^x}{e^{e^x}}dx=\lim_{b\to\infty}\int_1^b e^xe^{-e^x}dx$. נציב $u=e^x$, $du=e^x\,dx$; כאשר $x$ עובר מ-$1$ ל-$b$, $u$ עובר מ-$e$ ל-$e^b$:
+\[ \int_1^b e^xe^{-e^x}\,dx=\int_e^{e^b}e^{-u}\,du=\left[-e^{-u}\right]_e^{e^b}=e^{-e}-e^{-e^b}. \]
+כאשר $b\to\infty$: $e^b\to\infty$ ולכן $e^{-e^b}\to0$. הגבול קיים וסופי, כלומר האינטגרל מתכנס:
+\[ \boxed{\int_1^\infty\frac{e^x}{e^{e^x}}\,dx=e^{-e}} \]
+\end{solution}

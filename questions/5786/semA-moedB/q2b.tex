@@ -1,0 +1,31 @@
+% year: תשפ"ו
+% semester: א
+% moed: ב
+% number: 2ב
+% points: 10
+% categories: func-analysis
+% official_solution: yes
+% source: exams/מבחנים/תשפו/sol B.pdf
+
+\begin{question}
+(10 נק') הוכיחו כי לכל $x \ge 0$ מתקיים
+\[ 0 \le \frac{x^2}{e^x} \le 1 \]
+\end{question}
+
+\begin{hint}
+חקרו את $g(x) = \frac{x^2}{e^x}$ ב-$[0, \infty)$ ומצאו את המקסימום שלה.
+\end{hint}
+
+\begin{solution}
+נגדיר $g(x) = \frac{x^2}{e^x} = x^2 e^{-x}$ ב-$[0, \infty)$; $g$ רציפה וגזירה שם.
+
+\textbf{אי-השוויון השמאלי:} $x^2 \ge 0$ ו-$e^x > 0$, ולכן $g(x) \ge 0$ לכל $x$.
+
+\textbf{אי-השוויון הימני:} נחשב
+\[ g'(x) = \frac{2x e^x - x^2 e^x}{e^{2x}} = \frac{x(2 - x)}{e^x}. \]
+ב-$(0, 2)$ מתקיים $g' > 0$ וב-$(2, \infty)$ מתקיים $g' < 0$. לכן $g$ עולה ב-$[0, 2]$ ויורדת ב-$[2, \infty)$, ו-$x = 2$ היא נקודת מקסימום מוחלט של $g$ ב-$[0, \infty)$. לכן לכל $x \ge 0$:
+\[ g(x) \le g(2) = \frac{4}{e^2} = \left( \frac{2}{e} \right)^2 < 1, \]
+כי $0 < 2 < e$ ולכן $0 < \frac{2}{e} < 1$.
+
+מכאן, לכל $x \ge 0$: $0 \le \frac{x^2}{e^x} \le \frac{4}{e^2} < 1$, ובפרט $0 \le \frac{x^2}{e^x} \le 1$. $\blacksquare$
+\end{solution}

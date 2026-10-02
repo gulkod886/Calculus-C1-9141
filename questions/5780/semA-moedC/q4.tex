@@ -1,0 +1,28 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ג
+% part: ב
+% number: 1
+% points: 9
+% categories: continuity, multiple-choice
+% source: exams/מבחנים/תשפ/מועד מיוחד תשפ.pdf
+
+\begin{question}
+נתונה $h(x)=\begin{cases}x^2+a, & x<-1\\ x^3-8, & x\ge-1\end{cases}$. לאיזה ערך של הפרמטר $a$ הפונקציה היא רציפה לכל $x$ ממשי,
+\begin{enumerate}
+  \item $-1$
+  \item $-9$
+  \item $-10$
+  \item $-8$
+  \item $-2$
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{התשובה הנכונה: ג ($a=-10$).}
+
+בכל אחד מהקטעים $x<-1$ ו-$x>-1$ הפונקציה פולינום ולכן רציפה. נותר לבדוק את $x=-1$:
+\[ h(-1)=\lim_{x\to-1^+}h(x)=(-1)^3-8=-9,\qquad \lim_{x\to-1^-}h(x)=(-1)^2+a=1+a . \]
+רציפות ב-$-1$ מתקיימת אם ורק אם $1+a=-9$, כלומר $a=-10$.
+\end{solution}

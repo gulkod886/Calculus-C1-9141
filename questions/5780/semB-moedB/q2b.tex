@@ -1,0 +1,28 @@
+% year: תש"פ
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 2ב
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשפ/מועד ב סמסטר ב תשפ.pdf
+
+\begin{question}
+(10 נק') מצאו את נפח הגוף הנוצר ע"י סיבוב סביב ציר ה-$x$ של הצורה החסומה על ידי הקווים $y=xe^{-x}$, $y=0$, $x=2$. שרטט את הסקיצה המתאימה.
+\end{question}
+
+\begin{hint}
+הגבולות של האינטגרל הם $x=0$ (שם $xe^{-x}=0$) ו-$x=2$. את $\int x^2e^{-2x}dx$ מחשבים באינטגרציה בחלקים פעמיים.
+\end{hint}
+
+\begin{solution}
+\textbf{סקיצה:} $y=xe^{-x}$ עוברת בראשית, חיובית עבור $x>0$, עולה עד למקסימום $(1,\frac1e)$ ($y'=(1-x)e^{-x}$) ואחר כך יורדת, וב-$x=2$ ערכה $2e^{-2}\approx0.27$. הצורה החסומה היא האזור שבין הגרף לבין ציר $x$, עבור $0\le x\le 2$ (הגרף חותך את $y=0$ ב-$x=0$).
+
+\textbf{הנפח:} לפי נוסחת נפח גוף סיבוב סביב ציר $x$,
+\[ V=\pi\int_0^2\big(xe^{-x}\big)^2dx=\pi\int_0^2x^2e^{-2x}dx . \]
+נחשב באינטגרציה בחלקים פעמיים:
+\[ \int x^2e^{-2x}dx=-\frac{x^2}{2}e^{-2x}+\int xe^{-2x}dx=-\frac{x^2}{2}e^{-2x}-\frac{x}{2}e^{-2x}+\frac12\int e^{-2x}dx
+=-e^{-2x}\Big(\frac{x^2}{2}+\frac{x}{2}+\frac14\Big)+C . \]
+לכן
+\[ V=\pi\Big[-e^{-2x}\Big(\frac{x^2}{2}+\frac{x}{2}+\frac14\Big)\Big]_0^2=\pi\Big(-\frac{13}{4}e^{-4}+\frac14\Big)=\boxed{\frac{\pi}{4}\big(1-13e^{-4}\big)}\approx0.4357 . \]
+\end{solution}

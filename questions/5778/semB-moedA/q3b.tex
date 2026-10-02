@@ -1,0 +1,38 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 3ב
+% points: 10
+% categories: taylor, derivatives
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') רשמו פולינום מקלורן מסדר 2 עבור הפונקציה $y(x)$ אשר מוגדרת בצורה סתומה על ידי המשוואה $y\cdot\sin x-x\cdot\cos x+y=2$.
+\end{question}
+
+\begin{hint}
+הציבו $x=0$ כדי למצוא את $y(0)$, ואז גזרו את המשוואה (גזירה סתומה) פעמיים והציבו $x=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{ערך ב-$0$:} בהצבה $x=0$: $y(0)\cdot0-0+y(0)=2$, ולכן $y(0)=2$.
+
+\textbf{נגזרת ראשונה} (גזירה סתומה של שני האגפים לפי $x$, כאשר $y=y(x)$):
+\[
+y'\sin x+y\cos x-\cos x+x\sin x+y'=0.\tag{*}
+\]
+בהצבה $x=0$: $y(0)-1+y'(0)=0$, ולכן $y'(0)=1-2=-1$.
+
+\textbf{נגזרת שנייה} (גזירה של (*)):
+\[
+y''\sin x+y'\cos x+y'\cos x-y\sin x+\sin x+\sin x+x\cos x+y''=0.
+\]
+בהצבה $x=0$: $2y'(0)+y''(0)=0$, ולכן $y''(0)=2$.
+
+\textbf{פולינום מקלורן מסדר 2:}
+\[
+P_2(x)=y(0)+y'(0)x+\frac{y''(0)}{2}x^2=2-x+x^2.
+\]
+(בדיקה: מהמשוואה $y=\frac{2+x\cos x}{1+\sin x}$, ופיתוח ישיר נותן אותו פולינום.)
+\end{solution}

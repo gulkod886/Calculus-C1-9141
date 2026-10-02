@@ -1,0 +1,18 @@
+% year: תשפ"ג
+% semester: א
+% moed: ג
+% source: exams/מבחנים/תשפג/מועד ג תשפג.pdf
+% number: 1ב
+% categories: continuity
+% note on source: in the original, a stray ".1" appears to the right of the cases in part ב; omitted here.
+
+\begin{question}
+מיינו את נקודות אי הרציפות של הפונקציה
+\[ f(x)=\begin{cases} \dfrac{\sin(2x)}{x}, & x\neq 0\\[2mm] 1, & x=0 \end{cases} \]
+\end{question}
+
+\begin{solution}
+לכל $x\neq 0$ הפונקציה היא מנה של פונקציות רציפות ($\sin(2x)$ ו-$x$) שהמכנה שלה אינו מתאפס, ולכן רציפה. נבדוק את $x=0$: לפי הגבול היסודי $\lim_{t\to0}\frac{\sin t}{t}=1$,
+\[ \lim_{x\to0}\frac{\sin(2x)}{x}=\lim_{x\to0}2\cdot\frac{\sin(2x)}{2x}=2. \]
+הגבול קיים וסופי, אך $f(0)=1\neq 2$. לכן $x=0$ היא \textbf{נקודת אי-רציפות סליקה} (ניתן לתקן ע"י הגדרה מחדש $f(0)=2$), וזו נקודת אי-הרציפות היחידה.
+\end{solution}

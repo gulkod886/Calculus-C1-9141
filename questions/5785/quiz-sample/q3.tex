@@ -1,0 +1,37 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% moed: לדוגמה
+% official_solution: yes
+% source: exams/מבחנים/תשפו/midterm_example 2025.pdf
+% part: א
+% number: 3
+% points: 20
+% categories: ivt
+
+\begin{question}
+הוכיחו כי למשוואה הבאה יש שורש ממשי ומצאו קטע שאורכו לכל היותר 1 המכיל את השורש:
+\[
+x^2+\ln(x)=0
+\]
+\end{question}
+
+\begin{hint}
+הגדירו $f(x)=x^2+\ln x$ על $(0,\infty)$ וחפשו נקודות שבהן קל לחשב את $\ln$, כמו $x=1$ ו-$x=\frac1e$.
+\end{hint}
+
+\begin{solution}
+נגדיר $f(x)=x^2+\ln x$ על $(0,\infty)$. $f$ רציפה שם כסכום של פולינום ושל פונקציית הלוגריתם, הרציפה בתחום הגדרתה.
+
+נחשב:
+\[
+f\!\left(\tfrac1e\right)=\frac1{e^2}+\ln\frac1e=\frac{1}{e^2}-1<0,\qquad f(1)=1^2+\ln1=1>0 ,
+\]
+כי $e^2>1$.
+
+$f$ רציפה בקטע הסגור $\left[\frac1e,1\right]\subset(0,\infty)$ ומחליפה סימן בקצותיו. לפי משפט ערך הביניים (בולצאנו) קיים $c\in\left(\frac1e,1\right)$ עם $f(c)=0$, כלומר שורש ממשי של המשוואה.
+
+\textbf{הקטע המבוקש:} $\left[\frac1e,1\right]$, שאורכו $1-\frac1e<1$.
+
+(הערה: השורש יחיד, כי $f$ עולה ממש כסכום של $x^2$ ו-$\ln x$, שתיהן עולות ממש על $(0,\infty)$. מספרית $c\approx0.653$. אפשר גם לבחור קטע שלא מצריך את $e$, למשל $\left[\frac12,1\right]$: $f(\frac12)=\frac14-\ln2<0$.)
+\end{solution}

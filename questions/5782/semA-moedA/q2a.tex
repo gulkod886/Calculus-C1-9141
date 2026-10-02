@@ -1,0 +1,32 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 2א
+% points: 8
+% categories: func-analysis, func-limits
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+(8 נק') מצאו את כל האסימפטוטות של הפונקציה
+\[ f(x)=\frac{2x^2-3x+1}{x} \]
+\end{question}
+
+\begin{hint}
+חלקו את המונה ב-$x$: $f(x)=2x-3+\frac1x$.
+\end{hint}
+
+\begin{solution}
+תחום ההגדרה: $x\neq0$. לכל $x\neq 0$:
+\[ f(x)=2x-3+\frac{1}{x}. \]
+\textbf{אסימפטוטה אנכית:} המונה ב-$x=0$ שווה $1\neq0$, ולכן
+\[ \lim_{x\to0^+}f(x)=+\infty,\qquad \lim_{x\to0^-}f(x)=-\infty, \]
+כלומר $x=0$ אסימפטוטה אנכית. זו הנקודה היחידה מחוץ לתחום, ו-$f$ רציפה בכל נקודה אחרת, לכן אין אסימפטוטות אנכיות נוספות.
+
+\textbf{אסימפטוטה משופעת/אופקית:} נחשב
+\[ m=\lim_{x\to\pm\infty}\frac{f(x)}{x}=\lim_{x\to\pm\infty}\left(2-\frac3x+\frac1{x^2}\right)=2, \]
+\[ n=\lim_{x\to\pm\infty}\big(f(x)-2x\big)=\lim_{x\to\pm\infty}\left(-3+\frac1x\right)=-3. \]
+לכן $y=2x-3$ אסימפטוטה משופעת גם ב-$+\infty$ וגם ב-$-\infty$. כיוון ש-$f(x)\to\pm\infty$ כאשר $x\to\pm\infty$, אין אסימפטוטה אופקית.
+
+\textbf{תשובה:} $x=0$ (אנכית) ו-$y=2x-3$ (משופעת בשני הכיוונים).
+\end{solution}

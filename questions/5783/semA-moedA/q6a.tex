@@ -1,0 +1,36 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: א
+% number: 6א
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשפג/מועד א תשפג.pdf
+
+\begin{question}
+(10 נק') חשבו את השטח החסום בין הגרפים של הפונקציות $f(x)=\sin^2x$ ו-$g(x)=\frac14$ בקטע $[0,\pi]$.
+\end{question}
+
+\begin{hint}
+מצאו את נקודות החיתוך $\sin^2x=\frac14$ בקטע, וחלקו את הקטע לפי איזו פונקציה גדולה יותר. השתמשו בזהות $\sin^2x=\frac{1-\cos 2x}{2}$.
+\end{hint}
+
+\begin{solution}
+\textbf{נקודות חיתוך:} $\sin^2x=\frac14\iff\sin x=\pm\frac12$. בקטע $[0,\pi]$ מתקיים $\sin x\ge 0$, ולכן $\sin x=\frac12$, כלומר $x=\frac{\pi}{6}$ או $x=\frac{5\pi}{6}$.
+
+בקטעים $[0,\frac{\pi}{6})$ ו-$(\frac{5\pi}{6},\pi]$ מתקיים $0\le\sin x<\frac12$, ולכן $\sin^2x<\frac14$; בקטע $(\frac{\pi}{6},\frac{5\pi}{6})$ מתקיים $\sin^2x>\frac14$.
+
+\textbf{פונקציה קדומה:} לפי $\sin^2x=\frac{1-\cos2x}{2}$,
+\[ \int\left(\sin^2x-\frac14\right)dx=\int\left(\frac14-\frac{\cos 2x}{2}\right)dx=\frac{x}{4}-\frac{\sin 2x}{4}=:F(x). \]
+ערכים: $F(0)=0$, $F(\frac{\pi}{6})=\frac{\pi}{24}-\frac{\sqrt3}{8}$, $F(\frac{5\pi}{6})=\frac{5\pi}{24}+\frac{\sqrt3}{8}$, $F(\pi)=\frac{\pi}{4}$.
+
+\textbf{השטח} הוא $\int_0^\pi|f-g|\,dx$:
+\begin{align*}
+S_1&=\int_0^{\pi/6}\left(\tfrac14-\sin^2x\right)dx=-\big(F(\tfrac{\pi}{6})-F(0)\big)=\frac{\sqrt3}{8}-\frac{\pi}{24},\\
+S_2&=\int_{\pi/6}^{5\pi/6}\left(\sin^2x-\tfrac14\right)dx=F(\tfrac{5\pi}{6})-F(\tfrac{\pi}{6})=\frac{\pi}{6}+\frac{\sqrt3}{4},\\
+S_3&=\int_{5\pi/6}^{\pi}\left(\tfrac14-\sin^2x\right)dx=-\big(F(\pi)-F(\tfrac{5\pi}{6})\big)=\frac{\sqrt3}{8}-\frac{\pi}{24}.
+\end{align*}
+סה"כ:
+\[ S=S_1+S_2+S_3=\frac{\sqrt3}{2}+\frac{\pi}{12}\approx 1.128. \]
+(אם מתכוונים רק לתחום הסגור שבין שתי נקודות החיתוך, שטחו $S_2=\frac{\pi}{6}+\frac{\sqrt3}{4}\approx 0.957$.)
+\end{solution}

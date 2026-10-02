@@ -1,0 +1,45 @@
+% year: תש"פ
+% type: בוחן
+% semester: א
+% points: 20
+% source: exams/בחנים/תש״פ, בוחן, 9141.pdf
+% number: 2
+% categories: func-limits, multiple-choice
+
+\begin{question}
+הגבול $\displaystyle\lim_{x\to\infty}\left(\frac{x^2-1}{x^2+3x}\right)^{\frac{x}{3}}$ שווה ל-
+\begin{enumerate}
+  \item $e^3$
+  \item $e$
+  \item $e^{\frac13}$
+  \item $e^{-1}$
+  \item $\infty$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+זהו גבול מהצורה $1^\infty$. כתבו את הבסיס כ-$1+t(x)$ עם $t(x)\to 0$ והשתמשו ב-$\lim_{y\to\infty}\left(1+\frac1y\right)^y=e$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ד)} $e^{-1}$.
+
+הבסיס שואף ל-1 (חלוקה ב-$x^2$: $\frac{1-1/x^2}{1+3/x}\to 1$) והמעריך שואף ל-$\infty$, כלומר זהו גבול מהצורה $1^\infty$. נכתוב
+\[
+\frac{x^2-1}{x^2+3x}=1+\frac{x^2-1-x^2-3x}{x^2+3x}=1+t(x),\qquad t(x)=\frac{-3x-1}{x^2+3x}\xrightarrow[x\to\infty]{}0 .
+\]
+עבור $x$ גדול $t(x)\neq 0$ ולכן
+\[
+\left(1+t(x)\right)^{\frac x3}=\Bigl[\left(1+t(x)\right)^{\frac{1}{t(x)}}\Bigr]^{t(x)\cdot\frac{x}{3}} .
+\]
+לפי הגבול היסודי $\lim_{s\to 0}(1+s)^{1/s}=e$ (הצבה $s=t(x)\to 0$) הבסיס הפנימי שואף ל-$e$. המעריך:
+\[
+t(x)\cdot\frac x3=\frac{-3x-1}{x^2+3x}\cdot\frac{x}{3}=\frac{-3x^2-x}{3x^2+9x}=\frac{-3-\frac1x}{3+\frac9x}\xrightarrow[x\to\infty]{}-1 .
+\]
+מכיוון ש-$u^v=e^{v\ln u}$ ופונקציות $\ln$ ו-$\exp$ רציפות, אם $u\to e$ ו-$v\to -1$ אז $u^v\to e^{-1}$. לכן
+\[
+\lim_{x\to\infty}\left(\frac{x^2-1}{x^2+3x}\right)^{\frac{x}{3}}=\boxed{e^{-1}} .
+\]
+
+\textbf{למה האחרות שגויות:} (א), (ב), (ג) מתקבלות משגיאה בסימן או במקדם של המעריך (למשל התעלמות מכך ש-$t(x)$ שלילי). (ה) שגויה: הבסיס קטן מ-1 עבור $x$ גדול (המונה קטן מהמכנה), ולכן החזקה אף חסומה ע"י 1 ואינה יכולה לשאוף ל-$\infty$.
+\end{solution}

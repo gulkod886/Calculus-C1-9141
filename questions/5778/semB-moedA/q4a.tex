@@ -1,0 +1,28 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 4א
+% points: 5
+% categories: func-limits
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(5 נק') $\displaystyle\lim_{x\to3}\frac{\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}}{x^2-4x+3}$.
+\end{question}
+
+\begin{hint}
+הכפילו בצמוד של המונה.
+\end{hint}
+
+\begin{solution}
+ב-$x=3$ המונה והמכנה מתאפסים ($\sqrt9-\sqrt9=0$, $9-12+3=0$). נכפול בצמוד:
+\[
+\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}=\frac{(x^2-2x+6)-(x^2+2x-6)}{\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}}=\frac{-4(x-3)}{\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}},
+\]
+ו-$x^2-4x+3=(x-1)(x-3)$. לכן עבור $x\neq3$ (בסביבת $3$):
+\[
+\frac{\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}}{x^2-4x+3}=\frac{-4}{(x-1)\left(\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}\right)}\xrightarrow[x\to3]{}\frac{-4}{2\cdot(3+3)}=-\frac13.
+\]
+\textbf{תשובה:} $-\frac13$.
+\end{solution}

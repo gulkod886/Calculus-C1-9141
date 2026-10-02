@@ -1,0 +1,29 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 4ב
+% points: 10
+% categories: ode
+% source: exams/מבחנים/תשפה/מועד ב תשפה.pdf
+
+\begin{question}
+(10 נק') מצאו את הפתרון הכללי של המשוואה הדיפרנציאלית
+\[ (x^4 + 4)yy' = x^3 \]
+\end{question}
+
+\begin{hint}
+זו משוואה פרידה: $y\,dy = \frac{x^3}{x^4 + 4}\,dx$.
+\end{hint}
+
+\begin{solution}
+$x^4 + 4 > 0$ לכל $x$, ולכן אפשר לחלק: $y y' = \frac{x^3}{x^4 + 4}$. זו משוואה פרידה. נבצע אינטגרציה לפי $x$ של שני האגפים:
+\[ \int y\,dy = \int\frac{x^3}{x^4 + 4}\,dx \quad\Longrightarrow\quad \frac{y^2}{2} = \frac14\ln(x^4 + 4) + c, \]
+כאשר באגף ימין הצבנו $u = x^4 + 4$, $du = 4x^3dx$. כפל ב-$2$ וסימון $C = 2c$:
+\[ y^2 = \frac12\ln(x^4 + 4) + C. \]
+(שימו לב ש-$y\equiv0$ אינו פתרון, כי אז נקבל $0 = x^3$, שאינו מתקיים לכל $x$. כמו כן, לא נדרשה חלוקה ב-$y$: השתמשנו רק בכך ש-$yy' = \left(\frac{y^2}{2}\right)'$.)
+
+\textbf{תשובה:} הפתרון הכללי נתון בצורה סתומה ע"י $y^2 = \frac12\ln(x^4+4) + C$, או במפורש
+\[ y = \pm\sqrt{\tfrac12\ln(x^4 + 4) + C}, \]
+בתחום שבו הביטוי בתוך השורש חיובי. \textbf{בדיקה:} גזירת $y^2 = \frac12\ln(x^4+4)+C$ נותנת $2yy' = \frac{2x^3}{x^4+4}$, כלומר $(x^4+4)yy' = x^3$.
+\end{solution}

@@ -1,0 +1,27 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 6ב
+% points: 9
+% categories: improper-integrals
+% source: exams/מבחנים/תשפב/מועד ג תשפב.pdf
+
+\begin{question}
+(9 נק') בדקו התכנסות של האינטגרל הלא אמיתי
+\[ \int_1^\infty\frac{e^x}{e^{2x}+1}dx \]
+\end{question}
+
+\begin{hint}
+הפונקציה הקדומה היא $\arctan(e^x)$ (הצבה $t=e^x$).
+\end{hint}
+
+\begin{solution}
+נציב $t=e^x$, $dt=e^xdx$: $\int\frac{e^x}{e^{2x}+1}dx=\int\frac{dt}{t^2+1}=\arctan(e^x)+C$. לכן
+\[ \int_1^R\frac{e^x}{e^{2x}+1}dx=\arctan(e^R)-\arctan(e). \]
+כאשר $R\to\infty$: $e^R\to\infty$ ו-$\lim_{t\to\infty}\arctan t=\frac\pi2$, ולכן
+\[ \int_1^\infty\frac{e^x}{e^{2x}+1}dx=\lim_{R\to\infty}\left(\arctan(e^R)-\arctan e\right)=\boxed{\frac\pi2-\arctan e}\approx0.3466. \]
+האינטגרל \textbf{מתכנס}.
+
+(לחלופין, ללא חישוב: $0<\frac{e^x}{e^{2x}+1}<\frac{e^x}{e^{2x}}=e^{-x}$, ו-$\int_1^\infty e^{-x}dx=e^{-1}$ מתכנס, ולכן לפי מבחן ההשוואה האינטגרל מתכנס.)
+\end{solution}

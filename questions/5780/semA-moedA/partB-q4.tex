@@ -1,0 +1,35 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: א
+% part: ב
+% number: 4
+% points: 9
+% categories: taylor, multiple-choice
+% source: exams/מבחנים/תשפ/מועד א תשפ.pdf
+
+\begin{question}
+אם $f(x)=\frac{1-e^{-\frac{x^2}{2}}}{x}$, אזי בסביבה של $0$ מתקיים
+\begin{enumerate}
+  \item[(א)] $f(x)=\frac{x}{2}+\frac{x^3}{4}+o(x^3)$
+  \item[(ב)] $f(x)=\frac{x}{2}+\frac{x^3}{8}+o(x^3)$
+  \item[(ג)] $f(x)=\frac{x}{2}-\frac{x^3}{8}+o(x^3)$
+  \item[(ד)] $f(x)=\frac{x}{2}-\frac{x^3}{2}+o(x^3)$
+  \item[(ה)] $f(x)=\frac{x}{2}-\frac{x^3}{4}+o(x^3)$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+הציבו $t=-\frac{x^2}{2}$ בפיתוח $e^t=1+t+\frac{t^2}{2}+o(t^2)$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ג).}
+
+לפי פיתוח מקלורן $e^t=1+t+\frac{t^2}{2}+o(t^2)$ כאשר $t\to0$, עם $t=-\frac{x^2}{2}$ (ואז $o(t^2)=o(x^4)$):
+\[ e^{-x^2/2} = 1-\frac{x^2}{2}+\frac{x^4}{8}+o(x^4). \]
+לכן
+\[ 1-e^{-x^2/2} = \frac{x^2}{2}-\frac{x^4}{8}+o(x^4), \]
+ובחלוקה ב-$x$ (עבור $x\neq0$; $\frac{o(x^4)}{x}=o(x^3)$):
+\[ f(x)=\frac{x}{2}-\frac{x^3}{8}+o(x^3). \]
+\end{solution}

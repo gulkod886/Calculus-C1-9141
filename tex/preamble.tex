@@ -1,0 +1,10 @@
+% Shared preamble: lets a single question file or the whole bank compile with XeLaTeX.
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{hebrew}
+\setotherlanguage{english}
+\newfontfamily\hebrewfont[Script=Hebrew]{David CLM}
+\newenvironment{question}{\par\noindent\textbf{שאלה.}\ }{\par}
+\newenvironment{hint}{\par\noindent\textbf{רמז.}\ }{\par}
+\newenvironment{solution}{\par\noindent\textbf{פתרון.}\ }{\par}

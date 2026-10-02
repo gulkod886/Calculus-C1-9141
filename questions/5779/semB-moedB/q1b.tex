@@ -1,0 +1,27 @@
+% year: תשע"ט
+% semester: ב
+% moed: ב
+% number: 1ב
+% points: 10
+% categories: func-limits, func-analysis
+% source: exams/מבחנים/תשעט/חודיסמן מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את כל האסימפטוטות של הפונקציה: $f(x)=\dfrac{x\sqrt{x^2-1}}{2x^2-1}$.
+\end{question}
+
+\begin{hint}
+שימו לב לתחום ההגדרה $|x|\ge1$ ולכך ש-$\sqrt{x^2}=|x|$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} צריך $x^2-1\ge0$, כלומר $|x|\ge1$, וגם $2x^2-1\ne0$, כלומר $x\ne\pm\frac1{\sqrt2}$ – אך נקודות אלה ממילא אינן בתחום. לכן התחום הוא $(-\infty,-1]\cup[1,\infty)$.
+
+\textbf{אסימפטוטות אנכיות:} בתחום המכנה מקיים $2x^2-1\ge1>0$, ולכן $f$ רציפה בכל תחומה (גם בקצוות $x=\pm1$, שם $f(\pm1)=0$). אין נקודה שבה $f$ שואפת לאינסוף, ולכן אין אסימפטוטות אנכיות.
+
+\textbf{אסימפטוטות אופקיות:} מכיוון ש-$\sqrt{x^2-1}=|x|\sqrt{1-\frac1{x^2}}$,
+\[ f(x)=\frac{x|x|\sqrt{1-\frac1{x^2}}}{x^2\left(2-\frac1{x^2}\right)}=\frac{|x|}{x}\cdot\frac{\sqrt{1-\frac1{x^2}}}{2-\frac1{x^2}}. \]
+כאשר $x\to+\infty$: $\frac{|x|}{x}=1$ ולכן $f(x)\to\frac12$. כאשר $x\to-\infty$: $\frac{|x|}{x}=-1$ ולכן $f(x)\to-\frac12$. מכיוון שהגבולות סופיים, אין אסימפטוטות משופעות נוספות.
+
+\textbf{תשובה:} $y=\frac12$ (ב-$+\infty$) ו-$y=-\frac12$ (ב-$-\infty$); אין אסימפטוטות אנכיות.
+\end{solution}

@@ -1,0 +1,27 @@
+% year: תשפ"ג
+% semester: א
+% moed: ג
+% source: exams/מבחנים/תשפג/מועד ג תשפג.pdf
+% number: 1א
+% categories: functions
+% note on source: in the original, a stray ".1" appears to the right of the cases in part ב; omitted here.
+
+\begin{question}
+בדקו קיום של פונקציות הפוכה לפונקציה $f(x)=|x|+2x$ בתחום הגדרתה. במקרה שהיא קיימת מצאו אותה.
+\end{question}
+
+\begin{hint}
+פרקו את הערך המוחלט: רשמו את $f$ בנפרד עבור $x\ge 0$ ועבור $x<0$, ובדקו שהיא חח"ע ועל.
+\end{hint}
+
+\begin{solution}
+הפונקציה מוגדרת על כל $\R$. נפרק את הערך המוחלט:
+\[ f(x)=\begin{cases} 3x, & x\ge 0\\ x, & x<0. \end{cases} \]
+\textbf{חח"ע:} בכל אחד מהתחומים $f$ עולה ממש (שיפוע $3$ ושיפוע $1$), ובנוסף $f(x)\ge 0$ עבור $x\ge0$ ו-$f(x)<0$ עבור $x<0$, כך שערכים משני התחומים אינם יכולים להתלכד. לכן $f$ עולה ממש על כל $\R$, ובפרט חח"ע.
+
+\textbf{על:} התמונה של $[0,\infty)$ תחת $3x$ היא $[0,\infty)$, והתמונה של $(-\infty,0)$ תחת $x$ היא $(-\infty,0)$. לכן התמונה היא כל $\R$.
+
+מכאן ש-$f:\R\to\R$ הפיכה. נמצא את ההפכית: אם $y\ge 0$ אז $y=3x$ עם $x\ge 0$, כלומר $x=y/3$; אם $y<0$ אז $y=x$. לכן
+\[ \boxed{f^{-1}(y)=\begin{cases} \dfrac{y}{3}, & y\ge 0\\[2mm] y, & y<0. \end{cases}} \]
+(בדיקה: $f^{-1}(f(x))=x$ בשני התחומים.)
+\end{solution}

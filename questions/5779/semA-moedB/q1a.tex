@@ -1,0 +1,24 @@
+% year: תשע"ט
+% semester: א
+% moed: ב
+% number: 1א
+% points: 10
+% categories: func-limits, taylor
+% source: exams/מבחנים/תשעט/מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle\lim_{x\to0}\frac{\cos x-\sqrt{1-2x^2}}{\sin^2x}$
+\end{question}
+
+\begin{hint}
+השתמשו בפיתוחי מקלורן $\cos x=1-\frac{x^2}2+o(x^2)$, $\sqrt{1+t}=1+\frac t2+o(t)$, ו-$\sin^2x\sim x^2$.
+\end{hint}
+
+\begin{solution}
+לפי פיתוחי מקלורן:
+\[ \cos x=1-\frac{x^2}{2}+o(x^2),\qquad \sqrt{1-2x^2}=1+\frac12(-2x^2)+o(x^2)=1-x^2+o(x^2). \]
+לכן המונה הוא $\cos x-\sqrt{1-2x^2}=\frac{x^2}{2}+o(x^2)$. כמו כן $\frac{\sin^2x}{x^2}\to1$. מכאן
+\[ \lim_{x\to0}\frac{\cos x-\sqrt{1-2x^2}}{\sin^2x}=\lim_{x\to0}\frac{\frac12+\frac{o(x^2)}{x^2}}{\frac{\sin^2x}{x^2}}=\frac12. \]
+(אפשר גם בלופיטל: אחרי החלפת $\sin^2x$ ב-$x^2$, $\lim\frac{-\sin x+\frac{2x}{\sqrt{1-2x^2}}}{2x}=\frac{-1+2}{2}=\frac12$.)
+\end{solution}

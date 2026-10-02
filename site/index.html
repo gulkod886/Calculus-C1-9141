@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מאגר שאלות בחינה – חדו"א 1</title>
+<link rel="stylesheet" href="style.css?v=7">
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEnvironments: true,
+      packages: {'[+]': ['boldsymbol']},
+      macros: { R: '\\mathbb{R}', N: '\\mathbb{N}', Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', eps: '\\varepsilon' }
+    },
+    loader: { load: ['[tex]/boldsymbol'] },
+    startup: { typeset: false }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+<script defer src="data/questions.js?v=7"></script>
+<script defer src="app.js?v=7"></script>
+</head>
+<body>
+<main>
+<header class="banner">
+  <h1><span class="ico" aria-hidden="true">📘</span>מאגר שאלות בחינה</h1>
+  <p class="sub">חשבון אינפיניטסימלי 1 · מספר קורס: <span dir="ltr">9141</span></p>
+</header>
+
+  <details class="filters panel" id="filters" aria-label="סינון">
+    <summary class="panel-head">
+      <span class="ico" aria-hidden="true">🔎</span><span class="nowrap">סינון שאלות</span>
+      <span id="active" class="active-badge" hidden></span>
+      <span id="count" class="head-count" aria-live="polite"></span>
+      <span class="chev" aria-hidden="true"></span>
+    </summary>
+    <div class="panel-body">
+    <div class="row">
+      <label>שנה
+        <select id="f-year"><option value="">הכול</option></select>
+      </label>
+      <label>סוג
+        <select id="f-type"><option value="">הכול</option></select>
+      </label>
+      <label>סמסטר
+        <select id="f-semester"><option value="">הכול</option></select>
+      </label>
+      <label>מועד
+        <select id="f-moed"><option value="">הכול</option></select>
+      </label>
+      <label class="grow">חיפוש
+        <input id="f-text" type="search" placeholder="חיפוש בטקסט השאלה…">
+      </label>
+    </div>
+    <div class="cats-head">
+      <span>קטגוריות</span>
+      <label class="mode"><input type="checkbox" id="f-all"> כל הקטגוריות שנבחרו (במקום אחת מהן)</label>
+    </div>
+    <div id="f-cats" class="chips"></div>
+    <div class="row actions">
+      <button type="button" id="reset" class="link">ניקוי סינון</button>
+      <button type="button" id="close-filters" class="btn primary">הצגת השאלות</button>
+    </div>
+    </div>
+  </details>
+
+  <section id="results"></section>
+</main>
+
+<template id="tpl-question">
+  <article class="q">
+    <header class="q-head">
+      <h3 class="q-title"><span class="q-num"></span> <span class="q-src"></span></h3>
+      <div class="q-cats"></div>
+    </header>
+    <div class="q-body"></div>
+    <div class="q-hints"></div>
+    <div class="q-actions">
+      <button type="button" class="btn hint-btn"></button>
+      <button type="button" class="btn primary sol-btn">הצגת פתרון</button>
+    </div>
+    <div class="q-solution" hidden>
+      <h4>פתרון</h4>
+      <div class="sol-body"></div>
+    </div>
+  </article>
+</template>
+</body>
+</html>

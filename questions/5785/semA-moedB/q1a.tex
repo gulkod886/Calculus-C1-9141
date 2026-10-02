@@ -1,0 +1,29 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1א
+% points: 11
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשפה/מועד ב תשפה.pdf
+
+\begin{question}
+עבור מספר ממשי $a$ נגדיר פונקציה על ידי
+\[ f(x) = \begin{cases} \dfrac{\sqrt{x+4} - 2}{x^2 + 2x}, & \text{if } x < 0 \\ a\cdot|x - 1|, & \text{if } x \ge 0 \end{cases} \]
+(11 נק') לאיזה ערך של $a$ הפונקציה רציפה בנקודה $x = 0$? נמקו.
+\end{question}
+
+\begin{hint}
+הכפילו מונה ומכנה בצמוד $\sqrt{x+4} + 2$.
+\end{hint}
+
+\begin{solution}
+$f(0) = a\cdot|0 - 1| = a$, ומימין ל-$0$ (בסביבה ימנית) $f(x) = a|x-1|$ רציפה, ולכן $\lim_{x\to0^+}f(x) = a = f(0)$.
+לכן $f$ רציפה ב-$0$ אם ורק אם $\lim_{x\to 0^-} f(x) = a$.
+
+עבור $-2 < x < 0$ נכפיל בצמוד:
+\[ \frac{\sqrt{x+4} - 2}{x^2 + 2x} = \frac{(x + 4) - 4}{x(x+2)\left(\sqrt{x+4} + 2\right)} = \frac{1}{(x+2)\left(\sqrt{x+4}+2\right)}. \]
+הביטוי האחרון רציף ב-$x=0$, ולכן
+\[ \lim_{x\to 0^-} f(x) = \frac{1}{2\cdot(2 + 2)} = \frac18. \]
+\textbf{תשובה:} $f$ רציפה ב-$0$ אם ורק אם $a = \frac18$.
+\end{solution}

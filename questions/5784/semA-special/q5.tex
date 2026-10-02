@@ -1,0 +1,27 @@
+% year: תשפ"ד
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 5
+% points: 14
+% categories: antiderivatives
+% source: exams/מבחנים/תשפד/מועד ג תשפד.pdf
+
+\begin{question}
+חשבו את הפונקציה הקדומה של
+\[ f(x)=\sin^2x\cdot\cos^5x \]
+\end{question}
+
+\begin{hint}
+החזקה של $\cos x$ אי-זוגית: הפרידו גורם אחד $\cos x$, כתבו $\cos^4x=(1-\sin^2x)^2$ והציבו $t=\sin x$.
+\end{hint}
+
+\begin{solution}
+נכתוב $\cos^5x=\cos^4x\cdot\cos x=(1-\sin^2x)^2\cos x$. לכן
+\[ \int\sin^2x\cos^5x\,dx=\int\sin^2x(1-\sin^2x)^2\cos x\,dx. \]
+נציב $t=\sin x$, $dt=\cos x\,dx$:
+\[ \int t^2(1-t^2)^2\,dt=\int\left(t^2-2t^4+t^6\right)dt=\frac{t^3}3-\frac{2t^5}5+\frac{t^7}7+C. \]
+נחזור למשתנה $x$:
+\[ \boxed{\int\sin^2x\cos^5x\,dx=\frac{\sin^3x}{3}-\frac{2\sin^5x}{5}+\frac{\sin^7x}{7}+C}. \]
+\textbf{בדיקה:} הנגזרת היא $\cos x\left(\sin^2x-2\sin^4x+\sin^6x\right)=\cos x\sin^2x(1-\sin^2x)^2=\sin^2x\cos^5x$.
+\end{solution}

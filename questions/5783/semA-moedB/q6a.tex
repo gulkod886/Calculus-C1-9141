@@ -1,0 +1,24 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 6א
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשפג/מועד ב תשפג.docx
+
+\begin{question}
+(10 נק') חשבו את השטח הסופי החסום בין גרף הפונקציה $f(x)=x^3+x^2-2x$ וציר ה-$x$.
+\end{question}
+
+\begin{hint}
+פרקו את הפולינום לגורמים כדי למצוא את נקודות החיתוך עם ציר $x$ ואת הסימן בכל קטע.
+\end{hint}
+
+\begin{solution}
+פירוק: $f(x)=x(x^2+x-2)=x(x+2)(x-1)$. נקודות החיתוך עם ציר $x$: $x=-2,0,1$. סימן: ב-$(-2,0)$ $f>0$ (למשל $f(-1)=2$), וב-$(0,1)$ $f<0$ (למשל $f(\frac12)=-\frac58$). התחום הסופי החסום בין הגרף לציר הוא מעל $[-2,1]$.
+
+פונקציה קדומה: $F(x)=\frac{x^4}{4}+\frac{x^3}{3}-x^2$. אז $F(-2)=4-\frac83-4=-\frac83$, $F(0)=0$, $F(1)=\frac14+\frac13-1=-\frac{5}{12}$.
+\[ S=\int_{-2}^0 f\,dx-\int_0^1 f\,dx=\big(F(0)-F(-2)\big)-\big(F(1)-F(0)\big)=\frac83+\frac{5}{12}=\frac{37}{12}. \]
+\textbf{תשובה:} $S=\frac{37}{12}$.
+\end{solution}

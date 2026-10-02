@@ -1,0 +1,27 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעו/מועד ב תשעו.pdf
+% number: 6ב
+% points: 10
+% categories: integral-applications
+
+\begin{question}
+(10 נק') חשבו את נפח גוף הסיבוב המתקבל מסיבוב גרף הפונקציה:
+\[ f(x)=\sin^2(x) \]
+סביב ציר ה-$x$ בקטע $[0,\frac\pi2]$.
+\end{question}
+
+\begin{hint}
+נפח גוף הסיבוב הוא $\pi\int_a^b f^2(x)\,dx$; להורדת החזקה השתמשו ב-$\sin^2x=\frac{1-\cos2x}{2}$.
+\end{hint}
+
+\begin{solution}
+נפח גוף סיבוב סביב ציר $x$: $V=\pi\int_0^{\pi/2}f^2(x)\,dx=\pi\int_0^{\pi/2}\sin^4x\,dx$. נשתמש בזהויות
+\[ \sin^4x=\left(\frac{1-\cos2x}{2}\right)^2=\frac14\left(1-2\cos2x+\cos^22x\right)=\frac14\left(1-2\cos2x+\frac{1+\cos4x}{2}\right)=\frac38-\frac12\cos2x+\frac18\cos4x. \]
+לכן
+\[ \int_0^{\pi/2}\sin^4x\,dx=\left[\frac38x-\frac14\sin2x+\frac1{32}\sin4x\right]_0^{\pi/2}=\frac{3\pi}{16}, \]
+(כי $\sin\pi=\sin2\pi=0$), ומכאן
+\[ \boxed{V=\frac{3\pi^2}{16}}. \]
+\end{solution}

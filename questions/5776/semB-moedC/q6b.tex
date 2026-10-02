@@ -1,0 +1,47 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ג
+% source: exams/מבחנים/תשעו/מועד ג תשעו.pdf
+% number: 6ב
+% points: 20
+% categories: func-analysis
+
+\begin{question}
+(20 נק') מצאו את תחום ההגדרה, נקודות חיתוך עם הצירים, תחומי עליה וירידה, נקודות קיצון, אסימפטוטות, תחומי קמירות/קעירות של הפונקציה הבאה:
+\[ f(x)=\frac{\sin(x)}{2+\cos(x)}. \]
+שרטטו סקיצה של גרף הפונקציה
+\end{question}
+
+\begin{hint}
+הפונקציה מחזורית עם מחזור $2\pi$ ואי-זוגית, ולכן מספיק לחקור אותה ב-$[0,2\pi]$ (או $[-\pi,\pi]$). שימו לב ש-$2+\cos x\ge1>0$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} $2+\cos x\ge1>0$ לכל $x$, ולכן $f$ מוגדרת (ורציפה וגזירה) בכל $\R$.
+\textbf{סימטריה ומחזוריות:} $f(-x)=-f(x)$ (אי-זוגית), ו-$f(x+2\pi)=f(x)$ (מחזורית עם מחזור $2\pi$).
+
+\textbf{חיתוך עם הצירים:} $f(x)=0\iff\sin x=0\iff x=k\pi$, $k\in\Z$. החיתוך עם ציר $y$: $(0,0)$. $f>0$ ב-$(2k\pi,(2k+1)\pi)$ ו-$f<0$ ב-$((2k-1)\pi,2k\pi)$.
+
+\textbf{נגזרת ראשונה:}
+\[ f'(x)=\frac{\cos x(2+\cos x)-\sin x\cdot(-\sin x)}{(2+\cos x)^2}=\frac{2\cos x+\cos^2x+\sin^2x}{(2+\cos x)^2}=\frac{2\cos x+1}{(2+\cos x)^2}. \]
+$f'(x)=0\iff\cos x=-\frac12\iff x=\pm\frac{2\pi}{3}+2k\pi$. במחזור $[-\pi,\pi]$:
+\begin{itemize}
+  \item $f'>0$ (\textbf{עולה}) עבור $\cos x>-\frac12$, כלומר ב-$\left(-\frac{2\pi}3+2k\pi,\ \frac{2\pi}3+2k\pi\right)$;
+  \item $f'<0$ (\textbf{יורדת}) ב-$\left(\frac{2\pi}3+2k\pi,\ \frac{4\pi}3+2k\pi\right)$.
+\end{itemize}
+\textbf{קיצון:} מקסימום ב-$x=\frac{2\pi}3+2k\pi$ עם $f=\frac{\sqrt3/2}{2-1/2}=\frac{1}{\sqrt3}$; מינימום ב-$x=-\frac{2\pi}3+2k\pi$ עם $f=-\frac1{\sqrt3}$. אלה גם הקיצון המוחלט: $-\frac1{\sqrt3}\le f(x)\le\frac1{\sqrt3}$ לכל $x$.
+
+\textbf{אסימפטוטות:} אין אסימפטוטות אנכיות ($f$ רציפה בכל $\R$). אין אסימפטוטה אופקית או משופעת: $f$ מחזורית ואינה קבועה, ולכן $\lim_{x\to\pm\infty}f(x)$ אינו קיים (למשל $f(2k\pi)=0$ ו-$f(\frac{2\pi}3+2k\pi)=\frac1{\sqrt3}$), וגם $\frac{f(x)}{x}\to0$ ולכן אסימפטוטה משופעת הייתה חייבת להיות אופקית.
+
+\textbf{נגזרת שנייה:} נגזור את $f'=\frac{2\cos x+1}{(2+\cos x)^2}$:
+\[ f''(x)=\frac{-2\sin x(2+\cos x)^2+(2\cos x+1)\cdot2(2+\cos x)\sin x}{(2+\cos x)^4}=\frac{2\sin x\,\big[-(2+\cos x)+2\cos x+1\big]}{(2+\cos x)^3}=\frac{2\sin x(\cos x-1)}{(2+\cos x)^3}. \]
+מכיוון ש-$\cos x-1\le0$ (ושווה ל-$0$ רק ב-$x=2k\pi$) והמכנה חיובי, הסימן של $f''$ הפוך לסימן של $\sin x$:
+\begin{itemize}
+  \item ב-$(2k\pi,(2k+1)\pi)$: $\sin x>0$, לכן $f''<0$ -- \textbf{קעורה} ($\cap$);
+  \item ב-$((2k+1)\pi,(2k+2)\pi)$: $\sin x<0$, לכן $f''>0$ -- \textbf{קמורה} ($\cup$).
+\end{itemize}
+\textbf{נקודות פיתול:} $x=k\pi$ (הנקודות $(k\pi,0)$), כי שם $f''$ מחליפה סימן.
+
+\textbf{סקיצה:} גל מחזורי דמוי סינוס שעובר בראשית, עולה עד למקסימום $\frac1{\sqrt3}\approx0.577$ ב-$x=\frac{2\pi}{3}$, יורד דרך $(\pi,0)$ (נקודת פיתול) עד למינימום $-\frac1{\sqrt3}$ ב-$x=\frac{4\pi}3$, וחוזר ל-$(2\pi,0)$; לעומת $\sin x$ הגרף "מוטה ימינה" -- המקסימום מוזז מ-$\frac\pi2$ ל-$\frac{2\pi}3$. התבנית חוזרת בכל מחזור באורך $2\pi$.
+\end{solution}

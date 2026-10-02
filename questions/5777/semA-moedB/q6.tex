@@ -1,0 +1,52 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 6
+% points: 20
+% categories: integral-applications, antiderivatives
+% source: exams/מבחנים/תשעז/מועד ב תשעז.pdf
+
+\begin{question}
+חשבו את נפח גוף הסיבוב המתקבל ע"י סיבוב התחום $D$ סביב ציר ה-$x$, כאשר $D$ התחום בין גרף הפונקציה $f(x)=\dfrac{x}{x^2+6x+8}$ וציר ה-$x$, כאשר $0\le x\le2$.
+\end{question}
+
+\begin{hint}
+הנפח הוא $V=\pi\int_0^2f^2(x)\,dx$. פרקו קודם את $f$ לשברים חלקיים: $x^2+6x+8=(x+2)(x+4)$.
+\end{hint}
+
+\begin{solution}
+\textbf{נוסחת הנפח.} לפי הנוסחה לנפח גוף סיבוב סביב ציר $x$:
+\[
+V=\pi\int_0^2 f^2(x)\,dx=\pi\int_0^2\frac{x^2}{(x^2+6x+8)^2}\,dx.
+\]
+
+\textbf{שברים חלקיים.} $x^2+6x+8=(x+2)(x+4)$, ו-
+\[
+\frac{x}{(x+2)(x+4)}=\frac{A}{x+2}+\frac{B}{x+4},\qquad A=\frac{-2}{-2+4}=-1,\quad B=\frac{-4}{-4+2}=2.
+\]
+לכן $f(x)=\frac{2}{x+4}-\frac{1}{x+2}$, ו-
+\[
+f^2(x)=\frac{4}{(x+4)^2}+\frac{1}{(x+2)^2}-\frac{4}{(x+2)(x+4)},\qquad
+\frac{4}{(x+2)(x+4)}=\frac{2}{x+2}-\frac{2}{x+4}.
+\]
+
+\textbf{אינטגרציה:}
+\[
+\int_0^2\frac{4\,dx}{(x+4)^2}=\left[-\frac4{x+4}\right]_0^2=-\frac46+1=\frac13,\qquad
+\int_0^2\frac{dx}{(x+2)^2}=\left[-\frac1{x+2}\right]_0^2=-\frac14+\frac12=\frac14,
+\]
+\[
+\int_0^2\left(\frac{2}{x+2}-\frac{2}{x+4}\right)dx=\Big[2\ln(x+2)-2\ln(x+4)\Big]_0^2=2\ln\frac46-2\ln\frac24=2\ln\frac43.
+\]
+לכן
+\[
+\int_0^2f^2(x)\,dx=\frac13+\frac14-2\ln\frac43=\frac7{12}-2\ln\frac43.
+\]
+
+\textbf{תשובה:}
+\[
+V=\pi\left(\frac{7}{12}-2\ln\frac43\right)\approx0.0250.
+\]
+(הנפח קטן מאוד, וזה סביר: $0\le f(x)\le f(2)=\frac1{12}$ בקטע.)
+\end{solution}

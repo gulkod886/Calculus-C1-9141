@@ -1,0 +1,29 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ג
+% number: 3א
+% points: 10
+% categories: taylor, func-limits
+% source: exams/מבחנים/תשעח/מועד מיוחד תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול:
+\[ \lim_{x\to0}\left(\frac{1-\cos(x^3)}{x^2\ln(1+x^2)\sin^2x}\right) \]
+\underline{רמז}: אפשר להשתמש בנוסחאות מקלורין.
+\end{question}
+
+\begin{hint}
+$1-\cos u=\frac{u^2}{2}+o(u^2)$, $\ln(1+u)=u+o(u)$, $\sin x=x+o(x)$. מה סדר הגודל של המונה ושל המכנה?
+\end{hint}
+
+\begin{solution}
+פיתוחי מקלורין: $\cos u=1-\frac{u^2}{2}+o(u^2)$ עם $u=x^3$ נותן
+\[ 1-\cos(x^3)=\frac{x^6}{2}+o(x^6). \]
+כמו כן $\ln(1+x^2)=x^2+o(x^2)$ ו-$\sin x=x+o(x)$, ולכן $\sin^2x=x^2+o(x^2)$. המכנה:
+\[ x^2\ln(1+x^2)\sin^2x=x^2\left(x^2+o(x^2)\right)\left(x^2+o(x^2)\right)=x^6+o(x^6). \]
+לכן
+\[ \frac{1-\cos(x^3)}{x^2\ln(1+x^2)\sin^2x}=\frac{\frac12+\frac{o(x^6)}{x^6}}{1+\frac{o(x^6)}{x^6}}\xrightarrow[x\to0]{}\frac12. \]
+(באופן שקול: $\frac{1-\cos(x^3)}{x^6}\to\frac12$, $\frac{\ln(1+x^2)}{x^2}\to1$, $\frac{\sin^2x}{x^2}\to1$, ומפרקים את הביטוי למכפלה.)
+\[ \boxed{\lim_{x\to0}\frac{1-\cos(x^3)}{x^2\ln(1+x^2)\sin^2x}=\frac12} \]
+\end{solution}

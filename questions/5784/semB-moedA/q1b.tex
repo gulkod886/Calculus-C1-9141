@@ -1,0 +1,18 @@
+% year: תשפ"ד
+% semester: ב
+% moed: א
+% number: 1ב
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשפד/מועד א תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \lim_{x\to 0} \frac{x^2+\sin(x)\cos(x)}{1-e^x} \]
+\end{question}
+
+\begin{solution}
+כאשר $x\to0$ המונה שואף ל-$0+\sin0\cos0=0$ והמכנה ל-$1-e^0=0$, כלומר גבול מהצורה $\frac00$. המונה והמכנה גזירים, ונגזרת המכנה $-e^x\neq0$ בסביבת $0$, לכן לפי כלל לופיטל:
+\[ \lim_{x\to0}\frac{x^2+\sin x\cos x}{1-e^x}=\lim_{x\to0}\frac{2x+\cos^2x-\sin^2x}{-e^x}=\frac{0+1-0}{-1}=-1, \]
+כאשר השתמשנו ברציפות הביטוי שהתקבל ב-$0$. (לחלופין: $\sin x\cos x=\frac12\sin2x$, ומחלקים מונה ומכנה ב-$x$: $\frac{x+\frac{\sin 2x}{2x}}{\frac{1-e^x}{x}}\to\frac{0+1}{-1}$.)
+התשובה: $\boxed{-1}$.
+\end{solution}

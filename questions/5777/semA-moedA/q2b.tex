@@ -1,0 +1,28 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: א
+% number: 2ב
+% points: 10
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשעז/מועד א תשעז.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle \lim_{x\to 0}\frac{\sqrt[3]{8+3x}-2}{\sqrt[4]{16+5x}-2}$
+\end{question}
+
+\begin{solution}
+בנקודה $x=0$: $\sqrt[3]{8}-2=0$ ו-$\sqrt[4]{16}-2=0$, כלומר גבול מהצורה $\frac00$. שתי הפונקציות גזירות בסביבת $0$:
+\[
+\left(\sqrt[3]{8+3x}\right)'=\frac13(8+3x)^{-2/3}\cdot3=(8+3x)^{-2/3},\qquad
+\left(\sqrt[4]{16+5x}\right)'=\frac54(16+5x)^{-3/4},
+\]
+ונגזרת המכנה שונה מ-$0$ בסביבת $0$. לפי כלל לופיטל:
+\[
+\lim_{x\to0}\frac{\sqrt[3]{8+3x}-2}{\sqrt[4]{16+5x}-2}
+=\lim_{x\to0}\frac{(8+3x)^{-2/3}}{\frac54(16+5x)^{-3/4}}
+=\frac{8^{-2/3}}{\frac54\cdot16^{-3/4}}=\frac{\frac14}{\frac54\cdot\frac18}=\frac{\frac14}{\frac{5}{32}}=\frac85.
+\]
+\textbf{תשובה:} $\frac85$.
+\end{solution}

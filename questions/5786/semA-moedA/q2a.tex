@@ -1,0 +1,41 @@
+% year: תשפ"ו
+% semester: א
+% moed: א
+% number: 2א
+% points: 12
+% categories: func-analysis, func-limits
+% official_solution: yes
+% source: exams/מבחנים/תשפו/AnyScanner_02_01_2026(1) (2).pdf
+
+\begin{question}
+(12 נק') חשבו את כל האסימפטוטות של הפונקציה
+\[ f(x) = \frac{x^2 - 2\ln(x)}{x - 1} \]
+\end{question}
+
+\begin{hint}
+התחילו מתחום ההגדרה: הנקודות ה"חשודות" לאסימפטוטה אנכית הן קצוות התחום ונקודות שבהן המכנה מתאפס. אסימפטוטה משופעת $y = ax + b$ יש לבדוק רק בכיוון שבו התחום אינסופי.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} $\ln x$ מוגדר עבור $x > 0$, והמכנה מתאפס ב-$x = 1$. לכן התחום הוא $(0,1)\cup(1,\infty)$, ו-$f$ רציפה בו.
+
+\textbf{אסימפטוטות אנכיות.} הנקודות החשודות הן $x = 0$ (קצה התחום) ו-$x = 1$.
+\begin{itemize}
+  \item $x \to 0^+$: המונה $x^2 - 2\ln x \to 0 - (-\infty) = +\infty$ והמכנה $x - 1 \to -1$, ולכן
+  \[ \lim_{x\to 0^+} f(x) = -\infty. \]
+  לכן $x = 0$ אסימפטוטה אנכית (מימין).
+  \item $x \to 1$: המונה $\to 1 - 2\ln 1 = 1 > 0$ והמכנה $\to 0$, כאשר $x - 1 < 0$ משמאל ו-$x - 1 > 0$ מימין. לכן
+  \[ \lim_{x\to 1^-} f(x) = -\infty, \qquad \lim_{x\to 1^+} f(x) = +\infty, \]
+  ו-$x = 1$ אסימפטוטה אנכית (משני הצדדים).
+\end{itemize}
+
+\textbf{אסימפטוטות אופקיות/משופעות.} התחום אינסופי רק בכיוון $+\infty$, לכן בודקים רק $x \to +\infty$. נחפש $y = ax + b$:
+\[ a = \lim_{x\to\infty} \frac{f(x)}{x} = \lim_{x\to\infty} \frac{x^2 - 2\ln x}{x^2 - x}
+     = \lim_{x\to\infty} \frac{x^2\left(1 - \frac{2\ln x}{x^2}\right)}{x^2\left(1 - \frac{1}{x}\right)} = \frac{1 - 0}{1 - 0} = 1, \]
+כי $\frac{\ln x}{x^2} \to 0$ (למשל לפי לופיטל: $\lim \frac{1/x}{2x} = 0$).
+\[ b = \lim_{x\to\infty} \bigl(f(x) - x\bigr) = \lim_{x\to\infty} \frac{x^2 - 2\ln x - x^2 + x}{x - 1}
+     = \lim_{x\to\infty} \frac{x\left(1 - \frac{2\ln x}{x}\right)}{x\left(1 - \frac{1}{x}\right)} = 1, \]
+כי $\frac{\ln x}{x} \to 0$. מכיוון ששני הגבולות סופיים, הישר $y = x + 1$ הוא אסימפטוטה משופעת ב-$+\infty$ (ואין אסימפטוטה אופקית).
+
+\textbf{תשובה:} אסימפטוטות אנכיות $x = 0$ ו-$x = 1$; אסימפטוטה משופעת $y = x + 1$ כאשר $x \to +\infty$.
+\end{solution}

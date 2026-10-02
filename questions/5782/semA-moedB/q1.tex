@@ -1,0 +1,33 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1
+% points: 17
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשפב/מועד ב תשפב.pdf
+
+\begin{question}
+(17 נק') עבור פרמטרים כלשהם $a,b\in\R$ נגדיר פונקציה על ידי
+\[ f(x)=\begin{cases} \sin(ax)\sin(\frac{1}{x}), & \text{if } x<0,\\ b+3, & \text{if } x=0,\\ x\ln(x), & \text{if } x>0 \end{cases} \]
+לאילו ערכים של הפרמטרים $a,b$ הפונקציה רציפה ב-$0$? נמקו.
+\end{question}
+
+\begin{hint}
+חשבו בנפרד את הגבולות החד-צדדיים ב-$0$. משמאל: "אפסה כפול חסומה". מימין: כתבו $x\ln x=\frac{\ln x}{1/x}$ והשתמשו בכלל לופיטל.
+\end{hint}
+
+\begin{solution}
+$f$ רציפה ב-$0$ אם ורק אם שני הגבולות החד-צדדיים קיימים ושווים ל-$f(0)=b+3$.
+
+\textbf{גבול משמאל.} לכל $a\in\R$: $\sin(ax)\to\sin0=0$ כאשר $x\to0^-$ (רציפות הסינוס), ו-$|\sin(1/x)|\le1$. לפי "אפסה כפול חסומה":
+\[ \lim_{x\to0^-}\sin(ax)\sin\left(\tfrac1x\right)=0. \]
+(במפורש: $0\le|\sin(ax)\sin(1/x)|\le|\sin(ax)|\le|a||x|\to0$.) הגבול שווה $0$ \textbf{לכל} ערך של $a$.
+
+\textbf{גבול מימין.} זהו גבול מהצורה $0\cdot(-\infty)$. נכתוב כמנה מהצורה $\frac{-\infty}{\infty}$ ונשתמש בכלל לופיטל:
+\[ \lim_{x\to0^+}x\ln x=\lim_{x\to0^+}\frac{\ln x}{1/x}\overset{L}{=}\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}(-x)=0. \]
+
+\textbf{מסקנה.} שני הגבולות החד-צדדיים שווים $0$, ולכן $\lim_{x\to0}f(x)=0$. הרציפות ב-$0$ שקולה ל-$b+3=0$.
+
+\textbf{תשובה:} $f$ רציפה ב-$0$ אם ורק אם $\boxed{b=-3}$, ו-$a\in\R$ כלשהו.
+\end{solution}

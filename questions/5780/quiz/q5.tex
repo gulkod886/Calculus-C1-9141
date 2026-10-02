@@ -1,0 +1,43 @@
+% year: תש"פ
+% type: בוחן
+% semester: א
+% points: 20
+% source: exams/בחנים/תש״פ, בוחן, 9141.pdf
+% number: 5
+% categories: continuity, derivatives, multiple-choice
+
+\begin{question}
+הפונקציה $f(x)$ רציפה בנקודה $x=x_0$. איזו טענה נכונה ?
+\begin{enumerate}
+  \item $f(x)$ גזירה בנקודה $x=x_0$
+  \item קיים גבול $\displaystyle\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$
+  \item קיים גבול $\displaystyle\lim_{x\to x_0}\left(f(x)-f(x_0)\right)$
+  \item קיים גבול $\displaystyle\lim_{h\to 0}\frac{f(x_0+h)-f(x_0)}{h}$
+  \item $f'(x)$ רציפה בנקודה $x=x_0$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+רציפות אינה גוררת גזירות. חשבו על $f(x)=|x|$ בנקודה $x_0=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ג)}.
+
+לפי ההגדרה, $f$ רציפה ב-$x_0$ אם ורק אם $\lim_{x\to x_0}f(x)=f(x_0)$. לפי אריתמטיקה של גבולות (גבול של קבוע הוא הקבוע עצמו) זה שקול לכך ש-
+\[
+\lim_{x\to x_0}\bigl(f(x)-f(x_0)\bigr)=f(x_0)-f(x_0)=0 ,
+\]
+ובפרט הגבול בטענה (ג) קיים (ושווה ל-0).
+
+\textbf{למה האחרות שגויות:} נתבונן ב-$f(x)=|x|$ וב-$x_0=0$. הפונקציה רציפה ב-0, אבל
+\[
+\frac{f(0+h)-f(0)}{h}=\frac{|h|}{h}=\begin{cases}1,& h>0\\ -1,& h<0\end{cases}
+\]
+ולכן הגבולות החד-צדדיים של מנת ההפרשים הם $1$ ו-$-1$ והגבול אינו קיים. מכאן:
+\begin{itemize}
+  \item (ב) ו-(ד) שגויות: אלה שתי צורות כתיבה של הגדרת הנגזרת $f'(x_0)$, והראינו שהגבול לא קיים.
+  \item (א) שגויה: גזירות ב-$x_0$ פירושה בדיוק קיום הגבול ב-(ב)/(ד).
+  \item (ה) שגויה: $f'(0)$ כלל אינה מוגדרת, ולכן $f'$ אינה רציפה ב-0. (יתרה מזו, גם פונקציה גזירה יכולה להיות בעלת נגזרת לא רציפה, למשל $x^2\sin\frac1x$ עם $f(0)=0$.)
+\end{itemize}
+\end{solution}

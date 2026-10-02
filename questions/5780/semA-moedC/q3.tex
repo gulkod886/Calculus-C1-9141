@@ -1,0 +1,35 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ג
+% part: א
+% number: 3
+% points: 20
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשפ/מועד מיוחד תשפ.pdf
+
+\begin{question}
+חשב את הגבול הבא:
+\[ \lim_{x\to0^+}\left((x^2+x+1))^{\frac{1}{x^2}}+x\cdot\ln x\right) \]
+\end{question}
+
+\begin{hint}
+חשבו כל מחובר בנפרד. במחובר הראשון כתבו $(x^2+x+1)^{1/x^2}=e^{\frac{\ln(1+x+x^2)}{x^2}}$.
+\end{hint}
+
+\begin{solution}
+(בנוסח המקורי מופיעה סוגר מיותרת; המחובר הראשון הוא $(x^2+x+1)^{1/x^2}$.)
+
+\textbf{המחובר השני:} $x\ln x=\frac{\ln x}{1/x}$, מהצורה $\frac{-\infty}{\infty}$. לפי כלל לופיטל:
+\[ \lim_{x\to0^+}\frac{\ln x}{1/x}=\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}(-x)=0 . \]
+
+\textbf{המחובר הראשון:} עבור $x>0$, $x^2+x+1>1$, ולכן
+\[ (x^2+x+1)^{\frac{1}{x^2}}=\exp\Big(\frac{\ln(1+x+x^2)}{x^2}\Big). \]
+המעריך: $\frac{\ln(1+x+x^2)}{x^2}=\frac{\ln(1+x+x^2)}{x+x^2}\cdot\frac{x+x^2}{x^2}=\frac{\ln(1+t)}{t}\Big|_{t=x+x^2}\cdot\Big(\frac1x+1\Big)$.
+כאשר $x\to0^+$: $t=x+x^2\to0^+$ ולכן $\frac{\ln(1+t)}{t}\to1$, ואילו $\frac1x+1\to+\infty$. לכן המעריך שואף ל-$+\infty$, ומכאן
+\[ \lim_{x\to0^+}(x^2+x+1)^{\frac{1}{x^2}}=+\infty . \]
+(אינטואיטיבית: זה גבול מהצורה $1^\infty$, אבל הבסיס מתקרב ל-$1$ "לאט" --- כמו $1+x$ --- בעוד שהמעריך גדל כמו $\frac{1}{x^2}$, ולכן $\big(1+x\big)^{1/x^2}\approx e^{1/x}\to\infty$.)
+
+\textbf{סיכום:} סכום של פונקציה השואפת ל-$+\infty$ ופונקציה השואפת לגבול סופי ($0$) שואף ל-$+\infty$. לכן
+\[ \lim_{x\to0^+}\left((x^2+x+1)^{\frac{1}{x^2}}+x\ln x\right)=\boxed{+\infty} . \]
+\end{solution}

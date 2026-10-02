@@ -1,0 +1,37 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: א
+% source: exams/מבחנים/תשעז/מועד א תשעז סמסטר ב.pdf
+% number: 4
+% points: 15
+% categories: antiderivatives
+
+\begin{question}
+(15 נק') חשבו:
+\[ \int\frac{x^4+1}{x^3-x^2-x+1}\,dx \]
+\end{question}
+
+\begin{hint}
+המעלה של המונה גדולה ממעלת המכנה: בצעו קודם חילוק פולינומים. פרקו את המכנה: $x^3-x^2-x+1=(x-1)^2(x+1)$.
+\end{hint}
+
+\begin{hint}
+לשורש הכפול $x=1$ יש שני שברים חלקיים: $\frac{B}{x-1}+\frac{C}{(x-1)^2}$.
+\end{hint}
+
+\begin{solution}
+\textbf{פירוק המכנה:} $x^3-x^2-x+1=x^2(x-1)-(x-1)=(x-1)(x^2-1)=(x-1)^2(x+1)$.
+
+\textbf{חילוק פולינומים:} המנה היא $x+1$; אכן $(x+1)(x^3-x^2-x+1)=x^4-2x^2+1$, ולכן
+\[ x^4+1=(x+1)(x^3-x^2-x+1)+2x^2,\qquad \frac{x^4+1}{x^3-x^2-x+1}=x+1+\frac{2x^2}{(x-1)^2(x+1)}. \]
+
+\textbf{שברים חלקיים:}
+\[ \frac{2x^2}{(x-1)^2(x+1)}=\frac{A}{x+1}+\frac{B}{x-1}+\frac{C}{(x-1)^2}\iff 2x^2=A(x-1)^2+B(x-1)(x+1)+C(x+1). \]
+הצבת $x=-1$: $2=4A$, כלומר $A=\frac12$. הצבת $x=1$: $2=2C$, כלומר $C=1$. השוואת מקדם $x^2$: $2=A+B$, לכן $B=\frac32$.
+
+\textbf{אינטגרציה:}
+\[ \int\frac{x^4+1}{x^3-x^2-x+1}dx=\int\left(x+1+\frac{1/2}{x+1}+\frac{3/2}{x-1}+\frac{1}{(x-1)^2}\right)dx, \]
+\[ \boxed{=\frac{x^2}{2}+x+\frac12\ln|x+1|+\frac32\ln|x-1|-\frac{1}{x-1}+C.} \]
+(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)
+\end{solution}

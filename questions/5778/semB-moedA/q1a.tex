@@ -1,0 +1,27 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 1א
+% points: 10
+% categories: derivatives
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') חשבו את הנגזרת של הפונקציה $f(x)=\cos x$ בנקודה $x$ לפי הגדרת הנגזרת (תשובה לפי טבלת הנגזרות לא תתקבל).
+\end{question}
+
+\begin{hint}
+השתמשו בזהות $\cos\alpha-\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$ ובגבול היסודי $\lim_{t\to0}\frac{\sin t}{t}=1$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה $f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$. לפי הזהות $\cos\alpha-\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$:
+\[
+\frac{\cos(x+h)-\cos x}{h}=\frac{-2\sin\left(x+\frac h2\right)\sin\frac h2}{h}=-\sin\left(x+\frac h2\right)\cdot\frac{\sin\frac h2}{\frac h2}.
+\]
+כאשר $h\to0$: $\sin\left(x+\frac h2\right)\to\sin x$ (רציפות הסינוס) ו-$\frac{\sin(h/2)}{h/2}\to1$ (הגבול היסודי). לפי אריתמטיקה של גבולות:
+\[
+(\cos x)'=\lim_{h\to0}\frac{\cos(x+h)-\cos x}{h}=-\sin x.
+\]
+\end{solution}

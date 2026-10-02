@@ -1,0 +1,27 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעו/מועד ב תשעו.pdf
+% number: 3
+% points: 10
+% categories: true-false, improper-integrals
+
+\begin{question}
+\textbf{הוכיחו או הפריכו:} האינטגרל $\int_2^\infty \frac{dx}{x\ln(x)}dx$ מתכנס.
+\end{question}
+
+\begin{hint}
+מצאו פונקציה קדומה בעזרת ההצבה $t=\ln x$.
+\end{hint}
+
+\begin{solution}
+\textbf{הטענה אינה נכונה} -- האינטגרל מתבדר.
+
+הפונקציה $\frac{1}{x\ln x}$ רציפה וחיובית ב-$[2,\infty)$, ולכן האינטגרל הלא אמיתי מוגדר כ-$\lim_{R\to\infty}\int_2^R\frac{dx}{x\ln x}$.
+בהצבה $t=\ln x$, $dt=\frac{dx}{x}$:
+\[ \int\frac{dx}{x\ln x}=\int\frac{dt}{t}=\ln|t|+C=\ln(\ln x)+C \qquad (x>1). \]
+לפי המשפט היסודי (נוסחת ניוטון-לייבניץ):
+\[ \int_2^R\frac{dx}{x\ln x}=\ln(\ln R)-\ln(\ln 2)\xrightarrow[R\to\infty]{}\infty, \]
+כי $\ln R\to\infty$ ולכן גם $\ln(\ln R)\to\infty$. הגבול אינו סופי, ולכן האינטגרל \textbf{מתבדר}.
+\end{solution}

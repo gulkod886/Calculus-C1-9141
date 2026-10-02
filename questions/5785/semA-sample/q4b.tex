@@ -1,0 +1,33 @@
+% year: תשפ"ה
+% semester: א
+% moed: לדוגמה
+% number: 4ב
+% points: 10
+% categories: ode
+% source: exams/מבחנים/תשפו/exam_example 2025.pdf
+
+\begin{question}
+(10 נק') מצאו את הפתרון הכללי של המשוואה הדיפרנציאלית
+\[ (x^2 + 4)y' + 2xy^2 = 0 \]
+\end{question}
+
+\begin{hint}
+המשוואה פרידה: $\frac{dy}{y^2} = -\frac{2x}{x^2 + 4}\,dx$. אל תשכחו את הפתרון $y \equiv 0$.
+\end{hint}
+
+\begin{solution}
+נכתוב את המשוואה בצורה ($x^2 + 4 > 0$ לכל $x$):
+\[ \frac{dy}{dx} = -\frac{2x}{x^2 + 4}\, y^2, \]
+וזו משוואה פרידה.
+
+\textbf{הפתרון הקבוע:} $y \equiv 0$ מקיים את המשוואה, ולכן הוא פתרון.
+
+\textbf{עבור $y \ne 0$:}
+\[ \int \frac{dy}{y^2} = -\int \frac{2x}{x^2 + 4}\,dx. \]
+באגף שמאל $-\frac1y$. באגף ימין, בהצבה $t = x^2 + 4$, $dt = 2x\,dx$: $\int \frac{2x}{x^2 + 4}\,dx = \ln(x^2 + 4) + C$. לכן
+\[ -\frac{1}{y} = -\ln(x^2 + 4) + C \quad\Longrightarrow\quad y = \frac{1}{\ln(x^2 + 4) - C}. \]
+
+\textbf{תשובה:} הפתרון הכללי הוא
+\[ \boxed{y = \frac{1}{\ln(x^2 + 4) + C}}, \quad C \in \R \]
+(שינינו את שם הקבוע; בכל קטע שבו המכנה אינו מתאפס), ובנוסף הפתרון $y \equiv 0$.
+\end{solution}

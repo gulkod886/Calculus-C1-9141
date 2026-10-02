@@ -1,0 +1,33 @@
+% year: תשפ"ד
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 4
+% points: 14
+% categories: taylor
+% source: exams/מבחנים/תשפד/מועד ב תשפד.pdf
+
+\begin{question}
+העריכו בעזרת קירוב טיילור מסדר שני את $\sqrt[3]{e}$, ותנו חסם לשגיאה.
+\end{question}
+
+\begin{hint}
+השתמשו בפולינום מקלורן של $e^x$ מסדר $2$ בנקודה $x=\frac13$, ובשארית בצורת לגרנז'.
+\end{hint}
+
+\begin{solution}
+נשתמש בפונקציה $f(x)=e^x$ סביב $x_0=0$, ונציב $x=\frac13$, שכן $\sqrt[3]{e}=e^{1/3}$.
+
+\textbf{פולינום טיילור.} לכל $n$, $f^{(n)}(x)=e^x$ ולכן $f^{(n)}(0)=1$. פולינום מקלורן מסדר $2$:
+\[ P_2(x)=1+x+\frac{x^2}{2}. \]
+לכן
+\[ \sqrt[3]{e}\approx P_2\!\left(\tfrac13\right)=1+\frac13+\frac1{18}=\frac{25}{18}\approx1.3889. \]
+
+\textbf{חסם לשגיאה.} לפי משפט טיילור עם שארית לגרנז', קיימת $c$ בין $0$ ל-$\frac13$ כך ש-
+\[ R_2\!\left(\tfrac13\right)=e^{1/3}-P_2\!\left(\tfrac13\right)=\frac{f'''(c)}{3!}\left(\frac13\right)^3=\frac{e^c}{6\cdot27}=\frac{e^c}{162}. \]
+מאחר ש-$e^x$ עולה ו-$0<c<\frac13$, מתקיים $e^c<e^{1/3}$. כיוון ש-$e<3<\frac{27}{8}=1.5^3$, נקבל $e^{1/3}<1.5$. לכן
+\[ 0<R_2\!\left(\tfrac13\right)<\frac{1.5}{162}=\frac1{108}\approx0.0093. \]
+(אפשר גם להשתמש בחסם הגס יותר $e^c<e<3$ ולקבל שגיאה קטנה מ-$\frac{3}{162}=\frac1{54}$.)
+
+\textbf{תשובה:} $\sqrt[3]{e}\approx\frac{25}{18}\approx1.3889$, והשגיאה חיובית וקטנה מ-$\frac1{108}$. (לבדיקה: $\sqrt[3]{e}=1.39561\ldots$, והשגיאה בפועל היא כ-$0.0067$.)
+\end{solution}

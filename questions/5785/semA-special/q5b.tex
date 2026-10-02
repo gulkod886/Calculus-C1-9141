@@ -1,0 +1,25 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 5ב
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשפה/מועד ג תשפה.pdf
+
+\begin{question}
+(10 נק') חשבו את האינטגרל הלא אמיתי הבא, או הראו שאינו מתכנס:
+\[ \int_e^\infty\frac{1}{x\ln^2 x}\,dx \]
+\end{question}
+
+\begin{hint}
+הציבו $u = \ln x$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה, $\int_e^\infty = \lim_{R\to\infty}\int_e^R$. בהצבה $u = \ln x$, $du = \frac{dx}{x}$ ($x = e \mapsto u = 1$, $x = R\mapsto u = \ln R$):
+\[ \int_e^R\frac{dx}{x\ln^2x} = \int_1^{\ln R}\frac{du}{u^2} = \left[-\frac1u\right]_1^{\ln R} = 1 - \frac{1}{\ln R} \xrightarrow[R\to\infty]{} 1, \]
+כי $\ln R \to \infty$.
+
+\textbf{תשובה:} האינטגרל מתכנס וערכו $1$.
+\end{solution}

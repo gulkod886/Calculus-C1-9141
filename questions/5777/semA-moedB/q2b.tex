@@ -1,0 +1,30 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 2ב
+% points: 10
+% categories: func-limits
+% source: exams/מבחנים/תשעז/מועד ב תשעז.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle\lim_{x\to0}\left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}$
+\end{question}
+
+\begin{hint}
+בדקו לאן שואפים הבסיס והמעריך בנפרד. האם זהו בכלל ביטוי לא מוגדר?
+\end{hint}
+
+\begin{solution}
+הביטוי מוגדר רק עבור $x\ge0$ (בגלל $\sqrt x$), ולכן מדובר בגבול חד-צדדי $x\to0^+$.
+זהו \emph{לא} ביטוי לא-מוגדר: הבסיס $\frac{1+x}{2+x}\to\frac12>0$ והמעריך $\frac{1-\sqrt x}{1-x}\to1$. נכתוב
+\[
+\left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}=\exp\left(\frac{1-\sqrt{x}}{1-x}\cdot\ln\frac{1+x}{2+x}\right).
+\]
+לפי אריתמטיקה של גבולות ורציפות $\ln$, המעריך שואף ל-$1\cdot\ln\frac12=\ln\frac12$, ולפי רציפות פונקציית האקספוננט:
+\[
+\lim_{x\to0^+}\left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}=e^{\ln\frac12}=\frac12.
+\]
+\textbf{תשובה:} $\frac12$.
+\end{solution}

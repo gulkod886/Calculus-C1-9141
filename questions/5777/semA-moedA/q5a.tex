@@ -1,0 +1,30 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: א
+% number: 5א
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשעז/מועד א תשעז.pdf
+
+\begin{question}
+(10 נק') חשבו את השטח החסום על ידי הקווים $y=4x,\ \ y=x,\ \ y=1/x$ בתחום $x\ge0,\ y\ge0$ וציירו את הסקיצה המתאימה.
+\end{question}
+
+\begin{hint}
+מצאו את נקודות החיתוך של הקווים, וחלקו את האינטגרל לשני קטעים לפי הקו העליון.
+\end{hint}
+
+\begin{solution}
+\textbf{נקודות חיתוך} (ברביע הראשון): $4x=x\Rightarrow x=0$ (הראשית); $4x=\frac1x\Rightarrow x=\frac12$ (הנקודה $(\frac12,2)$); $x=\frac1x\Rightarrow x=1$ (הנקודה $(1,1)$).
+
+\textbf{סקיצה:} התחום הוא "משולש עקום" עם קודקודים $(0,0)$, $(\frac12,2)$, $(1,1)$: הגבול התחתון הוא הישר $y=x$, והגבול העליון הוא הישר $y=4x$ עבור $0\le x\le\frac12$ וההיפרבולה $y=\frac1x$ עבור $\frac12\le x\le1$.
+
+\textbf{שטח:}
+\[
+S=\int_0^{1/2}(4x-x)\,dx+\int_{1/2}^1\left(\frac1x-x\right)dx
+=\left[\frac{3x^2}{2}\right]_0^{1/2}+\left[\ln x-\frac{x^2}{2}\right]_{1/2}^1
+=\frac38+\left(-\frac12-\ln\frac12+\frac18\right)=\frac38+\ln2-\frac38=\ln 2.
+\]
+\textbf{תשובה:} $S=\ln2$.
+\end{solution}

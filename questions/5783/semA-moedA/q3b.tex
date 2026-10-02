@@ -1,0 +1,23 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: א
+% number: 3ב
+% points: 10
+% categories: mvt
+% source: exams/מבחנים/תשפג/מועד א תשפג.pdf
+
+\begin{question}
+(10 נק') הוכיחו לכל $x,y$ מתקיים $|\arctan x-\arctan y|\le|x-y|$.
+\end{question}
+
+\begin{hint}
+הפעילו את משפט לגרנז' על $\arctan$ בקטע שבין $x$ ל-$y$.
+\end{hint}
+
+\begin{solution}
+אם $x=y$ שני האגפים שווים $0$ ואין מה להוכיח. נניח $x\neq y$, ובלי הגבלת הכלליות $x<y$. הפונקציה $g(t)=\arctan t$ רציפה ב-$[x,y]$ וגזירה ב-$(x,y)$, ולכן לפי \textbf{משפט לגרנז'} קיימת $c\in(x,y)$ כך ש-
+\[ \arctan y-\arctan x=g'(c)(y-x)=\frac{1}{1+c^2}(y-x). \]
+מכיוון ש-$1+c^2\ge 1$ מתקיים $0<\frac{1}{1+c^2}\le 1$, ולכן
+\[ |\arctan x-\arctan y|=\frac{1}{1+c^2}\,|x-y|\le|x-y|. \qquad\blacksquare \]
+\end{solution}

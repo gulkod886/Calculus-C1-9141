@@ -1,0 +1,24 @@
+% year: תשפ"ג
+% semester: א
+% moed: ג
+% source: exams/מבחנים/תשפג/מועד ג תשפג.pdf
+% number: 6א
+% categories: improper-integrals
+
+\begin{question}
+בדקו התכנסות של האינטגרל $\displaystyle\int_0^\infty e^{-x^2}dx$
+\end{question}
+
+\begin{hint}
+את האינטגרל לא ניתן לחשב בפונקציות אלמנטריות. פצלו ב-$x=1$ והשוו את $e^{-x^2}$ לפונקציה פשוטה יותר עבור $x\ge1$.
+\end{hint}
+
+\begin{solution}
+נפצל: $\int_0^\infty e^{-x^2}dx=\int_0^1 e^{-x^2}dx+\int_1^\infty e^{-x^2}dx$.
+האינטגרל הראשון הוא אינטגרל מסוים רגיל של פונקציה רציפה על קטע סגור, ולכן קיים וסופי.
+
+עבור $x\ge 1$ מתקיים $x^2\ge x$, ולכן $0<e^{-x^2}\le e^{-x}$. האינטגרל
+\[ \int_1^\infty e^{-x}dx=\lim_{R\to\infty}\left(e^{-1}-e^{-R}\right)=e^{-1} \]
+מתכנס. לפי \textbf{מבחן ההשוואה} לאינטגרלים לא-אמיתיים של פונקציות אי-שליליות, גם $\int_1^\infty e^{-x^2}dx$ מתכנס. לכן $\boxed{\int_0^\infty e^{-x^2}dx\ \text{מתכנס}}$
+(וערכו, כידוע, $\frac{\sqrt\pi}{2}$, אך זה לא נדרש).
+\end{solution}

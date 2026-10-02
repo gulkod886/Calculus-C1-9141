@@ -1,0 +1,23 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 2א
+% points: 15
+% categories: func-analysis
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(15 נק') הוכיחו כי למשוואה $x^2-\ln x=0$ אין פתרונות ממשיים.
+\end{question}
+
+\begin{hint}
+מצאו את ערך המינימום של $g(x)=x^2-\ln x$ בתחום $x>0$ והראו שהוא חיובי.
+\end{hint}
+
+\begin{solution}
+נגדיר $g(x)=x^2-\ln x$, המוגדרת וגזירה בתחום $x>0$ (לכן אין למשוואה פתרונות עם $x\le0$). נגזור:
+\[ g'(x)=2x-\frac1x=\frac{2x^2-1}{x}. \]
+עבור $x>0$: $g'(x)<0$ כאשר $0<x<\frac{1}{\sqrt2}$ ו-$g'(x)>0$ כאשר $x>\frac1{\sqrt2}$. לכן $g$ יורדת ממש ב-$(0,\frac1{\sqrt2}]$ ועולה ממש ב-$[\frac1{\sqrt2},\infty)$, ו-$x=\frac1{\sqrt2}$ נקודת מינימום מוחלט של $g$ בתחום:
+\[ g\!\left(\tfrac1{\sqrt2}\right)=\frac12-\ln\frac1{\sqrt2}=\frac12+\frac{\ln2}{2}>0. \]
+לכן $g(x)\ge\frac{1+\ln 2}{2}>0$ לכל $x>0$, ובפרט $g(x)\ne0$: למשוואה אין פתרונות ממשיים.
+\end{solution}

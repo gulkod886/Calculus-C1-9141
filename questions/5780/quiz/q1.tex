@@ -1,0 +1,41 @@
+% year: תש"פ
+% type: בוחן
+% semester: א
+% points: 20
+% source: exams/בחנים/תש״פ, בוחן, 9141.pdf
+% number: 1
+% categories: func-limits, multiple-choice
+
+\begin{question}
+הגבול $\displaystyle\lim_{x\to 0}\frac{\sin ax}{\sin bx}\,\frac{x}{\ln(1+cx)}$ שווה ל-
+\begin{enumerate}
+  \item $\frac{ac}{b}$
+  \item $\frac{a}{bc}$
+  \item $\frac{bc}{a}$
+  \item $\frac{b}{ac}$
+  \item הגבול לא קיים
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+פרקו את הביטוי למכפלה של גבולות יסודיים: $\frac{\sin t}{t}\to 1$ ו-$\frac{\ln(1+t)}{t}\to 1$ כאשר $t\to 0$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ב)} $\frac{a}{bc}$ (בהנחה הסמויה בשאלה ש-$a,b,c\neq 0$, אחרת הביטוי אינו מוגדר או שהגבול שונה).
+
+נכפול ונחלק כך שיופיעו גבולות יסודיים. עבור $x$ קרוב ל-0 ושונה ממנו:
+\[
+\frac{\sin ax}{\sin bx}\cdot\frac{x}{\ln(1+cx)}
+=\frac{\sin ax}{ax}\cdot\frac{bx}{\sin bx}\cdot\frac{cx}{\ln(1+cx)}\cdot\frac{ax\cdot x}{bx\cdot cx}
+=\frac{\sin ax}{ax}\cdot\frac{bx}{\sin bx}\cdot\frac{cx}{\ln(1+cx)}\cdot\frac{a}{bc}.
+\]
+כאשר $x\to 0$ גם $ax,bx,cx\to 0$, ולכן לפי הגבול היסודי $\lim_{t\to 0}\frac{\sin t}{t}=1$ (והצבה $t=ax$, $t=bx$) מתקיים
+$\frac{\sin ax}{ax}\to 1$ ו-$\frac{bx}{\sin bx}\to 1$, ולפי הגבול היסודי $\lim_{t\to 0}\frac{\ln(1+t)}{t}=1$ (מדף הנוסחאות, $\lim_{t\to0}\frac{\log_a(1+t)}{t}=\frac{1}{\ln a}$ עם בסיס $e$) מתקיים $\frac{cx}{\ln(1+cx)}\to 1$.
+לפי אריתמטיקה של גבולות:
+\[
+\lim_{x\to 0}\frac{\sin ax}{\sin bx}\,\frac{x}{\ln(1+cx)}=1\cdot 1\cdot 1\cdot\frac{a}{bc}=\boxed{\frac{a}{bc}}.
+\]
+
+\textbf{למה האחרות שגויות:} (א), (ג), (ד) הן צירופים אחרים של $a,b,c$, ששונים מ-$\frac{a}{bc}$ באופן כללי: למשל עבור $a=2,\ b=3,\ c=5$ הגבול הוא $\frac{2}{15}$, בעוד (א) נותנת $\frac{10}{3}$, (ג) נותנת $\frac{15}{2}$ ו-(ד) נותנת $\frac{3}{10}$. (ה) שגויה כי הראינו שהגבול קיים.
+\end{solution}

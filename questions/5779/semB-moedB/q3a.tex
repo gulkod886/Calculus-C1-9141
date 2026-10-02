@@ -1,0 +1,33 @@
+% year: תשע"ט
+% semester: ב
+% moed: ב
+% number: 3א
+% points: 15
+% categories: antiderivatives, definite-integrals
+% source: exams/מבחנים/תשעט/חודיסמן מועד ב תשעט.pdf
+
+\begin{question}
+(15 נק') חשבו:
+\begin{enumerate}
+  \item[א.] (7 נק') $\displaystyle\int\frac{x^2-8}{x^3+4x^2}\,dx$
+  \item[ב.] (8 נק') $\displaystyle\int_0^1\ln(1+\sqrt x)\,dx$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+בסעיף א' פרקו $x^3+4x^2=x^2(x+4)$ ולשברים חלקיים. בסעיף ב' הציבו $t=\sqrt x$ ואחר כך בצעו אינטגרציה בחלקים.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item[א.] $x^3+4x^2=x^2(x+4)$, ומעלת המונה קטנה ממעלת המכנה. נפרק:
+  \[ \frac{x^2-8}{x^2(x+4)}=\frac Ax+\frac B{x^2}+\frac C{x+4}\;\Longrightarrow\;x^2-8=Ax(x+4)+B(x+4)+Cx^2. \]
+  הצבת $x=0$: $-8=4B$, $B=-2$. הצבת $x=-4$: $8=16C$, $C=\frac12$. מקדמי $x^2$: $1=A+C$, $A=\frac12$. לכן
+  \[ \int\frac{x^2-8}{x^3+4x^2}\,dx=\frac12\ln|x|+\frac2x+\frac12\ln|x+4|+C. \]
+  \item[ב.] נציב $x=t^2$, $dx=2t\,dt$, $t\in[0,1]$:
+  \[ \int_0^1\ln(1+\sqrt x)\,dx=\int_0^1 2t\ln(1+t)\,dt. \]
+  באינטגרציה בחלקים ($u=\ln(1+t)$, $dv=2t\,dt$, $v=t^2$):
+  \[ =\Big[t^2\ln(1+t)\Big]_0^1-\int_0^1\frac{t^2}{1+t}\,dt=\ln2-\int_0^1\left(t-1+\frac1{1+t}\right)dt=\ln2-\left(\frac12-1+\ln2\right)=\frac12. \]
+  \textbf{תשובה:} $\frac12$.
+\end{enumerate}
+\end{solution}

@@ -1,0 +1,39 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: א
+% number: 5ב
+% points: 10
+% categories: polar-parametric, integral-applications
+% source: exams/מבחנים/תשעז/מועד א תשעז.pdf
+
+\begin{question}
+(10 נק') סרטטו את העקום $r=2\cos\varphi-1$ (נתון בקואורדינאטות פולריות) וחשבו שטח התחום החסום ע"י העקום.
+\end{question}
+
+\begin{hint}
+מצאו עבור אילו זוויות $r\ge0$, והשתמשו בנוסחה $S=\frac12\int_\alpha^\beta r^2\,d\varphi$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הזוויות.} $r=2\cos\varphi-1\ge0\iff\cos\varphi\ge\frac12\iff -\frac\pi3\le\varphi\le\frac\pi3$ (בתוך מחזור אחד). בקצוות $\varphi=\pm\frac\pi3$ מתקיים $r=0$ (העקום עובר בראשית), ועבור $\varphi=0$ מתקיים $r=1$ (הנקודה $(1,0)$). העקום סימטרי ביחס לציר $x$ (כי $\cos$ זוגית).
+
+\textbf{סרטוט:} כאשר $\varphi$ עולה מ-$-\frac\pi3$ ל-$\frac\pi3$, הנקודה יוצאת מהראשית בכיוון הזווית $-\frac\pi3$, מגיעה ל-$(1,0)$ וחוזרת לראשית בכיוון הזווית $\frac\pi3$: לולאה סגורה אחת בצורת "טיפה" בחצי המישור $x\ge0$, סימטרית לציר $x$.
+
+\textbf{שטח} (לפי הנוסחה לשטח בקואורדינטות פולריות $S=\frac12\int_\alpha^\beta r^2\,d\varphi$):
+\[
+(2\cos\varphi-1)^2=4\cos^2\varphi-4\cos\varphi+1=3+2\cos2\varphi-4\cos\varphi,
+\]
+\[
+S=\frac12\int_{-\pi/3}^{\pi/3}\left(3+2\cos2\varphi-4\cos\varphi\right)d\varphi
+=\frac12\Big[3\varphi+\sin2\varphi-4\sin\varphi\Big]_{-\pi/3}^{\pi/3}
+=\frac12\left(2\pi+\sqrt3-4\sqrt3\right)=\pi-\frac{3\sqrt3}{2}\approx0.544.
+\]
+\textbf{תשובה:} $S=\pi-\frac{3\sqrt3}{2}$.
+
+\textbf{הערה:} אם מתירים ערכי $r$ שליליים (הנקודה $(r,\varphi)$ עם $r<0$ מסורטטת בכיוון $\varphi+\pi$ במרחק $|r|$), עבור $\frac\pi3<\varphi<\frac{5\pi}3$ מתקבלת לולאה חיצונית גדולה, והעקום כולו הוא לימסון (חילזון פסקל) עם לולאה פנימית — הלולאה שחושבה לעיל. במקרה זה השטח החסום ע"י הלולאה החיצונית הוא
+\[
+\frac12\int_{\pi/3}^{5\pi/3}(2\cos\varphi-1)^2\,d\varphi=2\pi+\frac{3\sqrt3}{2},
+\]
+והשטח שבין שתי הלולאות הוא $\left(2\pi+\frac{3\sqrt3}{2}\right)-\left(\pi-\frac{3\sqrt3}{2}\right)=\pi+3\sqrt3$.
+\end{solution}

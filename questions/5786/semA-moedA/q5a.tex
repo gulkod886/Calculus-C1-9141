@@ -1,0 +1,28 @@
+% year: תשפ"ו
+% semester: א
+% moed: א
+% number: 5א
+% points: 10
+% categories: integral-applications
+% official_solution: yes
+% source: exams/מבחנים/תשפו/AnyScanner_02_01_2026(1) (2).pdf
+
+\begin{question}
+(10 נק') חשבו את נפח גוף הסיבוב סביב ציר ה-$x$ של הפונקציה
+\[ f(x) = \sin x + \cos x \]
+בקטע $[0, \frac{\pi}{2}]$.
+\end{question}
+
+\begin{hint}
+פתחו את $(\sin x + \cos x)^2$ והשתמשו בזהויות $\sin^2 x + \cos^2 x = 1$ ו-$2\sin x\cos x = \sin 2x$.
+\end{hint}
+
+\begin{solution}
+נפח גוף הסיבוב של גרף $f$ סביב ציר ה-$x$ בקטע $[a,b]$ הוא $V = \pi\int_a^b f^2(x)\,dx$. כאן
+\[ f^2(x) = \sin^2 x + 2\sin x\cos x + \cos^2 x = 1 + \sin 2x, \]
+ולכן, לפי המשפט היסודי של החשבון האינטגרלי (ניוטון-לייבניץ),
+\[ V = \pi\int_0^{\pi/2} (1 + \sin 2x)\,dx = \pi\left[ x - \frac{\cos 2x}{2} \right]_0^{\pi/2}
+     = \pi\left[ \left(\frac{\pi}{2} - \frac{\cos\pi}{2}\right) - \left(0 - \frac{\cos 0}{2}\right) \right]
+     = \pi\left[ \frac{\pi}{2} + \frac12 + \frac12 \right]. \]
+\textbf{תשובה:} $\boxed{V = \pi\left(\frac{\pi}{2} + 1\right) = \frac{\pi^2}{2} + \pi}$.
+\end{solution}

@@ -1,0 +1,25 @@
+% year: תשע"ט
+% semester: ב
+% moed: ב
+% number: 1ג
+% points: 5
+% categories: func-analysis
+% source: exams/מבחנים/תשעט/חודיסמן מועד ב תשעט.pdf
+
+\begin{question}
+(5 נק') עבור אילו ערכים של $a$ יש לקו $y=x^2+a\sin x$ נקודות פיתול?
+\end{question}
+
+\begin{hint}
+בדקו מתי $y''$ מחליפה סימן.
+\end{hint}
+
+\begin{solution}
+$y'=2x+a\cos x$, $y''=2-a\sin x$. נקודת פיתול היא נקודה שבה $y''$ מחליפה סימן.
+\begin{itemize}
+  \item אם $|a|<2$: $|a\sin x|\le|a|<2$ ולכן $y''>0$ לכל $x$ – אין נקודות פיתול.
+  \item אם $a=2$: $y''=2(1-\sin x)\ge0$, ומתאפסת רק בנקודות מבודדות; הסימן לא מתחלף – אין פיתול. באופן דומה עבור $a=-2$: $y''=2(1+\sin x)\ge0$.
+  \item אם $|a|>2$: המשוואה $\sin x=\frac2a$ עם $0<\left|\frac2a\right|<1$ יש לה פתרונות $x_0$, ובהם $\cos x_0\ne0$. לכן $(y'')'(x_0)=-a\cos x_0\ne0$, כלומר $y''$ עוברת דרך $0$ בצורה מונוטונית ממש ומחליפה סימן ב-$x_0$ – נקודת פיתול.
+\end{itemize}
+\textbf{תשובה:} $|a|>2$.
+\end{solution}

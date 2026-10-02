@@ -1,0 +1,18 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: א
+% number: 4א
+% points: 10
+% categories: lhopital
+% source: exams/מבחנים/תשפג/מועד א תשפג.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול $\displaystyle\lim_{x\to 1}\frac{x^2+\ln(x)-1}{e^x-e}$.
+\end{question}
+
+\begin{solution}
+בהצבת $x=1$: המונה $1+0-1=0$ והמכנה $e-e=0$, כלומר ביטוי מהצורה $\frac00$. המונה והמכנה גזירים בסביבת $1$, ונגזרת המכנה $e^x\neq 0$. לפי \textbf{כלל לופיטל}:
+\[ \lim_{x\to1}\frac{x^2+\ln x-1}{e^x-e}=\lim_{x\to1}\frac{2x+\frac1x}{e^x}=\frac{2+1}{e}=\frac{3}{e}, \]
+כאשר הגבול האחרון מחושב בהצבה (רציפות), ולכן גם הגבול המקורי קיים ושווה ל-$\frac{3}{e}$.
+\end{solution}

@@ -1,0 +1,38 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ב
+% part: ב
+% number: 1
+% points: 9
+% categories: derivatives, continuity, multiple-choice
+% source: exams/מבחנים/תשפ/מועד ב תשפ.pdf
+
+\begin{question}
+תהי $f(x)$ פונקציה כך ש-$f(x)+\sin(x)$ גזירה בקטע הפתוח $(a,b)$. מה מהבאים חייב להיות נכון?
+\begin{enumerate}
+  \item $f(x)+\cos(x)$ גזירה בקטע הפתוח $(a,b)$.
+  \item $f(x)+\sin(x)$ רציפה בקטע הסגור $[a,b]$.
+  \item $f(x)$ רציפה בקטע הסגור $[a,b]$.
+  \item $f(x)$ חסומה בקטע הפתוח $(a,b)$.
+  \item $f(x)+\sin(x)$ חסומה בקטע הפתוח $(a,b)$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+כתבו את $f+\cos$ כסכום של $f+\sin$ ופונקציה גזירה ידועה.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: א.}
+
+נסמן $g(x)=f(x)+\sin x$, גזירה ב-$(a,b)$. אז
+\[ f(x)+\cos x=g(x)-\sin x+\cos x , \]
+וזה סכום של פונקציות גזירות ב-$(a,b)$ ($\sin$ ו-$\cos$ גזירות בכל $\R$), ולכן גזיר ב-$(a,b)$. כלומר א' נכונה תמיד.
+
+שאר הטענות אינן חייבות להתקיים. דוגמה נגדית: $f(x)=\frac{1}{x-a}-\sin x$ ב-$(a,b)$. אז $f(x)+\sin x=\frac{1}{x-a}$ גזירה ב-$(a,b)$, אבל:
+\begin{itemize}
+  \item $f+\sin$ ו-$f$ אינן מוגדרות (ובוודאי אינן רציפות) ב-$x=a$ --- ב' וג' נופלות. (גם אם נגדיר להן ערך כלשהו ב-$a$, הן אינן חסומות ליד $a$ ולכן אינן רציפות בה.)
+  \item $\frac{1}{x-a}\to+\infty$ כאשר $x\to a^+$, ולכן $f+\sin$ אינה חסומה ב-$(a,b)$ --- ה' נופלת; וגם $f=\frac{1}{x-a}-\sin x$ אינה חסומה (כי $\sin$ חסומה) --- ד' נופלת.
+\end{itemize}
+\end{solution}

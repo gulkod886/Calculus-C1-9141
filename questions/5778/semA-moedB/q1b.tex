@@ -1,0 +1,27 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1ב
+% points: 10
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשעח/מועד ב תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא:
+גבול הפונקציה $\displaystyle\lim_{x\to1^-}\frac{\frac\pi2-\arcsin x}{\sqrt[3]{1-x^2}}$.
+\end{question}
+
+\begin{hint}
+זהו ביטוי מהצורה $\frac00$; הפעילו את כלל לופיטל ופשטו את מנת הנגזרות.
+\end{hint}
+
+\begin{solution}
+כאשר $x\to1^-$: $\arcsin x\to\frac\pi2$ (רציפות), ולכן המונה שואף ל-$0$; גם המכנה $\sqrt[3]{1-x^2}\to0$. זהו ביטוי מהצורה $\frac00$. בקטע $(0,1)$ שתי הפונקציות גזירות:
+\[ \left(\frac\pi2-\arcsin x\right)'=-\frac{1}{\sqrt{1-x^2}},\qquad \left((1-x^2)^{1/3}\right)'=\frac13(1-x^2)^{-2/3}\cdot(-2x)=-\frac{2x}{3(1-x^2)^{2/3}}\neq0. \]
+מנת הנגזרות:
+\[ \frac{-\frac{1}{(1-x^2)^{1/2}}}{-\frac{2x}{3(1-x^2)^{2/3}}}=\frac{3(1-x^2)^{2/3}}{2x(1-x^2)^{1/2}}=\frac{3(1-x^2)^{1/6}}{2x}\xrightarrow[x\to1^-]{}\frac{3\cdot0}{2}=0. \]
+גבול מנת הנגזרות קיים, ולכן לפי כלל לופיטל
+\[ \boxed{\lim_{x\to1^-}\frac{\frac\pi2-\arcsin x}{\sqrt[3]{1-x^2}}=0} \]
+(אינטואיציה: $\frac\pi2-\arcsin x=\arccos x\approx\sqrt{2(1-x)}$, שהוא "גדול פחות" מ-$\sqrt[3]{1-x^2}\approx\sqrt[3]{2(1-x)}$.)
+\end{solution}

@@ -1,0 +1,24 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ג
+% number: 6ב
+% points: 10
+% categories: integral-applications, definite-integrals
+% source: exams/מבחנים/תשעח/מועד מיוחד תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את נפח גוף הסיבוב המתקבל ע"י סיבוב התחום $D$ סביב ציר ה-$x$, כאשר $D$ התחום בין גרף הפונקציה $f(x)=\sqrt{\arcsin x}$ וציר ה-$x$, כאשר $0\le x\le1$.
+\end{question}
+
+\begin{hint}
+יש לחשב $\int\arcsin x\,dx$ — השתמשו באינטגרציה בחלקים עם $u=\arcsin x$, $v'=1$.
+\end{hint}
+
+\begin{solution}
+$V=\pi\int_0^1f^2(x)\,dx=\pi\int_0^1\arcsin x\,dx$. נחשב בחלקים, עם $u=\arcsin x$, $v'=1$, $u'=\frac{1}{\sqrt{1-x^2}}$, $v=x$:
+\[ \int\arcsin x\,dx=x\arcsin x-\int\frac{x}{\sqrt{1-x^2}}\,dx=x\arcsin x+\sqrt{1-x^2}+C \]
+(האינטגרל האחרון — בהצבה $t=1-x^2$, $dt=-2x\,dx$: $\int\frac{x\,dx}{\sqrt{1-x^2}}=-\frac12\int t^{-1/2}dt=-\sqrt{1-x^2}$.) הפונקציה $x\arcsin x+\sqrt{1-x^2}$ רציפה ב-$[0,1]$ (האינטגרנד $\arcsin x$ רציף בקטע הסגור), ולכן לפי המשפט היסודי
+\[ \int_0^1\arcsin x\,dx=\left[x\arcsin x+\sqrt{1-x^2}\right]_0^1=\left(\frac\pi2+0\right)-(0+1)=\frac\pi2-1. \]
+\[ \boxed{V=\pi\left(\frac\pi2-1\right)=\frac{\pi^2}{2}-\pi} \]
+\end{solution}

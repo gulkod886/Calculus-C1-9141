@@ -1,0 +1,35 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: א
+% number: 1א
+% points: 11
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשפה/מועד א תשפה.pdf
+
+\begin{question}
+(11 נק') נגדיר פונקציה על ידי
+\[ f(x) = \begin{cases} ax^2 + b, & \text{if } x \le 0 \\ \dfrac{\ln(e^x - 1)}{2\ln x}, & \text{if } x > 0 \end{cases} \]
+לאילו ערכים של הפרמטרים $a, b$ הפונקציה רציפה בנקודה $x=0$? נמקו.
+\end{question}
+
+\begin{hint}
+כתבו $e^x - 1 = x \cdot \frac{e^x - 1}{x}$ והשתמשו בגבול הידוע $\lim_{x\to 0}\frac{e^x-1}{x} = 1$.
+\end{hint}
+
+\begin{solution}
+לכל $a,b$ מתקיים $f(0) = a\cdot 0 + b = b$, ולשמאל של $0$ הפונקציה היא הפולינום $ax^2+b$, ולכן
+$\lim_{x\to 0^-} f(x) = b = f(0)$. לכן $f$ רציפה ב-$0$ אם ורק אם $\lim_{x\to 0^+} f(x) = b$.
+
+נחשב את הגבול מימין. עבור $x>0$ מתקיים $e^x - 1 > 0$ ולכן
+\[ \ln(e^x - 1) = \ln\left( x \cdot \frac{e^x-1}{x} \right) = \ln x + \ln\frac{e^x - 1}{x}. \]
+לכן
+\[ f(x) = \frac{\ln x + \ln\frac{e^x-1}{x}}{2\ln x} = \frac12 + \frac{\ln\frac{e^x-1}{x}}{2\ln x}. \]
+מכיוון ש-$\lim_{x\to 0}\frac{e^x - 1}{x} = 1$ (זו הנגזרת של $e^x$ ב-$0$) ו-$\ln$ רציפה ב-$1$, המונה של השבר השני שואף ל-$\ln 1 = 0$,
+בעוד ש-$2\ln x \to -\infty$. לכן השבר השני שואף ל-$0$ ומתקבל
+\[ \lim_{x\to 0^+} f(x) = \frac12. \]
+(אפשר גם להשתמש בכלל לופיטל במקרה $\frac{\infty}{\infty}$:
+$\lim_{x\to0^+}\frac{\ln(e^x-1)}{2\ln x} = \lim_{x\to0^+}\frac{e^x/(e^x-1)}{2/x} = \lim_{x\to 0^+}\frac{e^x}{2}\cdot\frac{x}{e^x-1} = \frac12$.)
+
+\textbf{תשובה:} $f$ רציפה ב-$x=0$ אם ורק אם $b = \frac12$, ו-$a$ כלשהו ($a \in \R$).
+\end{solution}

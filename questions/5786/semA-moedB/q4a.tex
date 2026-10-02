@@ -1,0 +1,45 @@
+% year: תשפ"ו
+% semester: א
+% moed: ב
+% number: 4א
+% points: 12
+% categories: antiderivatives
+% official_solution: yes
+% source: exams/מבחנים/תשפו/sol B.pdf
+
+\begin{question}
+(12 נק') חשבו את האינטגרל
+\[ \int \frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2}\,dx \]
+\end{question}
+
+\begin{hint}
+פרקו את המכנה: $x^4 - 4x^3 + 8x^2 = x^2(x^2 - 4x + 8)$, והגורם הריבועי אי-פריק. הפירוק לשברים חלקיים הוא מהצורה $\frac{A}{x} + \frac{B}{x^2} + \frac{Cx + D}{x^2 - 4x + 8}$.
+\end{hint}
+
+\begin{solution}
+זו פונקציה רציונלית, ונפעל לפי השלבים הרגילים.
+\begin{itemize}
+  \item \textbf{מעלות:} מעלת המונה ($3$) קטנה ממעלת המכנה ($4$), ולכן אין צורך בחילוק פולינומים.
+  \item \textbf{פירוק המכנה:} $x^4 - 4x^3 + 8x^2 = x^2(x^2 - 4x + 8)$, והדיסקרימיננטה של $x^2 - 4x + 8$ היא $16 - 32 < 0$, לכן הגורם הריבועי אי-פריק; למעשה $x^2 - 4x + 8 = (x - 2)^2 + 4$.
+  \item \textbf{שברים חלקיים:}
+  \[ \frac{6x^3 - 12x + 24}{x^2(x^2 - 4x + 8)} = \frac{A}{x} + \frac{B}{x^2} + \frac{Cx + D}{x^2 - 4x + 8}, \]
+  כלומר $6x^3 - 12x + 24 = Ax(x^2 - 4x + 8) + B(x^2 - 4x + 8) + (Cx + D)x^2$. השוואת מקדמים:
+  \begin{align*}
+    x^0 &: \ 8B = 24 \ \Rightarrow\ B = 3, \\
+    x^1 &: \ 8A - 4B = -12 \ \Rightarrow\ 8A = 0 \ \Rightarrow\ A = 0, \\
+    x^2 &: \ -4A + B + D = 0 \ \Rightarrow\ D = -3, \\
+    x^3 &: \ A + C = 6 \ \Rightarrow\ C = 6.
+  \end{align*}
+  לכן
+  \[ \frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2} = \frac{3}{x^2} + \frac{6x - 3}{x^2 - 4x + 8}. \]
+\end{itemize}
+\textbf{אינטגרציה.} נכתוב $6x - 3 = 3(2x - 4) + 9$, כך שבחלק הראשון המונה הוא נגזרת המכנה, ובחלק השני נשלים לריבוע:
+\[ \int \left( \frac{3}{x^2} + 3\cdot\frac{2x - 4}{x^2 - 4x + 8} + \frac{9}{(x - 2)^2 + 4} \right) dx. \]
+\begin{itemize}
+  \item $\int \frac{3}{x^2}\,dx = -\frac{3}{x} + C$.
+  \item בהצבה $t = x^2 - 4x + 8$, $dt = (2x - 4)\,dx$: $\int \frac{2x - 4}{x^2 - 4x + 8}\,dx = \ln|t| = \ln(x^2 - 4x + 8) + C$ (המכנה חיובי תמיד).
+  \item בהצבה $x - 2 = 2u$, $dx = 2\,du$: $\int \frac{9\,dx}{(x - 2)^2 + 4} = \int \frac{18\,du}{4u^2 + 4} = \frac92\arctan u + C = \frac92 \arctan\frac{x - 2}{2} + C$.
+\end{itemize}
+\textbf{תשובה:}
+\[ \boxed{\int \frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2}\,dx = -\frac{3}{x} + 3\ln(x^2 - 4x + 8) + \frac92\arctan\left(\frac{x - 2}{2}\right) + C.} \]
+\end{solution}

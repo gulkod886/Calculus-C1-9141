@@ -1,0 +1,31 @@
+% year: תשפ"ד
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 6
+% points: 14
+% categories: definite-integrals
+% source: exams/מבחנים/תשפד/מועד ב תשפד.pdf
+
+\begin{question}
+חשבו את האינטגרל המסויים
+\[ \int_0^1 (x+1)^2\cdot e^x\,dx \]
+\end{question}
+
+\begin{hint}
+אינטגרציה בחלקים פעמיים, כאשר בכל פעם גוזרים את הפולינום.
+\end{hint}
+
+\begin{solution}
+נשתמש באינטגרציה בחלקים: $\int u\,v'=uv-\int u'v$.
+
+\textbf{שלב ראשון:} $u=(x+1)^2$, $v'=e^x$, ולכן $u'=2(x+1)$, $v=e^x$:
+\[ \int_0^1(x+1)^2e^x\,dx=\Big[(x+1)^2e^x\Big]_0^1-2\int_0^1(x+1)e^x\,dx=(4e-1)-2\int_0^1(x+1)e^x\,dx. \]
+
+\textbf{שלב שני:} $u=x+1$, $v'=e^x$, ולכן $u'=1$, $v=e^x$:
+\[ \int_0^1(x+1)e^x\,dx=\Big[(x+1)e^x\Big]_0^1-\int_0^1e^x\,dx=(2e-1)-(e-1)=e. \]
+
+\textbf{סיכום:}
+\[ \int_0^1(x+1)^2e^x\,dx=4e-1-2e=\boxed{2e-1}\approx 4.4366. \]
+(לחלופין: פונקציה קדומה היא $F(x)=e^x\big((x+1)^2-2(x+1)+2\big)=e^x(x^2+1)$, ולפי המשפט היסודי $F(1)-F(0)=2e-1$.)
+\end{solution}

@@ -1,0 +1,39 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ב
+% part: א
+% number: 3
+% points: 20
+% categories: integral-applications, definite-integrals
+% source: exams/מבחנים/תשפ/מועד ב תשפ.pdf
+
+\begin{question}
+מה השטח הכלוא בין העקומות $y=\frac{4}{x}$ ו-$y=5-x$?
+מה הנפח המתקבל מסיבוב השטח הזה סביב ציר $x$?
+\end{question}
+
+\begin{hint}
+מצאו קודם את נקודות החיתוך של העקומות, ובדקו איזו מהן נמצאת מעל השנייה בין נקודות החיתוך.
+\end{hint}
+
+\begin{hint}
+בסיבוב סביב ציר $x$ מתקבל גוף עם חור (שיטת הדסקיות/הטבעות): $V=\pi\int_a^b\big(y_{\text{עליונה}}^2-y_{\text{תחתונה}}^2\big)\,dx$.
+\end{hint}
+
+\begin{solution}
+\textbf{נקודות חיתוך:} $\frac4x=5-x \iff 4=5x-x^2 \iff x^2-5x+4=0 \iff (x-1)(x-4)=0$, כלומר $x=1$ ו-$x=4$ (הנקודות $(1,4)$ ו-$(4,1)$).
+
+\textbf{מי מעל מי:} בקטע $(1,4)$, למשל ב-$x=2$: $5-2=3>2=\frac42$. ובאופן כללי, עבור $x>0$,
+$5-x-\frac4x=\frac{-(x^2-5x+4)}{x}=\frac{-(x-1)(x-4)}{x}>0$ כאשר $1<x<4$. לכן הישר נמצא מעל ההיפרבולה, ושתי הפונקציות חיוביות בקטע.
+
+\textbf{השטח:} לפי הנוסחה לשטח בין שני גרפים,
+\[ S=\int_1^4\Big(5-x-\frac4x\Big)dx=\Big[5x-\frac{x^2}{2}-4\ln x\Big]_1^4
+=\Big(20-8-4\ln4\Big)-\Big(5-\frac12\Big)=\frac{15}{2}-8\ln2 . \]
+כלומר $\boxed{S=\frac{15}{2}-8\ln 2\approx 1.955}$.
+
+\textbf{הנפח:} בסיבוב סביב ציר $x$, כל חתך אנכי בנקודה $x\in[1,4]$ הוא טבעת עם רדיוס חיצוני $5-x$ ורדיוס פנימי $\frac4x$ (שני הרדיוסים חיוביים). לכן
+\[ V=\pi\int_1^4\Big((5-x)^2-\frac{16}{x^2}\Big)dx=\pi\Big[-\frac{(5-x)^3}{3}+\frac{16}{x}\Big]_1^4
+=\pi\Big[\Big(-\frac13+4\Big)-\Big(-\frac{64}{3}+16\Big)\Big]=\pi\Big(\frac{11}{3}+\frac{16}{3}\Big)=9\pi . \]
+כלומר $\boxed{V=9\pi}$.
+\end{solution}

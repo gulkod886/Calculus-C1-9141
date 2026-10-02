@@ -1,0 +1,27 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 4ב
+% points: 9
+% categories: ode
+% source: exams/מבחנים/תשפב/מועד ג תשפב.pdf
+
+\begin{question}
+(9 נק') פתרו את המשוואה הדיפרנציאלית
+\[ y'=e^{x-y} \]
+\end{question}
+
+\begin{hint}
+$e^{x-y}=e^x\cdot e^{-y}$, ולכן זו משוואה פרידה.
+\end{hint}
+
+\begin{solution}
+$y'=e^x e^{-y}$, ולכן $e^{y}y'=e^x$ (אין פתרונות קבועים, כי $e^{x-y}>0$). אינטגרציה של שני האגפים:
+\[ \int e^y\,dy=\int e^x\,dx\ \Longrightarrow\ e^y=e^x+C. \]
+לכן
+\[ \boxed{y=\ln\left(e^x+C\right)},\qquad C\in\R, \]
+בתחום שבו $e^x+C>0$ (לכל $x$ אם $C\ge0$; עבור $C<0$ — בתחום $x>\ln(-C)$).
+
+בדיקה: $y'=\frac{e^x}{e^x+C}=\frac{e^x}{e^y}=e^{x-y}$.
+\end{solution}

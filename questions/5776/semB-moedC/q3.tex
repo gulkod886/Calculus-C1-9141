@@ -1,0 +1,33 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ג
+% source: exams/מבחנים/תשעו/מועד ג תשעו.pdf
+% number: 3
+% points: 10
+% categories: true-false, improper-integrals
+
+\begin{question}
+\textbf{הוכיחו או הפריכו:} האינטגרל $\int_0^1\ln^2(x)dx$ מתכנס.
+\end{question}
+
+\begin{hint}
+מצאו פונקציה קדומה בעזרת אינטגרציה בחלקים (פעמיים), וחשבו את הגבול $\lim_{x\to0^+}x\ln^k x$ בעזרת לופיטל.
+\end{hint}
+
+\begin{solution}
+\textbf{הטענה נכונה}, וערך האינטגרל הוא $2$.
+
+הפונקציה $\ln^2x$ רציפה ב-$(0,1]$ ואינה חסומה ליד $0$, ולכן זהו אינטגרל לא אמיתי: $\int_0^1\ln^2x\,dx=\lim_{\eps\to0^+}\int_\eps^1\ln^2x\,dx$.
+
+\textbf{פונקציה קדומה} -- אינטגרציה בחלקים עם $u=\ln^2x,\ v'=1$:
+\[ \int\ln^2x\,dx=x\ln^2x-\int x\cdot\frac{2\ln x}{x}dx=x\ln^2x-2\int\ln x\,dx=x\ln^2x-2(x\ln x-x)+C. \]
+לכן
+\[ \int_\eps^1\ln^2x\,dx=\big[x\ln^2x-2x\ln x+2x\big]_\eps^1=2-\left(\eps\ln^2\eps-2\eps\ln\eps+2\eps\right). \]
+\textbf{הגבולות:} לפי כלל לופיטל ($\frac{\infty}{\infty}$):
+\[ \lim_{\eps\to0^+}\eps\ln\eps=\lim\frac{\ln\eps}{1/\eps}=\lim\frac{1/\eps}{-1/\eps^2}=\lim(-\eps)=0, \]
+\[ \lim_{\eps\to0^+}\eps\ln^2\eps=\lim\frac{\ln^2\eps}{1/\eps}=\lim\frac{2\ln\eps/\eps}{-1/\eps^2}=\lim(-2\eps\ln\eps)=0. \]
+לכן $\int_0^1\ln^2x\,dx=2-0=2$: האינטגרל \textbf{מתכנס}.
+
+(דרך אחרת: $\ln^2x\le\frac{C}{\sqrt x}$ ליד $0$ כי $\sqrt x\ln^2x\to0$, ו-$\int_0^1\frac{dx}{\sqrt x}$ מתכנס, ולכן לפי מבחן ההשוואה האינטגרל מתכנס.)
+\end{solution}

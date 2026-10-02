@@ -1,0 +1,25 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעו/מועד ב תשעו.pdf
+% number: 4א
+% points: 10
+% categories: func-limits, taylor
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא: $\lim_{x\to 0}\frac{1-\cos(x^2)}{x^2\sin^2(x)}$.
+\end{question}
+
+\begin{hint}
+השתמשו בפיתוח טיילור של $\cos t$ סביב $0$ עם $t=x^2$, ובגבול היסודי $\frac{\sin x}{x}\to1$.
+\end{hint}
+
+\begin{solution}
+נכתוב
+\[ \frac{1-\cos(x^2)}{x^2\sin^2 x}=\frac{1-\cos(x^2)}{x^4}\cdot\left(\frac{x}{\sin x}\right)^2. \]
+לפי פיתוח מקלורין $\cos t=1-\frac{t^2}{2}+o(t^2)$, ועם $t=x^2$: $1-\cos(x^2)=\frac{x^4}{2}+o(x^4)$, ולכן $\frac{1-\cos(x^2)}{x^4}\to\frac12$.
+(לחלופין: $1-\cos(x^2)=2\sin^2(\frac{x^2}{2})$, ולכן $\frac{1-\cos(x^2)}{x^4}=\frac12\left(\frac{\sin(x^2/2)}{x^2/2}\right)^2\to\frac12$.)
+כמו כן $\frac{x}{\sin x}\to 1$ לפי הגבול היסודי. לפי אריתמטיקה של גבולות:
+\[ \lim_{x\to0}\frac{1-\cos(x^2)}{x^2\sin^2 x}=\frac12\cdot 1=\boxed{\frac12}. \]
+\end{solution}

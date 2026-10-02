@@ -1,0 +1,25 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ג
+% number: 6א
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשעח/מועד מיוחד תשעח.pdf
+
+\begin{question}
+(10 נק') האם האינטגרל הלא-אמיתי $\displaystyle\int_0^\infty\frac{1}{e^x+e^{-x}}\,dx$ מתכנס? אם כן, יש לחשב את ערכו של האינטגרל. אם לא, יש לנמק מדוע.
+\end{question}
+
+\begin{hint}
+כפלו מונה ומכנה ב-$e^x$ והציבו $u=e^x$.
+\end{hint}
+
+\begin{solution}
+נכפול מונה ומכנה ב-$e^x>0$: $\frac{1}{e^x+e^{-x}}=\frac{e^x}{e^{2x}+1}$. לפי ההגדרה,
+\[ \int_0^\infty\frac{dx}{e^x+e^{-x}}=\lim_{b\to\infty}\int_0^b\frac{e^x}{1+(e^x)^2}\,dx. \]
+נציב $u=e^x$, $du=e^x\,dx$; $u$ עובר מ-$1$ ל-$e^b$:
+\[ \int_0^b\frac{e^x\,dx}{1+e^{2x}}=\int_1^{e^b}\frac{du}{1+u^2}=\arctan(e^b)-\arctan1=\arctan(e^b)-\frac\pi4. \]
+כאשר $b\to\infty$, $e^b\to\infty$ ו-$\arctan(e^b)\to\frac\pi2$. הגבול קיים וסופי, ולכן האינטגרל מתכנס:
+\[ \boxed{\int_0^\infty\frac{dx}{e^x+e^{-x}}=\frac\pi2-\frac\pi4=\frac\pi4} \]
+\end{solution}

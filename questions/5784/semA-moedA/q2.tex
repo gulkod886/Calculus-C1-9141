@@ -1,0 +1,45 @@
+% year: תשפ"ד
+% semester: א
+% moed: א
+% number: 2
+% points: 16
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשפד/מועד א תשפד.pdf
+
+\begin{question}
+(16 נק') יהיו $a,b\in\R$. נגדיר פונקציה על ידי
+\[ f(x)=\begin{cases} \frac{\sin(8x)}{x}, & \text{if } x<0,\\[2pt] ax+b, & \text{if } 0\le x\le 4,\\[2pt] \frac{x^2-3x-4}{2-\sqrt{x}}, & \text{if } x>4 \end{cases} \]
+לאילו ערכים של $a,b$ הפונקציה רציפה ב-$\R$? נמקו.
+\end{question}
+
+\begin{hint}
+בכל אחד משלושת התחומים הפתוחים הפונקציה רציפה כהרכבה/מנה של פונקציות רציפות. נותר לבדוק את נקודות התפר $x=0$ ו-$x=4$.
+\end{hint}
+
+\begin{hint}
+בגבול ב-$x=4$ פרקו את המונה $x^2-3x-4=(x-4)(x+1)$ וכתבו $x-4=(\sqrt x-2)(\sqrt x+2)$.
+\end{hint}
+
+\begin{solution}
+\textbf{רציפות בתוך כל תחום.}
+\begin{itemize}
+  \item בתחום $x<0$: $f(x)=\frac{\sin 8x}{x}$ היא מנה של פונקציות רציפות שהמכנה שלה אינו מתאפס, ולכן רציפה.
+  \item בתחום $0<x<4$: $f(x)=ax+b$ פולינום, רציף.
+  \item בתחום $x>4$: $f(x)=\frac{x^2-3x-4}{2-\sqrt x}$ מנה של פונקציות רציפות, והמכנה מתאפס רק ב-$x=4$ שאינו בתחום. לכן רציפה.
+\end{itemize}
+לכן $f$ רציפה ב-$\R$ אם ורק אם היא רציפה בנקודות $x=0$ ו-$x=4$.
+
+\textbf{הנקודה $x=0$.} $f(0)=b$, ומימין $\lim_{x\to0^+}f(x)=\lim_{x\to0^+}(ax+b)=b$. משמאל, לפי הגבול היסודי $\lim_{t\to0}\frac{\sin t}{t}=1$:
+\[ \lim_{x\to0^-}\frac{\sin(8x)}{x} = \lim_{x\to0^-}8\cdot\frac{\sin(8x)}{8x} = 8. \]
+לכן רציפות ב-$0$ מתקיימת אם ורק אם $b=8$.
+
+\textbf{הנקודה $x=4$.} $f(4)=4a+b$, ומשמאל $\lim_{x\to4^-}(ax+b)=4a+b$. מימין, עבור $x>4$:
+\[ \frac{x^2-3x-4}{2-\sqrt x} = \frac{(x-4)(x+1)}{2-\sqrt x} = \frac{(\sqrt x-2)(\sqrt x+2)(x+1)}{-(\sqrt x-2)} = -(\sqrt x+2)(x+1), \]
+ולכן
+\[ \lim_{x\to4^+}f(x) = -(2+2)(4+1) = -20. \]
+רציפות ב-$4$ מתקיימת אם ורק אם $4a+b=-20$.
+
+\textbf{מסקנה.} עם $b=8$ נקבל $4a=-28$, כלומר
+\[ \boxed{a=-7,\quad b=8}, \]
+ורק עבור ערכים אלה $f$ רציפה בכל $\R$.
+\end{solution}

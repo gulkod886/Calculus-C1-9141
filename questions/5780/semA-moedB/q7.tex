@@ -1,0 +1,34 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ב
+% part: ב
+% number: 4
+% points: 9
+% categories: taylor, multiple-choice
+% source: exams/מבחנים/תשפ/מועד ב תשפ.pdf
+
+\begin{question}
+אם $f(x)=\sin^2(x)$, אזי בסביבה של $0$ מתקיים
+\begin{enumerate}
+  \item $f(x)=x^2-\frac{x^4}{3}+o(x^4)$
+  \item $f(x)=x^2+\frac{x^4}{3}+o(x^4)$
+  \item $f(x)=x^2-\frac{x^4}{6}+o(x^4)$
+  \item $f(x)=x^2+\frac{x^4}{6}+o(x^4)$
+  \item $f(x)=x^2+\frac{x^4}{36}+o(x^4)$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+השתמשו בזהות $\sin^2x=\frac{1-\cos(2x)}{2}$ ובפיתוח המוכר של $\cos$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: א.}
+
+לפי הזהות $\sin^2x=\frac{1-\cos 2x}{2}$ ופיתוח מקלורן $\cos t=1-\frac{t^2}{2}+\frac{t^4}{24}+o(t^4)$ עם $t=2x$:
+\[ \cos 2x=1-2x^2+\frac{16x^4}{24}+o(x^4)=1-2x^2+\frac{2x^4}{3}+o(x^4), \]
+ולכן
+\[ \sin^2x=\frac{1-\cos2x}{2}=x^2-\frac{x^4}{3}+o(x^4). \]
+(בדיקה בדרך אחרת: $\sin x=x-\frac{x^3}{6}+o(x^4)$, ולכן $\sin^2x=x^2-2\cdot x\cdot\frac{x^3}{6}+o(x^4)=x^2-\frac{x^4}{3}+o(x^4)$.)
+\end{solution}

@@ -1,0 +1,51 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: א
+% number: 3
+% points: 20
+% categories: continuity, func-limits, taylor
+% source: exams/מבחנים/תשעז/מועד א תשעז.pdf
+
+\begin{question}
+פונקציה
+\[
+f(x)=\frac{2-(e^x+e^{-x})\cos(x)}{x^4}
+\]
+מוגדרת עבור $x\neq0$. האם אפשר להגדיר $f(0)$ כך שהפונקציה תהי רציפה בנקודה $x=0$?
+\end{question}
+
+\begin{hint}
+יש לבדוק האם $\lim_{x\to0}f(x)$ קיים וסופי.
+\end{hint}
+
+\begin{hint}
+פתחו את $e^x+e^{-x}$ ואת $\cos x$ לפולינומי מקלורן עד סדר $4$ וכפלו.
+\end{hint}
+
+\begin{solution}
+אפשר להגדיר את $f(0)$ כך ש-$f$ תהיה רציפה ב-$0$ אם ורק אם הגבול $\lim_{x\to0}f(x)$ קיים וסופי, ואז יש להגדיר את $f(0)$ להיות הגבול.
+
+\textbf{פיתוח מקלורן.} לפי פיתוחי מקלורן של $e^x$ ושל $\cos x$:
+\[
+e^x+e^{-x}=2\left(1+\frac{x^2}{2}+\frac{x^4}{24}\right)+o(x^5)=2+x^2+\frac{x^4}{12}+o(x^5),
+\]
+\[
+\cos x=1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^5).
+\]
+נכפול ונשמור איברים עד סדר $4$:
+\[
+(e^x+e^{-x})\cos x=2+x^2+\frac{x^4}{12}-x^2-\frac{x^4}{2}+\frac{x^4}{12}+o(x^4)
+=2+\left(\frac{1}{12}-\frac12+\frac1{12}\right)x^4+o(x^4)=2-\frac{x^4}{3}+o(x^4).
+\]
+מכאן
+\[
+2-(e^x+e^{-x})\cos x=\frac{x^4}{3}+o(x^4),
+\qquad\text{ולכן}\qquad
+f(x)=\frac13+\frac{o(x^4)}{x^4}\xrightarrow[x\to0]{}\frac13.
+\]
+
+(דרך חלופית: ארבע הפעלות של כלל לופיטל על $\frac{0}{0}$; הנגזרת הרביעית של המונה ב-$0$ היא $8$ ושל המכנה $24$, ולכן הגבול $\frac{8}{24}=\frac13$.)
+
+\textbf{תשובה:} כן. הגבול קיים ושווה $\frac13$, ולכן אם נגדיר $f(0)=\frac13$ הפונקציה תהיה רציפה ב-$x=0$.
+\end{solution}

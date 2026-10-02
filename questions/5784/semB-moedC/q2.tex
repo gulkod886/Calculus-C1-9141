@@ -1,0 +1,32 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ג
+% number: 2
+% categories: continuity, derivatives
+% source: exams/מבחנים/תשפד/מועד ג תשפד סמסטר ב.pdf
+
+\begin{question}
+לכל $a,b\in\R$ נגדיר את הפונקציה הבאה:
+\[ f(x)=\begin{cases} ax^2+bx+1 & x<0\\ b-2 & x=0\\ bx^2+ax+1 & 0<x\end{cases} \]
+\begin{enumerate}
+  \item עבור אילו $a,b\in\R$ הפונקציה $f(x)$ רציפה בנקודה $x=0$?
+  \item האם קיימים $a,b\in\R$ עבורם הפונקציה $f(x)$ גזירה בנקודה $x=0$?
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+גזירות גוררת רציפות, אז תנאי סעיף א' חייב להתקיים. חשבו את הנגזרות החד-צדדיות לפי ההגדרה.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item הפולינומים רציפים, לכן
+  \[ \lim_{x\to0^-}f(x)=a\cdot0+b\cdot0+1=1,\qquad \lim_{x\to0^+}f(x)=1. \]
+  הגבול ב-$0$ קיים ושווה $1$ לכל $a,b$, ו-$f$ רציפה ב-$0$ אם ורק אם $f(0)=b-2=1$.
+  \textbf{תשובה:} $b=3$ ו-$a\in\R$ כלשהו.
+  \item אם $f$ גזירה ב-$0$ אז היא רציפה שם, לכן $b=3$ ו-$f(0)=1$. נחשב נגזרות חד-צדדיות לפי ההגדרה:
+  \[ f'_-(0)=\lim_{h\to0^-}\frac{ah^2+bh+1-1}{h}=\lim_{h\to0^-}(ah+b)=b, \qquad f'_+(0)=\lim_{h\to0^+}\frac{bh^2+ah+1-1}{h}=\lim_{h\to0^+}(bh+a)=a. \]
+  $f$ גזירה ב-$0$ אם ורק אם $f'_-(0)=f'_+(0)$, כלומר $a=b$. יחד עם $b=3$:
+  \textbf{תשובה:} כן, בדיוק עבור $a=b=3$, ואז $f'(0)=3$.
+\end{enumerate}
+\end{solution}

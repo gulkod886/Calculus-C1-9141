@@ -1,0 +1,25 @@
+% year: תשע"ט
+% semester: א
+% moed: ב
+% number: 3ב
+% points: 10
+% categories: derivatives, proofs, true-false
+% source: exams/מבחנים/תשעט/מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') הוכיחו או הפריכו: אם פונקציה $f(x)$ גזירה בנקודה $x_0$ היא רציפה ב-$x_0$.
+\end{question}
+
+\begin{hint}
+כתבו $f(x)-f(x_0)=\frac{f(x)-f(x_0)}{x-x_0}\cdot(x-x_0)$.
+\end{hint}
+
+\begin{solution}
+\textbf{הטענה נכונה.} נניח ש-$f$ גזירה ב-$x_0$, כלומר הגבול $f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$ קיים וסופי. לכל $x\ne x_0$ בסביבת $x_0$:
+\[ f(x)-f(x_0)=\frac{f(x)-f(x_0)}{x-x_0}\cdot(x-x_0). \]
+לפי אריתמטיקה של גבולות (מכפלת שני גבולות סופיים):
+\[ \lim_{x\to x_0}\big(f(x)-f(x_0)\big)=f'(x_0)\cdot0=0, \]
+כלומר $\lim_{x\to x_0}f(x)=f(x_0)$, ו-$f$ רציפה ב-$x_0$. $\blacksquare$
+
+(הכיוון ההפוך אינו נכון: $|x|$ רציפה ב-$0$ אך אינה גזירה שם.)
+\end{solution}

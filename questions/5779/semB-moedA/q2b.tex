@@ -1,0 +1,23 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 2ב
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') חשבו את השטח הכלוא בין הקווים $y=x\cdot e^x$, $y=x-1$, $x=0$, $x=2$. ציירו את הסקיצה המתאימה.
+\end{question}
+
+\begin{hint}
+בדקו איזה מהגרפים נמצא מעל השני בקטע $[0,2]$, ואת $\int xe^x\,dx$ חשבו באינטגרציה בחלקים.
+\end{hint}
+
+\begin{solution}
+לכל $x\in[0,2]$ מתקיים $e^x\ge1$ ולכן $xe^x\ge x>x-1$. כלומר בקטע הגרף של $y=xe^x$ נמצא מעל הישר $y=x-1$ (הסקיצה: הישר $y=x-1$ עובר דרך $(0,-1)$ ו-$(2,1)$, והעקומה $y=xe^x$ עוברת דרך $(0,0)$ ו-$(2,2e^2)$; התחום חסום משמאל ומימין בישרים $x=0$, $x=2$). השטח:
+\[ S=\int_0^2\big(xe^x-(x-1)\big)\,dx. \]
+באינטגרציה בחלקים ($u=x$, $dv=e^xdx$): $\int xe^x\,dx=xe^x-\int e^x\,dx=(x-1)e^x+C$. לכן
+\[ \int_0^2 xe^x\,dx=\big[(x-1)e^x\big]_0^2=e^2-(-1)=e^2+1, \qquad \int_0^2(x-1)\,dx=\Big[\tfrac{x^2}{2}-x\Big]_0^2=0. \]
+\textbf{תשובה:} $S=e^2+1$.
+\end{solution}

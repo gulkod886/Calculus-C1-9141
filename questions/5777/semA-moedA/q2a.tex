@@ -1,0 +1,23 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: א
+% number: 2א
+% points: 10
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשעז/מועד א תשעז.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle \lim_{x\to 0}\frac{e^x-1}{\sqrt{1+x}-1}$
+\end{question}
+
+\begin{solution}
+כאשר $x\to0$ המונה והמכנה שואפים ל-$0$ (שתי הפונקציות רציפות ב-$0$ ומתאפסות שם), כלומר גבול מהצורה $\frac00$. המונה והמכנה גזירים בסביבת $0$, ונגזרת המכנה $\frac{1}{2\sqrt{1+x}}\neq0$ שם. לפי כלל לופיטל:
+\[
+\lim_{x\to0}\frac{e^x-1}{\sqrt{1+x}-1}=\lim_{x\to0}\frac{e^x}{\frac{1}{2\sqrt{1+x}}}=\lim_{x\to0}2\sqrt{1+x}\,e^x=2.
+\]
+(דרך חלופית: נכפול בצמוד: $\frac{e^x-1}{\sqrt{1+x}-1}=\frac{e^x-1}{x}\cdot(\sqrt{1+x}+1)\to 1\cdot2=2$, לפי הגבול היסודי $\lim_{x\to0}\frac{e^x-1}{x}=1$.)
+
+\textbf{תשובה:} $2$.
+\end{solution}

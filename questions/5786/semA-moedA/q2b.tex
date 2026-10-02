@@ -1,0 +1,37 @@
+% year: תשפ"ו
+% semester: א
+% moed: א
+% number: 2ב
+% points: 10
+% categories: func-analysis
+% official_solution: yes
+% source: exams/מבחנים/תשפו/AnyScanner_02_01_2026(1) (2).pdf
+
+\begin{question}
+(10 נק') מצאו מינימום ומקסימום מוחלטים של הפונקציה
+\[ f(x) = \frac{\sqrt{x}}{e^x} \]
+בתחום הגדרתה, או הסבירו מדוע אינם קיימים.
+\end{question}
+
+\begin{hint}
+מצאו את הנקודות הקריטיות, קבעו תחומי עלייה וירידה, ובדקו את התנהגות $f$ בקצוות התחום ($x = 0$ ו-$x \to \infty$).
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} $x \ge 0$ (בגלל $\sqrt{x}$). $f$ רציפה ב-$[0,\infty)$, $f(x) \ge 0$ לכל $x$, ו-$f(0) = 0$.
+
+\textbf{נגזרת} (עבור $x > 0$):
+\[ f'(x) = \frac{\frac{1}{2\sqrt{x}}\, e^x - \sqrt{x}\, e^x}{e^{2x}} = \frac{e^x(1 - 2x)}{2\sqrt{x}\, e^{2x}} = \frac{1 - 2x}{2\sqrt{x}\, e^x}. \]
+המכנה חיובי, ולכן $f'(x) = 0 \iff x = \frac12$, $f' > 0$ ב-$(0, \frac12)$ ו-$f' < 0$ ב-$(\frac12, \infty)$.
+כלומר $f$ עולה ממש ב-$[0, \frac12]$ ויורדת ממש ב-$[\frac12, \infty)$ (כולל הקצה, כי $f$ רציפה שם).
+
+\textbf{מקסימום מוחלט:} מהמונוטוניות, $f(x) \le f(\frac12)$ לכל $x \ge 0$, ולכן
+\[ \max f = f\left(\tfrac12\right) = \frac{\sqrt{1/2}}{e^{1/2}} = \frac{1}{\sqrt{2e}}, \]
+המתקבל ב-$x = \frac12$.
+
+\textbf{מינימום מוחלט:} $f(x) \ge 0 = f(0)$ לכל $x$ בתחום (מונה אי-שלילי ומכנה חיובי), ולכן
+\[ \min f = f(0) = 0, \]
+המתקבל ב-$x = 0$. (שימו לב: אמנם $\lim_{x\to\infty} f(x) = 0$, אבל הערך $0$ מתקבל בפועל ב-$x = 0$, ולכן המינימום קיים.)
+
+\textbf{תשובה:} מינימום מוחלט $0$ ב-$x = 0$; מקסימום מוחלט $\frac{1}{\sqrt{2e}}$ ב-$x = \frac12$.
+\end{solution}

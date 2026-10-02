@@ -1,0 +1,33 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 4ב
+% points: 9
+% categories: ode
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+(9 נק') מצאו את הפתרון הכללי של המשוואה הדיפרנציאלית
+\[ (x^2+4)y'+2xy^2=0 \]
+\end{question}
+
+\begin{hint}
+זו משוואה פרידה: העבירו את כל ה-$y$ לצד אחד ואת כל ה-$x$ לצד השני. אל תשכחו את הפתרון $y\equiv0$.
+\end{hint}
+
+\begin{solution}
+המשוואה שקולה ל-
+\[ y'=-\frac{2x}{x^2+4}\,y^2 \]
+(כי $x^2+4>0$), וזו משוואה פרידה.
+
+\textbf{פתרון קבוע:} $y\equiv0$ מקיים את המשוואה.
+
+\textbf{פתרונות עם $y\neq0$:} נחלק ב-$y^2$:
+\[ \frac{y'}{y^2}=-\frac{2x}{x^2+4}\ \Longrightarrow\ \int\frac{dy}{y^2}=-\int\frac{2x}{x^2+4}\,dx \ \Longrightarrow\ -\frac1y=-\ln(x^2+4)+C. \]
+(השתמשנו ב-$\int\frac{2x}{x^2+4}dx=\ln(x^2+4)$, שכן המונה הוא נגזרת המכנה.) לכן
+\[ \boxed{y=\frac{1}{\ln(x^2+4)+C}},\quad C\in\R, \]
+בכל קטע שבו המכנה אינו מתאפס, ובנוסף הפתרון $\boxed{y\equiv0}$.
+
+בדיקה: עבור $y=\frac1{\ln(x^2+4)+C}$ מתקיים $y'=-\frac{2x}{x^2+4}\cdot y^2$, ולכן $(x^2+4)y'+2xy^2=0$.
+\end{solution}

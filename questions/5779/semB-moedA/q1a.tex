@@ -1,0 +1,27 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 1א
+% points: 10
+% categories: derivatives
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') חשבו את הנגזרת של הפונקציה $f(x)=\sqrt{5x+3}$ בנקודה $x$ לפי הגדרת הנגזרת (תשובה לפי טבלת הנגזרות לא תתקבל).
+\end{question}
+
+\begin{hint}
+הכפילו את המונה והמכנה בצמוד $\sqrt{5(x+h)+3}+\sqrt{5x+3}$.
+\end{hint}
+
+\begin{solution}
+הפונקציה מוגדרת עבור $x\ge -\tfrac35$, ונחשב את הנגזרת בנקודה $x>-\tfrac35$. לפי ההגדרה, בעזרת הכפלה בצמוד:
+\begin{align*}
+f'(x)&=\lim_{h\to0}\frac{\sqrt{5(x+h)+3}-\sqrt{5x+3}}{h}
+=\lim_{h\to0}\frac{\big(5(x+h)+3\big)-(5x+3)}{h\left(\sqrt{5x+5h+3}+\sqrt{5x+3}\right)}\\
+&=\lim_{h\to0}\frac{5}{\sqrt{5x+5h+3}+\sqrt{5x+3}}=\frac{5}{2\sqrt{5x+3}},
+\end{align*}
+כאשר במעבר האחרון השתמשנו ברציפות פונקציית השורש ($\sqrt{5x+5h+3}\to\sqrt{5x+3}>0$). לכן
+\[ f'(x)=\frac{5}{2\sqrt{5x+3}},\qquad x>-\tfrac35. \]
+(בנקודה $x=-\tfrac35$ המנה $\frac{\sqrt{5h}}{h}\to+\infty$, ולכן שם הפונקציה אינה גזירה.)
+\end{solution}

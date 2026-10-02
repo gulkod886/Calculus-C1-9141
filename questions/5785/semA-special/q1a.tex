@@ -1,0 +1,27 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 1א
+% points: 10
+% categories: func-limits
+% source: exams/מבחנים/תשפה/מועד ג תשפה.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול
+\[ \lim_{x\to\infty}\quad x\cdot\left(\sqrt{x^2 + 4} - \sqrt{x^2 - 4}\right) \]
+\end{question}
+
+\begin{hint}
+הכפילו וחלקו בצמוד $\sqrt{x^2+4} + \sqrt{x^2-4}$.
+\end{hint}
+
+\begin{solution}
+עבור $x \ge 2$ נכפיל ונחלק בצמוד (שהוא חיובי):
+\[ x\left(\sqrt{x^2+4} - \sqrt{x^2-4}\right) = x\cdot\frac{(x^2 + 4) - (x^2 - 4)}{\sqrt{x^2+4} + \sqrt{x^2-4}} = \frac{8x}{\sqrt{x^2+4} + \sqrt{x^2-4}}. \]
+נחלק מונה ומכנה ב-$x$ (עבור $x>0$, $\sqrt{x^2 + 4} = x\sqrt{1 + 4/x^2}$):
+\[ = \frac{8}{\sqrt{1 + \frac4{x^2}} + \sqrt{1 - \frac4{x^2}}} \xrightarrow[x\to\infty]{} \frac{8}{1 + 1} = 4, \]
+לפי אריתמטיקה של גבולות ורציפות השורש.
+
+\textbf{תשובה:} הגבול שווה ל-$4$.
+\end{solution}

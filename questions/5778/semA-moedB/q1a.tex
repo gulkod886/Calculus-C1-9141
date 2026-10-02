@@ -1,0 +1,26 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1א
+% points: 10
+% categories: sequences
+% source: exams/מבחנים/תשעח/מועד ב תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא:
+גבול הסדרה $\displaystyle\lim_{n\to\infty}\left(\sqrt{(n^2+2)(n^2-4)}-\sqrt{n^4-7}\right)$.
+\end{question}
+
+\begin{hint}
+הכפילו וחלקו בצמוד $\sqrt{(n^2+2)(n^2-4)}+\sqrt{n^4-7}$.
+\end{hint}
+
+\begin{solution}
+לכל $n\ge2$ שני השורשים מוגדרים. נכפיל ונחלק בצמוד:
+\[ \sqrt{(n^2+2)(n^2-4)}-\sqrt{n^4-7}=\frac{(n^2+2)(n^2-4)-(n^4-7)}{\sqrt{(n^2+2)(n^2-4)}+\sqrt{n^4-7}}. \]
+במונה: $(n^2+2)(n^2-4)=n^4-2n^2-8$, ולכן המונה הוא $n^4-2n^2-8-n^4+7=-2n^2-1$. נחלק מונה ומכנה ב-$n^2$:
+\[ \frac{-2n^2-1}{\sqrt{(n^2+2)(n^2-4)}+\sqrt{n^4-7}}=\frac{-2-\frac1{n^2}}{\sqrt{\left(1+\frac2{n^2}\right)\left(1-\frac4{n^2}\right)}+\sqrt{1-\frac7{n^4}}}. \]
+מאריתמטיקה של גבולות ורציפות השורש, המונה שואף ל-$-2$ והמכנה ל-$1+1=2$. לכן
+\[ \boxed{\lim_{n\to\infty}\left(\sqrt{(n^2+2)(n^2-4)}-\sqrt{n^4-7}\right)=-1} \]
+\end{solution}

@@ -1,0 +1,28 @@
+% year: תשע"ט
+% semester: ב
+% moed: ב
+% number: 3ב
+% points: 10
+% categories: taylor, definite-integrals
+% source: exams/מבחנים/תשעט/חודיסמן מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') רשמו פולינום טיילור מסדר 2 עבור הפונקציה
+\[ f(x)=\int_0^x\frac{1-t}{1+t^2}\,dt \]
+סביב הנקודה $x=1$.
+\end{question}
+
+\begin{hint}
+לפי המשפט היסודי $f'(x)=\frac{1-x}{1+x^2}$; את $f(1)$ חשבו ישירות מהאינטגרל.
+\end{hint}
+
+\begin{solution}
+פולינום טיילור מסדר 2 סביב $1$: $P_2(x)=f(1)+f'(1)(x-1)+\frac{f''(1)}{2}(x-1)^2$.
+
+הפונקציה $\frac{1-t}{1+t^2}$ רציפה בכל $\R$, ולכן לפי המשפט היסודי של החשבון האינטגרלי $f'(x)=\frac{1-x}{1+x^2}$, ומכאן $f'(1)=0$. נגזור שוב:
+\[ f''(x)=\frac{-(1+x^2)-(1-x)\cdot2x}{(1+x^2)^2}=\frac{x^2-2x-1}{(1+x^2)^2},\qquad f''(1)=\frac{-2}{4}=-\frac12. \]
+ולבסוף
+\[ f(1)=\int_0^1\frac{dt}{1+t^2}-\int_0^1\frac{t\,dt}{1+t^2}=\Big[\arctan t\Big]_0^1-\Big[\tfrac12\ln(1+t^2)\Big]_0^1=\frac\pi4-\frac{\ln2}{2}. \]
+\textbf{תשובה:}
+\[ P_2(x)=\frac\pi4-\frac{\ln2}{2}-\frac14(x-1)^2. \]
+\end{solution}

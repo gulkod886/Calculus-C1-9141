@@ -1,0 +1,32 @@
+% year: תשפ"ו
+% semester: א
+% moed: א
+% number: 1ב
+% points: 10
+% categories: func-limits, lhopital
+% official_solution: yes
+% source: exams/מבחנים/תשפו/AnyScanner_02_01_2026(1) (2).pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא
+\[ \lim_{x\to 0} \frac{x - \sin x}{\cos x - 1} \]
+\end{question}
+
+\begin{hint}
+זהו את סוג הביטוי ($\frac{0}{0}$) והשתמשו בכלל לופיטל.
+\end{hint}
+
+\begin{solution}
+כאשר $x \to 0$ המונה $x - \sin x \to 0$ והמכנה $\cos x - 1 \to 0$, כלומר ביטוי מהצורה $\frac{0}{0}$.
+המונה והמכנה גזירים בסביבת $0$, ונגזרת המכנה $-\sin x \ne 0$ בסביבה מנוקבת של $0$. לפי כלל לופיטל (בתנאי שהגבול החדש קיים):
+\[ \lim_{x\to 0} \frac{x - \sin x}{\cos x - 1} = \lim_{x\to 0} \frac{1 - \cos x}{-\sin x}. \]
+גם זה ביטוי $\frac{0}{0}$. נחשב אותו בעזרת $1 - \cos x = 2\sin^2\frac{x}{2}$:
+\[ \frac{1 - \cos x}{-\sin x} = \frac{2\sin^2\frac{x}{2}}{-\sin x}
+   = -\frac{2\left(\dfrac{\sin\frac{x}{2}}{\frac{x}{2}}\right)^2 \cdot \dfrac{x^2}{4}}{\dfrac{\sin x}{x} \cdot x}
+   = -\frac{\left(\dfrac{\sin\frac{x}{2}}{\frac{x}{2}}\right)^2}{\dfrac{\sin x}{x}} \cdot \frac{x}{2}
+   \xrightarrow[x\to 0]{} -\frac{1^2}{1}\cdot 0 = 0, \]
+כאשר השתמשנו בגבול היסודי $\lim_{u\to 0}\frac{\sin u}{u} = 1$ ובאריתמטיקה של גבולות.
+(לחלופין, הפעלה נוספת של לופיטל: $\lim_{x\to0}\frac{\sin x}{-\cos x} = \frac{0}{-1} = 0$.)
+מכיוון שהגבול אחרי לופיטל קיים, גם הגבול המקורי קיים ושווה לו:
+\[ \boxed{\lim_{x\to 0} \frac{x - \sin x}{\cos x - 1} = 0}. \]
+\end{solution}

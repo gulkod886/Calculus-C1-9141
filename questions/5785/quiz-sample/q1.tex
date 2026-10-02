@@ -1,0 +1,47 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% moed: לדוגמה
+% official_solution: yes
+% source: exams/מבחנים/תשפו/midterm_example 2025.pdf
+% part: א
+% number: 1
+% points: 20
+% categories: func-limits
+
+\begin{question}
+חשבו את הגבול הבא:
+\[
+\lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4}
+\]
+\end{question}
+
+\begin{hint}
+זהו גבול מהצורה $1^\infty$. כתבו את הבסיס בצורה $1+\frac{1}{x^2+x+1}$.
+\end{hint}
+
+\begin{solution}
+הבסיס שואף ל-1 והמעריך ל-$\infty$ — גבול מהצורה $1^\infty$. נכתוב את הבסיס כ-
+\[
+\frac{x^2+x+2}{x^2+x+1}=\frac{x^2+x+1+1}{x^2+x+1}=1+\frac{1}{x^2+x+1},
+\]
+ונכפול ונחלק את המעריך ב-$x^2+x+1$:
+\[
+\left(1+\frac{1}{x^2+x+1}\right)^{2x^2+4}
+=\left[\left(1+\frac{1}{x^2+x+1}\right)^{x^2+x+1}\right]^{\frac{2x^2+4}{x^2+x+1}} .
+\]
+\textbf{הבסיס הפנימי:} נציב $y=x^2+x+1$; כאשר $x\to\infty$ גם $y\to\infty$, ולפי הגבול היסודי
+\[
+\lim_{y\to\infty}\left(1+\frac1y\right)^y=e
+\]
+(ומשפט הגבול של הרכבה) הבסיס הפנימי שואף ל-$e$.
+
+\textbf{המעריך:} חלוקה ב-$x^2$ נותנת
+\[
+\lim_{x\to\infty}\frac{2x^2+4}{x^2+x+1}=\lim_{x\to\infty}\frac{2+\frac4{x^2}}{1+\frac1x+\frac1{x^2}}=2 .
+\]
+\textbf{סיכום:} אם $u(x)\to e>0$ ו-$v(x)\to2$ אז $u^v=e^{v\ln u}\to e^{2\ln e}=e^2$, מרציפות $\ln$ ו-$\exp$ (גבול של מנה/מכפלה ורציפות). לכן
+\[
+\lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4}=\boxed{e^2}.
+\]
+\end{solution}

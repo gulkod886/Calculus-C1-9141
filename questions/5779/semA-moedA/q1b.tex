@@ -1,0 +1,24 @@
+% year: תשע"ט
+% semester: א
+% moed: א
+% number: 1ב
+% points: 10
+% categories: func-limits
+% source: exams/מבחנים/תשעט/מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle\lim_{x\to\infty}\frac{\sin\left(\frac{1}{\sqrt x}\right)}{\sqrt{x+1}-\sqrt x}$
+\end{question}
+
+\begin{hint}
+הכפילו בצמוד $\sqrt{x+1}+\sqrt x$ והשתמשו ב-$\lim_{t\to0}\frac{\sin t}{t}=1$ עם $t=\frac1{\sqrt x}$.
+\end{hint}
+
+\begin{solution}
+נכפיל ונחלק בצמוד:
+\[ \frac{\sin\frac1{\sqrt x}}{\sqrt{x+1}-\sqrt x}=\sin\!\left(\tfrac1{\sqrt x}\right)\left(\sqrt{x+1}+\sqrt x\right)
+=\frac{\sin\frac1{\sqrt x}}{\frac1{\sqrt x}}\cdot\frac{\sqrt{x+1}+\sqrt x}{\sqrt x}
+=\frac{\sin\frac1{\sqrt x}}{\frac1{\sqrt x}}\cdot\left(\sqrt{1+\tfrac1x}+1\right). \]
+כאשר $x\to\infty$, $t=\frac1{\sqrt x}\to0^+$ ולכן הגורם הראשון שואף ל-$1$ (גבול יסודי והרכבת גבולות), והגורם השני שואף ל-$1+1=2$. לכן הגבול הוא $\boxed{2}$.
+\end{solution}

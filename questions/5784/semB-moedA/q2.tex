@@ -1,0 +1,30 @@
+% year: תשפ"ד
+% semester: ב
+% moed: א
+% number: 2
+% categories: continuity, derivatives
+% source: exams/מבחנים/תשפד/מועד א תשפד סמסטר ב.pdf
+
+\begin{question}
+נגדיר פונקציה באופן הבא:
+\[ f(x)=\begin{cases} x^2\sin\left(\frac{3}{x}\right) & x\neq0\\ 0 & x=0\end{cases} \]
+\begin{enumerate}
+  \item האם $f(x)$ רציפה בנקודה $x=0$?
+  \item האם $f(x)$ גזירה בנקודה $x=0$?
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+$\sin\left(\frac3x\right)$ חסומה; השתמשו במשפט הסנדוויץ' (או "אפסה כפול חסומה").
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item לכל $x\neq0$ מתקיים $\left|\sin\frac3x\right|\le1$, ולכן
+  \[ 0\le |f(x)|=x^2\left|\sin\frac3x\right|\le x^2. \]
+  מכיוון ש-$x^2\to0$ כאשר $x\to0$, לפי משפט הסנדוויץ' $|f(x)|\to0$, כלומר $\lim_{x\to0}f(x)=0=f(0)$. לכן $f$ \textbf{רציפה} ב-$x=0$.
+  \item נחשב את הנגזרת לפי ההגדרה:
+  \[ f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\frac{h^2\sin\frac3h}{h}=\lim_{h\to0}h\sin\frac3h. \]
+  שוב $0\le\left|h\sin\frac3h\right|\le|h|\to0$, ולפי משפט הסנדוויץ' הגבול קיים ושווה $0$ (פונקציה השואפת לאפס כפול פונקציה חסומה). לכן $f$ \textbf{גזירה} ב-$x=0$ ו-$f'(0)=0$.
+\end{enumerate}
+\end{solution}

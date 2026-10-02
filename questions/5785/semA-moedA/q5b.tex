@@ -1,0 +1,27 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: א
+% number: 5ב
+% points: 11
+% categories: improper-integrals
+% source: exams/מבחנים/תשפה/מועד א תשפה.pdf
+
+\begin{question}
+(11 נק') חשבו את האינטגרל הלא אמיתי הבא, או הראו שאינו מתכנס:
+\[ \int_1^\infty \frac{1}{(1+x)\cdot\sqrt{x}}\,dx \]
+\end{question}
+
+\begin{hint}
+הציבו $t = \sqrt{x}$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה, $\int_1^\infty g = \lim_{R\to\infty}\int_1^R g$. נחשב את האינטגרל על $[1,R]$ בהצבה $t = \sqrt{x}$, כלומר $x = t^2$, $dx = 2t\,dt$; כאשר $x$ עובר מ-$1$ ל-$R$, $t$ עובר מ-$1$ ל-$\sqrt R$:
+\[ \int_1^R \frac{dx}{(1+x)\sqrt{x}} = \int_1^{\sqrt R}\frac{2t\,dt}{(1+t^2)\,t} = 2\int_1^{\sqrt R}\frac{dt}{1+t^2} = 2\left(\arctan\sqrt R - \arctan 1\right). \]
+כאשר $R \to \infty$ גם $\sqrt R \to \infty$, ו-$\arctan\sqrt R \to \frac\pi2$. לכן
+\[ \int_1^\infty \frac{dx}{(1+x)\sqrt{x}} = 2\left(\frac\pi2 - \frac\pi4\right) = \frac{\pi}{2}. \]
+(התכנסות אפשר גם לראות מראש במבחן ההשוואה: $0 < \frac{1}{(1+x)\sqrt x} < \frac{1}{x^{3/2}}$, ו-$\int_1^\infty x^{-3/2}dx$ מתכנס.)
+
+\textbf{תשובה:} האינטגרל מתכנס וערכו $\frac{\pi}{2}$.
+\end{solution}

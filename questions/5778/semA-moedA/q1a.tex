@@ -1,0 +1,25 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 1א
+% points: 10
+% categories: sequences
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא:
+גבול הסדרה $\displaystyle \lim_{n\to\infty}\left(\frac{n}{n+1}\right)^{3n}$.
+\end{question}
+
+\begin{hint}
+הפכו את השבר: $\frac{n}{n+1}=\frac{1}{1+\frac1n}$, והשתמשו בגבול המפורסם $\left(1+\frac1n\right)^n\to e$.
+\end{hint}
+
+\begin{solution}
+לכל $n$:
+\[ \left(\frac{n}{n+1}\right)^{3n}=\frac{1}{\left(\frac{n+1}{n}\right)^{3n}}=\frac{1}{\left[\left(1+\frac1n\right)^{n}\right]^{3}}. \]
+ידוע ש-$\left(1+\frac1n\right)^n\xrightarrow[n\to\infty]{} e$. מאריתמטיקה של גבולות (מכפלה של שלוש סדרות מתכנסות, ומנה כשהגבול במכנה $e^3\neq 0$) נקבל
+\[ \lim_{n\to\infty}\left(\frac{n}{n+1}\right)^{3n}=\frac{1}{e^3}. \]
+\end{solution}

@@ -1,0 +1,30 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 4א
+% points: 11
+% categories: definite-integrals, antiderivatives
+% source: exams/מבחנים/תשפה/מועד ב תשפה.pdf
+
+\begin{question}
+(11 נק') חשבו את האינטגרל
+\[ \int_0^{\frac{\sqrt2}{2}} \frac{x^2}{\sqrt{1 - x^2}}\,dx \]
+תזכורת: $\sin(\frac\pi4) = \cos(\frac\pi4) = \frac{\sqrt2}{2}$.
+\end{question}
+
+\begin{hint}
+הציבו $x = \sin t$, ואחר כך השתמשו בזהות $\sin^2 t = \frac{1 - \cos 2t}{2}$.
+\end{hint}
+
+\begin{solution}
+נציב $x = \sin t$ עם $t\in[0,\frac\pi4]$ (פונקציה גזירה ועולה, $\sin 0 = 0$, $\sin\frac\pi4 = \frac{\sqrt2}2$), $dx = \cos t\,dt$.
+בתחום זה $\cos t > 0$, ולכן $\sqrt{1 - \sin^2 t} = \cos t$:
+\[ \int_0^{\frac{\sqrt2}{2}}\frac{x^2}{\sqrt{1-x^2}}\,dx = \int_0^{\pi/4}\frac{\sin^2 t}{\cos t}\cos t\,dt = \int_0^{\pi/4}\sin^2 t\,dt
+= \int_0^{\pi/4}\frac{1 - \cos 2t}{2}\,dt = \left[\frac t2 - \frac{\sin 2t}{4}\right]_0^{\pi/4}. \]
+לכן
+\[ \int_0^{\frac{\sqrt2}{2}}\frac{x^2}{\sqrt{1-x^2}}\,dx = \frac\pi8 - \frac{\sin\frac\pi2}{4} = \frac{\pi}{8} - \frac14. \]
+(האינטגרנד רציף על הקטע הסגור, כי $1 - x^2 \ge \frac12$ שם, כך שזה אינטגרל רגיל.)
+
+\textbf{תשובה:} $\frac\pi8 - \frac14 \approx 0.1427$.
+\end{solution}

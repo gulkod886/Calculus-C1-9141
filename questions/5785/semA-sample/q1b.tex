@@ -1,0 +1,29 @@
+% year: תשפ"ה
+% semester: א
+% moed: לדוגמה
+% number: 1ב
+% points: 10
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשפו/exam_example 2025.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול
+\[ \lim_{x\to\frac{\pi}{4}} (\tan x)^{\tan(2x)} \]
+\end{question}
+
+\begin{hint}
+זה ביטוי $1^\infty$. כתבו $(\tan x)^{\tan 2x} = e^{\tan(2x)\ln(\tan x)}$ וחשבו את גבול המעריך (למשל בהצבה $t = \tan x$ ובכלל לופיטל).
+\end{hint}
+
+\begin{solution}
+בסביבה מנוקבת של $\frac{\pi}{4}$ מתקיים $\tan x > 0$, ולכן הביטוי מוגדר ו-
+\[ (\tan x)^{\tan 2x} = e^{\tan(2x)\cdot\ln(\tan x)}. \]
+כאשר $x \to \frac{\pi}{4}$: $\tan x \to 1$ ו-$|\tan 2x| \to \infty$ (ביטוי $1^\infty$). נחשב את גבול המעריך. לפי נוסחת הזווית הכפולה $\tan 2x = \frac{2\tan x}{1 - \tan^2 x}$; נציב $t = \tan x$, ואז $t \to 1$ כאשר $x \to \frac{\pi}{4}$ ($\tan$ רציפה), ו-$t \ne 1$ בסביבה מנוקבת:
+\[ \lim_{x\to\frac{\pi}{4}} \tan(2x)\ln(\tan x) = \lim_{t\to1} \frac{2t\ln t}{1 - t^2}. \]
+זה ביטוי $\frac00$; לפי כלל לופיטל:
+\[ \lim_{t\to1} \frac{2t\ln t}{1 - t^2} = \lim_{t\to1} \frac{2\ln t + 2}{-2t} = \frac{0 + 2}{-2} = -1. \]
+(לחלופין: $\frac{2t\ln t}{1 - t^2} = -\frac{2t}{1 + t}\cdot\frac{\ln t}{t - 1} \to -1\cdot 1$.)
+מרציפות פונקציית האקספוננט:
+\[ \boxed{\lim_{x\to\frac{\pi}{4}} (\tan x)^{\tan(2x)} = e^{-1} = \frac1e}. \]
+שימו לב שהגבול הוא דו-צדדי: אף ש-$\tan 2x \to +\infty$ משמאל ו-$\tan 2x \to -\infty$ מימין, המכפלה $\tan(2x)\ln(\tan x)$ שואפת ל-$-1$ משני הצדדים.
+\end{solution}

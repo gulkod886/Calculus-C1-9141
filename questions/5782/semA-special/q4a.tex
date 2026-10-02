@@ -1,0 +1,24 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 4א
+% points: 8
+% categories: antiderivatives
+% source: exams/מבחנים/תשפב/מועד ג תשפב.pdf
+
+\begin{question}
+(8 נק') חשבו את הפונקציה הקדומה של
+\[ f(x)=\cos(3x)\cos(7x) \]
+\end{question}
+
+\begin{hint}
+השתמשו בזהות $\cos\alpha\cos\beta=\frac12\left[\cos(\alpha-\beta)+\cos(\alpha+\beta)\right]$.
+\end{hint}
+
+\begin{solution}
+לפי הזהות $\cos\alpha\cos\beta=\frac12\left[\cos(\alpha-\beta)+\cos(\alpha+\beta)\right]$:
+\[ \cos(3x)\cos(7x)=\frac12\left[\cos(4x)+\cos(10x)\right]. \]
+לכן
+\[ \int\cos(3x)\cos(7x)\,dx=\frac12\left[\frac{\sin(4x)}{4}+\frac{\sin(10x)}{10}\right]+C=\boxed{\frac{\sin(4x)}{8}+\frac{\sin(10x)}{20}+C}. \]
+\end{solution}

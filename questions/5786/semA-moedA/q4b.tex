@@ -1,0 +1,33 @@
+% year: תשפ"ו
+% semester: א
+% moed: א
+% number: 4ב
+% points: 10
+% categories: ode
+% official_solution: yes
+% source: exams/מבחנים/תשפו/AnyScanner_02_01_2026(1) (2).pdf
+
+\begin{question}
+(10 נק') מצאו את הפתרון הכללי של המשוואה הדיפרנציאלית
+\[ y' = y^2 x \sin x \]
+\end{question}
+
+\begin{hint}
+זו משוואה פרידה: העבירו את $y^2$ לאגף של $dy$, ואת $\int x\sin x\,dx$ חשבו באינטגרציה בחלקים. אל תשכחו את הפתרון $y \equiv 0$.
+\end{hint}
+
+\begin{solution}
+זו משוואה פרידה: $\frac{dy}{dx} = y^2 \cdot x\sin x$.
+
+\textbf{הפתרון הקבוע:} $y \equiv 0$ מקיים $y' = 0 = 0^2 \cdot x\sin x$, ולכן הוא פתרון.
+
+\textbf{עבור $y \ne 0$:} נפריד משתנים ונבצע אינטגרציה:
+\[ \int \frac{dy}{y^2} = \int x\sin x\,dx. \]
+באגף שמאל $\int y^{-2}\,dy = -\frac{1}{y}$. באגף ימין אינטגרציה בחלקים עם $u = x$, $dv = \sin x\,dx$ (כלומר $du = dx$, $v = -\cos x$):
+\[ \int x\sin x\,dx = -x\cos x + \int \cos x\,dx = -x\cos x + \sin x + C. \]
+לכן
+\[ -\frac{1}{y} = -x\cos x + \sin x + C \quad\Longrightarrow\quad \boxed{y = \frac{1}{x\cos x - \sin x - C}}, \]
+כאשר $C$ קבוע ממשי כלשהו (בכל קטע שבו המכנה אינו מתאפס).
+
+\textbf{תשובה:} הפתרון הכללי הוא $y = \dfrac{1}{x\cos x - \sin x + C}$ ($C \in \R$, שינינו את שם הקבוע), ובנוסף הפתרון $y \equiv 0$.
+\end{solution}

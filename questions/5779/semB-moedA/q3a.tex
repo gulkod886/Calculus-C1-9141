@@ -1,0 +1,38 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 3א
+% points: 15
+% categories: antiderivatives, definite-integrals
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(15 נק') חשבו:
+\begin{enumerate}
+  \item[א.] (8 נק') $\displaystyle\int\frac{(x+1)^2}{x(x+2)^2}\,dx$
+  \item[ב.] (7 נק') $\displaystyle\int_{-\pi/4}^{\pi/4}\left(\frac{1}{\cos^2x\cdot(2+\tan x)^2}+x\cos^3x\right)dx$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+בסעיף א' פרקו לשברים חלקיים מהצורה $\frac{A}{x}+\frac{B}{x+2}+\frac{C}{(x+2)^2}$.
+\end{hint}
+
+\begin{hint}
+בסעיף ב' האינטגרל של פונקציה אי-זוגית על קטע סימטרי הוא $0$; בחלק השני הציבו $u=\tan x$.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item[א.] מעלת המונה (2) קטנה ממעלת המכנה (3), ולכן נפרק ישירות לשברים חלקיים:
+  \[ \frac{(x+1)^2}{x(x+2)^2}=\frac{A}{x}+\frac{B}{x+2}+\frac{C}{(x+2)^2}
+  \;\Longrightarrow\; (x+1)^2=A(x+2)^2+Bx(x+2)+Cx. \]
+  הצבת $x=0$: $1=4A$, כלומר $A=\frac14$. הצבת $x=-2$: $1=-2C$, כלומר $C=-\frac12$. השוואת מקדמי $x^2$: $1=A+B$, ולכן $B=\frac34$. לכן
+  \[ \int\frac{(x+1)^2}{x(x+2)^2}\,dx=\frac14\ln|x|+\frac34\ln|x+2|+\frac{1}{2(x+2)}+C. \]
+  \item[ב.] נפצל לשני אינטגרלים. הפונקציה $x\cos^3x$ אי-זוגית (מכפלה של $x$ האי-זוגית ב-$\cos^3x$ הזוגית) ורציפה, ולכן האינטגרל שלה על הקטע הסימטרי $[-\frac\pi4,\frac\pi4]$ שווה $0$.
+
+  באינטגרל הראשון נציב $u=\tan x$, $du=\frac{dx}{\cos^2x}$; כאשר $x$ עובר מ-$-\frac\pi4$ ל-$\frac\pi4$, $u$ עובר מ-$-1$ ל-$1$ (ובקטע זה $2+\tan x\ge1>0$):
+  \[ \int_{-\pi/4}^{\pi/4}\frac{dx}{\cos^2x\,(2+\tan x)^2}=\int_{-1}^{1}\frac{du}{(2+u)^2}=\left[-\frac{1}{2+u}\right]_{-1}^{1}=-\frac13+1=\frac23. \]
+  \textbf{תשובה:} $\frac23$.
+\end{enumerate}
+\end{solution}

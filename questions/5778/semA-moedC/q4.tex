@@ -1,0 +1,64 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ג
+% number: 4
+% points: 20
+% categories: func-analysis, derivatives, func-limits
+% source: exams/מבחנים/תשעח/מועד מיוחד תשעח.pdf
+
+\begin{question}
+(20 נק')
+חקרו את הפונקציה $f(x)=\sqrt{\frac{x^3}{x-1}}$ ושרטטו סקיצה של הגרף שלה. אין צורך לחשב את $f''(x)$ בשאלה זו, ואין צורך לעסוק בקמירות, קעירות ונקודות פיתול.
+\end{question}
+
+\begin{hint}
+תחום ההגדרה: היכן ש-$\frac{x^3}{x-1}\ge0$. שימו לב שהוא מורכב משני חלקים נפרדים.
+\end{hint}
+
+\begin{hint}
+באסימפטוטה המשופעת שימו לב ש-$\sqrt{x^2}=|x|$, ולכן השיפועים ב-$+\infty$ וב-$-\infty$ שונים.
+\end{hint}
+
+\begin{solution}
+\textbf{1. תיאור כללי.}
+\begin{itemize}
+  \item \textbf{תחום הגדרה:} צריך $x\neq1$ ו-$\frac{x^3}{x-1}\ge0$. סימן $x^3$ הוא סימן $x$, לכן המנה אי-שלילית כאשר $x\le0$ (מונה $\le0$, מכנה $<0$) או $x>1$ (שניהם חיוביים). התחום: $(-\infty,0]\cup(1,\infty)$.
+  \item \textbf{חיתוך עם הצירים:} $f(x)=0\iff x=0$. נקודת החיתוך היחידה (עם שני הצירים) היא $(0,0)$.
+  \item \textbf{זוגיות/מחזוריות:} התחום אינו סימטרי ביחס ל-$0$, ולכן $f$ אינה זוגית ואינה אי-זוגית; היא אינה מחזורית.
+  \item \textbf{סימן:} $f(x)\ge0$ בכל התחום, ושוויון רק ב-$x=0$.
+\end{itemize}
+
+\textbf{2. רציפות:} $f$ היא הרכבה של פונקציות אלמנטריות, ולכן רציפה בכל תחום הגדרתה (ב-$x=0$ — רציפה משמאל). הנקודה $x=1$ אינה בתחום, וכאשר $x\to1^+$: $x^3\to1$, $x-1\to0^+$, ולכן $f(x)\to+\infty$.
+
+\textbf{3. אסימפטוטות.}
+\begin{itemize}
+  \item \textbf{אנכית:} $x=1$ (מימין).
+  \item \textbf{כאשר $x\to+\infty$:} $f(x)=\sqrt{x^2\cdot\frac{x}{x-1}}=x\sqrt{\frac{x}{x-1}}$ (כי $x>0$).
+  \[ a=\lim_{x\to\infty}\frac{f(x)}{x}=\lim_{x\to\infty}\sqrt{\frac{x}{x-1}}=1, \]
+  \[ b=\lim_{x\to\infty}\left(f(x)-x\right)=\lim_{x\to\infty}x\left(\sqrt{\tfrac{x}{x-1}}-1\right)=\lim_{x\to\infty}\frac{x\left(\frac{x}{x-1}-1\right)}{\sqrt{\frac{x}{x-1}}+1}=\lim_{x\to\infty}\frac{\frac{x}{x-1}}{\sqrt{\frac{x}{x-1}}+1}=\frac{1}{2}. \]
+  אסימפטוטה: $y=x+\frac12$.
+  \item \textbf{כאשר $x\to-\infty$:} כאן $\sqrt{x^2}=|x|=-x$, ולכן $f(x)=-x\sqrt{\frac{x}{x-1}}$.
+  \[ a=\lim_{x\to-\infty}\frac{f(x)}{x}=-\lim_{x\to-\infty}\sqrt{\frac{x}{x-1}}=-1, \]
+  \[ b=\lim_{x\to-\infty}\left(f(x)+x\right)=\lim_{x\to-\infty}(-x)\left(\sqrt{\tfrac{x}{x-1}}-1\right)=-\lim_{x\to-\infty}\frac{\frac{x}{x-1}}{\sqrt{\frac{x}{x-1}}+1}=-\frac12. \]
+  אסימפטוטה: $y=-x-\frac12$.
+\end{itemize}
+
+\textbf{4. עלייה, ירידה וקיצון.} נסמן $g(x)=\frac{x^3}{x-1}$. אז
+\[ g'(x)=\frac{3x^2(x-1)-x^3}{(x-1)^2}=\frac{x^2(2x-3)}{(x-1)^2}, \]
+ובנקודות שבהן $g(x)>0$ (כלומר $x<0$ או $x>1$), לפי כלל השרשרת
+\[ f'(x)=\frac{g'(x)}{2\sqrt{g(x)}}=\frac{x^2(2x-3)}{2(x-1)^2\sqrt{\frac{x^3}{x-1}}}. \]
+סימן $f'$ הוא סימן $2x-3$ (שאר הגורמים חיוביים):
+\begin{itemize}
+  \item ב-$(-\infty,0)$: $2x-3<0$ ולכן $f$ יורדת (ממש). כיוון ש-$f$ רציפה ב-$0$ משמאל, היא יורדת בכל $(-\infty,0]$.
+  \item ב-$\left(1,\frac32\right)$: $f'<0$, $f$ יורדת.
+  \item ב-$\left(\frac32,\infty\right)$: $f'>0$, $f$ עולה.
+\end{itemize}
+לכן:
+\begin{itemize}
+  \item ב-$x=\frac32$ מינימום מקומי: $f\left(\frac32\right)=\sqrt{\frac{27/8}{1/2}}=\sqrt{\frac{27}{4}}=\frac{3\sqrt3}{2}\approx2.6$.
+  \item ב-$x=0$ (קצה התחום משמאל) מינימום מקומי, ואף מוחלט, $f(0)=0$. הנגזרת החד-צדדית שם: $\frac{f(x)-f(0)}{x}=\frac{|x|^{3/2}}{x\sqrt{1-x}}\to0$ כאשר $x\to0^-$, כלומר הגרף מגיע ל-$(0,0)$ באופן אופקי (משיק לציר $x$).
+\end{itemize}
+
+\textbf{5. סקיצה.} \emph{ענף שמאלי} ($x\le0$): הגרף יורד מ-$+\infty$, קרוב מעל לאסימפטוטה $y=-x-\frac12$ כאשר $x\to-\infty$, עד הנקודה $(0,0)$ שבה הוא מגיע משיק לציר $x$ ונעצר. \emph{ענף ימני} ($x>1$): הגרף יורד מ-$+\infty$ (צמוד לאסימפטוטה האנכית $x=1$) עד המינימום $\left(\frac32,\frac{3\sqrt3}{2}\right)$, ואחר כך עולה ומתקרב (מלמעלה) לאסימפטוטה $y=x+\frac12$. בקטע $(0,1]$ אין גרף.
+\end{solution}

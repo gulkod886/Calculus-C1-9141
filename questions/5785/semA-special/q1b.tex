@@ -1,0 +1,27 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 1ב
+% points: 11
+% categories: derivatives
+% source: exams/מבחנים/תשפה/מועד ג תשפה.pdf
+
+\begin{question}
+(11 נק') נגדיר פונקציה על ידי
+\[ f(x) = \begin{cases} x^3\cdot\cos(\frac1x), & \text{if } x \neq 0 \\ 0, & \text{if } x = 0 \end{cases} \]
+האם הפונקציה גזירה ב-$x = 0$? \\
+אם כן חשבו את הנגזרת שלה בנקודה זו. אם לא נמקו.
+\end{question}
+
+\begin{hint}
+השתמשו בהגדרת הנגזרת ובכך ש-$|\cos(\frac1x)| \le 1$.
+\end{hint}
+
+\begin{solution}
+לפי הגדרת הנגזרת, עבור $h \neq 0$:
+\[ \frac{f(h) - f(0)}{h} = \frac{h^3\cos(\frac1h)}{h} = h^2\cos\left(\tfrac1h\right). \]
+מכיוון ש-$|\cos(\frac1h)| \le 1$ מתקיים $0 \le \left|h^2\cos(\frac1h)\right| \le h^2 \to 0$, ולכן לפי משפט הסנדוויץ' (סדרה/פונקציה חסומה כפול שואפת לאפס)
+\[ \lim_{h\to 0}\frac{f(h) - f(0)}{h} = 0. \]
+\textbf{תשובה:} כן, $f$ גזירה ב-$x=0$ ו-$f'(0) = 0$.
+\end{solution}

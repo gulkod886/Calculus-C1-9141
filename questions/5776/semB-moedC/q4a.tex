@@ -1,0 +1,30 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ג
+% source: exams/מבחנים/תשעו/מועד ג תשעו.pdf
+% number: 4א
+% points: 10
+% categories: func-limits, taylor
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא: $\lim_{x\to0}\frac{\cos(\sin(x))-\cos(x)}{x^4}$.
+\end{question}
+
+\begin{hint}
+פתחו את $\cos t$ ואת $\sin x$ לפי מקלורין עד סדר $4$ (שימו לב ש-$\sin^2x=x^2-\frac{x^4}{3}+o(x^4)$).
+\end{hint}
+
+\begin{solution}
+נשתמש בפיתוחי מקלורין:
+$\sin x=x-\frac{x^3}{6}+o(x^4)$ ו-$\cos t=1-\frac{t^2}{2}+\frac{t^4}{24}+o(t^4)$.
+נחשב:
+\[ \sin^2x=\left(x-\frac{x^3}{6}+o(x^4)\right)^2=x^2-\frac{x^4}{3}+o(x^4),\qquad \sin^4x=x^4+o(x^4). \]
+מכיוון ש-$\sin x\to0$ ו-$|\sin x|\le|x|$, ניתן להציב $t=\sin x$ (שארית $o(\sin^4x)$ היא $o(x^4)$):
+\[ \cos(\sin x)=1-\frac{\sin^2x}{2}+\frac{\sin^4x}{24}+o(x^4)=1-\frac{x^2}{2}+\frac{x^4}{6}+\frac{x^4}{24}+o(x^4)=1-\frac{x^2}{2}+\frac{5x^4}{24}+o(x^4). \]
+וכן $\cos x=1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^4)$. לכן
+\[ \cos(\sin x)-\cos x=\frac{4x^4}{24}+o(x^4)=\frac{x^4}{6}+o(x^4), \]
+ומכאן
+\[ \lim_{x\to0}\frac{\cos(\sin x)-\cos x}{x^4}=\boxed{\frac16}. \]
+(דרך נוספת: $\cos A-\cos B=-2\sin\frac{A+B}{2}\sin\frac{A-B}{2}$ עם $A=\sin x$, $B=x$; אז $\frac{A+B}{2}\sim x$ ו-$\frac{A-B}{2}=\frac{\sin x-x}{2}\sim-\frac{x^3}{12}$, ומתקבל $-2\cdot x\cdot(-\frac{x^3}{12})=\frac{x^4}{6}$.)
+\end{solution}

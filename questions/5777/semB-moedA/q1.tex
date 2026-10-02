@@ -1,0 +1,26 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: א
+% source: exams/מבחנים/תשעז/מועד א תשעז סמסטר ב.pdf
+% number: 1
+% points: 15
+% categories: derivatives, func-limits
+
+\begin{question}
+(15 נק') חשבו את הנגזרת של הפונקציה $f(x)=\ln(2x)$ בנקודה $x$ ($x>0$), מההגדרה (ללא שימוש בנגזרות ידועות).
+\end{question}
+
+\begin{hint}
+השתמשו בחוקי הלוגריתם כדי לכתוב את מנת ההפרשים כ-$\frac{\ln(1+\frac hx)}{h}$, ואז בגבול היסודי $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$.
+\end{hint}
+
+\begin{solution}
+יהי $x>0$. עבור $h\ne0$ עם $|h|<x$ (כך ש-$x+h>0$), לפי חוקי הלוגריתם:
+\[ \frac{f(x+h)-f(x)}{h}=\frac{\ln(2x+2h)-\ln(2x)}{h}=\frac{1}{h}\ln\frac{2(x+h)}{2x}=\frac1h\ln\left(1+\frac hx\right). \]
+נציב $t=\frac hx$; כאשר $h\to0$ גם $t\to0$ ו-$t\ne0$, ולכן לפי הגבול היסודי $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$ (וכלל ההצבה בגבולות):
+\[ \frac1h\ln\left(1+\frac hx\right)=\frac1x\cdot\frac{\ln(1+t)}{t}\xrightarrow[h\to0]{}\frac1x\cdot1. \]
+לכן
+\[ \boxed{f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}=\frac1x}. \]
+(שימו לב שהתוצאה זהה לנגזרת של $\ln x$, כי $\ln(2x)=\ln2+\ln x$.)
+\end{solution}

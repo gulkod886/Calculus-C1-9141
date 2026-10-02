@@ -1,0 +1,42 @@
+% year: תש"פ
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 3א
+% points: 15
+% categories: antiderivatives, definite-integrals
+% source: exams/מבחנים/תשפ/מועד ב סמסטר ב תשפ.pdf
+
+\begin{question}
+(15 נק') חשבו:
+\begin{enumerate}
+  \item (7 נק') $\displaystyle\int\frac{5x+2}{x^4+x^3+2x^2}\,dx$
+  \item (8 נק') $\displaystyle\int_0^1\ln(1+\sqrt{x})\,dx$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+באינטגרל הראשון פרקו לשברים חלקיים: $x^4+x^3+2x^2=x^2(x^2+x+2)$, והגורם הריבועי אי-פריק.
+\end{hint}
+
+\begin{hint}
+באינטגרל השני הציבו $t=\sqrt x$ ואז בצעו אינטגרציה בחלקים.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item המכנה: $x^4+x^3+2x^2=x^2(x^2+x+2)$, ו-$x^2+x+2$ אי-פריק (הדיסקרימיננטה $1-8<0$). נפרק לשברים חלקיים:
+  \[ \frac{5x+2}{x^2(x^2+x+2)}=\frac{A}{x}+\frac{B}{x^2}+\frac{Cx+D}{x^2+x+2}, \]
+  כלומר $5x+2=Ax(x^2+x+2)+B(x^2+x+2)+(Cx+D)x^2$. השוואת מקדמים: מקדם חופשי $2B=2\Rightarrow B=1$; מקדם $x$: $2A+B=5\Rightarrow A=2$; מקדם $x^3$: $A+C=0\Rightarrow C=-2$; מקדם $x^2$: $A+B+D=0\Rightarrow D=-3$. לכן
+  \[ \frac{5x+2}{x^4+x^3+2x^2}=\frac{2}{x}+\frac{1}{x^2}-\frac{2x+3}{x^2+x+2}. \]
+  את המחובר האחרון נפרק: $2x+3=(2x+1)+2$, ו-$x^2+x+2=\big(x+\frac12\big)^2+\frac74$. לכן
+  \[ \int\frac{2x+3}{x^2+x+2}dx=\ln(x^2+x+2)+2\int\frac{dx}{(x+\frac12)^2+\frac74}=\ln(x^2+x+2)+\frac{4}{\sqrt7}\arctan\frac{2x+1}{\sqrt7}. \]
+  \textbf{תשובה:}
+  \[ \int\frac{5x+2}{x^4+x^3+2x^2}dx=2\ln|x|-\frac1x-\ln(x^2+x+2)-\frac{4}{\sqrt7}\arctan\frac{2x+1}{\sqrt7}+C . \]
+  \item נציב $t=\sqrt x$, כלומר $x=t^2$, $dx=2t\,dt$, והגבולות $0\to0$, $1\to1$:
+  \[ \int_0^1\ln(1+\sqrt x)\,dx=\int_0^12t\ln(1+t)\,dt . \]
+  אינטגרציה בחלקים עם $u=\ln(1+t)$, $v'=2t$ ($v=t^2$):
+  \[ =\Big[t^2\ln(1+t)\Big]_0^1-\int_0^1\frac{t^2}{1+t}dt=\ln2-\int_0^1\Big(t-1+\frac{1}{1+t}\Big)dt=\ln2-\Big(\frac12-1+\ln2\Big)=\boxed{\frac12} . \]
+  (השתמשנו בחילוק פולינומים $\frac{t^2}{1+t}=t-1+\frac{1}{1+t}$.)
+\end{enumerate}
+\end{solution}

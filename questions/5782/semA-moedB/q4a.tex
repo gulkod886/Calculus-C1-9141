@@ -1,0 +1,23 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 4א
+% points: 8
+% categories: antiderivatives
+% source: exams/מבחנים/תשפב/מועד ב תשפב.pdf
+
+\begin{question}
+(8 נק') חשבו את הפונקציה הקדומה של
+\[ f(x)=\cos^2x\sin^3x \]
+\end{question}
+
+\begin{hint}
+כתבו $\sin^3x=(1-\cos^2x)\sin x$ והציבו $t=\cos x$.
+\end{hint}
+
+\begin{solution}
+נכתוב $\cos^2x\sin^3x=\cos^2x(1-\cos^2x)\sin x$ ונציב $t=\cos x$, $dt=-\sin x\,dx$:
+\[ \int\cos^2x\sin^3x\,dx=-\int t^2(1-t^2)\,dt=-\frac{t^3}{3}+\frac{t^5}{5}+C=\boxed{\frac{\cos^5x}{5}-\frac{\cos^3x}{3}+C}. \]
+בדיקה: $\left(\frac{\cos^5x}{5}-\frac{\cos^3x}{3}\right)'=-\cos^4x\sin x+\cos^2x\sin x=\cos^2x\sin x(1-\cos^2x)=\cos^2x\sin^3x$.
+\end{solution}

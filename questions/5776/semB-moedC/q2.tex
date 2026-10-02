@@ -1,0 +1,25 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ג
+% source: exams/מבחנים/תשעו/מועד ג תשעו.pdf
+% number: 2
+% points: 10
+% categories: true-false, continuity, func-limits
+
+\begin{question}
+\textbf{הוכיחו או הפריכו:} הפונקציה הבאה רציפה באפס:
+\[ f(x)=\begin{cases} \frac{\sin(2x)}{\sqrt{x+4}-2}, & x\neq 0\\ 5, & x=0\end{cases}. \]
+\end{question}
+
+\begin{hint}
+הכפילו את המונה והמכנה בצמוד $\sqrt{x+4}+2$.
+\end{hint}
+
+\begin{solution}
+\textbf{הטענה אינה נכונה.} $f$ רציפה ב-$0$ אם ורק אם $\lim_{x\to0}f(x)=f(0)=5$. נחשב את הגבול (עבור $x\ne0$, $x\ge-4$) בעזרת כפל בצמוד:
+\[ \frac{\sin 2x}{\sqrt{x+4}-2}=\frac{\sin 2x\,(\sqrt{x+4}+2)}{(x+4)-4}=\frac{\sin2x}{x}\left(\sqrt{x+4}+2\right)=2\cdot\frac{\sin 2x}{2x}\cdot\left(\sqrt{x+4}+2\right). \]
+לפי הגבול היסודי $\frac{\sin2x}{2x}\to1$, ובגלל רציפות השורש $\sqrt{x+4}+2\to4$. לפי אריתמטיקה של גבולות
+\[ \lim_{x\to0}f(x)=2\cdot1\cdot4=8\neq5=f(0). \]
+לכן $f$ \textbf{אינה רציפה} באפס (יש לה אי-רציפות סליקה; היא הייתה רציפה אילו הגדרנו $f(0)=8$).
+\end{solution}

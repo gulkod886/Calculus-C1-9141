@@ -1,0 +1,34 @@
+% year: תשפ"ה
+% semester: א
+% moed: לדוגמה
+% number: 2א
+% points: 11
+% categories: func-analysis, func-limits
+% source: exams/מבחנים/תשפו/exam_example 2025.pdf
+
+\begin{question}
+(11 נק') מצאו את כל האסימפטוטות של הפונקציה
+\[ f(x) = \frac{2x^2 - 3x + lan(x)}{x} \]
+נמקו.
+\end{question}
+
+\begin{hint}
+$lan(x)$ הוא כנראה $\ln(x)$. קבעו את תחום ההגדרה, ובדקו אסימפטוטה אנכית ב-$x = 0^+$ ואסימפטוטה משופעת $y = ax + b$ כאשר $x \to +\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{הערה:} בטופס הבחינה מופיע $lan(x)$, וזו כנראה טעות דפוס של $\ln(x)$. נפתור עבור
+\[ f(x) = \frac{2x^2 - 3x + \ln x}{x} = 2x - 3 + \frac{\ln x}{x}. \]
+\textbf{תחום הגדרה:} $x > 0$ (בגלל $\ln x$; ממילא $x \ne 0$). $f$ רציפה ב-$(0, \infty)$.
+
+\textbf{אסימפטוטה אנכית.} הנקודה היחידה החשודה היא קצה התחום $x = 0$. כאשר $x \to 0^+$: $\ln x \to -\infty$ ו-$\frac1x \to +\infty$, ולכן $\frac{\ln x}{x} = \ln x\cdot\frac1x \to -\infty$, ואילו $2x - 3 \to -3$. לכן
+\[ \lim_{x\to0^+} f(x) = -\infty, \]
+ו-$x = 0$ אסימפטוטה אנכית (מימין). בכל נקודה אחרת $f$ רציפה ולכן אין שם אסימפטוטה אנכית.
+
+\textbf{אסימפטוטה משופעת.} התחום אינסופי רק ב-$+\infty$. נחשב
+\[ a = \lim_{x\to\infty}\frac{f(x)}{x} = \lim_{x\to\infty}\left( 2 - \frac3x + \frac{\ln x}{x^2} \right) = 2, \]
+\[ b = \lim_{x\to\infty}\bigl(f(x) - 2x\bigr) = \lim_{x\to\infty}\left( -3 + \frac{\ln x}{x} \right) = -3, \]
+כאשר השתמשנו ב-$\lim_{x\to\infty}\frac{\ln x}{x} = 0$ (לפי לופיטל: $\lim \frac{1/x}{1} = 0$), ומכאן גם $\frac{\ln x}{x^2} \to 0$. לכן $y = 2x - 3$ אסימפטוטה משופעת ב-$+\infty$, ואין אסימפטוטה אופקית.
+
+\textbf{תשובה:} אסימפטוטה אנכית $x = 0$, ואסימפטוטה משופעת $y = 2x - 3$ כאשר $x \to +\infty$.
+\end{solution}

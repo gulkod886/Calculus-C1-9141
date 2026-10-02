@@ -1,0 +1,16 @@
+% year: תשפ"ג
+% semester: א
+% moed: ג
+% source: exams/מבחנים/תשפג/מועד ג תשפג.pdf
+% number: 4א
+% categories: lhopital, func-limits
+
+\begin{question}
+חשבו את הגבול $\displaystyle\lim_{x\to0}\frac{e^{2x}-e^x}{x}$
+\end{question}
+
+\begin{solution}
+זהו גבול מהצורה $\frac00$, והמונה והמכנה גזירים, לכן לפי כלל לופיטל
+\[ \lim_{x\to0}\frac{e^{2x}-e^x}{x}=\lim_{x\to0}\frac{2e^{2x}-e^x}{1}=2-1=\boxed{1}. \]
+(לחלופין: $\frac{e^{2x}-e^x}{x}=2\cdot\frac{e^{2x}-1}{2x}-\frac{e^x-1}{x}\to 2-1=1$ לפי הגבול היסודי $\lim_{t\to0}\frac{e^t-1}{t}=1$.)
+\end{solution}

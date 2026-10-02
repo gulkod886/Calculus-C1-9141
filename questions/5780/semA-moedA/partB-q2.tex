@@ -1,0 +1,37 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: א
+% part: ב
+% number: 2
+% points: 9
+% categories: derivatives, continuity, multiple-choice
+% source: exams/מבחנים/תשפ/מועד א תשפ.pdf
+
+\begin{question}
+תהי $f(x)$ גזירה בקטע $(a,b)$. מה מהבאים חייב להיות נכון?
+\begin{enumerate}
+  \item[(א)] $f'(x)$ רציפה ב-$(a,b)$
+  \item[(ב)] $f(x)$ מונוטונית ב-$(a,b)$
+  \item[(ג)] $f(x)+\sin(x)$ רציפה ב-$(a,b)$
+  \item[(ד)] $f(x)$ מונוטונית עולה ב-$(a,b)$
+  \item[(ה)] קיים $c\in(a,b)$ כך ש-$f'(c)=0$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+מה גזירות בנקודה גוררת?
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ג).}
+
+פונקציה גזירה בנקודה רציפה בה, ולכן $f$ רציפה ב-$(a,b)$. גם $\sin x$ רציפה, וסכום של פונקציות רציפות רציף; לכן $f(x)+\sin(x)$ רציפה ב-$(a,b)$.
+
+שאר התשובות אינן חייבות להתקיים:
+\begin{itemize}
+  \item (א) לא נכון: הנגזרת של פונקציה גזירה אינה חייבת להיות רציפה. הדוגמה הקלאסית: $f(x)=x^2\sin\frac1x$ עבור $x\neq0$ ו-$f(0)=0$, בקטע $(-1,1)$. היא גזירה בכל נקודה ($f'(0)=\lim_{h\to0}h\sin\frac1h=0$), אך $f'(x)=2x\sin\frac1x-\cos\frac1x$ עבור $x\ne0$, ול-$f'$ אין גבול ב-$0$.
+  \item (ב), (ד) לא נכונות: למשל $f(x)=x^2$ בקטע $(-1,1)$ גזירה אך אינה מונוטונית.
+  \item (ה) לא נכון: למשל $f(x)=x$ גזירה ו-$f'(x)=1\ne0$ לכל $x$. (משפט רול דורש גם רציפות בקטע סגור ו-$f(a)=f(b)$.)
+\end{itemize}
+\end{solution}

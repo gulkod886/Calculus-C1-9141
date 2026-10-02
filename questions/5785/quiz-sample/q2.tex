@@ -1,0 +1,54 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% moed: לדוגמה
+% official_solution: yes
+% source: exams/מבחנים/תשפו/midterm_example 2025.pdf
+% part: א
+% number: 2
+% points: 20
+% categories: continuity, func-limits
+
+\begin{question}
+יהיו $a,b\in\R$. נגדיר פונקציה על ידי
+\[
+f(x)=\begin{cases}
+\frac{\sin(8x)}{x}, & \text{if } x<0,\\
+ax+b, & \text{if } 0\le x\le 4,\\
+\frac{x^2-3x-4}{2-\sqrt{x}}, & \text{if } x>4
+\end{cases}
+\]
+לאילו ערכים של $a,b$ הפונקציה רציפה ב-$\R$ ? נמקו.
+\end{question}
+
+\begin{hint}
+בכל נקודה $x\neq0,4$ הפונקציה רציפה בלי קשר ל-$a,b$. בדקו רק את נקודות התפר $x=0$ ו-$x=4$.
+\end{hint}
+
+\begin{hint}
+ב-$x=4$: $x^2-3x-4=(x-4)(x+1)$, וכפלו וחלקו ב-$2+\sqrt x$.
+\end{hint}
+
+\begin{solution}
+\textbf{נקודות שאינן נקודות תפר.} בכל נקודה $x<0$ הפונקציה היא מנה של פונקציות רציפות עם מכנה שונה מ-0; בכל נקודה $0<x<4$ היא פולינום; ובכל נקודה $x>4$ היא מנה של פונקציות רציפות עם מכנה $2-\sqrt x\neq0$ (כי $\sqrt x>2$). מכיוון שבכל אחת מהנקודות האלה $f$ מתלכדת עם הנוסחה בסביבה שלמה, $f$ רציפה בהן לכל $a,b$. נותר לבדוק את $x=0$ ואת $x=4$.
+
+\textbf{הנקודה $x=0$.} $f(0)=b$. משמאל, לפי $\lim_{y\to0}\frac{\sin y}{y}=1$ עם $y=8x$:
+\[
+\lim_{x\to0^-}\frac{\sin(8x)}{x}=8\lim_{x\to0^-}\frac{\sin(8x)}{8x}=8\lim_{y\to0^-}\frac{\sin y}{y}=8\cdot1=8 .
+\]
+מימין: $\lim_{x\to0^+}(ax+b)=b=f(0)$ (רציפות פולינום). לכן $f$ רציפה ב-0 אם ורק אם $\boxed{b=8}$.
+
+\textbf{הנקודה $x=4$.} $f(4)=4a+b=4a+8$, ומשמאל $\lim_{x\to4^-}(ax+8)=4a+8=f(4)$. מימין, גבול מהצורה $\frac00$. נכפול בצמוד:
+\[
+\frac{x^2-3x-4}{2-\sqrt x}\cdot\frac{2+\sqrt x}{2+\sqrt x}=\frac{(x-4)(x+1)(2+\sqrt x)}{4-x}=-(x+1)(2+\sqrt x)\qquad(x\neq4),
+\]
+ולכן, מרציפות הביטוי האחרון ב-4,
+\[
+\lim_{x\to4^+}f(x)=-(4+1)(2+\sqrt4)=-5\cdot4=-20 .
+\]
+$f$ רציפה ב-4 אם ורק אם $4a+8=-20$, כלומר $\boxed{a=-7}$.
+
+\textbf{תשובה:} $f$ רציפה ב-$\R$ אם ורק אם $a=-7,\ b=8$.
+
+(הערה: בפתרון בכתב יד המצורף הסימן "$-$" הושמט בשורה $-\lim(x+1)(2+\sqrt x)=5\cdot4=20$, אבל בשורה הבאה נכתב נכון $4a+8=-20$ והתשובה $a=-7$ נכונה.)
+\end{solution}

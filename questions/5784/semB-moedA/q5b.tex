@@ -1,0 +1,22 @@
+% year: תשפ"ד
+% semester: ב
+% moed: א
+% number: 5ב
+% categories: definite-integrals
+% source: exams/מבחנים/תשפד/מועד א תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \int_1^e(\ln(x))^2\,dx \]
+\end{question}
+
+\begin{hint}
+אינטגרציה בחלקים פעמיים, עם $u=(\ln x)^2,\ v'=1$.
+\end{hint}
+
+\begin{solution}
+אינטגרציה בחלקים עם $u=(\ln x)^2$, $v'=1$, כלומר $u'=\frac{2\ln x}{x}$, $v=x$:
+\[ \int_1^e(\ln x)^2dx=\Big[x(\ln x)^2\Big]_1^e-\int_1^e 2\ln x\,dx=e-2\int_1^e\ln x\,dx. \]
+שוב בחלקים ($u=\ln x,\ v'=1$): $\int_1^e\ln x\,dx=\big[x\ln x\big]_1^e-\int_1^e1\,dx=e-(e-1)=1$. לכן
+\[ \int_1^e(\ln x)^2dx=\boxed{e-2}\approx0.718. \]
+\end{solution}

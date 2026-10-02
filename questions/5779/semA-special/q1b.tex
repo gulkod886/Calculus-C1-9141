@@ -1,0 +1,27 @@
+% year: תשע"ט
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 1ב
+% points: 10
+% categories: sequences
+% source: exams/מבחנים/תשעט/מועד מיוחד תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle \lim_{n\to\infty}\left(\sqrt{(n^2+1)(n^2-4)}-\sqrt{n^4-9}\right)$.
+\end{question}
+
+\begin{hint}
+הכפילו וחלקו בצמוד $\sqrt{(n^2+1)(n^2-4)}+\sqrt{n^4-9}$.
+\end{hint}
+
+\begin{solution}
+זהו ביטוי מהצורה $\infty-\infty$. נכפיל ונחלק בצמוד (עבור $n\ge 2$ שני השורשים מוגדרים וחיוביים):
+\[ \sqrt{(n^2+1)(n^2-4)}-\sqrt{n^4-9} = \frac{(n^2+1)(n^2-4)-(n^4-9)}{\sqrt{(n^2+1)(n^2-4)}+\sqrt{n^4-9}}. \]
+במונה: $(n^2+1)(n^2-4) = n^4-3n^2-4$, ולכן המונה הוא $n^4-3n^2-4-n^4+9 = -3n^2+5$. נחלק מונה ומכנה ב-$n^2$:
+\[ \frac{-3+\frac{5}{n^2}}{\sqrt{\left(1+\frac{1}{n^2}\right)\left(1-\frac{4}{n^2}\right)}+\sqrt{1-\frac{9}{n^4}}} \xrightarrow[n\to\infty]{} \frac{-3}{1+1} = -\frac{3}{2}, \]
+לפי אריתמטיקה של גבולות ורציפות השורש.
+
+\textbf{תשובה:} $-\dfrac32$.
+\end{solution}

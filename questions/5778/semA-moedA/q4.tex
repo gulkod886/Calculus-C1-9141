@@ -1,0 +1,60 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 4
+% points: 20
+% categories: func-analysis, derivatives, func-limits
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(20 נק')
+חקרו את הפונקציה $f(x)=(x+2)e^{1/x}$ ושרטטו סקיצה של הגרף שלה.
+\end{question}
+
+\begin{hint}
+לאסימפטוטה המשופעת: $a=\lim\frac{f(x)}{x}$, ואז $b=\lim(f(x)-ax)$. בחישוב $b$ הופיע הגבול $\lim_{x\to\infty}x\left(e^{1/x}-1\right)$.
+\end{hint}
+
+\begin{solution}
+\textbf{1. תיאור כללי.}
+\begin{itemize}
+  \item \textbf{תחום הגדרה:} $x\neq0$.
+  \item \textbf{נקודות חיתוך עם הצירים:} אין חיתוך עם ציר $y$ כי $0$ אינו בתחום. $f(x)=0\iff x+2=0$ (כי $e^{1/x}>0$), ולכן החיתוך עם ציר $x$ הוא $(-2,0)$.
+  \item \textbf{זוגיות:} $f(-1)=e^{-1}$, $f(1)=3e$, ולכן $f$ אינה זוגית ואינה אי-זוגית. היא גם אינה מחזורית.
+  \item \textbf{סימן:} כיוון ש-$e^{1/x}>0$, הסימן של $f$ הוא סימן $x+2$: $f(x)>0$ עבור $x>-2$ ($x\neq0$), ו-$f(x)<0$ עבור $x<-2$.
+\end{itemize}
+
+\textbf{2. רציפות.} $f$ אלמנטרית ולכן רציפה בכל תחום הגדרתה. בנקודה $x=0$:
+\[ \lim_{x\to0^-}(x+2)e^{1/x}=2\cdot0=0,\qquad \lim_{x\to0^+}(x+2)e^{1/x}=2\cdot(+\infty)=+\infty, \]
+כי $\frac1x\to\mp\infty$. לכן ב-$x=0$ יש נקודת אי-רציפות מסוג שני.
+
+\textbf{3. אסימפטוטות.}
+\begin{itemize}
+  \item \textbf{אנכית:} $x=0$ (מימין), כי $\lim_{x\to0^+}f(x)=+\infty$. משמאל הגרף שואף לנקודה $(0,0)$ (שאינה בגרף).
+  \item \textbf{משופעת} $y=ax+b$ כאשר $x\to\pm\infty$:
+  \[ a=\lim_{x\to\pm\infty}\frac{f(x)}{x}=\lim_{x\to\pm\infty}\left(1+\frac2x\right)e^{1/x}=1\cdot e^0=1. \]
+  \[ b=\lim_{x\to\pm\infty}\left(f(x)-x\right)=\lim_{x\to\pm\infty}\left(x\left(e^{1/x}-1\right)+2e^{1/x}\right). \]
+  נציב $t=\frac1x\to0$: $x\left(e^{1/x}-1\right)=\frac{e^t-1}{t}\to1$ (גבול מפורסם, או לופיטל: $\frac{e^t}{1}\to1$). כמו כן $2e^{1/x}\to2$. לכן $b=1+2=3$.
+
+  האסימפטוטה המשופעת היא $y=x+3$, גם כאשר $x\to\infty$ וגם כאשר $x\to-\infty$. בפרט $\lim_{x\to\pm\infty}f(x)=\pm\infty$.
+\end{itemize}
+
+\textbf{4. עלייה, ירידה וקיצון.}
+\[ f'(x)=e^{1/x}+(x+2)e^{1/x}\cdot\left(-\frac{1}{x^2}\right)=e^{1/x}\left(1-\frac{x+2}{x^2}\right)=e^{1/x}\cdot\frac{x^2-x-2}{x^2}=e^{1/x}\cdot\frac{(x-2)(x+1)}{x^2}. \]
+כיוון ש-$e^{1/x}>0$ ו-$x^2>0$, סימן $f'$ הוא סימן $(x-2)(x+1)$:
+\begin{itemize}
+  \item $f'>0$ ב-$(-\infty,-1)$ וב-$(2,\infty)$ — $f$ עולה שם;
+  \item $f'<0$ ב-$(-1,0)$ וב-$(0,2)$ — $f$ יורדת שם.
+\end{itemize}
+לכן ב-$x=-1$ יש מקסימום מקומי, $f(-1)=1\cdot e^{-1}=\frac1e$, וב-$x=2$ יש מינימום מקומי, $f(2)=4e^{1/2}=4\sqrt e$.
+
+\textbf{5. קמירות ונקודות פיתול.} גוזרים את $f'(x)=e^{1/x}\cdot\frac{x^2-x-2}{x^2}=e^{1/x}\left(1-\frac1x-\frac2{x^2}\right)$:
+\[ f''(x)=e^{1/x}\left(-\frac1{x^2}\right)\left(1-\frac1x-\frac2{x^2}\right)+e^{1/x}\left(\frac1{x^2}+\frac4{x^3}\right)
+=e^{1/x}\cdot\frac{-x^2+x+2+x^2+4x}{x^4}=e^{1/x}\cdot\frac{5x+2}{x^4}. \]
+סימן $f''$ הוא סימן $5x+2$. לכן $f$ קמורה (כלפי מעלה, $f''>0$) ב-$\left(-\frac25,0\right)$ וב-$(0,\infty)$, וקעורה (כלפי מטה) ב-$\left(-\infty,-\frac25\right)$. ב-$x=-\frac25$ הנגזרת השנייה מחליפה סימן ו-$f$ רציפה, ולכן זו נקודת פיתול:
+\[ \left(-\frac25,\ f\left(-\frac25\right)\right)=\left(-\frac25,\ \frac85e^{-5/2}\right). \]
+
+\textbf{6. סקיצה.} משמאל לציר $y$: כאשר $x\to-\infty$ הגרף נמצא מתחת לאסימפטוטה $y=x+3$ ומתקרב אליה (כי $f(x)-(x+3)=\frac{5}{2x}+O\left(\frac1{x^2}\right)$), הוא עולה וקעור, חותך את ציר $x$ ב-$(-2,0)$, מגיע למקסימום מקומי $\left(-1,\frac1e\right)$, ואחר כך יורד; בנקודת הפיתול $x=-\frac25$ הוא הופך לקמור וממשיך לרדת אל הנקודה $(0,0)$ (שאינה שייכת לגרף). מימין לציר $y$: הגרף יורד מ-$+\infty$ (אסימפטוטה אנכית $x=0$) עד למינימום $(2,4\sqrt e)\approx(2,\,6.6)$, ואחר כך עולה ומתקרב מלמעלה לאסימפטוטה $y=x+3$; בתחום זה הוא קמור.
+\end{solution}

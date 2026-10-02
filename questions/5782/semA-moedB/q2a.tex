@@ -1,0 +1,30 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 2א
+% points: 8
+% categories: func-analysis
+% source: exams/מבחנים/תשפב/מועד ב תשפב.pdf
+
+\begin{question}
+(8 נק') מצאו נקודות קיצון מקומי ותחומי עלייה וירידה של הפונקציה
+\[ f(x)=\frac{2x}{x^2+1} \]
+\end{question}
+
+\begin{hint}
+חשבו את $f'$ לפי כלל המנה ובדקו את סימנה; המכנה של $f'$ חיובי תמיד.
+\end{hint}
+
+\begin{solution}
+$f$ מוגדרת וגזירה בכל $\R$ (המכנה חיובי). לפי כלל המנה:
+\[ f'(x)=\frac{2(x^2+1)-2x\cdot2x}{(x^2+1)^2}=\frac{2(1-x^2)}{(x^2+1)^2}. \]
+$f'(x)=0\iff x=\pm1$. סימן $f'$ הוא סימן $1-x^2$:
+\begin{itemize}
+  \item $f'<0$ ב-$(-\infty,-1)$: $f$ \textbf{יורדת}.
+  \item $f'>0$ ב-$(-1,1)$: $f$ \textbf{עולה}.
+  \item $f'<0$ ב-$(1,\infty)$: $f$ \textbf{יורדת}.
+\end{itemize}
+לכן ב-$x=-1$ יש \textbf{מינימום מקומי} $f(-1)=-1$, וב-$x=1$ יש \textbf{מקסימום מקומי} $f(1)=1$.
+(למעשה אלו גם קיצון מוחלט: $|2x|\le x^2+1$ כי $(|x|-1)^2\ge0$, ולכן $-1\le f\le 1$.)
+\end{solution}

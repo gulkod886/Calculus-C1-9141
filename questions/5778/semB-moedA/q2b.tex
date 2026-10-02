@@ -1,0 +1,22 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 2ב
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') חשבו את נפח הגוף שמתקבל על ידי סיבוב סביב ציר ה-$x$ של התחום המישורי החסום על ידי הקו $y=\frac{x}{\sqrt{x^2+1}}$ וציר ה-$x$ בקטע $[0,1]$. ציירו את הסקיצה המתאימה.
+\end{question}
+
+\begin{solution}
+\textbf{סקיצה:} $y=\frac{x}{\sqrt{x^2+1}}$ עולה מ-$0$ (ב-$x=0$) עד $\frac1{\sqrt2}\approx0.71$ (ב-$x=1$), ואי-שלילית בקטע. התחום הוא השטח שבין הגרף לציר $x$ עבור $0\le x\le1$, וסיבובו סביב ציר $x$ נותן גוף דמוי "גביע".
+
+\textbf{נפח:} לפי הנוסחה לנפח גוף סיבוב $V=\pi\int_a^by^2\,dx$:
+\[
+V=\pi\int_0^1\frac{x^2}{x^2+1}dx=\pi\int_0^1\left(1-\frac{1}{x^2+1}\right)dx=\pi\Big[x-\arctan x\Big]_0^1=\pi\left(1-\frac\pi4\right).
+\]
+\textbf{תשובה:} $V=\pi\left(1-\frac\pi4\right)\approx0.674$.
+\end{solution}

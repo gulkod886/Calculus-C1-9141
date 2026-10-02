@@ -1,0 +1,23 @@
+% year: תשפ"ה
+% semester: א
+% moed: לדוגמה
+% number: 5א
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשפו/exam_example 2025.pdf
+
+\begin{question}
+(10 נק') חשבו את נפח גוף הסיבוב של הפונקציה $f(x) = \sqrt{\cos x} \cdot \sin^2 x$ בקטע $[0, \frac{\pi}{2}]$.
+\end{question}
+
+\begin{hint}
+בסיבוב סביב ציר ה-$x$: $V = \pi\int_0^{\pi/2} f^2(x)\,dx = \pi\int_0^{\pi/2}\cos x\,\sin^4 x\,dx$; הציבו $t = \sin x$.
+\end{hint}
+
+\begin{solution}
+נבין את השאלה כסיבוב גרף $f$ סביב ציר ה-$x$. $f$ מוגדרת ורציפה ב-$[0, \frac{\pi}{2}]$ (שם $\cos x \ge 0$), ונפח גוף הסיבוב הוא
+\[ V = \pi\int_0^{\pi/2} f^2(x)\,dx = \pi\int_0^{\pi/2} \cos x\,\sin^4 x\,dx. \]
+נציב $t = \sin x$, $dt = \cos x\,dx$; כאשר $x = 0$ מתקיים $t = 0$, וכאשר $x = \frac{\pi}{2}$ מתקיים $t = 1$:
+\[ V = \pi\int_0^1 t^4\,dt = \pi\left[\frac{t^5}{5}\right]_0^1 = \frac{\pi}{5}. \]
+\textbf{תשובה:} $\boxed{V = \frac{\pi}{5}}$.
+\end{solution}

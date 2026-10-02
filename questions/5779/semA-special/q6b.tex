@@ -1,0 +1,24 @@
+% year: תשע"ט
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 6ב
+% points: 10
+% categories: definite-integrals, antiderivatives
+% source: exams/מבחנים/תשעט/מועד מיוחד תשעט.pdf
+
+\begin{question}
+(10 נקודות) חשבו את האינטגרל הבא: $\displaystyle\int_{\ln2}^{\ln3}\frac{dx}{e^x-e^{-x}}$.
+\end{question}
+
+\begin{hint}
+הכפילו מונה ומכנה ב-$e^x$ והציבו $t=e^x$.
+\end{hint}
+
+\begin{solution}
+בקטע $[\ln2,\ln3]$ מתקיים $e^x>e^{-x}$, ולכן האינטגרנד רציף והאינטגרל אמיתי. נכפיל מונה ומכנה ב-$e^x$:
+\[ \int_{\ln2}^{\ln3}\frac{dx}{e^x-e^{-x}} = \int_{\ln2}^{\ln3}\frac{e^x\,dx}{e^{2x}-1}. \]
+נציב $t=e^x$, $dt=e^x\,dx$; הגבולות: $x=\ln2\mapsto t=2$, $x=\ln3\mapsto t=3$:
+\[ = \int_2^3\frac{dt}{t^2-1} = \int_2^3\frac12\left(\frac{1}{t-1}-\frac{1}{t+1}\right)dt = \frac12\Big[\ln\frac{t-1}{t+1}\Big]_2^3 = \frac12\left(\ln\frac12-\ln\frac13\right) = \frac12\ln\frac32. \]
+\textbf{תשובה:} $\dfrac12\ln\dfrac32\approx0.2027$.
+\end{solution}

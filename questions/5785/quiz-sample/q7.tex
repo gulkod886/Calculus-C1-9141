@@ -1,0 +1,45 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% moed: לדוגמה
+% official_solution: yes
+% source: exams/מבחנים/תשפו/midterm_example 2025.pdf
+% part: ב
+% number: 7
+% points: 10
+% categories: continuity, func-limits, multiple-choice
+
+\begin{question}
+בדקו רציפות של הפונקציה הבאה בנקודה 0:
+\[
+f(x)=\begin{cases}
+\sin(x)\cos(\frac{1}{x}), & \text{if } x<0,\\
+\frac{1}{1+x^2}, & \text{if } x\ge 0
+\end{cases}
+\]
+אילו מהטענות הבאות נכונה?
+\begin{enumerate}
+  \item הפונקציה רציפה ב-0.
+  \item הפונקציה בעלת אי-רציפות סליקה ב-0.
+  \item הפונקציה בעלת אי-רציפות מסוג קפיצה ב-0.
+  \item הפונקציה בעלת אי-רציפות עיקרית ב-0.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+משמאל: פונקציה השואפת ל-0 כפול פונקציה חסומה.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ג)}.
+
+\textbf{משמאל:} $\lim_{x\to0^-}\sin x=0$ (רציפות $\sin$) ו-$\left|\cos\frac1x\right|\le1$ לכל $x\neq0$. לפי המשפט "אפסה כפול חסומה שואפת ל-0" (או בסנדוויץ' $-|\sin x|\le\sin x\cos\frac1x\le|\sin x|$):
+\[
+\lim_{x\to0^-}f(x)=\lim_{x\to0^-}\sin(x)\cos\left(\tfrac1x\right)=0 .
+\]
+\textbf{מימין:} $\frac{1}{1+x^2}$ רציפה, ולכן $\lim_{x\to0^+}f(x)=\frac{1}{1+0}=1=f(0)$.
+
+שני הגבולות החד-צדדיים קיימים וסופיים אך שונים ($0\neq1$), ולכן יש ב-0 אי-רציפות מסוג קפיצה.
+
+\textbf{למה האחרות שגויות:} (א) ו-(ב) — שתיהן דורשות שהגבול הדו-צדדי ב-0 יהיה קיים, והוא אינו קיים. (ד) — אף על פי ש-$\cos\frac1x$ לבדה אינה בעלת גבול ב-0, המכפלה עם $\sin x$ כן שואפת ל-0, ולכן שני הגבולות החד-צדדיים קיימים וסופיים; אי-רציפות עיקרית דורשת שאחד מהם לא יהיה קיים כגבול סופי.
+\end{solution}

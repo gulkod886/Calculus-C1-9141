@@ -1,0 +1,30 @@
+% year: תשפ"ד
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1
+% points: 14
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשפד/מועד ב תשפד.pdf
+
+\begin{question}
+חשבו את הגבול הבא:
+\[ \lim_{x\to 1}\frac{(x^2+\ln x-1)\cdot\sin(x-1)}{(x-1)(e^x-e)} \]
+\end{question}
+
+\begin{hint}
+פצלו את הביטוי למכפלה של $\frac{\sin(x-1)}{x-1}$ ושל $\frac{x^2+\ln x-1}{e^x-e}$, וחשבו כל גבול בנפרד.
+\end{hint}
+
+\begin{solution}
+כאשר $x\to1$ המונה והמכנה שואפים שניהם ל-$0$. נכתוב את הביטוי כמכפלה (עבור $x$ קרוב ל-$1$, $x\neq1$, $x>0$):
+\[ \frac{(x^2+\ln x-1)\sin(x-1)}{(x-1)(e^x-e)}=\frac{\sin(x-1)}{x-1}\cdot\frac{x^2+\ln x-1}{e^x-e}. \]
+\textbf{הגורם הראשון:} נציב $t=x-1\to0$, ומהגבול היסודי $\lim_{t\to0}\frac{\sin t}{t}=1$ נקבל $\lim_{x\to1}\frac{\sin(x-1)}{x-1}=1$.
+
+\textbf{הגורם השני:} המונה $x^2+\ln x-1\to 1+0-1=0$ והמכנה $e^x-e\to0$, כלומר זהו מקרה $\frac00$. שתי הפונקציות גזירות בסביבת $1$ ונגזרת המכנה $e^x\neq0$, ולכן לפי כלל לופיטל
+\[ \lim_{x\to1}\frac{x^2+\ln x-1}{e^x-e}=\lim_{x\to1}\frac{2x+\frac1x}{e^x}=\frac{2+1}{e}=\frac3e, \]
+בתנאי שהגבול מימין קיים -- והוא אכן קיים (הפונקציה $\frac{2x+1/x}{e^x}$ רציפה ב-$1$).
+
+\textbf{סיכום:} לפי אריתמטיקה של גבולות (מכפלת שני גבולות סופיים),
+\[ \lim_{x\to 1}\frac{(x^2+\ln x-1)\sin(x-1)}{(x-1)(e^x-e)}=1\cdot\frac3e=\boxed{\frac3e}. \]
+\end{solution}

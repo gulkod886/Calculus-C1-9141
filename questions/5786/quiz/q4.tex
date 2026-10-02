@@ -1,0 +1,41 @@
+% year: תשפ"ו
+% type: בוחן
+% semester: א
+% official_solution: yes
+% source: exams/בחנים/תשפ״ו, בוחן, 9141.pdf
+% part: ב
+% number: 4
+% points: 10
+% categories: functions, multiple-choice
+
+\begin{question}
+יהיו
+\[
+f(x)=\sqrt[3]{x},\qquad g(x)=\cos(x)-\sin(x)
+\]
+אילו מהטענות הבאות נכונה?
+\begin{enumerate}
+  \item הפונקציה $f\circ g$ זוגית.
+  \item הפונקציה $f\circ g$ אי זוגית.
+  \item הפונקציה $f\circ g$ מונוטונית.
+  \item הפונקציה $f\circ g$ מחזורית.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ד)}.
+
+$(f\circ g)(x)=f(g(x))=\sqrt[3]{\cos x-\sin x}$, מוגדרת לכל $x\in\R$ (שורש שלישי מוגדר לכל מספר ממשי).
+
+\textbf{(ד) נכונה:} $\sin$ ו-$\cos$ מחזוריות עם מחזור $2\pi$, ולכן לכל $x$:
+\[
+(f\circ g)(x+2\pi)=\sqrt[3]{\cos(x+2\pi)-\sin(x+2\pi)}=\sqrt[3]{\cos x-\sin x}=(f\circ g)(x).
+\]
+
+\textbf{למה האחרות שגויות:} נסמן $h=f\circ g$.
+\begin{itemize}
+  \item (א) — $h(-x)=\sqrt[3]{\cos x+\sin x}$. למשל $h\!\left(\frac\pi4\right)=\sqrt[3]{0}=0$ אבל $h\!\left(-\frac\pi4\right)=\sqrt[3]{\sqrt2}\neq0$, ולכן $h$ אינה זוגית.
+  \item (ב) — פונקציה אי-זוגית המוגדרת ב-0 מקיימת $h(0)=-h(0)$, כלומר $h(0)=0$; אבל $h(0)=\sqrt[3]{1}=1\neq0$.
+  \item (ג) — פונקציה מחזורית שאינה קבועה אינה מונוטונית: למשל $h(0)=1$, $h\!\left(\frac\pi4\right)=0$, $h(2\pi)=1$, כלומר $h(0)>h(\frac\pi4)<h(2\pi)$ — הפונקציה יורדת ואחר כך עולה.
+\end{itemize}
+\end{solution}

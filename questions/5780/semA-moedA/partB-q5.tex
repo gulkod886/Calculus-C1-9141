@@ -1,0 +1,32 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: א
+% part: ב
+% number: 5
+% points: 9
+% categories: integral-applications, definite-integrals, multiple-choice
+% source: exams/מבחנים/תשפ/מועד א תשפ.pdf
+
+\begin{question}
+השטח החסום על ידי העקומות $y(x)=5x-x^2$ ו-$y(x)=2x$ שווה ל-
+\begin{enumerate}
+  \item[(א)] $\frac92$
+  \item[(ב)] $1$
+  \item[(ג)] $\frac{45}{2}$
+  \item[(ד)] $\frac{25}{6}$
+  \item[(ה)] $\frac{27}{2}$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+מצאו את נקודות החיתוך של העקומות, וקבעו איזו מהן עליונה בין נקודות החיתוך.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (א).}
+
+נקודות חיתוך: $5x-x^2=2x\iff x^2-3x=0\iff x=0$ או $x=3$.
+בקטע $(0,3)$ מתקיים $(5x-x^2)-2x = 3x-x^2 = x(3-x)>0$, כלומר הפרבולה מעל הישר. לכן
+\[ S=\int_0^3\left[(5x-x^2)-2x\right]dx = \int_0^3(3x-x^2)\,dx = \left[\frac{3x^2}{2}-\frac{x^3}{3}\right]_0^3 = \frac{27}{2}-9 = \frac92. \]
+\end{solution}

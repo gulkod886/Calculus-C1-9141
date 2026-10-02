@@ -1,0 +1,22 @@
+% year: תשפ"ג
+% semester: ב
+% moed: א
+% note: ד"ר פיטר סמובול
+% source: exams/מבחנים/תשפג/מועד א תשפג סמסטר ב.pdf
+% number: 6ב
+% points: 5
+% categories: ivt
+
+\begin{question}
+(5 נק') האם למשוואה $e^x-\sin x=0$ אין פתרונות ממשיים? נמק
+\end{question}
+
+\begin{hint}
+בדקו מה קורה עבור $x<0$: $e^x$ קטן מאוד, ו-$\sin x$ מגיע ל-$1$. נסו את משפט ערך הביניים על קטע מתאים.
+\end{hint}
+
+\begin{solution}
+\textbf{לא} – למשוואה יש פתרונות ממשיים. נגדיר $g(x)=e^x-\sin x$, רציפה על $\R$.
+\[ g(-\pi)=e^{-\pi}-0>0,\qquad g\left(-\tfrac{3\pi}{2}\right)=e^{-3\pi/2}-\sin\left(-\tfrac{3\pi}{2}\right)=e^{-3\pi/2}-1<0, \]
+כי $e^{-3\pi/2}<1$. לפי \textbf{משפט ערך הביניים} קיים $c\in\left(-\frac{3\pi}2,-\pi\right)$ עם $g(c)=0$, כלומר $e^c=\sin c$ (מספרית $c\approx-3.183$). באותו אופן, בכל קטע $\left(-\frac{3\pi}{2}-2\pi k,\,-\pi-2\pi k\right)$ יש פתרון, כך שיש אינסוף פתרונות (כולם שליליים: עבור $x\ge0$, $e^x\ge1\ge\sin x$ עם שוויון בלתי אפשרי בו-זמנית, ולכן אין פתרונות אי-שליליים).
+\end{solution}

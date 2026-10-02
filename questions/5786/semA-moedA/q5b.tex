@@ -1,0 +1,29 @@
+% year: תשפ"ו
+% semester: א
+% moed: א
+% number: 5ב
+% points: 10
+% categories: improper-integrals
+% official_solution: yes
+% source: exams/מבחנים/תשפו/AnyScanner_02_01_2026(1) (2).pdf
+
+\begin{question}
+(10 נק') חשבו את האינטגרל המוכלל הבא, או הראו שהוא מתבדר:
+\[ \int_e^\infty \frac{dx}{x \cdot \ln^3 x} \]
+\end{question}
+
+\begin{hint}
+הציבו $t = \ln x$.
+\end{hint}
+
+\begin{solution}
+האינטגרנד $\frac{1}{x\ln^3 x}$ רציף וחיובי ב-$[e, \infty)$, ולכן האינטגרל מוכלל רק בגלל הגבול העליון האינסופי. לפי ההגדרה
+\[ \int_e^\infty \frac{dx}{x\ln^3 x} = \lim_{A\to\infty} \int_e^A \frac{dx}{x\ln^3 x}. \]
+נמצא פונקציה קדומה בהצבה $t = \ln x$, $dt = \frac{dx}{x}$:
+\[ \int \frac{dx}{x\ln^3 x} = \int \frac{dt}{t^3} = -\frac{1}{2t^2} + C = -\frac{1}{2\ln^2 x} + C. \]
+לכן, עבור $A > e$:
+\[ \int_e^A \frac{dx}{x\ln^3 x} = \left[ -\frac{1}{2\ln^2 x} \right]_e^A = -\frac{1}{2\ln^2 A} + \frac{1}{2\ln^2 e} = \frac12 - \frac{1}{2\ln^2 A}. \]
+כאשר $A \to \infty$ מתקיים $\ln A \to \infty$, ולכן $\frac{1}{2\ln^2 A} \to 0$.
+
+\textbf{תשובה:} האינטגרל מתכנס ו-$\boxed{\int_e^\infty \frac{dx}{x\ln^3 x} = \frac12}$.
+\end{solution}

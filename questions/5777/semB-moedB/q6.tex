@@ -1,0 +1,27 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעז/מועד ב תשעז סמסטר ב.pdf
+% number: 6
+% points: 10
+% categories: func-analysis, derivatives
+
+\begin{question}
+(10 נק') מצאו מינימום ומקסימום מוחלטים של הפונקציה $f(x)=\frac{\sqrt{x^2-1}}{x^2}$.
+\end{question}
+
+\begin{hint}
+מצאו קודם את תחום ההגדרה, ושימו לב ש-$f$ זוגית. בחנו גם את הגבול ב-$\infty$ ואת ערכי $f$ בקצות התחום.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} $x^2-1\ge0$ ו-$x\ne0$, כלומר $|x|\ge1$. $f$ זוגית ($f(-x)=f(x)$), ולכן מספיק לחקור את $x\ge1$.
+
+\textbf{מינימום:} $f(x)\ge0$ בכל התחום, ו-$f(\pm1)=0$. לכן המינימום המוחלט הוא $\boxed{0}$, המתקבל ב-$x=\pm1$.
+
+\textbf{מקסימום:} עבור $x>1$:
+\[ f'(x)=\frac{\frac{x}{\sqrt{x^2-1}}\cdot x^2-2x\sqrt{x^2-1}}{x^4}=\frac{x^2-2(x^2-1)}{x^3\sqrt{x^2-1}}=\frac{2-x^2}{x^3\sqrt{x^2-1}}. \]
+לכן $f'>0$ ב-$(1,\sqrt2)$ ו-$f'<0$ ב-$(\sqrt2,\infty)$: $f$ עולה ב-$[1,\sqrt2]$ ויורדת ב-$[\sqrt2,\infty)$ (בעזרת רציפות ב-$1$). לכן לכל $x\ge1$ מתקיים $f(x)\le f(\sqrt2)=\frac{\sqrt{2-1}}{2}=\frac12$. (בנוסף $\lim_{x\to\infty}f(x)=\lim\frac{\sqrt{1-1/x^2}}{x}=0$.)
+מהזוגיות, המקסימום המוחלט הוא $\boxed{\frac12}$, המתקבל ב-$x=\pm\sqrt2$.
+\end{solution}

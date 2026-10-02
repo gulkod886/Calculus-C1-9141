@@ -1,0 +1,28 @@
+% year: תשע"ט
+% semester: א
+% moed: א
+% number: 5א
+% points: 10
+% categories: antiderivatives
+% source: exams/מבחנים/תשעט/מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') חשבו את האינטגרל הבא:
+$\displaystyle\int e^{2x}\sin(3x)\,dx$
+\end{question}
+
+\begin{hint}
+בצעו אינטגרציה בחלקים פעמיים; תקבלו משוואה שבה האינטגרל המבוקש מופיע בשני האגפים.
+\end{hint}
+
+\begin{solution}
+נסמן $I=\int e^{2x}\sin3x\,dx$. אינטגרציה בחלקים עם $u=\sin3x$, $dv=e^{2x}dx$ ($v=\frac12e^{2x}$):
+\[ I=\frac12e^{2x}\sin3x-\frac32\int e^{2x}\cos3x\,dx. \]
+שוב בחלקים, $u=\cos3x$, $dv=e^{2x}dx$:
+\[ \int e^{2x}\cos3x\,dx=\frac12e^{2x}\cos3x+\frac32\int e^{2x}\sin3x\,dx=\frac12e^{2x}\cos3x+\frac32I. \]
+לכן
+\[ I=\frac12e^{2x}\sin3x-\frac34e^{2x}\cos3x-\frac94I\;\Longrightarrow\;\frac{13}{4}I=\frac{e^{2x}}{4}\big(2\sin3x-3\cos3x\big), \]
+ולבסוף
+\[ \int e^{2x}\sin3x\,dx=\frac{e^{2x}\big(2\sin3x-3\cos3x\big)}{13}+C. \]
+(בדיקה: גזירת התוצאה נותנת $\frac{e^{2x}}{13}\big(4\sin3x-6\cos3x+6\cos3x+9\sin3x\big)=e^{2x}\sin3x$.)
+\end{solution}

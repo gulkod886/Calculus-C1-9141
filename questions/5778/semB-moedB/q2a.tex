@@ -1,0 +1,28 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 2א
+% points: 15
+% categories: func-analysis, proofs
+% source: exams/מבחנים/תשעח/מועד ב תשעח סמסטר ב.pdf
+
+\begin{question}
+(15 נק') הוכיחו שלכל $x>0$ מתקיים $3\sqrt[3]{x^2}-2x\le1$.
+\end{question}
+
+\begin{hint}
+מצאו את המקסימום של $g(x)=3x^{2/3}-2x$ בקטע $(0,\infty)$.
+\end{hint}
+
+\begin{solution}
+נגדיר $g(x)=3x^{2/3}-2x$ עבור $x>0$; היא גזירה שם ו-
+\[
+g'(x)=2x^{-1/3}-2=2\left(\frac{1}{\sqrt[3]x}-1\right).
+\]
+$g'(x)>0$ עבור $0<x<1$ ו-$g'(x)<0$ עבור $x>1$. לכן $g$ עולה ב-$(0,1]$ ויורדת ב-$[1,\infty)$ (מסקנה ממשפט לגרנז'), ולכן $x=1$ נקודת מקסימום מוחלט של $g$ ב-$(0,\infty)$:
+\[
+g(x)\le g(1)=3-2=1\qquad\text{לכל }x>0.
+\]
+זהו בדיוק $3\sqrt[3]{x^2}-2x\le1$, עם שוויון רק ב-$x=1$. $\blacksquare$
+\end{solution}

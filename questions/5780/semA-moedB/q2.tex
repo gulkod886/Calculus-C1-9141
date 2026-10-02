@@ -1,0 +1,47 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ב
+% part: א
+% number: 2
+% points: 20
+% categories: func-limits, taylor
+% source: exams/מבחנים/תשפ/מועד ב תשפ.pdf
+
+\begin{question}
+חשבו את הגבול
+\[ \lim_{x\to 0}\left(\frac{\sqrt{x+9}-3}{\sqrt{(x+2)^2+5}-x-3}+(\cos(x))^{\frac{1}{\sin^2(2x)}}\right) \]
+\end{question}
+
+\begin{hint}
+חשבו כל מחובר לחוד. במחובר הראשון הכפילו מונה ומכנה בצמודים (כדי להיפטר מהשורשים).
+\end{hint}
+
+\begin{hint}
+במחובר השני כתבו $(\cos x)^{\frac{1}{\sin^2(2x)}}=e^{\frac{\ln\cos x}{\sin^2(2x)}}$, וחשבו את גבול המעריך.
+\end{hint}
+
+\begin{solution}
+נחשב כל מחובר לחוד. אם לשניהם יש גבול סופי, גבול הסכום שווה לסכום הגבולות (אריתמטיקה של גבולות).
+
+\textbf{המחובר הראשון.} עבור $x=0$ מתקבל $\frac{0}{0}$. נכפיל בצמודים. במונה:
+\[ \sqrt{x+9}-3=\frac{(x+9)-9}{\sqrt{x+9}+3}=\frac{x}{\sqrt{x+9}+3}. \]
+במכנה, $(x+2)^2+5=x^2+4x+9$, ולכן
+\[ \sqrt{x^2+4x+9}-(x+3)=\frac{x^2+4x+9-(x+3)^2}{\sqrt{x^2+4x+9}+x+3}=\frac{-2x}{\sqrt{x^2+4x+9}+x+3}. \]
+לכן, עבור $x\neq0$ קטן,
+\[ \frac{\sqrt{x+9}-3}{\sqrt{(x+2)^2+5}-x-3}=\frac{x}{\sqrt{x+9}+3}\cdot\frac{\sqrt{x^2+4x+9}+x+3}{-2x}
+=-\frac{\sqrt{x^2+4x+9}+x+3}{2(\sqrt{x+9}+3)}\xrightarrow[x\to0]{}-\frac{3+3}{2\cdot 6}=-\frac12 , \]
+כאשר השתמשנו ברציפות השורש.
+
+\textbf{המחובר השני.} ליד $0$ מתקיים $\cos x>0$, ולכן
+\[ (\cos x)^{\frac{1}{\sin^2(2x)}}=\exp\Big(\frac{\ln(\cos x)}{\sin^2(2x)}\Big). \]
+נחשב את גבול המעריך בעזרת פיתוחי טיילור סביב $0$:
+$\cos x=1-\frac{x^2}{2}+o(x^2)$, ולכן $\ln(\cos x)=\ln\big(1+(-\frac{x^2}{2}+o(x^2))\big)=-\frac{x^2}{2}+o(x^2)$.
+וגם $\sin(2x)=2x+o(x)$, ולכן $\sin^2(2x)=4x^2+o(x^2)$. מכאן
+\[ \lim_{x\to0}\frac{\ln(\cos x)}{\sin^2(2x)}=\lim_{x\to0}\frac{-\frac{x^2}{2}+o(x^2)}{4x^2+o(x^2)}=-\frac18 . \]
+(אפשר לקבל את זה גם בלופיטל: $\frac{\ln\cos x}{\sin^2 2x}$ הוא מהצורה $\frac00$, ויחס הנגזרות $\frac{-\tan x}{4\sin(2x)\cos(2x)}=\frac{-\tan x}{2\sin(4x)}\to -\frac{1}{8}$, כי $\frac{\tan x}{x}\to1$ ו-$\frac{\sin 4x}{4x}\to 1$.)
+פונקציית האקספוננט רציפה, ולכן המחובר השני שואף ל-$e^{-1/8}$.
+
+\textbf{תשובה:}
+\[ \lim_{x\to 0}\left(\frac{\sqrt{x+9}-3}{\sqrt{(x+2)^2+5}-x-3}+(\cos x)^{\frac{1}{\sin^2(2x)}}\right)=\boxed{e^{-1/8}-\frac12}\approx 0.3825 . \]
+\end{solution}

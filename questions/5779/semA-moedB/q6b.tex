@@ -1,0 +1,25 @@
+% year: תשע"ט
+% semester: א
+% moed: ב
+% number: 6ב
+% points: 10
+% categories: integral-applications, polar-parametric
+% source: exams/מבחנים/תשעט/מועד ב תשעט.pdf
+
+\begin{question}
+(10 נקודות) נתונה עקומה בקואורדינאטות קוטביות $r=1+\cos\varphi$ $(0\le\varphi\le2\pi)$. חשבו את האורך העקומה.
+\end{question}
+
+\begin{hint}
+אורך עקומה קוטבית הוא $L=\int_\alpha^\beta\sqrt{r^2+(r')^2}\,d\varphi$, והשתמשו ב-$1+\cos\varphi=2\cos^2\frac\varphi2$.
+\end{hint}
+
+\begin{solution}
+העקומה (קרדיואידה) היא $x=r\cos\varphi$, $y=r\sin\varphi$, ונוסחת האורך בקואורדינטות קוטביות היא
+\[ L=\int_0^{2\pi}\sqrt{r^2+\left(\frac{dr}{d\varphi}\right)^2}\,d\varphi. \]
+כאן $r'=-\sin\varphi$ ולכן
+\[ r^2+r'^2=(1+\cos\varphi)^2+\sin^2\varphi=2+2\cos\varphi=4\cos^2\frac\varphi2. \]
+מכאן $\sqrt{r^2+r'^2}=2\left|\cos\frac\varphi2\right|$. עבור $\varphi\in[0,2\pi]$, $\frac\varphi2\in[0,\pi]$; ה-$\cos$ אי-שלילי ב-$[0,\pi]$ (לגבי $\varphi$) ואי-חיובי ב-$[\pi,2\pi]$. מהסימטריה:
+\[ L=2\int_0^{\pi}2\cos\frac\varphi2\,d\varphi=4\left[2\sin\frac\varphi2\right]_0^\pi=8. \]
+\textbf{תשובה:} אורך העקומה הוא $8$.
+\end{solution}

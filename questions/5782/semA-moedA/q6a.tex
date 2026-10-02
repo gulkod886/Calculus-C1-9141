@@ -1,0 +1,23 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 6א
+% points: 8
+% categories: integral-applications
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+(8 נק') חשבו את השטח הסופי החסום בין הפונקציה $f(x)=x^2$ והישר $y=-x+2$.
+\end{question}
+
+\begin{hint}
+מצאו את נקודות החיתוך, וקבעו איזו פונקציה עליונה בין שתיהן.
+\end{hint}
+
+\begin{solution}
+\textbf{נקודות חיתוך:} $x^2=-x+2\iff x^2+x-2=0\iff (x+2)(x-1)=0$, כלומר $x=-2$ ו-$x=1$.
+בקטע $(-2,1)$ מתקיים $-x+2-x^2=-(x+2)(x-1)>0$, ולכן הישר מעל הפרבולה. השטח:
+\[ S=\int_{-2}^{1}\left(-x+2-x^2\right)dx=\left[-\frac{x^2}{2}+2x-\frac{x^3}{3}\right]_{-2}^{1}
+=\left(-\frac12+2-\frac13\right)-\left(-2-4+\frac83\right)=\frac76+\frac{10}{3}=\boxed{\frac92}. \]
+\end{solution}

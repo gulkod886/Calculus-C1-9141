@@ -1,0 +1,41 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ג
+% source: exams/מבחנים/תשעו/מועד ג תשעו.pdf
+% number: 5
+% points: 20
+% categories: antiderivatives, integral-applications
+
+\begin{question}
+\begin{enumerate}
+  \item (15 נק') חשבו את האינטגרל הלא מסויים הבא:
+  \[ \int\frac{dx}{\cos^3(x)}. \]
+  \item (5 נק') חשבו את השטח הכלוא מתחת לגרף הפונקציה $f(x)=\frac{1}{\cos^3(x)}$ בקטע $[0,1]$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+כתבו $\frac{1}{\cos^3x}=\frac{1}{\cos x}\cdot\frac1{\cos^2x}$ ובצעו אינטגרציה בחלקים עם $v'=\frac1{\cos^2x}$, $v=\tan x$.
+\end{hint}
+
+\begin{hint}
+תזדקקו גם ל-$\int\frac{dx}{\cos x}=\ln\left|\frac1{\cos x}+\tan x\right|+C$ (או: הכפילו ב-$\cos x$ והציבו $t=\sin x$).
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item נסמן $I=\int\frac{dx}{\cos^3x}$ ונבצע אינטגרציה בחלקים עם $u=\frac1{\cos x}$, $v'=\frac1{\cos^2x}$; אז $u'=\frac{\sin x}{\cos^2x}$, $v=\tan x$:
+  \[ I=\frac{\tan x}{\cos x}-\int\frac{\sin x}{\cos^2x}\cdot\frac{\sin x}{\cos x}dx=\frac{\tan x}{\cos x}-\int\frac{1-\cos^2x}{\cos^3x}dx=\frac{\tan x}{\cos x}-I+\int\frac{dx}{\cos x}. \]
+  נחשב את $\int\frac{dx}{\cos x}=\int\frac{\cos x\,dx}{1-\sin^2x}$; בהצבה $t=\sin x$:
+  \[ \int\frac{dt}{1-t^2}=\frac12\ln\left|\frac{1+t}{1-t}\right|+C=\frac12\ln\left|\frac{1+\sin x}{1-\sin x}\right|+C=\ln\left|\frac{1+\sin x}{\cos x}\right|+C, \]
+  (כי $\frac{1+\sin x}{1-\sin x}=\frac{(1+\sin x)^2}{\cos^2x}$). לכן $2I=\frac{\sin x}{\cos^2x}+\ln\left|\frac{1+\sin x}{\cos x}\right|+C$, כלומר
+  \[ \boxed{\int\frac{dx}{\cos^3x}=\frac{\sin x}{2\cos^2x}+\frac12\ln\left|\frac{1}{\cos x}+\tan x\right|+C.} \]
+  (בדיקה: גזירת התוצאה מחזירה את $\frac1{\cos^3x}$.)
+
+  \item ב-$[0,1]$ מתקיים $0\le x\le1<\frac\pi2$, ולכן $\cos x>0$ ו-$f(x)>0$ רציפה. השטח הוא
+  \[ S=\int_0^1\frac{dx}{\cos^3x}=\left[\frac{\sin x}{2\cos^2x}+\frac12\ln\left(\frac{1+\sin x}{\cos x}\right)\right]_0^1
+      =\boxed{\frac{\sin1}{2\cos^21}+\frac12\ln\left(\frac{1+\sin1}{\cos1}\right)}\approx2.054, \]
+  כי בנקודה $0$ הביטוי שווה ל-$0+\frac12\ln1=0$.
+\end{enumerate}
+\end{solution}

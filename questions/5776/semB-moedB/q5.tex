@@ -1,0 +1,45 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעו/מועד ב תשעו.pdf
+% number: 5
+% points: 20
+% categories: antiderivatives, integral-applications
+
+\begin{question}
+\begin{enumerate}
+  \item (15 נק') חשבו את האינטגרל הלא מסויים הבא:
+  \[ \int\frac{xdx}{(x-1)(x^2+2x+2)}. \]
+  \item (5 נק') חשבו את השטח הכלוא מתחת לגרף הפונקציה $f(x)=\frac{x}{(x-1)(x^2+2x+2)}$ בקטע $[-1,0]$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+פרקו לשברים חלקיים: $\frac{A}{x-1}+\frac{Bx+C}{x^2+2x+2}$. לגורם הריבועי השלימו לריבוע: $x^2+2x+2=(x+1)^2+1$.
+\end{hint}
+
+\begin{hint}
+בסעיף ב' בדקו את סימן הפונקציה בקטע לפני שמחשבים את השטח.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item לגורם $x^2+2x+2=(x+1)^2+1$ אין שורשים ממשיים (הדיסקרימיננטה $4-8<0$), ולכן נפרק:
+  \[ \frac{x}{(x-1)(x^2+2x+2)}=\frac{A}{x-1}+\frac{Bx+C}{x^2+2x+2}
+     \iff x=A(x^2+2x+2)+(Bx+C)(x-1). \]
+  הצבת $x=1$: $1=5A$, כלומר $A=\frac15$. השוואת מקדם $x^2$: $0=A+B$, לכן $B=-\frac15$. השוואת המקדם החופשי: $0=2A-C$, לכן $C=\frac25$. כלומר
+  \[ \frac{x}{(x-1)(x^2+2x+2)}=\frac{1}{5}\cdot\frac{1}{x-1}-\frac15\cdot\frac{x-2}{x^2+2x+2}. \]
+  נכתוב $x-2=\frac12(2x+2)-3$:
+  \[ \frac{x-2}{x^2+2x+2}=\frac12\cdot\frac{2x+2}{x^2+2x+2}-\frac{3}{(x+1)^2+1}. \]
+  לכן (בעזרת $\int\frac{u'}{u}=\ln|u|$ ו-$\int\frac{dt}{t^2+1}=\arctan t$):
+  \[ \boxed{\int\frac{x\,dx}{(x-1)(x^2+2x+2)}=\frac15\ln|x-1|-\frac1{10}\ln(x^2+2x+2)+\frac35\arctan(x+1)+C.} \]
+  (בדיקה: גזירת הביטוי מחזירה את האינטגרנד.)
+
+  \item בקטע $[-1,0]$: $x\le 0$, $x-1<0$, $x^2+2x+2>0$, ולכן $f(x)\ge0$ (שווה לאפס רק ב-$x=0$). הפונקציה רציפה בקטע, כך שהשטח הוא $\int_{-1}^0 f(x)\,dx$. נסמן ב-$F$ את הפונקציה הקדומה מסעיף א' ונשתמש בנוסחת ניוטון-לייבניץ:
+  \[ F(0)=\frac15\ln1-\frac1{10}\ln2+\frac35\cdot\frac\pi4=-\frac{\ln2}{10}+\frac{3\pi}{20},\qquad
+     F(-1)=\frac15\ln2-\frac1{10}\ln1+\frac35\arctan0=\frac{\ln 2}{5}. \]
+  לכן
+  \[ S=F(0)-F(-1)=\boxed{\frac{3\pi}{20}-\frac{3\ln2}{10}}\approx 0.2633. \]
+\end{enumerate}
+\end{solution}

@@ -1,0 +1,36 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% source: exams/בחנים/תשפ״ה, בוחן, 9141.pdf
+% part: א
+% number: 1
+% points: 20
+% categories: func-limits
+
+\begin{question}
+חשבו את הגבול הבא:
+\[
+\lim_{x\to\infty}\left(\sqrt{x^2+5x}-\sqrt{x^2-5x}\right)
+\]
+\end{question}
+
+\begin{hint}
+זהו גבול מהצורה $\infty-\infty$. כפלו וחלקו בצמוד $\sqrt{x^2+5x}+\sqrt{x^2-5x}$.
+\end{hint}
+
+\begin{solution}
+עבור $x>5$ שני השורשים מוגדרים וחיוביים. זהו גבול מהצורה $\infty-\infty$, ולכן נכפול ונחלק בביטוי הצמוד (החיובי):
+\[
+\sqrt{x^2+5x}-\sqrt{x^2-5x}
+=\frac{(x^2+5x)-(x^2-5x)}{\sqrt{x^2+5x}+\sqrt{x^2-5x}}
+=\frac{10x}{\sqrt{x^2+5x}+\sqrt{x^2-5x}} .
+\]
+נחלק מונה ומכנה ב-$x$. מכיוון ש-$x>0$ מתקיים $x=\sqrt{x^2}$, ולכן
+\[
+=\frac{10}{\sqrt{1+\frac5x}+\sqrt{1-\frac5x}} .
+\]
+כאשר $x\to\infty$: $\frac5x\to 0$, ומרציפות פונקציית השורש ב-1 נקבל $\sqrt{1\pm\frac5x}\to 1$. לפי אריתמטיקה של גבולות (המכנה שואף ל-$2\neq 0$):
+\[
+\lim_{x\to\infty}\left(\sqrt{x^2+5x}-\sqrt{x^2-5x}\right)=\frac{10}{1+1}=\boxed{5}.
+\]
+\end{solution}

@@ -1,0 +1,23 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ג
+% number: 4א
+% categories: taylor
+% source: exams/מבחנים/תשפד/מועד ג תשפד סמסטר ב.pdf
+
+\begin{question}
+כתבו את פולינום מקלורן מסדר 3 של $f(x)=\sin(\cos(x))$
+\end{question}
+
+\begin{hint}
+$f$ זוגית, ולכן מקדם $x$ ומקדם $x^3$ מתאפסים; נשאר לחשב את $f(0)$ ו-$f''(0)$.
+\end{hint}
+
+\begin{solution}
+נחשב נגזרות לפי כלל השרשרת:
+\[ f'(x)=\cos(\cos x)\cdot(-\sin x)=-\sin x\cos(\cos x), \]
+\[ f''(x)=-\cos x\cos(\cos x)-\sin x\cdot\sin(\cos x)\cdot\sin x=-\cos x\cos(\cos x)-\sin^2x\,\sin(\cos x). \]
+בנקודה $0$: $f(0)=\sin1$, $f'(0)=0$, $f''(0)=-\cos1$. מכיוון ש-$f(-x)=\sin(\cos(-x))=f(x)$, הפונקציה זוגית, ולכן כל נגזרותיה מסדר אי-זוגי מתאפסות ב-$0$ (הנגזרת של פונקציה זוגית היא אי-זוגית), ובפרט $f'''(0)=0$. לכן
+\[ P_3(x)=f(0)+f'(0)x+\frac{f''(0)}{2}x^2+\frac{f'''(0)}{6}x^3=\boxed{\sin1-\frac{\cos1}{2}x^2}. \]
+(בקירוב: $0.8415-0.2702x^2$.)
+\end{solution}

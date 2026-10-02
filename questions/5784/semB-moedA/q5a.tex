@@ -1,0 +1,24 @@
+% year: תשפ"ד
+% semester: ב
+% moed: א
+% number: 5א
+% categories: antiderivatives
+% source: exams/מבחנים/תשפד/מועד א תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \int\frac{x^3+2x^2-3x+5}{x^2+x-6}\,dx \]
+\end{question}
+
+\begin{hint}
+חילוק פולינומים ואז פירוק לשברים חלקיים ($x^2+x-6=(x+3)(x-2)$).
+\end{hint}
+
+\begin{solution}
+מעלת המונה גדולה ממעלת המכנה, לכן נחלק פולינומים:
+\[ x^3+2x^2-3x+5=(x+1)(x^2+x-6)+(2x+11), \]
+(בדיקה: $(x+1)(x^2+x-6)=x^3+2x^2-5x-6$, והשארית היא $x^3+2x^2-3x+5-(x^3+2x^2-5x-6)=2x+11$.) לכן
+\[ \frac{x^3+2x^2-3x+5}{x^2+x-6}=x+1+\frac{2x+11}{(x+3)(x-2)}. \]
+פירוק לשברים חלקיים: $\frac{2x+11}{(x+3)(x-2)}=\frac{A}{x+3}+\frac{B}{x-2}$, כלומר $2x+11=A(x-2)+B(x+3)$. הצבת $x=2$: $15=5B\Rightarrow B=3$; הצבת $x=-3$: $5=-5A\Rightarrow A=-1$. לכן
+\[ \int\frac{x^3+2x^2-3x+5}{x^2+x-6}\,dx=\int\left(x+1-\frac1{x+3}+\frac3{x-2}\right)dx=\boxed{\frac{x^2}{2}+x-\ln|x+3|+3\ln|x-2|+C}. \]
+\end{solution}

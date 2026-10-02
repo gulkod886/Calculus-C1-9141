@@ -1,0 +1,25 @@
+% year: תשפ"ד
+% semester: א
+% moed: א
+% number: 7
+% points: 14
+% categories: integral-applications, definite-integrals
+% source: exams/מבחנים/תשפד/מועד א תשפד.pdf
+
+\begin{question}
+(14 נק') חשבו את נפח גוף הסיבוב של הפונקציה הבאה, סביב ציר ה-$x$, בקטע $[0,\pi]$:
+\[ f(x)=\sqrt{\sin x}\cdot\cos^2x \]
+\end{question}
+
+\begin{hint}
+נפח גוף סיבוב סביב ציר $x$ הוא $V=\pi\int_a^b f^2(x)\,dx$. כאן $f^2(x)=\sin x\cos^4x$, ומתאימה ההצבה $u=\cos x$.
+\end{hint}
+
+\begin{solution}
+בקטע $[0,\pi]$ מתקיים $\sin x\ge0$, כך ש-$f$ מוגדרת ורציפה בכל הקטע. נוסחת נפח גוף הסיבוב סביב ציר ה-$x$:
+\[ V=\pi\int_0^{\pi}f^2(x)\,dx=\pi\int_0^{\pi}\sin x\cos^4x\,dx. \]
+נציב $u=\cos x$, $du=-\sin x\,dx$; כאשר $x=0$: $u=1$, וכאשר $x=\pi$: $u=-1$. לכן
+\[ \int_0^{\pi}\sin x\cos^4x\,dx=\int_{1}^{-1}u^4\,(-du)=\int_{-1}^{1}u^4\,du=\left[\frac{u^5}{5}\right]_{-1}^{1}=\frac25. \]
+ומכאן
+\[ \boxed{V=\frac{2\pi}{5}} \]
+\end{solution}

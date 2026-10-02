@@ -1,0 +1,32 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 2ב
+% points: 10
+% categories: integral-applications, definite-integrals
+% source: exams/מבחנים/תשעח/מועד ב תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') חשבו את השטח הכלוא בין הקווים $y=x\cdot e^x$, $y=x-1$, $x=0$, $x=2$. ציירו את הסקיצה המתאימה.
+\end{question}
+
+\begin{hint}
+בדקו איזה מהגרפים נמצא מעל השני בקטע $[0,2]$. לאינטגרל של $xe^x$ השתמשו באינטגרציה בחלקים.
+\end{hint}
+
+\begin{solution}
+\textbf{מי מעל מי.} עבור $x\in[0,2]$: $e^x\ge1$ ו-$x\ge0$, ולכן $xe^x\ge x>x-1$. כלומר הגרף של $y=xe^x$ מעל הישר $y=x-1$ בכל הקטע (ואין נקודות חיתוך בקטע).
+
+\textbf{סקיצה:} הישר $y=x-1$ עובר מ-$(0,-1)$ ל-$(2,1)$; העקום $y=xe^x$ עולה מ-$(0,0)$ ל-$(2,2e^2)\approx(2,14.8)$. התחום חסום משמאל ע"י $x=0$, מימין ע"י $x=2$, מלמטה ע"י הישר ומלמעלה ע"י העקום.
+
+\textbf{שטח:}
+\[
+S=\int_0^2\big(xe^x-(x-1)\big)dx.
+\]
+באינטגרציה בחלקים ($u=x$, $dv=e^xdx$): $\int xe^xdx=xe^x-e^x=(x-1)e^x$. לכן
+\[
+S=\Big[(x-1)e^x\Big]_0^2-\left[\frac{x^2}{2}-x\right]_0^2=\big(e^2-(-1)\big)-(2-2)=e^2+1.
+\]
+\textbf{תשובה:} $S=e^2+1\approx8.39$.
+\end{solution}

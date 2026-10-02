@@ -1,0 +1,31 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 4ב
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשעח/מועד ב תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') חשבו $\displaystyle\int_1^{+\infty}\frac{\ln x}{x^4}dx$.
+\end{question}
+
+\begin{hint}
+אינטגרציה בחלקים עם $u=\ln x$, $dv=x^{-4}dx$.
+\end{hint}
+
+\begin{solution}
+\textbf{פונקציה קדומה.} אינטגרציה בחלקים עם $u=\ln x$, $dv=x^{-4}dx$, $du=\frac{dx}x$, $v=-\frac1{3x^3}$:
+\[
+\int\frac{\ln x}{x^4}dx=-\frac{\ln x}{3x^3}+\frac13\int x^{-4}dx=-\frac{\ln x}{3x^3}-\frac1{9x^3}+C.
+\]
+\textbf{האינטגרל הלא אמיתי:}
+\[
+\int_1^{\infty}\frac{\ln x}{x^4}dx=\lim_{R\to\infty}\left[-\frac{\ln x}{3x^3}-\frac{1}{9x^3}\right]_1^R
+=\lim_{R\to\infty}\left(-\frac{\ln R}{3R^3}-\frac1{9R^3}\right)+\frac19=\frac19,
+\]
+כי $\lim_{R\to\infty}\frac{\ln R}{R^3}=0$ (לפי לופיטל: $\frac{1/R}{3R^2}=\frac1{3R^3}\to0$).
+
+\textbf{תשובה:} האינטגרל מתכנס ושווה $\frac19$.
+\end{solution}

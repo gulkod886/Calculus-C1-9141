@@ -1,0 +1,32 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 4א
+% points: 11
+% categories: antiderivatives
+% source: exams/מבחנים/תשפה/מועד ג תשפה.pdf
+
+\begin{question}
+(11 נק') חשבו את האינטגרל
+\[ \int\frac{7x^2 + 6}{x^3 + 2x^2 + 2x}\,dx \]
+\end{question}
+
+\begin{hint}
+$x^3 + 2x^2 + 2x = x\left((x+1)^2 + 1\right)$. פרקו לשברים חלקיים.
+\end{hint}
+
+\begin{solution}
+\textbf{פירוק המכנה.} $x^3 + 2x^2 + 2x = x(x^2 + 2x + 2)$, ול-$x^2 + 2x + 2 = (x+1)^2 + 1$ אין שורשים ממשיים.
+
+\textbf{שברים חלקיים.}
+\[ \frac{7x^2 + 6}{x(x^2 + 2x + 2)} = \frac{A}{x} + \frac{Bx + C}{x^2 + 2x + 2}, \qquad 7x^2 + 6 = A(x^2 + 2x + 2) + x(Bx + C). \]
+הצבת $x = 0$: $6 = 2A$, כלומר $A = 3$. אז $7x^2 + 6 = 3x^2 + 6x + 6 + Bx^2 + Cx$, ומהשוואת מקדמים $B = 4$, $C = -6$.
+
+\textbf{אינטגרציה.} נכתוב $4x - 6 = 2(2x + 2) - 10$, כאשר $(x^2 + 2x + 2)' = 2x + 2$:
+\[ \int\frac{4x - 6}{x^2 + 2x + 2}\,dx = 2\int\frac{2x+2}{x^2+2x+2}\,dx - 10\int\frac{dx}{(x+1)^2 + 1} = 2\ln(x^2 + 2x + 2) - 10\arctan(x + 1). \]
+
+\textbf{תשובה:}
+\[ \int\frac{7x^2 + 6}{x^3 + 2x^2 + 2x}\,dx = 3\ln|x| + 2\ln(x^2 + 2x + 2) - 10\arctan(x+1) + C. \]
+(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)
+\end{solution}

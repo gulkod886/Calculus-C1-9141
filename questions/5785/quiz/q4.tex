@@ -1,0 +1,34 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% source: exams/בחנים/תשפ״ה, בוחן, 9141.pdf
+% part: ב
+% number: 4
+% points: 10
+% categories: functions, multiple-choice
+
+\begin{question}
+יהיו
+\[
+f(x)=e^x,\qquad g(x)=\cos(2x)
+\]
+אילו מהטענות הבאות נכונה?
+\begin{enumerate}
+  \item הפונקציה $f\circ g$ מחזורית.
+  \item הפונקציה $f\circ g$ זוגית.
+  \item הפונקציה $f\circ g$ חסומה ב-$\R$.
+  \item כל התשובות נכונות
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ד)}.
+
+$(f\circ g)(x)=f(g(x))=e^{\cos 2x}$, מוגדרת לכל $x\in\R$. נבדוק כל טענה:
+\begin{itemize}
+  \item \textbf{(א) נכונה:} $\cos$ מחזורית עם מחזור $2\pi$, ולכן $\cos(2(x+\pi))=\cos(2x+2\pi)=\cos 2x$, ומכאן $(f\circ g)(x+\pi)=e^{\cos 2x}=(f\circ g)(x)$ לכל $x$. כלומר $f\circ g$ מחזורית (עם מחזור $\pi$).
+  \item \textbf{(ב) נכונה:} $\cos$ זוגית, ולכן $(f\circ g)(-x)=e^{\cos(-2x)}=e^{\cos 2x}=(f\circ g)(x)$ לכל $x$.
+  \item \textbf{(ג) נכונה:} $-1\le\cos 2x\le 1$ ו-$e^t$ עולה ממש, ולכן $e^{-1}\le e^{\cos 2x}\le e$ לכל $x\in\R$.
+\end{itemize}
+מכיוון ששלוש הטענות נכונות, התשובה היא (ד). (כל אחת מ-(א), (ב), (ג) לבדה אינה התשובה המלאה, שכן גם האחרות נכונות.)
+\end{solution}

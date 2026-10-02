@@ -1,0 +1,38 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 3א
+% points: 15
+% categories: definite-integrals
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(15 נק') חשבו: $\displaystyle\int_{-1}^15x^4\big(\ln(x+2)+\sin x\big)dx$
+\end{question}
+
+\begin{hint}
+$5x^4\sin x$ היא פונקציה אי-זוגית, ולכן האינטגרל שלה על $[-1,1]$ מתאפס. לחלק השני, אינטגרציה בחלקים עם $u=\ln(x+2)$, $dv=5x^4dx$.
+\end{hint}
+
+\begin{solution}
+\textbf{החלק עם הסינוס.} $g(x)=5x^4\sin x$ אי-זוגית ($g(-x)=-g(x)$) ורציפה, ולכן $\int_{-1}^1 5x^4\sin x\,dx=0$.
+
+\textbf{החלק עם הלוגריתם.} אינטגרציה בחלקים עם $u=\ln(x+2)$, $dv=5x^4dx$, $du=\frac{dx}{x+2}$, $v=x^5$:
+\[
+\int_{-1}^15x^4\ln(x+2)\,dx=\Big[x^5\ln(x+2)\Big]_{-1}^1-\int_{-1}^1\frac{x^5}{x+2}dx=\ln3-\int_{-1}^1\frac{x^5}{x+2}dx
+\]
+(כי ב-$x=-1$: $(-1)^5\ln1=0$). חילוק פולינומים:
+\[
+\frac{x^5}{x+2}=x^4-2x^3+4x^2-8x+16-\frac{32}{x+2}.
+\]
+על הקטע הסימטרי $[-1,1]$ האינטגרלים של החזקות האי-זוגיות מתאפסים, ולכן
+\[
+\int_{-1}^1\frac{x^5}{x+2}dx=\int_{-1}^1\left(x^4+4x^2+16\right)dx-32\int_{-1}^1\frac{dx}{x+2}
+=\frac25+\frac83+32-32\ln3=\frac{526}{15}-32\ln3.
+\]
+\textbf{תשובה:}
+\[
+\int_{-1}^15x^4\big(\ln(x+2)+\sin x\big)dx=\ln3-\frac{526}{15}+32\ln3=33\ln3-\frac{526}{15}\approx1.1875.
+\]
+\end{solution}

@@ -1,0 +1,40 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 4ב
+% points: 10
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') האם הפונקציה
+\[
+f(x)=\begin{cases}(1+\sin2x)^{\frac{2}{3x}}+\arctan x\cdot\cos\frac1x, & x\neq0\\ e^{4/3}, & x=0\end{cases}
+\]
+רציפה בנקודה $x=0$?
+\end{question}
+
+\begin{hint}
+טפלו בכל מחובר בנפרד: הראשון הוא מהצורה $1^\infty$; השני הוא "אפסה כפול חסומה".
+\end{hint}
+
+\begin{solution}
+יש לבדוק האם $\lim_{x\to0}f(x)=f(0)=e^{4/3}$.
+
+\textbf{המחובר הראשון.} בסביבת $0$ מתקיים $1+\sin2x>0$, ולכן
+\[
+(1+\sin2x)^{\frac{2}{3x}}=\exp\left(\frac{2}{3x}\ln(1+\sin2x)\right).
+\]
+נחשב את המעריך:
+\[
+\frac{2\ln(1+\sin2x)}{3x}=\frac23\cdot\frac{\ln(1+\sin2x)}{\sin2x}\cdot\frac{\sin2x}{2x}\cdot2\xrightarrow[x\to0]{}\frac23\cdot1\cdot1\cdot2=\frac43,
+\]
+לפי הגבולות היסודיים $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$ (עם $t=\sin2x\to0$) ו-$\lim_{t\to0}\frac{\sin t}{t}=1$. לפי רציפות האקספוננט, המחובר הראשון שואף ל-$e^{4/3}$.
+
+\textbf{המחובר השני.} $\arctan x\to0$ כאשר $x\to0$, ו-$\left|\cos\frac1x\right|\le1$. מכפלה של פונקציה השואפת ל-$0$ בפונקציה חסומה שואפת ל-$0$, ולכן $\arctan x\cdot\cos\frac1x\to0$.
+
+לכן $\lim_{x\to0}f(x)=e^{4/3}+0=e^{4/3}=f(0)$.
+
+\textbf{תשובה:} כן, $f$ רציפה ב-$x=0$.
+\end{solution}

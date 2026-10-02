@@ -1,0 +1,18 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1א
+% points: 10
+% categories: func-limits
+% source: exams/מבחנים/תשפג/מועד ב תשפג.docx
+
+\begin{question}
+(10 נק') חשבו את הגבולות החד צדדיים של הפונקציה $f(x)=2^{\frac{1}{x}}$ בנקודה הנתונה $x=0$. קבעו האם יש לה גבול $\lim_{x\to 0}f(x)$.
+\end{question}
+
+\begin{solution}
+נסמן $t=\frac1x$. כאשר $x\to 0^+$ מתקיים $t\to+\infty$, וכאשר $x\to 0^-$ מתקיים $t\to-\infty$. מכיוון ש-$2>1$, $\lim_{t\to+\infty}2^t=+\infty$ ו-$\lim_{t\to-\infty}2^t=0$. לכן (גבול של הרכבה)
+\[ \lim_{x\to0^+}2^{1/x}=+\infty,\qquad \lim_{x\to0^-}2^{1/x}=0. \]
+הגבולות החד-צדדיים שונים (והימני אף אינו סופי), ולכן \textbf{הגבול $\lim_{x\to0}2^{1/x}$ אינו קיים}.
+\end{solution}

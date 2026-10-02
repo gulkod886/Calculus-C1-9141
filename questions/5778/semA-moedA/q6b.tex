@@ -1,0 +1,30 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 6ב
+% points: 10
+% categories: integral-applications, polar-parametric
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(10 נק') נגדיר $r=f(\theta)=\theta^2-1$ בקואורדינטות קטביות. חשבו את אורך העקומה הזאת בין $\theta=1$ ל-$\theta=9$.
+
+(במבחן מצורף איור של העקומה — ספירלה — על רקע רשת קטבית.)
+\end{question}
+
+\begin{hint}
+אורך עקומה בקואורדינטות קטביות הוא $\int_\alpha^\beta\sqrt{r^2+\left(\frac{dr}{d\theta}\right)^2}\,d\theta$. בדקו שהביטוי מתחת לשורש הוא ריבוע שלם.
+\end{hint}
+
+\begin{solution}
+אורך עקומה בקואורדינטות קטביות $r=f(\theta)$, $\alpha\le\theta\le\beta$:
+\[ L=\int_\alpha^\beta\sqrt{r^2+\left(\frac{dr}{d\theta}\right)^2}\,d\theta. \]
+כאן $\frac{dr}{d\theta}=2\theta$, ולכן
+\[ r^2+\left(\frac{dr}{d\theta}\right)^2=(\theta^2-1)^2+4\theta^2=\theta^4-2\theta^2+1+4\theta^2=\theta^4+2\theta^2+1=(\theta^2+1)^2. \]
+מכיוון ש-$\theta^2+1>0$, $\sqrt{(\theta^2+1)^2}=\theta^2+1$, ו-
+\[ L=\int_1^9(\theta^2+1)\,d\theta=\left[\frac{\theta^3}{3}+\theta\right]_1^9=\left(243+9\right)-\left(\frac13+1\right)=252-\frac43=\frac{752}{3}. \]
+\[ \boxed{L=\frac{752}{3}=250\tfrac23} \]
+\textbf{הערה:} בפתרון הרשמי נכתב $252-\frac13+1=252\frac23$ — טעות סימן בהצבת הגבול התחתון; הערך הנכון הוא $252-\left(\frac13+1\right)=250\frac23$.
+\end{solution}

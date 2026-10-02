@@ -1,0 +1,49 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 1
+% points: 20
+% categories: taylor
+% source: exams/מבחנים/תשעז/מועד ב תשעז.pdf
+
+\begin{question}
+השתמשו בנוסחת טיילור כדי לחשב $\sin 167^\circ$ עם שגיאה לא גדולה מ-$10^{-5}$. הסבירו כיצד הערכתם את השגיאה.
+\end{question}
+
+\begin{hint}
+$\sin167^\circ=\sin(180^\circ-13^\circ)=\sin13^\circ$. עברו לרדיאנים ופתחו את $\sin x$ סביב $0$.
+\end{hint}
+
+\begin{hint}
+בפולינום מקלורן של $\sin x$ המקדם של $x^4$ הוא $0$, ולכן $P_3=P_4$ ואפשר להעריך את השארית בעזרת $R_4$.
+\end{hint}
+
+\begin{solution}
+\textbf{רדוקציה.} $\sin167^\circ=\sin(180^\circ-13^\circ)=\sin13^\circ=\sin x_0$, כאשר
+\[
+x_0=\frac{13\pi}{180}\approx0.226893 \quad\text{(רדיאנים)}.
+\]
+
+\textbf{פולינום מקלורן.} עבור $f(x)=\sin x$: $f(0)=0$, $f'(0)=1$, $f''(0)=0$, $f'''(0)=-1$, $f^{(4)}(0)=0$, ולכן
+\[
+P_4(x)=P_3(x)=x-\frac{x^3}{6}.
+\]
+
+\textbf{הערכת השגיאה.} לפי משפט טיילור עם שארית לגרנז' מסדר $4$, קיים $c$ בין $0$ ל-$x_0$ כך ש-
+\[
+\sin x_0-P_4(x_0)=R_4(x_0)=\frac{f^{(5)}(c)}{5!}x_0^5=\frac{\cos c}{120}x_0^5 .
+\]
+מכיוון ש-$|\cos c|\le1$ ו-$0<x_0<0.23$:
+\[
+|R_4(x_0)|\le\frac{x_0^5}{120}<\frac{0.23^5}{120}\approx\frac{6.44\cdot10^{-4}}{120}\approx5.4\cdot10^{-6}<10^{-5}.
+\]
+(גם בהערכה גסה יותר $x_0<0.25$ מקבלים $\frac{0.25^5}{120}\approx8.1\cdot10^{-6}<10^{-5}$.)
+
+\textbf{חישוב:}
+\[
+\sin167^\circ\approx x_0-\frac{x_0^3}{6}\approx0.226893-\frac{0.011680}{6}\approx0.226893-0.001947=0.224946.
+\]
+
+\textbf{תשובה:} $\sin167^\circ\approx\frac{13\pi}{180}-\frac16\left(\frac{13\pi}{180}\right)^3\approx0.22495$, עם שגיאה קטנה מ-$10^{-5}$ (הערך המדויק $0.2249511\ldots$).
+\end{solution}

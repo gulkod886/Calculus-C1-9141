@@ -1,0 +1,43 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ב
+% number: 3
+% categories: func-analysis
+% source: exams/מבחנים/תשפד/מועד ב תשפד סמסטר ב.pdf
+
+\begin{question}
+חקרו את הפונקציה הבאה (נק' קיצון מקומיות, תחומי עליה/ירידה, אסימפטוטות):
+\[ f(x)=\frac{e^x}{x^2-3} \]
+שרטטו את הגרף שלה.
+\end{question}
+
+\begin{hint}
+בנגזרת, המונה הוא $e^x(x^2-2x-3)=e^x(x-3)(x+1)$. שימו לב שנקודות הקיצון חייבות להיות בתחום ההגדרה, וש-$-\sqrt3<-1<\sqrt3<3$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} $x^2\neq3$, כלומר $x\neq\pm\sqrt3$.
+
+\textbf{סימן וחיתוך עם הצירים:} $e^x>0$, לכן אין חיתוך עם ציר $x$, ו-$f>0$ עבור $|x|>\sqrt3$, $f<0$ עבור $|x|<\sqrt3$. חיתוך עם ציר $y$: $f(0)=-\frac13$.
+
+\textbf{נגזרת:} לפי כלל המנה
+\[ f'(x)=\frac{e^x(x^2-3)-e^x\cdot2x}{(x^2-3)^2}=\frac{e^x(x^2-2x-3)}{(x^2-3)^2}=\frac{e^x(x-3)(x+1)}{(x^2-3)^2}. \]
+המכנה ו-$e^x$ חיוביים, ולכן סימן $f'$ הוא סימן $(x-3)(x+1)$. מתקיים $-\sqrt3\approx-1.73<-1<\sqrt3\approx1.73<3$:
+\begin{itemize}
+  \item $(-\infty,-\sqrt3)$ ו-$(-\sqrt3,-1)$: $f'>0$, $f$ \textbf{עולה}.
+  \item $(-1,\sqrt3)$ ו-$(\sqrt3,3)$: $f'<0$, $f$ \textbf{יורדת}.
+  \item $(3,\infty)$: $f'>0$, $f$ \textbf{עולה}.
+\end{itemize}
+
+\textbf{נקודות קיצון:} $f'$ מחליפה סימן מ-$+$ ל-$-$ ב-$x=-1$, לכן זו נקודת \textbf{מקסימום מקומי}: $f(-1)=\frac{e^{-1}}{-2}=-\frac1{2e}\approx-0.18$. ב-$x=3$ הסימן מתחלף מ-$-$ ל-$+$, לכן \textbf{מינימום מקומי}: $f(3)=\frac{e^3}{6}\approx3.35$.
+
+\textbf{אסימפטוטות:}
+\begin{itemize}
+  \item אנכיות $x=\pm\sqrt3$ (המונה $e^{\pm\sqrt3}\neq0$ והמכנה מתאפס):
+  $\lim_{x\to-\sqrt3^-}f=+\infty$, $\lim_{x\to-\sqrt3^+}f=-\infty$, $\lim_{x\to\sqrt3^-}f=-\infty$, $\lim_{x\to\sqrt3^+}f=+\infty$ (לפי סימן $x^2-3$ משני הצדדים).
+  \item ב-$-\infty$: $e^x\to0$ ו-$x^2-3\to\infty$, לכן $f\to0$: אסימפטוטה אופקית $y=0$ (הגרף מעליה).
+  \item ב-$+\infty$: לפי כלל לופיטל (פעמיים) $\lim_{x\to\infty}\frac{e^x}{x^2-3}=\lim\frac{e^x}{2}=\infty$, וגם $\frac{f(x)}{x}=\frac{e^x}{x^3-3x}\to\infty$; לכן אין אסימפטוטה אופקית או משופעת ב-$+\infty$.
+\end{itemize}
+
+\textbf{הגרף:} משמאל הגרף יוצא מעל ציר $x$ קרוב ל-$y=0$, עולה ל-$+\infty$ כאשר $x\to-\sqrt3^-$. בין $-\sqrt3$ ל-$\sqrt3$ הגרף שלילי: עולה מ-$-\infty$ עד המקסימום המקומי $(-1,-\frac1{2e})$, יורד דרך $(0,-\frac13)$ ל-$-\infty$ כאשר $x\to\sqrt3^-$. מימין ל-$\sqrt3$ הגרף יורד מ-$+\infty$ עד המינימום המקומי $(3,\frac{e^3}{6})$ ואז עולה ל-$+\infty$.
+\end{solution}

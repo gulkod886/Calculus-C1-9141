@@ -1,0 +1,23 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 6א
+% points: 10
+% categories: integral-applications, definite-integrals
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את נפח גוף הסיבוב המתקבל ע"י סיבוב התחום $D$ סביב ציר ה-$x$, כאשר $D$ התחום בין גרף הפונקציה $f(x)=\tan x$ וציר ה-$x$, כאשר $0\le x\le\frac\pi4$.
+\end{question}
+
+\begin{hint}
+השתמשו בזהות $\tan^2x=\frac{1}{\cos^2x}-1$.
+\end{hint}
+
+\begin{solution}
+נפח גוף הסיבוב סביב ציר $x$ הוא $V=\pi\int_a^b f^2(x)\,dx$. לכן, בעזרת $\tan^2x=\frac1{\cos^2x}-1$:
+\[ V=\pi\int_0^{\pi/4}\tan^2x\,dx=\pi\int_0^{\pi/4}\left(\frac1{\cos^2x}-1\right)dx=\pi\Big[\tan x-x\Big]_0^{\pi/4}=\pi\left(1-\frac\pi4\right). \]
+\[ \boxed{V=\pi-\frac{\pi^2}{4}} \]
+\end{solution}

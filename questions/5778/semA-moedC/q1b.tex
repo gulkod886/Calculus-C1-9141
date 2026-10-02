@@ -1,0 +1,26 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ג
+% number: 1ב
+% points: 10
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשעח/מועד מיוחד תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא:
+גבול הפונקציה $\displaystyle\lim_{x\to0}\tan x\ln(x^2)$.
+\end{question}
+
+\begin{hint}
+כתבו $\tan x\ln(x^2)=\frac{\tan x}{x}\cdot 2x\ln|x|$.
+\end{hint}
+
+\begin{solution}
+עבור $0<|x|<\frac\pi2$: $\ln(x^2)=2\ln|x|$, ולכן
+\[ \tan x\ln(x^2)=\frac{\tan x}{x}\cdot 2x\ln|x|. \]
+ידוע ש-$\lim_{x\to0}\frac{\tan x}{x}=1$ (גבול מפורסם). כמו כן $\lim_{x\to0}x\ln|x|=0$: עבור $x\to0^+$ לפי לופיטל ($\frac\infty\infty$)
+\[ \lim_{x\to0^+}\frac{\ln x}{1/x}=\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}(-x)=0, \]
+ועבור $x\to0^-$ זה נובע מכך ש-$x\ln|x|$ אי-זוגית. לכן
+\[ \boxed{\lim_{x\to0}\tan x\ln(x^2)=1\cdot2\cdot0=0} \]
+\end{solution}

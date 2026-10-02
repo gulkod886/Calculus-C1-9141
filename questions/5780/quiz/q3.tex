@@ -1,0 +1,36 @@
+% year: תש"פ
+% type: בוחן
+% semester: א
+% points: 20
+% source: exams/בחנים/תש״פ, בוחן, 9141.pdf
+% number: 3
+% categories: derivatives, multiple-choice
+
+\begin{question}
+הנגזרת של $e^{2x}\ln\sqrt{1+x}$ שווה ל-
+\begin{enumerate}
+  \item $e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{2(1+x)}$
+  \item $2e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{2(1+x)}$
+  \item $2e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{(1+x)}$
+  \item $e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{(1+x)}$
+  \item $2e^{2x}\sqrt{1+x}+2e^{2x}\frac{1}{(1+x)}$
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ב)}.
+
+לפי כלל המכפלה $(fg)'=f'g+fg'$ עם $f(x)=e^{2x}$, $g(x)=\ln\sqrt{1+x}$ (מוגדרת עבור $x>-1$).
+
+לפי כלל השרשרת: $f'(x)=e^{2x}\cdot 2=2e^{2x}$.
+
+עבור $g$ נשתמש בכך ש-$\ln\sqrt{1+x}=\frac12\ln(1+x)$, ולכן $g'(x)=\frac12\cdot\frac{1}{1+x}=\frac{1}{2(1+x)}$.
+(לחלופין, בכלל השרשרת: $g'(x)=\frac{1}{\sqrt{1+x}}\cdot\frac{1}{2\sqrt{1+x}}=\frac{1}{2(1+x)}$.)
+
+לכן
+\[
+\left(e^{2x}\ln\sqrt{1+x}\right)'=\boxed{2e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{2(1+x)}} .
+\]
+
+\textbf{למה האחרות שגויות:} (א) ו-(ד) שוכחות את הגורם 2 מנגזרת המעריך $2x$ (כלל השרשרת). (ג) ו-(ד) שוכחות את הגורם $\frac12$ שנובע מהשורש. (ה) מחליפה את $\ln\sqrt{1+x}$ ב-$\sqrt{1+x}$ ואת המקדם של האיבר השני ב-2, וזו אינה הנגזרת.
+\end{solution}

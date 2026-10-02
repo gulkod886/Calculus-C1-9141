@@ -1,0 +1,23 @@
+% year: תשפ"ג
+% semester: ב
+% moed: א
+% note: ד"ר פיטר סמובול
+% source: exams/מבחנים/תשפג/מועד א תשפג סמסטר ב.pdf
+% number: 3א
+% points: 20
+% categories: integral-applications
+
+\begin{question}
+(20 נק') חשבו את שטח התחום החסום על ידי הקווים $y=\min\left(e^x,3\right),\ x=4,\ x=0,\ y=0$
+\end{question}
+
+\begin{hint}
+מצאו היכן $e^x=3$ ופצלו את האינטגרל בנקודה זו.
+\end{hint}
+
+\begin{solution}
+$e^x\le 3\iff x\le\ln3$ (כי $e^x$ עולה). לכן על $[0,4]$:
+\[ \min(e^x,3)=\begin{cases} e^x, & 0\le x\le\ln 3\\ 3, & \ln3\le x\le 4,\end{cases} \]
+ושימו לב ש-$\ln3\approx1.0986\in[0,4]$. הפונקציה חיובית, ולכן השטח הוא
+\[ S=\int_0^{\ln3}e^x\,dx+\int_{\ln3}^{4}3\,dx=\left(e^{\ln3}-e^0\right)+3(4-\ln3)=2+12-3\ln3=\boxed{14-3\ln3}\approx 10.70. \]
+\end{solution}

@@ -1,0 +1,29 @@
+% year: תשפ"ו
+% semester: א
+% moed: ב
+% number: 1ב
+% points: 10
+% categories: func-limits
+% official_solution: yes
+% source: exams/מבחנים/תשפו/sol B.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא
+\[ \lim_{x\to\infty} \left( \frac{x^3 + 1}{x^3 - 2} \right)^{x^3 + 3} \]
+\end{question}
+
+\begin{hint}
+זה ביטוי מהצורה $1^\infty$. כתבו $\frac{x^3 + 1}{x^3 - 2} = 1 + \frac{3}{x^3 - 2}$ והשתמשו בגבול $\left(1 + \frac{1}{u}\right)^u \to e$.
+\end{hint}
+
+\begin{solution}
+כאשר $x \to \infty$ הבסיס שואף ל-$1$ והמעריך ל-$\infty$ (ביטוי $1^\infty$). נכתוב
+\[ \frac{x^3 + 1}{x^3 - 2} = \frac{(x^3 - 2) + 3}{x^3 - 2} = 1 + \frac{3}{x^3 - 2}, \qquad x^3 + 3 = (x^3 - 2) + 5, \]
+ולכן (עבור $x$ גדול, כך ש-$x^3 - 2 > 0$)
+\[ \left( \frac{x^3 + 1}{x^3 - 2} \right)^{x^3 + 3} = \left( 1 + \frac{3}{x^3 - 2} \right)^{x^3 - 2} \cdot \left( 1 + \frac{3}{x^3 - 2} \right)^{5}. \]
+נסמן $u = \frac{x^3 - 2}{3} \to \infty$. אז הגורם הראשון שווה $\left[\left(1 + \frac{1}{u}\right)^{u}\right]^3 \to e^3$, לפי הגבול היסודי $\lim_{u\to\infty}\left(1 + \frac1u\right)^u = e$ ורציפות $t \mapsto t^3$.
+הגורם השני שואף ל-$1^5 = 1$, כי $\frac{3}{x^3 - 2} \to 0$.
+לפי אריתמטיקה של גבולות:
+\[ \boxed{\lim_{x\to\infty} \left( \frac{x^3 + 1}{x^3 - 2} \right)^{x^3 + 3} = e^3 \cdot 1 = e^3}. \]
+(דרך חלופית: $\ln$ של הביטוי הוא $(x^3 + 3)\ln\left(1 + \frac{3}{x^3 - 2}\right)$, ומכיוון ש-$\ln(1 + t) \sim t$ כאשר $t \to 0$, הוא שואף ל-$\lim \frac{3(x^3 + 3)}{x^3 - 2} = 3$.)
+\end{solution}

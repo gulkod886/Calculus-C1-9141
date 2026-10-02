@@ -1,0 +1,37 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: א
+% number: 4א
+% points: 11
+% categories: antiderivatives
+% source: exams/מבחנים/תשפה/מועד א תשפה.pdf
+
+\begin{question}
+(11 נק') חשבו את האינטגרל
+\[ \int \frac{2x^2 + 8}{x^3 - 4x^2 + 8x}\,dx \]
+\end{question}
+
+\begin{hint}
+פרקו את המכנה: $x^3 - 4x^2 + 8x = x(x^2 - 4x + 8)$, כאשר לגורם הריבועי אין שורשים ממשיים, ופרקו לשברים חלקיים.
+\end{hint}
+
+\begin{solution}
+\textbf{פירוק המכנה.} $x^3 - 4x^2 + 8x = x(x^2 - 4x + 8)$, ול-$x^2 - 4x + 8 = (x-2)^2 + 4$ אין שורשים ממשיים (הדיסקרימיננטה $16 - 32 < 0$).
+
+\textbf{שברים חלקיים.} נחפש
+\[ \frac{2x^2 + 8}{x(x^2 - 4x + 8)} = \frac{A}{x} + \frac{Bx + C}{x^2 - 4x + 8}, \]
+כלומר $2x^2 + 8 = A(x^2 - 4x + 8) + x(Bx + C)$. הצבת $x = 0$ נותנת $8 = 8A$, כלומר $A = 1$. אז
+$2x^2 + 8 = x^2 - 4x + 8 + Bx^2 + Cx$, ומהשוואת מקדמים $B = 1$, $C = 4$.
+
+\textbf{אינטגרציה.}
+\[ \int\frac{dx}{x} = \ln|x|. \]
+לגורם השני נכתוב $x + 4 = \frac12(2x - 4) + 6$, כאשר $(x^2 - 4x + 8)' = 2x - 4$:
+\[ \int\frac{x+4}{x^2-4x+8}\,dx = \frac12\int\frac{2x-4}{x^2-4x+8}\,dx + 6\int\frac{dx}{(x-2)^2 + 4}
+= \frac12\ln(x^2-4x+8) + 6\cdot\frac12\arctan\frac{x-2}{2}, \]
+כאשר באינטגרל האחרון השתמשנו ב-$\int\frac{dt}{t^2 + a^2} = \frac1a\arctan\frac ta$ עם $t = x-2$, $a = 2$.
+
+\textbf{תשובה:}
+\[ \int \frac{2x^2 + 8}{x^3 - 4x^2 + 8x}\,dx = \ln|x| + \frac12\ln(x^2 - 4x + 8) + 3\arctan\frac{x-2}{2} + C. \]
+(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)
+\end{solution}

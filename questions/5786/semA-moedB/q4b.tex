@@ -1,0 +1,36 @@
+% year: תשפ"ו
+% semester: א
+% moed: ב
+% number: 4ב
+% points: 10
+% categories: ode
+% official_solution: yes
+% source: exams/מבחנים/תשפו/sol B.pdf
+
+\begin{question}
+(10 נק') מצאו את הפתרון הכללי של המשוואה הדיפרנציאלית
+\[ \sqrt{1 - x^2} \cdot y' = y^2 \arcsin x \]
+\end{question}
+
+\begin{hint}
+המשוואה פרידה. אחרי ההפרדה, באגף של $x$ הציבו $t = \arcsin x$.
+\end{hint}
+
+\begin{solution}
+המשוואה מוגדרת עבור $-1 < x < 1$, ושם $\sqrt{1 - x^2} > 0$. נכתוב אותה בצורה
+\[ \frac{dy}{dx} = y^2 \cdot \frac{\arcsin x}{\sqrt{1 - x^2}}, \]
+וזו משוואה פרידה.
+
+\textbf{הפתרון הקבוע:} $y \equiv 0$ מקיים את המשוואה ($0 = 0$), ולכן הוא פתרון.
+
+\textbf{עבור $y \ne 0$:} נפריד משתנים:
+\[ \int \frac{dy}{y^2} = \int \frac{\arcsin x}{\sqrt{1 - x^2}}\,dx. \]
+באגף שמאל מתקבל $-\frac{1}{y}$. באגף ימין נציב $t = \arcsin x$, $dt = \frac{dx}{\sqrt{1 - x^2}}$:
+\[ \int \frac{\arcsin x}{\sqrt{1 - x^2}}\,dx = \int t\,dt = \frac{t^2}{2} + C = \frac{\arcsin^2 x}{2} + C. \]
+לכן
+\[ -\frac{1}{y} = \frac{\arcsin^2 x}{2} + C \quad\Longrightarrow\quad y = \frac{-1}{\frac{\arcsin^2 x}{2} + C} = \frac{-2}{\arcsin^2 x + 2C}. \]
+
+\textbf{תשובה:} הפתרון הכללי הוא
+\[ \boxed{y = \frac{-2}{\arcsin^2 x + C}}, \quad C \in \R \]
+(בכל קטע שבו המכנה אינו מתאפס), ובנוסף הפתרון $y \equiv 0$.
+\end{solution}

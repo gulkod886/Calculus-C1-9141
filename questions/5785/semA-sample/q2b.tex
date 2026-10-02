@@ -1,0 +1,34 @@
+% year: תשפ"ה
+% semester: א
+% moed: לדוגמה
+% number: 2ב
+% points: 10
+% categories: func-analysis
+% source: exams/מבחנים/תשפו/exam_example 2025.pdf
+
+\begin{question}
+(10 נק') מצאו תחומי קמירות ונקודות פיתול של הפונקציה
+\[ f(x) = x^2 \cdot e^{-x} \]
+נמקו.
+\end{question}
+
+\begin{hint}
+$f''(x) = e^{-x}(x^2 - 4x + 2)$; בדקו את סימן הגורם הריבועי.
+\end{hint}
+
+\begin{solution}
+$f(x) = x^2 e^{-x}$ מוגדרת וגזירה אינסוף פעמים בכל $\R$.
+\[ f'(x) = 2xe^{-x} - x^2e^{-x} = e^{-x}(2x - x^2), \]
+\[ f''(x) = -e^{-x}(2x - x^2) + e^{-x}(2 - 2x) = e^{-x}(x^2 - 4x + 2). \]
+מכיוון ש-$e^{-x} > 0$, הסימן של $f''$ הוא הסימן של $x^2 - 4x + 2$, ששורשיו
+\[ x_{1,2} = \frac{4 \pm \sqrt{16 - 8}}{2} = 2 \pm \sqrt2. \]
+זו פרבולה "מחייכת", ולכן:
+\begin{itemize}
+  \item $f'' > 0$ ב-$(-\infty, 2 - \sqrt2)$ וב-$(2 + \sqrt2, \infty)$: שם $f$ \textbf{קמורה};
+  \item $f'' < 0$ ב-$(2 - \sqrt2, 2 + \sqrt2)$: שם $f$ \textbf{קעורה}.
+\end{itemize}
+בנקודות $x = 2 \pm \sqrt2$ הפונקציה גזירה ו-$f''$ מחליפה סימן, ולכן אלה נקודות פיתול. הערכים:
+\[ f(2 \pm \sqrt2) = (2 \pm \sqrt2)^2 e^{-(2 \pm \sqrt2)} = (6 \pm 4\sqrt2)\,e^{-2 \mp \sqrt2}. \]
+
+\textbf{תשובה:} $f$ קמורה ב-$(-\infty, 2 - \sqrt2)$ וב-$(2 + \sqrt2, \infty)$, קעורה ב-$(2 - \sqrt2, 2 + \sqrt2)$, ונקודות הפיתול הן $x = 2 - \sqrt2$ ו-$x = 2 + \sqrt2$.
+\end{solution}

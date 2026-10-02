@@ -1,0 +1,45 @@
+% year: תשפ"ו
+% semester: א
+% moed: א
+% number: 4א
+% points: 12
+% categories: antiderivatives
+% official_solution: yes
+% source: exams/מבחנים/תשפו/AnyScanner_02_01_2026(1) (2).pdf
+
+\begin{question}
+(12 נק') חשבו את האינטגרל
+\[ \int \frac{-3x - 7}{x^3 + x^2 - 2}\,dx \]
+רמז: שימו לב שהמכנה מתאפס ב-$x = 1$.
+\end{question}
+
+\begin{hint}
+חלקו את המכנה ב-$(x - 1)$, בדקו שהגורם הריבועי שנותר אי-פריק, ופרקו לשברים חלקיים מהצורה $\frac{A}{x-1} + \frac{Bx + C}{x^2 + 2x + 2}$.
+\end{hint}
+
+\begin{solution}
+\textbf{פירוק המכנה.} $1^3 + 1^2 - 2 = 0$, ולכן $(x - 1)$ מחלק את המכנה. חילוק פולינומים נותן
+\[ x^3 + x^2 - 2 = (x - 1)(x^2 + 2x + 2). \]
+הדיסקרימיננטה של $x^2 + 2x + 2$ היא $4 - 8 < 0$, לכן הגורם הריבועי אי-פריק מעל $\R$ (ובפרט $x^2 + 2x + 2 = (x+1)^2 + 1 > 0$).
+
+\textbf{שברים חלקיים.} דרגת המונה קטנה מדרגת המכנה, לכן נחפש
+\[ \frac{-3x - 7}{(x - 1)(x^2 + 2x + 2)} = \frac{A}{x - 1} + \frac{Bx + C}{x^2 + 2x + 2}, \]
+כלומר $-3x - 7 = A(x^2 + 2x + 2) + (Bx + C)(x - 1)$ לכל $x$.
+\begin{itemize}
+  \item $x = 1$: $-10 = 5A$, ולכן $A = -2$.
+  \item $x = 0$: $-7 = 2A - C$, ולכן $C = 2A + 7 = 3$.
+  \item השוואת מקדמי $x^2$: $0 = A + B$, ולכן $B = 2$.
+\end{itemize}
+לכן
+\[ \int \frac{-3x - 7}{x^3 + x^2 - 2}\,dx = \int \left( \frac{-2}{x - 1} + \frac{2x + 3}{x^2 + 2x + 2} \right) dx
+   = \int \left( \frac{-2}{x - 1} + \frac{2x + 2}{x^2 + 2x + 2} + \frac{1}{(x + 1)^2 + 1} \right) dx. \]
+\begin{itemize}
+  \item $\int \frac{-2}{x - 1}\,dx = -2\ln|x - 1| + C$.
+  \item במחובר השני המונה הוא נגזרת המכנה: בהצבה $t = x^2 + 2x + 2$, $dt = (2x + 2)\,dx$,
+  \[ \int \frac{2x + 2}{x^2 + 2x + 2}\,dx = \int \frac{dt}{t} = \ln|t| + C = \ln(x^2 + 2x + 2) + C. \]
+  \item בהשלמה לריבוע ובהצבה $u = x + 1$: $\int \frac{dx}{(x + 1)^2 + 1} = \arctan(x + 1) + C$.
+\end{itemize}
+\textbf{תשובה:}
+\[ \boxed{\int \frac{-3x - 7}{x^3 + x^2 - 2}\,dx = -2\ln|x - 1| + \ln(x^2 + 2x + 2) + \arctan(x + 1) + C.} \]
+(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)
+\end{solution}

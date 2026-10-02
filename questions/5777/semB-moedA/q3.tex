@@ -1,0 +1,27 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: א
+% source: exams/מבחנים/תשעז/מועד א תשעז סמסטר ב.pdf
+% number: 3
+% points: 15
+% categories: antiderivatives
+
+\begin{question}
+(15 נק') חשבו:
+\[ \int x^3e^{-x^2}\,dx \]
+\end{question}
+
+\begin{hint}
+הציבו $t=x^2$ (או $t=-x^2$) ואחר כך בצעו אינטגרציה בחלקים.
+\end{hint}
+
+\begin{solution}
+נציב $t=x^2$, $dt=2x\,dx$. אז $x^3\,dx=x^2\cdot x\,dx=\frac t2\,dt$:
+\[ \int x^3e^{-x^2}dx=\frac12\int te^{-t}dt. \]
+אינטגרציה בחלקים עם $u=t$, $v'=e^{-t}$ ($u'=1$, $v=-e^{-t}$):
+\[ \int te^{-t}dt=-te^{-t}+\int e^{-t}dt=-te^{-t}-e^{-t}+C=-(t+1)e^{-t}+C. \]
+נחזור למשתנה $x$:
+\[ \boxed{\int x^3e^{-x^2}dx=-\frac12(x^2+1)e^{-x^2}+C.} \]
+\textbf{בדיקה:} $\frac{d}{dx}\left[-\frac12(x^2+1)e^{-x^2}\right]=-xe^{-x^2}+\frac12(x^2+1)\cdot2xe^{-x^2}=x^3e^{-x^2}$.
+\end{solution}

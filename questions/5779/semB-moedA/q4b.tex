@@ -1,0 +1,22 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 4ב
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') חשבו $\displaystyle\int_1^{+\infty}\frac{\ln x}{x^4}\,dx$.
+\end{question}
+
+\begin{hint}
+בצעו אינטגרציה בחלקים עם $u=\ln x$, $dv=x^{-4}dx$ ואחר כך השאיפו את הגבול העליון לאינסוף.
+\end{hint}
+
+\begin{solution}
+לפי הגדרת האינטגרל הלא אמיתי, $\int_1^\infty=\lim_{R\to\infty}\int_1^R$. באינטגרציה בחלקים עם $u=\ln x$, $dv=x^{-4}dx$ ($du=\frac{dx}{x}$, $v=-\frac{1}{3x^3}$):
+\[ \int_1^R\frac{\ln x}{x^4}\,dx=\left[-\frac{\ln x}{3x^3}\right]_1^R+\frac13\int_1^R\frac{dx}{x^4}=-\frac{\ln R}{3R^3}+\frac13\left[-\frac{1}{3x^3}\right]_1^R=-\frac{\ln R}{3R^3}+\frac19\left(1-\frac{1}{R^3}\right). \]
+כאשר $R\to\infty$: $\frac{\ln R}{R^3}\to0$ (לפי לופיטל: $\lim\frac{1/R}{3R^2}=0$) ו-$\frac1{R^3}\to0$. לכן האינטגרל מתכנס ו-
+\[ \int_1^{+\infty}\frac{\ln x}{x^4}\,dx=\frac19. \]
+\end{solution}

@@ -1,0 +1,29 @@
+% year: תשפ"ה
+% semester: א
+% moed: לדוגמה
+% number: 1א
+% points: 11
+% categories: continuity, derivatives
+% source: exams/מבחנים/תשפו/exam_example 2025.pdf
+
+\begin{question}
+(11 נק') נגדיר פונקציה על ידי
+\[ f(x) = \begin{cases} x^3 \sin(\frac{5}{x}), & \text{if } x \ne 0, \\ 0, & \text{if } x = 0 \end{cases} \]
+האם הפונקציה רציפה וגזירה בנקודה $x = 0$? נמקו.
+\end{question}
+
+\begin{hint}
+השתמשו בכך ש-$\sin$ חסומה: "אפסה כפול חסומה" שואפת לאפס. לגזירות חשבו את גבול מנת ההפרשים לפי ההגדרה.
+\end{hint}
+
+\begin{solution}
+\textbf{רציפות.} לכל $x \ne 0$ מתקיים $\left|\sin\frac{5}{x}\right| \le 1$, ולכן
+\[ 0 \le |f(x)| = |x|^3\left|\sin\tfrac{5}{x}\right| \le |x|^3 \xrightarrow[x\to0]{} 0. \]
+לפי כלל הסנדוויץ' $\lim_{x\to0} f(x) = 0 = f(0)$, ולכן $f$ רציפה ב-$x = 0$.
+
+\textbf{גזירות.} לפי הגדרת הנגזרת:
+\[ \frac{f(x) - f(0)}{x - 0} = \frac{x^3\sin\frac5x}{x} = x^2\sin\frac5x, \qquad 0 \le \left| x^2 \sin\tfrac5x \right| \le x^2 \xrightarrow[x\to0]{} 0. \]
+שוב לפי כלל הסנדוויץ' (אפסה כפול חסומה), הגבול קיים ושווה $0$. לכן $f$ גזירה ב-$x = 0$ ו-$f'(0) = 0$.
+
+\textbf{תשובה:} $f$ רציפה וגזירה ב-$x = 0$, ו-$f'(0) = 0$. (גזירות גוררת רציפות, כך שהרציפות נובעת גם מהגזירות.)
+\end{solution}

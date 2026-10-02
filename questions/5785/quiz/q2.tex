@@ -1,0 +1,61 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% source: exams/בחנים/תשפ״ה, בוחן, 9141.pdf
+% part: א
+% number: 2
+% points: 20
+% categories: continuity, func-limits
+
+\begin{question}
+יהיו $a,b\in\R$. נגדיר פונקציה על ידי
+\[
+f(x)=\begin{cases}
+\frac{x\sin(ax)}{1-\cos x}, & \text{if } x<0,\\
+b, & \text{if } x=0,\\
+\frac{e^x-1}{xe^x}, & \text{if } x>0
+\end{cases}
+\]
+לאילו ערכים של $a,b$ הפונקציה רציפה ב-$0$ ? נמקו.
+\end{question}
+
+\begin{hint}
+$f$ רציפה ב-0 אם ורק אם שני הגבולות החד-צדדיים ב-0 קיימים ושווים ל-$f(0)=b$.
+\end{hint}
+
+\begin{hint}
+השתמשו בגבולות היסודיים $\frac{\sin t}{t}\to1$, $\frac{1-\cos x}{x^2}\to\frac12$, $\frac{e^x-1}{x}\to1$ (אסור להשתמש בכלל לופיטל בבוחן).
+\end{hint}
+
+\begin{solution}
+הפונקציה רציפה ב-0 אם ורק אם
+\[
+\lim_{x\to0^-}f(x)=\lim_{x\to0^+}f(x)=f(0)=b .
+\]
+
+\textbf{הגבול משמאל.} נשתמש בגבול היסודי
+\[
+\lim_{x\to0}\frac{1-\cos x}{x^2}=\frac12 ,
+\]
+הנובע מהזהות $1-\cos x=2\sin^2\frac x2$: $\frac{1-\cos x}{x^2}=\frac12\left(\frac{\sin(x/2)}{x/2}\right)^2\to\frac12$.
+אם $a\neq0$ נכתוב, עבור $x<0$ קרוב ל-0:
+\[
+\frac{x\sin(ax)}{1-\cos x}=a\cdot\frac{\sin(ax)}{ax}\cdot\frac{x^2}{1-\cos x}\xrightarrow[x\to0^-]{}a\cdot1\cdot2=2a ,
+\]
+לפי $\lim_{t\to0}\frac{\sin t}{t}=1$ (הצבה $t=ax\to0$) ואריתמטיקה של גבולות.
+אם $a=0$ אז $f(x)=0$ לכל $x<0$ והגבול משמאל הוא $0=2a$. בכל מקרה
+\[
+\lim_{x\to0^-}f(x)=2a .
+\]
+
+\textbf{הגבול מימין.}
+\[
+\frac{e^x-1}{xe^x}=\frac{e^x-1}{x}\cdot\frac{1}{e^x}\xrightarrow[x\to0^+]{}1\cdot\frac{1}{e^0}=1 ,
+\]
+לפי הגבול היסודי $\lim_{x\to0}\frac{e^x-1}{x}=\ln e=1$ (מדף הנוסחאות) ורציפות $e^x$ ב-0.
+
+\textbf{מסקנה.} $f$ רציפה ב-0 אם ורק אם $2a=1=b$, כלומר
+\[
+\boxed{a=\tfrac12,\quad b=1.}
+\]
+\end{solution}

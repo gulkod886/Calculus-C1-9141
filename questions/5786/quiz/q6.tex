@@ -1,0 +1,33 @@
+% year: תשפ"ו
+% type: בוחן
+% semester: א
+% official_solution: yes
+% source: exams/בחנים/תשפ״ו, בוחן, 9141.pdf
+% part: ב
+% number: 6
+% points: 10
+% categories: functions, ivt, multiple-choice
+
+\begin{question}
+תהי $f(x)=x+e^x$. אילו מהטענות הבאות נכונה?
+\begin{enumerate}
+  \item הפונקציה חח"ע ועל $\R$.
+  \item הפונקציה חח"ע אך אינה על $\R$.
+  \item הפונקציה על $\R$ אך אינה חח"ע.
+  \item הפונקציה אינה חח"ע ואינה על $\R$.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (א)}.
+
+\textbf{חח"ע:} יהיו $x_1<x_2$. מכיוון ש-$e^x$ עולה ממש, $e^{x_1}<e^{x_2}$. נחבר את שני אי-השוויונות ונקבל $x_1+e^{x_1}<x_2+e^{x_2}$, כלומר $f$ עולה ממש ובפרט חח"ע.
+
+\textbf{על $\R$:} $f$ רציפה על $\R$ כסכום של פונקציות רציפות, ו-
+\[
+\lim_{x\to-\infty}(x+e^x)=-\infty+0=-\infty,\qquad \lim_{x\to\infty}(x+e^x)=\infty+\infty=\infty .
+\]
+יהי $y\in\R$. לפי הגבולות האלה קיימים $x_1<x_2$ עם $f(x_1)<y<f(x_2)$, ולפי משפט ערך הביניים על $[x_1,x_2]$ קיים $c$ עם $f(c)=y$. לכן $f$ על $\R$.
+
+\textbf{למה האחרות שגויות:} (ב) ו-(ד) טוענות ש-$f$ אינה על, (ג) ו-(ד) טוענות שאינה חח"ע — שתי הטענות הופרכו לעיל.
+\end{solution}

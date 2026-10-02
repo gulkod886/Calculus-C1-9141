@@ -1,0 +1,39 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ג
+% part: א
+% number: 2
+% points: 20
+% categories: integral-applications, definite-integrals, polar-parametric
+% source: exams/מבחנים/תשפ/מועד מיוחד תשפ.pdf
+
+\begin{question}
+נתונה עקומה בצורה פולארית: $r=a(1+\cos\varphi)$, כאשר $a$ פרמטר ממשי וחיובי, $0\le\varphi\le2\pi$.
+חשב את \textbf{אורך} העקומה. \textbf{חשבו את השטח} החסום על ידי העקומה
+\end{question}
+
+\begin{hint}
+אורך עקומה פולרית: $L=\int_\alpha^\beta\sqrt{r^2+(r')^2}\,d\varphi$. שטח: $S=\frac12\int_\alpha^\beta r^2\,d\varphi$.
+\end{hint}
+
+\begin{hint}
+השתמשו בזהות $1+\cos\varphi=2\cos^2\frac{\varphi}{2}$, ושימו לב לסימן של $\cos\frac\varphi2$ בקטע.
+\end{hint}
+
+\begin{solution}
+העקומה (קרדיואידה) היא $r(\varphi)=a(1+\cos\varphi)\ge0$, ו-$r'(\varphi)=-a\sin\varphi$.
+
+\textbf{אורך:} לפי נוסחת אורך עקומה בקואורדינטות פולריות,
+\[ r^2+(r')^2=a^2\big(1+2\cos\varphi+\cos^2\varphi+\sin^2\varphi\big)=2a^2(1+\cos\varphi)=4a^2\cos^2\frac{\varphi}{2}. \]
+לכן
+\[ L=\int_0^{2\pi}\sqrt{r^2+(r')^2}\,d\varphi=\int_0^{2\pi}2a\Big|\cos\frac{\varphi}{2}\Big|\,d\varphi . \]
+עבור $0\le\varphi\le\pi$, $\cos\frac\varphi2\ge0$, ועבור $\pi\le\varphi\le2\pi$, $\cos\frac\varphi2\le0$. מסימטריה (או ישירות):
+\[ L=2\int_0^{\pi}2a\cos\frac{\varphi}{2}\,d\varphi=4a\Big[2\sin\frac\varphi2\Big]_0^{\pi}=8a . \]
+כלומר $\boxed{L=8a}$.
+
+\textbf{שטח:} לפי נוסחת השטח בקואורדינטות פולריות,
+\[ S=\frac12\int_0^{2\pi}a^2(1+\cos\varphi)^2d\varphi=\frac{a^2}{2}\int_0^{2\pi}\Big(1+2\cos\varphi+\frac{1+\cos2\varphi}{2}\Big)d\varphi
+=\frac{a^2}{2}\Big[\frac32\varphi+2\sin\varphi+\frac{\sin2\varphi}{4}\Big]_0^{2\pi}=\frac{a^2}{2}\cdot3\pi . \]
+כלומר $\boxed{S=\frac{3\pi a^2}{2}}$.
+\end{solution}

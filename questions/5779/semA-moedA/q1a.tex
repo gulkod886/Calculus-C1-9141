@@ -1,0 +1,27 @@
+% year: תשע"ט
+% semester: א
+% moed: א
+% number: 1א
+% points: 10
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשעט/מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle\lim_{x\to0}\big(\cos x\big)^{\frac{1}{\sin^2 2x}}$
+\end{question}
+
+\begin{hint}
+כתבו $(\cos x)^{1/\sin^22x}=e^{\frac{\ln\cos x}{\sin^22x}}$ וחשבו את גבול המעריך.
+\end{hint}
+
+\begin{solution}
+זהו גבול מהצורה $1^\infty$. בסביבה מנוקבת קטנה של $0$ מתקיים $\cos x>0$ ו-$\sin2x\neq0$, ולכן
+\[ (\cos x)^{\frac1{\sin^22x}}=e^{\frac{\ln\cos x}{\sin^22x}}. \]
+נחשב את גבול המעריך. נכתוב
+\[ \frac{\ln\cos x}{\sin^22x}=\frac{\ln\cos x}{x^2}\cdot\frac{(2x)^2}{\sin^22x}\cdot\frac14. \]
+הגורם האמצעי שואף ל-$1$ לפי $\lim_{t\to0}\frac{\sin t}{t}=1$. עבור הגורם הראשון (צורה $\frac00$) נשתמש בכלל לופיטל:
+\[ \lim_{x\to0}\frac{\ln\cos x}{x^2}=\lim_{x\to0}\frac{-\tan x}{2x}=-\frac12. \]
+לכן גבול המעריך הוא $-\frac12\cdot1\cdot\frac14=-\frac18$, ומרציפות פונקציית האקספוננט
+\[ \lim_{x\to0}(\cos x)^{\frac1{\sin^22x}}=e^{-1/8}. \]
+\end{solution}

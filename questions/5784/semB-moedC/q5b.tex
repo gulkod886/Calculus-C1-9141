@@ -1,0 +1,22 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ג
+% number: 5ב
+% categories: definite-integrals
+% source: exams/מבחנים/תשפד/מועד ג תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \int_0^{\ln2}xe^{-x}\,dx \]
+\end{question}
+
+\begin{hint}
+אינטגרציה בחלקים עם $u=x$.
+\end{hint}
+
+\begin{solution}
+אינטגרציה בחלקים עם $u=x$, $v'=e^{-x}$, כלומר $u'=1$, $v=-e^{-x}$:
+\[ \int_0^{\ln2}xe^{-x}dx=\Big[-xe^{-x}\Big]_0^{\ln2}+\int_0^{\ln2}e^{-x}dx=-\frac{\ln2}{2}+\Big[-e^{-x}\Big]_0^{\ln2}=-\frac{\ln2}{2}+\left(1-\frac12\right), \]
+כי $e^{-\ln2}=\frac12$. לכן
+\[ \int_0^{\ln2}xe^{-x}dx=\boxed{\frac{1-\ln2}{2}}\approx0.153. \]
+\end{solution}

@@ -1,0 +1,27 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ג
+% source: exams/מבחנים/תשעו/מועד ג תשעו.pdf
+% number: 1
+% points: 10
+% categories: true-false, ivt
+
+\begin{question}
+\textbf{הוכיחו או הפריכו:} למשוואה הבאה יש פתרון ב-$[0,\pi]$:
+\[ \ln(x+1)-\sin(x)=1 \]
+\end{question}
+
+\begin{hint}
+הגדירו $g(x)=\ln(x+1)-\sin(x)-1$ ובדקו את סימנה בקצוות הקטע.
+\end{hint}
+
+\begin{solution}
+\textbf{הטענה נכונה.} נגדיר $g(x)=\ln(x+1)-\sin x-1$. הפונקציה $g$ רציפה ב-$[0,\pi]$ כסכום של פונקציות רציפות ($\ln(x+1)$ רציפה עבור $x>-1$).
+
+בקצוות:
+\[ g(0)=\ln1-\sin0-1=-1<0,\qquad g(\pi)=\ln(\pi+1)-\sin\pi-1=\ln(\pi+1)-1>0, \]
+כאשר האי-שוויון האחרון נובע מכך ש-$\pi+1>e$ (כי $\pi+1>4>e$), ולכן $\ln(\pi+1)>\ln e=1$. (מספרית $\ln(\pi+1)\approx1.421$.)
+
+לפי משפט ערך הביניים (משפט בולצאנו) קיימת $c\in(0,\pi)$ שעבורה $g(c)=0$, כלומר $\ln(c+1)-\sin c=1$. לכן למשוואה יש פתרון בקטע.
+\end{solution}

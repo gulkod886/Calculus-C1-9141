@@ -1,0 +1,43 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 5
+% points: 17
+% categories: antiderivatives
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+(17 נק') חשבו את האינטגרל
+\[ \int\frac{6x^2+13x+8}{x^3+2x^2+2x}dx \]
+\end{question}
+
+\begin{hint}
+פרקו את המכנה: $x^3+2x^2+2x=x(x^2+2x+2)$, ולגורם הריבועי אין שורשים ממשיים. השתמשו בפירוק לשברים חלקיים.
+\end{hint}
+
+\begin{hint}
+את $\frac{2x+5}{x^2+2x+2}$ פצלו ל-$\frac{2x+2}{x^2+2x+2}+\frac{3}{(x+1)^2+1}$.
+\end{hint}
+
+\begin{solution}
+\textbf{פירוק המכנה.} $x^3+2x^2+2x=x(x^2+2x+2)$, והדיסקרימיננטה של $x^2+2x+2$ היא $4-8<0$, ולכן הוא אי-פריק מעל $\R$. מעלת המונה קטנה ממעלת המכנה, ולכן נחפש פירוק לשברים חלקיים:
+\[ \frac{6x^2+13x+8}{x(x^2+2x+2)}=\frac{A}{x}+\frac{Bx+C}{x^2+2x+2}. \]
+כפל במכנה: $6x^2+13x+8=A(x^2+2x+2)+(Bx+C)x$.
+\begin{itemize}
+  \item הצבת $x=0$: $8=2A$, ולכן $A=4$.
+  \item אז $6x^2+13x+8-4(x^2+2x+2)=2x^2+5x=Bx^2+Cx$, ולכן $B=2$, $C=5$.
+\end{itemize}
+\[ \frac{6x^2+13x+8}{x^3+2x^2+2x}=\frac4x+\frac{2x+5}{x^2+2x+2}=\frac4x+\frac{2x+2}{x^2+2x+2}+\frac{3}{(x+1)^2+1}. \]
+
+\textbf{אינטגרציה.}
+\begin{itemize}
+  \item $\int\frac4x\,dx=4\ln|x|$.
+  \item $\int\frac{2x+2}{x^2+2x+2}\,dx=\ln(x^2+2x+2)$ (המונה הוא נגזרת המכנה, והמכנה חיובי).
+  \item $\int\frac{3}{(x+1)^2+1}\,dx=3\arctan(x+1)$ (הצבה $t=x+1$).
+\end{itemize}
+
+\textbf{תשובה:}
+\[ \int\frac{6x^2+13x+8}{x^3+2x^2+2x}dx=\boxed{4\ln|x|+\ln(x^2+2x+2)+3\arctan(x+1)+C}. \]
+(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)
+\end{solution}

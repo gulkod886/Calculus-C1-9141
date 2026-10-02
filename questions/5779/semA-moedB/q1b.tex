@@ -1,0 +1,26 @@
+% year: תשע"ט
+% semester: א
+% moed: ב
+% number: 1ב
+% points: 10
+% categories: func-limits
+% source: exams/מבחנים/תשעט/מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את הגבול הבא:
+$\displaystyle\lim_{x\to0}\left(\frac{1-4x^2}{1-3x^2}\right)^{\frac{2}{x^2}}$
+
+רמז: $f^g=e^{g\ln f}$.
+\end{question}
+
+\begin{hint}
+אחרי המעבר לצורה $e^{g\ln f}$, כתבו $\ln\frac{1-4x^2}{1-3x^2}=\ln(1-4x^2)-\ln(1-3x^2)$ והשתמשו בגבול היסודי $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$.
+\end{hint}
+
+\begin{solution}
+זהו גבול מהצורה $1^\infty$. בסביבה של $0$ הבסיס חיובי, ולפי הרמז
+\[ \left(\frac{1-4x^2}{1-3x^2}\right)^{\frac2{x^2}}=\exp\!\left(\frac{2}{x^2}\ln\frac{1-4x^2}{1-3x^2}\right)=\exp\!\left(2\cdot\frac{\ln(1-4x^2)-\ln(1-3x^2)}{x^2}\right). \]
+לפי הגבול היסודי $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$:
+\[ \frac{\ln(1-4x^2)}{x^2}=-4\cdot\frac{\ln(1-4x^2)}{-4x^2}\to-4,\qquad \frac{\ln(1-3x^2)}{x^2}\to-3. \]
+לכן המעריך שואף ל-$2(-4+3)=-2$, ומרציפות האקספוננט הגבול הוא $e^{-2}$.
+\end{solution}

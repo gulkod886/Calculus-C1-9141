@@ -1,0 +1,28 @@
+% year: תשפ"ג
+% semester: ב
+% moed: א
+% note: ד"ר פיטר סמובול
+% source: exams/מבחנים/תשפג/מועד א תשפג סמסטר ב.pdf
+% number: 4א
+% points: 20
+% categories: lhopital, func-limits
+
+\begin{question}
+(20 נק') חשבו את הגבולות הבאים
+\[ (1)\ \lim_{x\to0}\frac{\ln(1+2x)}{\sin2x-\sin6x}\qquad\qquad (2)\ \lim_{x\to0}\left(\sqrt{1+2x}\right)^{\frac{1}{(-x)}} \]
+\end{question}
+
+\begin{hint}
+בגבול (2) רשמו את הביטוי בצורה $e^{g(x)}$ וחשבו את הגבול של המעריך.
+\end{hint}
+
+\begin{solution}
+\textbf{(1)} גבול מהצורה $\frac00$; לפי כלל לופיטל:
+\[ \lim_{x\to0}\frac{\ln(1+2x)}{\sin2x-\sin6x}=\lim_{x\to0}\frac{\frac{2}{1+2x}}{2\cos2x-6\cos6x}=\frac{2}{2-6}=\boxed{-\frac12}. \]
+(לחלופין, בעזרת $\ln(1+2x)\sim2x$, $\sin2x\sim2x$, $\sin6x\sim6x$: $\frac{2x}{2x-6x}=-\frac12$.)
+
+\textbf{(2)} עבור $x$ קרוב ל-$0$ ($x>-\frac12$, $x\neq0$) הבסיס חיובי, ו-
+\[ \left(\sqrt{1+2x}\right)^{-1/x}=e^{-\frac{\ln(1+2x)}{2x}}. \]
+לפי הגבול היסודי (או לופיטל) $\lim_{x\to0}\frac{\ln(1+2x)}{2x}=1$. מרציפות פונקציית האקספוננט,
+\[ \lim_{x\to0}\left(\sqrt{1+2x}\right)^{\frac{1}{-x}}=e^{-1}=\boxed{\frac1e}. \]
+\end{solution}

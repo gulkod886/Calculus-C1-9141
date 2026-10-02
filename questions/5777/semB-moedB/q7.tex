@@ -1,0 +1,29 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעז/מועד ב תשעז סמסטר ב.pdf
+% number: 7
+% points: 10
+% categories: improper-integrals
+
+\begin{question}
+(10 נק') האם האינטגרל הלא אמיתי
+\[ \int_2^\infty\frac{x+7}{\sqrt{x^5-3x}}\,dx \]
+מתכנס?
+\end{question}
+
+\begin{hint}
+עבור $x$ גדול האינטגרנד מתנהג כמו $\frac{x}{x^{5/2}}=\frac{1}{x^{3/2}}$. השתמשו במבחן ההשוואה הגבולי.
+\end{hint}
+
+\begin{solution}
+\textbf{האינטגרל מתכנס.}
+עבור $x\ge2$: $x^5-3x=x(x^4-3)\ge2\cdot13>0$, ולכן האינטגרנד מוגדר, רציף וחיובי ב-$[2,\infty)$, והבעיה היחידה היא בקצה $\infty$.
+
+נשווה עם $g(x)=\frac{1}{x^{3/2}}>0$:
+\[ \lim_{x\to\infty}\frac{\frac{x+7}{\sqrt{x^5-3x}}}{x^{-3/2}}=\lim_{x\to\infty}\frac{(x+7)x^{3/2}}{\sqrt{x^5-3x}}=\lim_{x\to\infty}\frac{x^{5/2}\left(1+\frac7x\right)}{x^{5/2}\sqrt{1-\frac{3}{x^4}}}=1\in(0,\infty). \]
+לפי מבחן ההשוואה הגבולי, שני האינטגרלים $\int_2^\infty\frac{x+7}{\sqrt{x^5-3x}}dx$ ו-$\int_2^\infty\frac{dx}{x^{3/2}}$ מתכנסים או מתבדרים יחד. האינטגרל $\int_2^\infty\frac{dx}{x^p}$ מתכנס עבור $p>1$, וכאן $p=\frac32$:
+\[ \int_2^R x^{-3/2}dx=\left[-2x^{-1/2}\right]_2^R=\frac{2}{\sqrt2}-\frac{2}{\sqrt R}\xrightarrow[R\to\infty]{}\sqrt2. \]
+לכן האינטגרל הנתון \textbf{מתכנס}.
+\end{solution}

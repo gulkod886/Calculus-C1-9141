@@ -1,0 +1,30 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 1ב
+% points: 10
+% categories: func-limits, lhopital
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא:
+גבול הפונקציה $\displaystyle \lim_{x\to\pi/2}(\tan x)\cdot\arctan\left(x-\frac{\pi}{2}\right)$.
+\end{question}
+
+\begin{hint}
+כתבו $\tan x=\frac{1}{\cot x}$ וקבלו ביטוי מהצורה $\frac00$.
+\end{hint}
+
+\begin{solution}
+עבור $x$ קרוב ל-$\frac\pi2$, $x\neq\frac\pi2$, מתקיים $\tan x=\frac{1}{\cot x}$, ולכן
+\[ (\tan x)\cdot\arctan\left(x-\frac{\pi}{2}\right)=\frac{\arctan\left(x-\frac{\pi}{2}\right)}{\cot x}. \]
+כאשר $x\to\frac\pi2$: המונה שואף ל-$\arctan 0=0$ והמכנה שואף ל-$\cot\frac\pi2=0$ (שתי הפונקציות רציפות). זהו ביטוי מהצורה $\frac00$, שתי הפונקציות גזירות בסביבה מנוקבת של $\frac\pi2$ ונגזרת המכנה $-\frac{1}{\sin^2x}\neq 0$ שם, ולכן ניתן להפעיל את כלל לופיטל:
+\[ \lim_{x\to\pi/2}\frac{\arctan\left(x-\frac{\pi}{2}\right)}{\cot x}
+   =\lim_{x\to\pi/2}\frac{\dfrac{1}{1+\left(x-\frac\pi2\right)^2}}{-\dfrac{1}{\sin^2x}}
+   =\lim_{x\to\pi/2}\left(-\frac{\sin^2x}{1+\left(x-\frac\pi2\right)^2}\right)=-\frac{1}{1+0}=-1, \]
+כאשר הגבול האחרון מחושב מרציפות ($\sin^2\frac\pi2=1$). מכיוון שגבול מנת הנגזרות קיים, לפי כלל לופיטל
+\[ \lim_{x\to\pi/2}(\tan x)\cdot\arctan\left(x-\frac{\pi}{2}\right)=-1. \]
+(דרך נוספת: $\arctan t\sim t$ כאשר $t\to0$, ו-$(x-\frac\pi2)\tan x=-\frac{(x-\frac\pi2)\cos(x-\frac\pi2)}{\sin(x-\frac\pi2)}\to-1$.)
+\end{solution}

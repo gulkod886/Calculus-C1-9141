@@ -1,0 +1,24 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ב
+% number: 1ב
+% categories: func-limits
+% source: exams/מבחנים/תשפד/מועד ב תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \lim_{x\to0}\frac{\tan(x)-\sin(x)}{\sin^3(x)} \]
+\end{question}
+
+\begin{hint}
+הוציאו $\tan x$ כגורם משותף במונה: $\tan x-\sin x=\tan x\,(1-\cos x)$.
+\end{hint}
+
+\begin{solution}
+בסביבה מנוקבת של $0$ מתקיים $\sin x\neq0$, $\cos x\neq0$, ו-
+\[ \tan x-\sin x=\frac{\sin x}{\cos x}-\sin x=\frac{\sin x\,(1-\cos x)}{\cos x}. \]
+לכן, בעזרת $1-\cos^2x=\sin^2x$:
+\[ \frac{\tan x-\sin x}{\sin^3x}=\frac{1-\cos x}{\cos x\,\sin^2x}=\frac{1-\cos x}{\cos x\,(1-\cos x)(1+\cos x)}=\frac{1}{\cos x\,(1+\cos x)}. \]
+(הצמצום מותר כי $\cos x\neq1$ עבור $0<|x|<2\pi$.) הביטוי שהתקבל רציף ב-$0$, ולכן
+\[ \lim_{x\to0}\frac{\tan x-\sin x}{\sin^3x}=\frac{1}{1\cdot2}=\boxed{\frac12}. \]
+\end{solution}

@@ -1,0 +1,19 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 4א
+% points: 10
+% categories: lhopital
+% source: exams/מבחנים/תשפג/מועד ב תשפג.docx
+
+\begin{question}
+(10 נק') חשבו את הגבול $\displaystyle\lim_{x\to0}\frac{x-\sin(x)}{x^3}$.
+\end{question}
+
+\begin{solution}
+ביטוי מהצורה $\frac00$. נפעיל את \textbf{כלל לופיטל} (התנאים מתקיימים: גזירות בסביבת $0$, נגזרת המכנה שונה מ-$0$ ליד $0$):
+\[ \lim_{x\to0}\frac{x-\sin x}{x^3}=\lim_{x\to0}\frac{1-\cos x}{3x^2}=\lim_{x\to0}\frac{\sin x}{6x}=\frac16, \]
+כאשר בשלב השני הפעלנו שוב לופיטל (שוב $\frac00$) ובאחרון השתמשנו ב-$\lim\frac{\sin x}{x}=1$.
+(לחלופין: $\sin x=x-\frac{x^3}{6}+o(x^3)$, ולכן $\frac{x-\sin x}{x^3}=\frac16+o(1)$.) \textbf{תשובה:} $\frac16$.
+\end{solution}

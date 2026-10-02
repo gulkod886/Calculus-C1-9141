@@ -1,0 +1,38 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 5ב
+% points: 10
+% categories: polar-parametric, integral-applications
+% source: exams/מבחנים/תשעח/מועד ב תשעח.pdf
+
+\begin{question}
+{(10 נק')} מצאו את השטח הכלוא בתוך הלולאה הנוצרת על-ידי הגרף של הפונקציה $r=\tan\frac\theta2$ בקואורדינטות קטביות.
+
+(במבחן מצורף איור: העקומה עוברת בראשית, יוצרת לולאה קטנה מעל הראשית, ושני ענפיה נמשכים למעלה ולצדדים.)
+\end{question}
+
+\begin{hint}
+מצאו עבור אילו ערכים של $\theta$ העקומה חוזרת לאותה נקודה: השוו את הנקודות המתקבלות עבור $\theta=\frac\pi2$ ו-$\theta=-\frac\pi2$.
+\end{hint}
+
+\begin{hint}
+שטח בקואורדינטות קטביות: $S=\frac12\int_\alpha^\beta r^2\,d\theta$, והשתמשו ב-$\tan^2u=\frac1{\cos^2u}-1$.
+\end{hint}
+
+\begin{solution}
+העקומה $r=\tan\frac\theta2$ מוגדרת עבור $\theta\in(-\pi,\pi)$, ו-$r\to\pm\infty$ כאשר $\theta\to\pm\pi$ (אלה שני הענפים). הנקודה הקרטזית היא $(r\cos\theta,\ r\sin\theta)$.
+\begin{itemize}
+  \item $\theta=0$: $r=0$ — הראשית.
+  \item $\theta=\frac\pi2$: $r=\tan\frac\pi4=1$, הנקודה $(0,1)$.
+  \item $\theta=-\frac\pi2$: $r=\tan\left(-\frac\pi4\right)=-1$, הנקודה $(-1\cdot\cos(-\frac\pi2),\,-1\cdot\sin(-\frac\pi2))=(0,1)$.
+\end{itemize}
+כלומר העקומה עוברת בנקודה $(0,1)$ פעמיים, ב-$\theta=\pm\frac\pi2$: היא חותכת את עצמה שם. כאשר $\theta$ עובר מ-$-\frac\pi2$ ל-$\frac\pi2$ העקומה יוצאת מ-$(0,1)$, עוברת דרך הראשית וחוזרת ל-$(0,1)$ — זו הלולאה. (עבור $\theta\in(-\frac\pi2,0)$, $r<0$ והנקודות נמצאות ברביע השני; עבור $\theta\in(0,\frac\pi2)$ ברביע הראשון; הלולאה סימטרית ביחס לציר $y$.)
+
+השטח הכלוא בלולאה, לפי $S=\frac12\int_\alpha^\beta r^2\,d\theta$ (הנוסחה תקפה גם כאשר $r<0$, כי $r^2$ הוא ריבוע המרחק מהראשית):
+\[ S=\frac12\int_{-\pi/2}^{\pi/2}\tan^2\frac\theta2\,d\theta=\int_0^{\pi/2}\tan^2\frac\theta2\,d\theta \]
+(האינטגרנד זוגי). עם $\tan^2u=\frac1{\cos^2u}-1$:
+\[ S=\int_0^{\pi/2}\left(\frac{1}{\cos^2\frac\theta2}-1\right)d\theta=\left[2\tan\frac\theta2-\theta\right]_0^{\pi/2}=2\tan\frac\pi4-\frac\pi2=2-\frac\pi2. \]
+\[ \boxed{S=2-\frac\pi2\approx0.429} \]
+\end{solution}

@@ -1,0 +1,21 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 5א
+% points: 10
+% categories: antiderivatives
+% source: exams/מבחנים/תשעח/מועד ב תשעח.pdf
+
+\begin{question}
+{(10 נק')} חשבו את האינטגרל $\displaystyle\int(4-x^2)^{-3/2}\,dx$. \quad [\underline{רמז}: אפשר להציב $x=2\sin\theta$.]
+\end{question}
+
+\begin{solution}
+האינטגרנד מוגדר עבור $|x|<2$. נציב $x=2\sin\theta$ עם $\theta\in\left(-\frac\pi2,\frac\pi2\right)$; אז $dx=2\cos\theta\,d\theta$ ו-$\cos\theta>0$, ולכן
+\[ 4-x^2=4-4\sin^2\theta=4\cos^2\theta,\qquad (4-x^2)^{3/2}=8\cos^3\theta. \]
+\[ \int(4-x^2)^{-3/2}\,dx=\int\frac{2\cos\theta}{8\cos^3\theta}\,d\theta=\frac14\int\frac{d\theta}{\cos^2\theta}=\frac14\tan\theta+C. \]
+נחזור למשתנה $x$: $\sin\theta=\frac x2$, $\cos\theta=\sqrt{1-\frac{x^2}{4}}=\frac{\sqrt{4-x^2}}{2}$, ולכן $\tan\theta=\frac{x}{\sqrt{4-x^2}}$.
+\[ \boxed{\int(4-x^2)^{-3/2}\,dx=\frac{x}{4\sqrt{4-x^2}}+C} \]
+בדיקה: $\left(\frac{x}{4\sqrt{4-x^2}}\right)'=\frac14\cdot\frac{\sqrt{4-x^2}+\frac{x^2}{\sqrt{4-x^2}}}{4-x^2}=\frac14\cdot\frac{4}{(4-x^2)^{3/2}}=(4-x^2)^{-3/2}$.
+\end{solution}

@@ -1,0 +1,25 @@
+% year: תש"פ
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 3ב
+% points: 10
+% categories: taylor
+% source: exams/מבחנים/תשפ/מועד ב סמסטר ב תשפ.pdf
+
+\begin{question}
+(10 נק') רשמו את פולינום מקלורן מסדר $n=3$ עבור הפונקציה:
+\[ f(x)=\sin(\sin(x)) \]
+\end{question}
+
+\begin{hint}
+הרכיבו את הפיתוח של $\sin$ בתוך עצמו.
+\end{hint}
+
+\begin{solution}
+לפי פיתוח מקלורן, $\sin u=u-\frac{u^3}{6}+o(u^3)$ ו-$\sin x=x-\frac{x^3}{6}+o(x^3)$. נציב $u=\sin x$; מאחר ש-$u=x+o(x)$, מתקיים $u^3=x^3+o(x^3)$ ו-$o(u^3)=o(x^3)$. לכן
+\[ \sin(\sin x)=\Big(x-\frac{x^3}{6}\Big)-\frac{x^3}{6}+o(x^3)=x-\frac{x^3}{3}+o(x^3). \]
+מיחידות פולינום טיילור, פולינום מקלורן מסדר 3 הוא
+\[ \boxed{P_3(x)=x-\frac{x^3}{3}} . \]
+(בדיקה ישירה: $f'(x)=\cos(\sin x)\cos x$, $f'(0)=1$; $f$ אי-זוגית ולכן $f(0)=f''(0)=0$; וחישוב נותן $f'''(0)=-2$, ואכן $\frac{-2}{3!}=-\frac13$.)
+\end{solution}

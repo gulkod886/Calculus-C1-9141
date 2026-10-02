@@ -1,0 +1,29 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 4ב
+% points: 8
+% categories: polar-parametric, integral-applications
+% source: exams/מבחנים/תשעז/מועד ב תשעז.pdf
+
+\begin{question}
+(8 נק') ציירו את הגרף של הפונקציה $r=f(\theta)=\theta^2$ בקואורדינטות קוטביות עבור $0\le\theta\le\pi$ וחשבו את אורך העקום.
+\end{question}
+
+\begin{hint}
+השתמשו בנוסחה לאורך עקום בקואורדינטות קוטביות $L=\int_\alpha^\beta\sqrt{r^2+(r')^2}\,d\theta$.
+\end{hint}
+
+\begin{solution}
+\textbf{סרטוט:} $r=\theta^2$ עולה מ-$0$ ל-$\pi^2\approx9.87$ כאשר $\theta$ עולה מ-$0$ ל-$\pi$: ספירלה שיוצאת מהראשית (משיקה לציר $x$ החיובי), עוברת דרך $\left(\theta=\frac\pi2,\ r=\frac{\pi^2}4\approx2.47\right)$ על ציר $y$ החיובי, ומגיעה לנקודה $(-\pi^2,0)$ על ציר $x$ השלילי; כל העקום בחצי המישור העליון $y\ge0$.
+
+\textbf{אורך:} לפי הנוסחה לאורך עקום בקואורדינטות קוטביות, עם $r'=2\theta$:
+\[
+L=\int_0^\pi\sqrt{r^2+(r')^2}\,d\theta=\int_0^\pi\sqrt{\theta^4+4\theta^2}\,d\theta=\int_0^\pi\theta\sqrt{\theta^2+4}\,d\theta
+\]
+(כי $\theta\ge0$). בהצבה $u=\theta^2+4$, $du=2\theta\,d\theta$:
+\[
+L=\frac12\int_4^{\pi^2+4}\sqrt u\,du=\frac13\Big[u^{3/2}\Big]_4^{\pi^2+4}=\frac13\left((\pi^2+4)^{3/2}-8\right)\approx14.55.
+\]
+\end{solution}

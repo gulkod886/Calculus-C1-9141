@@ -1,0 +1,25 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעז/מועד ב תשעז סמסטר ב.pdf
+% number: 4
+% points: 15
+% categories: antiderivatives
+
+\begin{question}
+(15 נק') חשבו:
+\[ \int\frac{x^2}{\sqrt{4-x^2}}\,dx \]
+\end{question}
+
+\begin{hint}
+הצבה טריגונומטרית: $x=2\sin t$ עם $t\in(-\frac\pi2,\frac\pi2)$.
+\end{hint}
+
+\begin{solution}
+האינטגרנד מוגדר עבור $-2<x<2$. נציב $x=2\sin t$, $t\in(-\frac\pi2,\frac\pi2)$ (הצבה הפיכה: $t=\arcsin\frac x2$), $dx=2\cos t\,dt$. בתחום זה $\cos t>0$, ולכן $\sqrt{4-x^2}=\sqrt{4\cos^2t}=2\cos t$. מכאן
+\[ \int\frac{x^2}{\sqrt{4-x^2}}dx=\int\frac{4\sin^2t}{2\cos t}\cdot2\cos t\,dt=4\int\sin^2t\,dt=2\int(1-\cos2t)\,dt=2t-\sin2t+C. \]
+נחזור ל-$x$: $t=\arcsin\frac x2$, ו-$\sin2t=2\sin t\cos t=2\cdot\frac x2\cdot\frac{\sqrt{4-x^2}}{2}=\frac{x\sqrt{4-x^2}}{2}$. לכן
+\[ \boxed{\int\frac{x^2}{\sqrt{4-x^2}}dx=2\arcsin\frac x2-\frac{x\sqrt{4-x^2}}{2}+C.} \]
+(בדיקה: גזירת התוצאה נותנת $\frac{2}{\sqrt{4-x^2}}-\frac{\sqrt{4-x^2}}{2}+\frac{x^2}{2\sqrt{4-x^2}}=\frac{4-(4-x^2)+x^2}{2\sqrt{4-x^2}}=\frac{x^2}{\sqrt{4-x^2}}$.)
+\end{solution}

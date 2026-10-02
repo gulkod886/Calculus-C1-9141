@@ -1,0 +1,33 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: א
+% number: 6ב
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשפג/מועד א תשפג.pdf
+
+\begin{question}
+(10 נק') חשבו את האינטגרל הלא-אמיתי $\displaystyle\int_0^{\infty}e^{-2x}\sin x\,dx$ או הראו שאינו מתכנס.
+\end{question}
+
+\begin{hint}
+חשבו את האינטגרל עד $R$ בעזרת אינטגרציה בחלקים פעמיים (האינטגרל "חוזר על עצמו"), ואז העבירו $R\to\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{התכנסות:} $|e^{-2x}\sin x|\le e^{-2x}$ ו-$\int_0^\infty e^{-2x}dx=\frac12$ מתכנס, ולכן לפי \textbf{מבחן ההשוואה} האינטגרל מתכנס (בהחלט).
+
+\textbf{חישוב:} נסמן $I(R)=\int_0^R e^{-2x}\sin x\,dx$ ונמצא פונקציה קדומה $J=\int e^{-2x}\sin x\,dx$ באינטגרציה בחלקים פעמיים ($u=e^{-2x}$):
+\begin{align*}
+J&=-e^{-2x}\cos x-\int 2e^{-2x}\cos x\,dx
+ =-e^{-2x}\cos x-2\left(e^{-2x}\sin x+\int 2e^{-2x}\sin x\,dx\right)\\
+ &=-e^{-2x}\cos x-2e^{-2x}\sin x-4J.
+\end{align*}
+לכן $5J=-e^{-2x}(\cos x+2\sin x)$, כלומר
+\[ \int e^{-2x}\sin x\,dx=-\frac{e^{-2x}(\cos x+2\sin x)}{5}+C. \]
+מכאן
+\[ I(R)=\frac{1}{5}-\frac{e^{-2R}(\cos R+2\sin R)}{5}. \]
+כאשר $R\to\infty$: $|\cos R+2\sin R|\le 3$ ו-$e^{-2R}\to 0$, ולכן (חסומה כפול שואפת לאפס) האיבר השני שואף ל-$0$. לכן
+\[ \int_0^\infty e^{-2x}\sin x\,dx=\frac15. \]
+\end{solution}

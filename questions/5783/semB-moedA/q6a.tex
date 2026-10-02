@@ -1,0 +1,24 @@
+% year: תשפ"ג
+% semester: ב
+% moed: א
+% note: ד"ר פיטר סמובול
+% source: exams/מבחנים/תשפג/מועד א תשפג סמסטר ב.pdf
+% number: 6א
+% points: 20
+% categories: taylor, derivatives
+
+\begin{question}
+(20 נק') רשמו את פולינום מקלורן מסדר 2 לפונקציה $y=f(x)$ המוגדרת בצורה סתומה: $x^2+x+e^x+2y=0$.
+\end{question}
+
+\begin{solution}
+נמצא $y(0)$, $y'(0)$, $y''(0)$ בגזירה סתומה.
+\begin{itemize}
+  \item $x=0$: $0+0+1+2y(0)=0\Rightarrow y(0)=-\frac12$.
+  \item גזירה: $2x+1+e^x+2y'=0\Rightarrow y'=-\frac{2x+1+e^x}{2}$, ולכן $y'(0)=-\frac{2}{2}=-1$.
+  \item גזירה נוספת: $2+e^x+2y''=0\Rightarrow y''=-\frac{2+e^x}{2}$, ולכן $y''(0)=-\frac32$.
+\end{itemize}
+פולינום מקלורן מסדר 2:
+\[ P_2(x)=y(0)+y'(0)x+\frac{y''(0)}{2}x^2=\boxed{-\frac12-x-\frac34x^2}. \]
+(בדיקה: כאן אפשר גם לבודד $y=-\frac12(x^2+x+e^x)$ ולהציב $e^x=1+x+\frac{x^2}{2}+\dots$, ומתקבל אותו פולינום.)
+\end{solution}

@@ -1,0 +1,29 @@
+% year: תשע"ט
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 3א
+% points: 10
+% categories: taylor
+% source: exams/מבחנים/תשעט/מועד מיוחד תשעט.pdf
+
+\begin{question}
+(10 נק') רשמו פולינום מקלורן ממעלה 6 עבור פונקציה $y=\sin\left(\sin(x^2)\right)$.
+\end{question}
+
+\begin{hint}
+הציבו $u=\sin(x^2)=x^2-\frac{x^6}{6}+o(x^6)$ בפיתוח $\sin u = u-\frac{u^3}{6}+o(u^3)$.
+\end{hint}
+
+\begin{solution}
+נשתמש בפיתוחי מקלורן הידועים $\sin t = t - \frac{t^3}{6} + o(t^4)$ (כאשר $t\to0$).
+
+ראשית, עם $t=x^2$: $\sin(x^2) = x^2 - \frac{x^6}{6} + o(x^8)$.
+
+נסמן $u=\sin(x^2)$; אז $u\to 0$ כאשר $x\to0$ ו-$u = O(x^2)$. לפי הפיתוח $\sin u = u - \frac{u^3}{6} + o(u^4)$, ומכיוון ש-$o(u^4)=o(x^8)$:
+\[ u^3 = \left(x^2-\tfrac{x^6}{6}+o(x^8)\right)^3 = x^6 + o(x^6), \]
+ולכן
+\[ \sin(\sin(x^2)) = x^2 - \frac{x^6}{6} - \frac{x^6}{6} + o(x^6) = x^2 - \frac{x^6}{3} + o(x^6). \]
+מיחידות פולינום טיילור (פולינום ממעלה $\le 6$ המקיים $f(x)-P(x)=o(x^6)$ הוא פולינום טיילור), פולינום מקלורן ממעלה 6 הוא
+\[ P_6(x) = x^2 - \frac{x^6}{3}. \]
+\end{solution}

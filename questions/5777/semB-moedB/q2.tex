@@ -1,0 +1,19 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: ב
+% source: exams/מבחנים/תשעז/מועד ב תשעז סמסטר ב.pdf
+% number: 2
+% points: 15
+% categories: continuity, func-limits
+
+\begin{question}
+(15 נק') עבור איזה ערך של הפרמטר $A$ הפונקציה $f(x)$ רציפה בנקודה $0$?
+\[ f(x)=\begin{cases}\dfrac{1-\cos^2(x)}{2x^2} & x\neq0\\ A & x=0\end{cases} \]
+\end{question}
+
+\begin{solution}
+$f$ רציפה ב-$0$ אם ורק אם $\lim_{x\to0}f(x)=f(0)=A$. לפי הזהות $1-\cos^2x=\sin^2x$:
+\[ \lim_{x\to0}\frac{1-\cos^2x}{2x^2}=\lim_{x\to0}\frac12\left(\frac{\sin x}{x}\right)^2=\frac12\cdot1^2=\frac12, \]
+לפי הגבול היסודי $\frac{\sin x}{x}\to1$ ואריתמטיקה של גבולות. לכן $f$ רציפה ב-$0$ אם ורק אם $\boxed{A=\frac12}$.
+\end{solution}

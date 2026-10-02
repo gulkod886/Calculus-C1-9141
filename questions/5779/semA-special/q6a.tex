@@ -1,0 +1,29 @@
+% year: תשע"ט
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 6א
+% points: 10
+% categories: improper-integrals, antiderivatives
+% source: exams/מבחנים/תשעט/מועד מיוחד תשעט.pdf
+
+\begin{question}
+(10 נקודות) האם האינטגרל הלא אמיתי הבא $\displaystyle\int_{-\infty}^{-2}\frac{dx}{x^2-2x}$ מתכנס? אם כן, מצאו אותו.
+\end{question}
+
+\begin{hint}
+פרקו לשברים חלקיים: $\frac{1}{x(x-2)}=\frac12\left(\frac{1}{x-2}-\frac1x\right)$.
+\end{hint}
+
+\begin{solution}
+בקטע $(-\infty,-2]$ המכנה $x^2-2x=x(x-2)>0$ (שני הגורמים שליליים), ולכן הפונקציה רציפה וחיובית שם, והבעיה היחידה היא הגבול $-\infty$. לפי ההגדרה,
+\[ \int_{-\infty}^{-2}\frac{dx}{x^2-2x} = \lim_{R\to-\infty}\int_R^{-2}\frac{dx}{x(x-2)}. \]
+פירוק לשברים חלקיים: $\frac{1}{x(x-2)}=\frac{A}{x}+\frac{B}{x-2}$, ומ-$1=A(x-2)+Bx$ נקבל ($x=0$) $A=-\frac12$ ו-($x=2$) $B=\frac12$. לכן
+\[ \int\frac{dx}{x(x-2)} = \frac12\ln|x-2|-\frac12\ln|x| + C = \frac12\ln\left|\frac{x-2}{x}\right| + C. \]
+לפיכך
+\[ \int_R^{-2}\frac{dx}{x(x-2)} = \frac12\ln\frac{-4}{-2} - \frac12\ln\left|\frac{R-2}{R}\right| = \frac12\ln2-\frac12\ln\left|1-\frac2R\right|. \]
+כאשר $R\to-\infty$, $1-\frac2R\to1$ ומרציפות הלוגריתם $\ln\left|1-\frac2R\right|\to0$. לכן הגבול קיים וסופי:
+\[ \int_{-\infty}^{-2}\frac{dx}{x^2-2x} = \frac{\ln2}{2}. \]
+\textbf{תשובה:} האינטגרל מתכנס וערכו $\frac12\ln2$.
+(אפשר גם לראות את ההתכנסות ממבחן ההשוואה הגבולי עם $\frac1{x^2}$, אך החישוב הישיר נותן גם את הערך.)
+\end{solution}

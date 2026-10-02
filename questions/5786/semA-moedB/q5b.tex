@@ -1,0 +1,32 @@
+% year: תשפ"ו
+% semester: א
+% moed: ב
+% number: 5ב
+% points: 10
+% categories: improper-integrals
+% official_solution: yes
+% source: exams/מבחנים/תשפו/sol B.pdf
+
+\begin{question}
+(10 נק') בדקו התכנסות או התבדרות של האינטגרל המוכלל הבא:
+\[ \int_1^\infty \frac{\cos x}{x^2 - \ln x} \]
+הערה: אתם יכולים להניח שהמכנה חיובי בתחום האינטגרציה.
+\end{question}
+
+\begin{hint}
+האינטגרנד אינו בעל סימן קבוע. בדקו התכנסות בהחלט: חסמו $|f(x)| \le \frac{1}{x^2 - \ln x}$ והשוו (במבחן ההשוואה הגבולי) ל-$\frac{1}{x^2}$.
+\end{hint}
+
+\begin{solution}
+נסמן $f(x) = \frac{\cos x}{x^2 - \ln x}$. המכנה חיובי ב-$[1, \infty)$ (כפי שמותר להניח; למעשה $\ln x \le x - 1 < x \le x^2$ עבור $x \ge 1$), ולכן $f$ רציפה שם והאינטגרל מוכלל רק בגלל הגבול האינסופי. $f$ מחליפה סימן אינסוף פעמים, לכן נבדוק \textbf{התכנסות בהחלט}.
+
+\textbf{חסימה:} לכל $x \ge 1$,
+\[ 0 \le |f(x)| = \frac{|\cos x|}{x^2 - \ln x} \le \frac{1}{x^2 - \ln x} =: h(x). \]
+
+\textbf{התכנסות $\int_1^\infty h$:} נשווה ל-$g(x) = \frac{1}{x^2}$. שתי הפונקציות חיוביות, ו-
+\[ \lim_{x\to\infty} \frac{g(x)}{h(x)} = \lim_{x\to\infty} \frac{x^2 - \ln x}{x^2} = \lim_{x\to\infty} \left( 1 - \frac{\ln x}{x^2} \right) = 1, \]
+כי $\frac{\ln x}{x^2} \to 0$ (לופיטל: $\frac{1/x}{2x} \to 0$). הגבול סופי וחיובי, ולכן לפי מבחן ההשוואה הגבולי $\int_1^\infty h$ ו-$\int_1^\infty g$ מתכנסים או מתבדרים יחד. מכיוון ש-$\int_1^\infty \frac{dx}{x^\alpha}$ מתכנס עבור $\alpha > 1$, ובפרט $\int_1^\infty \frac{dx}{x^2} = 1$, גם $\int_1^\infty h$ מתכנס.
+
+\textbf{מסקנה:} לפי מבחן ההשוואה (כי $0 \le |f| \le h$), $\int_1^\infty |f|$ מתכנס. אינטגרל מוכלל שמתכנס בהחלט מתכנס, ולכן
+\[ \int_1^\infty \frac{\cos x}{x^2 - \ln x}\,dx \ \text{מתכנס (ואף בהחלט).} \]
+\end{solution}

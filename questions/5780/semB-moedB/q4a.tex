@@ -1,0 +1,32 @@
+% year: תש"פ
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 4א
+% points: 10
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשפ/מועד ב סמסטר ב תשפ.pdf
+
+\begin{question}
+(10 נק') לאילו ערכים של הפרמטרים $a$ ו-$b$ הפונקציה
+\[ f(x)=\begin{cases} \dfrac{\sin(3x)}{\ln(1-x)}, & x<0\\[2mm] ax+b, & 0\le x\le1\\[2mm] (\cos(x-1))^{1/(x-1)}, & 1<x<\dfrac{\pi}{2}+1\end{cases} \]
+תהיה רציפה לכל $x$ ממשי קטן מ-$\frac{\pi}{2}+1$?
+\end{question}
+
+\begin{hint}
+דרשו שהגבולות החד-צדדיים בנקודות התפר $x=0$ ו-$x=1$ יהיו שווים לערך הפונקציה. בגבול ב-$x=1^+$ (מהצורה $1^\infty$) עברו ל-$e^{\ln(\cdot)}$.
+\end{hint}
+
+\begin{solution}
+בכל אחד מהקטעים הפתוחים $(-\infty,0)$, $(0,1)$, $(1,\frac\pi2+1)$ הפונקציה רציפה כהרכבה ומנה של פונקציות אלמנטריות: עבור $x<0$, $1-x>1$ ולכן $\ln(1-x)>0$ (המכנה לא מתאפס); עבור $1<x<\frac\pi2+1$, $0<x-1<\frac\pi2$ ולכן $\cos(x-1)>0$ והחזקה מוגדרת. נותר לבדוק את נקודות התפר.
+
+\textbf{ב-$x=0$:} $f(0)=b=\lim_{x\to0^+}f(x)$. משמאל, בעזרת $\frac{\sin 3x}{3x}\to1$ ו-$\frac{\ln(1-x)}{-x}\to1$:
+\[ \lim_{x\to0^-}\frac{\sin3x}{\ln(1-x)}=\lim_{x\to0^-}\frac{\sin3x}{3x}\cdot\frac{-x}{\ln(1-x)}\cdot\frac{3x}{-x}=1\cdot1\cdot(-3)=-3 . \]
+לכן רציפות ב-$0$ דורשת $b=-3$.
+
+\textbf{ב-$x=1$:} $f(1)=a+b=\lim_{x\to1^-}f(x)$. מימין נסמן $t=x-1\to0^+$:
+\[ (\cos t)^{1/t}=\exp\Big(\frac{\ln\cos t}{t}\Big),\qquad \lim_{t\to0^+}\frac{\ln\cos t}{t}\overset{\text{לופיטל}}{=}\lim_{t\to0^+}\frac{-\tan t}{1}=0 , \]
+(הגבול מהצורה $\frac00$, והנגזרות קיימות), ולכן מרציפות האקספוננט $\lim_{x\to1^+}f(x)=e^0=1$. רציפות ב-$1$ דורשת $a+b=1$, כלומר $a=4$.
+
+\textbf{תשובה:} $\boxed{a=4,\ b=-3}$.
+\end{solution}

@@ -1,0 +1,33 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 1ב
+% points: 10
+% categories: func-limits, func-analysis
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(10 נק') מצאו את כל האסימפטוטות של הפונקציה: $f(x)=\dfrac{x^2+x-6}{|x|-2}$.
+\end{question}
+
+\begin{hint}
+פרקו את המונה $x^2+x-6=(x+3)(x-2)$ וטפלו בנפרד במקרים $x>0$ ו-$x<0$.
+\end{hint}
+
+\begin{solution}
+תחום ההגדרה: $|x|\neq2$, כלומר $x\neq\pm2$. נפרק $x^2+x-6=(x+3)(x-2)$.
+
+\textbf{עבור $x\ge0$, $x\ne 2$:} $|x|-2=x-2$ ולכן $f(x)=\dfrac{(x+3)(x-2)}{x-2}=x+3$.
+
+\textbf{עבור $x<0$, $x\ne-2$:} $|x|-2=-x-2=-(x+2)$ ולכן
+\[ f(x)=-\frac{(x+3)(x-2)}{x+2}=-\frac{x^2+x-6}{x+2}=-x+1+\frac{4}{x+2}, \]
+(חילוק פולינומים: $x^2+x-6=(x+2)(x-1)-4$).
+
+\textbf{אסימפטוטות אנכיות:} ב-$x=2$: $\lim_{x\to2}f(x)=\lim_{x\to2}(x+3)=5$ סופי, ולכן זו נקודת אי-רציפות סליקה ואין שם אסימפטוטה. ב-$x=-2$: $\lim_{x\to-2^\pm}\left(-x+1+\frac{4}{x+2}\right)=\pm\infty$, ולכן $x=-2$ אסימפטוטה אנכית.
+
+\textbf{אסימפטוטות משופעות/אופקיות:} כאשר $x\to+\infty$ מתקיים $f(x)=x+3$ בדיוק, ולכן $y=x+3$ אסימפטוטה משופעת ב-$+\infty$. כאשר $x\to-\infty$:
+\[ f(x)-(-x+1)=\frac{4}{x+2}\xrightarrow[x\to-\infty]{}0, \]
+ולכן $y=-x+1$ אסימפטוטה משופעת ב-$-\infty$. (אין אסימפטוטות אופקיות.)
+
+\textbf{תשובה:} $x=-2$ (אנכית), $y=x+3$ (ב-$+\infty$), $y=-x+1$ (ב-$-\infty$).
+\end{solution}

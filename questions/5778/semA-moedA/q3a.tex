@@ -1,0 +1,39 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 3א
+% points: 10
+% categories: taylor, func-limits
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול:
+\[ \lim_{x\to0}\left(\frac{\sqrt{1-2x+x^3}-\sqrt[3]{1-3x+x^2}}{x^2}\right) \]
+\underline{רמז}: אפשר להשתמש בנוסחאות מקלורין.
+\end{question}
+
+\begin{hint}
+פתחו כל שורש לפי $(1+t)^p=1+pt+\frac{p(p-1)}{2}t^2+o(t^2)$ עד סדר $x^2$.
+\end{hint}
+
+\begin{solution}
+נשתמש בפיתוח מקלורין $(1+t)^p=1+pt+\frac{p(p-1)}{2!}t^2+o(t^2)$ כאשר $t\to0$.
+
+עבור השורש הראשון, $t=x^3-2x\to0$ ו-$p=\frac12$:
+\begin{align*}
+\sqrt{1-2x+x^3}&=1+\frac12(x^3-2x)-\frac18(x^3-2x)^2+o(x^2)\\
+&=1-x+\frac{x^3}{2}-\frac18\left(4x^2-4x^4+x^6\right)+o(x^2)=1-x-\frac{x^2}{2}+o(x^2).
+\end{align*}
+(השתמשנו בכך ש-$t=O(x)$ ולכן $o(t^2)=o(x^2)$, ובכך שהחזקות $x^3,x^4,x^6$ הן $o(x^2)$.)
+
+עבור השורש השני, $t=-3x+x^2$ ו-$p=\frac13$, $\frac{p(p-1)}{2}=\frac{\frac13\cdot(-\frac23)}{2}=-\frac19$:
+\begin{align*}
+\sqrt[3]{1-3x+x^2}&=1+\frac13(-3x+x^2)-\frac19(-3x+x^2)^2+o(x^2)\\
+&=1-x+\frac{x^2}{3}-\frac19\left(9x^2-6x^3+x^4\right)+o(x^2)=1-x-\frac{2x^2}{3}+o(x^2).
+\end{align*}
+לכן
+\[ \frac{\sqrt{1-2x+x^3}-\sqrt[3]{1-3x+x^2}}{x^2}=\frac{\left(-\frac12+\frac23\right)x^2+o(x^2)}{x^2}=\frac16+\frac{o(x^2)}{x^2}\xrightarrow[x\to0]{}\frac16. \]
+\[ \boxed{\lim_{x\to0}\frac{\sqrt{1-2x+x^3}-\sqrt[3]{1-3x+x^2}}{x^2}=\frac16} \]
+\end{solution}

@@ -1,0 +1,31 @@
+% year: תשע"ט
+% semester: ב
+% moed: ב
+% number: 4א
+% points: 15
+% categories: continuity, func-limits, lhopital
+% source: exams/מבחנים/תשעט/חודיסמן מועד ב תשעט.pdf
+
+\begin{question}
+(15 נק') לאילו ערכים של של הפרמטרים $a$ ו-$b$ הפונקציה
+\[ f(x)=\begin{cases}\dfrac{\sin(3x)}{\ln(1-x)}, & x<0\\[2mm] ax+b, & 0\le x\le1\\[1mm] \big(\cos(x-1)\big)^{1/(x-1)}, & x>1\end{cases} \]
+תהיה רציפה לכל $x$ ממשי?
+\end{question}
+
+\begin{hint}
+יש לבדוק רציפות רק בנקודות התפר $x=0$ ו-$x=1$. את הגבול מימין ל-$1$ כתבו בצורה $e^{\frac{\ln\cos(x-1)}{x-1}}$.
+\end{hint}
+
+\begin{solution}
+עבור $x<0$ מתקיים $1-x>1$ ולכן $\ln(1-x)>0$, כך שבקטע $(-\infty,0)$ הפונקציה רציפה כמנה של פונקציות רציפות עם מכנה שונה מאפס. ב-$(0,1)$ היא פולינום. עבור $x>1$ הביטוי $\big(\cos(x-1)\big)^{1/(x-1)}=e^{\frac{\ln\cos(x-1)}{x-1}}$ מוגדר ורציף כאשר $\cos(x-1)>0$, ובפרט בקטע $1<x<1+\frac\pi2$, שהוא הסביבה הרלוונטית לרציפות ב-$1$. (הערה: עבור $x>1$ שבהם $\cos(x-1)\le0$ הביטוי אינו מוגדר במובן הממשי, ולכן את הדרישה "רציפה לכל $x$" יש להבין כרציפות בתחום ההגדרה.) נבדוק את נקודות התפר.
+
+\textbf{הנקודה $x=0$:} $f(0)=b=\lim_{x\to0^+}f(x)$. משמאל:
+\[ \lim_{x\to0^-}\frac{\sin3x}{\ln(1-x)}=\lim_{x\to0^-}\frac{\sin3x}{3x}\cdot\frac{-x}{\ln(1-x)}\cdot(-3)=1\cdot1\cdot(-3)=-3, \]
+לפי $\lim_{t\to0}\frac{\sin t}{t}=1$ ו-$\lim_{t\to0}\frac{\ln(1+t)}{t}=1$ (עם $t=-x$). לכן $b=-3$.
+
+\textbf{הנקודה $x=1$:} $f(1)=a+b=\lim_{x\to1^-}f(x)$. מימין, נסמן $u=x-1\to0^+$:
+\[ \big(\cos u\big)^{1/u}=e^{\frac{\ln\cos u}{u}},\qquad \lim_{u\to0^+}\frac{\ln\cos u}{u}\overset{\text{לופיטל}}{=}\lim_{u\to0^+}\frac{-\tan u}{1}=0. \]
+מרציפות האקספוננט הגבול הוא $e^0=1$. לכן $a+b=1$.
+
+\textbf{תשובה:} $b=-3$, $a=4$.
+\end{solution}

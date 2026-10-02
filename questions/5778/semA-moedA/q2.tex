@@ -1,0 +1,51 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 2
+% points: 20
+% categories: continuity, func-limits
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(20 נק')
+מצאו את נקודות אי-הרציפות של הפונקציה
+\[ f(x)=\frac{e^{\left(\frac1x-\frac{1}{x+1}\right)}}{e^{\frac1x}-2} \]
+וקבעו את סוגיהן.
+\end{question}
+
+\begin{hint}
+הפונקציה אינה מוגדרת בשלוש נקודות: היכן ש-$x=0$, $x=-1$ ושם $e^{1/x}=2$.
+\end{hint}
+
+\begin{hint}
+ב-$x\to0^+$ חלקו מונה ומכנה ב-$e^{1/x}$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום ההגדרה.} הביטוי מוגדר כאשר $x\neq0$, $x\neq-1$ ו-$e^{1/x}\neq 2$, כלומר $\frac1x\neq\ln2$, כלומר $x\neq\frac1{\ln2}$. בכל נקודה אחרת $f$ היא הרכבה ומנה של פונקציות אלמנטריות רציפות (עם מכנה שונה מאפס), ולכן רציפה. נקודות אי-הרציפות הן לכן $x=0,\ x=-1,\ x=\frac{1}{\ln2}$. נבדוק כל אחת.
+
+\textbf{1. $x=\frac1{\ln2}$.} המונה רציף בנקודה זו וערכו
+$e^{\ln2-\frac{1}{\frac1{\ln2}+1}}>0$ (אקספוננט תמיד חיובי). המכנה $e^{1/x}-2$ שואף ל-$0$. כאשר $x\to\left(\frac1{\ln2}\right)^+$ מתקיים $\frac1x<\ln2$, לכן $e^{1/x}-2\to0^-$, ו-
+\[ \lim_{x\to(1/\ln2)^+}f(x)=-\infty, \qquad \lim_{x\to(1/\ln2)^-}f(x)=+\infty \]
+(משמאל $\frac1x>\ln2$ והמכנה שואף ל-$0^+$). הגבולות החד-צדדיים אינם סופיים, ולכן זו \textbf{נקודת אי-רציפות מסוג שני}.
+
+\textbf{2. $x=-1$.} כאשר $x\to-1$, המכנה רציף ושואף ל-$e^{-1}-2<0$ (מספר שלילי השונה מאפס). נבדוק את המונה:
+\begin{itemize}
+  \item כאשר $x\to-1^+$: $x+1\to0^+$, לכן $\frac1x-\frac1{x+1}\to-1-\infty=-\infty$, ומכאן $e^{\left(\frac1x-\frac1{x+1}\right)}\to0$. לכן $\lim_{x\to-1^+}f(x)=\frac{0}{e^{-1}-2}=0$.
+  \item כאשר $x\to-1^-$: $x+1\to0^-$, לכן $\frac1x-\frac1{x+1}\to+\infty$ והמונה שואף ל-$+\infty$. מכיוון שהמכנה שואף למספר שלילי, $\lim_{x\to-1^-}f(x)=-\infty$.
+\end{itemize}
+אחד הגבולות החד-צדדיים אינסופי, ולכן זו \textbf{נקודת אי-רציפות מסוג שני}.
+
+\textbf{3. $x=0$.}
+\begin{itemize}
+  \item כאשר $x\to0^+$: $\frac1x\to+\infty$ ולכן גם המונה וגם המכנה שואפים ל-$\infty$. נחלק מונה ומכנה ב-$e^{1/x}$:
+  \[ f(x)=\frac{e^{\frac1x}\cdot e^{-\frac1{x+1}}}{e^{\frac1x}\left(1-2e^{-\frac1x}\right)}=\frac{e^{-\frac{1}{x+1}}}{1-2e^{-\frac1x}}\xrightarrow[x\to0^+]{}\frac{e^{-1}}{1-0}=\frac1e, \]
+  כי $e^{-1/x}\to0$ כאשר $\frac1x\to+\infty$. (בפתרון הרשמי הגבול חושב בכלל לופיטל ויצא אותו ערך.)
+  \item כאשר $x\to0^-$: $\frac1x\to-\infty$, לכן $e^{1/x}\to0$ והמכנה שואף ל-$-2$; כמו כן $\frac1x-\frac1{x+1}\to-\infty-1=-\infty$, לכן המונה שואף ל-$0$. מכאן $\lim_{x\to0^-}f(x)=\frac{0}{-2}=0$.
+\end{itemize}
+שני הגבולות החד-צדדיים קיימים וסופיים אך שונים ($\frac1e\neq0$), ולכן זו \textbf{נקודת אי-רציפות מסוג ראשון (קפיצה)}.
+
+\textbf{סיכום:} $x=0$ — אי-רציפות מסוג ראשון (קפיצה); $x=-1$ ו-$x=\frac1{\ln2}$ — אי-רציפות מסוג שני.
+\end{solution}

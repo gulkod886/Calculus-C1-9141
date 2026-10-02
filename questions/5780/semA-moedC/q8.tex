@@ -1,0 +1,38 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ג
+% part: ב
+% number: 5
+% points: 9
+% categories: derivatives, continuity, multiple-choice
+% source: exams/מבחנים/תשפ/מועד מיוחד תשפ.pdf
+
+\begin{question}
+תהי $f(x)$ פונקציה גזירה \textbf{פעמיים} בקטע פתוח $(a,b)$. מה מהבאים חייב להיות נכון?
+\begin{enumerate}
+  \item $f'(x)$ רציפה בקטע פתוח $(a,b)$.
+  \item $f(x)$ בעלת נקודת פיתול בקטע פתוח $(a,b)$.
+  \item $f(x)$ פונקציה מונוטונית בקטע פתוח $(a,b)$.
+  \item $f''(x)$ פונקציה רציפה בקטע פתוח $(a,b)$.
+  \item $f(x)$ פונקציה חסומה בקטע פתוח $(a,b)$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+פונקציה גזירה בנקודה היא רציפה בה. הפעילו זאת על $f'$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: א.}
+
+$f$ גזירה פעמיים ב-$(a,b)$, כלומר $f'$ גזירה בכל נקודה של $(a,b)$. פונקציה גזירה בנקודה רציפה בה, ולכן $f'$ רציפה ב-$(a,b)$.
+
+דוגמאות נגדיות לשאר הטענות, בקטע $(0,1)$ (אלא אם צוין אחרת):
+\begin{itemize}
+  \item $f(x)=x^2$ (ב-$(0,1)$): $f''=2>0$, אין נקודת פיתול (ב' נופלת).
+  \item $f(x)=\left(x-\frac12\right)^2$: לא מונוטונית ב-$(0,1)$ (ג' נופלת).
+  \item $f(x)=x^4\sin\frac1x$ ($f(0)=0$) בקטע $(-1,1)$: גזירה פעמיים, אבל $f''(x)=12x^2\sin\frac1x-6x\cos\frac1x-\sin\frac1x$ עבור $x\neq0$ ו-$f''(0)=0$, ו-$f''$ אינה רציפה ב-$0$ (ד' נופלת).
+  \item $f(x)=\frac1x$ ב-$(0,1)$: גזירה פעמיים אך אינה חסומה (ה' נופלת).
+\end{itemize}
+\end{solution}

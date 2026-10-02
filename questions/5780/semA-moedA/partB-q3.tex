@@ -1,0 +1,34 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: א
+% part: ב
+% number: 3
+% points: 9
+% categories: derivatives, multiple-choice
+% source: exams/מבחנים/תשפ/מועד א תשפ.pdf
+
+\begin{question}
+הנגזרת $y'(0)$ של הפונקציה הסתומה $y(x)$ המוגדרת על ידי המשוואה $\cos\left(\frac{\pi}{2}+x+y\right)-y=0$ בסביבה של הנקודה $(0,0)$ שווה ל-
+\begin{enumerate}
+  \item[(א)] $\frac12$
+  \item[(ב)] $0$
+  \item[(ג)] $\frac{\pi}{2}$
+  \item[(ד)] $1+\frac{\pi}{2}$
+  \item[(ה)] $-\frac12$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+גזרו את שני אגפי המשוואה לפי $x$, כאשר $y=y(x)$ (כלל השרשרת), והציבו $x=0$, $y=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ה).}
+
+ראשית, הנקודה $(0,0)$ מקיימת את המשוואה: $\cos\frac{\pi}{2}-0=0$. נגזור את שני אגפי המשוואה לפי $x$, כאשר $y=y(x)$, לפי כלל השרשרת:
+\[ -\sin\left(\frac{\pi}{2}+x+y\right)\cdot\left(1+y'\right) - y' = 0. \]
+נציב $x=0$, $y(0)=0$; אז $\sin\frac{\pi}{2}=1$:
+\[ -(1+y'(0)) - y'(0) = 0 \quad\Longrightarrow\quad -1-2y'(0)=0 \quad\Longrightarrow\quad y'(0) = -\frac12. \]
+(לחלופין: $\cos\left(\frac\pi2+t\right)=-\sin t$, ולכן המשוואה היא $\sin(x+y)+y=0$; גזירה נותנת $\cos(x+y)(1+y')+y'=0$, וב-$(0,0)$: $1+2y'=0$.)
+\end{solution}

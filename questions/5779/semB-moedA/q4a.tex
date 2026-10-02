@@ -1,0 +1,35 @@
+% year: תשע"ט
+% semester: ב
+% moed: א
+% number: 4א
+% points: 15
+% categories: continuity, func-limits, lhopital
+% source: exams/מבחנים/תשעט/חודיסמן מועד א תשעט.pdf
+
+\begin{question}
+(15 נק') לאילו ערכים של של הפרמטרים $a$ ו-$b$ הפונקציה
+\[ f(x)=\begin{cases}\dfrac{1-\cos x}{x\ln(1+x)}, & -1<x<0\\[2mm] ax+b, & 0\le x\le1\\[1mm] x^{1/(x-1)}, & x>1\end{cases} \]
+תהיה רציפה בתחום $x>-1$?
+\end{question}
+
+\begin{hint}
+בכל אחד מהקטעים הפתוחים הפונקציה רציפה כהרכבה של פונקציות אלמנטריות; יש לבדוק רק את $x=0$ ואת $x=1$.
+\end{hint}
+
+\begin{hint}
+את הגבול $\lim_{x\to1^+}x^{1/(x-1)}$ חשבו בעזרת $x^{1/(x-1)}=e^{\frac{\ln x}{x-1}}$.
+\end{hint}
+
+\begin{solution}
+בקטעים $(-1,0)$, $(0,1)$, $(1,\infty)$ הפונקציה רציפה (מנה/הרכבה של פונקציות רציפות, והמכנה $x\ln(1+x)\ne0$ ב-$(-1,0)$; ב-$(1,\infty)$: $x^{1/(x-1)}=e^{\ln x/(x-1)}$). נותר לבדוק את נקודות התפר.
+
+\textbf{הנקודה $x=0$:} $f(0)=b=\lim_{x\to0^+}f(x)$. משמאל, בעזרת הגבולות הידועים $\lim_{x\to0}\frac{1-\cos x}{x^2}=\frac12$ ו-$\lim_{x\to0}\frac{\ln(1+x)}{x}=1$:
+\[ \lim_{x\to0^-}\frac{1-\cos x}{x\ln(1+x)}=\lim_{x\to0^-}\frac{1-\cos x}{x^2}\cdot\frac{x}{\ln(1+x)}=\frac12\cdot1=\frac12. \]
+לכן רציפות ב-$0$ שקולה ל-$b=\frac12$.
+
+\textbf{הנקודה $x=1$:} $f(1)=a+b=\lim_{x\to1^-}f(x)$. מימין:
+\[ \lim_{x\to1^+}x^{1/(x-1)}=\lim_{x\to1^+}e^{\frac{\ln x}{x-1}}. \]
+הגבול $\lim_{x\to1}\frac{\ln x}{x-1}$ הוא מהצורה $\frac00$, ולפי לופיטל $=\lim_{x\to1}\frac{1/x}{1}=1$ (זו גם הנגזרת של $\ln$ ב-$1$). מרציפות האקספוננט הגבול הוא $e^1=e$. לכן רציפות ב-$1$ שקולה ל-$a+b=e$.
+
+\textbf{תשובה:} $b=\frac12$, $a=e-\frac12$.
+\end{solution}

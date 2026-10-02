@@ -1,0 +1,26 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ג
+% number: 1א
+% points: 10
+% categories: sequences
+% source: exams/מבחנים/תשעח/מועד מיוחד תשעח.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבול הבא:
+גבול הסדרה $\displaystyle\lim_{n\to\infty}\left(\frac{(n+4)!\cdot n}{(n+5)!-(n+2)!}\right)$.
+\end{question}
+
+\begin{hint}
+הוציאו $(n+2)!$ כגורם משותף במונה ובמכנה.
+\end{hint}
+
+\begin{solution}
+נשתמש ב-$(n+4)!=(n+2)!\,(n+3)(n+4)$ וב-$(n+5)!=(n+2)!\,(n+3)(n+4)(n+5)$. נצמצם ב-$(n+2)!\neq0$:
+\[ \frac{(n+4)!\cdot n}{(n+5)!-(n+2)!}=\frac{n(n+3)(n+4)}{(n+3)(n+4)(n+5)-1}. \]
+במונה ובמכנה פולינומים ממעלה $3$ עם מקדם מוביל $1$. נחלק ב-$n^3$:
+\[ =\frac{\left(1+\frac3n\right)\left(1+\frac4n\right)}{\left(1+\frac3n\right)\left(1+\frac4n\right)\left(1+\frac5n\right)-\frac1{n^3}}\xrightarrow[n\to\infty]{}\frac{1}{1-0}=1 \]
+לפי אריתמטיקה של גבולות.
+\[ \boxed{\lim_{n\to\infty}\frac{(n+4)!\cdot n}{(n+5)!-(n+2)!}=1} \]
+\end{solution}

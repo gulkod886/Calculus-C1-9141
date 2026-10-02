@@ -1,0 +1,33 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 5א
+% points: 10
+% categories: antiderivatives
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+{(10 נק')} חשבו את האינטגרל $\displaystyle\int\frac{3x-1}{x^2-x+1}\,dx$.
+\end{question}
+
+\begin{hint}
+כתבו את המונה כצירוף של נגזרת המכנה $2x-1$ וקבוע, והשלימו את המכנה לריבוע.
+\end{hint}
+
+\begin{solution}
+למכנה $x^2-x+1$ אין שורשים ממשיים (הדיסקרימיננטה $1-4=-3<0$), ולכן $x^2-x+1>0$ לכל $x$. נפרק את המונה לפי נגזרת המכנה $(x^2-x+1)'=2x-1$:
+\[ 3x-1=\frac32(2x-1)+\frac12. \]
+לכן
+\[ \int\frac{3x-1}{x^2-x+1}\,dx=\frac32\int\frac{2x-1}{x^2-x+1}\,dx+\frac12\int\frac{dx}{\left(x-\frac12\right)^2+\frac34}. \]
+באינטגרל הראשון נציב $u=x^2-x+1$, $du=(2x-1)\,dx$:
+\[ \frac32\int\frac{du}{u}=\frac32\ln|u|=\frac32\ln\left(x^2-x+1\right). \]
+בשני נציב $v=x-\frac12$, $dv=dx$, ונשתמש ב-$\int\frac{dv}{v^2+a^2}=\frac1a\arctan\frac va$ עם $a=\frac{\sqrt3}{2}$:
+\[ \frac12\int\frac{dv}{v^2+\frac34}=\frac12\cdot\frac{2}{\sqrt3}\arctan\frac{2v}{\sqrt3}=\frac{1}{\sqrt3}\arctan\frac{2x-1}{\sqrt3}. \]
+לסיכום
+\[ \boxed{\int\frac{3x-1}{x^2-x+1}\,dx=\frac32\ln\left(x^2-x+1\right)+\frac{1}{\sqrt3}\arctan\frac{2x-1}{\sqrt3}+C} \]
+(אין צורך בערך מוחלט בתוך ה-$\ln$ כי $x^2-x+1>0$.) בדיקה בגזירה: $\frac32\cdot\frac{2x-1}{x^2-x+1}+\frac1{\sqrt3}\cdot\frac{2/\sqrt3}{1+\frac{(2x-1)^2}{3}}=\frac{3x-\frac32}{x^2-x+1}+\frac{2}{4x^2-4x+4}=\frac{3x-1}{x^2-x+1}$.
+
+\textbf{הערה:} בפתרון הרשמי המקדם של ה-$\arctan$ רשום $\frac{2}{\sqrt3}$; זו טעות (נשכח הגורם $\frac12$), והמקדם הנכון הוא $\frac1{\sqrt3}$.
+\end{solution}

@@ -1,0 +1,36 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 2א
+% points: 8
+% categories: func-analysis
+% source: exams/מבחנים/תשפב/מועד ג תשפב.pdf
+
+\begin{question}
+(8 נק') מצאו את כל נקודות הקיצון המקומיות והמוחלטות (גלובליות) על כל הישר של הפונקציה
+\[ f(x)=x^2\cdot e^{-x} \]
+\end{question}
+
+\begin{hint}
+בדקו את הגבולות ב-$\pm\infty$ כדי להכריע אם יש קיצון מוחלט.
+\end{hint}
+
+\begin{solution}
+$f$ גזירה בכל $\R$, ו-
+\[ f'(x)=2xe^{-x}-x^2e^{-x}=x(2-x)e^{-x}. \]
+כיוון ש-$e^{-x}>0$, $f'(x)=0\iff x=0$ או $x=2$, וסימן $f'$ הוא סימן $x(2-x)$:
+\begin{itemize}
+  \item $f'<0$ ב-$(-\infty,0)$: $f$ יורדת.
+  \item $f'>0$ ב-$(0,2)$: $f$ עולה.
+  \item $f'<0$ ב-$(2,\infty)$: $f$ יורדת.
+\end{itemize}
+לכן ב-$x=0$ יש \textbf{מינימום מקומי} $f(0)=0$, וב-$x=2$ יש \textbf{מקסימום מקומי} $f(2)=\frac{4}{e^2}$.
+
+\textbf{קיצון מוחלט.}
+\begin{itemize}
+  \item $f(x)=x^2e^{-x}\ge0=f(0)$ לכל $x$, ולכן $x=0$ היא \textbf{מינימום מוחלט}, ערכו $0$.
+  \item $\lim_{x\to-\infty}x^2e^{-x}=+\infty$ (שני הגורמים שואפים ל-$+\infty$), ולכן $f$ אינה חסומה מלעיל ו\textbf{אין מקסימום מוחלט}. בפרט המקסימום המקומי ב-$x=2$ אינו מוחלט (למשל $f(-2)=4e^2>\frac4{e^2}$).
+\end{itemize}
+(לשלמות: $\lim_{x\to+\infty}\frac{x^2}{e^x}=0$ לפי לופיטל פעמיים.)
+\end{solution}

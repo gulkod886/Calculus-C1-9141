@@ -1,0 +1,34 @@
+% year: תשפ"ד
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 6
+% points: 14
+% categories: definite-integrals, integral-applications
+% source: exams/מבחנים/תשפד/מועד ג תשפד.pdf
+
+\begin{question}
+חשבו את נפח גוף הסיבוב סביב ציר ה-$x$ של הפונקציה
+\[ f(x)=\frac{1}{\sqrt{x}(x-1)} \]
+בקטע $[4,9]$.
+\end{question}
+
+\begin{hint}
+נפח גוף סיבוב: $V=\pi\int_a^b f^2(x)\,dx$. כאן $f^2(x)=\frac1{x(x-1)^2}$ -- השתמשו בשברים חלקיים.
+\end{hint}
+
+\begin{solution}
+$f$ רציפה על $[4,9]$, ונפח גוף הסיבוב סביב ציר ה-$x$ הוא
+\[ V=\pi\int_4^9f^2(x)\,dx=\pi\int_4^9\frac{dx}{x(x-1)^2}. \]
+\textbf{שברים חלקיים:}
+\[ \frac1{x(x-1)^2}=\frac Ax+\frac B{x-1}+\frac C{(x-1)^2}\ \Longrightarrow\ 1=A(x-1)^2+Bx(x-1)+Cx. \]
+הצבת $x=0$ נותנת $A=1$; הצבת $x=1$ נותנת $C=1$; השוואת מקדם $x^2$: $A+B=0$, ולכן $B=-1$:
+\[ \frac1{x(x-1)^2}=\frac1x-\frac1{x-1}+\frac1{(x-1)^2}. \]
+\textbf{אינטגרציה:} פונקציה קדומה (ל-$x>1$) היא $F(x)=\ln x-\ln(x-1)-\frac1{x-1}$, ולפי המשפט היסודי
+\begin{align*}
+\int_4^9\frac{dx}{x(x-1)^2}&=\left[\ln\frac{x}{x-1}-\frac1{x-1}\right]_4^9=\left(\ln\frac98-\frac18\right)-\left(\ln\frac43-\frac13\right)\\
+&=\ln\left(\frac98\cdot\frac34\right)+\frac13-\frac18=\ln\frac{27}{32}+\frac5{24}.
+\end{align*}
+\textbf{תשובה:}
+\[ V=\pi\left(\frac5{24}+\ln\frac{27}{32}\right)=\pi\left(\frac5{24}-\ln\frac{32}{27}\right)\approx0.1207. \]
+\end{solution}

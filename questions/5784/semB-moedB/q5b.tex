@@ -1,0 +1,24 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ב
+% number: 5ב
+% categories: definite-integrals
+% source: exams/מבחנים/תשפד/מועד ב תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \int_0^{\pi}e^x\sin(x)\,dx \]
+\end{question}
+
+\begin{hint}
+אינטגרציה בחלקים פעמיים; האינטגרל המקורי יופיע שוב באגף ימין, ופותרים משוואה עבורו.
+\end{hint}
+
+\begin{solution}
+נסמן $I=\int_0^\pi e^x\sin x\,dx$. בחלקים עם $u=\sin x$, $v'=e^x$:
+\[ I=\big[e^x\sin x\big]_0^\pi-\int_0^\pi e^x\cos x\,dx=0-\int_0^\pi e^x\cos x\,dx. \]
+שוב בחלקים עם $u=\cos x$, $v'=e^x$:
+\[ \int_0^\pi e^x\cos x\,dx=\big[e^x\cos x\big]_0^\pi+\int_0^\pi e^x\sin x\,dx=(-e^\pi-1)+I. \]
+לכן $I=e^\pi+1-I$, כלומר
+\[ I=\boxed{\frac{e^\pi+1}{2}}\approx12.07. \]
+\end{solution}

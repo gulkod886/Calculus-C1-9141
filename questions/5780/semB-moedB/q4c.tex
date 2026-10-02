@@ -1,0 +1,23 @@
+% year: תש"פ
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 4ג
+% points: 7
+% categories: improper-integrals
+% source: exams/מבחנים/תשפ/מועד ב סמסטר ב תשפ.pdf
+
+\begin{question}
+(7 נק') חשבו $\displaystyle\int_{0.25}^{+\infty}\frac{dx}{(4x+1)\sqrt{x}}$.
+\end{question}
+
+\begin{hint}
+הציבו $t=\sqrt x$.
+\end{hint}
+
+\begin{solution}
+זהו אינטגרל לא אמיתי (גבול עליון אינסופי). נציב $t=\sqrt x$, $x=t^2$, $dx=2t\,dt$; כש-$x=0.25$, $t=\frac12$, וכש-$x\to\infty$, $t\to\infty$:
+\[ \int_{0.25}^{R}\frac{dx}{(4x+1)\sqrt x}=\int_{1/2}^{\sqrt R}\frac{2t\,dt}{(4t^2+1)t}=\int_{1/2}^{\sqrt R}\frac{2\,dt}{1+(2t)^2}=\Big[\arctan(2t)\Big]_{1/2}^{\sqrt R}=\arctan(2\sqrt R)-\frac{\pi}{4}. \]
+כאשר $R\to\infty$, $\arctan(2\sqrt R)\to\frac\pi2$. לכן האינטגרל מתכנס ו-
+\[ \int_{0.25}^{+\infty}\frac{dx}{(4x+1)\sqrt{x}}=\frac\pi2-\frac\pi4=\boxed{\frac{\pi}{4}} . \]
+\end{solution}

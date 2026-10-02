@@ -1,0 +1,25 @@
+% year: תשע"ו
+% type: מבחן
+% semester: ב
+% moed: ג
+% source: exams/מבחנים/תשעו/מועד ג תשעו.pdf
+% number: 4ב
+% points: 10
+% categories: mvt
+
+\begin{question}
+(10 נק') הראו שלכל $0<a<b$ ולכל $p>1$ מתקיים:
+\[ pa^{p-1}(b-a)\le b^p-a^p\le pb^{p-1}(b-a) \]
+\end{question}
+
+\begin{hint}
+הפעילו את משפט לגרנז' על $f(x)=x^p$ בקטע $[a,b]$, והשתמשו במונוטוניות של $x^{p-1}$.
+\end{hint}
+
+\begin{solution}
+תהי $f(x)=x^p$. היא רציפה ב-$[a,b]$ וגזירה ב-$(a,b)$ (כי $a>0$), עם $f'(x)=px^{p-1}$. לפי משפט לגרנז' קיימת $c\in(a,b)$ כך ש-
+\[ b^p-a^p=f'(c)(b-a)=pc^{p-1}(b-a). \]
+מכיוון ש-$p>1$, המעריך $p-1>0$ ולכן הפונקציה $x\mapsto x^{p-1}$ עולה ממש ב-$(0,\infty)$. מ-$0<a<c<b$ נובע $a^{p-1}<c^{p-1}<b^{p-1}$. נכפול ב-$p(b-a)>0$:
+\[ pa^{p-1}(b-a)<pc^{p-1}(b-a)=b^p-a^p<pb^{p-1}(b-a), \]
+ובפרט מתקיים אי-השוויון הנדרש (אף בחוזק).
+\end{solution}

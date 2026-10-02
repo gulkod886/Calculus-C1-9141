@@ -1,0 +1,52 @@
+% year: תשפ"ו
+% type: בוחן
+% semester: א
+% official_solution: yes
+% source: exams/בחנים/תשפ״ו, בוחן, 9141.pdf
+% part: ב
+% number: 7
+% points: 10
+% categories: continuity, func-limits, multiple-choice
+
+\begin{question}
+בדקו את רציפות הפונקציה הבאה בנקודה 3:
+\[
+f(x)=\begin{cases}
+\frac{\sqrt{x+7}-\sqrt{10}}{\sqrt{x+4}-\sqrt{7}}, & \text{if } x>3,\\
+\sqrt{x^2+1}, & \text{if } x\le 3
+\end{cases}
+\]
+אילו מהטענות הבאות נכונה?
+\begin{enumerate}
+  \item הפונקציה רציפה ב-3.
+  \item הפונקציה בעלת אי-רציפות סליקה ב-3.
+  \item הפונקציה בעלת אי-רציפות מסוג קפיצה ב-3.
+  \item הפונקציה בעלת אי-רציפות עיקרית ב-3.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+בגבול מימין כפלו מונה ומכנה בצמודים של שני הביטויים: $\sqrt{x+7}+\sqrt{10}$ ו-$\sqrt{x+4}+\sqrt7$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ג)}.
+
+\textbf{משמאל:} $\sqrt{x^2+1}$ רציפה (הרכבה של פולינום ושורש), ולכן
+\[
+\lim_{x\to3^-}f(x)=\sqrt{3^2+1}=\sqrt{10}=f(3).
+\]
+\textbf{מימין:} גבול מהצורה $\frac00$. נכפול בצמודים:
+\[
+\frac{\sqrt{x+7}-\sqrt{10}}{\sqrt{x+4}-\sqrt7}\cdot\frac{\sqrt{x+4}+\sqrt7}{\sqrt{x+4}+\sqrt7}\cdot\frac{\sqrt{x+7}+\sqrt{10}}{\sqrt{x+7}+\sqrt{10}}
+=\frac{\bigl((x+7)-10\bigr)\left(\sqrt{x+4}+\sqrt7\right)}{\bigl((x+4)-7\bigr)\left(\sqrt{x+7}+\sqrt{10}\right)}
+=\frac{\sqrt{x+4}+\sqrt7}{\sqrt{x+7}+\sqrt{10}},
+\]
+כאשר צמצמנו את $x-3\neq0$. הביטוי האחרון רציף ב-3, ולכן
+\[
+\lim_{x\to3^+}f(x)=\frac{\sqrt7+\sqrt7}{\sqrt{10}+\sqrt{10}}=\frac{2\sqrt7}{2\sqrt{10}}=\frac{\sqrt7}{\sqrt{10}} .
+\]
+שני הגבולות החד-צדדיים קיימים וסופיים, אך $\frac{\sqrt7}{\sqrt{10}}\neq\sqrt{10}$. לכן הגבול ב-3 אינו קיים, ויש ב-3 אי-רציפות מסוג קפיצה.
+
+\textbf{למה האחרות שגויות:} (א) — הגבול ב-3 אינו קיים, ולכן אין רציפות (יש רק רציפות משמאל). (ב) — אי-רציפות סליקה דורשת קיום הגבול הדו-צדדי. (ד) — אי-רציפות עיקרית דורשת שלפחות אחד הגבולות החד-צדדיים לא יהיה קיים כגבול סופי, וכאן שניהם קיימים.
+\end{solution}

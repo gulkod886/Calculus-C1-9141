@@ -1,0 +1,26 @@
+% year: תשע"ט
+% semester: א
+% moed: א
+% number: 6
+% points: 20
+% categories: improper-integrals
+% source: exams/מבחנים/תשעט/מועד א תשעט.pdf
+
+\begin{question}
+(20 נק') האם האינטגרל הלא אמיתי הבא $\displaystyle\int_0^1\frac{\ln x}{\sqrt x}\,dx$ מתכנס? אם כן, חשבו את האינטגרל.
+\end{question}
+
+\begin{hint}
+הנקודה הבעייתית היא $x=0$. חשבו $\int_\eps^1$ באינטגרציה בחלקים ($u=\ln x$, $dv=x^{-1/2}dx$) והעבירו גבול $\eps\to0^+$.
+\end{hint}
+
+\begin{solution}
+הפונקציה $\frac{\ln x}{\sqrt x}$ רציפה ב-$(0,1]$ ולא חסומה ליד $0$ (שואפת ל-$-\infty$), ולכן זהו אינטגרל לא אמיתי מסוג שני, המוגדר כ-$\lim_{\eps\to0^+}\int_\eps^1\frac{\ln x}{\sqrt x}\,dx$.
+
+באינטגרציה בחלקים, $u=\ln x$, $dv=x^{-1/2}dx$, $du=\frac{dx}x$, $v=2\sqrt x$:
+\[ \int_\eps^1\frac{\ln x}{\sqrt x}\,dx=\Big[2\sqrt x\ln x\Big]_\eps^1-\int_\eps^1\frac{2\sqrt x}{x}\,dx=-2\sqrt\eps\ln\eps-\Big[4\sqrt x\Big]_\eps^1=-2\sqrt\eps\ln\eps-4+4\sqrt\eps. \]
+כעת $\lim_{\eps\to0^+}\sqrt\eps\ln\eps=\lim_{\eps\to0^+}\frac{\ln\eps}{\eps^{-1/2}}$, ולפי לופיטל (צורה $\frac{-\infty}{\infty}$):
+\[ \lim_{\eps\to0^+}\frac{1/\eps}{-\frac12\eps^{-3/2}}=\lim_{\eps\to0^+}\left(-2\sqrt\eps\right)=0. \]
+גם $4\sqrt\eps\to0$. לכן הגבול קיים וסופי: האינטגרל \textbf{מתכנס}, ו-
+\[ \int_0^1\frac{\ln x}{\sqrt x}\,dx=-4. \]
+\end{solution}

@@ -1,0 +1,36 @@
+% year: תשפ"ה
+% type: בוחן
+% semester: א
+% source: exams/בחנים/תשפ״ה, בוחן, 9141.pdf
+% part: ב
+% number: 6
+% points: 10
+% categories: functions, ivt, multiple-choice
+
+\begin{question}
+תהי $f(x)=x^3+x^2$. אילו מהטענות הבאות נכונה?
+\begin{enumerate}
+  \item הפונקציה חח"ע ועל $\R$.
+  \item הפונקציה חח"ע אך אינה על $\R$.
+  \item הפונקציה על $\R$ אך אינה חח"ע.
+  \item הפונקציה אינה חח"ע ואינה על $\R$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+פרקו: $x^3+x^2=x^2(x+1)$. כמה שורשים יש?
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ג)}.
+
+\textbf{אינה חח"ע:} $f(x)=x^2(x+1)$, ולכן $f(0)=0=f(-1)$ עם $0\neq-1$.
+
+\textbf{על $\R$:} $f$ פולינום ולכן רציפה על $\R$. כמו כן
+\[
+\lim_{x\to\infty}x^3\left(1+\tfrac1x\right)=\infty,\qquad \lim_{x\to-\infty}x^3\left(1+\tfrac1x\right)=-\infty .
+\]
+יהי $y\in\R$. לפי הגדרת הגבולות האינסופיים קיימים $x_1<x_2$ עם $f(x_1)<y<f(x_2)$. לפי משפט ערך הביניים ($f$ רציפה על $[x_1,x_2]$) קיים $c\in(x_1,x_2)$ עם $f(c)=y$. לכן $f$ על $\R$.
+
+\textbf{למה האחרות שגויות:} (א) ו-(ב) טוענות ש-$f$ חח"ע — הפרכנו. (ד) טוענת ש-$f$ אינה על — הוכחנו שהיא על.
+\end{solution}

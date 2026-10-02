@@ -1,0 +1,32 @@
+% year: תשע"ט
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 5
+% points: 20
+% categories: integral-applications, polar-parametric
+% source: exams/מבחנים/תשעט/מועד מיוחד תשעט.pdf
+
+\begin{question}
+(20 נק') משוואה של העקום בקואורדינטות קוטביות היא: $r=2(1-\sin\varphi)$.
+סרטטו את העקום וחשבו שטח התחום החסום ע"י העקום.
+\end{question}
+
+\begin{hint}
+שטח תחום בקואורדינטות קוטביות: $S=\frac12\int_\alpha^\beta r^2(\varphi)\,d\varphi$. כאן $r\ge0$ לכל $\varphi$, ולכן העקום נסגר כאשר $\varphi$ עובר על $[0,2\pi]$.
+\end{hint}
+
+\begin{solution}
+\textbf{סרטוט:} מתקיים $0\le r=2(1-\sin\varphi)\le 4$ לכל $\varphi$, ו-$r$ מחזורית עם מחזור $2\pi$, ולכן העקום סגור ומתקבל כאשר $\varphi\in[0,2\pi]$. כמה ערכים:
+\[ \varphi=0:\ r=2;\quad \varphi=\tfrac{\pi}{2}:\ r=0;\quad \varphi=\pi:\ r=2;\quad \varphi=\tfrac{3\pi}{2}:\ r=4. \]
+כלומר העקום עובר בנקודות $(2,0)$, $(0,0)$, $(-2,0)$, $(0,-4)$ (בקואורדינטות קרטזיות). מכיוון ש-$r(\pi-\varphi)=r(\varphi)$, העקום סימטרי ביחס לציר $y$. זוהי \textbf{קרדיואידה} ("לב") שהחוד שלה בראשית (כאשר $\varphi=\frac\pi2$) והיא "פתוחה" כלפי מטה: הנקודה הרחוקה ביותר היא $(0,-4)$.
+
+\textbf{שטח:} לפי הנוסחה לשטח בקואורדינטות קוטביות, $S=\frac12\int_0^{2\pi}r^2\,d\varphi$:
+\[ S = \frac12\int_0^{2\pi}4(1-\sin\varphi)^2\,d\varphi = 2\int_0^{2\pi}\left(1-2\sin\varphi+\sin^2\varphi\right)d\varphi. \]
+נחשב כל איבר בנפרד:
+\[ \int_0^{2\pi}1\,d\varphi=2\pi,\qquad \int_0^{2\pi}\sin\varphi\,d\varphi = \Big[-\cos\varphi\Big]_0^{2\pi}=0, \]
+\[ \int_0^{2\pi}\sin^2\varphi\,d\varphi = \int_0^{2\pi}\frac{1-\cos2\varphi}{2}\,d\varphi = \Big[\frac{\varphi}{2}-\frac{\sin2\varphi}{4}\Big]_0^{2\pi} = \pi. \]
+לכן
+\[ S = 2\left(2\pi - 0 + \pi\right) = 6\pi. \]
+\textbf{תשובה:} שטח התחום הוא $6\pi$.
+\end{solution}

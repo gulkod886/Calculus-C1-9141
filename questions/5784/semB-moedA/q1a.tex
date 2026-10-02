@@ -1,0 +1,23 @@
+% year: תשפ"ד
+% semester: ב
+% moed: א
+% number: 1א
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשפד/מועד א תשפד סמסטר ב.pdf
+
+\begin{question}
+חשבו
+\[ \lim_{x\to\infty} x\left(\ln(x+1)-\ln(x)\right) \]
+\end{question}
+
+\begin{hint}
+כתבו $\ln(x+1)-\ln x=\ln\left(1+\frac1x\right)$ והציבו $t=\frac1x$.
+\end{hint}
+
+\begin{solution}
+לפי חוקי הלוגריתם, $\ln(x+1)-\ln(x)=\ln\frac{x+1}{x}=\ln\left(1+\frac1x\right)$. נציב $t=\frac1x$; כאשר $x\to\infty$ מתקיים $t\to0^+$, ולכן
+\[ \lim_{x\to\infty} x\ln\left(1+\frac1x\right)=\lim_{t\to0^+}\frac{\ln(1+t)}{t}. \]
+זהו גבול מהצורה $\frac00$; לפי כלל לופיטל (או הגבול היסודי $\frac{\ln(1+t)}{t}\to1$):
+\[ \lim_{t\to0^+}\frac{\ln(1+t)}{t}=\lim_{t\to0^+}\frac{1/(1+t)}{1}=1. \]
+התשובה: $\boxed{1}$.
+\end{solution}

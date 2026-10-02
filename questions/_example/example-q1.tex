@@ -1,0 +1,37 @@
+% Example only (format reference). Folders starting with "_" are skipped by the build.
+% year: תש"ס
+% semester: א
+% moed: א
+% number: 1
+% categories: sequences
+% source: exams/2000-A-A.pdf
+
+\begin{question}
+תהי $(a_n)$ הסדרה המוגדרת ע"י $a_1 = 1$ ו-$a_{n+1} = \sqrt{2 + a_n}$.
+\begin{enumerate}
+  \item הוכיחו כי $a_n < 2$ לכל $n$.
+  \item הוכיחו כי הסדרה מונוטונית עולה.
+  \item הסיקו כי הסדרה מתכנסת ומצאו את גבולה.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+בסעיפים א' ו-ב' השתמשו באינדוקציה.
+\end{hint}
+
+\begin{hint}
+בסעיף ג' השתמשו במשפט על סדרה מונוטונית וחסומה, ואז העבירו גבול בשני צידי נוסחת הנסיגה.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item באינדוקציה. עבור $n=1$: $a_1 = 1 < 2$. נניח $a_n < 2$, אז
+  \[ a_{n+1} = \sqrt{2 + a_n} < \sqrt{2 + 2} = 2. \]
+  \item יש להראות $a_{n+1} > a_n$. מכיוון ש-$0 < a_n < 2$ מתקיים
+  \[ a_{n+1}^2 - a_n^2 = 2 + a_n - a_n^2 = (2 - a_n)(1 + a_n) > 0, \]
+  ולכן $a_{n+1} > a_n$ (שני האיברים חיוביים).
+  \item הסדרה מונוטונית עולה וחסומה מלעיל, ולכן מתכנסת לגבול $L$, ומתקיים $1 \le L \le 2$.
+  נעביר גבול בנוסחת הנסיגה: $L = \sqrt{2 + L}$, כלומר $L^2 - L - 2 = 0$, ולכן $L = 2$ או $L = -1$.
+  מכיוון ש-$L \ge 1$, נקבל $\boxed{L = 2}$.
+\end{enumerate}
+\end{solution}

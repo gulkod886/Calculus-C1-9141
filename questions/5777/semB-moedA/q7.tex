@@ -1,0 +1,31 @@
+% year: תשע"ז
+% type: מבחן
+% semester: ב
+% moed: א
+% source: exams/מבחנים/תשעז/מועד א תשעז סמסטר ב.pdf
+% number: 7
+% points: 10
+% categories: improper-integrals
+
+\begin{question}
+(10 נק') האם האינטגרל הלא אמיתי
+\[ \int_0^1\frac{\sin x}{x^2}\,dx \]
+מתכנס?
+\end{question}
+
+\begin{hint}
+ליד $0$ מתקיים $\sin x\approx x$. השוו (מבחן ההשוואה הגבולי) עם $\frac1x$.
+\end{hint}
+
+\begin{solution}
+\textbf{האינטגרל מתבדר.}
+האינטגרנד רציף ב-$(0,1]$, והבעיה היחידה היא בנקודה $0$. ב-$(0,1]$ מתקיים $\sin x>0$ (כי $0<x\le1<\pi$), כך שהאינטגרנד חיובי ואפשר להשתמש במבחני ההשוואה.
+
+נשווה עם $g(x)=\frac1x>0$:
+\[ \lim_{x\to0^+}\frac{\sin x/x^2}{1/x}=\lim_{x\to0^+}\frac{\sin x}{x}=1\in(0,\infty). \]
+לפי מבחן ההשוואה הגבולי, $\int_0^1\frac{\sin x}{x^2}dx$ ו-$\int_0^1\frac{dx}{x}$ מתכנסים או מתבדרים יחד. אבל
+\[ \int_\eps^1\frac{dx}{x}=-\ln\eps\xrightarrow[\eps\to0^+]{}\infty, \]
+כלומר $\int_0^1\frac{dx}{x}$ מתבדר. לכן גם $\int_0^1\frac{\sin x}{x^2}dx$ \textbf{מתבדר}.
+
+(השוואה ישירה: מכיוון ש-$\frac{\sin x}{x}\to1$, קיים $\delta>0$ כך ש-$\frac{\sin x}{x}>\frac12$ ב-$(0,\delta)$, ולכן $\frac{\sin x}{x^2}>\frac{1}{2x}$ שם.)
+\end{solution}

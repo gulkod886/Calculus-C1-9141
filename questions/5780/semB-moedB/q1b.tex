@@ -1,0 +1,36 @@
+% year: תש"פ
+% type: מבחן
+% semester: ב
+% moed: ב
+% number: 1ב
+% points: 10
+% categories: func-limits
+% source: exams/מבחנים/תשפ/מועד ב סמסטר ב תשפ.pdf
+
+\begin{question}
+(10 נק') חשבו את הגבולות הבאים:
+\begin{enumerate}
+  \item (5 נק') $\displaystyle\lim_{x\to\infty}\frac{x+2\sin x}{3x-\cos x}$,
+  \item (5 נק') $\displaystyle\lim_{x\to+\infty}\left(\sqrt{x+\sqrt{x}}-\sqrt{x-\sqrt{x}}\right)$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+בגבול הראשון חלקו מונה ומכנה ב-$x$ והשתמשו בכך ש-$\sin x,\cos x$ חסומות.
+\end{hint}
+
+\begin{hint}
+בגבול השני הכפילו וחלקו בצמוד.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item נחלק מונה ומכנה ב-$x$ (עבור $x>0$):
+  \[ \frac{x+2\sin x}{3x-\cos x}=\frac{1+2\frac{\sin x}{x}}{3-\frac{\cos x}{x}} . \]
+  מאחר ש-$|\sin x|,|\cos x|\le1$ ו-$\frac1x\to0$, לפי "חסומה כפול שואפת לאפס" $\frac{\sin x}{x}\to0$ ו-$\frac{\cos x}{x}\to0$. לכן הגבול הוא $\boxed{\frac13}$.
+  \item נכפיל ונחלק בצמוד (עבור $x>1$ שני השורשים מוגדרים):
+  \[ \sqrt{x+\sqrt x}-\sqrt{x-\sqrt x}=\frac{(x+\sqrt x)-(x-\sqrt x)}{\sqrt{x+\sqrt x}+\sqrt{x-\sqrt x}}=\frac{2\sqrt x}{\sqrt{x+\sqrt x}+\sqrt{x-\sqrt x}}
+  =\frac{2}{\sqrt{1+\frac{1}{\sqrt x}}+\sqrt{1-\frac{1}{\sqrt x}}} , \]
+  כאשר חילקנו מונה ומכנה ב-$\sqrt x$. כאשר $x\to+\infty$, $\frac{1}{\sqrt x}\to0$, ולכן (רציפות השורש) הגבול הוא $\frac{2}{1+1}=\boxed{1}$.
+\end{enumerate}
+\end{solution}

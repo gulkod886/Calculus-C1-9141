@@ -1,0 +1,36 @@
+% year: תשע"ז
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 5ב
+% points: 10
+% categories: improper-integrals, antiderivatives
+% source: exams/מבחנים/תשעז/מועד ב תשעז.pdf
+
+\begin{question}
+(10 נק') חשבו את האינטגרל הלא-אמיתי $\displaystyle\int_1^\infty\frac{\arctan(x)}{x^2}\,dx$.
+\end{question}
+
+\begin{hint}
+בצעו אינטגרציה בחלקים עם $u=\arctan x$, $dv=\frac{dx}{x^2}$, ופרקו $\frac{1}{x(1+x^2)}=\frac1x-\frac{x}{1+x^2}$.
+\end{hint}
+
+\begin{solution}
+\textbf{פונקציה קדומה.} אינטגרציה בחלקים עם $u=\arctan x$, $dv=\frac{dx}{x^2}$, $du=\frac{dx}{1+x^2}$, $v=-\frac1x$:
+\[
+\int\frac{\arctan x}{x^2}dx=-\frac{\arctan x}{x}+\int\frac{dx}{x(1+x^2)}.
+\]
+פירוק לשברים חלקיים: $\frac{1}{x(1+x^2)}=\frac1x-\frac{x}{1+x^2}$, ולכן עבור $x>0$
+\[
+\int\frac{dx}{x(1+x^2)}=\ln x-\frac12\ln(1+x^2)=\ln\frac{x}{\sqrt{1+x^2}}.
+\]
+\textbf{האינטגרל הלא אמיתי.} לפי ההגדרה, $\int_1^\infty=\lim_{R\to\infty}\int_1^R$:
+\[
+\int_1^R\frac{\arctan x}{x^2}dx=\left[-\frac{\arctan x}{x}+\ln\frac{x}{\sqrt{1+x^2}}\right]_1^R
+=-\frac{\arctan R}{R}+\ln\frac{R}{\sqrt{1+R^2}}+\frac\pi4-\ln\frac1{\sqrt2}.
+\]
+כאשר $R\to\infty$: $\frac{\arctan R}{R}\to0$ (מונה חסום, מכנה שואף לאינסוף), ו-$\frac{R}{\sqrt{1+R^2}}\to1$ ולכן $\ln\frac{R}{\sqrt{1+R^2}}\to0$ (רציפות $\ln$). לכן
+\[
+\int_1^\infty\frac{\arctan x}{x^2}dx=\frac\pi4+\frac12\ln2\approx1.132.
+\]
+\end{solution}

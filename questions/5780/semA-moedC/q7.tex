@@ -1,0 +1,27 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: ג
+% part: ב
+% number: 4
+% points: 9
+% categories: func-analysis, derivatives, multiple-choice
+% source: exams/מבחנים/תשפ/מועד מיוחד תשפ.pdf
+
+\begin{question}
+מצאו את הערך הקטן ביותר בתחום הגדרה של הפונקציה: $f(x)=x^4+4x$
+\begin{enumerate}
+  \item $-4$
+  \item $1$
+  \item $-3$
+  \item $-5$
+  \item $-2$
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{התשובה הנכונה: ג ($-3$).}
+
+$f$ פולינום, מוגדר וגזיר בכל $\R$. $f'(x)=4x^3+4=4(x+1)(x^2-x+1)$, והגורם $x^2-x+1$ חיובי תמיד (דיסקרימיננטה שלילית). לכן $f'<0$ עבור $x<-1$ ו-$f'>0$ עבור $x>-1$: $f$ יורדת ב-$(-\infty,-1]$ ועולה ב-$[-1,\infty)$. מכאן ש-$x=-1$ היא נקודת מינימום מוחלט, והערך הקטן ביותר הוא
+\[ f(-1)=1-4=-3 . \]
+\end{solution}

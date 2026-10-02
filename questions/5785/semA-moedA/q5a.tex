@@ -1,0 +1,25 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: א
+% number: 5א
+% points: 10
+% categories: integral-applications, definite-integrals
+% source: exams/מבחנים/תשפה/מועד א תשפה.pdf
+
+\begin{question}
+(10 נק') חשבו את השטח החסום בין הפונקציה
+\[ f(x) = \sin^2 x \cdot \cos^3 x \]
+וציר ה-$x$ בקטע $[0, \frac{\pi}{2}]$.
+\end{question}
+
+\begin{hint}
+כתבו $\cos^3 x = (1 - \sin^2 x)\cos x$ והציבו $t = \sin x$.
+\end{hint}
+
+\begin{solution}
+בקטע $[0,\frac\pi2]$ מתקיים $\sin^2 x \ge 0$ ו-$\cos x\ge 0$, ולכן $f(x) \ge 0$ והשטח הוא פשוט $\int_0^{\pi/2} f(x)\,dx$.
+נכתוב $\sin^2 x\cos^3 x = \sin^2 x(1 - \sin^2 x)\cos x$ ונציב $t = \sin x$, $dt = \cos x\,dx$; כאשר $x$ עובר מ-$0$ ל-$\frac\pi2$, $t$ עובר מ-$0$ ל-$1$:
+\[ S = \int_0^{\pi/2}\sin^2 x\cos^3 x\,dx = \int_0^1 (t^2 - t^4)\,dt = \left[\frac{t^3}{3} - \frac{t^5}{5}\right]_0^1 = \frac13 - \frac15 = \frac{2}{15}. \]
+\textbf{תשובה:} $S = \frac{2}{15}$.
+\end{solution}

@@ -1,0 +1,26 @@
+% year: תשפ"ג
+% type: מבחן
+% semester: א
+% moed: א
+% number: 3א
+% points: 10
+% categories: func-analysis
+% source: exams/מבחנים/תשפג/מועד א תשפג.pdf
+
+\begin{question}
+(10 נק') מצאו תחומי קמירות ונקודות פיתול עבור הפונקציה $f(x)=\ln(1+4x^2)$.
+\end{question}
+
+\begin{solution}
+תחום ההגדרה: $1+4x^2>0$ לכל $x$, ולכן $D=\R$. נגזור:
+\[ f'(x)=\frac{8x}{1+4x^2},\qquad
+f''(x)=\frac{8(1+4x^2)-8x\cdot 8x}{(1+4x^2)^2}=\frac{8-32x^2}{(1+4x^2)^2}=\frac{8(1-2x)(1+2x)}{(1+4x^2)^2}. \]
+המכנה חיובי תמיד, ולכן סימן $f''$ הוא סימן $1-4x^2$:
+\begin{itemize}
+  \item $f''(x)>0$ עבור $-\frac12<x<\frac12$: הפונקציה \textbf{קמורה} (קמורה כלפי מעלה, $\cup$) בקטע $\left(-\frac12,\frac12\right)$.
+  \item $f''(x)<0$ עבור $|x|>\frac12$: הפונקציה \textbf{קעורה} ($\cap$) בתחומים $\left(-\infty,-\frac12\right)$ ו-$\left(\frac12,\infty\right)$.
+\end{itemize}
+ב-$x=\pm\frac12$ הנגזרת השנייה מחליפה סימן והפונקציה רציפה (וגזירה) שם, ולכן אלה נקודות פיתול. $f(\pm\tfrac12)=\ln(1+1)=\ln 2$.
+
+\textbf{תשובה:} קמורה ב-$\left(-\frac12,\frac12\right)$, קעורה ב-$\left(-\infty,-\frac12\right)\cup\left(\frac12,\infty\right)$; נקודות פיתול $\left(-\frac12,\ln 2\right)$ ו-$\left(\frac12,\ln 2\right)$.
+\end{solution}

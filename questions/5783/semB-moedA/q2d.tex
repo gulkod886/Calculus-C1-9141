@@ -1,0 +1,22 @@
+% year: תשפ"ג
+% semester: ב
+% moed: א
+% note: ד"ר פיטר סמובול
+% source: exams/מבחנים/תשפג/מועד א תשפג סמסטר ב.pdf
+% number: 2ד
+% categories: definite-integrals
+
+\begin{question}
+(שאלה חובה)
+פתרו את האינטגרל הבא:
+$\displaystyle\int_2^5\frac{2x-1}{\sqrt{x^2-x}}\,dx$
+\end{question}
+
+\begin{hint}
+המונה הוא בדיוק הנגזרת של מה שמתחת לשורש.
+\end{hint}
+
+\begin{solution}
+על $[2,5]$ מתקיים $x^2-x>0$, כך שהאינטגרנד רציף. נציב $u=x^2-x$, $du=(2x-1)dx$; הגבולות $u(2)=2$, $u(5)=20$:
+\[ \int_2^5\frac{2x-1}{\sqrt{x^2-x}}dx=\int_2^{20}u^{-1/2}du=2\sqrt u\Big|_2^{20}=2\sqrt{20}-2\sqrt2=\boxed{4\sqrt5-2\sqrt2}\approx 6.116. \]
+\end{solution}

@@ -1,0 +1,25 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 5ב
+% points: 10
+% categories: improper-integrals
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+{(10 נק')} האם האינטגרל הלא-אמיתי $\displaystyle\int_0^\infty\frac{x}{e^{x^2}}\,dx$ מתכנס? אם כן, יש לחשב את ערכו של האינטגרל. אם לא, יש לנמק מדוע.
+\end{question}
+
+\begin{hint}
+הציבו $u=x^2$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה, $\int_0^\infty\frac{x}{e^{x^2}}\,dx=\lim_{b\to\infty}\int_0^b xe^{-x^2}\,dx$, אם הגבול קיים. נציב $u=x^2$, $du=2x\,dx$ (כאשר $x$ עובר מ-$0$ ל-$b$, $u$ עובר מ-$0$ ל-$b^2$):
+\[ \int_0^b xe^{-x^2}\,dx=\frac12\int_0^{b^2}e^{-u}\,du=\frac12\left[-e^{-u}\right]_0^{b^2}=\frac12\left(1-e^{-b^2}\right). \]
+כאשר $b\to\infty$, $e^{-b^2}\to0$, ולכן הגבול קיים וסופי:
+\[ \boxed{\int_0^\infty\frac{x}{e^{x^2}}\,dx=\frac12} \]
+כלומר האינטגרל מתכנס וערכו $\frac12$.
+\end{solution}

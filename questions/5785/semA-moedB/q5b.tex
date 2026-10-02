@@ -1,0 +1,25 @@
+% year: תשפ"ה
+% type: מבחן
+% semester: א
+% moed: ב
+% number: 5ב
+% points: 10
+% categories: improper-integrals
+% source: exams/מבחנים/תשפה/מועד ב תשפה.pdf
+
+\begin{question}
+(10 נק') חשבו את האינטגרל הלא אמיתי הבא, או הראו שאינו מתכנס:
+\[ \int_1^\infty \frac{\ln x}{x}\,dx \]
+\end{question}
+
+\begin{hint}
+מצאו פונקציה קדומה בהצבה $u = \ln x$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה $\int_1^\infty\frac{\ln x}{x}dx = \lim_{R\to\infty}\int_1^R\frac{\ln x}{x}dx$. בהצבה $u = \ln x$, $du = \frac{dx}{x}$:
+\[ \int_1^R\frac{\ln x}{x}\,dx = \int_0^{\ln R}u\,du = \frac{(\ln R)^2}{2} \xrightarrow[R\to\infty]{} \infty. \]
+(לחלופין, במבחן ההשוואה: עבור $x \ge e$ מתקיים $\frac{\ln x}{x} \ge \frac1x \ge 0$, ו-$\int_e^\infty\frac{dx}x$ מתבדר.)
+
+\textbf{תשובה:} האינטגרל אינו מתכנס (מתבדר ל-$\infty$).
+\end{solution}

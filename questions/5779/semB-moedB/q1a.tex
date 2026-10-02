@@ -1,0 +1,25 @@
+% year: תשע"ט
+% semester: ב
+% moed: ב
+% number: 1א
+% points: 10
+% categories: derivatives
+% source: exams/מבחנים/תשעט/חודיסמן מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') חשבו את הנגזרת של הפונקציה $f(x)=\sin(3x+4)$ בנקודה $x$ לפי הגדרת הנגזרת (תשובה לפי טבלת הנגזרות לא תתקבל).
+\end{question}
+
+\begin{hint}
+השתמשו בזהות $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$ ובגבול $\lim_{t\to0}\frac{\sin t}{t}=1$.
+\end{hint}
+
+\begin{solution}
+לפי ההגדרה ובעזרת הזהות $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$:
+\begin{align*}
+f'(x)&=\lim_{h\to0}\frac{\sin(3x+3h+4)-\sin(3x+4)}{h}
+=\lim_{h\to0}\frac{2\cos\!\left(3x+4+\frac{3h}{2}\right)\sin\frac{3h}{2}}{h}\\
+&=\lim_{h\to0}3\cos\!\left(3x+4+\tfrac{3h}{2}\right)\cdot\frac{\sin\frac{3h}{2}}{\frac{3h}{2}}=3\cos(3x+4)\cdot1,
+\end{align*}
+כאשר השתמשנו ברציפות $\cos$ ובגבול היסודי $\lim_{t\to0}\frac{\sin t}{t}=1$. לכן $f'(x)=3\cos(3x+4)$.
+\end{solution}

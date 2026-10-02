@@ -1,0 +1,40 @@
+% year: תש"פ
+% type: בוחן
+% semester: א
+% points: 20
+% source: exams/בחנים/תש״פ, בוחן, 9141.pdf
+% number: 4
+% categories: derivatives, multiple-choice
+
+\begin{question}
+הנגזרת $y'(0)$ של הפונקציה הסתומה $y(x)$ המוגדרת על ידי המשוואה
+$\cos\left(\frac{\pi}{2}+x+y\right)-y=0$ בסביבה של הנקודה $(0,0)$ שווה ל-
+\begin{enumerate}
+  \item $\pi/2$
+  \item $-\frac12$
+  \item $1+\pi/2$
+  \item $\frac12$
+  \item $0$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+גזרו את שני אגפי המשוואה לפי $x$, כאשר $y=y(x)$ (כלל השרשרת), ואז הציבו $x=0,\ y=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{התשובה הנכונה: (ב)} $-\frac12$.
+
+ראשית, הנקודה $(0,0)$ מקיימת את המשוואה: $\cos\frac{\pi}{2}-0=0$.
+נגזור את שני אגפי המשוואה $\cos\left(\frac{\pi}{2}+x+y(x)\right)-y(x)=0$ לפי $x$, תוך שימוש בכלל השרשרת:
+\[
+-\sin\left(\frac{\pi}{2}+x+y\right)\cdot\left(1+y'\right)-y'=0 .
+\]
+נציב $x=0$, $y(0)=0$: $\sin\frac{\pi}{2}=1$, ולכן
+\[
+-(1+y'(0))-y'(0)=0\quad\Longrightarrow\quad -1-2y'(0)=0\quad\Longrightarrow\quad y'(0)=\boxed{-\frac12}.
+\]
+(בדיקה: לפי הזהות $\cos(\frac{\pi}{2}+\theta)=-\sin\theta$ המשוואה היא $-\sin(x+y)=y$; גזירה נותנת $-\cos(x+y)(1+y')=y'$, ובנקודה $(0,0)$ שוב $y'(0)=-\frac12$.)
+
+\textbf{למה האחרות שגויות:} (ד) מתקבלת משגיאת סימן בנגזרת של $\cos$. (ה) מתקבלת אם שוכחים לגזור את $y$ שבתוך הקוסינוס או את האיבר $-y$. (א) ו-(ג) מתקבלות מבלבול בין ערך הזווית $\frac{\pi}{2}$ לבין הנגזרת; הנגזרת היא ערך יחיד שחישבנו, $-\frac12$.
+\end{solution}

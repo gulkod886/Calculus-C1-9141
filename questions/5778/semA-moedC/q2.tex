@@ -1,0 +1,40 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: ג
+% number: 2
+% points: 20
+% categories: continuity, func-limits
+% source: exams/מבחנים/תשעח/מועד מיוחד תשעח.pdf
+
+\begin{question}
+(20 נק')
+מצאו את נקודות אי-הרציפות של הפונקציה
+\[ f(x)=\frac{x^2-x}{e^{x^3-x}-1} \]
+וקבעו את סוגיהן.
+\end{question}
+
+\begin{hint}
+המכנה מתאפס כאשר $x^3-x=0$. השתמשו בגבול $\lim_{t\to0}\frac{e^t-1}{t}=1$ עם $t=x^3-x$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום ההגדרה:} $e^{x^3-x}-1=0\iff x^3-x=0\iff x(x-1)(x+1)=0$. לכן $f$ מוגדרת ורציפה (מנה של פונקציות רציפות) לכל $x\notin\{0,1,-1\}$, ואלה נקודות אי-הרציפות.
+
+נסמן $t=t(x)=x^3-x$. עבור $x\notin\{0,1,-1\}$:
+\[ f(x)=\frac{x^2-x}{x^3-x}\cdot\frac{x^3-x}{e^{x^3-x}-1}=\frac{x(x-1)}{x(x-1)(x+1)}\cdot\frac{t}{e^t-1}=\frac{1}{x+1}\cdot\frac{t}{e^t-1}. \]
+כאשר $x\to0$ או $x\to\pm1$, $t\to0$ ו-$t\neq0$, ולכן לפי הגבול המפורסם ומשפט הגבול של הרכבה $\frac{t}{e^t-1}\to1$.
+
+\textbf{$x=0$:} $\lim_{x\to0}f(x)=\frac{1}{0+1}\cdot1=1$. הגבול קיים וסופי — \textbf{אי-רציפות סליקה}.
+
+\textbf{$x=1$:} $\lim_{x\to1}f(x)=\frac{1}{2}\cdot1=\frac12$ — \textbf{אי-רציפות סליקה}.
+
+\textbf{$x=-1$:} כאן המונה שואף ל-$(-1)^2-(-1)=2\neq0$ והמכנה שואף ל-$0$. נבדוק סימנים: $x^3-x=x(x-1)(x+1)$, ובסביבת $-1$, $x(x-1)\approx2>0$. לכן
+\begin{itemize}
+  \item עבור $x\to-1^+$: $x+1>0$, $t\to0^+$, $e^t-1\to0^+$ ולכן $f(x)\to+\infty$;
+  \item עבור $x\to-1^-$: $x+1<0$, $t\to0^-$, $e^t-1\to0^-$ ולכן $f(x)\to-\infty$.
+\end{itemize}
+הגבולות החד-צדדיים אינסופיים — \textbf{אי-רציפות מסוג שני}.
+
+\textbf{סיכום:} $x=0$ ו-$x=1$ — נקודות אי-רציפות סליקות (עם גבולות $1$ ו-$\frac12$ בהתאמה); $x=-1$ — אי-רציפות מסוג שני.
+\end{solution}

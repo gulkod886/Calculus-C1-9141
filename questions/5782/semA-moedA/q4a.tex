@@ -1,0 +1,23 @@
+% year: תשפ"ב
+% type: מבחן
+% semester: א
+% moed: א
+% number: 4א
+% points: 8
+% categories: antiderivatives
+% source: exams/מבחנים/תשפב/מועד א תשפב.pdf
+
+\begin{question}
+(8 נק') חשבו את הפונקציה הקדומה של
+\[ f(x)=\frac{e^x}{e^{2x}+1} \]
+\end{question}
+
+\begin{hint}
+הציבו $t=e^x$.
+\end{hint}
+
+\begin{solution}
+נציב $t=e^x$, $dt=e^x\,dx$:
+\[ \int\frac{e^x}{e^{2x}+1}\,dx=\int\frac{dt}{t^2+1}=\arctan t+C=\boxed{\arctan(e^x)+C}. \]
+בדיקה: $\left(\arctan e^x\right)'=\frac{e^x}{1+e^{2x}}$.
+\end{solution}

@@ -1,0 +1,29 @@
+% year: תשע"ח
+% type: מבחן
+% semester: ב
+% moed: א
+% number: 1ב
+% points: 10
+% categories: func-analysis, func-limits
+% source: exams/מבחנים/תשעח/מועד א תשעח סמסטר ב.pdf
+
+\begin{question}
+(10 נק') מצאו את כל האסימפטוטות של הפונקציה $f(x)=\frac{\ln(2x)}{\ln(x)}$.
+\end{question}
+
+\begin{hint}
+כתבו $\ln(2x)=\ln2+\ln x$.
+\end{hint}
+
+\begin{solution}
+\textbf{תחום הגדרה:} $x>0$ (בשביל $\ln x$ ו-$\ln 2x$) ו-$\ln x\neq0$, כלומר $x\in(0,1)\cup(1,\infty)$. בתחום זה
+\[
+f(x)=\frac{\ln2+\ln x}{\ln x}=1+\frac{\ln2}{\ln x}.
+\]
+\textbf{אנכיות:} כאשר $x\to1^+$, $\ln x\to0^+$ ולכן $f(x)\to+\infty$; כאשר $x\to1^-$, $\ln x\to0^-$ ולכן $f(x)\to-\infty$. לכן $x=1$ אסימפטוטה אנכית.
+כאשר $x\to0^+$: $\ln x\to-\infty$ ולכן $f(x)\to1$ — גבול סופי, ולכן $x=0$ \emph{אינה} אסימפטוטה אנכית.
+
+\textbf{אופקיות/משופעות:} הפונקציה מוגדרת רק עבור $x>0$, ולכן בודקים רק $x\to+\infty$: $\ln x\to\infty$ ולכן $f(x)\to1$. לכן $y=1$ אסימפטוטה אופקית ב-$+\infty$ (ואין משופעת).
+
+\textbf{תשובה:} אסימפטוטה אנכית $x=1$ ואסימפטוטה אופקית $y=1$ (כאשר $x\to+\infty$).
+\end{solution}

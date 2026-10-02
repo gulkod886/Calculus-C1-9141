@@ -1,0 +1,20 @@
+% year: תשפ"ד
+% semester: ב
+% moed: ב
+% number: 4א
+% categories: taylor
+% source: exams/מבחנים/תשפד/מועד ב תשפד סמסטר ב.pdf
+
+\begin{question}
+כתבו את פולינום מקלורן מסדר 4 של $f(x)=\sin(x)\cos(x)$
+\end{question}
+
+\begin{hint}
+$\sin x\cos x=\frac12\sin(2x)$.
+\end{hint}
+
+\begin{solution}
+לפי זהות הזווית הכפולה $f(x)=\sin x\cos x=\frac12\sin(2x)$. פולינום מקלורן של $\sin t$ מסדר 4 הוא $t-\frac{t^3}{6}$ (המקדם של $t^4$ הוא $0$). נציב $t=2x$:
+\[ P_4(x)=\frac12\left(2x-\frac{(2x)^3}{6}\right)=\boxed{x-\frac{2}{3}x^3}. \]
+(ישירות: $f'(x)=\cos2x$, $f''=-2\sin2x$, $f'''=-4\cos2x$, $f^{(4)}=8\sin2x$; בנקודה $0$: $f=0,\ f'=1,\ f''=0,\ f'''=-4,\ f^{(4)}=0$, ולכן $P_4=x-\frac{4}{6}x^3$.)
+\end{solution}

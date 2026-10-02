@@ -1,0 +1,33 @@
+% year: תשע"ח
+% type: מבחן
+% semester: א
+% moed: א
+% number: 3ב
+% points: 10
+% categories: mvt, proofs
+% official_solution: yes
+% source: exams/מבחנים/תשעח/מועד א תשעח.pdf
+
+\begin{question}
+(10 נק') הוכיחו כי $0<x<\arcsin x$ לכל $x\in(0,1]$.
+\end{question}
+
+\begin{hint}
+התבוננו בפונקציה $g(x)=\arcsin x-x$ ובנגזרת שלה.
+\end{hint}
+
+\begin{solution}
+אי-השוויון $0<x$ ברור עבור $x\in(0,1]$. נותר להוכיח $x<\arcsin x$.
+
+נגדיר $g(x)=\arcsin x-x$ בקטע $[0,1]$. הפונקציה רציפה ב-$[0,1]$ וגזירה ב-$(0,1)$, עם
+\[ g'(x)=\frac{1}{\sqrt{1-x^2}}-1>0 \quad\text{לכל } x\in(0,1), \]
+כי $0<\sqrt{1-x^2}<1$ שם.
+
+יהי $b\in(0,1]$. לפי משפט לגרנז' עבור $g$ בקטע $[0,b]$ קיימת נקודה $c\in(0,b)$ כך ש-
+\[ g(b)-g(0)=g'(c)\,(b-0). \]
+כיוון ש-$g(0)=\arcsin0-0=0$, $g'(c)>0$ ו-$b>0$, נקבל $g(b)>0$, כלומר $\arcsin b>b$.
+
+לכן $0<x<\arcsin x$ לכל $x\in(0,1]$. $\blacksquare$
+
+(הפתרון הרשמי מנוסח בדרך השלילה: מניחים $\arcsin b\le b$, ומלגרנז' מקבלים $\frac{1}{\sqrt{1-c^2}}=\frac{\arcsin b}{b}\le1$, בסתירה ל-$\frac{1}{\sqrt{1-c^2}}>1$. זו אותה הוכחה.)
+\end{solution}

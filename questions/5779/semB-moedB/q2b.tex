@@ -1,0 +1,23 @@
+% year: תשע"ט
+% semester: ב
+% moed: ב
+% number: 2ב
+% points: 10
+% categories: integral-applications
+% source: exams/מבחנים/תשעט/חודיסמן מועד ב תשעט.pdf
+
+\begin{question}
+(10 נק') חשבו את נפחו של גוף הסיבוב של תחום מישורי:
+\[ 0\le x\le2,\quad 0\le y\le\sqrt{\frac{x}{x+2}} \]
+סביב ציר ה-$x$. ציירו את הסקיצה המתאימה.
+\end{question}
+
+\begin{hint}
+נפח גוף סיבוב סביב ציר $x$ הוא $V=\pi\int_a^b y^2\,dx$.
+\end{hint}
+
+\begin{solution}
+הסקיצה: הפונקציה $y=\sqrt{\frac{x}{x+2}}$ עולה מ-$y(0)=0$ ל-$y(2)=\sqrt{\frac12}$; התחום הוא השטח שבין הגרף לציר $x$ בקטע $[0,2]$, והגוף נוצר מסיבובו סביב ציר $x$. לפי נוסחת נפח גוף סיבוב:
+\[ V=\pi\int_0^2\frac{x}{x+2}\,dx=\pi\int_0^2\left(1-\frac{2}{x+2}\right)dx=\pi\Big[x-2\ln(x+2)\Big]_0^2=\pi\big(2-2\ln4+2\ln2\big). \]
+\textbf{תשובה:} $V=\pi(2-2\ln2)=2\pi(1-\ln2)\approx1.928$.
+\end{solution}

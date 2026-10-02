@@ -1,0 +1,48 @@
+% year: תש"פ
+% type: מבחן
+% semester: א
+% moed: א
+% part: א
+% number: 3
+% points: 20
+% categories: antiderivatives
+% source: exams/מבחנים/תשפ/מועד א תשפ.pdf
+
+\begin{question}
+מצאו את האינטגרל
+\[ \int\left(\frac{x^2-x-4}{(x-1)(x^2+2x+1)}+e^{2x}x^2\right)dx. \]
+\end{question}
+
+\begin{hint}
+שימו לב ש-$x^2+2x+1=(x+1)^2$, ופרקו לשברים חלקיים מהצורה $\frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{(x+1)^2}$.
+\end{hint}
+
+\begin{hint}
+את $\int x^2e^{2x}dx$ חשבו באינטגרציה בחלקים פעמיים (גוזרים את הפולינום).
+\end{hint}
+
+\begin{solution}
+לפי לינאריות האינטגרל נחשב כל מחובר בנפרד.
+
+\textbf{המחובר הראשון.} $x^2+2x+1=(x+1)^2$. המונה ממעלה 2 והמכנה ממעלה 3, ולכן נפרק לשברים חלקיים:
+\[ \frac{x^2-x-4}{(x-1)(x+1)^2} = \frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{(x+1)^2}, \]
+כלומר $x^2-x-4 = A(x+1)^2+B(x-1)(x+1)+C(x-1)$.
+\begin{itemize}
+  \item $x=1$: $1-1-4=4A$, ולכן $A=-1$.
+  \item $x=-1$: $1+1-4=-2C$, ולכן $C=1$.
+  \item השוואת מקדמי $x^2$: $1=A+B$, ולכן $B=2$.
+\end{itemize}
+(בדיקה, מקדם חופשי: $A-B-C=-1-2-1=-4$ $\checkmark$.) לכן
+\[ \int\frac{x^2-x-4}{(x-1)(x+1)^2}dx = -\ln|x-1| + 2\ln|x+1| - \frac{1}{x+1}+C_1. \]
+
+\textbf{המחובר השני.} אינטגרציה בחלקים עם $u=x^2$, $v'=e^{2x}$ ($v=\frac12e^{2x}$):
+\[ \int x^2e^{2x}dx = \frac{x^2}{2}e^{2x} - \int xe^{2x}dx. \]
+שוב בחלקים עם $u=x$, $v'=e^{2x}$:
+\[ \int xe^{2x}dx = \frac{x}{2}e^{2x}-\frac12\int e^{2x}dx = \frac x2e^{2x}-\frac14e^{2x}+C_2. \]
+לכן
+\[ \int x^2e^{2x}dx = e^{2x}\left(\frac{x^2}{2}-\frac{x}{2}+\frac14\right)+C_3. \]
+
+\textbf{תשובה:}
+\[ \int\left(\frac{x^2-x-4}{(x-1)(x^2+2x+1)}+e^{2x}x^2\right)dx = -\ln|x-1|+2\ln|x+1|-\frac{1}{x+1}+e^{2x}\left(\frac{x^2}{2}-\frac{x}{2}+\frac14\right)+C. \]
+(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)
+\end{solution}

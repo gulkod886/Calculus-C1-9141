@@ -1,0 +1,24 @@
+% year: תשפ"ד
+% type: מבחן
+% semester: א
+% moed: מיוחד
+% number: 1
+% points: 14
+% categories: func-limits, lhopital
+% source: exams/מבחנים/תשפד/מועד ג תשפד.pdf
+
+\begin{question}
+חשבו את הגבול הבא:
+\[ \lim_{x\to0^+}\frac{\ln(e^x-1)}{3\cdot\ln x} \]
+\end{question}
+
+\begin{hint}
+זהו מקרה $\frac{\infty}{\infty}$; השתמשו בכלל לופיטל.
+\end{hint}
+
+\begin{solution}
+כאשר $x\to0^+$: $e^x-1\to0^+$ ולכן $\ln(e^x-1)\to-\infty$, וגם $3\ln x\to-\infty$. זהו מקרה $\frac{\infty}{\infty}$. המונה והמכנה גזירים ב-$(0,\infty)$ ונגזרת המכנה $\frac3x\neq0$, לכן לפי כלל לופיטל (בתנאי שהגבול מימין קיים):
+\[ \lim_{x\to0^+}\frac{\ln(e^x-1)}{3\ln x}=\lim_{x\to0^+}\frac{\frac{e^x}{e^x-1}}{\frac3x}=\lim_{x\to0^+}\frac{e^x}{3}\cdot\frac{x}{e^x-1}. \]
+מתקיים $e^x\to1$ ומהגבול היסודי $\lim_{x\to0}\frac{e^x-1}{x}=1$ נקבל $\frac{x}{e^x-1}\to1$. לפי אריתמטיקה של גבולות הגבול מימין קיים ושווה $\frac13\cdot1=\frac13$, ולכן
+\[ \lim_{x\to0^+}\frac{\ln(e^x-1)}{3\ln x}=\boxed{\frac13}. \]
+\end{solution}
