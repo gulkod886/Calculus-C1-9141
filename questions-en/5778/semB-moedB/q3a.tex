@@ -1,0 +1,37 @@
+% English translation of questions/5778/semB-moedB/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\begin{enumerate}
+  \item[(a)] (8 pts) $\displaystyle\int\frac{x^3+2x^2-4}{x^3-2x^2}dx$
+  \item[(b)] (7 pts) $\displaystyle\int\frac{x}{\sqrt{x+1}}dx$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+In (a) perform polynomial division and then decompose into partial fractions: $x^3-2x^2=x^2(x-2)$. In (b) substitute $u=x+1$.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item[(a)] \textbf{Polynomial division:} $x^3+2x^2-4=(x^3-2x^2)+4x^2-4$, hence
+  \[
+  \frac{x^3+2x^2-4}{x^3-2x^2}=1+\frac{4x^2-4}{x^2(x-2)}.
+  \]
+  \textbf{Partial fractions:}
+  \[
+  \frac{4x^2-4}{x^2(x-2)}=\frac Ax+\frac B{x^2}+\frac C{x-2}\iff 4x^2-4=Ax(x-2)+B(x-2)+Cx^2.
+  \]
+  Substituting $x=2$: $12=4C\Rightarrow C=3$. Substituting $x=0$: $-4=-2B\Rightarrow B=2$. Comparing the coefficients of $x^2$: $A+C=4\Rightarrow A=1$.
+  (Check: $x^2-2x+2x-4+3x^2=4x^2-4$.) Therefore
+  \[
+  \int\frac{x^3+2x^2-4}{x^3-2x^2}dx=\int\left(1+\frac1x+\frac2{x^2}+\frac3{x-2}\right)dx=x+\ln|x|-\frac2x+3\ln|x-2|+C.
+  \]
+
+  \item[(b)] Substitute $u=x+1$, $du=dx$, $x=u-1$:
+  \[
+  \int\frac{x}{\sqrt{x+1}}dx=\int\frac{u-1}{\sqrt u}du=\int\left(u^{1/2}-u^{-1/2}\right)du=\frac23u^{3/2}-2u^{1/2}+C.
+  \]
+  \textbf{Answer:} $\displaystyle\int\frac{x}{\sqrt{x+1}}dx=\frac23(x+1)^{3/2}-2\sqrt{x+1}+C=\frac23(x-2)\sqrt{x+1}+C$.
+\end{enumerate}
+\end{solution}

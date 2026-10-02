@@ -1,0 +1,40 @@
+% English translation of questions/5776/semB-moedC/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Find the domain, the intersection points with the axes, the intervals of increase and decrease, the extremum points, the asymptotes, and the intervals of convexity/concavity of the following function:
+\[ f(x)=\frac{\sin(x)}{2+\cos(x)}. \]
+Sketch the graph of the function
+\end{question}
+
+\begin{hint}
+The function is periodic with period $2\pi$ and odd, so it suffices to analyze it on $[0,2\pi]$ (or $[-\pi,\pi]$). Note that $2+\cos x\ge1>0$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $2+\cos x\ge1>0$ for every $x$, so $f$ is defined (and continuous and differentiable) on all of $\R$.
+\textbf{Symmetry and periodicity:} $f(-x)=-f(x)$ (odd), and $f(x+2\pi)=f(x)$ (periodic with period $2\pi$).
+
+\textbf{Intersection with the axes:} $f(x)=0\iff\sin x=0\iff x=k\pi$, $k\in\Z$. The intersection with the $y$-axis: $(0,0)$. $f>0$ on $(2k\pi,(2k+1)\pi)$ and $f<0$ on $((2k-1)\pi,2k\pi)$.
+
+\textbf{First derivative:}
+\[ f'(x)=\frac{\cos x(2+\cos x)-\sin x\cdot(-\sin x)}{(2+\cos x)^2}=\frac{2\cos x+\cos^2x+\sin^2x}{(2+\cos x)^2}=\frac{2\cos x+1}{(2+\cos x)^2}. \]
+$f'(x)=0\iff\cos x=-\frac12\iff x=\pm\frac{2\pi}{3}+2k\pi$. Over the period $[-\pi,\pi]$:
+\begin{itemize}
+  \item $f'>0$ (\textbf{increasing}) for $\cos x>-\frac12$, i.e., on $\left(-\frac{2\pi}3+2k\pi,\ \frac{2\pi}3+2k\pi\right)$;
+  \item $f'<0$ (\textbf{decreasing}) on $\left(\frac{2\pi}3+2k\pi,\ \frac{4\pi}3+2k\pi\right)$.
+\end{itemize}
+\textbf{Extrema:} A maximum at $x=\frac{2\pi}3+2k\pi$ with $f=\frac{\sqrt3/2}{2-1/2}=\frac{1}{\sqrt3}$; a minimum at $x=-\frac{2\pi}3+2k\pi$ with $f=-\frac1{\sqrt3}$. These are also the global extrema: $-\frac1{\sqrt3}\le f(x)\le\frac1{\sqrt3}$ for every $x$.
+
+\textbf{Asymptotes:} There are no vertical asymptotes ($f$ is continuous on all of $\R$). There is no horizontal or oblique asymptote: $f$ is periodic and not constant, so $\lim_{x\to\pm\infty}f(x)$ does not exist (for example $f(2k\pi)=0$ and $f(\frac{2\pi}3+2k\pi)=\frac1{\sqrt3}$), and also $\frac{f(x)}{x}\to0$, so an oblique asymptote would have to be horizontal.
+
+\textbf{Second derivative:} Differentiate $f'=\frac{2\cos x+1}{(2+\cos x)^2}$:
+\[ f''(x)=\frac{-2\sin x(2+\cos x)^2+(2\cos x+1)\cdot2(2+\cos x)\sin x}{(2+\cos x)^4}=\frac{2\sin x\,\big[-(2+\cos x)+2\cos x+1\big]}{(2+\cos x)^3}=\frac{2\sin x(\cos x-1)}{(2+\cos x)^3}. \]
+Since $\cos x-1\le0$ (and equals $0$ only at $x=2k\pi$) and the denominator is positive, the sign of $f''$ is opposite to the sign of $\sin x$:
+\begin{itemize}
+  \item On $(2k\pi,(2k+1)\pi)$: $\sin x>0$, hence $f''<0$ -- \textbf{concave} ($\cap$);
+  \item On $((2k+1)\pi,(2k+2)\pi)$: $\sin x<0$, hence $f''>0$ -- \textbf{convex} ($\cup$).
+\end{itemize}
+\textbf{Inflection points:} $x=k\pi$ (the points $(k\pi,0)$), since $f''$ changes sign there.
+
+\textbf{Sketch:} A periodic sine-like wave that passes through the origin, rises to the maximum $\frac1{\sqrt3}\approx0.577$ at $x=\frac{2\pi}{3}$, descends through $(\pi,0)$ (an inflection point) to the minimum $-\frac1{\sqrt3}$ at $x=\frac{4\pi}3$, and returns to $(2\pi,0)$; compared with $\sin x$ the graph is ``tilted to the right'' -- the maximum is shifted from $\frac\pi2$ to $\frac{2\pi}3$. The pattern repeats in every period of length $2\pi$.
+\end{solution}

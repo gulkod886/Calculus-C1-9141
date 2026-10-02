@@ -1,0 +1,29 @@
+% English translation of questions/5785/quiz/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)=x^3+x^2$. Which of the following statements is true?
+\begin{enumerate}
+  \item The function is one-to-one and onto $\R$.
+  \item The function is one-to-one but not onto $\R$.
+  \item The function is onto $\R$ but not one-to-one.
+  \item The function is neither one-to-one nor onto $\R$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Factor: $x^3+x^2=x^2(x+1)$. How many roots are there?
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c)}.
+
+\textbf{Not one-to-one:} $f(x)=x^2(x+1)$, so $f(0)=0=f(-1)$ with $0\neq-1$.
+
+\textbf{Onto $\R$:} $f$ is a polynomial and therefore continuous on $\R$. Also
+\[
+\lim_{x\to\infty}x^3\left(1+\tfrac1x\right)=\infty,\qquad \lim_{x\to-\infty}x^3\left(1+\tfrac1x\right)=-\infty .
+\]
+Let $y\in\R$. By the definition of infinite limits there exist $x_1<x_2$ with $f(x_1)<y<f(x_2)$. By the Intermediate Value Theorem ($f$ is continuous on $[x_1,x_2]$) there exists $c\in(x_1,x_2)$ with $f(c)=y$. Hence $f$ is onto $\R$.
+
+\textbf{Why the others are wrong:} (a) and (b) claim that $f$ is one-to-one, which we disproved. (d) claims that $f$ is not onto, but we proved that it is onto.
+\end{solution}

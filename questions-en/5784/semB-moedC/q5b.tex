@@ -1,0 +1,17 @@
+% English translation of questions/5784/semB-moedC/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \int_0^{\ln2}xe^{-x}\,dx \]
+\end{question}
+
+\begin{hint}
+Integrate by parts with $u=x$.
+\end{hint}
+
+\begin{solution}
+Integrate by parts with $u=x$, $v'=e^{-x}$, i.e. $u'=1$, $v=-e^{-x}$:
+\[ \int_0^{\ln2}xe^{-x}dx=\Big[-xe^{-x}\Big]_0^{\ln2}+\int_0^{\ln2}e^{-x}dx=-\frac{\ln2}{2}+\Big[-e^{-x}\Big]_0^{\ln2}=-\frac{\ln2}{2}+\left(1-\frac12\right), \]
+since $e^{-\ln2}=\frac12$. Hence
+\[ \int_0^{\ln2}xe^{-x}dx=\boxed{\frac{1-\ln2}{2}}\approx0.153. \]
+\end{solution}

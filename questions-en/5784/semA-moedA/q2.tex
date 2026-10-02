@@ -1,0 +1,39 @@
+% English translation of questions/5784/semA-moedA/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(16 pts) Let $a,b\in\R$. Define a function by
+\[ f(x)=\begin{cases} \frac{\sin(8x)}{x}, & \text{if } x<0,\\[2pt] ax+b, & \text{if } 0\le x\le 4,\\[2pt] \frac{x^2-3x-4}{2-\sqrt{x}}, & \text{if } x>4 \end{cases} \]
+For which values of $a,b$ is the function continuous on $\R$? Justify.
+\end{question}
+
+\begin{hint}
+In each of the three open intervals the function is continuous as a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=4$.
+\end{hint}
+
+\begin{hint}
+For the limit at $x=4$, factor the numerator $x^2-3x-4=(x-4)(x+1)$ and write $x-4=(\sqrt x-2)(\sqrt x+2)$.
+\end{hint}
+
+\begin{solution}
+\textbf{Continuity inside each interval.}
+\begin{itemize}
+  \item On $x<0$: $f(x)=\frac{\sin 8x}{x}$ is a quotient of continuous functions whose denominator does not vanish, hence it is continuous.
+  \item On $0<x<4$: $f(x)=ax+b$ is a polynomial, continuous.
+  \item On $x>4$: $f(x)=\frac{x^2-3x-4}{2-\sqrt x}$ is a quotient of continuous functions, and the denominator vanishes only at $x=4$, which is not in this interval. Hence it is continuous.
+\end{itemize}
+Therefore $f$ is continuous on $\R$ if and only if it is continuous at the points $x=0$ and $x=4$.
+
+\textbf{The point $x=0$.} $f(0)=b$, and from the right $\lim_{x\to0^+}f(x)=\lim_{x\to0^+}(ax+b)=b$. From the left, by the fundamental limit $\lim_{t\to0}\frac{\sin t}{t}=1$:
+\[ \lim_{x\to0^-}\frac{\sin(8x)}{x} = \lim_{x\to0^-}8\cdot\frac{\sin(8x)}{8x} = 8. \]
+Hence continuity at $0$ holds if and only if $b=8$.
+
+\textbf{The point $x=4$.} $f(4)=4a+b$, and from the left $\lim_{x\to4^-}(ax+b)=4a+b$. From the right, for $x>4$:
+\[ \frac{x^2-3x-4}{2-\sqrt x} = \frac{(x-4)(x+1)}{2-\sqrt x} = \frac{(\sqrt x-2)(\sqrt x+2)(x+1)}{-(\sqrt x-2)} = -(\sqrt x+2)(x+1), \]
+and therefore
+\[ \lim_{x\to4^+}f(x) = -(2+2)(4+1) = -20. \]
+Continuity at $4$ holds if and only if $4a+b=-20$.
+
+\textbf{Conclusion.} With $b=8$ we get $4a=-28$, i.e.
+\[ \boxed{a=-7,\quad b=8}, \]
+and only for these values is $f$ continuous on all of $\R$.
+\end{solution}

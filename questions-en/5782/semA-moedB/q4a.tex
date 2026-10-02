@@ -1,0 +1,16 @@
+% English translation of questions/5782/semA-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Compute the antiderivative of
+\[ f(x)=\cos^2x\sin^3x \]
+\end{question}
+
+\begin{hint}
+Write $\sin^3x=(1-\cos^2x)\sin x$ and substitute $t=\cos x$.
+\end{hint}
+
+\begin{solution}
+Write $\cos^2x\sin^3x=\cos^2x(1-\cos^2x)\sin x$ and substitute $t=\cos x$, $dt=-\sin x\,dx$:
+\[ \int\cos^2x\sin^3x\,dx=-\int t^2(1-t^2)\,dt=-\frac{t^3}{3}+\frac{t^5}{5}+C=\boxed{\frac{\cos^5x}{5}-\frac{\cos^3x}{3}+C}. \]
+Check: $\left(\frac{\cos^5x}{5}-\frac{\cos^3x}{3}\right)'=-\cos^4x\sin x+\cos^2x\sin x=\cos^2x\sin x(1-\cos^2x)=\cos^2x\sin^3x$.
+\end{solution}

@@ -1,0 +1,26 @@
+% English translation of questions/5784/semA-special/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Find the absolute minimum and maximum of the function
+\[ f(x)=(x+2)\cdot e^x \]
+on its domain, or explain why they do not exist.
+\end{question}
+
+\begin{hint}
+Find the intervals of increase and decrease using $f'$, and check the behavior of the function as $x\to\pm\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} all of $\R$; $f$ is differentiable at every point.
+
+\textbf{Derivative:} by the product rule
+\[ f'(x)=e^x+(x+2)e^x=(x+3)e^x. \]
+Since $e^x>0$, the sign of $f'$ is the sign of $x+3$: $f'<0$ on $(-\infty,-3)$ and $f'>0$ on $(-3,\infty)$. Hence (by a corollary of Lagrange's theorem) $f$ is strictly decreasing on $(-\infty,-3]$ and strictly increasing on $[-3,\infty)$.
+
+\textbf{Absolute minimum:} by monotonicity, for every $x\le-3$ we have $f(x)\ge f(-3)$, and for every $x\ge-3$ we have $f(x)\ge f(-3)$. Hence $x=-3$ is a point of absolute minimum, and the minimum value is
+\[ f(-3)=(-3+2)e^{-3}=-\frac1{e^3}\approx-0.0498. \]
+
+\textbf{Absolute maximum:} $\lim_{x\to\infty}(x+2)e^x=+\infty$, hence the function is not bounded above and has no absolute maximum. (For completeness: $\lim_{x\to-\infty}(x+2)e^x=\lim_{x\to-\infty}\frac{x+2}{e^{-x}}=0$ by L'Hôpital's rule, so the function tends to $0^-$ on the left, but on the right it is unbounded.)
+
+\textbf{Answer:} the absolute minimum is $-e^{-3}$, attained at $x=-3$; an absolute maximum does not exist since $f(x)\to+\infty$ as $x\to\infty$.
+\end{solution}

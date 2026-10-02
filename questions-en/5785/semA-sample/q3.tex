@@ -1,0 +1,28 @@
+% English translation of questions/5785/semA-sample/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(16 pts) Using a linear approximation (a first-degree Taylor polynomial), estimate $\sqrt[4]{18}$ and give a bound on the error.
+\end{question}
+
+\begin{hint}
+Expand $f(x) = \sqrt[4]{x}$ around $a = 16$, since $\sqrt[4]{16} = 2$, and bound the Lagrange remainder $R_1$.
+\end{hint}
+
+\begin{solution}
+Define $f(x) = \sqrt[4]{x} = x^{1/4}$ and expand around $a = 16$, the point closest to $18$ at which the fourth root is known. For $x > 0$:
+\[ f'(x) = \frac14 x^{-3/4}, \qquad f''(x) = -\frac{3}{16} x^{-7/4}, \]
+hence $f(16) = 2$ and $f'(16) = \frac{1}{4\cdot 16^{3/4}} = \frac{1}{4\cdot 8} = \frac{1}{32}$.
+
+\textbf{Linear approximation:}
+\[ P_1(x) = f(16) + f'(16)(x - 16) = 2 + \frac{x - 16}{32}, \qquad
+   \sqrt[4]{18} \approx P_1(18) = 2 + \frac{2}{32} = 2 + \frac{1}{16} = \frac{33}{16} = 2.0625. \]
+
+\textbf{Error bound.} By Taylor's theorem with the Lagrange remainder, there exists $c \in (16, 18)$ such that
+\[ R_1(18) = \frac{f''(c)}{2!}(18 - 16)^2 = \frac{-\frac{3}{16}c^{-7/4}}{2}\cdot 4 = -\frac{3}{8\,c^{7/4}}. \]
+Since $c > 16$, we have $c^{7/4} > 16^{7/4} = 2^7 = 128$, and hence
+\[ |R_1(18)| = \frac{3}{8c^{7/4}} < \frac{3}{8\cdot128} = \frac{3}{1024} \approx 0.0029. \]
+
+\textbf{Answer:} $\sqrt[4]{18} \approx \frac{33}{16} = 2.0625$, with error less than $\frac{3}{1024}$. Since $R_1 < 0$, the approximation is larger than the true value: $\frac{33}{16} - \frac{3}{1024} < \sqrt[4]{18} < \frac{33}{16}$.
+
+(Check: $\sqrt[4]{18} \approx 2.05977$, and the actual error is about $0.00273 < \frac{3}{1024}$.)
+\end{solution}

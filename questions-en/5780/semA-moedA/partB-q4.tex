@@ -1,0 +1,27 @@
+% English translation of questions/5780/semA-moedA/partB-q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+If $f(x)=\frac{1-e^{-\frac{x^2}{2}}}{x}$, then in a neighborhood of $0$ we have
+\begin{enumerate}
+  \item[(a)] $f(x)=\frac{x}{2}+\frac{x^3}{4}+o(x^3)$
+  \item[(b)] $f(x)=\frac{x}{2}+\frac{x^3}{8}+o(x^3)$
+  \item[(c)] $f(x)=\frac{x}{2}-\frac{x^3}{8}+o(x^3)$
+  \item[(d)] $f(x)=\frac{x}{2}-\frac{x^3}{2}+o(x^3)$
+  \item[(e)] $f(x)=\frac{x}{2}-\frac{x^3}{4}+o(x^3)$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Substitute $t=-\frac{x^2}{2}$ into the expansion $e^t=1+t+\frac{t^2}{2}+o(t^2)$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c).}
+
+By the Maclaurin expansion $e^t=1+t+\frac{t^2}{2}+o(t^2)$ as $t\to0$, with $t=-\frac{x^2}{2}$ (and then $o(t^2)=o(x^4)$):
+\[ e^{-x^2/2} = 1-\frac{x^2}{2}+\frac{x^4}{8}+o(x^4). \]
+Hence
+\[ 1-e^{-x^2/2} = \frac{x^2}{2}-\frac{x^4}{8}+o(x^4), \]
+and dividing by $x$ (for $x\neq0$; $\frac{o(x^4)}{x}=o(x^3)$):
+\[ f(x)=\frac{x}{2}-\frac{x^3}{8}+o(x^3). \]
+\end{solution}

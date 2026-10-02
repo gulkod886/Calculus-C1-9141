@@ -1,0 +1,22 @@
+% English translation of questions/5778/semB-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find all the asymptotes of the function $f(x)=\frac{\ln(2x)}{\ln(x)}$.
+\end{question}
+
+\begin{hint}
+Write $\ln(2x)=\ln2+\ln x$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $x>0$ (for $\ln x$ and $\ln 2x$) and $\ln x\neq0$, i.e. $x\in(0,1)\cup(1,\infty)$. On this domain
+\[
+f(x)=\frac{\ln2+\ln x}{\ln x}=1+\frac{\ln2}{\ln x}.
+\]
+\textbf{Vertical:} as $x\to1^+$, $\ln x\to0^+$, hence $f(x)\to+\infty$; as $x\to1^-$, $\ln x\to0^-$, hence $f(x)\to-\infty$. Hence $x=1$ is a vertical asymptote.
+As $x\to0^+$: $\ln x\to-\infty$, hence $f(x)\to1$ — a finite limit, so $x=0$ is \emph{not} a vertical asymptote.
+
+\textbf{Horizontal/oblique:} the function is defined only for $x>0$, so we check only $x\to+\infty$: $\ln x\to\infty$, hence $f(x)\to1$. Hence $y=1$ is a horizontal asymptote at $+\infty$ (and there is no oblique one).
+
+\textbf{Answer:} a vertical asymptote $x=1$ and a horizontal asymptote $y=1$ (as $x\to+\infty$).
+\end{solution}

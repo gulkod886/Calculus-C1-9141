@@ -1,0 +1,36 @@
+% English translation of questions/5786/quiz/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Define a function by
+\[
+f(x)=\begin{cases}
+x^3, & \text{if } x<1,\\
+2x+1, & \text{if } x\ge 1
+\end{cases}
+\]
+\begin{enumerate}
+  \item (5 pts) Sketch the graph of the function.
+  \item (15 pts) Is this function invertible as a function from $\R$ to $\R$?
+  If so, compute its inverse function $f^{-1}:\R\to\R$.
+  If not, justify.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+A function that is invertible from $\R$ to $\R$ must be both one-to-one and onto $\R$. What is the image of each of the two pieces?
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item \textbf{The graph:} for $x<1$ this is the graph of the cubic parabola $y=x^3$: strictly increasing, passing through the points $(-1,-1)$, $(0,0)$ (an inflection point with a horizontal tangent), and approaching the point $(1,1)$ --- this point does \emph{not} belong to the graph (open circle). For $x\ge1$ it is a ray with slope 2 starting at the point $(1,3)$ (filled circle) and passing through $(2,5)$. At the point $x=1$ there is a ``jump'' from height 1 to height 3.
+  \item \textbf{The function is not invertible as a function from $\R$ to $\R$}, since it is not onto $\R$.
+
+  We find the image. For $x<1$: $x^3$ is strictly increasing, hence $x^3<1^3=1$; i.e. the values of the first piece are less than 1 (and in fact cover $(-\infty,1)$). For $x\ge1$: $2x+1\ge3$; i.e. the values of the second piece are greater than or equal to 3 (and cover $[3,\infty)$). Therefore
+  \[
+  \operatorname{Im}f=(-\infty,1)\cup[3,\infty).
+  \]
+  In particular, there is no $x\in\R$ with $f(x)=2$: if $x<1$ then $f(x)<1$, and if $x\ge1$ then $f(x)\ge3$. Hence $f$ is not onto $\R$, and therefore it has no inverse $f^{-1}:\R\to\R$.
+
+  (Remark: $f$ is one-to-one --- it is strictly increasing, since each piece is strictly increasing and every value of the first piece is less than every value of the second piece. Hence $f$ is invertible as a function from $\R$ onto its image $(-\infty,1)\cup[3,\infty)$, with $f^{-1}(y)=\sqrt[3]{y}$ for $y<1$ and $f^{-1}(y)=\frac{y-1}{2}$ for $y\ge3$; but not as a function from $\R$ to $\R$.)
+\end{enumerate}
+\end{solution}

@@ -1,0 +1,12 @@
+% English translation of questions/5784/semB-moedA/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Write the Maclaurin polynomial of order 3 of $f(x)=\ln(1+x)$.
+\end{question}
+
+\begin{solution}
+We compute the derivatives at $0$:
+\[ f(x)=\ln(1+x),\quad f'(x)=\frac1{1+x},\quad f''(x)=-\frac1{(1+x)^2},\quad f'''(x)=\frac{2}{(1+x)^3}, \]
+hence $f(0)=0,\ f'(0)=1,\ f''(0)=-1,\ f'''(0)=2$. The Maclaurin polynomial:
+\[ P_3(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2+\frac{f'''(0)}{3!}x^3=\boxed{x-\frac{x^2}{2}+\frac{x^3}{3}}. \]
+\end{solution}

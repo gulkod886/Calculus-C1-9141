@@ -1,0 +1,22 @@
+% English translation of questions/5785/semA-special/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the general solution of the differential equation
+\[ y' - xy^2 = 4x \]
+\end{question}
+
+\begin{hint}
+Rearrange: $y' = x(y^2 + 4)$ --- this is a separable equation.
+\end{hint}
+
+\begin{solution}
+Rearrange: $y' = xy^2 + 4x = x(y^2 + 4)$. This is a separable equation. Since $y^2 + 4 > 0$ always, there are no constant solutions (for $y\equiv c$: $0 = x(c^2+4)$ does not hold for every $x$), and we may divide:
+\[ \frac{y'}{y^2 + 4} = x \quad\Longrightarrow\quad \int\frac{dy}{y^2 + 4} = \int x\,dx \quad\Longrightarrow\quad \frac12\arctan\frac y2 = \frac{x^2}{2} + c. \]
+Multiply by $2$ and set $C = 2c$: $\arctan\frac y2 = x^2 + C$, and hence
+\[ y = 2\tan\left(x^2 + C\right), \]
+on the region where $x^2 + C \in (-\frac\pi2, \frac\pi2)$ (since $\arctan$ takes values only in this interval).
+
+\textbf{Check:} $y' = 2\cdot 2x\left(1 + \tan^2(x^2 + C)\right) = 4x + x\cdot 4\tan^2(x^2+C) = 4x + xy^2$. It holds.
+
+\textbf{Answer:} $y(x) = 2\tan(x^2 + C)$, $C \in \R$.
+\end{solution}

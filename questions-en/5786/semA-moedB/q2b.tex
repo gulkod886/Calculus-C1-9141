@@ -1,0 +1,24 @@
+% English translation of questions/5786/semA-moedB/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Prove that for every $x \ge 0$
+\[ 0 \le \frac{x^2}{e^x} \le 1 \]
+\end{question}
+
+\begin{hint}
+Investigate $g(x) = \frac{x^2}{e^x}$ on $[0, \infty)$ and find its maximum.
+\end{hint}
+
+\begin{solution}
+Define $g(x) = \frac{x^2}{e^x} = x^2 e^{-x}$ on $[0, \infty)$; $g$ is continuous and differentiable there.
+
+\textbf{The left inequality:} $x^2 \ge 0$ and $e^x > 0$, hence $g(x) \ge 0$ for every $x$.
+
+\textbf{The right inequality:} we compute
+\[ g'(x) = \frac{2x e^x - x^2 e^x}{e^{2x}} = \frac{x(2 - x)}{e^x}. \]
+On $(0, 2)$ we have $g' > 0$, and on $(2, \infty)$ we have $g' < 0$. Hence $g$ is increasing on $[0, 2]$ and decreasing on $[2, \infty)$, and $x = 2$ is an absolute maximum point of $g$ on $[0, \infty)$. Therefore, for every $x \ge 0$:
+\[ g(x) \le g(2) = \frac{4}{e^2} = \left( \frac{2}{e} \right)^2 < 1, \]
+since $0 < 2 < e$ and hence $0 < \frac{2}{e} < 1$.
+
+Thus, for every $x \ge 0$: $0 \le \frac{x^2}{e^x} \le \frac{4}{e^2} < 1$, and in particular $0 \le \frac{x^2}{e^x} \le 1$. $\blacksquare$
+\end{solution}

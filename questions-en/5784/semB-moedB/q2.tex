@@ -1,0 +1,36 @@
+% English translation of questions/5784/semB-moedB/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+For every $a,b\in\R$ define the following function:
+\[ f(x)=\begin{cases} \sin(ax) & x<0\\ b-2 & x=0\\ x^2\ln(x) & 0>x\end{cases} \]
+\begin{enumerate}
+  \item For which $a,b\in\R$ is the function $f(x)$ continuous at the point $x=0$?
+  \item Do there exist $a,b\in\R$ for which the function $f(x)$ is differentiable at the point $x=0$?
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Compute the one-sided limits at $0$. For the limit $\lim_{x\to0^+}x^2\ln x$ (and also $x\ln x$) use L'Hôpital's rule after writing it as a quotient.
+\end{hint}
+
+\begin{hint}
+Differentiability implies continuity. Compute the one-sided derivatives by the definition.
+\end{hint}
+
+\begin{solution}
+\textbf{Remark:} the condition in the third row is written as ``$0>x$'', which is of course a typo: the first row already covers $x<0$, and for $x<0$ the expression $\ln x$ is undefined. The intended condition is $0<x$, and we solve accordingly.
+\begin{enumerate}
+  \item \textbf{Left limit:} $\lim_{x\to0^-}\sin(ax)=\sin0=0$ (continuity of the sine), for every $a$.
+
+  \textbf{Right limit:} $\lim_{x\to0^+}x^2\ln x$ is of the form $0\cdot(-\infty)$. We write it as a quotient and use L'Hôpital's rule:
+  \[ \lim_{x\to0^+}\frac{\ln x}{x^{-2}}=\lim_{x\to0^+}\frac{1/x}{-2x^{-3}}=\lim_{x\to0^+}\left(-\frac{x^2}{2}\right)=0. \]
+  Hence the limit of $f$ at $0$ exists and equals $0$ for every $a$, and $f$ is continuous at $0$ if and only if $f(0)=b-2=0$.
+  \textbf{Answer:} $f$ is continuous at $0$ for $b=2$ and any $a\in\R$.
+  \item If $f$ is differentiable at $0$, then in particular it is continuous there, so we must have $b=2$, i.e. $f(0)=0$. We compute the one-sided derivatives by the definition:
+  \[ f'_-(0)=\lim_{h\to0^-}\frac{\sin(ah)-0}{h}=a\lim_{h\to0^-}\frac{\sin(ah)}{ah}=a \]
+  (for $a=0$ the quotient is identically $0$, and then too the limit is $0=a$), and
+  \[ f'_+(0)=\lim_{h\to0^+}\frac{h^2\ln h-0}{h}=\lim_{h\to0^+}h\ln h=\lim_{h\to0^+}\frac{\ln h}{1/h}\overset{\text{L'Hôpital}}{=}\lim_{h\to0^+}\frac{1/h}{-1/h^2}=\lim_{h\to0^+}(-h)=0. \]
+  $f$ is differentiable at $0$ if and only if the two one-sided derivatives are equal, i.e. $a=0$.
+  \textbf{Answer:} yes: $f$ is differentiable at $0$ exactly for $a=0,\ b=2$, and then $f'(0)=0$.
+\end{enumerate}
+\end{solution}

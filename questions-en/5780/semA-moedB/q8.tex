@@ -1,0 +1,28 @@
+% English translation of questions/5780/semA-moedB/q8.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+If $f(x)$ is a real function whose derivative is $f'(x)=(x-1)^2(x+2)(x-5)$, then:
+\begin{enumerate}
+  \item $f(x)$ has a maximum at $x=-2$ and a minimum at $x=5$, and no extremum point at $x=1$.
+  \item $f(x)$ has a maximum at $x=5$ and a minimum at $x=-2$, and no extremum point at $x=1$.
+  \item $f(x)$ has a maximum at $x=-2$ and at $x=1$ and a minimum at $x=5$.
+  \item $f(x)$ has a maximum at $x=5$ and a minimum at $x=-2$ and at $x=1$.
+  \item $f(x)$ has no extremum points.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Check the sign of the derivative on both sides of each critical point. Note that the factor $(x-1)^2$ does not change sign.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: a.}
+
+$f$ is differentiable on all of $\R$, hence extremum points are possible only where $f'=0$ (Fermat's theorem): $x=-2,\,1,\,5$. We check the sign of $f'$. The factor $(x-1)^2\ge0$ does not change sign, hence the sign is determined by $(x+2)(x-5)$:
+\begin{itemize}
+  \item $x<-2$: $(x+2)(x-5)>0$, hence $f'>0$ --- $f$ is increasing.
+  \item $-2<x<5$, $x\neq 1$: $(x+2)(x-5)<0$, hence $f'<0$ --- $f$ is decreasing.
+  \item $x>5$: $f'>0$ --- $f$ is increasing.
+\end{itemize}
+Hence at $x=-2$ the derivative changes from positive to negative --- a local maximum; at $x=5$ it changes from negative to positive --- a local minimum; and at $x=1$ the derivative is negative on both sides, so $f$ is strictly decreasing in a neighborhood of $1$ and there is no extremum there.
+\end{solution}

@@ -1,0 +1,34 @@
+% English translation of questions/5786/semA-moedA/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(12 pts) Compute all asymptotes of the function
+\[ f(x) = \frac{x^2 - 2\ln(x)}{x - 1} \]
+\end{question}
+
+\begin{hint}
+Start from the domain: the ``suspicious'' points for a vertical asymptote are the endpoints of the domain and the points where the denominator vanishes. An oblique asymptote $y = ax + b$ needs to be checked only in a direction in which the domain is unbounded.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $\ln x$ is defined for $x > 0$, and the denominator vanishes at $x = 1$. Hence the domain is $(0,1)\cup(1,\infty)$, and $f$ is continuous on it.
+
+\textbf{Vertical asymptotes.} The suspicious points are $x = 0$ (an endpoint of the domain) and $x = 1$.
+\begin{itemize}
+  \item $x \to 0^+$: the numerator $x^2 - 2\ln x \to 0 - (-\infty) = +\infty$ and the denominator $x - 1 \to -1$, hence
+  \[ \lim_{x\to 0^+} f(x) = -\infty. \]
+  Therefore $x = 0$ is a vertical asymptote (from the right).
+  \item $x \to 1$: the numerator $\to 1 - 2\ln 1 = 1 > 0$ and the denominator $\to 0$, where $x - 1 < 0$ on the left and $x - 1 > 0$ on the right. Hence
+  \[ \lim_{x\to 1^-} f(x) = -\infty, \qquad \lim_{x\to 1^+} f(x) = +\infty, \]
+  and $x = 1$ is a vertical asymptote (from both sides).
+\end{itemize}
+
+\textbf{Horizontal/oblique asymptotes.} The domain is unbounded only in the direction $+\infty$, so we check only $x \to +\infty$. We look for $y = ax + b$:
+\[ a = \lim_{x\to\infty} \frac{f(x)}{x} = \lim_{x\to\infty} \frac{x^2 - 2\ln x}{x^2 - x}
+     = \lim_{x\to\infty} \frac{x^2\left(1 - \frac{2\ln x}{x^2}\right)}{x^2\left(1 - \frac{1}{x}\right)} = \frac{1 - 0}{1 - 0} = 1, \]
+since $\frac{\ln x}{x^2} \to 0$ (for example by L'Hôpital: $\lim \frac{1/x}{2x} = 0$).
+\[ b = \lim_{x\to\infty} \bigl(f(x) - x\bigr) = \lim_{x\to\infty} \frac{x^2 - 2\ln x - x^2 + x}{x - 1}
+     = \lim_{x\to\infty} \frac{x\left(1 - \frac{2\ln x}{x}\right)}{x\left(1 - \frac{1}{x}\right)} = 1, \]
+since $\frac{\ln x}{x} \to 0$. Since both limits are finite, the line $y = x + 1$ is an oblique asymptote at $+\infty$ (and there is no horizontal asymptote).
+
+\textbf{Answer:} vertical asymptotes $x = 0$ and $x = 1$; oblique asymptote $y = x + 1$ as $x \to +\infty$.
+\end{solution}

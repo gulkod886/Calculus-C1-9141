@@ -1,0 +1,23 @@
+% English translation of questions/5776/semB-moedB/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\textbf{Prove or disprove:} Let $f$ be a strictly increasing function on the interval $[a,b]$; then $f$ is convex.
+\end{question}
+
+\begin{hint}
+Look for a strictly increasing function whose graph ``bends'' in both directions, for example an odd polynomial.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is false.} Monotonicity is unrelated to convexity.
+
+Counterexample: $f(x)=x^3$ on the interval $[a,b]=[-1,1]$. Since $f'(x)=3x^2\ge 0$ and it vanishes only at the single point $x=0$, the function is strictly increasing on the interval (one can also see this directly: if $x<y$ then $y^3-x^3=(y-x)(x^2+xy+y^2)>0$, since $x^2+xy+y^2=(x+\tfrac y2)^2+\tfrac34y^2>0$ when $x\ne y$).
+
+However, $f''(x)=6x$, so $f''<0$ on $(-1,0)$ and $f''>0$ on $(0,1)$. That is, $f$ is concave on $[-1,0]$ and convex on $[0,1]$, and hence it is not convex (and not concave either) on the whole interval.
+
+A direct check by the definition: for the points $x_1=-1,\ x_2=0$ and the midpoint $-\tfrac12$:
+\[ f\!\left(-\tfrac12\right)=-\tfrac18 \;>\; -\tfrac12=\frac{f(-1)+f(0)}{2}, \]
+i.e., the chord between $(-1,-1)$ and $(0,0)$ lies \emph{below} the graph, contradicting convexity ($f(\tfrac{x_1+x_2}{2})\le \tfrac{f(x_1)+f(x_2)}{2}$). On the other hand, for $x_1=0,\ x_2=1$: $f(\tfrac12)=\tfrac18<\tfrac12=\tfrac{f(0)+f(1)}2$, so the function is not concave either. Hence the example disproves the statement under either convention for the word ``convex''.
+
+(Another example: $f(x)=\sqrt{x}$ on $[0,1]$ is strictly increasing and strictly concave.)
+\end{solution}

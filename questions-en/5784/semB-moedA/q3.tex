@@ -1,0 +1,44 @@
+% English translation of questions/5784/semB-moedA/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Analyze the following function (local extremum points, intervals of convexity/concavity, asymptotes):
+\[ f(x)=\frac{2-x-3x^2}{x^2-1} \]
+Sketch its graph.
+\end{question}
+
+\begin{hint}
+Factor the numerator and the denominator -- there is a common factor.
+\end{hint}
+
+\begin{hint}
+After cancelling, one can write $f(x)=-3-\frac{1}{x-1}$ (for $x\neq\pm1$).
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $x^2-1\neq0$, i.e. $x\neq\pm1$.
+
+\textbf{Simplification:} $2-x-3x^2=-(3x^2+x-2)=-(3x-2)(x+1)$ and $x^2-1=(x-1)(x+1)$. Hence for every $x\neq\pm1$:
+\[ f(x)=\frac{-(3x-2)(x+1)}{(x-1)(x+1)}=\frac{2-3x}{x-1}=-3-\frac{1}{x-1}. \]
+(Check: $-3(x-1)-1=2-3x$.)
+
+\textbf{The point $x=-1$:} $\lim_{x\to-1}f(x)=\frac{2+3}{-2}=-\frac52$ -- a finite limit, hence this is a removable discontinuity (a ``hole'' in the graph at the point $(-1,-\frac52)$), and there is no vertical asymptote there.
+
+\textbf{Intersections with the axes:} $f(0)=-2$; $f(x)=0\iff x=\frac23$. The points $(0,-2)$, $(\frac23,0)$.
+
+\textbf{First derivative:} $f'(x)=\frac{1}{(x-1)^2}>0$ for every $x$ in the domain. Hence $f$ is increasing on each of the intervals $(-\infty,-1)$, $(-1,1)$, $(1,\infty)$, and there are \textbf{no local extremum points} (the derivative does not vanish anywhere, and by Fermat's theorem there is no interior extremum).
+
+\textbf{Second derivative:} $f''(x)=-\frac{2}{(x-1)^3}$.
+\begin{itemize}
+  \item For $x<1$ ($x\neq-1$): $(x-1)^3<0$, hence $f''>0$ -- $f$ is \textbf{convex} ($\cup$) on $(-\infty,-1)$ and on $(-1,1)$.
+  \item For $x>1$: $f''<0$ -- $f$ is \textbf{concave} ($\cap$) on $(1,\infty)$.
+\end{itemize}
+There are no inflection points: the change of convexity happens only at $x=1$, which is not in the domain.
+
+\textbf{Asymptotes:}
+\begin{itemize}
+  \item Vertical: $x=1$. $\lim_{x\to1^-}f(x)=-3-\frac{1}{0^-}=+\infty$, $\lim_{x\to1^+}f(x)=-\infty$.
+  \item Horizontal: $\lim_{x\to\pm\infty}f(x)=-3$ (the degrees of the numerator and the denominator are equal, the ratio of the leading coefficients is $\frac{-3}{1}$). Hence $y=-3$ is a horizontal asymptote in both directions; there is no oblique asymptote.
+\end{itemize}
+
+\textbf{The graph:} the hyperbola $y=-3-\frac1{x-1}$ (a shift of $-\frac1x$) with a hole at the point $(-1,-\frac52)$. To the left of $x=1$ the graph rises from the asymptote $y=-3$ (above it) through the hole $(-1,-2.5)$, $(0,-2)$, $(\frac23,0)$ and tends to $+\infty$ as $x\to1^-$, and it is convex. To the right of $x=1$ the graph rises from $-\infty$ and approaches $y=-3$ from below, and it is concave.
+\end{solution}

@@ -1,0 +1,19 @@
+% English translation of questions/5784/semA-moedA/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(14 pts) Compute the volume of the solid of revolution of the following function, around the $x$-axis, on the interval $[0,\pi]$:
+\[ f(x)=\sqrt{\sin x}\cdot\cos^2x \]
+\end{question}
+
+\begin{hint}
+The volume of a solid of revolution around the $x$-axis is $V=\pi\int_a^b f^2(x)\,dx$. Here $f^2(x)=\sin x\cos^4x$, and the substitution $u=\cos x$ is suitable.
+\end{hint}
+
+\begin{solution}
+On the interval $[0,\pi]$ we have $\sin x\ge0$, so $f$ is defined and continuous on the whole interval. The formula for the volume of a solid of revolution around the $x$-axis:
+\[ V=\pi\int_0^{\pi}f^2(x)\,dx=\pi\int_0^{\pi}\sin x\cos^4x\,dx. \]
+Substitute $u=\cos x$, $du=-\sin x\,dx$; when $x=0$: $u=1$, and when $x=\pi$: $u=-1$. Hence
+\[ \int_0^{\pi}\sin x\cos^4x\,dx=\int_{1}^{-1}u^4\,(-du)=\int_{-1}^{1}u^4\,du=\left[\frac{u^5}{5}\right]_{-1}^{1}=\frac25. \]
+And therefore
+\[ \boxed{V=\frac{2\pi}{5}} \]
+\end{solution}

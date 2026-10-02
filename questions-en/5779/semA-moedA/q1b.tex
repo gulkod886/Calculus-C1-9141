@@ -1,0 +1,18 @@
+% English translation of questions/5779/semA-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle\lim_{x\to\infty}\frac{\sin\left(\frac{1}{\sqrt x}\right)}{\sqrt{x+1}-\sqrt x}$
+\end{question}
+
+\begin{hint}
+Multiply by the conjugate $\sqrt{x+1}+\sqrt x$ and use $\lim_{t\to0}\frac{\sin t}{t}=1$ with $t=\frac1{\sqrt x}$.
+\end{hint}
+
+\begin{solution}
+Multiply and divide by the conjugate:
+\[ \frac{\sin\frac1{\sqrt x}}{\sqrt{x+1}-\sqrt x}=\sin\!\left(\tfrac1{\sqrt x}\right)\left(\sqrt{x+1}+\sqrt x\right)
+=\frac{\sin\frac1{\sqrt x}}{\frac1{\sqrt x}}\cdot\frac{\sqrt{x+1}+\sqrt x}{\sqrt x}
+=\frac{\sin\frac1{\sqrt x}}{\frac1{\sqrt x}}\cdot\left(\sqrt{1+\tfrac1x}+1\right). \]
+As $x\to\infty$, $t=\frac1{\sqrt x}\to0^+$, so the first factor tends to $1$ (fundamental limit and composition of limits), and the second factor tends to $1+1=2$. Hence the limit is $\boxed{2}$.
+\end{solution}

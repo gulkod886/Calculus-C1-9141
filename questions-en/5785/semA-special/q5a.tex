@@ -1,0 +1,20 @@
+% English translation of questions/5785/semA-special/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Compute the finite area enclosed between the graph of the function $f(x) = xe^x$ and the line $y = e\cdot x$.
+\end{question}
+
+\begin{hint}
+First find the intersection points: $xe^x = ex \iff x(e^x - e) = 0$. Compute $\int xe^x\,dx$ by integration by parts.
+\end{hint}
+
+\begin{solution}
+\textbf{Intersection points:} $xe^x = ex \iff x(e^x - e) = 0 \iff x = 0$ or $e^x = e$, i.e. $x = 0$ or $x = 1$.
+
+\textbf{Which graph is on top:} $ex - xe^x = x(e - e^x)$. For $0 < x < 1$: $x > 0$ and $e^x < e$, hence $ex > xe^x$ --- the line lies above the graph.
+(For $x < 0$ the two functions do not intersect again, and the region between them is unbounded with infinite area, since $ex \to -\infty$ while $xe^x \to 0$; therefore ``the finite area'' is the one between $0$ and $1$.)
+
+\textbf{Computation:} by integration by parts ($u = x$, $dv = e^xdx$): $\int xe^x\,dx = xe^x - e^x + C$. Hence
+\[ S = \int_0^1\left(ex - xe^x\right)dx = \left[\frac{ex^2}{2}\right]_0^1 - \left[xe^x - e^x\right]_0^1 = \frac e2 - \left((e - e) - (0 - 1)\right) = \frac e2 - 1. \]
+\textbf{Answer:} $S = \frac e2 - 1 \approx 0.359$.
+\end{solution}

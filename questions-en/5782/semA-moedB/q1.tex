@@ -1,0 +1,26 @@
+% English translation of questions/5782/semA-moedB/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(17 pts) For arbitrary parameters $a,b\in\R$ define a function by
+\[ f(x)=\begin{cases} \sin(ax)\sin(\frac{1}{x}), & \text{if } x<0,\\ b+3, & \text{if } x=0,\\ x\ln(x), & \text{if } x>0 \end{cases} \]
+For which values of the parameters $a,b$ is the function continuous at $0$? Justify.
+\end{question}
+
+\begin{hint}
+Compute the one-sided limits at $0$ separately. From the left: ``tends to zero times bounded''. From the right: write $x\ln x=\frac{\ln x}{1/x}$ and use L'Hôpital's rule.
+\end{hint}
+
+\begin{solution}
+$f$ is continuous at $0$ if and only if both one-sided limits exist and equal $f(0)=b+3$.
+
+\textbf{Limit from the left.} For every $a\in\R$: $\sin(ax)\to\sin0=0$ as $x\to0^-$ (continuity of sine), and $|\sin(1/x)|\le1$. By ``tends to zero times bounded'':
+\[ \lim_{x\to0^-}\sin(ax)\sin\left(\tfrac1x\right)=0. \]
+(Explicitly: $0\le|\sin(ax)\sin(1/x)|\le|\sin(ax)|\le|a||x|\to0$.) The limit equals $0$ \textbf{for every} value of $a$.
+
+\textbf{Limit from the right.} This is a limit of the form $0\cdot(-\infty)$. We write it as a quotient of the form $\frac{-\infty}{\infty}$ and use L'Hôpital's rule:
+\[ \lim_{x\to0^+}x\ln x=\lim_{x\to0^+}\frac{\ln x}{1/x}\overset{L}{=}\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}(-x)=0. \]
+
+\textbf{Conclusion.} Both one-sided limits equal $0$, and hence $\lim_{x\to0}f(x)=0$. Continuity at $0$ is equivalent to $b+3=0$.
+
+\textbf{Answer:} $f$ is continuous at $0$ if and only if $\boxed{b=-3}$, with $a\in\R$ arbitrary.
+\end{solution}

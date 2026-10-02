@@ -1,0 +1,23 @@
+% English translation of questions/5779/semA-special/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) For which value of $a$ is the function
+\[ f(x)=\begin{cases} \dfrac{1}{\ln x}-\dfrac{1}{x-1} & x\neq 1\\[2mm] a & x=1\end{cases} \]
+continuous on its domain?
+\end{question}
+
+\begin{hint}
+You need to compute $\lim_{x\to1}\left(\frac{1}{\ln x}-\frac{1}{x-1}\right)$: bring it to a common denominator and obtain the case $\frac00$.
+\end{hint}
+
+\begin{solution}
+The domain of $f$ is $x>0$ ($\ln x$ must be defined; at the point $x=1$ the function is defined to be $a$). At every point $x>0$, $x\ne1$, the function is continuous as a composition, difference and quotient of continuous functions with nonzero denominators ($\ln x\ne0$ and $x-1\ne0$). Hence $f$ is continuous on its domain if and only if it is continuous at $x=1$, i.e. if and only if $a=\lim_{x\to1}f(x)$.
+
+We compute: $\displaystyle \frac{1}{\ln x}-\frac{1}{x-1} = \frac{x-1-\ln x}{(x-1)\ln x}$, the case $\frac{0}{0}$. By L'Hôpital's rule (the numerator and denominator are differentiable in a neighborhood of 1):
+\[ \lim_{x\to1}\frac{x-1-\ln x}{(x-1)\ln x} = \lim_{x\to1}\frac{1-\frac1x}{\ln x+\frac{x-1}{x}} = \lim_{x\to1}\frac{x-1}{x\ln x + x-1}, \]
+again the case $\frac00$, and by L'Hôpital's rule once more:
+\[ \lim_{x\to1}\frac{1}{\ln x + 1 + 1} = \frac{1}{2}. \]
+(Alternatively, with $x=1+h$: $\ln(1+h)=h-\frac{h^2}{2}+o(h^2)$, and the numerator is $\frac{h^2}{2}+o(h^2)$ and the denominator $h^2+o(h^2)$.)
+
+\textbf{Answer:} $a=\dfrac12$.
+\end{solution}

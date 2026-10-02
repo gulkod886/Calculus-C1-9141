@@ -1,0 +1,20 @@
+% English translation of questions/5778/semB-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the derivative of the function $f(x)=\sin2x$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).
+\end{question}
+
+\begin{hint}
+Use the identity $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$.
+\end{hint}
+
+\begin{solution}
+By the definition and by the identity $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$:
+\[
+\frac{\sin(2x+2h)-\sin2x}{h}=\frac{2\cos(2x+h)\sin h}{h}=2\cos(2x+h)\cdot\frac{\sin h}{h}.
+\]
+As $h\to0$: $\cos(2x+h)\to\cos2x$ (continuity of cosine) and $\frac{\sin h}{h}\to1$ (the fundamental limit). Therefore
+\[
+(\sin2x)'=\lim_{h\to0}\frac{\sin2(x+h)-\sin2x}{h}=2\cos2x.
+\]
+\end{solution}

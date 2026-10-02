@@ -1,0 +1,15 @@
+% English translation of questions/5783/semA-moedA/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Let $f(x)$ be a function continuous on the whole line, and assume that $|f(x)|\le 7$ for every $x$. Prove that the equation $2x+f(x)=3$ has at least one solution.
+\end{question}
+
+\begin{hint}
+Define $g(x)=2x+f(x)-3$ and find a point where $g$ is negative and a point where $g$ is positive, using the bound $|f(x)|\le 7$.
+\end{hint}
+
+\begin{solution}
+Define $g(x)=2x+f(x)-3$. The function $g$ is continuous on all of $\R$ as a sum of continuous functions. By assumption $-7\le f(x)\le 7$ for every $x$, and hence:
+\[ g(-10)=-20+f(-10)-3\le -23+7=-16<0,\qquad g(10)=20+f(10)-3\ge 17-7=10>0. \]
+$g$ is continuous on the closed interval $[-10,10]$ and takes values of opposite signs at its endpoints, hence by the \textbf{Intermediate Value Theorem} (Bolzano's theorem) there exists $c\in(-10,10)$ with $g(c)=0$, i.e. $2c+f(c)=3$. Hence the equation has at least one solution. $\blacksquare$
+\end{solution}

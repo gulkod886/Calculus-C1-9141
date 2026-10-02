@@ -1,0 +1,22 @@
+% English translation of questions/5777/semA-moedA/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following integral:
+$\displaystyle\int\frac{dx}{x^2+x+1}$
+\end{question}
+
+\begin{hint}
+Complete the square: $x^2+x+1=\left(x+\frac12\right)^2+\frac34$.
+\end{hint}
+
+\begin{solution}
+Complete the square: $x^2+x+1=\left(x+\frac12\right)^2+\frac34$. Substitute $t=\frac{2x+1}{\sqrt3}$, i.e., $x+\frac12=\frac{\sqrt3}{2}t$, $dx=\frac{\sqrt3}{2}dt$:
+\[
+\int\frac{dx}{\left(x+\frac12\right)^2+\frac34}=\int\frac{\frac{\sqrt3}{2}\,dt}{\frac34(t^2+1)}=\frac{2}{\sqrt3}\int\frac{dt}{1+t^2}=\frac{2}{\sqrt3}\arctan t+C.
+\]
+\textbf{Answer:}
+\[
+\int\frac{dx}{x^2+x+1}=\frac{2}{\sqrt3}\arctan\frac{2x+1}{\sqrt3}+C.
+\]
+(Check: $\frac{d}{dx}\frac{2}{\sqrt3}\arctan\frac{2x+1}{\sqrt3}=\frac{2}{\sqrt3}\cdot\frac{2/\sqrt3}{1+\frac{(2x+1)^2}{3}}=\frac{4}{3+(2x+1)^2}=\frac{1}{x^2+x+1}$.)
+\end{solution}

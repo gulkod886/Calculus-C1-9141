@@ -1,0 +1,20 @@
+% English translation of questions/5784/semA-special/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the antiderivative of
+\[ f(x)=\sin^2x\cdot\cos^5x \]
+\end{question}
+
+\begin{hint}
+The power of $\cos x$ is odd: separate one factor $\cos x$, write $\cos^4x=(1-\sin^2x)^2$ and substitute $t=\sin x$.
+\end{hint}
+
+\begin{solution}
+Write $\cos^5x=\cos^4x\cdot\cos x=(1-\sin^2x)^2\cos x$. Hence
+\[ \int\sin^2x\cos^5x\,dx=\int\sin^2x(1-\sin^2x)^2\cos x\,dx. \]
+Substitute $t=\sin x$, $dt=\cos x\,dx$:
+\[ \int t^2(1-t^2)^2\,dt=\int\left(t^2-2t^4+t^6\right)dt=\frac{t^3}3-\frac{2t^5}5+\frac{t^7}7+C. \]
+Return to the variable $x$:
+\[ \boxed{\int\sin^2x\cos^5x\,dx=\frac{\sin^3x}{3}-\frac{2\sin^5x}{5}+\frac{\sin^7x}{7}+C}. \]
+\textbf{Check:} the derivative is $\cos x\left(\sin^2x-2\sin^4x+\sin^6x\right)=\cos x\sin^2x(1-\sin^2x)^2=\sin^2x\cos^5x$.
+\end{solution}

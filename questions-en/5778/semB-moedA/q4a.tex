@@ -1,0 +1,21 @@
+% English translation of questions/5778/semB-moedA/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(5 pts) $\displaystyle\lim_{x\to3}\frac{\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}}{x^2-4x+3}$.
+\end{question}
+
+\begin{hint}
+Multiply by the conjugate of the numerator.
+\end{hint}
+
+\begin{solution}
+At $x=3$ the numerator and the denominator vanish ($\sqrt9-\sqrt9=0$, $9-12+3=0$). Multiply by the conjugate:
+\[
+\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}=\frac{(x^2-2x+6)-(x^2+2x-6)}{\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}}=\frac{-4(x-3)}{\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}},
+\]
+and $x^2-4x+3=(x-1)(x-3)$. Hence for $x\neq3$ (in a neighborhood of $3$):
+\[
+\frac{\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}}{x^2-4x+3}=\frac{-4}{(x-1)\left(\sqrt{x^2-2x+6}+\sqrt{x^2+2x-6}\right)}\xrightarrow[x\to3]{}\frac{-4}{2\cdot(3+3)}=-\frac13.
+\]
+\textbf{Answer:} $-\frac13$.
+\end{solution}

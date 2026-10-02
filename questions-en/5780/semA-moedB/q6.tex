@@ -1,0 +1,22 @@
+% English translation of questions/5780/semA-moedB/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The derivative $y'(0)$ of the implicit function $y(x)$ defined by the equation $\sin(x-y)-y=0$ in a neighborhood of the point $(0,0)$ is equal to
+\begin{enumerate}
+  \item $\frac12$
+  \item $-\frac12$
+  \item $\frac{\pi}{2}$
+  \item $1+\frac{\pi}{2}$
+  \item $0$
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: a.}
+
+The point $(0,0)$ satisfies the equation: $\sin(0)-0=0$. Differentiate both sides with respect to $x$, where $y=y(x)$ (chain rule):
+\[ \cos(x-y)\cdot(1-y')-y'=0 . \]
+Substitute $x=0,\ y=0$: $\cos 0\cdot(1-y'(0))-y'(0)=0$, i.e. $1-2y'(0)=0$, hence $y'(0)=\frac12$.
+
+(In general: $y'=\frac{\cos(x-y)}{1+\cos(x-y)}$, and at $(0,0)$ this is $\frac{1}{2}$.)
+\end{solution}

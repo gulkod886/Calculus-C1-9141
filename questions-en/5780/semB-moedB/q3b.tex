@@ -1,0 +1,18 @@
+% English translation of questions/5780/semB-moedB/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Write the Maclaurin polynomial of order $n=3$ for the function:
+\[ f(x)=\sin(\sin(x)) \]
+\end{question}
+
+\begin{hint}
+Compose the expansion of $\sin$ with itself.
+\end{hint}
+
+\begin{solution}
+By the Maclaurin expansion, $\sin u=u-\frac{u^3}{6}+o(u^3)$ and $\sin x=x-\frac{x^3}{6}+o(x^3)$. Substitute $u=\sin x$; since $u=x+o(x)$, we have $u^3=x^3+o(x^3)$ and $o(u^3)=o(x^3)$. Hence
+\[ \sin(\sin x)=\Big(x-\frac{x^3}{6}\Big)-\frac{x^3}{6}+o(x^3)=x-\frac{x^3}{3}+o(x^3). \]
+By the uniqueness of the Taylor polynomial, the Maclaurin polynomial of order 3 is
+\[ \boxed{P_3(x)=x-\frac{x^3}{3}} . \]
+(Direct check: $f'(x)=\cos(\sin x)\cos x$, $f'(0)=1$; $f$ is odd, hence $f(0)=f''(0)=0$; and a computation gives $f'''(0)=-2$, and indeed $\frac{-2}{3!}=-\frac13$.)
+\end{solution}

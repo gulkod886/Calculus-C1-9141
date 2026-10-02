@@ -1,0 +1,58 @@
+% English translation of questions/5780/semA-moedA/partA-q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Investigate the function $y=\frac{e^{2x}}{x}$ according to the following items:
+\begin{enumerate}
+  \item Domain, intersection points with the axes, evenness, oddness
+  \item Continuity, points of discontinuity
+  \item Asymptotes
+  \item Intervals of increase and decrease, extremum points
+  \item Intervals of convexity and concavity, inflection points
+  \item Graphical description.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+$y'=\frac{e^{2x}(2x-1)}{x^2}$ and $y''=\frac{2e^{2x}(2x^2-2x+1)}{x^3}$. Check the sign of each factor.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item \textbf{Domain:} $x\neq0$, i.e. $(-\infty,0)\cup(0,\infty)$.
+
+  \textbf{Intersection with the axes:} $x=0$ is not in the domain --- there is no intersection with the $y$-axis. $e^{2x}>0$ always, hence $y\ne0$ --- there is no intersection with the $x$-axis. (The sign: $y<0$ for $x<0$ and $y>0$ for $x>0$.)
+
+  \textbf{Evenness:} $y(-x)=\frac{e^{-2x}}{-x}$. For example $y(1)=e^2$, $y(-1)=-e^{-2}$, hence $y(-1)\ne y(1)$ and also $y(-1)\ne -y(1)$. The function is \textbf{neither even nor odd}.
+
+  \item The function is a quotient of continuous functions ($e^{2x}$ and $x$) and hence is continuous at every point where the denominator is nonzero, i.e. on its entire domain. The only problematic point is $x=0$ (where the function is not defined):
+  \[ \lim_{x\to0^-}\frac{e^{2x}}{x}=\frac{1}{0^-}=-\infty,\qquad \lim_{x\to0^+}\frac{e^{2x}}{x}=\frac{1}{0^+}=+\infty, \]
+  hence $x=0$ is a discontinuity of the second kind (essential).
+
+  \item \textbf{Vertical asymptote:} $x=0$ (by the limits in the previous item).
+
+  \textbf{At $-\infty$:} $e^{2x}\to0$ and $\frac1x\to0$, hence $\lim_{x\to-\infty}y=0$ --- a horizontal asymptote $y=0$ on the left (the graph is below the axis).
+
+  \textbf{At $+\infty$:} $\frac{y}{x}=\frac{e^{2x}}{x^2}\to\infty$ (by L'Hôpital twice: $\lim\frac{e^{2x}}{x^2}=\lim\frac{2e^{2x}}{2x}=\lim\frac{4e^{2x}}{2}=\infty$), hence there is no horizontal or oblique asymptote on the right.
+
+  \item By the quotient rule:
+  \[ y'=\frac{2e^{2x}\cdot x - e^{2x}}{x^2} = \frac{e^{2x}(2x-1)}{x^2}. \]
+  Since $e^{2x}>0$ and $x^2>0$, the sign of $y'$ is the sign of $2x-1$:
+  \begin{itemize}
+    \item $y'<0$ for $x<0$ and for $0<x<\frac12$: the function is \textbf{decreasing} on $(-\infty,0)$ and on $(0,\frac12)$.
+    \item $y'>0$ for $x>\frac12$: the function is \textbf{increasing} on $(\frac12,\infty)$.
+  \end{itemize}
+  At $x=\frac12$ the derivative changes sign from $-$ to $+$, hence this is a \textbf{local minimum} point: $y(\tfrac12)=\frac{e}{1/2}=2e$, i.e. $(\frac12,2e)$. There are no other extremum points.
+
+  \item Differentiate $y'=e^{2x}\cdot\frac{2x-1}{x^2}$:
+  \[ \left(\frac{2x-1}{x^2}\right)'=\frac{2x^2-2x(2x-1)}{x^4}=\frac{2-2x}{x^3}, \]
+  \[ y''=e^{2x}\left(\frac{2(2x-1)}{x^2}+\frac{2-2x}{x^3}\right)=\frac{e^{2x}\left(4x^2-2x+2-2x\right)}{x^3}=\frac{2e^{2x}\left(2x^2-2x+1\right)}{x^3}. \]
+  The trinomial $2x^2-2x+1$ has discriminant $4-8<0$ and a positive leading coefficient, hence it is always positive. Therefore the sign of $y''$ is the sign of $x^3$, i.e. of $x$:
+  \begin{itemize}
+    \item $x<0$: $y''<0$ --- the function is \textbf{concave} ($\cap$) on $(-\infty,0)$.
+    \item $x>0$: $y''>0$ --- the function is \textbf{convex} ($\cup$) on $(0,\infty)$.
+  \end{itemize}
+  The sign of $y''$ changes only at $x=0$, which is not in the domain, hence there are \textbf{no inflection points}.
+
+  \item \textbf{Graphical description:} to the left of the $y$-axis the graph is below the $x$-axis: it starts close to $y=0$ at $-\infty$, decreases (and is concave) and tends to $-\infty$ as $x\to0^-$. To the right of the $y$-axis the graph is above the $x$-axis: it decreases from $+\infty$ (near $x=0^+$) to the minimum point $(\frac12,2e)\approx(0.5,\,5.44)$, and then increases (convexly) to $+\infty$ at an exponential rate.
+\end{enumerate}
+\end{solution}

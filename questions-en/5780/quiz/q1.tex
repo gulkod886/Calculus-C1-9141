@@ -1,0 +1,35 @@
+% English translation of questions/5780/quiz/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The limit $\displaystyle\lim_{x\to 0}\frac{\sin ax}{\sin bx}\,\frac{x}{\ln(1+cx)}$ is equal to
+\begin{enumerate}
+  \item $\frac{ac}{b}$
+  \item $\frac{a}{bc}$
+  \item $\frac{bc}{a}$
+  \item $\frac{b}{ac}$
+  \item the limit does not exist
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Break the expression into a product of basic limits: $\frac{\sin t}{t}\to 1$ and $\frac{\ln(1+t)}{t}\to 1$ as $t\to 0$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (b)} $\frac{a}{bc}$ (under the implicit assumption in the question that $a,b,c\neq 0$; otherwise the expression is not defined or the limit is different).
+
+We multiply and divide so that basic limits appear. For $x$ close to 0 and different from it:
+\[
+\frac{\sin ax}{\sin bx}\cdot\frac{x}{\ln(1+cx)}
+=\frac{\sin ax}{ax}\cdot\frac{bx}{\sin bx}\cdot\frac{cx}{\ln(1+cx)}\cdot\frac{ax\cdot x}{bx\cdot cx}
+=\frac{\sin ax}{ax}\cdot\frac{bx}{\sin bx}\cdot\frac{cx}{\ln(1+cx)}\cdot\frac{a}{bc}.
+\]
+As $x\to 0$ also $ax,bx,cx\to 0$, hence by the basic limit $\lim_{t\to 0}\frac{\sin t}{t}=1$ (with the substitution $t=ax$, $t=bx$) we have
+$\frac{\sin ax}{ax}\to 1$ and $\frac{bx}{\sin bx}\to 1$, and by the basic limit $\lim_{t\to 0}\frac{\ln(1+t)}{t}=1$ (from the formula sheet, $\lim_{t\to0}\frac{\log_a(1+t)}{t}=\frac{1}{\ln a}$ with base $e$) we have $\frac{cx}{\ln(1+cx)}\to 1$.
+By the arithmetic of limits:
+\[
+\lim_{x\to 0}\frac{\sin ax}{\sin bx}\,\frac{x}{\ln(1+cx)}=1\cdot 1\cdot 1\cdot\frac{a}{bc}=\boxed{\frac{a}{bc}}.
+\]
+
+\textbf{Why the others are wrong:} (a), (c), (d) are other combinations of $a,b,c$, which differ from $\frac{a}{bc}$ in general: for example, for $a=2,\ b=3,\ c=5$ the limit is $\frac{2}{15}$, whereas (a) gives $\frac{10}{3}$, (c) gives $\frac{15}{2}$ and (d) gives $\frac{3}{10}$. (e) is wrong because we showed that the limit exists.
+\end{solution}

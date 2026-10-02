@@ -1,0 +1,18 @@
+% English translation of questions/5778/semA-moedC/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Does the improper integral $\displaystyle\int_0^\infty\frac{1}{e^x+e^{-x}}\,dx$ converge? If so, compute the value of the integral. If not, explain why.
+\end{question}
+
+\begin{hint}
+Multiply the numerator and the denominator by $e^x$ and substitute $u=e^x$.
+\end{hint}
+
+\begin{solution}
+Multiply the numerator and the denominator by $e^x>0$: $\frac{1}{e^x+e^{-x}}=\frac{e^x}{e^{2x}+1}$. By definition,
+\[ \int_0^\infty\frac{dx}{e^x+e^{-x}}=\lim_{b\to\infty}\int_0^b\frac{e^x}{1+(e^x)^2}\,dx. \]
+Substitute $u=e^x$, $du=e^x\,dx$; $u$ runs from $1$ to $e^b$:
+\[ \int_0^b\frac{e^x\,dx}{1+e^{2x}}=\int_1^{e^b}\frac{du}{1+u^2}=\arctan(e^b)-\arctan1=\arctan(e^b)-\frac\pi4. \]
+As $b\to\infty$, $e^b\to\infty$ and $\arctan(e^b)\to\frac\pi2$. The limit exists and is finite, hence the integral converges:
+\[ \boxed{\int_0^\infty\frac{dx}{e^x+e^{-x}}=\frac\pi2-\frac\pi4=\frac\pi4} \]
+\end{solution}

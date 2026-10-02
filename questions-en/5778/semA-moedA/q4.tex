@@ -1,0 +1,52 @@
+% English translation of questions/5778/semA-moedA/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts)
+Investigate the function $f(x)=(x+2)e^{1/x}$ and sketch its graph.
+\end{question}
+
+\begin{hint}
+For the oblique asymptote: $a=\lim\frac{f(x)}{x}$, and then $b=\lim(f(x)-ax)$. Computing $b$ involves the limit $\lim_{x\to\infty}x\left(e^{1/x}-1\right)$.
+\end{hint}
+
+\begin{solution}
+\textbf{1. General description.}
+\begin{itemize}
+  \item \textbf{Domain:} $x\neq0$.
+  \item \textbf{Intersections with the axes:} there is no intersection with the $y$-axis since $0$ is not in the domain. $f(x)=0\iff x+2=0$ (since $e^{1/x}>0$), hence the intersection with the $x$-axis is $(-2,0)$.
+  \item \textbf{Parity:} $f(-1)=e^{-1}$, $f(1)=3e$, hence $f$ is neither even nor odd. It is also not periodic.
+  \item \textbf{Sign:} since $e^{1/x}>0$, the sign of $f$ is the sign of $x+2$: $f(x)>0$ for $x>-2$ ($x\neq0$), and $f(x)<0$ for $x<-2$.
+\end{itemize}
+
+\textbf{2. Continuity.} $f$ is elementary and hence continuous on its whole domain. At the point $x=0$:
+\[ \lim_{x\to0^-}(x+2)e^{1/x}=2\cdot0=0,\qquad \lim_{x\to0^+}(x+2)e^{1/x}=2\cdot(+\infty)=+\infty, \]
+since $\frac1x\to\mp\infty$. Hence at $x=0$ there is a discontinuity of the second kind.
+
+\textbf{3. Asymptotes.}
+\begin{itemize}
+  \item \textbf{Vertical:} $x=0$ (from the right), since $\lim_{x\to0^+}f(x)=+\infty$. From the left the graph tends to the point $(0,0)$ (which is not on the graph).
+  \item \textbf{Oblique} $y=ax+b$ as $x\to\pm\infty$:
+  \[ a=\lim_{x\to\pm\infty}\frac{f(x)}{x}=\lim_{x\to\pm\infty}\left(1+\frac2x\right)e^{1/x}=1\cdot e^0=1. \]
+  \[ b=\lim_{x\to\pm\infty}\left(f(x)-x\right)=\lim_{x\to\pm\infty}\left(x\left(e^{1/x}-1\right)+2e^{1/x}\right). \]
+  Substitute $t=\frac1x\to0$: $x\left(e^{1/x}-1\right)=\frac{e^t-1}{t}\to1$ (a famous limit, or L'Hôpital: $\frac{e^t}{1}\to1$). Also $2e^{1/x}\to2$. Hence $b=1+2=3$.
+
+  The oblique asymptote is $y=x+3$, both as $x\to\infty$ and as $x\to-\infty$. In particular $\lim_{x\to\pm\infty}f(x)=\pm\infty$.
+\end{itemize}
+
+\textbf{4. Increase, decrease and extrema.}
+\[ f'(x)=e^{1/x}+(x+2)e^{1/x}\cdot\left(-\frac{1}{x^2}\right)=e^{1/x}\left(1-\frac{x+2}{x^2}\right)=e^{1/x}\cdot\frac{x^2-x-2}{x^2}=e^{1/x}\cdot\frac{(x-2)(x+1)}{x^2}. \]
+Since $e^{1/x}>0$ and $x^2>0$, the sign of $f'$ is the sign of $(x-2)(x+1)$:
+\begin{itemize}
+  \item $f'>0$ on $(-\infty,-1)$ and on $(2,\infty)$ — $f$ is increasing there;
+  \item $f'<0$ on $(-1,0)$ and on $(0,2)$ — $f$ is decreasing there.
+\end{itemize}
+Hence at $x=-1$ there is a local maximum, $f(-1)=1\cdot e^{-1}=\frac1e$, and at $x=2$ there is a local minimum, $f(2)=4e^{1/2}=4\sqrt e$.
+
+\textbf{5. Convexity and inflection points.} Differentiate $f'(x)=e^{1/x}\cdot\frac{x^2-x-2}{x^2}=e^{1/x}\left(1-\frac1x-\frac2{x^2}\right)$:
+\[ f''(x)=e^{1/x}\left(-\frac1{x^2}\right)\left(1-\frac1x-\frac2{x^2}\right)+e^{1/x}\left(\frac1{x^2}+\frac4{x^3}\right)
+=e^{1/x}\cdot\frac{-x^2+x+2+x^2+4x}{x^4}=e^{1/x}\cdot\frac{5x+2}{x^4}. \]
+The sign of $f''$ is the sign of $5x+2$. Hence $f$ is convex (upward, $f''>0$) on $\left(-\frac25,0\right)$ and on $(0,\infty)$, and concave (downward) on $\left(-\infty,-\frac25\right)$. At $x=-\frac25$ the second derivative changes sign and $f$ is continuous, hence this is an inflection point:
+\[ \left(-\frac25,\ f\left(-\frac25\right)\right)=\left(-\frac25,\ \frac85e^{-5/2}\right). \]
+
+\textbf{6. Sketch.} To the left of the $y$-axis: as $x\to-\infty$ the graph lies below the asymptote $y=x+3$ and approaches it (since $f(x)-(x+3)=\frac{5}{2x}+O\left(\frac1{x^2}\right)$); it is increasing and concave, crosses the $x$-axis at $(-2,0)$, reaches the local maximum $\left(-1,\frac1e\right)$, and then decreases; at the inflection point $x=-\frac25$ it becomes convex and keeps decreasing towards the point $(0,0)$ (which does not belong to the graph). To the right of the $y$-axis: the graph decreases from $+\infty$ (vertical asymptote $x=0$) to the minimum $(2,4\sqrt e)\approx(2,\,6.6)$, and then increases and approaches the asymptote $y=x+3$ from above; on this interval it is convex.
+\end{solution}

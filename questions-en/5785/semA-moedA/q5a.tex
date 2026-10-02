@@ -1,0 +1,18 @@
+% English translation of questions/5785/semA-moedA/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the area bounded between the function
+\[ f(x) = \sin^2 x \cdot \cos^3 x \]
+and the $x$-axis on the interval $[0, \frac{\pi}{2}]$.
+\end{question}
+
+\begin{hint}
+Write $\cos^3 x = (1 - \sin^2 x)\cos x$ and substitute $t = \sin x$.
+\end{hint}
+
+\begin{solution}
+On the interval $[0,\frac\pi2]$ we have $\sin^2 x \ge 0$ and $\cos x\ge 0$, so $f(x) \ge 0$ and the area is simply $\int_0^{\pi/2} f(x)\,dx$.
+Write $\sin^2 x\cos^3 x = \sin^2 x(1 - \sin^2 x)\cos x$ and substitute $t = \sin x$, $dt = \cos x\,dx$; as $x$ goes from $0$ to $\frac\pi2$, $t$ goes from $0$ to $1$:
+\[ S = \int_0^{\pi/2}\sin^2 x\cos^3 x\,dx = \int_0^1 (t^2 - t^4)\,dt = \left[\frac{t^3}{3} - \frac{t^5}{5}\right]_0^1 = \frac13 - \frac15 = \frac{2}{15}. \]
+\textbf{Answer:} $S = \frac{2}{15}$.
+\end{solution}

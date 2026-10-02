@@ -1,0 +1,54 @@
+% English translation of questions/5783/semB-moedA/q1.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(Mandatory question)
+\begin{enumerate}
+  \item (22 pts) Fully analyze the function: $\displaystyle f(x)=\frac{e^{2x+1}}{(x+1)^2}$ (domain, intersections with the axes, sign of the function, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and inflection points) and draw a sketch of the graph of the function.
+  \item (4 pts) Sketch the graph of the function $f(-|x|)$ ?
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+When differentiating, factor out a common factor: $f'(x)=\frac{e^{2x+1}\left(2(x+1)-2\right)}{(x+1)^3}$.
+\end{hint}
+
+\begin{hint}
+In part (b), note that $f(-|x|)$ is an even function, and for $x\ge0$ it equals $f(-x)$, i.e. the reflection of the part of the graph of $f$ to the left of the $y$-axis.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item \textbf{Domain:} $x\neq -1$, i.e. $D=(-\infty,-1)\cup(-1,\infty)$.
+
+  \textbf{Intersections with the axes and sign:} $e^{2x+1}>0$ and $(x+1)^2>0$ in the domain, hence $f(x)>0$ for every $x\in D$; there is no intersection with the $x$-axis. Intersection with the $y$-axis: $f(0)=e$, the point $(0,e)$.
+
+  \textbf{Asymptotes:}
+  \begin{itemize}
+    \item Vertical: $\lim_{x\to-1^\pm}f(x)=\frac{e^{-1}}{0^+}=+\infty$, hence $x=-1$ is a vertical asymptote (from both sides the function tends to $+\infty$).
+    \item At $-\infty$: $e^{2x+1}\to 0$ and $(x+1)^2\to\infty$, so $f(x)\to0$: $y=0$ is a horizontal asymptote on the left.
+    \item At $+\infty$: by L'Hôpital's rule (twice) $\lim_{x\to\infty}\frac{e^{2x+1}}{(x+1)^2}=\lim\frac{4e^{2x+1}}{2}=\infty$, and similarly $\frac{f(x)}{x}\to\infty$, so there is no horizontal or oblique asymptote on the right.
+  \end{itemize}
+
+  \textbf{Monotonicity and extrema:} by the quotient rule,
+  \[ f'(x)=\frac{2e^{2x+1}(x+1)^2-e^{2x+1}\cdot2(x+1)}{(x+1)^4}=\frac{2e^{2x+1}\,x}{(x+1)^3}. \]
+  $f'(x)=0\iff x=0$. The sign of $f'$ is the sign of $\frac{x}{(x+1)^3}$:
+  \begin{itemize}
+    \item $x<-1$: negative numerator, negative denominator $\Rightarrow f'>0$, $f$ is \textbf{increasing}.
+    \item $-1<x<0$: negative numerator, positive denominator $\Rightarrow f'<0$, $f$ is \textbf{decreasing}.
+    \item $x>0$: $f'>0$, $f$ is \textbf{increasing}.
+  \end{itemize}
+  Hence at $x=0$ there is a \textbf{local minimum} $(0,e)$. There is no local maximum (at $x=-1$ the function is not defined).
+
+  \textbf{Convexity:} differentiating again gives
+  \[ f''(x)=\frac{2e^{2x+1}(2x^2+1)}{(x+1)^4}. \]
+  (Differentiate $f'=2e^{2x+1}\cdot x(x+1)^{-3}$: $f''=2e^{2x+1}\left[2x(x+1)^{-3}+(x+1)^{-3}-3x(x+1)^{-4}\right]=\frac{2e^{2x+1}\left[(2x+1)(x+1)-3x\right]}{(x+1)^4}$ and $(2x+1)(x+1)-3x=2x^2+1$.)
+  Since $2x^2+1>0$, we have $f''>0$ on the whole domain: $f$ is \textbf{convex} on $(-\infty,-1)$ and on $(-1,\infty)$, and there are \textbf{no inflection points}.
+
+  \textbf{Sketch (described in words):} on the left the graph starts just above the asymptote $y=0$ (close to $0$ at $-\infty$), increases in a convex manner and tends to $+\infty$ as $x\to-1^-$. To the right of the asymptote $x=-1$ the graph decreases from $+\infty$ to the minimum $(0,e)$ and then increases rapidly (exponentially) to $+\infty$. The whole graph lies above the $x$-axis.
+
+  \item Denote $g(x)=f(-|x|)$. We have $g(-x)=g(x)$, i.e. $g$ is \textbf{even} -- the graph is symmetric with respect to the $y$-axis. For $x\ge0$: $g(x)=f(-x)$, i.e. the graph of $g$ for $x\ge0$ is the reflection with respect to the $y$-axis of the graph of $f$ for $x\le 0$, and the graph for $x<0$ is simply the graph of $f$ for $x<0$.
+
+  In particular: $g$ is defined for $x\neq\pm1$, $g(0)=e$, and it has vertical asymptotes $x=\pm1$ (where $g\to+\infty$) and the horizontal asymptote $y=0$ at $\pm\infty$. On $(-1,0)$, $g=f$ is decreasing, and on $(0,1)$, $g$ is increasing; at $x=0$ there is a local minimum $(0,e)$ (and since $f'(0)=0$ there is no ``corner'' there: the one-sided derivatives of $g$ are both $0$). On $(-\infty,-1)$, $g$ increases from $0$ to $+\infty$, and on $(1,\infty)$ it decreases from $+\infty$ to $0$. $g$ is convex on each of the intervals.
+\end{enumerate}
+\end{solution}

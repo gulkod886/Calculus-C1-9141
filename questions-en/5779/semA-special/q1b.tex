@@ -1,0 +1,20 @@
+% English translation of questions/5779/semA-special/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle \lim_{n\to\infty}\left(\sqrt{(n^2+1)(n^2-4)}-\sqrt{n^4-9}\right)$.
+\end{question}
+
+\begin{hint}
+Multiply and divide by the conjugate $\sqrt{(n^2+1)(n^2-4)}+\sqrt{n^4-9}$.
+\end{hint}
+
+\begin{solution}
+This is an expression of the form $\infty-\infty$. Multiply and divide by the conjugate (for $n\ge 2$ both roots are defined and positive):
+\[ \sqrt{(n^2+1)(n^2-4)}-\sqrt{n^4-9} = \frac{(n^2+1)(n^2-4)-(n^4-9)}{\sqrt{(n^2+1)(n^2-4)}+\sqrt{n^4-9}}. \]
+In the numerator: $(n^2+1)(n^2-4) = n^4-3n^2-4$, so the numerator is $n^4-3n^2-4-n^4+9 = -3n^2+5$. Divide the numerator and denominator by $n^2$:
+\[ \frac{-3+\frac{5}{n^2}}{\sqrt{\left(1+\frac{1}{n^2}\right)\left(1-\frac{4}{n^2}\right)}+\sqrt{1-\frac{9}{n^4}}} \xrightarrow[n\to\infty]{} \frac{-3}{1+1} = -\frac{3}{2}, \]
+by the arithmetic of limits and the continuity of the square root.
+
+\textbf{Answer:} $-\dfrac32$.
+\end{solution}

@@ -1,0 +1,20 @@
+% English translation of questions/5782/semA-special/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Solve the differential equation
+\[ y'=e^{x-y} \]
+\end{question}
+
+\begin{hint}
+$e^{x-y}=e^x\cdot e^{-y}$, so this is a separable equation.
+\end{hint}
+
+\begin{solution}
+$y'=e^x e^{-y}$, hence $e^{y}y'=e^x$ (there are no constant solutions, since $e^{x-y}>0$). Integrating both sides:
+\[ \int e^y\,dy=\int e^x\,dx\ \Longrightarrow\ e^y=e^x+C. \]
+Hence
+\[ \boxed{y=\ln\left(e^x+C\right)},\qquad C\in\R, \]
+on the domain where $e^x+C>0$ (for every $x$ if $C\ge0$; for $C<0$, on the domain $x>\ln(-C)$).
+
+Check: $y'=\frac{e^x}{e^x+C}=\frac{e^x}{e^y}=e^{x-y}$.
+\end{solution}

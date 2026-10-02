@@ -1,0 +1,29 @@
+% English translation of questions/5783/semA-moedA/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the area bounded between the graphs of the functions $f(x)=\sin^2x$ and $g(x)=\frac14$ on the interval $[0,\pi]$.
+\end{question}
+
+\begin{hint}
+Find the intersection points $\sin^2x=\frac14$ in the interval, and split the interval according to which function is larger. Use the identity $\sin^2x=\frac{1-\cos 2x}{2}$.
+\end{hint}
+
+\begin{solution}
+\textbf{Intersection points:} $\sin^2x=\frac14\iff\sin x=\pm\frac12$. On the interval $[0,\pi]$ we have $\sin x\ge 0$, hence $\sin x=\frac12$, i.e. $x=\frac{\pi}{6}$ or $x=\frac{5\pi}{6}$.
+
+On the intervals $[0,\frac{\pi}{6})$ and $(\frac{5\pi}{6},\pi]$ we have $0\le\sin x<\frac12$, hence $\sin^2x<\frac14$; on the interval $(\frac{\pi}{6},\frac{5\pi}{6})$ we have $\sin^2x>\frac14$.
+
+\textbf{Antiderivative:} by $\sin^2x=\frac{1-\cos2x}{2}$,
+\[ \int\left(\sin^2x-\frac14\right)dx=\int\left(\frac14-\frac{\cos 2x}{2}\right)dx=\frac{x}{4}-\frac{\sin 2x}{4}=:F(x). \]
+Values: $F(0)=0$, $F(\frac{\pi}{6})=\frac{\pi}{24}-\frac{\sqrt3}{8}$, $F(\frac{5\pi}{6})=\frac{5\pi}{24}+\frac{\sqrt3}{8}$, $F(\pi)=\frac{\pi}{4}$.
+
+\textbf{The area} is $\int_0^\pi|f-g|\,dx$:
+\begin{align*}
+S_1&=\int_0^{\pi/6}\left(\tfrac14-\sin^2x\right)dx=-\big(F(\tfrac{\pi}{6})-F(0)\big)=\frac{\sqrt3}{8}-\frac{\pi}{24},\\
+S_2&=\int_{\pi/6}^{5\pi/6}\left(\sin^2x-\tfrac14\right)dx=F(\tfrac{5\pi}{6})-F(\tfrac{\pi}{6})=\frac{\pi}{6}+\frac{\sqrt3}{4},\\
+S_3&=\int_{5\pi/6}^{\pi}\left(\tfrac14-\sin^2x\right)dx=-\big(F(\pi)-F(\tfrac{5\pi}{6})\big)=\frac{\sqrt3}{8}-\frac{\pi}{24}.
+\end{align*}
+In total:
+\[ S=S_1+S_2+S_3=\frac{\sqrt3}{2}+\frac{\pi}{12}\approx 1.128. \]
+(If only the closed region between the two intersection points is meant, its area is $S_2=\frac{\pi}{6}+\frac{\sqrt3}{4}\approx 0.957$.)
+\end{solution}

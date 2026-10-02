@@ -1,0 +1,17 @@
+% English translation of questions/5779/semA-special/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following integral: $\displaystyle\int_{\ln2}^{\ln3}\frac{dx}{e^x-e^{-x}}$.
+\end{question}
+
+\begin{hint}
+Multiply the numerator and denominator by $e^x$ and substitute $t=e^x$.
+\end{hint}
+
+\begin{solution}
+On the interval $[\ln2,\ln3]$ we have $e^x>e^{-x}$, so the integrand is continuous and the integral is proper. Multiply the numerator and denominator by $e^x$:
+\[ \int_{\ln2}^{\ln3}\frac{dx}{e^x-e^{-x}} = \int_{\ln2}^{\ln3}\frac{e^x\,dx}{e^{2x}-1}. \]
+Substitute $t=e^x$, $dt=e^x\,dx$; the limits: $x=\ln2\mapsto t=2$, $x=\ln3\mapsto t=3$:
+\[ = \int_2^3\frac{dt}{t^2-1} = \int_2^3\frac12\left(\frac{1}{t-1}-\frac{1}{t+1}\right)dt = \frac12\Big[\ln\frac{t-1}{t+1}\Big]_2^3 = \frac12\left(\ln\frac12-\ln\frac13\right) = \frac12\ln\frac32. \]
+\textbf{Answer:} $\dfrac12\ln\dfrac32\approx0.2027$.
+\end{solution}

@@ -1,0 +1,16 @@
+% English translation of questions/5782/semA-moedA/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Compute the antiderivative of
+\[ f(x)=\frac{e^x}{e^{2x}+1} \]
+\end{question}
+
+\begin{hint}
+Substitute $t=e^x$.
+\end{hint}
+
+\begin{solution}
+Substitute $t=e^x$, $dt=e^x\,dx$:
+\[ \int\frac{e^x}{e^{2x}+1}\,dx=\int\frac{dt}{t^2+1}=\arctan t+C=\boxed{\arctan(e^x)+C}. \]
+Check: $\left(\arctan e^x\right)'=\frac{e^x}{1+e^{2x}}$.
+\end{solution}

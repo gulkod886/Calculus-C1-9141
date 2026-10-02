@@ -1,0 +1,29 @@
+% English translation of questions/5786/semA-moedB/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the general solution of the differential equation
+\[ \sqrt{1 - x^2} \cdot y' = y^2 \arcsin x \]
+\end{question}
+
+\begin{hint}
+The equation is separable. After separating, on the $x$ side substitute $t = \arcsin x$.
+\end{hint}
+
+\begin{solution}
+The equation is defined for $-1 < x < 1$, and there $\sqrt{1 - x^2} > 0$. Write it in the form
+\[ \frac{dy}{dx} = y^2 \cdot \frac{\arcsin x}{\sqrt{1 - x^2}}, \]
+which is a separable equation.
+
+\textbf{The constant solution:} $y \equiv 0$ satisfies the equation ($0 = 0$), so it is a solution.
+
+\textbf{For $y \ne 0$:} separate the variables:
+\[ \int \frac{dy}{y^2} = \int \frac{\arcsin x}{\sqrt{1 - x^2}}\,dx. \]
+The left-hand side gives $-\frac{1}{y}$. On the right-hand side substitute $t = \arcsin x$, $dt = \frac{dx}{\sqrt{1 - x^2}}$:
+\[ \int \frac{\arcsin x}{\sqrt{1 - x^2}}\,dx = \int t\,dt = \frac{t^2}{2} + C = \frac{\arcsin^2 x}{2} + C. \]
+Hence
+\[ -\frac{1}{y} = \frac{\arcsin^2 x}{2} + C \quad\Longrightarrow\quad y = \frac{-1}{\frac{\arcsin^2 x}{2} + C} = \frac{-2}{\arcsin^2 x + 2C}. \]
+
+\textbf{Answer:} the general solution is
+\[ \boxed{y = \frac{-2}{\arcsin^2 x + C}}, \quad C \in \R \]
+(on every interval on which the denominator does not vanish), together with the solution $y \equiv 0$.
+\end{solution}

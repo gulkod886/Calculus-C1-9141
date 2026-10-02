@@ -1,0 +1,25 @@
+% English translation of questions/5778/semA-moedA/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+{(10 pts)} Compute the integral $\displaystyle\int\frac{3x-1}{x^2-x+1}\,dx$.
+\end{question}
+
+\begin{hint}
+Write the numerator as a combination of the derivative of the denominator $2x-1$ and a constant, and complete the denominator to a square.
+\end{hint}
+
+\begin{solution}
+The denominator $x^2-x+1$ has no real roots (the discriminant is $1-4=-3<0$), hence $x^2-x+1>0$ for every $x$. We decompose the numerator according to the derivative of the denominator $(x^2-x+1)'=2x-1$:
+\[ 3x-1=\frac32(2x-1)+\frac12. \]
+Hence
+\[ \int\frac{3x-1}{x^2-x+1}\,dx=\frac32\int\frac{2x-1}{x^2-x+1}\,dx+\frac12\int\frac{dx}{\left(x-\frac12\right)^2+\frac34}. \]
+In the first integral substitute $u=x^2-x+1$, $du=(2x-1)\,dx$:
+\[ \frac32\int\frac{du}{u}=\frac32\ln|u|=\frac32\ln\left(x^2-x+1\right). \]
+In the second, substitute $v=x-\frac12$, $dv=dx$, and use $\int\frac{dv}{v^2+a^2}=\frac1a\arctan\frac va$ with $a=\frac{\sqrt3}{2}$:
+\[ \frac12\int\frac{dv}{v^2+\frac34}=\frac12\cdot\frac{2}{\sqrt3}\arctan\frac{2v}{\sqrt3}=\frac{1}{\sqrt3}\arctan\frac{2x-1}{\sqrt3}. \]
+In summary
+\[ \boxed{\int\frac{3x-1}{x^2-x+1}\,dx=\frac32\ln\left(x^2-x+1\right)+\frac{1}{\sqrt3}\arctan\frac{2x-1}{\sqrt3}+C} \]
+(No absolute value is needed inside the $\ln$ since $x^2-x+1>0$.) Check by differentiation: $\frac32\cdot\frac{2x-1}{x^2-x+1}+\frac1{\sqrt3}\cdot\frac{2/\sqrt3}{1+\frac{(2x-1)^2}{3}}=\frac{3x-\frac32}{x^2-x+1}+\frac{2}{4x^2-4x+4}=\frac{3x-1}{x^2-x+1}$.
+
+\textbf{Remark:} in the official solution the coefficient of the $\arctan$ is written as $\frac{2}{\sqrt3}$; this is a mistake (the factor $\frac12$ was forgotten), and the correct coefficient is $\frac1{\sqrt3}$.
+\end{solution}

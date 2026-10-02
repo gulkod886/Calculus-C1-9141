@@ -1,0 +1,17 @@
+% English translation of questions/5785/semA-moedB/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Compute the volume of the solid of revolution about the $x$-axis on the interval $[1,4]$ of the function
+\[ f(x) = \frac{\sqrt{2x+1}}{x^2 + x} \]
+\end{question}
+
+\begin{hint}
+The volume of the solid of revolution is $V = \pi\int_a^b f^2(x)\,dx$. Note that $(x^2 + x)' = 2x + 1$.
+\end{hint}
+
+\begin{solution}
+The volume of the solid obtained by revolving the graph of $f$ about the $x$-axis over $[a,b]$ is $V = \pi\int_a^b f(x)^2\,dx$. Here
+$f(x)^2 = \frac{2x+1}{(x^2 + x)^2}$, which is continuous on $[1,4]$. Substitute $u = x^2 + x$, $du = (2x + 1)\,dx$; as $x$ goes from $1$ to $4$, $u$ goes from $2$ to $20$:
+\[ V = \pi\int_1^4\frac{2x+1}{(x^2+x)^2}\,dx = \pi\int_2^{20}\frac{du}{u^2} = \pi\left[-\frac1u\right]_2^{20} = \pi\left(\frac12 - \frac1{20}\right) = \frac{9\pi}{20}. \]
+\textbf{Answer:} $V = \frac{9\pi}{20}$.
+\end{solution}

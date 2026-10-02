@@ -1,0 +1,30 @@
+% English translation of questions/5780/semA-moedC/q8.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)$ be a function that is \textbf{twice} differentiable on an open interval $(a,b)$. Which of the following must be true?
+\begin{enumerate}
+  \item $f'(x)$ is continuous on the open interval $(a,b)$.
+  \item $f(x)$ has an inflection point in the open interval $(a,b)$.
+  \item $f(x)$ is a monotone function on the open interval $(a,b)$.
+  \item $f''(x)$ is a continuous function on the open interval $(a,b)$.
+  \item $f(x)$ is a bounded function on the open interval $(a,b)$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+A function differentiable at a point is continuous there. Apply this to $f'$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: a.}
+
+$f$ is twice differentiable on $(a,b)$, i.e. $f'$ is differentiable at every point of $(a,b)$. A function differentiable at a point is continuous there, hence $f'$ is continuous on $(a,b)$.
+
+Counterexamples to the other statements, on the interval $(0,1)$ (unless stated otherwise):
+\begin{itemize}
+  \item $f(x)=x^2$ (on $(0,1)$): $f''=2>0$, there is no inflection point ((b) fails).
+  \item $f(x)=\left(x-\frac12\right)^2$: not monotone on $(0,1)$ ((c) fails).
+  \item $f(x)=x^4\sin\frac1x$ ($f(0)=0$) on the interval $(-1,1)$: twice differentiable, but $f''(x)=12x^2\sin\frac1x-6x\cos\frac1x-\sin\frac1x$ for $x\neq0$ and $f''(0)=0$, and $f''$ is not continuous at $0$ ((d) fails).
+  \item $f(x)=\frac1x$ on $(0,1)$: twice differentiable but not bounded ((e) fails).
+\end{itemize}
+\end{solution}

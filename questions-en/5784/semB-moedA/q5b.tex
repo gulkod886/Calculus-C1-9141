@@ -1,0 +1,17 @@
+% English translation of questions/5784/semB-moedA/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \int_1^e(\ln(x))^2\,dx \]
+\end{question}
+
+\begin{hint}
+Integrate by parts twice, with $u=(\ln x)^2,\ v'=1$.
+\end{hint}
+
+\begin{solution}
+Integrate by parts with $u=(\ln x)^2$, $v'=1$, i.e. $u'=\frac{2\ln x}{x}$, $v=x$:
+\[ \int_1^e(\ln x)^2dx=\Big[x(\ln x)^2\Big]_1^e-\int_1^e 2\ln x\,dx=e-2\int_1^e\ln x\,dx. \]
+Again by parts ($u=\ln x,\ v'=1$): $\int_1^e\ln x\,dx=\big[x\ln x\big]_1^e-\int_1^e1\,dx=e-(e-1)=1$. Hence
+\[ \int_1^e(\ln x)^2dx=\boxed{e-2}\approx0.718. \]
+\end{solution}

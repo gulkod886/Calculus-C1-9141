@@ -1,0 +1,21 @@
+% English translation of questions/5785/semA-sample/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Compute the improper integral $\int_0^\infty xe^{-x}\,dx$, or show that it does not converge.
+\end{question}
+
+\begin{hint}
+Find an antiderivative using integration by parts, then compute the limit as the upper limit of integration tends to infinity.
+\end{hint}
+
+\begin{solution}
+The integrand is continuous on $[0, \infty)$, and by definition
+\[ \int_0^\infty xe^{-x}\,dx = \lim_{A\to\infty}\int_0^A xe^{-x}\,dx. \]
+\textbf{Antiderivative} by integration by parts, $u = x$, $v' = e^{-x}$ ($u' = 1$, $v = -e^{-x}$):
+\[ \int xe^{-x}\,dx = -xe^{-x} + \int e^{-x}\,dx = -xe^{-x} - e^{-x} + C = -(x + 1)e^{-x} + C. \]
+Hence, by the Newton--Leibniz formula,
+\[ \int_0^A xe^{-x}\,dx = \Bigl[-(x + 1)e^{-x}\Bigr]_0^A = 1 - \frac{A + 1}{e^A}. \]
+As $A \to \infty$, $\frac{A + 1}{e^A} \to 0$ (a $\frac{\infty}{\infty}$ form; by L'Hôpital, $\lim \frac{1}{e^A} = 0$).
+
+\textbf{Answer:} the integral converges and $\boxed{\int_0^\infty xe^{-x}\,dx = 1}$.
+\end{solution}

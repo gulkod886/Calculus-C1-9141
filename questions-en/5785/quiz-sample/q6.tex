@@ -1,0 +1,23 @@
+% English translation of questions/5785/quiz-sample/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)$ be the function defined in the previous question. Which of the following statements is true?
+\begin{enumerate}
+  \item The function is one-to-one and onto $\R$.
+  \item The function is one-to-one but not onto $\R$.
+  \item The function is onto $\R$ but not one-to-one.
+  \item The function is neither one-to-one nor onto $\R$.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: (b)}.
+
+(The function from the previous question: $f(x)=3x-1$ for $x<0$ and $f(x)=x^2$ for $x>0$.)
+
+\textbf{One-to-one:} in the previous question we showed that $f$ is strictly increasing, and a strictly increasing function is one-to-one: if $x_1\neq x_2$, say $x_1<x_2$, then $f(x_1)<f(x_2)$ and in particular $f(x_1)\neq f(x_2)$.
+
+\textbf{Not onto $\R$:} for $x<0$ we have $f(x)=3x-1<-1$, and for $x>0$ we have $f(x)=x^2>0$. Hence no value in the interval $[-1,0]$ is attained; for example there is no $x$ with $f(x)=-\frac12$. (The image is $(-\infty,-1)\cup(0,\infty)$; if one defines $f(0)=-1$ as in the attached solution, the image is $(-\infty,-1]\cup(0,\infty)$, and $-\frac12$ is still not attained.)
+
+\textbf{Why the others are wrong:} (a) and (c) claim that $f$ is onto $\R$, which we disproved. (c) and (d) claim that $f$ is not one-to-one, which we disproved.
+\end{solution}

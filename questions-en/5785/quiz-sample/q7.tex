@@ -1,0 +1,36 @@
+% English translation of questions/5785/quiz-sample/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Check the continuity of the following function at the point 0:
+\[
+f(x)=\begin{cases}
+\sin(x)\cos(\frac{1}{x}), & \text{if } x<0,\\
+\frac{1}{1+x^2}, & \text{if } x\ge 0
+\end{cases}
+\]
+Which of the following statements is true?
+\begin{enumerate}
+  \item The function is continuous at 0.
+  \item The function has a removable discontinuity at 0.
+  \item The function has a jump discontinuity at 0.
+  \item The function has an essential discontinuity at 0.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+From the left: a function tending to 0 times a bounded function.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c)}.
+
+\textbf{From the left:} $\lim_{x\to0^-}\sin x=0$ (continuity of $\sin$) and $\left|\cos\frac1x\right|\le1$ for every $x\neq0$. By the theorem ``a function tending to 0 times a bounded function tends to 0'' (or by the squeeze $-|\sin x|\le\sin x\cos\frac1x\le|\sin x|$):
+\[
+\lim_{x\to0^-}f(x)=\lim_{x\to0^-}\sin(x)\cos\left(\tfrac1x\right)=0 .
+\]
+\textbf{From the right:} $\frac{1}{1+x^2}$ is continuous, so $\lim_{x\to0^+}f(x)=\frac{1}{1+0}=1=f(0)$.
+
+Both one-sided limits exist and are finite but different ($0\neq1$), so there is a jump discontinuity at 0.
+
+\textbf{Why the others are wrong:} (a) and (b): both require the two-sided limit at 0 to exist, and it does not exist. (d): although $\cos\frac1x$ alone has no limit at 0, the product with $\sin x$ does tend to 0, so both one-sided limits exist and are finite; an essential discontinuity requires one of them not to exist as a finite limit.
+\end{solution}

@@ -1,0 +1,27 @@
+% English translation of questions/5786/semA-moedB/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(12 pts) Compute the intervals of convexity and the inflection points of the function
+\[ f(x) = \sqrt[3]{6x + 12} \]
+\end{question}
+
+\begin{hint}
+Write $f(x) = (6x + 12)^{1/3}$, differentiate twice and check the sign of $f''$. Pay attention to the point where $f''$ is not defined.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} the cube root is defined for every real number, so $f$ is defined and continuous on all of $\R$. Write $f(x) = (6x + 12)^{1/3}$. For $x \ne -2$ (i.e. $6x + 12 \ne 0$), by the chain rule:
+\[ f'(x) = \frac13 (6x + 12)^{-2/3} \cdot 6 = 2(6x + 12)^{-2/3}, \]
+\[ f''(x) = 2\cdot\left(-\frac23\right)(6x + 12)^{-5/3} \cdot 6 = -8(6x + 12)^{-5/3} = \frac{-8}{(6x + 12)^{5/3}}. \]
+At $x = -2$ the function is not differentiable: $\frac{f(x) - f(-2)}{x + 2} = \frac{(6(x+2))^{1/3}}{x + 2} = \frac{6^{1/3}}{(x + 2)^{2/3}} \to +\infty$ (a vertical tangent).
+
+\textbf{Sign of $f''$:} the power $(6x + 12)^{5/3}$ has the same sign as $6x + 12$ (an odd power of a cube root). Hence
+\begin{itemize}
+  \item $x < -2 \iff 6x + 12 < 0 \iff f''(x) > 0$, so $f$ is convex on $(-\infty, -2]$;
+  \item $x > -2 \iff 6x + 12 > 0 \iff f''(x) < 0$, so $f$ is concave on $[-2, \infty)$.
+\end{itemize}
+
+\textbf{Inflection point:} at $x = -2$ the function is continuous, the graph has a (vertical) tangent, and the convexity changes on the two sides of the point. Hence $(-2, f(-2)) = (-2, 0)$ is an inflection point, even though $f$ is not differentiable there. There are no other inflection points, since $f'' \ne 0$ at every other point.
+
+\textbf{Answer:} $f$ is convex on $(-\infty, -2)$, concave on $(-2, \infty)$, and the inflection point is $(-2, 0)$.
+\end{solution}

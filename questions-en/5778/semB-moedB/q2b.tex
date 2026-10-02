@@ -1,0 +1,25 @@
+% English translation of questions/5778/semB-moedB/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the area enclosed between the curves $y=x\cdot e^x$, $y=x-1$, $x=0$, $x=2$. Draw the corresponding sketch.
+\end{question}
+
+\begin{hint}
+Check which of the graphs lies above the other on the interval $[0,2]$. For the integral of $xe^x$ use integration by parts.
+\end{hint}
+
+\begin{solution}
+\textbf{Which is on top.} For $x\in[0,2]$: $e^x\ge1$ and $x\ge0$, hence $xe^x\ge x>x-1$. That is, the graph of $y=xe^x$ lies above the line $y=x-1$ on the whole interval (and there are no intersection points in the interval).
+
+\textbf{Sketch:} the line $y=x-1$ goes from $(0,-1)$ to $(2,1)$; the curve $y=xe^x$ increases from $(0,0)$ to $(2,2e^2)\approx(2,14.8)$. The region is bounded on the left by $x=0$, on the right by $x=2$, from below by the line and from above by the curve.
+
+\textbf{Area:}
+\[
+S=\int_0^2\big(xe^x-(x-1)\big)dx.
+\]
+By integration by parts ($u=x$, $dv=e^xdx$): $\int xe^xdx=xe^x-e^x=(x-1)e^x$. Therefore
+\[
+S=\Big[(x-1)e^x\Big]_0^2-\left[\frac{x^2}{2}-x\right]_0^2=\big(e^2-(-1)\big)-(2-2)=e^2+1.
+\]
+\textbf{Answer:} $S=e^2+1\approx8.39$.
+\end{solution}

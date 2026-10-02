@@ -1,0 +1,47 @@
+% English translation of questions/5777/semA-moedA/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(12 pts) Analyze the function $y=\ln(e^x+e^{-2x})$ and sketch its graph.
+\underline{You need to find}: the domain, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.
+\end{question}
+
+\begin{hint}
+For the asymptotes: write $\ln(e^x+e^{-2x})=x+\ln(1+e^{-3x})=-2x+\ln(1+e^{3x})$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $e^x+e^{-2x}>0$ for every $x$, so the function is defined (and continuous and differentiable) on all of $\R$.
+
+\textbf{Asymptotes:} There are no vertical asymptotes, since the function is continuous on all of $\R$.
+For $x\to+\infty$:
+\[
+y=\ln\big(e^x(1+e^{-3x})\big)=x+\ln(1+e^{-3x}),\qquad y-x=\ln(1+e^{-3x})\xrightarrow[x\to+\infty]{}0,
+\]
+hence $y=x$ is an oblique asymptote at $+\infty$.
+For $x\to-\infty$:
+\[
+y=\ln\big(e^{-2x}(1+e^{3x})\big)=-2x+\ln(1+e^{3x}),\qquad y+2x\xrightarrow[x\to-\infty]{}0,
+\]
+hence $y=-2x$ is an oblique asymptote at $-\infty$. There are no horizontal asymptotes. In addition $y-x>0$ and $y+2x>0$, i.e., the graph lies above both asymptotes.
+
+\textbf{Increase and decrease:}
+\[
+y'=\frac{e^x-2e^{-2x}}{e^x+e^{-2x}}.
+\]
+The denominator is positive, and $e^x-2e^{-2x}>0\iff e^{3x}>2\iff x>\frac{\ln2}{3}$.
+Hence $y$ is decreasing on $\left(-\infty,\frac{\ln 2}{3}\right)$ and increasing on $\left(\frac{\ln2}{3},\infty\right)$.
+
+\textbf{Extrema:} At $x_0=\frac{\ln2}{3}$ there is a (global) minimum. There $e^{x_0}=2^{1/3}$, $e^{-2x_0}=2^{-2/3}$, and therefore
+\[
+y(x_0)=\ln\left(2^{1/3}+2^{-2/3}\right)=\ln\left(3\cdot2^{-2/3}\right)=\ln3-\frac23\ln2\approx0.64.
+\]
+
+\textbf{Convexity:} By the quotient rule,
+\[
+y''=\frac{(e^x+4e^{-2x})(e^x+e^{-2x})-(e^x-2e^{-2x})^2}{(e^x+e^{-2x})^2}
+=\frac{9e^{-x}}{(e^x+e^{-2x})^2}>0,
+\]
+(in the numerator: $e^{2x}+5e^{-x}+4e^{-4x}-e^{2x}+4e^{-x}-4e^{-4x}=9e^{-x}$). Hence the function is convex ($\cup$) on all of $\R$, and there are no inflection points.
+
+\textbf{Sketch:} The graph comes down from above along the asymptote $y=-2x$ (above it), reaches its minimum at the point $\left(\frac{\ln2}{3},\ \ln3-\frac23\ln2\right)\approx(0.23,\,0.64)$, and rises along the asymptote $y=x$ (above it); it is convex throughout. Intersection with the $y$-axis: $y(0)=\ln2$. There is no intersection with the $x$-axis (since $y\ge y(x_0)>0$).
+\end{solution}

@@ -1,0 +1,29 @@
+% English translation of questions/5785/quiz/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the following limit:
+\[
+\lim_{x\to\infty}\left(\sqrt{x^2+5x}-\sqrt{x^2-5x}\right)
+\]
+\end{question}
+
+\begin{hint}
+This is a limit of the form $\infty-\infty$. Multiply and divide by the conjugate $\sqrt{x^2+5x}+\sqrt{x^2-5x}$.
+\end{hint}
+
+\begin{solution}
+For $x>5$ both roots are defined and positive. This is a limit of the form $\infty-\infty$, so we multiply and divide by the (positive) conjugate expression:
+\[
+\sqrt{x^2+5x}-\sqrt{x^2-5x}
+=\frac{(x^2+5x)-(x^2-5x)}{\sqrt{x^2+5x}+\sqrt{x^2-5x}}
+=\frac{10x}{\sqrt{x^2+5x}+\sqrt{x^2-5x}} .
+\]
+Divide the numerator and denominator by $x$. Since $x>0$ we have $x=\sqrt{x^2}$, and therefore
+\[
+=\frac{10}{\sqrt{1+\frac5x}+\sqrt{1-\frac5x}} .
+\]
+As $x\to\infty$: $\frac5x\to 0$, and by continuity of the square root function at 1 we get $\sqrt{1\pm\frac5x}\to 1$. By the arithmetic of limits (the denominator tends to $2\neq 0$):
+\[
+\lim_{x\to\infty}\left(\sqrt{x^2+5x}-\sqrt{x^2-5x}\right)=\frac{10}{1+1}=\boxed{5}.
+\]
+\end{solution}

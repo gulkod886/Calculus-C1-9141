@@ -1,0 +1,25 @@
+% English translation of questions/5785/semA-special/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Compute the integral
+\[ \int\frac{7x^2 + 6}{x^3 + 2x^2 + 2x}\,dx \]
+\end{question}
+
+\begin{hint}
+$x^3 + 2x^2 + 2x = x\left((x+1)^2 + 1\right)$. Decompose into partial fractions.
+\end{hint}
+
+\begin{solution}
+\textbf{Factoring the denominator.} $x^3 + 2x^2 + 2x = x(x^2 + 2x + 2)$, and $x^2 + 2x + 2 = (x+1)^2 + 1$ has no real roots.
+
+\textbf{Partial fractions.}
+\[ \frac{7x^2 + 6}{x(x^2 + 2x + 2)} = \frac{A}{x} + \frac{Bx + C}{x^2 + 2x + 2}, \qquad 7x^2 + 6 = A(x^2 + 2x + 2) + x(Bx + C). \]
+Substituting $x = 0$: $6 = 2A$, i.e. $A = 3$. Then $7x^2 + 6 = 3x^2 + 6x + 6 + Bx^2 + Cx$, and comparing coefficients gives $B = 4$, $C = -6$.
+
+\textbf{Integration.} Write $4x - 6 = 2(2x + 2) - 10$, where $(x^2 + 2x + 2)' = 2x + 2$:
+\[ \int\frac{4x - 6}{x^2 + 2x + 2}\,dx = 2\int\frac{2x+2}{x^2+2x+2}\,dx - 10\int\frac{dx}{(x+1)^2 + 1} = 2\ln(x^2 + 2x + 2) - 10\arctan(x + 1). \]
+
+\textbf{Answer:}
+\[ \int\frac{7x^2 + 6}{x^3 + 2x^2 + 2x}\,dx = 3\ln|x| + 2\ln(x^2 + 2x + 2) - 10\arctan(x+1) + C. \]
+(Check: differentiating the result gives back the integrand.)
+\end{solution}

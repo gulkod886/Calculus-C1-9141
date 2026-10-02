@@ -1,0 +1,25 @@
+% English translation of questions/5786/quiz/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)=x+e^x$. Which of the following statements is true?
+\begin{enumerate}
+  \item The function is one-to-one and onto $\R$.
+  \item The function is one-to-one but not onto $\R$.
+  \item The function is onto $\R$ but not one-to-one.
+  \item The function is neither one-to-one nor onto $\R$.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: (a)}.
+
+\textbf{One-to-one:} let $x_1<x_2$. Since $e^x$ is strictly increasing, $e^{x_1}<e^{x_2}$. Adding the two inequalities we get $x_1+e^{x_1}<x_2+e^{x_2}$, i.e. $f$ is strictly increasing, and in particular one-to-one.
+
+\textbf{Onto $\R$:} $f$ is continuous on $\R$ as a sum of continuous functions, and
+\[
+\lim_{x\to-\infty}(x+e^x)=-\infty+0=-\infty,\qquad \lim_{x\to\infty}(x+e^x)=\infty+\infty=\infty .
+\]
+Let $y\in\R$. By these limits there exist $x_1<x_2$ with $f(x_1)<y<f(x_2)$, and by the Intermediate Value Theorem on $[x_1,x_2]$ there exists $c$ with $f(c)=y$. Hence $f$ is onto $\R$.
+
+\textbf{Why the others are false:} (b) and (d) claim that $f$ is not onto, (c) and (d) claim that it is not one-to-one --- both claims were refuted above.
+\end{solution}

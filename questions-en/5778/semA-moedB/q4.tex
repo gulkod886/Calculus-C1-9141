@@ -1,0 +1,50 @@
+% English translation of questions/5778/semA-moedB/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts)
+Investigate the function $f(x)=x^2e^{-x^2}$ and sketch its graph.
+\end{question}
+
+\begin{hint}
+The function is even — it suffices to study it for $x\ge0$.
+\end{hint}
+
+\begin{solution}
+\textbf{1. General description.}
+\begin{itemize}
+  \item \textbf{Domain:} all of $\R$.
+  \item \textbf{Intersection with the axes:} $f(x)=0\iff x=0$ (since $e^{-x^2}>0$). The only intersection point is $(0,0)$.
+  \item \textbf{Parity:} $f(-x)=(-x)^2e^{-(-x)^2}=f(x)$, i.e. $f$ is even and the graph is symmetric with respect to the $y$-axis. It is not periodic.
+  \item \textbf{Sign:} $f(x)\ge0$ for every $x$, with equality only at $x=0$.
+\end{itemize}
+
+\textbf{2. Continuity:} $f$ is elementary and defined on all of $\R$, hence continuous on all of $\R$ (and there are no vertical asymptotes).
+
+\textbf{3. Behavior at infinity and asymptotes:}
+\[ \lim_{x\to\pm\infty}x^2e^{-x^2}=\lim_{t\to\infty}\frac{t}{e^t}=0 \]
+(we substituted $t=x^2$; the limit $\frac{t}{e^t}\to0$ — a known limit, or L'Hôpital: $\frac{1}{e^t}\to0$). Hence $y=0$ is a horizontal asymptote at $\pm\infty$.
+
+\textbf{4. Increase, decrease and extrema:}
+\[ f'(x)=2xe^{-x^2}+x^2e^{-x^2}(-2x)=2xe^{-x^2}(1-x^2)=-2x(x-1)(x+1)e^{-x^2}. \]
+Critical points: $x=0,\pm1$. The sign of $f'$ is the sign of $x(1-x^2)$:
+\begin{itemize}
+  \item on $(-\infty,-1)$: $f'>0$, $f$ is increasing;
+  \item on $(-1,0)$: $f'<0$, $f$ is decreasing;
+  \item on $(0,1)$: $f'>0$, $f$ is increasing;
+  \item on $(1,\infty)$: $f'<0$, $f$ is decreasing.
+\end{itemize}
+Hence: at $x=\pm1$ there is a local (and also absolute) maximum, $f(\pm1)=e^{-1}=\frac1e$; at $x=0$ there is a local (and also absolute) minimum, $f(0)=0$. The range of the function is $\left[0,\frac1e\right]$ (by continuity, by the Intermediate Value Theorem, and since $f\to0$ at infinity).
+
+\textbf{5. Convexity and inflection points:}
+\[ f''(x)=\left(2(x-x^3)e^{-x^2}\right)'=2(1-3x^2)e^{-x^2}+2(x-x^3)(-2x)e^{-x^2}=2e^{-x^2}\left(2x^4-5x^2+1\right). \]
+$f''(x)=0\iff 2x^4-5x^2+1=0\iff x^2=\frac{5\pm\sqrt{17}}{4}$. Denote
+\[ x_1=\sqrt{\tfrac{5-\sqrt{17}}{4}}\approx0.468,\qquad x_2=\sqrt{\tfrac{5+\sqrt{17}}{4}}\approx1.510. \]
+The polynomial $2s^2-5s+1$ (with $s=x^2$) is positive outside its roots and negative between them, hence:
+\begin{itemize}
+  \item $f''>0$ (convex, ``upward'') for $|x|<x_1$ and for $|x|>x_2$;
+  \item $f''<0$ (concave, ``downward'') for $x_1<|x|<x_2$.
+\end{itemize}
+Four inflection points: $x=\pm x_1$ with $f(\pm x_1)=\frac{5-\sqrt{17}}{4}e^{-\frac{5-\sqrt{17}}{4}}\approx0.176$, and $x=\pm x_2$ with $f(\pm x_2)=\frac{5+\sqrt{17}}{4}e^{-\frac{5+\sqrt{17}}{4}}\approx0.233$.
+
+\textbf{6. Sketch:} a ``double hump'' graph symmetric with respect to the $y$-axis: it starts from $y=0$ at $-\infty$ (above the axis), rises to the maximum $\left(-1,\frac1e\right)$, descends to the minimum $(0,0)$ (where the graph is tangent to the $x$-axis), rises again to the maximum $\left(1,\frac1e\right)$, and then decreases and tends to $0$ as $x\to\infty$. The convexity changes at the points $\pm0.468$ and $\pm1.510$.
+\end{solution}

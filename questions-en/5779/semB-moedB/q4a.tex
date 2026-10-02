@@ -1,0 +1,25 @@
+% English translation of questions/5779/semB-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) For which values of the parameters $a$ and $b$ will the function
+\[ f(x)=\begin{cases}\dfrac{\sin(3x)}{\ln(1-x)}, & x<0\\[2mm] ax+b, & 0\le x\le1\\[1mm] \big(\cos(x-1)\big)^{1/(x-1)}, & x>1\end{cases} \]
+be continuous for every real $x$?
+\end{question}
+
+\begin{hint}
+Continuity needs to be checked only at the junction points $x=0$ and $x=1$. Write the right-hand limit at $1$ in the form $e^{\frac{\ln\cos(x-1)}{x-1}}$.
+\end{hint}
+
+\begin{solution}
+For $x<0$ we have $1-x>1$ and hence $\ln(1-x)>0$, so on the interval $(-\infty,0)$ the function is continuous as a quotient of continuous functions with a nonzero denominator. On $(0,1)$ it is a polynomial. For $x>1$ the expression $\big(\cos(x-1)\big)^{1/(x-1)}=e^{\frac{\ln\cos(x-1)}{x-1}}$ is defined and continuous when $\cos(x-1)>0$, in particular on the interval $1<x<1+\frac\pi2$, which is the neighborhood relevant to continuity at $1$. (Remark: for $x>1$ with $\cos(x-1)\le0$ the expression is not defined in the real sense, so the requirement ``continuous for every $x$'' should be understood as continuity on the domain.) We check the junction points.
+
+\textbf{The point $x=0$:} $f(0)=b=\lim_{x\to0^+}f(x)$. From the left:
+\[ \lim_{x\to0^-}\frac{\sin3x}{\ln(1-x)}=\lim_{x\to0^-}\frac{\sin3x}{3x}\cdot\frac{-x}{\ln(1-x)}\cdot(-3)=1\cdot1\cdot(-3)=-3, \]
+by $\lim_{t\to0}\frac{\sin t}{t}=1$ and $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$ (with $t=-x$). Hence $b=-3$.
+
+\textbf{The point $x=1$:} $f(1)=a+b=\lim_{x\to1^-}f(x)$. From the right, let $u=x-1\to0^+$:
+\[ \big(\cos u\big)^{1/u}=e^{\frac{\ln\cos u}{u}},\qquad \lim_{u\to0^+}\frac{\ln\cos u}{u}\overset{\text{L'H}}{=}\lim_{u\to0^+}\frac{-\tan u}{1}=0. \]
+By continuity of the exponential, the limit is $e^0=1$. Hence $a+b=1$.
+
+\textbf{Answer:} $b=-3$, $a=4$.
+\end{solution}

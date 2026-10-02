@@ -1,0 +1,15 @@
+% English translation of questions/5784/semB-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Write the Maclaurin polynomial of order 4 of $f(x)=\sin(x)\cos(x)$
+\end{question}
+
+\begin{hint}
+$\sin x\cos x=\frac12\sin(2x)$.
+\end{hint}
+
+\begin{solution}
+By the double-angle identity $f(x)=\sin x\cos x=\frac12\sin(2x)$. The Maclaurin polynomial of order 4 of $\sin t$ is $t-\frac{t^3}{6}$ (the coefficient of $t^4$ is $0$). Substitute $t=2x$:
+\[ P_4(x)=\frac12\left(2x-\frac{(2x)^3}{6}\right)=\boxed{x-\frac{2}{3}x^3}. \]
+(Directly: $f'(x)=\cos2x$, $f''=-2\sin2x$, $f'''=-4\cos2x$, $f^{(4)}=8\sin2x$; at the point $0$: $f=0,\ f'=1,\ f''=0,\ f'''=-4,\ f^{(4)}=0$, and therefore $P_4=x-\frac{4}{6}x^3$.)
+\end{solution}

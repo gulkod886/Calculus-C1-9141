@@ -1,0 +1,18 @@
+% English translation of questions/5780/semB-moedB/q1c.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(5 pts) For which values of the parameter $a$ does the graph of the function $f(x)=\frac{x^2-9}{x+a}$ have no vertical asymptote?
+\end{question}
+
+\begin{hint}
+When is the root of the denominator also a root of the numerator?
+\end{hint}
+
+\begin{solution}
+The function is continuous at every point where $x\neq -a$, hence a vertical asymptote can occur only at $x=-a$. As $x\to-a$ the denominator tends to $0$, hence:
+\begin{itemize}
+  \item If the numerator does not vanish at $-a$, i.e. $a^2-9\neq0$, then $|f(x)|\to\infty$ as $x\to-a$, and $x=-a$ is a vertical asymptote.
+  \item If $a^2=9$, i.e. $a=3$ or $a=-3$: for $a=3$, $f(x)=\frac{(x-3)(x+3)}{x+3}=x-3$ for every $x\neq-3$, hence $\lim_{x\to-3}f(x)=-6$ is finite (a removable discontinuity), and there is no vertical asymptote. Similarly for $a=-3$, $f(x)=x+3$ for every $x\neq3$ and $\lim_{x\to3}f(x)=6$.
+\end{itemize}
+Hence there is no vertical asymptote exactly when $\boxed{a=3 \text{ or } a=-3}$.
+\end{solution}

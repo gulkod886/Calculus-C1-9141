@@ -1,0 +1,30 @@
+% English translation of questions/5780/quiz/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The derivative of $e^{2x}\ln\sqrt{1+x}$ is equal to
+\begin{enumerate}
+  \item $e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{2(1+x)}$
+  \item $2e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{2(1+x)}$
+  \item $2e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{(1+x)}$
+  \item $e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{(1+x)}$
+  \item $2e^{2x}\sqrt{1+x}+2e^{2x}\frac{1}{(1+x)}$
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: (b)}.
+
+By the product rule $(fg)'=f'g+fg'$ with $f(x)=e^{2x}$, $g(x)=\ln\sqrt{1+x}$ (defined for $x>-1$).
+
+By the chain rule: $f'(x)=e^{2x}\cdot 2=2e^{2x}$.
+
+For $g$ we use the fact that $\ln\sqrt{1+x}=\frac12\ln(1+x)$, hence $g'(x)=\frac12\cdot\frac{1}{1+x}=\frac{1}{2(1+x)}$.
+(Alternatively, by the chain rule: $g'(x)=\frac{1}{\sqrt{1+x}}\cdot\frac{1}{2\sqrt{1+x}}=\frac{1}{2(1+x)}$.)
+
+Hence
+\[
+\left(e^{2x}\ln\sqrt{1+x}\right)'=\boxed{2e^{2x}\ln\sqrt{1+x}+e^{2x}\frac{1}{2(1+x)}} .
+\]
+
+\textbf{Why the others are wrong:} (a) and (d) forget the factor 2 coming from the derivative of the exponent $2x$ (chain rule). (c) and (d) forget the factor $\frac12$ that comes from the square root. (e) replaces $\ln\sqrt{1+x}$ by $\sqrt{1+x}$ and the coefficient of the second term by 2, and this is not the derivative.
+\end{solution}

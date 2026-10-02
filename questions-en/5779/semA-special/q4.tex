@@ -1,0 +1,41 @@
+% English translation of questions/5779/semA-special/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Investigate the function $f(x)=\dfrac{e^{2x-1}}{x^2}$ and sketch its graph.
+You need to find: domain, asymptotes, intervals of increase and decrease, extremum points, intersection points of the graph with the axes, intervals of convexity and concavity.
+\end{question}
+
+\begin{hint}
+$f'(x)=\frac{2e^{2x-1}(x-1)}{x^3}$. Note that the sign of $x^3$ changes at $x=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $x\neq 0$, i.e. $(-\infty,0)\cup(0,\infty)$.
+
+\textbf{Intersection with the axes:} $x=0$ is not in the domain, so there is no intersection with the $y$-axis. Since $e^{2x-1}>0$ and $x^2>0$, we have $f(x)>0$ for every $x$ in the domain, so there is no intersection with the $x$-axis.
+
+\textbf{Asymptotes:}
+\begin{itemize}
+  \item \emph{Vertical:} $\lim_{x\to0^\pm}\frac{e^{2x-1}}{x^2} = \frac{e^{-1}}{0^+} = +\infty$, hence $x=0$ is a vertical asymptote (the graph rises to $+\infty$ on both sides).
+  \item \emph{At $-\infty$:} $e^{2x-1}\to0$ and $\frac1{x^2}\to0$, hence $\lim_{x\to-\infty}f(x)=0$, and $y=0$ is a horizontal asymptote on the left.
+  \item \emph{At $+\infty$:} $\frac{f(x)}{x}=\frac{e^{2x-1}}{x^3}\to\infty$ (the exponential dominates every power, for example by applying L'Hôpital's rule three times), so there is no horizontal or oblique asymptote on the right, and $f(x)\to+\infty$.
+\end{itemize}
+
+\textbf{First derivative:} by the quotient rule,
+\[ f'(x) = \frac{2e^{2x-1}x^2 - e^{2x-1}\cdot 2x}{x^4} = \frac{2e^{2x-1}(x-1)}{x^3}. \]
+$f'(x)=0 \iff x=1$. The sign of $f'$ is determined by $\frac{x-1}{x^3}$:
+\begin{itemize}
+  \item $x<0$: $x-1<0$, $x^3<0$ and hence $f'>0$ -- $f$ is \textbf{increasing} on $(-\infty,0)$.
+  \item $0<x<1$: $x-1<0$, $x^3>0$ and hence $f'<0$ -- $f$ is \textbf{decreasing} on $(0,1)$.
+  \item $x>1$: $f'>0$ -- $f$ is \textbf{increasing} on $(1,\infty)$.
+\end{itemize}
+Hence at $x=1$ there is a \textbf{local minimum}: $f(1)=\frac{e^{1}}{1}=e$, i.e. the point $(1,e)$. There are no other extremum points ($x=0$ is not in the domain).
+
+\textbf{Second derivative:} differentiate $f'(x)=2e^{2x-1}\cdot\frac{x-1}{x^3}$:
+\[ \left(\frac{x-1}{x^3}\right)' = \frac{x^3-3x^2(x-1)}{x^6} = \frac{-2x+3}{x^4}, \]
+\[ f''(x) = 2e^{2x-1}\left(\frac{2(x-1)}{x^3}+\frac{3-2x}{x^4}\right) = \frac{2e^{2x-1}\left(2x^2-4x+3\right)}{x^4}. \]
+The quadratic $2x^2-4x+3$ has discriminant $16-24<0$ and a positive leading coefficient, so it is positive for every $x$. Also $e^{2x-1}>0$ and $x^4>0$. Hence $f''(x)>0$ for every $x\ne0$:
+$f$ is \textbf{convex} (concave up, $\cup$) on each of the intervals $(-\infty,0)$ and $(0,\infty)$, and there are no inflection points.
+
+\textbf{Sketch:} on the left the graph starts close to the $x$-axis (above it), increases, is convex, and tends to $+\infty$ as $x\to0^-$. To the right of $0$ the graph decreases from $+\infty$ to the minimum $(1,e)$ and then increases at an exponential rate to $+\infty$. The whole graph lies above the $x$-axis.
+\end{solution}

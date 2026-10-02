@@ -1,0 +1,29 @@
+% English translation of questions/5779/semB-moedA/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) For which values of the parameters $a$ and $b$ will the function
+\[ f(x)=\begin{cases}\dfrac{1-\cos x}{x\ln(1+x)}, & -1<x<0\\[2mm] ax+b, & 0\le x\le1\\[1mm] x^{1/(x-1)}, & x>1\end{cases} \]
+be continuous on the domain $x>-1$?
+\end{question}
+
+\begin{hint}
+On each of the open intervals the function is continuous as a composition of elementary functions; only $x=0$ and $x=1$ need to be checked.
+\end{hint}
+
+\begin{hint}
+Compute the limit $\lim_{x\to1^+}x^{1/(x-1)}$ using $x^{1/(x-1)}=e^{\frac{\ln x}{x-1}}$.
+\end{hint}
+
+\begin{solution}
+On the intervals $(-1,0)$, $(0,1)$, $(1,\infty)$ the function is continuous (quotient/composition of continuous functions, and the denominator $x\ln(1+x)\ne0$ on $(-1,0)$; on $(1,\infty)$: $x^{1/(x-1)}=e^{\ln x/(x-1)}$). It remains to check the junction points.
+
+\textbf{The point $x=0$:} $f(0)=b=\lim_{x\to0^+}f(x)$. From the left, using the known limits $\lim_{x\to0}\frac{1-\cos x}{x^2}=\frac12$ and $\lim_{x\to0}\frac{\ln(1+x)}{x}=1$:
+\[ \lim_{x\to0^-}\frac{1-\cos x}{x\ln(1+x)}=\lim_{x\to0^-}\frac{1-\cos x}{x^2}\cdot\frac{x}{\ln(1+x)}=\frac12\cdot1=\frac12. \]
+Hence continuity at $0$ is equivalent to $b=\frac12$.
+
+\textbf{The point $x=1$:} $f(1)=a+b=\lim_{x\to1^-}f(x)$. From the right:
+\[ \lim_{x\to1^+}x^{1/(x-1)}=\lim_{x\to1^+}e^{\frac{\ln x}{x-1}}. \]
+The limit $\lim_{x\to1}\frac{\ln x}{x-1}$ is of the form $\frac00$, and by L'Hôpital's rule $=\lim_{x\to1}\frac{1/x}{1}=1$ (this is also the derivative of $\ln$ at $1$). By the continuity of the exponential the limit is $e^1=e$. Hence continuity at $1$ is equivalent to $a+b=e$.
+
+\textbf{Answer:} $b=\frac12$, $a=e-\frac12$.
+\end{solution}

@@ -1,0 +1,33 @@
+% English translation of questions/5786/semA-moedB/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(16 pts) Using a Taylor approximation, compute $\sqrt[3]{11}$ with an error less than $\frac{1}{10}$. Justify your answer.
+
+Note that the approximation and the error bound must be rational numbers.
+\end{question}
+
+\begin{hint}
+Expand $f(x) = \sqrt[3]{x}$ around $a = 8$ (since $\sqrt[3]{8} = 2$). Start with a first-order polynomial and check whether the Lagrange remainder is already less than $\frac{1}{10}$.
+\end{hint}
+
+\begin{solution}
+Define $f(x) = \sqrt[3]{x} = x^{1/3}$ and expand around $a = 8$, the point closest to $11$ at which the cube root is known ($\sqrt[3]{8} = 2$). We look for the minimal $n$ such that $|R_n(11)| < \frac{1}{10}$.
+
+\textbf{Derivatives} (for $x > 0$):
+\[ f'(x) = \frac13 x^{-2/3}, \qquad f''(x) = -\frac29 x^{-5/3}, \]
+hence $f(8) = 2$ and $f'(8) = \frac{1}{3\cdot 8^{2/3}} = \frac{1}{3\cdot 4} = \frac{1}{12}$.
+
+\textbf{Lagrange remainder for $n = 1$:} by Taylor's theorem, there exists $c$ between $8$ and $11$ such that
+\[ R_1(11) = \frac{f''(c)}{2!}(11 - 8)^2 = \frac{-\frac29 c^{-5/3}}{2}\cdot 9 = -\frac{1}{c^{5/3}}. \]
+Since $8 < c < 11$, we have $c^{5/3} > 8^{5/3} = 2^5 = 32$, and hence
+\[ |R_1(11)| = \frac{1}{c^{5/3}} < \frac{1}{32} < \frac{1}{10}. \]
+Thus the first-order Taylor polynomial suffices ($n = 1$).
+
+\textbf{The approximation:}
+\[ P_1(x) = f(8) + f'(8)(x - 8) = 2 + \frac{1}{12}(x - 8), \]
+\[ \sqrt[3]{11} = f(11) \approx P_1(11) = 2 + \frac{3}{12} = 2\frac14 = \frac94. \]
+
+\textbf{Answer:} $\sqrt[3]{11} \approx \frac{9}{4} = 2.25$, with error less than $\frac{1}{32} < \frac{1}{10}$. (Since $R_1(11) < 0$, the approximation is larger than the true value: $\frac94 - \frac{1}{32} < \sqrt[3]{11} < \frac94$.)
+
+(Check: $\sqrt[3]{11} \approx 2.22398$, and the actual error is about $0.026 < \frac{1}{32} \approx 0.031$.)
+\end{solution}

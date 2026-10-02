@@ -1,0 +1,25 @@
+% English translation of questions/5779/semA-special/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle \lim_{x\to\infty}\left(1+2x-4x^2+x^4\right)^{1/\ln(2x^2+1)}$.
+\end{question}
+
+\begin{hint}
+Write the expression in the form $e^{\ln(\cdots)/\ln(2x^2+1)}$ and factor the highest power out of each logarithm.
+\end{hint}
+
+\begin{solution}
+Denote $p(x)=1+2x-4x^2+x^4$. For $x$ large enough $p(x)>0$ (since $p(x)\to\infty$), hence
+\[ p(x)^{1/\ln(2x^2+1)} = \exp\left(\frac{\ln p(x)}{\ln(2x^2+1)}\right). \]
+Factor the leading power out of each logarithm:
+\[ \ln p(x) = \ln\left(x^4\left(1+\tfrac{2}{x^3}-\tfrac{4}{x^2}+\tfrac{1}{x^4}\right)\right) = 4\ln x + \ln\left(1+\tfrac{2}{x^3}-\tfrac{4}{x^2}+\tfrac{1}{x^4}\right), \]
+\[ \ln(2x^2+1) = 2\ln x + \ln\left(2+\tfrac{1}{x^2}\right). \]
+As $x\to\infty$, the expressions $\ln\left(1+\tfrac{2}{x^3}-\tfrac{4}{x^2}+\tfrac{1}{x^4}\right)\to \ln 1 = 0$ and $\ln\left(2+\tfrac1{x^2}\right)\to\ln 2$ (continuity of the logarithm), whereas $\ln x\to\infty$. Divide the numerator and denominator by $\ln x$:
+\[ \frac{\ln p(x)}{\ln(2x^2+1)} = \frac{4 + \frac{\ln\left(1+\frac{2}{x^3}-\frac{4}{x^2}+\frac{1}{x^4}\right)}{\ln x}}{2+\frac{\ln\left(2+\frac{1}{x^2}\right)}{\ln x}} \xrightarrow[x\to\infty]{} \frac{4+0}{2+0}=2. \]
+(One can also use L'Hôpital's rule in the case $\frac{\infty}{\infty}$: $\frac{p'(x)/p(x)}{4x/(2x^2+1)}=\frac{(4x^3-8x+2)(2x^2+1)}{4x\,p(x)}\to\frac{8}{4}=2$.)
+
+By the continuity of the exponential function we get
+\[ \lim_{x\to\infty}\left(1+2x-4x^2+x^4\right)^{1/\ln(2x^2+1)} = e^{2}. \]
+\textbf{Answer:} $e^2$.
+\end{solution}

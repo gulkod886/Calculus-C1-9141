@@ -1,0 +1,24 @@
+% English translation of questions/5778/semB-moedB/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute $\displaystyle\int_1^{+\infty}\frac{\ln x}{x^4}dx$.
+\end{question}
+
+\begin{hint}
+Integration by parts with $u=\ln x$, $dv=x^{-4}dx$.
+\end{hint}
+
+\begin{solution}
+\textbf{Antiderivative.} Integration by parts with $u=\ln x$, $dv=x^{-4}dx$, $du=\frac{dx}x$, $v=-\frac1{3x^3}$:
+\[
+\int\frac{\ln x}{x^4}dx=-\frac{\ln x}{3x^3}+\frac13\int x^{-4}dx=-\frac{\ln x}{3x^3}-\frac1{9x^3}+C.
+\]
+\textbf{The improper integral:}
+\[
+\int_1^{\infty}\frac{\ln x}{x^4}dx=\lim_{R\to\infty}\left[-\frac{\ln x}{3x^3}-\frac{1}{9x^3}\right]_1^R
+=\lim_{R\to\infty}\left(-\frac{\ln R}{3R^3}-\frac1{9R^3}\right)+\frac19=\frac19,
+\]
+since $\lim_{R\to\infty}\frac{\ln R}{R^3}=0$ (by L'Hôpital's rule: $\frac{1/R}{3R^2}=\frac1{3R^3}\to0$).
+
+\textbf{Answer:} the integral converges and equals $\frac19$.
+\end{solution}

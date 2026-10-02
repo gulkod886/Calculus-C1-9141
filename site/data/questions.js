@@ -3,79 +3,98 @@ window.BANK = {
  "categories": [
   {
    "id": "sequences",
-   "name": "גבולות של סדרות"
+   "name": "גבולות של סדרות",
+   "name_en": "Limits of sequences"
   },
   {
    "id": "func-limits",
-   "name": "גבולות של פונקציות"
+   "name": "גבולות של פונקציות",
+   "name_en": "Limits of functions"
   },
   {
    "id": "continuity",
-   "name": "רציפות"
+   "name": "רציפות",
+   "name_en": "Continuity"
   },
   {
    "id": "ivt",
-   "name": "משפט ערך הביניים ומשפטי ויירשטראס"
+   "name": "משפט ערך הביניים ומשפטי ויירשטראס",
+   "name_en": "Intermediate Value Theorem and Weierstrass theorems"
   },
   {
    "id": "derivatives",
-   "name": "נגזרות וגזירות"
+   "name": "נגזרות וגזירות",
+   "name_en": "Derivatives and differentiability"
   },
   {
    "id": "mvt",
-   "name": "משפטי רול, לגרנז' וקושי"
+   "name": "משפטי רול, לגרנז' וקושי",
+   "name_en": "Rolle, Lagrange and Cauchy theorems"
   },
   {
    "id": "lhopital",
-   "name": "כלל לופיטל"
+   "name": "כלל לופיטל",
+   "name_en": "L'Hôpital's rule"
   },
   {
    "id": "taylor",
-   "name": "פולינום טיילור"
+   "name": "פולינום טיילור",
+   "name_en": "Taylor polynomials"
   },
   {
    "id": "func-analysis",
-   "name": "חקירת פונקציות ואי-שוויונות"
+   "name": "חקירת פונקציות ואי-שוויונות",
+   "name_en": "Function analysis and inequalities"
   },
   {
    "id": "functions",
-   "name": "פונקציות: תחום, הרכבה, פונקציה הפוכה"
+   "name": "פונקציות: תחום, הרכבה, פונקציה הפוכה",
+   "name_en": "Functions: domain, composition, inverse function"
   },
   {
    "id": "antiderivatives",
-   "name": "פונקציה קדומה ושיטות אינטגרציה"
+   "name": "פונקציה קדומה ושיטות אינטגרציה",
+   "name_en": "Antiderivatives and integration techniques"
   },
   {
    "id": "definite-integrals",
-   "name": "אינטגרל מסוים והמשפט היסודי"
+   "name": "אינטגרל מסוים והמשפט היסודי",
+   "name_en": "Definite integrals and the Fundamental Theorem"
   },
   {
    "id": "improper-integrals",
-   "name": "אינטגרלים לא אמיתיים"
+   "name": "אינטגרלים לא אמיתיים",
+   "name_en": "Improper integrals"
   },
   {
    "id": "integral-applications",
-   "name": "שימושי האינטגרל: שטח, נפח ואורך קשת"
+   "name": "שימושי האינטגרל: שטח, נפח ואורך קשת",
+   "name_en": "Applications of integrals: area, volume, arc length"
   },
   {
    "id": "polar-parametric",
-   "name": "קואורדינטות קוטביות ועקומות פרמטריות"
+   "name": "קואורדינטות קוטביות ועקומות פרמטריות",
+   "name_en": "Polar coordinates and parametric curves"
   },
   {
    "id": "ode",
-   "name": "משוואות דיפרנציאליות"
+   "name": "משוואות דיפרנציאליות",
+   "name_en": "Differential equations"
   },
   {
    "id": "proofs",
-   "name": "הוכחות ושאלות תיאורטיות"
+   "name": "הוכחות ושאלות תיאורטיות",
+   "name_en": "Proofs and theoretical questions"
   },
   {
    "id": "true-false",
-   "name": "נכון / לא נכון"
+   "name": "נכון / לא נכון",
+   "name_en": "True / False"
   },
   {
    "id": "multiple-choice",
-   "name": "שאלות אמריקאיות"
+   "name": "שאלות אמריקאיות",
+   "name_en": "Multiple choice"
   }
  ],
  "questions": [
@@ -102,6 +121,7 @@ window.BANK = {
     "<p>חפשו פונקציה עולה ממש שהגרף שלה \"מתעקם\" לשני הכיוונים, למשל פולינום אי-זוגי.</p>"
    ],
    "solution": "<strong>הטענה אינה נכונה.</strong> מונוטוניות אינה קשורה לקמירות.\n\nדוגמה נגדית: $f(x)=x^3$ בקטע $[a,b]=[-1,1]$. מכיוון ש-$f'(x)=3x^2\\ge 0$ ומתאפסת רק בנקודה בודדת $x=0$, הפונקציה עולה ממש בקטע (אפשר גם ישירות: אם $x&lt;y$ אז $y^3-x^3=(y-x)(x^2+xy+y^2)&gt;0$, כי $x^2+xy+y^2=(x+\\tfrac y2)^2+\\tfrac34y^2&gt;0$ כאשר $x\\ne y$).\n\nאולם $f''(x)=6x$, כך ש-$f''&lt;0$ ב-$(-1,0)$ ו-$f''&gt;0$ ב-$(0,1)$. כלומר $f$ קעורה ב-$[-1,0]$ וקמורה ב-$[0,1]$, ולכן אינה קמורה (וגם אינה קעורה) בכל הקטע.\n\nבדיקה ישירה לפי ההגדרה: עבור הנקודות $x_1=-1,\\ x_2=0$ ונקודת האמצע $-\\tfrac12$:\n\\[ f\\!\\left(-\\tfrac12\\right)=-\\tfrac18 \\;&gt;\\; -\\tfrac12=\\frac{f(-1)+f(0)}{2}, \\]\nכלומר המיתר בין $(-1,-1)$ ל-$(0,0)$ נמצא <em>מתחת</em> לגרף, בסתירה לקמירות ($f(\\tfrac{x_1+x_2}{2})\\le \\tfrac{f(x_1)+f(x_2)}{2}$). ומנגד, עבור $x_1=0,\\ x_2=1$: $f(\\tfrac12)=\\tfrac18&lt;\\tfrac12=\\tfrac{f(0)+f(1)}2$, כך שהפונקציה גם אינה קעורה. לכן הדוגמה מפריכה את הטענה בכל אחת מהמוסכמות למילה \"קמורה\".\n\n(דוגמה נוספת: $f(x)=\\sqrt{x}$ ב-$[0,1]$ עולה ממש וקעורה ממש.)",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -127,6 +147,7 @@ window.BANK = {
     "<p>חשבו את הנגזרת לפי ההגדרה, כגבול של מנת ההפרשים, והשתמשו בכך ש\"חסומה כפול שואפת לאפס שואפת לאפס\".</p>"
    ],
    "solution": "<strong>הטענה נכונה.</strong> נחשב לפי הגדרת הנגזרת. עבור $h\\neq 0$:\n\\[ \\frac{f(h)-f(0)}{h}=\\frac{h\\sqrt{|h|}\\cos(\\frac1h)-0}{h}=\\sqrt{|h|}\\cos\\!\\left(\\frac1h\\right). \\]\nמתקיים $\\left|\\sqrt{|h|}\\cos(\\frac1h)\\right|\\le \\sqrt{|h|}$, ו-$\\sqrt{|h|}\\to 0$ כאשר $h\\to 0$. לפי כלל הסנדוויץ' (או: פונקציה חסומה, $\\cos(\\frac1h)$, כפול פונקציה השואפת לאפס, $\\sqrt{|h|}$, שואפת לאפס):\n\\[ f'(0)=\\lim_{h\\to 0}\\frac{f(h)-f(0)}{h}=\\lim_{h\\to0}\\sqrt{|h|}\\cos\\!\\left(\\frac1h\\right)=0. \\]\nהגבול קיים וסופי, ולכן $f$ גזירה באפס ו-$\\boxed{f'(0)=0}$.",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -151,7 +172,8 @@ window.BANK = {
    "hints": [
     "<p>מצאו פונקציה קדומה בעזרת ההצבה $t=\\ln x$.</p>"
    ],
-   "solution": "<strong>הטענה אינה נכונה</strong> -- האינטגרל מתבדר.\n\nהפונקציה $\\frac{1}{x\\ln x}$ רציפה וחיובית ב-$[2,\\infty)$, ולכן האינטגרל הלא אמיתי מוגדר כ-$\\lim_{R\\to\\infty}\\int_2^R\\frac{dx}{x\\ln x}$.\nבהצבה $t=\\ln x$, $dt=\\frac{dx}{x}$:\n\\[ \\int\\frac{dx}{x\\ln x}=\\int\\frac{dt}{t}=\\ln|t|+C=\\ln(\\ln x)+C \\qquad (x&gt;1). \\]\nלפי המשפט היסודי (נוסחת ניוטון-לייבניץ):\n\\[ \\int_2^R\\frac{dx}{x\\ln x}=\\ln(\\ln R)-\\ln(\\ln 2)\\xrightarrow[R\\to\\infty]{}\\infty, \\]\nכי $\\ln R\\to\\infty$ ולכן גם $\\ln(\\ln R)\\to\\infty$. הגבול אינו סופי, ולכן האינטגרל <strong>מתבדר</strong>.",
+   "solution": "<strong>הטענה אינה נכונה</strong> – האינטגרל מתבדר.\n\nהפונקציה $\\frac{1}{x\\ln x}$ רציפה וחיובית ב-$[2,\\infty)$, ולכן האינטגרל הלא אמיתי מוגדר כ-$\\lim_{R\\to\\infty}\\int_2^R\\frac{dx}{x\\ln x}$.\nבהצבה $t=\\ln x$, $dt=\\frac{dx}{x}$:\n\\[ \\int\\frac{dx}{x\\ln x}=\\int\\frac{dt}{t}=\\ln|t|+C=\\ln(\\ln x)+C \\qquad (x&gt;1). \\]\nלפי המשפט היסודי (נוסחת ניוטון-לייבניץ):\n\\[ \\int_2^R\\frac{dx}{x\\ln x}=\\ln(\\ln R)-\\ln(\\ln 2)\\xrightarrow[R\\to\\infty]{}\\infty, \\]\nכי $\\ln R\\to\\infty$ ולכן גם $\\ln(\\ln R)\\to\\infty$. הגבול אינו סופי, ולכן האינטגרל <strong>מתבדר</strong>.",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -177,6 +199,7 @@ window.BANK = {
     "<p>השתמשו בפיתוח טיילור של $\\cos t$ סביב $0$ עם $t=x^2$, ובגבול היסודי $\\frac{\\sin x}{x}\\to1$.</p>"
    ],
    "solution": "<p>נכתוב\n\\[ \\frac{1-\\cos(x^2)}{x^2\\sin^2 x}=\\frac{1-\\cos(x^2)}{x^4}\\cdot\\left(\\frac{x}{\\sin x}\\right)^2. \\]\nלפי פיתוח מקלורין $\\cos t=1-\\frac{t^2}{2}+o(t^2)$, ועם $t=x^2$: $1-\\cos(x^2)=\\frac{x^4}{2}+o(x^4)$, ולכן $\\frac{1-\\cos(x^2)}{x^4}\\to\\frac12$.\n(לחלופין: $1-\\cos(x^2)=2\\sin^2(\\frac{x^2}{2})$, ולכן $\\frac{1-\\cos(x^2)}{x^4}=\\frac12\\left(\\frac{\\sin(x^2/2)}{x^2/2}\\right)^2\\to\\frac12$.)\nכמו כן $\\frac{x}{\\sin x}\\to 1$ לפי הגבול היסודי. לפי אריתמטיקה של גבולות:\n\\[ \\lim_{x\\to0}\\frac{1-\\cos(x^2)}{x^2\\sin^2 x}=\\frac12\\cdot 1=\\boxed{\\frac12}. \\]</p>",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -201,6 +224,7 @@ window.BANK = {
     "<p>הפעילו את משפט לגרנז' על $\\arctan$ בקטע $[1,3]$ וחסמו את הנגזרת.</p>"
    ],
    "solution": "<p>נגדיר $g(t)=\\arctan t$. הפונקציה רציפה ב-$[1,3]$ וגזירה ב-$(1,3)$ עם $g'(t)=\\frac{1}{1+t^2}$. לפי משפט לגרנז' קיימת $c\\in(1,3)$ כך ש-\n\\[ \\arctan(3)-\\arctan(1)=g'(c)(3-1)=\\frac{2}{1+c^2}. \\]\nמכיוון ש-$1&lt;c&lt;3$ מתקיים $2&lt;1+c^2&lt;10$, ולכן\n\\[ \\frac{2}{10}&lt;\\frac{2}{1+c^2}&lt;\\frac{2}{2}, \\qquad\\text{כלומר}\\qquad \\frac15&lt;\\arctan(3)-\\arctan(1)&lt;1, \\]\nובפרט מתקיים אי-השוויון החלש הנדרש. (בדיקה מספרית: $\\arctan 3-\\arctan 1\\approx 0.4636$.)</p>",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -227,6 +251,7 @@ window.BANK = {
     "<p>בסעיף ב' בדקו את סימן הפונקציה בקטע לפני שמחשבים את השטח.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\nלגורם $x^2+2x+2=(x+1)^2+1$ אין שורשים ממשיים (הדיסקרימיננטה $4-8&lt;0$), ולכן נפרק:\n  \\[ \\frac{x}{(x-1)(x^2+2x+2)}=\\frac{A}{x-1}+\\frac{Bx+C}{x^2+2x+2}\n     \\iff x=A(x^2+2x+2)+(Bx+C)(x-1). \\]\n  הצבת $x=1$: $1=5A$, כלומר $A=\\frac15$. השוואת מקדם $x^2$: $0=A+B$, לכן $B=-\\frac15$. השוואת המקדם החופשי: $0=2A-C$, לכן $C=\\frac25$. כלומר\n  \\[ \\frac{x}{(x-1)(x^2+2x+2)}=\\frac{1}{5}\\cdot\\frac{1}{x-1}-\\frac15\\cdot\\frac{x-2}{x^2+2x+2}. \\]\n  נכתוב $x-2=\\frac12(2x+2)-3$:\n  \\[ \\frac{x-2}{x^2+2x+2}=\\frac12\\cdot\\frac{2x+2}{x^2+2x+2}-\\frac{3}{(x+1)^2+1}. \\]\n  לכן (בעזרת $\\int\\frac{u'}{u}=\\ln|u|$ ו-$\\int\\frac{dt}{t^2+1}=\\arctan t$):\n  \\[ \\boxed{\\int\\frac{x\\,dx}{(x-1)(x^2+2x+2)}=\\frac15\\ln|x-1|-\\frac1{10}\\ln(x^2+2x+2)+\\frac35\\arctan(x+1)+C.} \\]\n  (בדיקה: גזירת הביטוי מחזירה את האינטגרנד.)\n</li>\n<li>\nבקטע $[-1,0]$: $x\\le 0$, $x-1&lt;0$, $x^2+2x+2&gt;0$, ולכן $f(x)\\ge0$ (שווה לאפס רק ב-$x=0$). הפונקציה רציפה בקטע, כך שהשטח הוא $\\int_{-1}^0 f(x)\\,dx$. נסמן ב-$F$ את הפונקציה הקדומה מסעיף א' ונשתמש בנוסחת ניוטון-לייבניץ:\n  \\[ F(0)=\\frac15\\ln1-\\frac1{10}\\ln2+\\frac35\\cdot\\frac\\pi4=-\\frac{\\ln2}{10}+\\frac{3\\pi}{20},\\qquad\n     F(-1)=\\frac15\\ln2-\\frac1{10}\\ln1+\\frac35\\arctan0=\\frac{\\ln 2}{5}. \\]\n  לכן\n  \\[ S=F(0)-F(-1)=\\boxed{\\frac{3\\pi}{20}-\\frac{3\\ln2}{10}}\\approx 0.2633. \\]\n</li>\n</ol>",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -250,7 +275,8 @@ window.BANK = {
    "hints": [
     "<p>לאסימפטוטה המשופעת חשבו $\\lim\\frac{f(x)}{x}$ ואחר כך $\\lim (f(x)-x)$; השתמשו בהצבה $t=\\frac1x$ ובגבול $\\frac{e^t-1}{t}\\to1$.</p>"
    ],
-   "solution": "<strong>תחום הגדרה:</strong> $x\\neq0$.\n\n<strong>חיתוך עם הצירים:</strong> אין חיתוך עם ציר ה-$y$ (כי $0$ אינו בתחום). $f(x)=0\\iff x+2=0$ (כי $e^{1/x}&gt;0$), ולכן נקודת החיתוך עם ציר ה-$x$ היא $(-2,0)$. בנוסף $f&lt;0$ עבור $x&lt;-2$ ו-$f&gt;0$ עבור $x&gt;-2,\\ x\\ne0$.\n\n<strong>נגזרת ראשונה:</strong>\n\\[ f'(x)=e^{1/x}+(x+2)e^{1/x}\\cdot\\left(-\\frac1{x^2}\\right)=e^{1/x}\\,\\frac{x^2-x-2}{x^2}=\\frac{(x-2)(x+1)}{x^2}e^{1/x}. \\]\nהסימן נקבע ע\"י $(x-2)(x+1)$:\n\n<ul>\n<li>\n$f'&gt;0$ ב-$(-\\infty,-1)$ וב-$(2,\\infty)$ -- <strong>עולה</strong>;\n</li>\n<li>\n$f'&lt;0$ ב-$(-1,0)$ וב-$(0,2)$ -- <strong>יורדת</strong>.\n</li>\n</ul>\n<p><strong>קיצון:</strong> ב-$x=-1$ הנגזרת מחליפה סימן מ-$+$ ל-$-$: מקסימום מקומי $f(-1)=e^{-1}=\\frac1e$. ב-$x=2$ מ-$-$ ל-$+$: מינימום מקומי $f(2)=4e^{1/2}=4\\sqrt e$.</p>\n<p><strong>אסימפטוטות אנכיות:</strong> כאשר $x\\to0^+$, $\\frac1x\\to+\\infty$ ולכן $e^{1/x}\\to\\infty$ ו-$f(x)\\to 2\\cdot\\infty=+\\infty$: $x=0$ אסימפטוטה אנכית (מימין). כאשר $x\\to0^-$, $\\frac1x\\to-\\infty$, $e^{1/x}\\to0$ ו-$f(x)\\to 0$ (אין אסימפטוטה משמאל; לגרף \"חור\" בראשית).</p>\n<p><strong>אסימפטוטות משופעות:</strong> $\\frac{f(x)}{x}=\\left(1+\\frac2x\\right)e^{1/x}\\to1$ כאשר $x\\to\\pm\\infty$. כמו כן\n\\[ f(x)-x=x\\left(e^{1/x}-1\\right)+2e^{1/x}=\\frac{e^{t}-1}{t}+2e^{t}\\Big|_{t=1/x}\\;\\xrightarrow[t\\to0]{}\\;1+2=3. \\]\nלכן $y=x+3$ אסימפטוטה משופעת גם ב-$+\\infty$ וגם ב-$-\\infty$. (אין אסימפטוטה אופקית.)</p>\n<p><strong>נגזרת שנייה:</strong> גוזרים את $f'(x)=\\left(1-\\frac1x-\\frac2{x^2}\\right)e^{1/x}$:\n\\[ f''(x)=\\left(\\frac1{x^2}+\\frac4{x^3}\\right)e^{1/x}-\\frac1{x^2}\\left(1-\\frac1x-\\frac2{x^2}\\right)e^{1/x}=\\frac{5x+2}{x^4}e^{1/x}. \\]\nהסימן נקבע ע\"י $5x+2$:</p>\n<ul>\n<li>\n$f''&lt;0$ ב-$(-\\infty,-\\frac25)$ -- <strong>קעורה</strong> ($\\cap$);\n</li>\n<li>\n$f''&gt;0$ ב-$(-\\frac25,0)$ וב-$(0,\\infty)$ -- <strong>קמורה</strong> ($\\cup$).\n</li>\n</ul>\n<p>נקודת פיתול: $x=-\\frac25$, $f(-\\frac25)=\\frac85e^{-5/2}$.</p>",
+   "solution": "<strong>תחום הגדרה:</strong> $x\\neq0$.\n\n<strong>חיתוך עם הצירים:</strong> אין חיתוך עם ציר ה-$y$ (כי $0$ אינו בתחום). $f(x)=0\\iff x+2=0$ (כי $e^{1/x}&gt;0$), ולכן נקודת החיתוך עם ציר ה-$x$ היא $(-2,0)$. בנוסף $f&lt;0$ עבור $x&lt;-2$ ו-$f&gt;0$ עבור $x&gt;-2,\\ x\\ne0$.\n\n<strong>נגזרת ראשונה:</strong>\n\\[ f'(x)=e^{1/x}+(x+2)e^{1/x}\\cdot\\left(-\\frac1{x^2}\\right)=e^{1/x}\\,\\frac{x^2-x-2}{x^2}=\\frac{(x-2)(x+1)}{x^2}e^{1/x}. \\]\nהסימן נקבע ע\"י $(x-2)(x+1)$:\n\n<ul>\n<li>\n$f'&gt;0$ ב-$(-\\infty,-1)$ וב-$(2,\\infty)$ – <strong>עולה</strong>;\n</li>\n<li>\n$f'&lt;0$ ב-$(-1,0)$ וב-$(0,2)$ – <strong>יורדת</strong>.\n</li>\n</ul>\n<p><strong>קיצון:</strong> ב-$x=-1$ הנגזרת מחליפה סימן מ-$+$ ל-$-$: מקסימום מקומי $f(-1)=e^{-1}=\\frac1e$. ב-$x=2$ מ-$-$ ל-$+$: מינימום מקומי $f(2)=4e^{1/2}=4\\sqrt e$.</p>\n<p><strong>אסימפטוטות אנכיות:</strong> כאשר $x\\to0^+$, $\\frac1x\\to+\\infty$ ולכן $e^{1/x}\\to\\infty$ ו-$f(x)\\to 2\\cdot\\infty=+\\infty$: $x=0$ אסימפטוטה אנכית (מימין). כאשר $x\\to0^-$, $\\frac1x\\to-\\infty$, $e^{1/x}\\to0$ ו-$f(x)\\to 0$ (אין אסימפטוטה משמאל; לגרף \"חור\" בראשית).</p>\n<p><strong>אסימפטוטות משופעות:</strong> $\\frac{f(x)}{x}=\\left(1+\\frac2x\\right)e^{1/x}\\to1$ כאשר $x\\to\\pm\\infty$. כמו כן\n\\[ f(x)-x=x\\left(e^{1/x}-1\\right)+2e^{1/x}=\\frac{e^{t}-1}{t}+2e^{t}\\Big|_{t=1/x}\\;\\xrightarrow[t\\to0]{}\\;1+2=3. \\]\nלכן $y=x+3$ אסימפטוטה משופעת גם ב-$+\\infty$ וגם ב-$-\\infty$. (אין אסימפטוטה אופקית.)</p>\n<p><strong>נגזרת שנייה:</strong> גוזרים את $f'(x)=\\left(1-\\frac1x-\\frac2{x^2}\\right)e^{1/x}$:\n\\[ f''(x)=\\left(\\frac1{x^2}+\\frac4{x^3}\\right)e^{1/x}-\\frac1{x^2}\\left(1-\\frac1x-\\frac2{x^2}\\right)e^{1/x}=\\frac{5x+2}{x^4}e^{1/x}. \\]\nהסימן נקבע ע\"י $5x+2$:</p>\n<ul>\n<li>\n$f''&lt;0$ ב-$(-\\infty,-\\frac25)$ – <strong>קעורה</strong> ($\\cap$);\n</li>\n<li>\n$f''&gt;0$ ב-$(-\\frac25,0)$ וב-$(0,\\infty)$ – <strong>קמורה</strong> ($\\cup$).\n</li>\n</ul>\n<p>נקודת פיתול: $x=-\\frac25$, $f(-\\frac25)=\\frac85e^{-5/2}$.</p>",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -275,6 +301,7 @@ window.BANK = {
     "<p>נפח גוף הסיבוב הוא $\\pi\\int_a^b f^2(x)\\,dx$; להורדת החזקה השתמשו ב-$\\sin^2x=\\frac{1-\\cos2x}{2}$.</p>"
    ],
    "solution": "<p>נפח גוף סיבוב סביב ציר $x$: $V=\\pi\\int_0^{\\pi/2}f^2(x)\\,dx=\\pi\\int_0^{\\pi/2}\\sin^4x\\,dx$. נשתמש בזהויות\n\\[ \\sin^4x=\\left(\\frac{1-\\cos2x}{2}\\right)^2=\\frac14\\left(1-2\\cos2x+\\cos^22x\\right)=\\frac14\\left(1-2\\cos2x+\\frac{1+\\cos4x}{2}\\right)=\\frac38-\\frac12\\cos2x+\\frac18\\cos4x. \\]\nלכן\n\\[ \\int_0^{\\pi/2}\\sin^4x\\,dx=\\left[\\frac38x-\\frac14\\sin2x+\\frac1{32}\\sin4x\\right]_0^{\\pi/2}=\\frac{3\\pi}{16}, \\]\n(כי $\\sin\\pi=\\sin2\\pi=0$), ומכאן\n\\[ \\boxed{V=\\frac{3\\pi^2}{16}}. \\]</p>",
+   "src": "מועד ב' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ב"
   },
   {
@@ -300,6 +327,7 @@ window.BANK = {
     "<p>הגדירו $g(x)=\\ln(x+1)-\\sin(x)-1$ ובדקו את סימנה בקצוות הקטע.</p>"
    ],
    "solution": "<strong>הטענה נכונה.</strong> נגדיר $g(x)=\\ln(x+1)-\\sin x-1$. הפונקציה $g$ רציפה ב-$[0,\\pi]$ כסכום של פונקציות רציפות ($\\ln(x+1)$ רציפה עבור $x&gt;-1$).\n\nבקצוות:\n\\[ g(0)=\\ln1-\\sin0-1=-1&lt;0,\\qquad g(\\pi)=\\ln(\\pi+1)-\\sin\\pi-1=\\ln(\\pi+1)-1&gt;0, \\]\nכאשר האי-שוויון האחרון נובע מכך ש-$\\pi+1&gt;e$ (כי $\\pi+1&gt;4&gt;e$), ולכן $\\ln(\\pi+1)&gt;\\ln e=1$. (מספרית $\\ln(\\pi+1)\\approx1.421$.)\n\nלפי משפט ערך הביניים (משפט בולצאנו) קיימת $c\\in(0,\\pi)$ שעבורה $g(c)=0$, כלומר $\\ln(c+1)-\\sin c=1$. לכן למשוואה יש פתרון בקטע.",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -326,6 +354,7 @@ window.BANK = {
     "<p>הכפילו את המונה והמכנה בצמוד $\\sqrt{x+4}+2$.</p>"
    ],
    "solution": "<strong>הטענה אינה נכונה.</strong> $f$ רציפה ב-$0$ אם ורק אם $\\lim_{x\\to0}f(x)=f(0)=5$. נחשב את הגבול (עבור $x\\ne0$, $x\\ge-4$) בעזרת כפל בצמוד:\n\\[ \\frac{\\sin 2x}{\\sqrt{x+4}-2}=\\frac{\\sin 2x\\,(\\sqrt{x+4}+2)}{(x+4)-4}=\\frac{\\sin2x}{x}\\left(\\sqrt{x+4}+2\\right)=2\\cdot\\frac{\\sin 2x}{2x}\\cdot\\left(\\sqrt{x+4}+2\\right). \\]\nלפי הגבול היסודי $\\frac{\\sin2x}{2x}\\to1$, ובגלל רציפות השורש $\\sqrt{x+4}+2\\to4$. לפי אריתמטיקה של גבולות\n\\[ \\lim_{x\\to0}f(x)=2\\cdot1\\cdot4=8\\neq5=f(0). \\]\nלכן $f$ <strong>אינה רציפה</strong> באפס (יש לה אי-רציפות סליקה; היא הייתה רציפה אילו הגדרנו $f(0)=8$).",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -350,7 +379,8 @@ window.BANK = {
    "hints": [
     "<p>מצאו פונקציה קדומה בעזרת אינטגרציה בחלקים (פעמיים), וחשבו את הגבול $\\lim_{x\\to0^+}x\\ln^k x$ בעזרת לופיטל.</p>"
    ],
-   "solution": "<strong>הטענה נכונה</strong>, וערך האינטגרל הוא $2$.\n\nהפונקציה $\\ln^2x$ רציפה ב-$(0,1]$ ואינה חסומה ליד $0$, ולכן זהו אינטגרל לא אמיתי: $\\int_0^1\\ln^2x\\,dx=\\lim_{\\eps\\to0^+}\\int_\\eps^1\\ln^2x\\,dx$.\n\n<strong>פונקציה קדומה</strong> -- אינטגרציה בחלקים עם $u=\\ln^2x,\\ v'=1$:\n\\[ \\int\\ln^2x\\,dx=x\\ln^2x-\\int x\\cdot\\frac{2\\ln x}{x}dx=x\\ln^2x-2\\int\\ln x\\,dx=x\\ln^2x-2(x\\ln x-x)+C. \\]\nלכן\n\\[ \\int_\\eps^1\\ln^2x\\,dx=\\big[x\\ln^2x-2x\\ln x+2x\\big]_\\eps^1=2-\\left(\\eps\\ln^2\\eps-2\\eps\\ln\\eps+2\\eps\\right). \\]\n<strong>הגבולות:</strong> לפי כלל לופיטל ($\\frac{\\infty}{\\infty}$):\n\\[ \\lim_{\\eps\\to0^+}\\eps\\ln\\eps=\\lim\\frac{\\ln\\eps}{1/\\eps}=\\lim\\frac{1/\\eps}{-1/\\eps^2}=\\lim(-\\eps)=0, \\]\n\\[ \\lim_{\\eps\\to0^+}\\eps\\ln^2\\eps=\\lim\\frac{\\ln^2\\eps}{1/\\eps}=\\lim\\frac{2\\ln\\eps/\\eps}{-1/\\eps^2}=\\lim(-2\\eps\\ln\\eps)=0. \\]\nלכן $\\int_0^1\\ln^2x\\,dx=2-0=2$: האינטגרל <strong>מתכנס</strong>.\n\n(דרך אחרת: $\\ln^2x\\le\\frac{C}{\\sqrt x}$ ליד $0$ כי $\\sqrt x\\ln^2x\\to0$, ו-$\\int_0^1\\frac{dx}{\\sqrt x}$ מתכנס, ולכן לפי מבחן ההשוואה האינטגרל מתכנס.)",
+   "solution": "<strong>הטענה נכונה</strong>, וערך האינטגרל הוא $2$.\n\nהפונקציה $\\ln^2x$ רציפה ב-$(0,1]$ ואינה חסומה ליד $0$, ולכן זהו אינטגרל לא אמיתי: $\\int_0^1\\ln^2x\\,dx=\\lim_{\\eps\\to0^+}\\int_\\eps^1\\ln^2x\\,dx$.\n\n<strong>פונקציה קדומה</strong> – אינטגרציה בחלקים עם $u=\\ln^2x,\\ v'=1$:\n\\[ \\int\\ln^2x\\,dx=x\\ln^2x-\\int x\\cdot\\frac{2\\ln x}{x}dx=x\\ln^2x-2\\int\\ln x\\,dx=x\\ln^2x-2(x\\ln x-x)+C. \\]\nלכן\n\\[ \\int_\\eps^1\\ln^2x\\,dx=\\big[x\\ln^2x-2x\\ln x+2x\\big]_\\eps^1=2-\\left(\\eps\\ln^2\\eps-2\\eps\\ln\\eps+2\\eps\\right). \\]\n<strong>הגבולות:</strong> לפי כלל לופיטל ($\\frac{\\infty}{\\infty}$):\n\\[ \\lim_{\\eps\\to0^+}\\eps\\ln\\eps=\\lim\\frac{\\ln\\eps}{1/\\eps}=\\lim\\frac{1/\\eps}{-1/\\eps^2}=\\lim(-\\eps)=0, \\]\n\\[ \\lim_{\\eps\\to0^+}\\eps\\ln^2\\eps=\\lim\\frac{\\ln^2\\eps}{1/\\eps}=\\lim\\frac{2\\ln\\eps/\\eps}{-1/\\eps^2}=\\lim(-2\\eps\\ln\\eps)=0. \\]\nלכן $\\int_0^1\\ln^2x\\,dx=2-0=2$: האינטגרל <strong>מתכנס</strong>.\n\n(דרך אחרת: $\\ln^2x\\le\\frac{C}{\\sqrt x}$ ליד $0$ כי $\\sqrt x\\ln^2x\\to0$, ו-$\\int_0^1\\frac{dx}{\\sqrt x}$ מתכנס, ולכן לפי מבחן ההשוואה האינטגרל מתכנס.)",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -376,6 +406,7 @@ window.BANK = {
     "<p>פתחו את $\\cos t$ ואת $\\sin x$ לפי מקלורין עד סדר $4$ (שימו לב ש-$\\sin^2x=x^2-\\frac{x^4}{3}+o(x^4)$).</p>"
    ],
    "solution": "<p>נשתמש בפיתוחי מקלורין:\n$\\sin x=x-\\frac{x^3}{6}+o(x^4)$ ו-$\\cos t=1-\\frac{t^2}{2}+\\frac{t^4}{24}+o(t^4)$.\nנחשב:\n\\[ \\sin^2x=\\left(x-\\frac{x^3}{6}+o(x^4)\\right)^2=x^2-\\frac{x^4}{3}+o(x^4),\\qquad \\sin^4x=x^4+o(x^4). \\]\nמכיוון ש-$\\sin x\\to0$ ו-$|\\sin x|\\le|x|$, ניתן להציב $t=\\sin x$ (שארית $o(\\sin^4x)$ היא $o(x^4)$):\n\\[ \\cos(\\sin x)=1-\\frac{\\sin^2x}{2}+\\frac{\\sin^4x}{24}+o(x^4)=1-\\frac{x^2}{2}+\\frac{x^4}{6}+\\frac{x^4}{24}+o(x^4)=1-\\frac{x^2}{2}+\\frac{5x^4}{24}+o(x^4). \\]\nוכן $\\cos x=1-\\frac{x^2}{2}+\\frac{x^4}{24}+o(x^4)$. לכן\n\\[ \\cos(\\sin x)-\\cos x=\\frac{4x^4}{24}+o(x^4)=\\frac{x^4}{6}+o(x^4), \\]\nומכאן\n\\[ \\lim_{x\\to0}\\frac{\\cos(\\sin x)-\\cos x}{x^4}=\\boxed{\\frac16}. \\]\n(דרך נוספת: $\\cos A-\\cos B=-2\\sin\\frac{A+B}{2}\\sin\\frac{A-B}{2}$ עם $A=\\sin x$, $B=x$; אז $\\frac{A+B}{2}\\sim x$ ו-$\\frac{A-B}{2}=\\frac{\\sin x-x}{2}\\sim-\\frac{x^3}{12}$, ומתקבל $-2\\cdot x\\cdot(-\\frac{x^3}{12})=\\frac{x^4}{6}$.)</p>",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -400,6 +431,7 @@ window.BANK = {
     "<p>הפעילו את משפט לגרנז' על $f(x)=x^p$ בקטע $[a,b]$, והשתמשו במונוטוניות של $x^{p-1}$.</p>"
    ],
    "solution": "<p>תהי $f(x)=x^p$. היא רציפה ב-$[a,b]$ וגזירה ב-$(a,b)$ (כי $a&gt;0$), עם $f'(x)=px^{p-1}$. לפי משפט לגרנז' קיימת $c\\in(a,b)$ כך ש-\n\\[ b^p-a^p=f'(c)(b-a)=pc^{p-1}(b-a). \\]\nמכיוון ש-$p&gt;1$, המעריך $p-1&gt;0$ ולכן הפונקציה $x\\mapsto x^{p-1}$ עולה ממש ב-$(0,\\infty)$. מ-$0&lt;a&lt;c&lt;b$ נובע $a^{p-1}&lt;c^{p-1}&lt;b^{p-1}$. נכפול ב-$p(b-a)&gt;0$:\n\\[ pa^{p-1}(b-a)&lt;pc^{p-1}(b-a)=b^p-a^p&lt;pb^{p-1}(b-a), \\]\nובפרט מתקיים אי-השוויון הנדרש (אף בחוזק).</p>",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -426,6 +458,7 @@ window.BANK = {
     "<p>תזדקקו גם ל-$\\int\\frac{dx}{\\cos x}=\\ln\\left|\\frac1{\\cos x}+\\tan x\\right|+C$ (או: הכפילו ב-$\\cos x$ והציבו $t=\\sin x$).</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\nנסמן $I=\\int\\frac{dx}{\\cos^3x}$ ונבצע אינטגרציה בחלקים עם $u=\\frac1{\\cos x}$, $v'=\\frac1{\\cos^2x}$; אז $u'=\\frac{\\sin x}{\\cos^2x}$, $v=\\tan x$:\n  \\[ I=\\frac{\\tan x}{\\cos x}-\\int\\frac{\\sin x}{\\cos^2x}\\cdot\\frac{\\sin x}{\\cos x}dx=\\frac{\\tan x}{\\cos x}-\\int\\frac{1-\\cos^2x}{\\cos^3x}dx=\\frac{\\tan x}{\\cos x}-I+\\int\\frac{dx}{\\cos x}. \\]\n  נחשב את $\\int\\frac{dx}{\\cos x}=\\int\\frac{\\cos x\\,dx}{1-\\sin^2x}$; בהצבה $t=\\sin x$:\n  \\[ \\int\\frac{dt}{1-t^2}=\\frac12\\ln\\left|\\frac{1+t}{1-t}\\right|+C=\\frac12\\ln\\left|\\frac{1+\\sin x}{1-\\sin x}\\right|+C=\\ln\\left|\\frac{1+\\sin x}{\\cos x}\\right|+C, \\]\n  (כי $\\frac{1+\\sin x}{1-\\sin x}=\\frac{(1+\\sin x)^2}{\\cos^2x}$). לכן $2I=\\frac{\\sin x}{\\cos^2x}+\\ln\\left|\\frac{1+\\sin x}{\\cos x}\\right|+C$, כלומר\n  \\[ \\boxed{\\int\\frac{dx}{\\cos^3x}=\\frac{\\sin x}{2\\cos^2x}+\\frac12\\ln\\left|\\frac{1}{\\cos x}+\\tan x\\right|+C.} \\]\n  (בדיקה: גזירת התוצאה מחזירה את $\\frac1{\\cos^3x}$.)\n</li>\n<li>\nב-$[0,1]$ מתקיים $0\\le x\\le1&lt;\\frac\\pi2$, ולכן $\\cos x&gt;0$ ו-$f(x)&gt;0$ רציפה. השטח הוא\n  \\[ S=\\int_0^1\\frac{dx}{\\cos^3x}=\\left[\\frac{\\sin x}{2\\cos^2x}+\\frac12\\ln\\left(\\frac{1+\\sin x}{\\cos x}\\right)\\right]_0^1\n      =\\boxed{\\frac{\\sin1}{2\\cos^21}+\\frac12\\ln\\left(\\frac{1+\\sin1}{\\cos1}\\right)}\\approx2.054, \\]\n  כי בנקודה $0$ הביטוי שווה ל-$0+\\frac12\\ln1=0$.\n</li>\n</ol>",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -450,6 +483,7 @@ window.BANK = {
     "<p>מצאו את נקודות החיתוך של הישר $y=-x$ עם הפרבולה, וקבעו איזו עקומה נמצאת מעל השנייה.</p>"
    ],
    "solution": "<p>העקום $x+y=0$ הוא הישר $y=-x$, והעקום $y=2x-x^2$ הוא פרבולה \"בוכה\" (פתוחה כלפי מטה) עם קודקוד $(1,1)$ החותכת את ציר $x$ ב-$0$ וב-$2$.\n<strong>נקודות חיתוך:</strong> $-x=2x-x^2\\iff x^2-3x=0\\iff x=0$ או $x=3$, כלומר הנקודות $(0,0)$ ו-$(3,-3)$.\nבקטע $(0,3)$: $(2x-x^2)-(-x)=3x-x^2=x(3-x)&gt;0$, כלומר הפרבולה מעל הישר. התחום הוא הקטע שבין הישר (מלמטה) לבין קשת הפרבולה (מלמעלה) עבור $0\\le x\\le3$. השטח:\n\\[ S=\\int_0^3\\big[(2x-x^2)-(-x)\\big]dx=\\int_0^3(3x-x^2)\\,dx=\\left[\\frac{3x^2}{2}-\\frac{x^3}{3}\\right]_0^3=\\frac{27}{2}-9=\\boxed{\\frac92}. \\]</p>",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -473,7 +507,8 @@ window.BANK = {
    "hints": [
     "<p>הפונקציה מחזורית עם מחזור $2\\pi$ ואי-זוגית, ולכן מספיק לחקור אותה ב-$[0,2\\pi]$ (או $[-\\pi,\\pi]$). שימו לב ש-$2+\\cos x\\ge1&gt;0$.</p>"
    ],
-   "solution": "<strong>תחום הגדרה:</strong> $2+\\cos x\\ge1&gt;0$ לכל $x$, ולכן $f$ מוגדרת (ורציפה וגזירה) בכל $\\R$.\n<strong>סימטריה ומחזוריות:</strong> $f(-x)=-f(x)$ (אי-זוגית), ו-$f(x+2\\pi)=f(x)$ (מחזורית עם מחזור $2\\pi$).\n\n<strong>חיתוך עם הצירים:</strong> $f(x)=0\\iff\\sin x=0\\iff x=k\\pi$, $k\\in\\Z$. החיתוך עם ציר $y$: $(0,0)$. $f&gt;0$ ב-$(2k\\pi,(2k+1)\\pi)$ ו-$f&lt;0$ ב-$((2k-1)\\pi,2k\\pi)$.\n\n<strong>נגזרת ראשונה:</strong>\n\\[ f'(x)=\\frac{\\cos x(2+\\cos x)-\\sin x\\cdot(-\\sin x)}{(2+\\cos x)^2}=\\frac{2\\cos x+\\cos^2x+\\sin^2x}{(2+\\cos x)^2}=\\frac{2\\cos x+1}{(2+\\cos x)^2}. \\]\n$f'(x)=0\\iff\\cos x=-\\frac12\\iff x=\\pm\\frac{2\\pi}{3}+2k\\pi$. במחזור $[-\\pi,\\pi]$:\n\n<ul>\n<li>\n$f'&gt;0$ (<strong>עולה</strong>) עבור $\\cos x&gt;-\\frac12$, כלומר ב-$\\left(-\\frac{2\\pi}3+2k\\pi,\\ \\frac{2\\pi}3+2k\\pi\\right)$;\n</li>\n<li>\n$f'&lt;0$ (<strong>יורדת</strong>) ב-$\\left(\\frac{2\\pi}3+2k\\pi,\\ \\frac{4\\pi}3+2k\\pi\\right)$.\n</li>\n</ul>\n<p><strong>קיצון:</strong> מקסימום ב-$x=\\frac{2\\pi}3+2k\\pi$ עם $f=\\frac{\\sqrt3/2}{2-1/2}=\\frac{1}{\\sqrt3}$; מינימום ב-$x=-\\frac{2\\pi}3+2k\\pi$ עם $f=-\\frac1{\\sqrt3}$. אלה גם הקיצון המוחלט: $-\\frac1{\\sqrt3}\\le f(x)\\le\\frac1{\\sqrt3}$ לכל $x$.</p>\n<p><strong>אסימפטוטות:</strong> אין אסימפטוטות אנכיות ($f$ רציפה בכל $\\R$). אין אסימפטוטה אופקית או משופעת: $f$ מחזורית ואינה קבועה, ולכן $\\lim_{x\\to\\pm\\infty}f(x)$ אינו קיים (למשל $f(2k\\pi)=0$ ו-$f(\\frac{2\\pi}3+2k\\pi)=\\frac1{\\sqrt3}$), וגם $\\frac{f(x)}{x}\\to0$ ולכן אסימפטוטה משופעת הייתה חייבת להיות אופקית.</p>\n<p><strong>נגזרת שנייה:</strong> נגזור את $f'=\\frac{2\\cos x+1}{(2+\\cos x)^2}$:\n\\[ f''(x)=\\frac{-2\\sin x(2+\\cos x)^2+(2\\cos x+1)\\cdot2(2+\\cos x)\\sin x}{(2+\\cos x)^4}=\\frac{2\\sin x\\,\\big[-(2+\\cos x)+2\\cos x+1\\big]}{(2+\\cos x)^3}=\\frac{2\\sin x(\\cos x-1)}{(2+\\cos x)^3}. \\]\nמכיוון ש-$\\cos x-1\\le0$ (ושווה ל-$0$ רק ב-$x=2k\\pi$) והמכנה חיובי, הסימן של $f''$ הפוך לסימן של $\\sin x$:</p>\n<ul>\n<li>\nב-$(2k\\pi,(2k+1)\\pi)$: $\\sin x&gt;0$, לכן $f''&lt;0$ -- <strong>קעורה</strong> ($\\cap$);\n</li>\n<li>\nב-$((2k+1)\\pi,(2k+2)\\pi)$: $\\sin x&lt;0$, לכן $f''&gt;0$ -- <strong>קמורה</strong> ($\\cup$).\n</li>\n</ul>\n<p><strong>נקודות פיתול:</strong> $x=k\\pi$ (הנקודות $(k\\pi,0)$), כי שם $f''$ מחליפה סימן.</p>\n<p><strong>סקיצה:</strong> גל מחזורי דמוי סינוס שעובר בראשית, עולה עד למקסימום $\\frac1{\\sqrt3}\\approx0.577$ ב-$x=\\frac{2\\pi}{3}$, יורד דרך $(\\pi,0)$ (נקודת פיתול) עד למינימום $-\\frac1{\\sqrt3}$ ב-$x=\\frac{4\\pi}3$, וחוזר ל-$(2\\pi,0)$; לעומת $\\sin x$ הגרף \"מוטה ימינה\" -- המקסימום מוזז מ-$\\frac\\pi2$ ל-$\\frac{2\\pi}3$. התבנית חוזרת בכל מחזור באורך $2\\pi$.</p>",
+   "solution": "<strong>תחום הגדרה:</strong> $2+\\cos x\\ge1&gt;0$ לכל $x$, ולכן $f$ מוגדרת (ורציפה וגזירה) בכל $\\R$.\n<strong>סימטריה ומחזוריות:</strong> $f(-x)=-f(x)$ (אי-זוגית), ו-$f(x+2\\pi)=f(x)$ (מחזורית עם מחזור $2\\pi$).\n\n<strong>חיתוך עם הצירים:</strong> $f(x)=0\\iff\\sin x=0\\iff x=k\\pi$, $k\\in\\Z$. החיתוך עם ציר $y$: $(0,0)$. $f&gt;0$ ב-$(2k\\pi,(2k+1)\\pi)$ ו-$f&lt;0$ ב-$((2k-1)\\pi,2k\\pi)$.\n\n<strong>נגזרת ראשונה:</strong>\n\\[ f'(x)=\\frac{\\cos x(2+\\cos x)-\\sin x\\cdot(-\\sin x)}{(2+\\cos x)^2}=\\frac{2\\cos x+\\cos^2x+\\sin^2x}{(2+\\cos x)^2}=\\frac{2\\cos x+1}{(2+\\cos x)^2}. \\]\n$f'(x)=0\\iff\\cos x=-\\frac12\\iff x=\\pm\\frac{2\\pi}{3}+2k\\pi$. במחזור $[-\\pi,\\pi]$:\n\n<ul>\n<li>\n$f'&gt;0$ (<strong>עולה</strong>) עבור $\\cos x&gt;-\\frac12$, כלומר ב-$\\left(-\\frac{2\\pi}3+2k\\pi,\\ \\frac{2\\pi}3+2k\\pi\\right)$;\n</li>\n<li>\n$f'&lt;0$ (<strong>יורדת</strong>) ב-$\\left(\\frac{2\\pi}3+2k\\pi,\\ \\frac{4\\pi}3+2k\\pi\\right)$.\n</li>\n</ul>\n<p><strong>קיצון:</strong> מקסימום ב-$x=\\frac{2\\pi}3+2k\\pi$ עם $f=\\frac{\\sqrt3/2}{2-1/2}=\\frac{1}{\\sqrt3}$; מינימום ב-$x=-\\frac{2\\pi}3+2k\\pi$ עם $f=-\\frac1{\\sqrt3}$. אלה גם הקיצון המוחלט: $-\\frac1{\\sqrt3}\\le f(x)\\le\\frac1{\\sqrt3}$ לכל $x$.</p>\n<p><strong>אסימפטוטות:</strong> אין אסימפטוטות אנכיות ($f$ רציפה בכל $\\R$). אין אסימפטוטה אופקית או משופעת: $f$ מחזורית ואינה קבועה, ולכן $\\lim_{x\\to\\pm\\infty}f(x)$ אינו קיים (למשל $f(2k\\pi)=0$ ו-$f(\\frac{2\\pi}3+2k\\pi)=\\frac1{\\sqrt3}$), וגם $\\frac{f(x)}{x}\\to0$ ולכן אסימפטוטה משופעת הייתה חייבת להיות אופקית.</p>\n<p><strong>נגזרת שנייה:</strong> נגזור את $f'=\\frac{2\\cos x+1}{(2+\\cos x)^2}$:\n\\[ f''(x)=\\frac{-2\\sin x(2+\\cos x)^2+(2\\cos x+1)\\cdot2(2+\\cos x)\\sin x}{(2+\\cos x)^4}=\\frac{2\\sin x\\,\\big[-(2+\\cos x)+2\\cos x+1\\big]}{(2+\\cos x)^3}=\\frac{2\\sin x(\\cos x-1)}{(2+\\cos x)^3}. \\]\nמכיוון ש-$\\cos x-1\\le0$ (ושווה ל-$0$ רק ב-$x=2k\\pi$) והמכנה חיובי, הסימן של $f''$ הפוך לסימן של $\\sin x$:</p>\n<ul>\n<li>\nב-$(2k\\pi,(2k+1)\\pi)$: $\\sin x&gt;0$, לכן $f''&lt;0$ – <strong>קעורה</strong> ($\\cap$);\n</li>\n<li>\nב-$((2k+1)\\pi,(2k+2)\\pi)$: $\\sin x&lt;0$, לכן $f''&gt;0$ – <strong>קמורה</strong> ($\\cup$).\n</li>\n</ul>\n<p><strong>נקודות פיתול:</strong> $x=k\\pi$ (הנקודות $(k\\pi,0)$), כי שם $f''$ מחליפה סימן.</p>\n<p><strong>סקיצה:</strong> גל מחזורי דמוי סינוס שעובר בראשית, עולה עד למקסימום $\\frac1{\\sqrt3}\\approx0.577$ ב-$x=\\frac{2\\pi}{3}$, יורד דרך $(\\pi,0)$ (נקודת פיתול) עד למינימום $-\\frac1{\\sqrt3}$ ב-$x=\\frac{4\\pi}3$, וחוזר ל-$(2\\pi,0)$; לעומת $\\sin x$ הגרף \"מוטה ימינה\" – המקסימום מוזז מ-$\\frac\\pi2$ ל-$\\frac{2\\pi}3$. התבנית חוזרת בכל מחזור באורך $2\\pi$.</p>",
+   "src": "מועד ג' תשע\"ו סמסטר ב'",
    "exam": "תשע\"ו סמסטר ב מועד ג"
   },
   {
@@ -499,6 +534,7 @@ window.BANK = {
     "<p>העריכו את השארית בצורת לגרנז' $R_n(x)=\\frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}$ עם $125&lt;c&lt;129$, ובדקו איזה $n$ מספיק.</p>"
    ],
    "solution": "<p>נגדיר $f(x)=\\sqrt[3]{x}=x^{1/3}$ ונפתח סביב $x_0=125$ (כי $\\sqrt[3]{125}=5$ ידוע במדויק), עם $x=129$, כלומר $x-x_0=4$.</p>\n<p><strong>נגזרות:</strong>\n\\[\nf'(x)=\\frac13 x^{-2/3},\\qquad f''(x)=-\\frac29 x^{-5/3}.\n\\]\nלכן $f(125)=5$, $f'(125)=\\frac13\\cdot\\frac{1}{25}=\\frac{1}{75}$.</p>\n<p><strong>פולינום טיילור מסדר 1:</strong>\n\\[\nP_1(129)=f(125)+f'(125)\\cdot 4=5+\\frac{4}{75}=\\frac{379}{75}\\approx 5.05333.\n\\]</p>\n<p><strong>הערכת השגיאה.</strong> לפי משפט טיילור עם שארית לגרנז', קיימת נקודה $c$ בין $125$ ל-$129$ כך ש-\n\\[\nR_1(129)=\\frac{f''(c)}{2!}\\cdot 4^2=-\\frac{2}{9}c^{-5/3}\\cdot\\frac{16}{2}=-\\frac{16}{9\\,c^{5/3}}.\n\\]\nמכיוון ש-$c&gt;125$, מתקיים $c^{5/3}&gt;125^{5/3}=5^5=3125$, ולכן\n\\[\n|R_1(129)|&lt;\\frac{16}{9\\cdot 3125}=\\frac{16}{28125}\\approx 5.7\\cdot 10^{-4}&lt;10^{-3}.\n\\]\nלכן פולינום טיילור מסדר 1 מספיק.</p>\n<p><strong>תשובה:</strong>\n\\[\n\\sqrt[3]{129}\\approx 5+\\frac{4}{75}=\\frac{379}{75}\\approx 5.0533,\n\\]\nעם שגיאה קטנה מ-$5.7\\cdot10^{-4}&lt;10^{-3}$. (השארית שלילית, כלומר הקירוב גדול מהערך האמיתי; ואכן $\\sqrt[3]{129}\\approx 5.05277$.)</p>",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -522,6 +558,7 @@ window.BANK = {
    "question": "<p>(10 נק') מצאו את הגבול הבא:\n$\\displaystyle \\lim_{x\\to 0}\\frac{e^x-1}{\\sqrt{1+x}-1}$</p>",
    "hints": [],
    "solution": "<p>כאשר $x\\to0$ המונה והמכנה שואפים ל-$0$ (שתי הפונקציות רציפות ב-$0$ ומתאפסות שם), כלומר גבול מהצורה $\\frac00$. המונה והמכנה גזירים בסביבת $0$, ונגזרת המכנה $\\frac{1}{2\\sqrt{1+x}}\\neq0$ שם. לפי כלל לופיטל:\n\\[\n\\lim_{x\\to0}\\frac{e^x-1}{\\sqrt{1+x}-1}=\\lim_{x\\to0}\\frac{e^x}{\\frac{1}{2\\sqrt{1+x}}}=\\lim_{x\\to0}2\\sqrt{1+x}\\,e^x=2.\n\\]\n(דרך חלופית: נכפול בצמוד: $\\frac{e^x-1}{\\sqrt{1+x}-1}=\\frac{e^x-1}{x}\\cdot(\\sqrt{1+x}+1)\\to 1\\cdot2=2$, לפי הגבול היסודי $\\lim_{x\\to0}\\frac{e^x-1}{x}=1$.)</p>\n<p><strong>תשובה:</strong> $2$.</p>",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -545,6 +582,7 @@ window.BANK = {
    "question": "<p>(10 נק') מצאו את הגבול הבא:\n$\\displaystyle \\lim_{x\\to 0}\\frac{\\sqrt[3]{8+3x}-2}{\\sqrt[4]{16+5x}-2}$</p>",
    "hints": [],
    "solution": "<p>בנקודה $x=0$: $\\sqrt[3]{8}-2=0$ ו-$\\sqrt[4]{16}-2=0$, כלומר גבול מהצורה $\\frac00$. שתי הפונקציות גזירות בסביבת $0$:\n\\[\n\\left(\\sqrt[3]{8+3x}\\right)'=\\frac13(8+3x)^{-2/3}\\cdot3=(8+3x)^{-2/3},\\qquad\n\\left(\\sqrt[4]{16+5x}\\right)'=\\frac54(16+5x)^{-3/4},\n\\]\nונגזרת המכנה שונה מ-$0$ בסביבת $0$. לפי כלל לופיטל:\n\\[\n\\lim_{x\\to0}\\frac{\\sqrt[3]{8+3x}-2}{\\sqrt[4]{16+5x}-2}\n=\\lim_{x\\to0}\\frac{(8+3x)^{-2/3}}{\\frac54(16+5x)^{-3/4}}\n=\\frac{8^{-2/3}}{\\frac54\\cdot16^{-3/4}}=\\frac{\\frac14}{\\frac54\\cdot\\frac18}=\\frac{\\frac14}{\\frac{5}{32}}=\\frac85.\n\\]\n<strong>תשובה:</strong> $\\frac85$.</p>",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -572,6 +610,7 @@ window.BANK = {
     "<p>פתחו את $e^x+e^{-x}$ ואת $\\cos x$ לפולינומי מקלורן עד סדר $4$ וכפלו.</p>"
    ],
    "solution": "<p>אפשר להגדיר את $f(0)$ כך ש-$f$ תהיה רציפה ב-$0$ אם ורק אם הגבול $\\lim_{x\\to0}f(x)$ קיים וסופי, ואז יש להגדיר את $f(0)$ להיות הגבול.</p>\n<p><strong>פיתוח מקלורן.</strong> לפי פיתוחי מקלורן של $e^x$ ושל $\\cos x$:\n\\[\ne^x+e^{-x}=2\\left(1+\\frac{x^2}{2}+\\frac{x^4}{24}\\right)+o(x^5)=2+x^2+\\frac{x^4}{12}+o(x^5),\n\\]\n\\[\n\\cos x=1-\\frac{x^2}{2}+\\frac{x^4}{24}+o(x^5).\n\\]\nנכפול ונשמור איברים עד סדר $4$:\n\\[\n(e^x+e^{-x})\\cos x=2+x^2+\\frac{x^4}{12}-x^2-\\frac{x^4}{2}+\\frac{x^4}{12}+o(x^4)\n=2+\\left(\\frac{1}{12}-\\frac12+\\frac1{12}\\right)x^4+o(x^4)=2-\\frac{x^4}{3}+o(x^4).\n\\]\nמכאן\n\\[\n2-(e^x+e^{-x})\\cos x=\\frac{x^4}{3}+o(x^4),\n\\qquad\\text{ולכן}\\qquad\nf(x)=\\frac13+\\frac{o(x^4)}{x^4}\\xrightarrow[x\\to0]{}\\frac13.\n\\]</p>\n<p>(דרך חלופית: ארבע הפעלות של כלל לופיטל על $\\frac{0}{0}$; הנגזרת הרביעית של המונה ב-$0$ היא $8$ ושל המכנה $24$, ולכן הגבול $\\frac{8}{24}=\\frac13$.)</p>\n<p><strong>תשובה:</strong> כן. הגבול קיים ושווה $\\frac13$, ולכן אם נגדיר $f(0)=\\frac13$ הפונקציה תהיה רציפה ב-$x=0$.</p>",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -596,6 +635,7 @@ window.BANK = {
     "<p>לאסימפטוטות: כתבו $\\ln(e^x+e^{-2x})=x+\\ln(1+e^{-3x})=-2x+\\ln(1+e^{3x})$.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $e^x+e^{-2x}&gt;0$ לכל $x$, ולכן הפונקציה מוגדרת (ורציפה וגזירה) על כל $\\R$.\n\n<strong>אסימפטוטות:</strong> אין אסימפטוטות אנכיות, כי הפונקציה רציפה על כל $\\R$.\nעבור $x\\to+\\infty$:\n\\[\ny=\\ln\\big(e^x(1+e^{-3x})\\big)=x+\\ln(1+e^{-3x}),\\qquad y-x=\\ln(1+e^{-3x})\\xrightarrow[x\\to+\\infty]{}0,\n\\]\nולכן $y=x$ אסימפטוטה משופעת ב-$+\\infty$.\nעבור $x\\to-\\infty$:\n\\[\ny=\\ln\\big(e^{-2x}(1+e^{3x})\\big)=-2x+\\ln(1+e^{3x}),\\qquad y+2x\\xrightarrow[x\\to-\\infty]{}0,\n\\]\nולכן $y=-2x$ אסימפטוטה משופעת ב-$-\\infty$. אין אסימפטוטות אופקיות. בנוסף $y-x&gt;0$ ו-$y+2x&gt;0$, כלומר הגרף נמצא מעל שתי האסימפטוטות.\n\n<strong>עליה וירידה:</strong>\n\\[\ny'=\\frac{e^x-2e^{-2x}}{e^x+e^{-2x}}.\n\\]\nהמכנה חיובי, ו-$e^x-2e^{-2x}&gt;0\\iff e^{3x}&gt;2\\iff x&gt;\\frac{\\ln2}{3}$.\nלכן $y$ יורדת ב-$\\left(-\\infty,\\frac{\\ln 2}{3}\\right)$ ועולה ב-$\\left(\\frac{\\ln2}{3},\\infty\\right)$.\n\n<strong>קיצון:</strong> ב-$x_0=\\frac{\\ln2}{3}$ יש מינימום (מוחלט). שם $e^{x_0}=2^{1/3}$, $e^{-2x_0}=2^{-2/3}$, ולכן\n\\[\ny(x_0)=\\ln\\left(2^{1/3}+2^{-2/3}\\right)=\\ln\\left(3\\cdot2^{-2/3}\\right)=\\ln3-\\frac23\\ln2\\approx0.64.\n\\]\n\n<strong>קמירות:</strong> לפי כלל המנה,\n\\[\ny''=\\frac{(e^x+4e^{-2x})(e^x+e^{-2x})-(e^x-2e^{-2x})^2}{(e^x+e^{-2x})^2}\n=\\frac{9e^{-x}}{(e^x+e^{-2x})^2}&gt;0,\n\\]\n(במונה: $e^{2x}+5e^{-x}+4e^{-4x}-e^{2x}+4e^{-x}-4e^{-4x}=9e^{-x}$). לכן הפונקציה קמורה (מחייכת, $\\cup$) על כל $\\R$, ואין נקודות פיתול.\n\n<strong>סרטוט:</strong> הגרף יורד מלמעלה לאורך האסימפטוטה $y=-2x$ (מעליה), מגיע למינימום בנקודה $\\left(\\frac{\\ln2}{3},\\ \\ln3-\\frac23\\ln2\\right)\\approx(0.23,\\,0.64)$, ועולה לאורך האסימפטוטה $y=x$ (מעליה); כולו קמור. חיתוך עם ציר $y$: $y(0)=\\ln2$. אין חיתוך עם ציר $x$ (כי $y\\ge y(x_0)&gt;0$).",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -620,6 +660,7 @@ window.BANK = {
     "<p>כתבו $y=\\frac25x^{5/4}-\\frac23x^{3/4}$ ובדקו ש-$1+(y')^2$ הוא ריבוע שלם.</p>"
    ],
    "solution": "<p>נכתוב $y=\\frac25x^{5/4}-\\frac23x^{3/4}$, המוגדרת עבור $x\\ge0$.</p>\n<p><strong>חיתוך עם ציר $x$:</strong> $y=x^{3/4}\\left(\\frac25x^{1/2}-\\frac23\\right)=0\\iff x=0$ או $\\sqrt{x}=\\frac53$, כלומר $x=0$ ו-$x=\\frac{25}{9}$.</p>\n<p><strong>נגזרת:</strong>\n\\[\ny'=\\frac25\\cdot\\frac54x^{1/4}-\\frac23\\cdot\\frac34x^{-1/4}=\\frac12\\left(x^{1/4}-x^{-1/4}\\right),\n\\]\n\\[\n1+(y')^2=1+\\frac14\\left(x^{1/2}-2+x^{-1/2}\\right)=\\frac14\\left(x^{1/2}+2+x^{-1/2}\\right)=\\left(\\frac{x^{1/4}+x^{-1/4}}{2}\\right)^2.\n\\]\n<strong>אורך העקום</strong> (לפי הנוסחה $L=\\int_a^b\\sqrt{1+(y')^2}\\,dx$; האינטגרל לא אמיתי ב-$0$ אך מתכנס כי $x^{-1/4}$ אינטגרבילית שם):\n\\[\nL=\\int_0^{25/9}\\frac{x^{1/4}+x^{-1/4}}{2}\\,dx=\\frac12\\left[\\frac45x^{5/4}+\\frac43x^{3/4}\\right]_0^{25/9}.\n\\]\nעבור $x=\\frac{25}{9}$: $x^{1/4}=\\sqrt{\\frac53}$, $x^{5/4}=\\frac{25}{9}\\sqrt{\\frac53}$, $x^{3/4}=\\frac53\\sqrt{\\frac53}$. לכן\n\\[\nL=\\frac12\\left(\\frac{20}{9}+\\frac{20}{9}\\right)\\sqrt{\\frac53}=\\frac{20}{9}\\sqrt{\\frac53}=\\frac{20\\sqrt{15}}{27}\\approx2.869.\n\\]</p>",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -644,6 +685,7 @@ window.BANK = {
     "<p>מצאו את נקודות החיתוך של הקווים, וחלקו את האינטגרל לשני קטעים לפי הקו העליון.</p>"
    ],
    "solution": "<strong>נקודות חיתוך</strong> (ברביע הראשון): $4x=x\\Rightarrow x=0$ (הראשית); $4x=\\frac1x\\Rightarrow x=\\frac12$ (הנקודה $(\\frac12,2)$); $x=\\frac1x\\Rightarrow x=1$ (הנקודה $(1,1)$).\n\n<strong>סקיצה:</strong> התחום הוא \"משולש עקום\" עם קודקודים $(0,0)$, $(\\frac12,2)$, $(1,1)$: הגבול התחתון הוא הישר $y=x$, והגבול העליון הוא הישר $y=4x$ עבור $0\\le x\\le\\frac12$ וההיפרבולה $y=\\frac1x$ עבור $\\frac12\\le x\\le1$.\n\n<strong>שטח:</strong>\n\\[\nS=\\int_0^{1/2}(4x-x)\\,dx+\\int_{1/2}^1\\left(\\frac1x-x\\right)dx\n=\\left[\\frac{3x^2}{2}\\right]_0^{1/2}+\\left[\\ln x-\\frac{x^2}{2}\\right]_{1/2}^1\n=\\frac38+\\left(-\\frac12-\\ln\\frac12+\\frac18\\right)=\\frac38+\\ln2-\\frac38=\\ln 2.\n\\]\n<strong>תשובה:</strong> $S=\\ln2$.",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -669,6 +711,7 @@ window.BANK = {
     "<p>מצאו עבור אילו זוויות $r\\ge0$, והשתמשו בנוסחה $S=\\frac12\\int_\\alpha^\\beta r^2\\,d\\varphi$.</p>"
    ],
    "solution": "<strong>תחום הזוויות.</strong> $r=2\\cos\\varphi-1\\ge0\\iff\\cos\\varphi\\ge\\frac12\\iff -\\frac\\pi3\\le\\varphi\\le\\frac\\pi3$ (בתוך מחזור אחד). בקצוות $\\varphi=\\pm\\frac\\pi3$ מתקיים $r=0$ (העקום עובר בראשית), ועבור $\\varphi=0$ מתקיים $r=1$ (הנקודה $(1,0)$). העקום סימטרי ביחס לציר $x$ (כי $\\cos$ זוגית).\n\n<strong>סרטוט:</strong> כאשר $\\varphi$ עולה מ-$-\\frac\\pi3$ ל-$\\frac\\pi3$, הנקודה יוצאת מהראשית בכיוון הזווית $-\\frac\\pi3$, מגיעה ל-$(1,0)$ וחוזרת לראשית בכיוון הזווית $\\frac\\pi3$: לולאה סגורה אחת בצורת \"טיפה\" בחצי המישור $x\\ge0$, סימטרית לציר $x$.\n\n<strong>שטח</strong> (לפי הנוסחה לשטח בקואורדינטות פולריות $S=\\frac12\\int_\\alpha^\\beta r^2\\,d\\varphi$):\n\\[\n(2\\cos\\varphi-1)^2=4\\cos^2\\varphi-4\\cos\\varphi+1=3+2\\cos2\\varphi-4\\cos\\varphi,\n\\]\n\\[\nS=\\frac12\\int_{-\\pi/3}^{\\pi/3}\\left(3+2\\cos2\\varphi-4\\cos\\varphi\\right)d\\varphi\n=\\frac12\\Big[3\\varphi+\\sin2\\varphi-4\\sin\\varphi\\Big]_{-\\pi/3}^{\\pi/3}\n=\\frac12\\left(2\\pi+\\sqrt3-4\\sqrt3\\right)=\\pi-\\frac{3\\sqrt3}{2}\\approx0.544.\n\\]\n<strong>תשובה:</strong> $S=\\pi-\\frac{3\\sqrt3}{2}$.\n\n<strong>הערה:</strong> אם מתירים ערכי $r$ שליליים (הנקודה $(r,\\varphi)$ עם $r&lt;0$ מסורטטת בכיוון $\\varphi+\\pi$ במרחק $|r|$), עבור $\\frac\\pi3&lt;\\varphi&lt;\\frac{5\\pi}3$ מתקבלת לולאה חיצונית גדולה, והעקום כולו הוא לימסון (חילזון פסקל) עם לולאה פנימית — הלולאה שחושבה לעיל. במקרה זה השטח החסום ע\"י הלולאה החיצונית הוא\n\\[\n\\frac12\\int_{\\pi/3}^{5\\pi/3}(2\\cos\\varphi-1)^2\\,d\\varphi=2\\pi+\\frac{3\\sqrt3}{2},\n\\]\nוהשטח שבין שתי הלולאות הוא $\\left(2\\pi+\\frac{3\\sqrt3}{2}\\right)-\\left(\\pi-\\frac{3\\sqrt3}{2}\\right)=\\pi+3\\sqrt3$.",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -693,6 +736,7 @@ window.BANK = {
     "<p>השלימו לריבוע: $x^2+x+1=\\left(x+\\frac12\\right)^2+\\frac34$.</p>"
    ],
    "solution": "<p>נשלים לריבוע: $x^2+x+1=\\left(x+\\frac12\\right)^2+\\frac34$. נציב $t=\\frac{2x+1}{\\sqrt3}$, כלומר $x+\\frac12=\\frac{\\sqrt3}{2}t$, $dx=\\frac{\\sqrt3}{2}dt$:\n\\[\n\\int\\frac{dx}{\\left(x+\\frac12\\right)^2+\\frac34}=\\int\\frac{\\frac{\\sqrt3}{2}\\,dt}{\\frac34(t^2+1)}=\\frac{2}{\\sqrt3}\\int\\frac{dt}{1+t^2}=\\frac{2}{\\sqrt3}\\arctan t+C.\n\\]\n<strong>תשובה:</strong>\n\\[\n\\int\\frac{dx}{x^2+x+1}=\\frac{2}{\\sqrt3}\\arctan\\frac{2x+1}{\\sqrt3}+C.\n\\]\n(בדיקה: $\\frac{d}{dx}\\frac{2}{\\sqrt3}\\arctan\\frac{2x+1}{\\sqrt3}=\\frac{2}{\\sqrt3}\\cdot\\frac{2/\\sqrt3}{1+\\frac{(2x+1)^2}{3}}=\\frac{4}{3+(2x+1)^2}=\\frac{1}{x^2+x+1}$.)</p>",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -718,6 +762,7 @@ window.BANK = {
     "<p>בצעו אינטגרציה בחלקים פעמיים (גוזרים את $x^2$), ואז חשבו את הגבול כאשר הגבול העליון שואף לאינסוף.</p>"
    ],
    "solution": "<strong>פונקציה קדומה.</strong> באינטגרציה בחלקים עם $u=x^2$, $dv=e^{-2x}dx$, $v=-\\frac12e^{-2x}$:\n\\[\n\\int x^2e^{-2x}dx=-\\frac{x^2}{2}e^{-2x}+\\int xe^{-2x}dx.\n\\]\nשוב בחלקים עם $u=x$:\n\\[\n\\int xe^{-2x}dx=-\\frac x2e^{-2x}+\\frac12\\int e^{-2x}dx=-\\frac x2e^{-2x}-\\frac14e^{-2x}.\n\\]\nלכן\n\\[\nF(x)=\\int x^2e^{-2x}dx=-e^{-2x}\\left(\\frac{x^2}{2}+\\frac x2+\\frac14\\right)+C.\n\\]\n<strong>האינטגרל הלא אמיתי.</strong> לפי ההגדרה,\n\\[\n\\int_1^\\infty x^2e^{-2x}dx=\\lim_{R\\to\\infty}\\big(F(R)-F(1)\\big).\n\\]\nמתקיים $\\lim_{R\\to\\infty}e^{-2R}\\left(\\frac{R^2}{2}+\\frac R2+\\frac14\\right)=0$ (אקספוננט שולט בפולינום; למשל לפי כלל לופיטל פעמיים על $\\frac{R^2}{e^{2R}}$), ו-$F(1)=-e^{-2}\\left(\\frac12+\\frac12+\\frac14\\right)=-\\frac54e^{-2}$. לכן\n\\[\n\\int_1^\\infty x^2e^{-2x}dx=0+\\frac54e^{-2}=\\frac{5}{4e^2}\\approx0.169.\n\\]\nהאינטגרל מתכנס, וערכו $\\frac{5}{4e^2}$.",
+   "src": "מועד א' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד א"
   },
   {
@@ -743,6 +788,7 @@ window.BANK = {
     "<p>בפולינום מקלורן של $\\sin x$ המקדם של $x^4$ הוא $0$, ולכן $P_3=P_4$ ואפשר להעריך את השארית בעזרת $R_4$.</p>"
    ],
    "solution": "<strong>רדוקציה.</strong> $\\sin167^\\circ=\\sin(180^\\circ-13^\\circ)=\\sin13^\\circ=\\sin x_0$, כאשר\n\\[\nx_0=\\frac{13\\pi}{180}\\approx0.226893 \\quad\\text{(רדיאנים)}.\n\\]\n\n<strong>פולינום מקלורן.</strong> עבור $f(x)=\\sin x$: $f(0)=0$, $f'(0)=1$, $f''(0)=0$, $f'''(0)=-1$, $f^{(4)}(0)=0$, ולכן\n\\[\nP_4(x)=P_3(x)=x-\\frac{x^3}{6}.\n\\]\n\n<strong>הערכת השגיאה.</strong> לפי משפט טיילור עם שארית לגרנז' מסדר $4$, קיים $c$ בין $0$ ל-$x_0$ כך ש-\n\\[\n\\sin x_0-P_4(x_0)=R_4(x_0)=\\frac{f^{(5)}(c)}{5!}x_0^5=\\frac{\\cos c}{120}x_0^5 .\n\\]\nמכיוון ש-$|\\cos c|\\le1$ ו-$0&lt;x_0&lt;0.23$:\n\\[\n|R_4(x_0)|\\le\\frac{x_0^5}{120}&lt;\\frac{0.23^5}{120}\\approx\\frac{6.44\\cdot10^{-4}}{120}\\approx5.4\\cdot10^{-6}&lt;10^{-5}.\n\\]\n(גם בהערכה גסה יותר $x_0&lt;0.25$ מקבלים $\\frac{0.25^5}{120}\\approx8.1\\cdot10^{-6}&lt;10^{-5}$.)\n\n<strong>חישוב:</strong>\n\\[\n\\sin167^\\circ\\approx x_0-\\frac{x_0^3}{6}\\approx0.226893-\\frac{0.011680}{6}\\approx0.226893-0.001947=0.224946.\n\\]\n\n<strong>תשובה:</strong> $\\sin167^\\circ\\approx\\frac{13\\pi}{180}-\\frac16\\left(\\frac{13\\pi}{180}\\right)^3\\approx0.22495$, עם שגיאה קטנה מ-$10^{-5}$ (הערך המדויק $0.2249511\\ldots$).",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -768,6 +814,7 @@ window.BANK = {
     "<p>השתמשו ב-$\\cos x=1-\\frac{x^2}{2}+o(x^2)$ ובקירוב $(1+t)^\\alpha=1+\\alpha t+o(t)$.</p>"
    ],
    "solution": "<p>זהו גבול מהצורה $\\frac00$. לפי פיתוח מקלורן $\\cos x=1+t$ עם $t=-\\frac{x^2}{2}+o(x^2)\\to0$. לפי $(1+t)^\\alpha=1+\\alpha t+o(t)$:\n\\[\n\\sqrt{\\cos x}=1-\\frac{x^2}{4}+o(x^2),\\qquad \\sqrt[3]{\\cos x}=1-\\frac{x^2}{6}+o(x^2),\n\\]\nולכן\n\\[\n\\sqrt{\\cos x}-\\sqrt[3]{\\cos x}=-\\frac{x^2}{4}+\\frac{x^2}{6}+o(x^2)=-\\frac{x^2}{12}+o(x^2).\n\\]\nבנוסף $\\sin^2x=x^2+o(x^2)$ (כי $\\frac{\\sin x}{x}\\to1$). לכן\n\\[\n\\lim_{x\\to0}\\frac{\\sqrt{\\cos x}-\\sqrt[3]{\\cos x}}{\\sin^2x}=\\lim_{x\\to0}\\frac{-\\frac{1}{12}+\\frac{o(x^2)}{x^2}}{\\left(\\frac{\\sin x}{x}\\right)^2}=-\\frac1{12}.\n\\]\n(דרך חלופית: נסמן $u=\\cos x$; אז $\\sin^2x=1-u^2$ ו-$u\\to1$, ו-$\\lim_{u\\to1}\\frac{u^{1/2}-u^{1/3}}{1-u^2}$ לפי לופיטל שווה $\\frac{\\frac12-\\frac13}{-2}=-\\frac1{12}$.)</p>\n<p><strong>תשובה:</strong> $-\\frac{1}{12}$.</p>",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -792,6 +839,7 @@ window.BANK = {
     "<p>בדקו לאן שואפים הבסיס והמעריך בנפרד. האם זהו בכלל ביטוי לא מוגדר?</p>"
    ],
    "solution": "<p>הביטוי מוגדר רק עבור $x\\ge0$ (בגלל $\\sqrt x$), ולכן מדובר בגבול חד-צדדי $x\\to0^+$.\nזהו <em>לא</em> ביטוי לא-מוגדר: הבסיס $\\frac{1+x}{2+x}\\to\\frac12&gt;0$ והמעריך $\\frac{1-\\sqrt x}{1-x}\\to1$. נכתוב\n\\[\n\\left(\\frac{1+x}{2+x}\\right)^{\\frac{1-\\sqrt{x}}{1-x}}=\\exp\\left(\\frac{1-\\sqrt{x}}{1-x}\\cdot\\ln\\frac{1+x}{2+x}\\right).\n\\]\nלפי אריתמטיקה של גבולות ורציפות $\\ln$, המעריך שואף ל-$1\\cdot\\ln\\frac12=\\ln\\frac12$, ולפי רציפות פונקציית האקספוננט:\n\\[\n\\lim_{x\\to0^+}\\left(\\frac{1+x}{2+x}\\right)^{\\frac{1-\\sqrt{x}}{1-x}}=e^{\\ln\\frac12}=\\frac12.\n\\]\n<strong>תשובה:</strong> $\\frac12$.</p>",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -814,6 +862,7 @@ window.BANK = {
    "question": "<p>(8 נקודות) האם קיים ערך $c$ כך ש-\n\\[\nf(x)=\\begin{cases}\\dfrac1x, &amp; x\\ge1\\\\[1ex] 2x+c, &amp; x&lt;1\\end{cases}\n\\]\nתהיה רציפה ב-$x=1$?</p>",
    "hints": [],
    "solution": "<p>$f$ רציפה ב-$x=1$ אם ורק אם $\\lim_{x\\to1^-}f(x)=\\lim_{x\\to1^+}f(x)=f(1)$.\n\\[\nf(1)=\\frac11=1,\\qquad \\lim_{x\\to1^+}\\frac1x=1,\\qquad \\lim_{x\\to1^-}(2x+c)=2+c.\n\\]\nלכן צריך $2+c=1$, כלומר $c=-1$.</p>\n<p><strong>תשובה:</strong> כן, עבור $c=-1$ (ורק עבורו).</p>",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -839,6 +888,7 @@ window.BANK = {
     "<p>הגדירו $g(x)=\\cos x-x$ ובדקו את הסימנים של $g(\\pm1)$. ליחידות, בדקו את סימן $g'$.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=\\cos x-x$. זו פונקציה רציפה וגזירה על כל $\\R$.</p>\n<p><strong>קיום.</strong> <em>משפט ערך הביניים (בולצאנו):</em> אם $g$ רציפה בקטע סגור $[a,b]$ ו-$g(a),g(b)$ בעלי סימנים מנוגדים, אז קיימת $x_0\\in(a,b)$ עם $g(x_0)=0$.\nכאן $g$ רציפה ב-$[-1,1]$, ו-\n\\[\ng(-1)=\\cos1+1&gt;0,\\qquad g(1)=\\cos1-1&lt;0\n\\]\n(כי $0&lt;\\cos1&lt;1$). לכן קיים $x_0\\in(-1,1)$ עם $\\cos x_0-x_0=0$.</p>\n<p><strong>יחידות.</strong> $g'(x)=-\\sin x-1$. מתקיים $g'(x)\\le0$ לכל $x$, ושוויון $g'(x)=0$ רק כאשר $\\sin x=-1$, כלומר $x=-\\frac\\pi2+2\\pi k$; אף נקודה כזאת אינה בקטע $(-1,1)$ (כי $\\frac\\pi2&gt;1$). לכן $g'(x)&lt;0$ לכל $x\\in(-1,1)$.\nלפי מסקנה ממשפט לגרנז' (<em>אם $g'&lt;0$ בקטע אז $g$ יורדת ממש בו</em>), $g$ יורדת ממש ב-$(-1,1)$ ולכן חד-חד-ערכית שם, ויש לה לכל היותר אפס אחד.\n(באופן שקול: אם היו שני שורשים $x_1&lt;x_2$, לפי <em>משפט רול</em> — $g$ רציפה ב-$[x_1,x_2]$, גזירה ב-$(x_1,x_2)$ ו-$g(x_1)=g(x_2)$ — הייתה קיימת $\\xi\\in(x_1,x_2)$ עם $g'(\\xi)=0$, בסתירה.)</p>\n<p><strong>תשובה:</strong> כן, למשוואה יש פתרון בקטע $(-1,1)$, והוא יחיד.</p>",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -861,6 +911,7 @@ window.BANK = {
    "question": "<p>(12 נק') חקרו את הפונקציה $f(x)=x^2e^{-x}$ ושרטטו את הגרף שלה.\n<u>צריך למצוא</u>: תחום הגדרה, אסימפטוטות; תחומי עליה וירידה, נקודות קיצון, תחומי קמירות וקעירות.</p>",
    "hints": [],
    "solution": "<strong>תחום הגדרה:</strong> כל $\\R$; הפונקציה רציפה וגזירה בכל נקודה, ו-$f(x)\\ge0$ עם שוויון רק ב-$x=0$.\n\n<strong>אסימפטוטות:</strong> אין אנכיות (רציפה על $\\R$).\nכאשר $x\\to+\\infty$: $\\lim_{x\\to\\infty}\\frac{x^2}{e^x}=0$ (לופיטל פעמיים), ולכן $y=0$ אסימפטוטה אופקית ב-$+\\infty$.\nכאשר $x\\to-\\infty$: $f(x)\\to+\\infty$ ו-$\\frac{f(x)}{x}=xe^{-x}\\to-\\infty$, ולכן אין אסימפטוטה (אופקית או משופעת) ב-$-\\infty$.\n\n<strong>עליה וירידה:</strong>\n\\[\nf'(x)=2xe^{-x}-x^2e^{-x}=x(2-x)e^{-x}.\n\\]\n$f'&lt;0$ ב-$(-\\infty,0)$ וב-$(2,\\infty)$ (יורדת), ו-$f'&gt;0$ ב-$(0,2)$ (עולה).\n\n<strong>קיצון:</strong> מינימום (מוחלט) ב-$(0,0)$; מקסימום מקומי ב-$\\left(2,\\frac4{e^2}\\right)\\approx(2,0.54)$ (לא מוחלט, כי $f\\to\\infty$ ב-$-\\infty$).\n\n<strong>קמירות:</strong>\n\\[\nf''(x)=\\big((2-2x)-(2x-x^2)\\big)e^{-x}=(x^2-4x+2)e^{-x},\n\\]\nשמתאפסת ב-$x=2\\pm\\sqrt2$. לכן $f$ קמורה ($\\cup$) ב-$(-\\infty,2-\\sqrt2)$ וב-$(2+\\sqrt2,\\infty)$, וקעורה ($\\cap$) ב-$(2-\\sqrt2,2+\\sqrt2)$. נקודות פיתול ב-$x=2\\pm\\sqrt2$ (בערך $x\\approx0.59$ ו-$x\\approx3.41$).\n\n<strong>סרטוט:</strong> הגרף יורד מ-$+\\infty$ (ב-$-\\infty$) עד המינימום $(0,0)$ ומשיק לציר $x$ שם, עולה עד המקסימום $(2,4e^{-2})$, ואז יורד ושואף ל-$0$ מלמעלה ($y=0$ אסימפטוטה ב-$+\\infty$).",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -886,6 +937,7 @@ window.BANK = {
     "<p>השתמשו בנוסחה לאורך עקום בקואורדינטות קוטביות $L=\\int_\\alpha^\\beta\\sqrt{r^2+(r')^2}\\,d\\theta$.</p>"
    ],
    "solution": "<strong>סרטוט:</strong> $r=\\theta^2$ עולה מ-$0$ ל-$\\pi^2\\approx9.87$ כאשר $\\theta$ עולה מ-$0$ ל-$\\pi$: ספירלה שיוצאת מהראשית (משיקה לציר $x$ החיובי), עוברת דרך $\\left(\\theta=\\frac\\pi2,\\ r=\\frac{\\pi^2}4\\approx2.47\\right)$ על ציר $y$ החיובי, ומגיעה לנקודה $(-\\pi^2,0)$ על ציר $x$ השלילי; כל העקום בחצי המישור העליון $y\\ge0$.\n\n<strong>אורך:</strong> לפי הנוסחה לאורך עקום בקואורדינטות קוטביות, עם $r'=2\\theta$:\n\\[\nL=\\int_0^\\pi\\sqrt{r^2+(r')^2}\\,d\\theta=\\int_0^\\pi\\sqrt{\\theta^4+4\\theta^2}\\,d\\theta=\\int_0^\\pi\\theta\\sqrt{\\theta^2+4}\\,d\\theta\n\\]\n(כי $\\theta\\ge0$). בהצבה $u=\\theta^2+4$, $du=2\\theta\\,d\\theta$:\n\\[\nL=\\frac12\\int_4^{\\pi^2+4}\\sqrt u\\,du=\\frac13\\Big[u^{3/2}\\Big]_4^{\\pi^2+4}=\\frac13\\left((\\pi^2+4)^{3/2}-8\\right)\\approx14.55.\n\\]",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -910,6 +962,7 @@ window.BANK = {
     "<p>הציבו $u=1-x^2$ (ואז $x^2=1-u$).</p>"
    ],
    "solution": "<p>נציב $u=1-x^2$, $du=-2x\\,dx$, ו-$x^2=1-u$ (עבור $|x|&lt;1$):\n\\[\n\\int\\frac{x^3}{\\sqrt{1-x^2}}dx=\\int\\frac{x^2\\cdot x\\,dx}{\\sqrt{1-x^2}}=-\\frac12\\int\\frac{1-u}{\\sqrt u}\\,du=-\\frac12\\int\\left(u^{-1/2}-u^{1/2}\\right)du\n=-\\sqrt u+\\frac13u^{3/2}+C.\n\\]\n<strong>תשובה:</strong>\n\\[\n\\int\\frac{x^3}{\\sqrt{1-x^2}}dx=-\\sqrt{1-x^2}+\\frac13(1-x^2)^{3/2}+C=-\\frac13(x^2+2)\\sqrt{1-x^2}+C.\n\\]\n(בדיקה: גזירת $-\\frac13(x^2+2)\\sqrt{1-x^2}$ נותנת $-\\frac23x\\sqrt{1-x^2}+\\frac{x(x^2+2)}{3\\sqrt{1-x^2}}=\\frac{-2x(1-x^2)+x^3+2x}{3\\sqrt{1-x^2}}=\\frac{x^3}{\\sqrt{1-x^2}}$.)</p>",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -935,6 +988,7 @@ window.BANK = {
     "<p>בצעו אינטגרציה בחלקים עם $u=\\arctan x$, $dv=\\frac{dx}{x^2}$, ופרקו $\\frac{1}{x(1+x^2)}=\\frac1x-\\frac{x}{1+x^2}$.</p>"
    ],
    "solution": "<strong>פונקציה קדומה.</strong> אינטגרציה בחלקים עם $u=\\arctan x$, $dv=\\frac{dx}{x^2}$, $du=\\frac{dx}{1+x^2}$, $v=-\\frac1x$:\n\\[\n\\int\\frac{\\arctan x}{x^2}dx=-\\frac{\\arctan x}{x}+\\int\\frac{dx}{x(1+x^2)}.\n\\]\nפירוק לשברים חלקיים: $\\frac{1}{x(1+x^2)}=\\frac1x-\\frac{x}{1+x^2}$, ולכן עבור $x&gt;0$\n\\[\n\\int\\frac{dx}{x(1+x^2)}=\\ln x-\\frac12\\ln(1+x^2)=\\ln\\frac{x}{\\sqrt{1+x^2}}.\n\\]\n<strong>האינטגרל הלא אמיתי.</strong> לפי ההגדרה, $\\int_1^\\infty=\\lim_{R\\to\\infty}\\int_1^R$:\n\\[\n\\int_1^R\\frac{\\arctan x}{x^2}dx=\\left[-\\frac{\\arctan x}{x}+\\ln\\frac{x}{\\sqrt{1+x^2}}\\right]_1^R\n=-\\frac{\\arctan R}{R}+\\ln\\frac{R}{\\sqrt{1+R^2}}+\\frac\\pi4-\\ln\\frac1{\\sqrt2}.\n\\]\nכאשר $R\\to\\infty$: $\\frac{\\arctan R}{R}\\to0$ (מונה חסום, מכנה שואף לאינסוף), ו-$\\frac{R}{\\sqrt{1+R^2}}\\to1$ ולכן $\\ln\\frac{R}{\\sqrt{1+R^2}}\\to0$ (רציפות $\\ln$). לכן\n\\[\n\\int_1^\\infty\\frac{\\arctan x}{x^2}dx=\\frac\\pi4+\\frac12\\ln2\\approx1.132.\n\\]",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -960,6 +1014,7 @@ window.BANK = {
     "<p>הנפח הוא $V=\\pi\\int_0^2f^2(x)\\,dx$. פרקו קודם את $f$ לשברים חלקיים: $x^2+6x+8=(x+2)(x+4)$.</p>"
    ],
    "solution": "<strong>נוסחת הנפח.</strong> לפי הנוסחה לנפח גוף סיבוב סביב ציר $x$:\n\\[\nV=\\pi\\int_0^2 f^2(x)\\,dx=\\pi\\int_0^2\\frac{x^2}{(x^2+6x+8)^2}\\,dx.\n\\]\n\n<strong>שברים חלקיים.</strong> $x^2+6x+8=(x+2)(x+4)$, ו-\n\\[\n\\frac{x}{(x+2)(x+4)}=\\frac{A}{x+2}+\\frac{B}{x+4},\\qquad A=\\frac{-2}{-2+4}=-1,\\quad B=\\frac{-4}{-4+2}=2.\n\\]\nלכן $f(x)=\\frac{2}{x+4}-\\frac{1}{x+2}$, ו-\n\\[\nf^2(x)=\\frac{4}{(x+4)^2}+\\frac{1}{(x+2)^2}-\\frac{4}{(x+2)(x+4)},\\qquad\n\\frac{4}{(x+2)(x+4)}=\\frac{2}{x+2}-\\frac{2}{x+4}.\n\\]\n\n<strong>אינטגרציה:</strong>\n\\[\n\\int_0^2\\frac{4\\,dx}{(x+4)^2}=\\left[-\\frac4{x+4}\\right]_0^2=-\\frac46+1=\\frac13,\\qquad\n\\int_0^2\\frac{dx}{(x+2)^2}=\\left[-\\frac1{x+2}\\right]_0^2=-\\frac14+\\frac12=\\frac14,\n\\]\n\\[\n\\int_0^2\\left(\\frac{2}{x+2}-\\frac{2}{x+4}\\right)dx=\\Big[2\\ln(x+2)-2\\ln(x+4)\\Big]_0^2=2\\ln\\frac46-2\\ln\\frac24=2\\ln\\frac43.\n\\]\nלכן\n\\[\n\\int_0^2f^2(x)\\,dx=\\frac13+\\frac14-2\\ln\\frac43=\\frac7{12}-2\\ln\\frac43.\n\\]\n\n<strong>תשובה:</strong>\n\\[\nV=\\pi\\left(\\frac{7}{12}-2\\ln\\frac43\\right)\\approx0.0250.\n\\]\n(הנפח קטן מאוד, וזה סביר: $0\\le f(x)\\le f(2)=\\frac1{12}$ בקטע.)",
+   "src": "מועד ב' תשע\"ז סמסטר א'",
    "exam": "תשע\"ז סמסטר א מועד ב"
   },
   {
@@ -985,6 +1040,7 @@ window.BANK = {
     "<p>השתמשו בחוקי הלוגריתם כדי לכתוב את מנת ההפרשים כ-$\\frac{\\ln(1+\\frac hx)}{h}$, ואז בגבול היסודי $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$.</p>"
    ],
    "solution": "<p>יהי $x&gt;0$. עבור $h\\ne0$ עם $|h|&lt;x$ (כך ש-$x+h&gt;0$), לפי חוקי הלוגריתם:\n\\[ \\frac{f(x+h)-f(x)}{h}=\\frac{\\ln(2x+2h)-\\ln(2x)}{h}=\\frac{1}{h}\\ln\\frac{2(x+h)}{2x}=\\frac1h\\ln\\left(1+\\frac hx\\right). \\]\nנציב $t=\\frac hx$; כאשר $h\\to0$ גם $t\\to0$ ו-$t\\ne0$, ולכן לפי הגבול היסודי $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ (וכלל ההצבה בגבולות):\n\\[ \\frac1h\\ln\\left(1+\\frac hx\\right)=\\frac1x\\cdot\\frac{\\ln(1+t)}{t}\\xrightarrow[h\\to0]{}\\frac1x\\cdot1. \\]\nלכן\n\\[ \\boxed{f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}=\\frac1x}. \\]\n(שימו לב שהתוצאה זהה לנגזרת של $\\ln x$, כי $\\ln(2x)=\\ln2+\\ln x$.)</p>",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1007,9 +1063,10 @@ window.BANK = {
    ],
    "question": "<p>(15 נק') האם לפונקציה $f(x)=5-x-x^2-|x+3|$ יש מקסימום בקטע $[-10,10]$? אם כן, מצאו אותו.</p>",
    "hints": [
-    "<p>$f$ רציפה בקטע סגור -- איזה משפט מבטיח קיום מקסימום? כדי למצוא אותו, פתחו את הערך המוחלט ובדקו כל אחד משני התחומים בנפרד.</p>"
+    "<p>$f$ רציפה בקטע סגור – איזה משפט מבטיח קיום מקסימום? כדי למצוא אותו, פתחו את הערך המוחלט ובדקו כל אחד משני התחומים בנפרד.</p>"
    ],
    "solution": "<strong>קיום:</strong> $f$ רציפה ב-$[-10,10]$ (סכום של פולינום ושל $-|x+3|$, שהיא רציפה). לפי משפט ויירשטראס, פונקציה רציפה בקטע סגור וחסום מקבלת בו מקסימום (ומינימום). לכן <strong>כן</strong>, יש מקסימום.\n\n<strong>מציאתו:</strong> נפתח את הערך המוחלט.\n\n<ul>\n<li>\nעבור $-3\\le x\\le10$: $|x+3|=x+3$ ולכן $f(x)=5-x-x^2-x-3=2-2x-x^2=3-(x+1)^2$. זו פרבולה הפוכה עם קודקוד ב-$x=-1\\in[-3,10]$, ולכן בתחום זה $f(x)\\le3$ ושוויון רק ב-$x=-1$.\n</li>\n<li>\nעבור $-10\\le x&lt;-3$: $|x+3|=-(x+3)$ ולכן $f(x)=5-x-x^2+x+3=8-x^2$. כאן $x^2&gt;9$, ולכן $f(x)&lt;8-9=-1&lt;3$.\n</li>\n</ul>\n<p>(לחלופין: $f$ גזירה פרט ל-$x=-3$; $f'(x)=-2-2x$ עבור $x&gt;-3$ מתאפסת ב-$x=-1$, ו-$f'(x)=-2x&gt;0$ עבור $x&lt;-3$; משווים את ערכי $f$ בנקודות החשודות $-10,-3,-1,10$: $f(-10)=-92$, $f(-3)=-1$, $f(-1)=3$, $f(10)=-118$.)</p>\n<p>לכן המקסימום של $f$ בקטע הוא $\\boxed{f(-1)=3}$, והוא מתקבל בנקודה $x=-1$.</p>",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1034,6 +1091,7 @@ window.BANK = {
     "<p>הציבו $t=x^2$ (או $t=-x^2$) ואחר כך בצעו אינטגרציה בחלקים.</p>"
    ],
    "solution": "<p>נציב $t=x^2$, $dt=2x\\,dx$. אז $x^3\\,dx=x^2\\cdot x\\,dx=\\frac t2\\,dt$:\n\\[ \\int x^3e^{-x^2}dx=\\frac12\\int te^{-t}dt. \\]\nאינטגרציה בחלקים עם $u=t$, $v'=e^{-t}$ ($u'=1$, $v=-e^{-t}$):\n\\[ \\int te^{-t}dt=-te^{-t}+\\int e^{-t}dt=-te^{-t}-e^{-t}+C=-(t+1)e^{-t}+C. \\]\nנחזור למשתנה $x$:\n\\[ \\boxed{\\int x^3e^{-x^2}dx=-\\frac12(x^2+1)e^{-x^2}+C.} \\]\n<strong>בדיקה:</strong> $\\frac{d}{dx}\\left[-\\frac12(x^2+1)e^{-x^2}\\right]=-xe^{-x^2}+\\frac12(x^2+1)\\cdot2xe^{-x^2}=x^3e^{-x^2}$.</p>",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1059,6 +1117,7 @@ window.BANK = {
     "<p>לשורש הכפול $x=1$ יש שני שברים חלקיים: $\\frac{B}{x-1}+\\frac{C}{(x-1)^2}$.</p>"
    ],
    "solution": "<strong>פירוק המכנה:</strong> $x^3-x^2-x+1=x^2(x-1)-(x-1)=(x-1)(x^2-1)=(x-1)^2(x+1)$.\n\n<strong>חילוק פולינומים:</strong> המנה היא $x+1$; אכן $(x+1)(x^3-x^2-x+1)=x^4-2x^2+1$, ולכן\n\\[ x^4+1=(x+1)(x^3-x^2-x+1)+2x^2,\\qquad \\frac{x^4+1}{x^3-x^2-x+1}=x+1+\\frac{2x^2}{(x-1)^2(x+1)}. \\]\n\n<strong>שברים חלקיים:</strong>\n\\[ \\frac{2x^2}{(x-1)^2(x+1)}=\\frac{A}{x+1}+\\frac{B}{x-1}+\\frac{C}{(x-1)^2}\\iff 2x^2=A(x-1)^2+B(x-1)(x+1)+C(x+1). \\]\nהצבת $x=-1$: $2=4A$, כלומר $A=\\frac12$. הצבת $x=1$: $2=2C$, כלומר $C=1$. השוואת מקדם $x^2$: $2=A+B$, לכן $B=\\frac32$.\n\n<strong>אינטגרציה:</strong>\n\\[ \\int\\frac{x^4+1}{x^3-x^2-x+1}dx=\\int\\left(x+1+\\frac{1/2}{x+1}+\\frac{3/2}{x-1}+\\frac{1}{(x-1)^2}\\right)dx, \\]\n\\[ \\boxed{=\\frac{x^2}{2}+x+\\frac12\\ln|x+1|+\\frac32\\ln|x-1|-\\frac{1}{x-1}+C.} \\]\n(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1084,6 +1143,7 @@ window.BANK = {
     "<p>במקום לגזור ארבע פעמים, השתמשו בפולינום מקלורין של $\\ln(1+t)$ עם $t=x^2$, והשוו מקדמים: המקדם של $x^4$ הוא $\\frac{f^{(4)}(0)}{4!}$.</p>"
    ],
    "solution": "<p>מפיתוח מקלורין $\\ln(1+t)=t-\\frac{t^2}{2}+o(t^2)$, ועם $t=x^2$:\n\\[ \\ln(1+x^2)=x^2-\\frac{x^4}{2}+o(x^4). \\]\n$f$ גזירה אינסוף פעמים, ולפי יחידות פולינום טיילור (הפולינום היחיד ממעלה $\\le4$ המקרב את $f$ עד $o(x^4)$ הוא פולינום טיילור), פולינום טיילור מסדר $4$ של $f$ סביב $0$ הוא $x^2-\\frac{x^4}{2}$. מקדם $x^4$ בפולינום טיילור הוא $\\frac{f^{(4)}(0)}{4!}$, ולכן\n\\[ \\frac{f^{(4)}(0)}{24}=-\\frac12\\quad\\Longrightarrow\\quad\\boxed{f^{(4)}(0)=-12}. \\]\n(בדיקה בגזירה ישירה: $f'(x)=\\frac{2x}{1+x^2}$, $f''(x)=\\frac{2-2x^2}{(1+x^2)^2}$, $f'''(x)=\\frac{4x^3-12x}{(1+x^2)^3}$, $f^{(4)}(x)=\\frac{-12x^4+72x^2-12}{(1+x^2)^4}$, ו-$f^{(4)}(0)=-12$.)</p>",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1108,7 +1168,8 @@ window.BANK = {
    "hints": [
     "<p>לפי משפט הנגזרת של הפונקציה ההפוכה, $(f^{-1})'(y)=\\frac{1}{f'(f^{-1}(y))}$. מהו $f^{-1}(4)$?</p>"
    ],
-   "solution": "<p>מכיוון ש-$f(2)=4$ ו-$f$ חד-חד-ערכית, $f^{-1}(4)=2$.\nלפי משפט הנגזרת של הפונקציה ההפוכה: אם $f$ גזירה ב-$x_0$, $f'(x_0)\\ne0$ (ו-$f$ רציפה וחד-חד-ערכית בסביבה), אז $f^{-1}$ גזירה ב-$y_0=f(x_0)$ ו-\n\\[ (f^{-1})'(y_0)=\\frac{1}{f'(x_0)}. \\]\nכאן $x_0=2$, $y_0=4$, ו-$f'(2)=2\\ne0$, ולכן\n\\[ \\boxed{(f^{-1})'(4)=\\frac{1}{f'(2)}=\\frac12}. \\]\n(שאר הנתונים -- $f'(4)=3$ למשל -- הם מסיחים: יש להעריך את $f'$ בנקודה $f^{-1}(4)=2$ ולא בנקודה $4$.)</p>",
+   "solution": "<p>מכיוון ש-$f(2)=4$ ו-$f$ חד-חד-ערכית, $f^{-1}(4)=2$.\nלפי משפט הנגזרת של הפונקציה ההפוכה: אם $f$ גזירה ב-$x_0$, $f'(x_0)\\ne0$ (ו-$f$ רציפה וחד-חד-ערכית בסביבה), אז $f^{-1}$ גזירה ב-$y_0=f(x_0)$ ו-\n\\[ (f^{-1})'(y_0)=\\frac{1}{f'(x_0)}. \\]\nכאן $x_0=2$, $y_0=4$, ו-$f'(2)=2\\ne0$, ולכן\n\\[ \\boxed{(f^{-1})'(4)=\\frac{1}{f'(2)}=\\frac12}. \\]\n(שאר הנתונים – $f'(4)=3$ למשל – הם מסיחים: יש להעריך את $f'$ בנקודה $f^{-1}(4)=2$ ולא בנקודה $4$.)</p>",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1133,6 +1194,7 @@ window.BANK = {
     "<p>ליד $0$ מתקיים $\\sin x\\approx x$. השוו (מבחן ההשוואה הגבולי) עם $\\frac1x$.</p>"
    ],
    "solution": "<strong>האינטגרל מתבדר.</strong>\nהאינטגרנד רציף ב-$(0,1]$, והבעיה היחידה היא בנקודה $0$. ב-$(0,1]$ מתקיים $\\sin x&gt;0$ (כי $0&lt;x\\le1&lt;\\pi$), כך שהאינטגרנד חיובי ואפשר להשתמש במבחני ההשוואה.\n\nנשווה עם $g(x)=\\frac1x&gt;0$:\n\\[ \\lim_{x\\to0^+}\\frac{\\sin x/x^2}{1/x}=\\lim_{x\\to0^+}\\frac{\\sin x}{x}=1\\in(0,\\infty). \\]\nלפי מבחן ההשוואה הגבולי, $\\int_0^1\\frac{\\sin x}{x^2}dx$ ו-$\\int_0^1\\frac{dx}{x}$ מתכנסים או מתבדרים יחד. אבל\n\\[ \\int_\\eps^1\\frac{dx}{x}=-\\ln\\eps\\xrightarrow[\\eps\\to0^+]{}\\infty, \\]\nכלומר $\\int_0^1\\frac{dx}{x}$ מתבדר. לכן גם $\\int_0^1\\frac{\\sin x}{x^2}dx$ <strong>מתבדר</strong>.\n\n(השוואה ישירה: מכיוון ש-$\\frac{\\sin x}{x}\\to1$, קיים $\\delta&gt;0$ כך ש-$\\frac{\\sin x}{x}&gt;\\frac12$ ב-$(0,\\delta)$, ולכן $\\frac{\\sin x}{x^2}&gt;\\frac{1}{2x}$ שם.)",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1157,7 +1219,8 @@ window.BANK = {
    "hints": [
     "<p>נסו פונקציות שסכומן אפס.</p>"
    ],
-   "solution": "<strong>הטענה אינה נכונה.</strong> דוגמה נגדית: $f(x)=1$, $g(x)=-1$ (שתיהן רציפות ב-$[0,\\infty)$).\n\n<ul>\n<li>\n$f+g\\equiv0$, ולכן $\\int_0^\\infty(f+g)\\,dx=\\lim_{R\\to\\infty}\\int_0^R0\\,dx=0$ -- מתכנס.\n</li>\n<li>\n$f-g\\equiv2$, ולכן $\\int_0^R(f-g)\\,dx=2R\\xrightarrow[R\\to\\infty]{}\\infty$ -- מתבדר.\n</li>\n</ul>\n<p>לכן התכנסות $\\int_0^\\infty(f+g)$ אינה גוררת התכנסות $\\int_0^\\infty(f-g)$.</p>\n<p>(הערה: אם <em>שני</em> האינטגרלים $\\int_0^\\infty f$ ו-$\\int_0^\\infty g$ היו מתכנסים, אז לפי לינאריות גם $\\int_0^\\infty(f-g)$ היה מתכנס. כאן נתונה רק התכנסות הסכום.)</p>",
+   "solution": "<strong>הטענה אינה נכונה.</strong> דוגמה נגדית: $f(x)=1$, $g(x)=-1$ (שתיהן רציפות ב-$[0,\\infty)$).\n\n<ul>\n<li>\n$f+g\\equiv0$, ולכן $\\int_0^\\infty(f+g)\\,dx=\\lim_{R\\to\\infty}\\int_0^R0\\,dx=0$ – מתכנס.\n</li>\n<li>\n$f-g\\equiv2$, ולכן $\\int_0^R(f-g)\\,dx=2R\\xrightarrow[R\\to\\infty]{}\\infty$ – מתבדר.\n</li>\n</ul>\n<p>לכן התכנסות $\\int_0^\\infty(f+g)$ אינה גוררת התכנסות $\\int_0^\\infty(f-g)$.</p>\n<p>(הערה: אם <em>שני</em> האינטגרלים $\\int_0^\\infty f$ ו-$\\int_0^\\infty g$ היו מתכנסים, אז לפי לינאריות גם $\\int_0^\\infty(f-g)$ היה מתכנס. כאן נתונה רק התכנסות הסכום.)</p>",
+   "src": "מועד א' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד א"
   },
   {
@@ -1183,6 +1246,7 @@ window.BANK = {
     "<p>שימו לב: בפיתוח של $\\cos$ המקדם של $x^{2k+1}$ הוא אפס, ולכן $P_{2k}=P_{2k+1}$ ואפשר להשתמש בשארית מסדר $2k+1$.</p>"
    ],
    "solution": "<p>פולינום מקלורין של $\\cos x$ הוא בעל מקדמים רציונליים, ולכן ערכו ב-$x=1$ רציונלי. נותר לבחור סדר שבו השארית קטנה מ-$\\frac1{1000}$.</p>\n<p>לפי משפט טיילור עם שארית לגרנז', לכל $n$ קיימת $c$ בין $0$ ל-$1$ כך ש-\n\\[ \\cos1=P_n(1)+R_n(1),\\qquad R_n(1)=\\frac{\\cos^{(n+1)}(c)}{(n+1)!}\\cdot1^{n+1}. \\]\nכל נגזרת של $\\cos$ היא $\\pm\\sin$ או $\\pm\\cos$, ולכן $|\\cos^{(n+1)}(c)|\\le1$ ו-$|R_n(1)|\\le\\frac1{(n+1)!}$.</p>\n<p>נבחר $n=7$: $|R_7(1)|\\le\\frac1{8!}=\\frac1{40320}&lt;\\frac1{1000}$. מכיוון שמקדם $x^7$ בפיתוח של $\\cos$ הוא $0$:\n\\[ P_7(1)=P_6(1)=1-\\frac1{2!}+\\frac1{4!}-\\frac1{6!}=1-\\frac12+\\frac1{24}-\\frac1{720}=\\frac{720-360+30-1}{720}=\\frac{389}{720}. \\]\nלכן\n\\[ \\left|\\cos1-\\frac{389}{720}\\right|\\le\\frac1{40320}&lt;\\frac1{1000}, \\]\nוהמספר הרציונלי $\\boxed{x=\\frac{389}{720}}$ מקיים את הדרישה. (מספרית $\\cos1\\approx0.5403023$, $\\frac{389}{720}\\approx0.5402778$.)</p>\n<p><strong>הערה:</strong> הקירוב הקודם $1-\\frac12+\\frac1{24}=\\frac{13}{24}$ <em>אינו</em> מספיק: החסם שנותן לגרנז' הוא $\\frac1{6!}=\\frac1{720}&gt;\\frac1{1000}$, ואכן $|\\cos1-\\frac{13}{24}|\\approx0.00136&gt;\\frac1{1000}$.</p>",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1206,6 +1270,7 @@ window.BANK = {
    "question": "<p>(15 נק') עבור איזה ערך של הפרמטר $A$ הפונקציה $f(x)$ רציפה בנקודה $0$?\n\\[ f(x)=\\begin{cases}\\dfrac{1-\\cos^2(x)}{2x^2} &amp; x\\neq0\\\\ A &amp; x=0\\end{cases} \\]</p>",
    "hints": [],
    "solution": "<p>$f$ רציפה ב-$0$ אם ורק אם $\\lim_{x\\to0}f(x)=f(0)=A$. לפי הזהות $1-\\cos^2x=\\sin^2x$:\n\\[ \\lim_{x\\to0}\\frac{1-\\cos^2x}{2x^2}=\\lim_{x\\to0}\\frac12\\left(\\frac{\\sin x}{x}\\right)^2=\\frac12\\cdot1^2=\\frac12, \\]\nלפי הגבול היסודי $\\frac{\\sin x}{x}\\to1$ ואריתמטיקה של גבולות. לכן $f$ רציפה ב-$0$ אם ורק אם $\\boxed{A=\\frac12}$.</p>",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1230,6 +1295,7 @@ window.BANK = {
     "<p>הציבו $t=\\sqrt[3]x$, כלומר $x=t^3$, ואז בצעו אינטגרציה בחלקים פעמיים.</p>"
    ],
    "solution": "<p>נציב $t=\\sqrt[3]x$, כלומר $x=t^3$ ו-$dx=3t^2\\,dt$ (ההצבה הפיכה וגזירה על כל $\\R$):\n\\[ \\int e^{\\sqrt[3]x}dx=3\\int t^2e^t\\,dt. \\]\nאינטגרציה בחלקים ($u=t^2$, $v'=e^t$):\n\\[ \\int t^2e^tdt=t^2e^t-2\\int te^tdt, \\]\nושוב בחלקים ($u=t$, $v'=e^t$): $\\int te^tdt=te^t-e^t+C$. לכן\n\\[ \\int t^2e^tdt=t^2e^t-2te^t+2e^t+C=e^t(t^2-2t+2)+C. \\]\nנחזור ל-$x$:\n\\[ \\boxed{\\int e^{\\sqrt[3]x}dx=3e^{\\sqrt[3]x}\\left(\\sqrt[3]{x^2}-2\\sqrt[3]x+2\\right)+C.} \\]\n<strong>בדיקה:</strong> $\\frac{d}{dt}\\left[3e^t(t^2-2t+2)\\right]=3e^t(t^2-2t+2+2t-2)=3t^2e^t$, וזה בדיוק האינטגרנד אחרי ההצבה.</p>",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1254,6 +1320,7 @@ window.BANK = {
     "<p>הצבה טריגונומטרית: $x=2\\sin t$ עם $t\\in(-\\frac\\pi2,\\frac\\pi2)$.</p>"
    ],
    "solution": "<p>האינטגרנד מוגדר עבור $-2&lt;x&lt;2$. נציב $x=2\\sin t$, $t\\in(-\\frac\\pi2,\\frac\\pi2)$ (הצבה הפיכה: $t=\\arcsin\\frac x2$), $dx=2\\cos t\\,dt$. בתחום זה $\\cos t&gt;0$, ולכן $\\sqrt{4-x^2}=\\sqrt{4\\cos^2t}=2\\cos t$. מכאן\n\\[ \\int\\frac{x^2}{\\sqrt{4-x^2}}dx=\\int\\frac{4\\sin^2t}{2\\cos t}\\cdot2\\cos t\\,dt=4\\int\\sin^2t\\,dt=2\\int(1-\\cos2t)\\,dt=2t-\\sin2t+C. \\]\nנחזור ל-$x$: $t=\\arcsin\\frac x2$, ו-$\\sin2t=2\\sin t\\cos t=2\\cdot\\frac x2\\cdot\\frac{\\sqrt{4-x^2}}{2}=\\frac{x\\sqrt{4-x^2}}{2}$. לכן\n\\[ \\boxed{\\int\\frac{x^2}{\\sqrt{4-x^2}}dx=2\\arcsin\\frac x2-\\frac{x\\sqrt{4-x^2}}{2}+C.} \\]\n(בדיקה: גזירת התוצאה נותנת $\\frac{2}{\\sqrt{4-x^2}}-\\frac{\\sqrt{4-x^2}}{2}+\\frac{x^2}{2\\sqrt{4-x^2}}=\\frac{4-(4-x^2)+x^2}{2\\sqrt{4-x^2}}=\\frac{x^2}{\\sqrt{4-x^2}}$.)</p>",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1278,7 +1345,8 @@ window.BANK = {
     "<p>סמנו את אורך השוק $a$ ואת הבסיס $b=1-2a$. הגובה לבסיס הוא $\\sqrt{a^2-\\frac{b^2}{4}}$. מה התחום המותר של $a$?</p>",
     "<p>נוח יותר למקסם את ריבוע השטח.</p>"
    ],
-   "solution": "<p>נסמן את אורך השוק ב-$a$ ואת אורך הבסיס ב-$b$, עם $2a+b=1$, כלומר $b=1-2a$. כדי שיהיה משולש (לא מנוון) צריך $b&gt;0$ ואי-שוויון המשולש $2a&gt;b$, כלומר $\\frac14&lt;a&lt;\\frac12$.</p>\n<p>הגובה לבסיס (שהוא גם תיכון) הוא, לפי פיתגורס, $h=\\sqrt{a^2-\\frac{b^2}{4}}$, ולכן\n\\[ S=\\frac12bh=\\frac b4\\sqrt{4a^2-b^2}=\\frac{1-2a}{4}\\sqrt{(2a-b)(2a+b)}=\\frac{1-2a}{4}\\sqrt{4a-1}, \\]\nכי $2a+b=1$ ו-$2a-b=4a-1$.</p>\n<p>נמקסם את $g(a)=16S^2=(1-2a)^2(4a-1)$ ב-$(\\frac14,\\frac12)$ (מכיוון ש-$S&gt;0$, $S$ ו-$S^2$ מקבלות מקסימום באותה נקודה):\n\\[ g'(a)=-4(1-2a)(4a-1)+4(1-2a)^2=4(1-2a)\\big[(1-2a)-(4a-1)\\big]=4(1-2a)(2-6a). \\]\nבתחום $1-2a&gt;0$, ולכן $g'(a)=0\\iff a=\\frac13$; $g'&gt;0$ ב-$(\\frac14,\\frac13)$ ו-$g'&lt;0$ ב-$(\\frac13,\\frac12)$. לכן $a=\\frac13$ היא נקודת מקסימום מוחלט בתחום (בקצוות $g\\to0$).</p>\n<p>עבור $a=\\frac13$: $b=\\frac13$ -- המשולש שווה צלעות, ו-\n\\[ S_{\\max}=\\frac{1/3}{4}\\sqrt{\\frac13}=\\frac{1}{12\\sqrt3}=\\boxed{\\frac{\\sqrt3}{36}}\\approx0.0481. \\]</p>",
+   "solution": "<p>נסמן את אורך השוק ב-$a$ ואת אורך הבסיס ב-$b$, עם $2a+b=1$, כלומר $b=1-2a$. כדי שיהיה משולש (לא מנוון) צריך $b&gt;0$ ואי-שוויון המשולש $2a&gt;b$, כלומר $\\frac14&lt;a&lt;\\frac12$.</p>\n<p>הגובה לבסיס (שהוא גם תיכון) הוא, לפי פיתגורס, $h=\\sqrt{a^2-\\frac{b^2}{4}}$, ולכן\n\\[ S=\\frac12bh=\\frac b4\\sqrt{4a^2-b^2}=\\frac{1-2a}{4}\\sqrt{(2a-b)(2a+b)}=\\frac{1-2a}{4}\\sqrt{4a-1}, \\]\nכי $2a+b=1$ ו-$2a-b=4a-1$.</p>\n<p>נמקסם את $g(a)=16S^2=(1-2a)^2(4a-1)$ ב-$(\\frac14,\\frac12)$ (מכיוון ש-$S&gt;0$, $S$ ו-$S^2$ מקבלות מקסימום באותה נקודה):\n\\[ g'(a)=-4(1-2a)(4a-1)+4(1-2a)^2=4(1-2a)\\big[(1-2a)-(4a-1)\\big]=4(1-2a)(2-6a). \\]\nבתחום $1-2a&gt;0$, ולכן $g'(a)=0\\iff a=\\frac13$; $g'&gt;0$ ב-$(\\frac14,\\frac13)$ ו-$g'&lt;0$ ב-$(\\frac13,\\frac12)$. לכן $a=\\frac13$ היא נקודת מקסימום מוחלט בתחום (בקצוות $g\\to0$).</p>\n<p>עבור $a=\\frac13$: $b=\\frac13$ – המשולש שווה צלעות, ו-\n\\[ S_{\\max}=\\frac{1/3}{4}\\sqrt{\\frac13}=\\frac{1}{12\\sqrt3}=\\boxed{\\frac{\\sqrt3}{36}}\\approx0.0481. \\]</p>",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1304,6 +1372,7 @@ window.BANK = {
     "<p>מצאו קודם את תחום ההגדרה, ושימו לב ש-$f$ זוגית. בחנו גם את הגבול ב-$\\infty$ ואת ערכי $f$ בקצות התחום.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $x^2-1\\ge0$ ו-$x\\ne0$, כלומר $|x|\\ge1$. $f$ זוגית ($f(-x)=f(x)$), ולכן מספיק לחקור את $x\\ge1$.\n\n<strong>מינימום:</strong> $f(x)\\ge0$ בכל התחום, ו-$f(\\pm1)=0$. לכן המינימום המוחלט הוא $\\boxed{0}$, המתקבל ב-$x=\\pm1$.\n\n<strong>מקסימום:</strong> עבור $x&gt;1$:\n\\[ f'(x)=\\frac{\\frac{x}{\\sqrt{x^2-1}}\\cdot x^2-2x\\sqrt{x^2-1}}{x^4}=\\frac{x^2-2(x^2-1)}{x^3\\sqrt{x^2-1}}=\\frac{2-x^2}{x^3\\sqrt{x^2-1}}. \\]\nלכן $f'&gt;0$ ב-$(1,\\sqrt2)$ ו-$f'&lt;0$ ב-$(\\sqrt2,\\infty)$: $f$ עולה ב-$[1,\\sqrt2]$ ויורדת ב-$[\\sqrt2,\\infty)$ (בעזרת רציפות ב-$1$). לכן לכל $x\\ge1$ מתקיים $f(x)\\le f(\\sqrt2)=\\frac{\\sqrt{2-1}}{2}=\\frac12$. (בנוסף $\\lim_{x\\to\\infty}f(x)=\\lim\\frac{\\sqrt{1-1/x^2}}{x}=0$.)\nמהזוגיות, המקסימום המוחלט הוא $\\boxed{\\frac12}$, המתקבל ב-$x=\\pm\\sqrt2$.",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1328,6 +1397,7 @@ window.BANK = {
     "<p>עבור $x$ גדול האינטגרנד מתנהג כמו $\\frac{x}{x^{5/2}}=\\frac{1}{x^{3/2}}$. השתמשו במבחן ההשוואה הגבולי.</p>"
    ],
    "solution": "<strong>האינטגרל מתכנס.</strong>\nעבור $x\\ge2$: $x^5-3x=x(x^4-3)\\ge2\\cdot13&gt;0$, ולכן האינטגרנד מוגדר, רציף וחיובי ב-$[2,\\infty)$, והבעיה היחידה היא בקצה $\\infty$.\n\nנשווה עם $g(x)=\\frac{1}{x^{3/2}}&gt;0$:\n\\[ \\lim_{x\\to\\infty}\\frac{\\frac{x+7}{\\sqrt{x^5-3x}}}{x^{-3/2}}=\\lim_{x\\to\\infty}\\frac{(x+7)x^{3/2}}{\\sqrt{x^5-3x}}=\\lim_{x\\to\\infty}\\frac{x^{5/2}\\left(1+\\frac7x\\right)}{x^{5/2}\\sqrt{1-\\frac{3}{x^4}}}=1\\in(0,\\infty). \\]\nלפי מבחן ההשוואה הגבולי, שני האינטגרלים $\\int_2^\\infty\\frac{x+7}{\\sqrt{x^5-3x}}dx$ ו-$\\int_2^\\infty\\frac{dx}{x^{3/2}}$ מתכנסים או מתבדרים יחד. האינטגרל $\\int_2^\\infty\\frac{dx}{x^p}$ מתכנס עבור $p&gt;1$, וכאן $p=\\frac32$:\n\\[ \\int_2^R x^{-3/2}dx=\\left[-2x^{-1/2}\\right]_2^R=\\frac{2}{\\sqrt2}-\\frac{2}{\\sqrt R}\\xrightarrow[R\\to\\infty]{}\\sqrt2. \\]\nלכן האינטגרל הנתון <strong>מתכנס</strong>.",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1353,6 +1423,7 @@ window.BANK = {
     "<p>חפשו פונקציה שמקבלת רק את הערכים $1$ ו-$-1$ באופן \"צפוף\", בדומה לפונקציית דירכלה.</p>"
    ],
    "solution": "<strong>הטענה אינה נכונה.</strong> (הכיוון ההפוך נכון: אם $f$ אינטגרבילית אז גם $|f|$.)\n\nדוגמה נגדית (עבור $a&lt;b$):\n\\[ f(x)=\\begin{cases}1, &amp; x\\in\\Q\\\\ -1, &amp; x\\notin\\Q\\end{cases}\\qquad x\\in[a,b]. \\]\nאז $|f(x)|=1$ לכל $x$, פונקציה קבועה, ולכן אינטגרבילית ו-$\\int_a^b|f|=b-a$.\n\nלעומת זאת $f$ אינה אינטגרבילית לפי רימן: תהי $P$ חלוקה כלשהי של $[a,b]$. בכל תת-קטע $[x_{i-1},x_i]$ (באורך חיובי) יש גם מספר רציונלי וגם מספר אי-רציונלי (צפיפות $\\Q$ ו-$\\R\\setminus\\Q$ ב-$\\R$), ולכן $M_i=\\sup f=1$ ו-$m_i=\\inf f=-1$. מכאן\n\\[ U(f,P)=\\sum M_i\\Delta x_i=b-a,\\qquad L(f,P)=\\sum m_i\\Delta x_i=-(b-a), \\]\nכך ש-$U(f,P)-L(f,P)=2(b-a)$ לכל חלוקה, ואינו יכול להיות קטן מ-$\\eps$ כרצוננו. לפי קריטריון רימן (או: האינטגרל העליון $b-a$ שונה מהתחתון $-(b-a)$), $f$ <strong>אינה</strong> אינטגרבילית.",
+   "src": "מועד ב' תשע\"ז סמסטר ב'",
    "exam": "תשע\"ז סמסטר ב מועד ב"
   },
   {
@@ -1377,6 +1448,7 @@ window.BANK = {
     "<p>הפכו את השבר: $\\frac{n}{n+1}=\\frac{1}{1+\\frac1n}$, והשתמשו בגבול המפורסם $\\left(1+\\frac1n\\right)^n\\to e$.</p>"
    ],
    "solution": "<p>לכל $n$:\n\\[ \\left(\\frac{n}{n+1}\\right)^{3n}=\\frac{1}{\\left(\\frac{n+1}{n}\\right)^{3n}}=\\frac{1}{\\left[\\left(1+\\frac1n\\right)^{n}\\right]^{3}}. \\]\nידוע ש-$\\left(1+\\frac1n\\right)^n\\xrightarrow[n\\to\\infty]{} e$. מאריתמטיקה של גבולות (מכפלה של שלוש סדרות מתכנסות, ומנה כשהגבול במכנה $e^3\\neq 0$) נקבל\n\\[ \\lim_{n\\to\\infty}\\left(\\frac{n}{n+1}\\right)^{3n}=\\frac{1}{e^3}. \\]</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1402,6 +1474,7 @@ window.BANK = {
     "<p>כתבו $\\tan x=\\frac{1}{\\cot x}$ וקבלו ביטוי מהצורה $\\frac00$.</p>"
    ],
    "solution": "<p>עבור $x$ קרוב ל-$\\frac\\pi2$, $x\\neq\\frac\\pi2$, מתקיים $\\tan x=\\frac{1}{\\cot x}$, ולכן\n\\[ (\\tan x)\\cdot\\arctan\\left(x-\\frac{\\pi}{2}\\right)=\\frac{\\arctan\\left(x-\\frac{\\pi}{2}\\right)}{\\cot x}. \\]\nכאשר $x\\to\\frac\\pi2$: המונה שואף ל-$\\arctan 0=0$ והמכנה שואף ל-$\\cot\\frac\\pi2=0$ (שתי הפונקציות רציפות). זהו ביטוי מהצורה $\\frac00$, שתי הפונקציות גזירות בסביבה מנוקבת של $\\frac\\pi2$ ונגזרת המכנה $-\\frac{1}{\\sin^2x}\\neq 0$ שם, ולכן ניתן להפעיל את כלל לופיטל:\n\\[ \\lim_{x\\to\\pi/2}\\frac{\\arctan\\left(x-\\frac{\\pi}{2}\\right)}{\\cot x}\n   =\\lim_{x\\to\\pi/2}\\frac{\\dfrac{1}{1+\\left(x-\\frac\\pi2\\right)^2}}{-\\dfrac{1}{\\sin^2x}}\n   =\\lim_{x\\to\\pi/2}\\left(-\\frac{\\sin^2x}{1+\\left(x-\\frac\\pi2\\right)^2}\\right)=-\\frac{1}{1+0}=-1, \\]\nכאשר הגבול האחרון מחושב מרציפות ($\\sin^2\\frac\\pi2=1$). מכיוון שגבול מנת הנגזרות קיים, לפי כלל לופיטל\n\\[ \\lim_{x\\to\\pi/2}(\\tan x)\\cdot\\arctan\\left(x-\\frac{\\pi}{2}\\right)=-1. \\]\n(דרך נוספת: $\\arctan t\\sim t$ כאשר $t\\to0$, ו-$(x-\\frac\\pi2)\\tan x=-\\frac{(x-\\frac\\pi2)\\cos(x-\\frac\\pi2)}{\\sin(x-\\frac\\pi2)}\\to-1$.)</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1428,6 +1501,7 @@ window.BANK = {
     "<p>ב-$x\\to0^+$ חלקו מונה ומכנה ב-$e^{1/x}$.</p>"
    ],
    "solution": "<strong>תחום ההגדרה.</strong> הביטוי מוגדר כאשר $x\\neq0$, $x\\neq-1$ ו-$e^{1/x}\\neq 2$, כלומר $\\frac1x\\neq\\ln2$, כלומר $x\\neq\\frac1{\\ln2}$. בכל נקודה אחרת $f$ היא הרכבה ומנה של פונקציות אלמנטריות רציפות (עם מכנה שונה מאפס), ולכן רציפה. נקודות אי-הרציפות הן לכן $x=0,\\ x=-1,\\ x=\\frac{1}{\\ln2}$. נבדוק כל אחת.\n\n<strong>1. $x=\\frac1{\\ln2}$.</strong> המונה רציף בנקודה זו וערכו\n$e^{\\ln2-\\frac{1}{\\frac1{\\ln2}+1}}&gt;0$ (אקספוננט תמיד חיובי). המכנה $e^{1/x}-2$ שואף ל-$0$. כאשר $x\\to\\left(\\frac1{\\ln2}\\right)^+$ מתקיים $\\frac1x&lt;\\ln2$, לכן $e^{1/x}-2\\to0^-$, ו-\n\\[ \\lim_{x\\to(1/\\ln2)^+}f(x)=-\\infty, \\qquad \\lim_{x\\to(1/\\ln2)^-}f(x)=+\\infty \\]\n(משמאל $\\frac1x&gt;\\ln2$ והמכנה שואף ל-$0^+$). הגבולות החד-צדדיים אינם סופיים, ולכן זו <strong>נקודת אי-רציפות מסוג שני</strong>.\n\n<strong>2. $x=-1$.</strong> כאשר $x\\to-1$, המכנה רציף ושואף ל-$e^{-1}-2&lt;0$ (מספר שלילי השונה מאפס). נבדוק את המונה:\n\n<ul>\n<li>\nכאשר $x\\to-1^+$: $x+1\\to0^+$, לכן $\\frac1x-\\frac1{x+1}\\to-1-\\infty=-\\infty$, ומכאן $e^{\\left(\\frac1x-\\frac1{x+1}\\right)}\\to0$. לכן $\\lim_{x\\to-1^+}f(x)=\\frac{0}{e^{-1}-2}=0$.\n</li>\n<li>\nכאשר $x\\to-1^-$: $x+1\\to0^-$, לכן $\\frac1x-\\frac1{x+1}\\to+\\infty$ והמונה שואף ל-$+\\infty$. מכיוון שהמכנה שואף למספר שלילי, $\\lim_{x\\to-1^-}f(x)=-\\infty$.\n</li>\n</ul>\n<p>אחד הגבולות החד-צדדיים אינסופי, ולכן זו <strong>נקודת אי-רציפות מסוג שני</strong>.</p>\n<p><strong>3. $x=0$.</strong></p>\n<ul>\n<li>\nכאשר $x\\to0^+$: $\\frac1x\\to+\\infty$ ולכן גם המונה וגם המכנה שואפים ל-$\\infty$. נחלק מונה ומכנה ב-$e^{1/x}$:\n  \\[ f(x)=\\frac{e^{\\frac1x}\\cdot e^{-\\frac1{x+1}}}{e^{\\frac1x}\\left(1-2e^{-\\frac1x}\\right)}=\\frac{e^{-\\frac{1}{x+1}}}{1-2e^{-\\frac1x}}\\xrightarrow[x\\to0^+]{}\\frac{e^{-1}}{1-0}=\\frac1e, \\]\n  כי $e^{-1/x}\\to0$ כאשר $\\frac1x\\to+\\infty$. (בפתרון הרשמי הגבול חושב בכלל לופיטל ויצא אותו ערך.)\n</li>\n<li>\nכאשר $x\\to0^-$: $\\frac1x\\to-\\infty$, לכן $e^{1/x}\\to0$ והמכנה שואף ל-$-2$; כמו כן $\\frac1x-\\frac1{x+1}\\to-\\infty-1=-\\infty$, לכן המונה שואף ל-$0$. מכאן $\\lim_{x\\to0^-}f(x)=\\frac{0}{-2}=0$.\n</li>\n</ul>\n<p>שני הגבולות החד-צדדיים קיימים וסופיים אך שונים ($\\frac1e\\neq0$), ולכן זו <strong>נקודת אי-רציפות מסוג ראשון (קפיצה)</strong>.</p>\n<p><strong>סיכום:</strong> $x=0$ — אי-רציפות מסוג ראשון (קפיצה); $x=-1$ ו-$x=\\frac1{\\ln2}$ — אי-רציפות מסוג שני.</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1453,6 +1527,7 @@ window.BANK = {
     "<p>פתחו כל שורש לפי $(1+t)^p=1+pt+\\frac{p(p-1)}{2}t^2+o(t^2)$ עד סדר $x^2$.</p>"
    ],
    "solution": "<p>נשתמש בפיתוח מקלורין $(1+t)^p=1+pt+\\frac{p(p-1)}{2!}t^2+o(t^2)$ כאשר $t\\to0$.</p>\n<p>עבור השורש הראשון, $t=x^3-2x\\to0$ ו-$p=\\frac12$:\n\\begin{align*}\n\\sqrt{1-2x+x^3}&amp;=1+\\frac12(x^3-2x)-\\frac18(x^3-2x)^2+o(x^2)\\\\\n&amp;=1-x+\\frac{x^3}{2}-\\frac18\\left(4x^2-4x^4+x^6\\right)+o(x^2)=1-x-\\frac{x^2}{2}+o(x^2).\n\\end{align*}\n(השתמשנו בכך ש-$t=O(x)$ ולכן $o(t^2)=o(x^2)$, ובכך שהחזקות $x^3,x^4,x^6$ הן $o(x^2)$.)</p>\n<p>עבור השורש השני, $t=-3x+x^2$ ו-$p=\\frac13$, $\\frac{p(p-1)}{2}=\\frac{\\frac13\\cdot(-\\frac23)}{2}=-\\frac19$:\n\\begin{align*}\n\\sqrt[3]{1-3x+x^2}&amp;=1+\\frac13(-3x+x^2)-\\frac19(-3x+x^2)^2+o(x^2)\\\\\n&amp;=1-x+\\frac{x^2}{3}-\\frac19\\left(9x^2-6x^3+x^4\\right)+o(x^2)=1-x-\\frac{2x^2}{3}+o(x^2).\n\\end{align*}\nלכן\n\\[ \\frac{\\sqrt{1-2x+x^3}-\\sqrt[3]{1-3x+x^2}}{x^2}=\\frac{\\left(-\\frac12+\\frac23\\right)x^2+o(x^2)}{x^2}=\\frac16+\\frac{o(x^2)}{x^2}\\xrightarrow[x\\to0]{}\\frac16. \\]\n\\[ \\boxed{\\lim_{x\\to0}\\frac{\\sqrt{1-2x+x^3}-\\sqrt[3]{1-3x+x^2}}{x^2}=\\frac16} \\]</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1478,6 +1553,7 @@ window.BANK = {
     "<p>התבוננו בפונקציה $g(x)=\\arcsin x-x$ ובנגזרת שלה.</p>"
    ],
    "solution": "<p>אי-השוויון $0&lt;x$ ברור עבור $x\\in(0,1]$. נותר להוכיח $x&lt;\\arcsin x$.</p>\n<p>נגדיר $g(x)=\\arcsin x-x$ בקטע $[0,1]$. הפונקציה רציפה ב-$[0,1]$ וגזירה ב-$(0,1)$, עם\n\\[ g'(x)=\\frac{1}{\\sqrt{1-x^2}}-1&gt;0 \\quad\\text{לכל } x\\in(0,1), \\]\nכי $0&lt;\\sqrt{1-x^2}&lt;1$ שם.</p>\n<p>יהי $b\\in(0,1]$. לפי משפט לגרנז' עבור $g$ בקטע $[0,b]$ קיימת נקודה $c\\in(0,b)$ כך ש-\n\\[ g(b)-g(0)=g'(c)\\,(b-0). \\]\nכיוון ש-$g(0)=\\arcsin0-0=0$, $g'(c)&gt;0$ ו-$b&gt;0$, נקבל $g(b)&gt;0$, כלומר $\\arcsin b&gt;b$.</p>\n<p>לכן $0&lt;x&lt;\\arcsin x$ לכל $x\\in(0,1]$. $\\blacksquare$</p>\n<p>(הפתרון הרשמי מנוסח בדרך השלילה: מניחים $\\arcsin b\\le b$, ומלגרנז' מקבלים $\\frac{1}{\\sqrt{1-c^2}}=\\frac{\\arcsin b}{b}\\le1$, בסתירה ל-$\\frac{1}{\\sqrt{1-c^2}}&gt;1$. זו אותה הוכחה.)</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1504,6 +1580,7 @@ window.BANK = {
     "<p>לאסימפטוטה המשופעת: $a=\\lim\\frac{f(x)}{x}$, ואז $b=\\lim(f(x)-ax)$. בחישוב $b$ הופיע הגבול $\\lim_{x\\to\\infty}x\\left(e^{1/x}-1\\right)$.</p>"
    ],
    "solution": "<strong>1. תיאור כללי.</strong>\n\n<ul>\n<li>\n<strong>תחום הגדרה:</strong> $x\\neq0$.\n  \n</li>\n<li>\n<strong>נקודות חיתוך עם הצירים:</strong> אין חיתוך עם ציר $y$ כי $0$ אינו בתחום. $f(x)=0\\iff x+2=0$ (כי $e^{1/x}&gt;0$), ולכן החיתוך עם ציר $x$ הוא $(-2,0)$.\n  \n</li>\n<li>\n<strong>זוגיות:</strong> $f(-1)=e^{-1}$, $f(1)=3e$, ולכן $f$ אינה זוגית ואינה אי-זוגית. היא גם אינה מחזורית.\n  \n</li>\n<li>\n<strong>סימן:</strong> כיוון ש-$e^{1/x}&gt;0$, הסימן של $f$ הוא סימן $x+2$: $f(x)&gt;0$ עבור $x&gt;-2$ ($x\\neq0$), ו-$f(x)&lt;0$ עבור $x&lt;-2$.\n\n</li>\n</ul>\n<p><strong>2. רציפות.</strong> $f$ אלמנטרית ולכן רציפה בכל תחום הגדרתה. בנקודה $x=0$:\n\\[ \\lim_{x\\to0^-}(x+2)e^{1/x}=2\\cdot0=0,\\qquad \\lim_{x\\to0^+}(x+2)e^{1/x}=2\\cdot(+\\infty)=+\\infty, \\]\nכי $\\frac1x\\to\\mp\\infty$. לכן ב-$x=0$ יש נקודת אי-רציפות מסוג שני.</p>\n<p><strong>3. אסימפטוטות.</strong></p>\n<ul>\n<li>\n<strong>אנכית:</strong> $x=0$ (מימין), כי $\\lim_{x\\to0^+}f(x)=+\\infty$. משמאל הגרף שואף לנקודה $(0,0)$ (שאינה בגרף).\n  \n</li>\n<li>\n<strong>משופעת</strong> $y=ax+b$ כאשר $x\\to\\pm\\infty$:\n  \\[ a=\\lim_{x\\to\\pm\\infty}\\frac{f(x)}{x}=\\lim_{x\\to\\pm\\infty}\\left(1+\\frac2x\\right)e^{1/x}=1\\cdot e^0=1. \\]\n  \\[ b=\\lim_{x\\to\\pm\\infty}\\left(f(x)-x\\right)=\\lim_{x\\to\\pm\\infty}\\left(x\\left(e^{1/x}-1\\right)+2e^{1/x}\\right). \\]\n  נציב $t=\\frac1x\\to0$: $x\\left(e^{1/x}-1\\right)=\\frac{e^t-1}{t}\\to1$ (גבול מפורסם, או לופיטל: $\\frac{e^t}{1}\\to1$). כמו כן $2e^{1/x}\\to2$. לכן $b=1+2=3$.\n\n  האסימפטוטה המשופעת היא $y=x+3$, גם כאשר $x\\to\\infty$ וגם כאשר $x\\to-\\infty$. בפרט $\\lim_{x\\to\\pm\\infty}f(x)=\\pm\\infty$.\n\n</li>\n</ul>\n<p><strong>4. עלייה, ירידה וקיצון.</strong>\n\\[ f'(x)=e^{1/x}+(x+2)e^{1/x}\\cdot\\left(-\\frac{1}{x^2}\\right)=e^{1/x}\\left(1-\\frac{x+2}{x^2}\\right)=e^{1/x}\\cdot\\frac{x^2-x-2}{x^2}=e^{1/x}\\cdot\\frac{(x-2)(x+1)}{x^2}. \\]\nכיוון ש-$e^{1/x}&gt;0$ ו-$x^2&gt;0$, סימן $f'$ הוא סימן $(x-2)(x+1)$:</p>\n<ul>\n<li>\n$f'&gt;0$ ב-$(-\\infty,-1)$ וב-$(2,\\infty)$ — $f$ עולה שם;\n</li>\n<li>\n$f'&lt;0$ ב-$(-1,0)$ וב-$(0,2)$ — $f$ יורדת שם.\n</li>\n</ul>\n<p>לכן ב-$x=-1$ יש מקסימום מקומי, $f(-1)=1\\cdot e^{-1}=\\frac1e$, וב-$x=2$ יש מינימום מקומי, $f(2)=4e^{1/2}=4\\sqrt e$.</p>\n<p><strong>5. קמירות ונקודות פיתול.</strong> גוזרים את $f'(x)=e^{1/x}\\cdot\\frac{x^2-x-2}{x^2}=e^{1/x}\\left(1-\\frac1x-\\frac2{x^2}\\right)$:\n\\[ f''(x)=e^{1/x}\\left(-\\frac1{x^2}\\right)\\left(1-\\frac1x-\\frac2{x^2}\\right)+e^{1/x}\\left(\\frac1{x^2}+\\frac4{x^3}\\right)\n=e^{1/x}\\cdot\\frac{-x^2+x+2+x^2+4x}{x^4}=e^{1/x}\\cdot\\frac{5x+2}{x^4}. \\]\nסימן $f''$ הוא סימן $5x+2$. לכן $f$ קמורה (כלפי מעלה, $f''&gt;0$) ב-$\\left(-\\frac25,0\\right)$ וב-$(0,\\infty)$, וקעורה (כלפי מטה) ב-$\\left(-\\infty,-\\frac25\\right)$. ב-$x=-\\frac25$ הנגזרת השנייה מחליפה סימן ו-$f$ רציפה, ולכן זו נקודת פיתול:\n\\[ \\left(-\\frac25,\\ f\\left(-\\frac25\\right)\\right)=\\left(-\\frac25,\\ \\frac85e^{-5/2}\\right). \\]</p>\n<p><strong>6. סקיצה.</strong> משמאל לציר $y$: כאשר $x\\to-\\infty$ הגרף נמצא מתחת לאסימפטוטה $y=x+3$ ומתקרב אליה (כי $f(x)-(x+3)=\\frac{5}{2x}+O\\left(\\frac1{x^2}\\right)$), הוא עולה וקעור, חותך את ציר $x$ ב-$(-2,0)$, מגיע למקסימום מקומי $\\left(-1,\\frac1e\\right)$, ואחר כך יורד; בנקודת הפיתול $x=-\\frac25$ הוא הופך לקמור וממשיך לרדת אל הנקודה $(0,0)$ (שאינה שייכת לגרף). מימין לציר $y$: הגרף יורד מ-$+\\infty$ (אסימפטוטה אנכית $x=0$) עד למינימום $(2,4\\sqrt e)\\approx(2,\\,6.6)$, ואחר כך עולה ומתקרב מלמעלה לאסימפטוטה $y=x+3$; בתחום זה הוא קמור.</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1528,6 +1605,7 @@ window.BANK = {
     "<p>כתבו את המונה כצירוף של נגזרת המכנה $2x-1$ וקבוע, והשלימו את המכנה לריבוע.</p>"
    ],
    "solution": "<p>למכנה $x^2-x+1$ אין שורשים ממשיים (הדיסקרימיננטה $1-4=-3&lt;0$), ולכן $x^2-x+1&gt;0$ לכל $x$. נפרק את המונה לפי נגזרת המכנה $(x^2-x+1)'=2x-1$:\n\\[ 3x-1=\\frac32(2x-1)+\\frac12. \\]\nלכן\n\\[ \\int\\frac{3x-1}{x^2-x+1}\\,dx=\\frac32\\int\\frac{2x-1}{x^2-x+1}\\,dx+\\frac12\\int\\frac{dx}{\\left(x-\\frac12\\right)^2+\\frac34}. \\]\nבאינטגרל הראשון נציב $u=x^2-x+1$, $du=(2x-1)\\,dx$:\n\\[ \\frac32\\int\\frac{du}{u}=\\frac32\\ln|u|=\\frac32\\ln\\left(x^2-x+1\\right). \\]\nבשני נציב $v=x-\\frac12$, $dv=dx$, ונשתמש ב-$\\int\\frac{dv}{v^2+a^2}=\\frac1a\\arctan\\frac va$ עם $a=\\frac{\\sqrt3}{2}$:\n\\[ \\frac12\\int\\frac{dv}{v^2+\\frac34}=\\frac12\\cdot\\frac{2}{\\sqrt3}\\arctan\\frac{2v}{\\sqrt3}=\\frac{1}{\\sqrt3}\\arctan\\frac{2x-1}{\\sqrt3}. \\]\nלסיכום\n\\[ \\boxed{\\int\\frac{3x-1}{x^2-x+1}\\,dx=\\frac32\\ln\\left(x^2-x+1\\right)+\\frac{1}{\\sqrt3}\\arctan\\frac{2x-1}{\\sqrt3}+C} \\]\n(אין צורך בערך מוחלט בתוך ה-$\\ln$ כי $x^2-x+1&gt;0$.) בדיקה בגזירה: $\\frac32\\cdot\\frac{2x-1}{x^2-x+1}+\\frac1{\\sqrt3}\\cdot\\frac{2/\\sqrt3}{1+\\frac{(2x-1)^2}{3}}=\\frac{3x-\\frac32}{x^2-x+1}+\\frac{2}{4x^2-4x+4}=\\frac{3x-1}{x^2-x+1}$.</p>\n<p><strong>הערה:</strong> בפתרון הרשמי המקדם של ה-$\\arctan$ רשום $\\frac{2}{\\sqrt3}$; זו טעות (נשכח הגורם $\\frac12$), והמקדם הנכון הוא $\\frac1{\\sqrt3}$.</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1552,6 +1630,7 @@ window.BANK = {
     "<p>הציבו $u=x^2$.</p>"
    ],
    "solution": "<p>לפי ההגדרה, $\\int_0^\\infty\\frac{x}{e^{x^2}}\\,dx=\\lim_{b\\to\\infty}\\int_0^b xe^{-x^2}\\,dx$, אם הגבול קיים. נציב $u=x^2$, $du=2x\\,dx$ (כאשר $x$ עובר מ-$0$ ל-$b$, $u$ עובר מ-$0$ ל-$b^2$):\n\\[ \\int_0^b xe^{-x^2}\\,dx=\\frac12\\int_0^{b^2}e^{-u}\\,du=\\frac12\\left[-e^{-u}\\right]_0^{b^2}=\\frac12\\left(1-e^{-b^2}\\right). \\]\nכאשר $b\\to\\infty$, $e^{-b^2}\\to0$, ולכן הגבול קיים וסופי:\n\\[ \\boxed{\\int_0^\\infty\\frac{x}{e^{x^2}}\\,dx=\\frac12} \\]\nכלומר האינטגרל מתכנס וערכו $\\frac12$.</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1577,6 +1656,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\tan^2x=\\frac{1}{\\cos^2x}-1$.</p>"
    ],
    "solution": "<p>נפח גוף הסיבוב סביב ציר $x$ הוא $V=\\pi\\int_a^b f^2(x)\\,dx$. לכן, בעזרת $\\tan^2x=\\frac1{\\cos^2x}-1$:\n\\[ V=\\pi\\int_0^{\\pi/4}\\tan^2x\\,dx=\\pi\\int_0^{\\pi/4}\\left(\\frac1{\\cos^2x}-1\\right)dx=\\pi\\Big[\\tan x-x\\Big]_0^{\\pi/4}=\\pi\\left(1-\\frac\\pi4\\right). \\]\n\\[ \\boxed{V=\\pi-\\frac{\\pi^2}{4}} \\]</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1602,6 +1682,7 @@ window.BANK = {
     "<p>אורך עקומה בקואורדינטות קטביות הוא $\\int_\\alpha^\\beta\\sqrt{r^2+\\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta$. בדקו שהביטוי מתחת לשורש הוא ריבוע שלם.</p>"
    ],
    "solution": "<p>אורך עקומה בקואורדינטות קטביות $r=f(\\theta)$, $\\alpha\\le\\theta\\le\\beta$:\n\\[ L=\\int_\\alpha^\\beta\\sqrt{r^2+\\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta. \\]\nכאן $\\frac{dr}{d\\theta}=2\\theta$, ולכן\n\\[ r^2+\\left(\\frac{dr}{d\\theta}\\right)^2=(\\theta^2-1)^2+4\\theta^2=\\theta^4-2\\theta^2+1+4\\theta^2=\\theta^4+2\\theta^2+1=(\\theta^2+1)^2. \\]\nמכיוון ש-$\\theta^2+1&gt;0$, $\\sqrt{(\\theta^2+1)^2}=\\theta^2+1$, ו-\n\\[ L=\\int_1^9(\\theta^2+1)\\,d\\theta=\\left[\\frac{\\theta^3}{3}+\\theta\\right]_1^9=\\left(243+9\\right)-\\left(\\frac13+1\\right)=252-\\frac43=\\frac{752}{3}. \\]\n\\[ \\boxed{L=\\frac{752}{3}=250\\tfrac23} \\]\n<strong>הערה:</strong> בפתרון הרשמי נכתב $252-\\frac13+1=252\\frac23$ — טעות סימן בהצבת הגבול התחתון; הערך הנכון הוא $252-\\left(\\frac13+1\\right)=250\\frac23$.</p>",
+   "src": "מועד א' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד א"
   },
   {
@@ -1626,6 +1707,7 @@ window.BANK = {
     "<p>הכפילו וחלקו בצמוד $\\sqrt{(n^2+2)(n^2-4)}+\\sqrt{n^4-7}$.</p>"
    ],
    "solution": "<p>לכל $n\\ge2$ שני השורשים מוגדרים. נכפיל ונחלק בצמוד:\n\\[ \\sqrt{(n^2+2)(n^2-4)}-\\sqrt{n^4-7}=\\frac{(n^2+2)(n^2-4)-(n^4-7)}{\\sqrt{(n^2+2)(n^2-4)}+\\sqrt{n^4-7}}. \\]\nבמונה: $(n^2+2)(n^2-4)=n^4-2n^2-8$, ולכן המונה הוא $n^4-2n^2-8-n^4+7=-2n^2-1$. נחלק מונה ומכנה ב-$n^2$:\n\\[ \\frac{-2n^2-1}{\\sqrt{(n^2+2)(n^2-4)}+\\sqrt{n^4-7}}=\\frac{-2-\\frac1{n^2}}{\\sqrt{\\left(1+\\frac2{n^2}\\right)\\left(1-\\frac4{n^2}\\right)}+\\sqrt{1-\\frac7{n^4}}}. \\]\nמאריתמטיקה של גבולות ורציפות השורש, המונה שואף ל-$-2$ והמכנה ל-$1+1=2$. לכן\n\\[ \\boxed{\\lim_{n\\to\\infty}\\left(\\sqrt{(n^2+2)(n^2-4)}-\\sqrt{n^4-7}\\right)=-1} \\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1651,6 +1733,7 @@ window.BANK = {
     "<p>זהו ביטוי מהצורה $\\frac00$; הפעילו את כלל לופיטל ופשטו את מנת הנגזרות.</p>"
    ],
    "solution": "<p>כאשר $x\\to1^-$: $\\arcsin x\\to\\frac\\pi2$ (רציפות), ולכן המונה שואף ל-$0$; גם המכנה $\\sqrt[3]{1-x^2}\\to0$. זהו ביטוי מהצורה $\\frac00$. בקטע $(0,1)$ שתי הפונקציות גזירות:\n\\[ \\left(\\frac\\pi2-\\arcsin x\\right)'=-\\frac{1}{\\sqrt{1-x^2}},\\qquad \\left((1-x^2)^{1/3}\\right)'=\\frac13(1-x^2)^{-2/3}\\cdot(-2x)=-\\frac{2x}{3(1-x^2)^{2/3}}\\neq0. \\]\nמנת הנגזרות:\n\\[ \\frac{-\\frac{1}{(1-x^2)^{1/2}}}{-\\frac{2x}{3(1-x^2)^{2/3}}}=\\frac{3(1-x^2)^{2/3}}{2x(1-x^2)^{1/2}}=\\frac{3(1-x^2)^{1/6}}{2x}\\xrightarrow[x\\to1^-]{}\\frac{3\\cdot0}{2}=0. \\]\nגבול מנת הנגזרות קיים, ולכן לפי כלל לופיטל\n\\[ \\boxed{\\lim_{x\\to1^-}\\frac{\\frac\\pi2-\\arcsin x}{\\sqrt[3]{1-x^2}}=0} \\]\n(אינטואיציה: $\\frac\\pi2-\\arcsin x=\\arccos x\\approx\\sqrt{2(1-x)}$, שהוא \"גדול פחות\" מ-$\\sqrt[3]{1-x^2}\\approx\\sqrt[3]{2(1-x)}$.)</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1677,6 +1760,7 @@ window.BANK = {
     "<p>בנקודות $x=\\pm1$ גם המונה מתאפס — השתמשו בגבול $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ או בלופיטל. ב-$x=0$ השתמשו בכך ש-$x\\ln|x|\\to0$.</p>"
    ],
    "solution": "<strong>תחום ההגדרה:</strong> $\\ln|x|$ מוגדר עבור $x\\neq0$, והמכנה מתאפס עבור $x=\\pm1$. לכן $f$ מוגדרת עבור $x\\notin\\{0,1,-1\\}$, ושם היא רציפה כמנה של פונקציות רציפות עם מכנה שונה מאפס. נקודות אי-הרציפות הן $x=0,\\,1,\\,-1$.\n\n<strong>$x=0$:</strong> ידוע ש-$\\lim_{x\\to0}x\\ln|x|=0$ (למשל בלופיטל: $\\lim_{x\\to0^+}\\frac{\\ln x}{1/x}=\\lim_{x\\to0^+}\\frac{1/x}{-1/x^2}=\\lim_{x\\to0^+}(-x)=0$, ומשמאל זה אותו דבר כי $x\\ln|x|$ אי-זוגית). המכנה שואף ל-$-1$. לכן\n\\[ \\lim_{x\\to0}f(x)=\\frac{0}{-1}=0. \\]\nהגבול קיים וסופי אך $f$ אינה מוגדרת ב-$0$: <strong>אי-רציפות סליקה</strong>.\n\n<strong>$x=1$:</strong> בסביבת $1$, $|x|=x$, והביטוי מהצורה $\\frac00$. נכתוב\n\\[ f(x)=\\frac{x}{x+1}\\cdot\\frac{\\ln x}{x-1}. \\]\nנציב $t=x-1\\to0$: $\\frac{\\ln x}{x-1}=\\frac{\\ln(1+t)}{t}\\to1$ (גבול מפורסם). לכן\n\\[ \\lim_{x\\to1}f(x)=\\frac{1}{2}\\cdot1=\\frac12. \\]\n<strong>אי-רציפות סליקה</strong>.\n\n<strong>$x=-1$:</strong> נשים לב ש-$f(-x)=\\frac{-x\\ln|x|}{x^2-1}=-f(x)$, כלומר $f$ אי-זוגית. לכן\n\\[ \\lim_{x\\to-1}f(x)=-\\lim_{x\\to1}f(x)=-\\frac12. \\]\n(או ישירות: בסביבת $-1$, $f(x)=\\frac{x}{x-1}\\cdot\\frac{\\ln(-x)}{x+1}$, ועם $t=-x-1\\to0$: $\\frac{\\ln(-x)}{x+1}=\\frac{\\ln(1+t)}{-t}\\to-1$, ו-$\\frac{x}{x-1}\\to\\frac12$.)\n<strong>אי-רציפות סליקה</strong>.\n\n<strong>סיכום:</strong> שלוש נקודות אי-הרציפות $x=0,1,-1$ כולן סליקות; ניתן להגדיר $f(0)=0$, $f(1)=\\frac12$, $f(-1)=-\\frac12$ ולקבל פונקציה רציפה על כל $\\R$.",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1702,6 +1786,7 @@ window.BANK = {
     "<p>המקדם של $x^{11}$ בפולינום מקלורין של $f$ שווה ל-$\\frac{f^{(11)}(0)}{11!}$. איזה איבר בפיתוח של $\\ln(1+x)$ תורם ל-$x^{11}$ אחרי הכפלה ב-$x^2$?</p>"
    ],
    "solution": "<p>פיתוח מקלורין של $\\ln(1+x)$:\n\\[ \\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}-\\dots+(-1)^{n-1}\\frac{x^n}{n}+o(x^n). \\]\nנכפיל ב-$x^2$ (עם $n=9$):\n\\[ f(x)=x^2\\ln(1+x)=x^3-\\frac{x^4}{2}+\\frac{x^5}{3}-\\dots+(-1)^{8}\\frac{x^{11}}{9}+o(x^{11}). \\]\nזהו פולינום ממעלה $\\le 11$ ועוד $o(x^{11})$, ולכן לפי יחידות פולינום טיילור הוא פולינום מקלורין מסדר $11$ של $f$ ($f$ גזירה אינסוף פעמים בסביבת $0$). המקדם של $x^{11}$ בפולינום מקלורין הוא $\\frac{f^{(11)}(0)}{11!}$, ולכן\n\\[ \\frac{f^{(11)}(0)}{11!}=\\frac19\\quad\\Longrightarrow\\quad f^{(11)}(0)=\\frac{11!}{9}=\\frac{39916800}{9}=4435200. \\]\n\\[ \\boxed{f^{(11)}(0)=\\frac{11!}{9}=4435200} \\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1727,6 +1812,7 @@ window.BANK = {
     "<p>קיום — משפט ערך הביניים. יחידות — הראו שהנגזרת חיובית תמיד.</p>"
    ],
    "solution": "<p>יהי $p(x)=x^3-4x^2+7x+13$.</p>\n<p><strong>קיום:</strong> $p$ רציף (פולינום). $p(-2)=-8-16-14+13=-25&lt;0$ ו-$p(0)=13&gt;0$. לפי משפט ערך הביניים קיים $c\\in(-2,0)$ עם $p(c)=0$.</p>\n<p><strong>יחידות:</strong> $p'(x)=3x^2-8x+7$. הדיסקרימיננטה היא $64-84=-20&lt;0$ והמקדם המוביל חיובי, ולכן $p'(x)&gt;0$ לכל $x\\in\\R$. מכאן $p$ עולה ממש על $\\R$ (מסקנה ממשפט לגרנז'), ולכן אינה יכולה לקבל את הערך $0$ פעמיים.</p>\n<p>(לחלופין: אם היו שני שורשים $a&lt;b$, לפי משפט רול היה $c\\in(a,b)$ עם $p'(c)=0$, סתירה.)</p>\n<p>לכן לפולינום שורש ממשי אחד ויחיד (הנמצא בקטע $(-2,0)$; בקירוב $c\\approx-1.054$). $\\blacksquare$</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1752,6 +1838,7 @@ window.BANK = {
     "<p>הפונקציה זוגית — מספיק לחקור אותה עבור $x\\ge0$.</p>"
    ],
    "solution": "<strong>1. תיאור כללי.</strong>\n\n<ul>\n<li>\n<strong>תחום הגדרה:</strong> כל $\\R$.\n  \n</li>\n<li>\n<strong>חיתוך עם הצירים:</strong> $f(x)=0\\iff x=0$ (כי $e^{-x^2}&gt;0$). נקודת החיתוך היחידה היא $(0,0)$.\n  \n</li>\n<li>\n<strong>זוגיות:</strong> $f(-x)=(-x)^2e^{-(-x)^2}=f(x)$, כלומר $f$ זוגית והגרף סימטרי ביחס לציר $y$. היא אינה מחזורית.\n  \n</li>\n<li>\n<strong>סימן:</strong> $f(x)\\ge0$ לכל $x$, ושוויון רק ב-$x=0$.\n\n</li>\n</ul>\n<p><strong>2. רציפות:</strong> $f$ אלמנטרית ומוגדרת על כל $\\R$, ולכן רציפה בכל $\\R$ (ואין אסימפטוטות אנכיות).</p>\n<p><strong>3. התנהגות באינסוף ואסימפטוטות:</strong>\n\\[ \\lim_{x\\to\\pm\\infty}x^2e^{-x^2}=\\lim_{t\\to\\infty}\\frac{t}{e^t}=0 \\]\n(הצבנו $t=x^2$; הגבול $\\frac{t}{e^t}\\to0$ — גבול מוכר, או לופיטל: $\\frac{1}{e^t}\\to0$). לכן $y=0$ אסימפטוטה אופקית ב-$\\pm\\infty$.</p>\n<p><strong>4. עלייה, ירידה וקיצון:</strong>\n\\[ f'(x)=2xe^{-x^2}+x^2e^{-x^2}(-2x)=2xe^{-x^2}(1-x^2)=-2x(x-1)(x+1)e^{-x^2}. \\]\nנקודות קריטיות: $x=0,\\pm1$. סימן $f'$ הוא סימן $x(1-x^2)$:</p>\n<ul>\n<li>\nב-$(-\\infty,-1)$: $f'&gt;0$, $f$ עולה;\n</li>\n<li>\nב-$(-1,0)$: $f'&lt;0$, $f$ יורדת;\n</li>\n<li>\nב-$(0,1)$: $f'&gt;0$, $f$ עולה;\n</li>\n<li>\nב-$(1,\\infty)$: $f'&lt;0$, $f$ יורדת.\n</li>\n</ul>\n<p>לכן: ב-$x=\\pm1$ מקסימום מקומי (וגם מוחלט), $f(\\pm1)=e^{-1}=\\frac1e$; ב-$x=0$ מינימום מקומי (וגם מוחלט), $f(0)=0$. טווח הפונקציה הוא $\\left[0,\\frac1e\\right]$ (מרציפות, ממשפט ערך הביניים, ומכך ש-$f\\to0$ באינסוף).</p>\n<p><strong>5. קמירות ונקודות פיתול:</strong>\n\\[ f''(x)=\\left(2(x-x^3)e^{-x^2}\\right)'=2(1-3x^2)e^{-x^2}+2(x-x^3)(-2x)e^{-x^2}=2e^{-x^2}\\left(2x^4-5x^2+1\\right). \\]\n$f''(x)=0\\iff 2x^4-5x^2+1=0\\iff x^2=\\frac{5\\pm\\sqrt{17}}{4}$. נסמן\n\\[ x_1=\\sqrt{\\tfrac{5-\\sqrt{17}}{4}}\\approx0.468,\\qquad x_2=\\sqrt{\\tfrac{5+\\sqrt{17}}{4}}\\approx1.510. \\]\nהפולינום $2s^2-5s+1$ (עם $s=x^2$) חיובי מחוץ לשורשיו ושלילי ביניהם, לכן:</p>\n<ul>\n<li>\n$f''&gt;0$ (קמורה, \"כלפי מעלה\") עבור $|x|&lt;x_1$ ועבור $|x|&gt;x_2$;\n</li>\n<li>\n$f''&lt;0$ (קעורה, \"כלפי מטה\") עבור $x_1&lt;|x|&lt;x_2$.\n</li>\n</ul>\n<p>ארבע נקודות פיתול: $x=\\pm x_1$ עם $f(\\pm x_1)=\\frac{5-\\sqrt{17}}{4}e^{-\\frac{5-\\sqrt{17}}{4}}\\approx0.176$, ו-$x=\\pm x_2$ עם $f(\\pm x_2)=\\frac{5+\\sqrt{17}}{4}e^{-\\frac{5+\\sqrt{17}}{4}}\\approx0.233$.</p>\n<p><strong>6. סקיצה:</strong> גרף בצורת \"גבנון כפול\" סימטרי ביחס לציר $y$: יוצא מ-$y=0$ ב-$-\\infty$ (מעל הציר), עולה למקסימום $\\left(-1,\\frac1e\\right)$, יורד למינימום $(0,0)$ (שם הגרף משיק לציר $x$), עולה שוב למקסימום $\\left(1,\\frac1e\\right)$ ויורד ושואף ל-$0$ כאשר $x\\to\\infty$. הקמירות מתחלפת בנקודות $\\pm0.468$ ו-$\\pm1.510$.</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1774,6 +1861,7 @@ window.BANK = {
    "question": "<p>{(10 נק')} חשבו את האינטגרל $\\displaystyle\\int(4-x^2)^{-3/2}\\,dx$. &emsp;[<u>רמז</u>: אפשר להציב $x=2\\sin\\theta$.]</p>",
    "hints": [],
    "solution": "<p>האינטגרנד מוגדר עבור $|x|&lt;2$. נציב $x=2\\sin\\theta$ עם $\\theta\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$; אז $dx=2\\cos\\theta\\,d\\theta$ ו-$\\cos\\theta&gt;0$, ולכן\n\\[ 4-x^2=4-4\\sin^2\\theta=4\\cos^2\\theta,\\qquad (4-x^2)^{3/2}=8\\cos^3\\theta. \\]\n\\[ \\int(4-x^2)^{-3/2}\\,dx=\\int\\frac{2\\cos\\theta}{8\\cos^3\\theta}\\,d\\theta=\\frac14\\int\\frac{d\\theta}{\\cos^2\\theta}=\\frac14\\tan\\theta+C. \\]\nנחזור למשתנה $x$: $\\sin\\theta=\\frac x2$, $\\cos\\theta=\\sqrt{1-\\frac{x^2}{4}}=\\frac{\\sqrt{4-x^2}}{2}$, ולכן $\\tan\\theta=\\frac{x}{\\sqrt{4-x^2}}$.\n\\[ \\boxed{\\int(4-x^2)^{-3/2}\\,dx=\\frac{x}{4\\sqrt{4-x^2}}+C} \\]\nבדיקה: $\\left(\\frac{x}{4\\sqrt{4-x^2}}\\right)'=\\frac14\\cdot\\frac{\\sqrt{4-x^2}+\\frac{x^2}{\\sqrt{4-x^2}}}{4-x^2}=\\frac14\\cdot\\frac{4}{(4-x^2)^{3/2}}=(4-x^2)^{-3/2}$.</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1800,6 +1888,7 @@ window.BANK = {
     "<p>שטח בקואורדינטות קטביות: $S=\\frac12\\int_\\alpha^\\beta r^2\\,d\\theta$, והשתמשו ב-$\\tan^2u=\\frac1{\\cos^2u}-1$.</p>"
    ],
    "solution": "<p>העקומה $r=\\tan\\frac\\theta2$ מוגדרת עבור $\\theta\\in(-\\pi,\\pi)$, ו-$r\\to\\pm\\infty$ כאשר $\\theta\\to\\pm\\pi$ (אלה שני הענפים). הנקודה הקרטזית היא $(r\\cos\\theta,\\ r\\sin\\theta)$.</p>\n<ul>\n<li>\n$\\theta=0$: $r=0$ — הראשית.\n</li>\n<li>\n$\\theta=\\frac\\pi2$: $r=\\tan\\frac\\pi4=1$, הנקודה $(0,1)$.\n</li>\n<li>\n$\\theta=-\\frac\\pi2$: $r=\\tan\\left(-\\frac\\pi4\\right)=-1$, הנקודה $(-1\\cdot\\cos(-\\frac\\pi2),\\,-1\\cdot\\sin(-\\frac\\pi2))=(0,1)$.\n</li>\n</ul>\n<p>כלומר העקומה עוברת בנקודה $(0,1)$ פעמיים, ב-$\\theta=\\pm\\frac\\pi2$: היא חותכת את עצמה שם. כאשר $\\theta$ עובר מ-$-\\frac\\pi2$ ל-$\\frac\\pi2$ העקומה יוצאת מ-$(0,1)$, עוברת דרך הראשית וחוזרת ל-$(0,1)$ — זו הלולאה. (עבור $\\theta\\in(-\\frac\\pi2,0)$, $r&lt;0$ והנקודות נמצאות ברביע השני; עבור $\\theta\\in(0,\\frac\\pi2)$ ברביע הראשון; הלולאה סימטרית ביחס לציר $y$.)</p>\n<p>השטח הכלוא בלולאה, לפי $S=\\frac12\\int_\\alpha^\\beta r^2\\,d\\theta$ (הנוסחה תקפה גם כאשר $r&lt;0$, כי $r^2$ הוא ריבוע המרחק מהראשית):\n\\[ S=\\frac12\\int_{-\\pi/2}^{\\pi/2}\\tan^2\\frac\\theta2\\,d\\theta=\\int_0^{\\pi/2}\\tan^2\\frac\\theta2\\,d\\theta \\]\n(האינטגרנד זוגי). עם $\\tan^2u=\\frac1{\\cos^2u}-1$:\n\\[ S=\\int_0^{\\pi/2}\\left(\\frac{1}{\\cos^2\\frac\\theta2}-1\\right)d\\theta=\\left[2\\tan\\frac\\theta2-\\theta\\right]_0^{\\pi/2}=2\\tan\\frac\\pi4-\\frac\\pi2=2-\\frac\\pi2. \\]\n\\[ \\boxed{S=2-\\frac\\pi2\\approx0.429} \\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1824,6 +1913,7 @@ window.BANK = {
     "<p>הציבו $u=e^x$.</p>"
    ],
    "solution": "<p>לפי ההגדרה $\\int_1^\\infty\\frac{e^x}{e^{e^x}}dx=\\lim_{b\\to\\infty}\\int_1^b e^xe^{-e^x}dx$. נציב $u=e^x$, $du=e^x\\,dx$; כאשר $x$ עובר מ-$1$ ל-$b$, $u$ עובר מ-$e$ ל-$e^b$:\n\\[ \\int_1^b e^xe^{-e^x}\\,dx=\\int_e^{e^b}e^{-u}\\,du=\\left[-e^{-u}\\right]_e^{e^b}=e^{-e}-e^{-e^b}. \\]\nכאשר $b\\to\\infty$: $e^b\\to\\infty$ ולכן $e^{-e^b}\\to0$. הגבול קיים וסופי, כלומר האינטגרל מתכנס:\n\\[ \\boxed{\\int_1^\\infty\\frac{e^x}{e^{e^x}}\\,dx=e^{-e}} \\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1849,6 +1939,7 @@ window.BANK = {
     "<p>שימו לב ש-$\\frac{1}{1+x^2}$ היא הנגזרת של $\\arctan x$, והציבו $u=\\arctan x$.</p>"
    ],
    "solution": "<p>$V=\\pi\\int_0^1 f^2(x)\\,dx=\\pi\\int_0^1\\frac{\\arctan^2x}{1+x^2}\\,dx$. נציב $u=\\arctan x$, $du=\\frac{dx}{1+x^2}$; כאשר $x$ עובר מ-$0$ ל-$1$, $u$ עובר מ-$0$ ל-$\\frac\\pi4$:\n\\[ V=\\pi\\int_0^{\\pi/4}u^2\\,du=\\pi\\left[\\frac{u^3}{3}\\right]_0^{\\pi/4}=\\pi\\cdot\\frac{1}{3}\\cdot\\frac{\\pi^3}{64}. \\]\n\\[ \\boxed{V=\\frac{\\pi^4}{192}} \\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ב"
   },
   {
@@ -1873,6 +1964,7 @@ window.BANK = {
     "<p>הוציאו $(n+2)!$ כגורם משותף במונה ובמכנה.</p>"
    ],
    "solution": "<p>נשתמש ב-$(n+4)!=(n+2)!\\,(n+3)(n+4)$ וב-$(n+5)!=(n+2)!\\,(n+3)(n+4)(n+5)$. נצמצם ב-$(n+2)!\\neq0$:\n\\[ \\frac{(n+4)!\\cdot n}{(n+5)!-(n+2)!}=\\frac{n(n+3)(n+4)}{(n+3)(n+4)(n+5)-1}. \\]\nבמונה ובמכנה פולינומים ממעלה $3$ עם מקדם מוביל $1$. נחלק ב-$n^3$:\n\\[ =\\frac{\\left(1+\\frac3n\\right)\\left(1+\\frac4n\\right)}{\\left(1+\\frac3n\\right)\\left(1+\\frac4n\\right)\\left(1+\\frac5n\\right)-\\frac1{n^3}}\\xrightarrow[n\\to\\infty]{}\\frac{1}{1-0}=1 \\]\nלפי אריתמטיקה של גבולות.\n\\[ \\boxed{\\lim_{n\\to\\infty}\\frac{(n+4)!\\cdot n}{(n+5)!-(n+2)!}=1} \\]</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -1898,6 +1990,7 @@ window.BANK = {
     "<p>כתבו $\\tan x\\ln(x^2)=\\frac{\\tan x}{x}\\cdot 2x\\ln|x|$.</p>"
    ],
    "solution": "<p>עבור $0&lt;|x|&lt;\\frac\\pi2$: $\\ln(x^2)=2\\ln|x|$, ולכן\n\\[ \\tan x\\ln(x^2)=\\frac{\\tan x}{x}\\cdot 2x\\ln|x|. \\]\nידוע ש-$\\lim_{x\\to0}\\frac{\\tan x}{x}=1$ (גבול מפורסם). כמו כן $\\lim_{x\\to0}x\\ln|x|=0$: עבור $x\\to0^+$ לפי לופיטל ($\\frac\\infty\\infty$)\n\\[ \\lim_{x\\to0^+}\\frac{\\ln x}{1/x}=\\lim_{x\\to0^+}\\frac{1/x}{-1/x^2}=\\lim_{x\\to0^+}(-x)=0, \\]\nועבור $x\\to0^-$ זה נובע מכך ש-$x\\ln|x|$ אי-זוגית. לכן\n\\[ \\boxed{\\lim_{x\\to0}\\tan x\\ln(x^2)=1\\cdot2\\cdot0=0} \\]</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -1923,6 +2016,7 @@ window.BANK = {
     "<p>המכנה מתאפס כאשר $x^3-x=0$. השתמשו בגבול $\\lim_{t\\to0}\\frac{e^t-1}{t}=1$ עם $t=x^3-x$.</p>"
    ],
    "solution": "<strong>תחום ההגדרה:</strong> $e^{x^3-x}-1=0\\iff x^3-x=0\\iff x(x-1)(x+1)=0$. לכן $f$ מוגדרת ורציפה (מנה של פונקציות רציפות) לכל $x\\notin\\{0,1,-1\\}$, ואלה נקודות אי-הרציפות.\n\nנסמן $t=t(x)=x^3-x$. עבור $x\\notin\\{0,1,-1\\}$:\n\\[ f(x)=\\frac{x^2-x}{x^3-x}\\cdot\\frac{x^3-x}{e^{x^3-x}-1}=\\frac{x(x-1)}{x(x-1)(x+1)}\\cdot\\frac{t}{e^t-1}=\\frac{1}{x+1}\\cdot\\frac{t}{e^t-1}. \\]\nכאשר $x\\to0$ או $x\\to\\pm1$, $t\\to0$ ו-$t\\neq0$, ולכן לפי הגבול המפורסם ומשפט הגבול של הרכבה $\\frac{t}{e^t-1}\\to1$.\n\n<strong>$x=0$:</strong> $\\lim_{x\\to0}f(x)=\\frac{1}{0+1}\\cdot1=1$. הגבול קיים וסופי — <strong>אי-רציפות סליקה</strong>.\n\n<strong>$x=1$:</strong> $\\lim_{x\\to1}f(x)=\\frac{1}{2}\\cdot1=\\frac12$ — <strong>אי-רציפות סליקה</strong>.\n\n<strong>$x=-1$:</strong> כאן המונה שואף ל-$(-1)^2-(-1)=2\\neq0$ והמכנה שואף ל-$0$. נבדוק סימנים: $x^3-x=x(x-1)(x+1)$, ובסביבת $-1$, $x(x-1)\\approx2&gt;0$. לכן\n\n<ul>\n<li>\nעבור $x\\to-1^+$: $x+1&gt;0$, $t\\to0^+$, $e^t-1\\to0^+$ ולכן $f(x)\\to+\\infty$;\n</li>\n<li>\nעבור $x\\to-1^-$: $x+1&lt;0$, $t\\to0^-$, $e^t-1\\to0^-$ ולכן $f(x)\\to-\\infty$.\n</li>\n</ul>\n<p>הגבולות החד-צדדיים אינסופיים — <strong>אי-רציפות מסוג שני</strong>.</p>\n<p><strong>סיכום:</strong> $x=0$ ו-$x=1$ — נקודות אי-רציפות סליקות (עם גבולות $1$ ו-$\\frac12$ בהתאמה); $x=-1$ — אי-רציפות מסוג שני.</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -1948,6 +2042,7 @@ window.BANK = {
     "<p>$1-\\cos u=\\frac{u^2}{2}+o(u^2)$, $\\ln(1+u)=u+o(u)$, $\\sin x=x+o(x)$. מה סדר הגודל של המונה ושל המכנה?</p>"
    ],
    "solution": "<p>פיתוחי מקלורין: $\\cos u=1-\\frac{u^2}{2}+o(u^2)$ עם $u=x^3$ נותן\n\\[ 1-\\cos(x^3)=\\frac{x^6}{2}+o(x^6). \\]\nכמו כן $\\ln(1+x^2)=x^2+o(x^2)$ ו-$\\sin x=x+o(x)$, ולכן $\\sin^2x=x^2+o(x^2)$. המכנה:\n\\[ x^2\\ln(1+x^2)\\sin^2x=x^2\\left(x^2+o(x^2)\\right)\\left(x^2+o(x^2)\\right)=x^6+o(x^6). \\]\nלכן\n\\[ \\frac{1-\\cos(x^3)}{x^2\\ln(1+x^2)\\sin^2x}=\\frac{\\frac12+\\frac{o(x^6)}{x^6}}{1+\\frac{o(x^6)}{x^6}}\\xrightarrow[x\\to0]{}\\frac12. \\]\n(באופן שקול: $\\frac{1-\\cos(x^3)}{x^6}\\to\\frac12$, $\\frac{\\ln(1+x^2)}{x^2}\\to1$, $\\frac{\\sin^2x}{x^2}\\to1$, ומפרקים את הביטוי למכפלה.)\n\\[ \\boxed{\\lim_{x\\to0}\\frac{1-\\cos(x^3)}{x^2\\ln(1+x^2)\\sin^2x}=\\frac12} \\]</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -1973,6 +2068,7 @@ window.BANK = {
     "<p>בין כל שני שורשים של $f$ יש שורש של $f'$ (משפט רול). הוכיחו בדרך השלילה.</p>"
    ],
    "solution": "<p>נניח בשלילה שלמשוואה $f(x)=0$ יש לפחות $k+2$ פתרונות שונים, ונסמן $k+2$ מהם $x_1&lt;x_2&lt;\\dots&lt;x_{k+2}$.</p>\n<p>לכל $i=1,\\dots,k+1$, הפונקציה $f$ רציפה בקטע $[x_i,x_{i+1}]$ וגזירה בקטע $(x_i,x_{i+1})$ (כי היא גזירה בכל $\\R$, ולכן גם רציפה), ו-$f(x_i)=f(x_{i+1})=0$. לפי <strong>משפט רול</strong> קיימת נקודה $c_i\\in(x_i,x_{i+1})$ כך ש-$f'(c_i)=0$.</p>\n<p>הקטעים $(x_1,x_2),(x_2,x_3),\\dots,(x_{k+1},x_{k+2})$ זרים בזוגות, ולכן $c_1&lt;c_2&lt;\\dots&lt;c_{k+1}$ הן $k+1$ נקודות שונות שבהן $f'=0$. זו סתירה להנחה שלמשוואה $f'(x)=0$ יש בדיוק $k$ פתרונות.</p>\n<p>לכן למשוואה $f(x)=0$ יש לכל היותר $k+1$ פתרונות. $\\blacksquare$</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -2000,6 +2096,7 @@ window.BANK = {
     "<p>באסימפטוטה המשופעת שימו לב ש-$\\sqrt{x^2}=|x|$, ולכן השיפועים ב-$+\\infty$ וב-$-\\infty$ שונים.</p>"
    ],
    "solution": "<strong>1. תיאור כללי.</strong>\n\n<ul>\n<li>\n<strong>תחום הגדרה:</strong> צריך $x\\neq1$ ו-$\\frac{x^3}{x-1}\\ge0$. סימן $x^3$ הוא סימן $x$, לכן המנה אי-שלילית כאשר $x\\le0$ (מונה $\\le0$, מכנה $&lt;0$) או $x&gt;1$ (שניהם חיוביים). התחום: $(-\\infty,0]\\cup(1,\\infty)$.\n  \n</li>\n<li>\n<strong>חיתוך עם הצירים:</strong> $f(x)=0\\iff x=0$. נקודת החיתוך היחידה (עם שני הצירים) היא $(0,0)$.\n  \n</li>\n<li>\n<strong>זוגיות/מחזוריות:</strong> התחום אינו סימטרי ביחס ל-$0$, ולכן $f$ אינה זוגית ואינה אי-זוגית; היא אינה מחזורית.\n  \n</li>\n<li>\n<strong>סימן:</strong> $f(x)\\ge0$ בכל התחום, ושוויון רק ב-$x=0$.\n\n</li>\n</ul>\n<p><strong>2. רציפות:</strong> $f$ היא הרכבה של פונקציות אלמנטריות, ולכן רציפה בכל תחום הגדרתה (ב-$x=0$ — רציפה משמאל). הנקודה $x=1$ אינה בתחום, וכאשר $x\\to1^+$: $x^3\\to1$, $x-1\\to0^+$, ולכן $f(x)\\to+\\infty$.</p>\n<p><strong>3. אסימפטוטות.</strong></p>\n<ul>\n<li>\n<strong>אנכית:</strong> $x=1$ (מימין).\n  \n</li>\n<li>\n<strong>כאשר $x\\to+\\infty$:</strong> $f(x)=\\sqrt{x^2\\cdot\\frac{x}{x-1}}=x\\sqrt{\\frac{x}{x-1}}$ (כי $x&gt;0$).\n  \\[ a=\\lim_{x\\to\\infty}\\frac{f(x)}{x}=\\lim_{x\\to\\infty}\\sqrt{\\frac{x}{x-1}}=1, \\]\n  \\[ b=\\lim_{x\\to\\infty}\\left(f(x)-x\\right)=\\lim_{x\\to\\infty}x\\left(\\sqrt{\\tfrac{x}{x-1}}-1\\right)=\\lim_{x\\to\\infty}\\frac{x\\left(\\frac{x}{x-1}-1\\right)}{\\sqrt{\\frac{x}{x-1}}+1}=\\lim_{x\\to\\infty}\\frac{\\frac{x}{x-1}}{\\sqrt{\\frac{x}{x-1}}+1}=\\frac{1}{2}. \\]\n  אסימפטוטה: $y=x+\\frac12$.\n  \n</li>\n<li>\n<strong>כאשר $x\\to-\\infty$:</strong> כאן $\\sqrt{x^2}=|x|=-x$, ולכן $f(x)=-x\\sqrt{\\frac{x}{x-1}}$.\n  \\[ a=\\lim_{x\\to-\\infty}\\frac{f(x)}{x}=-\\lim_{x\\to-\\infty}\\sqrt{\\frac{x}{x-1}}=-1, \\]\n  \\[ b=\\lim_{x\\to-\\infty}\\left(f(x)+x\\right)=\\lim_{x\\to-\\infty}(-x)\\left(\\sqrt{\\tfrac{x}{x-1}}-1\\right)=-\\lim_{x\\to-\\infty}\\frac{\\frac{x}{x-1}}{\\sqrt{\\frac{x}{x-1}}+1}=-\\frac12. \\]\n  אסימפטוטה: $y=-x-\\frac12$.\n\n</li>\n</ul>\n<p><strong>4. עלייה, ירידה וקיצון.</strong> נסמן $g(x)=\\frac{x^3}{x-1}$. אז\n\\[ g'(x)=\\frac{3x^2(x-1)-x^3}{(x-1)^2}=\\frac{x^2(2x-3)}{(x-1)^2}, \\]\nובנקודות שבהן $g(x)&gt;0$ (כלומר $x&lt;0$ או $x&gt;1$), לפי כלל השרשרת\n\\[ f'(x)=\\frac{g'(x)}{2\\sqrt{g(x)}}=\\frac{x^2(2x-3)}{2(x-1)^2\\sqrt{\\frac{x^3}{x-1}}}. \\]\nסימן $f'$ הוא סימן $2x-3$ (שאר הגורמים חיוביים):</p>\n<ul>\n<li>\nב-$(-\\infty,0)$: $2x-3&lt;0$ ולכן $f$ יורדת (ממש). כיוון ש-$f$ רציפה ב-$0$ משמאל, היא יורדת בכל $(-\\infty,0]$.\n</li>\n<li>\nב-$\\left(1,\\frac32\\right)$: $f'&lt;0$, $f$ יורדת.\n</li>\n<li>\nב-$\\left(\\frac32,\\infty\\right)$: $f'&gt;0$, $f$ עולה.\n</li>\n</ul>\n<p>לכן:</p>\n<ul>\n<li>\nב-$x=\\frac32$ מינימום מקומי: $f\\left(\\frac32\\right)=\\sqrt{\\frac{27/8}{1/2}}=\\sqrt{\\frac{27}{4}}=\\frac{3\\sqrt3}{2}\\approx2.6$.\n</li>\n<li>\nב-$x=0$ (קצה התחום משמאל) מינימום מקומי, ואף מוחלט, $f(0)=0$. הנגזרת החד-צדדית שם: $\\frac{f(x)-f(0)}{x}=\\frac{|x|^{3/2}}{x\\sqrt{1-x}}\\to0$ כאשר $x\\to0^-$, כלומר הגרף מגיע ל-$(0,0)$ באופן אופקי (משיק לציר $x$).\n</li>\n</ul>\n<p><strong>5. סקיצה.</strong> <em>ענף שמאלי</em> ($x\\le0$): הגרף יורד מ-$+\\infty$, קרוב מעל לאסימפטוטה $y=-x-\\frac12$ כאשר $x\\to-\\infty$, עד הנקודה $(0,0)$ שבה הוא מגיע משיק לציר $x$ ונעצר. <em>ענף ימני</em> ($x&gt;1$): הגרף יורד מ-$+\\infty$ (צמוד לאסימפטוטה האנכית $x=1$) עד המינימום $\\left(\\frac32,\\frac{3\\sqrt3}{2}\\right)$, ואחר כך עולה ומתקרב (מלמעלה) לאסימפטוטה $y=x+\\frac12$. בקטע $(0,1]$ אין גרף.</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -2024,6 +2121,7 @@ window.BANK = {
     "<p>מעלת המונה גדולה ממעלת המכנה — בצעו קודם חילוק פולינומים, ואז פרקו לשברים חלקיים מהצורה $\\frac{A}{x-1}+\\frac{B}{x+2}+\\frac{C}{(x+2)^2}$.</p>"
    ],
    "solution": "<p>המכנה: $(x-1)(x+2)^2=(x-1)(x^2+4x+4)=x^3+3x^2-4$. מעלת המונה ($4$) גדולה ממעלת המכנה ($3$), לכן נחלק פולינומים:\n\\[ (x+1)(x^3+3x^2-4)=x^4+4x^3+3x^2-4x-4, \\]\nולכן\n\\[ x^4+4x^3+4x^2+8x+1=(x+1)(x^3+3x^2-4)+(x^2+12x+5). \\]\nכלומר\n\\[ \\frac{x^4+4x^3+4x^2+8x+1}{(x-1)(x+2)^2}=x+1+\\frac{x^2+12x+5}{(x-1)(x+2)^2}. \\]\nפירוק לשברים חלקיים:\n\\[ \\frac{x^2+12x+5}{(x-1)(x+2)^2}=\\frac{A}{x-1}+\\frac{B}{x+2}+\\frac{C}{(x+2)^2}, \\]\n\\[ x^2+12x+5=A(x+2)^2+B(x-1)(x+2)+C(x-1). \\]</p>\n<ul>\n<li>\n$x=1$: $18=9A$, כלומר $A=2$.\n</li>\n<li>\n$x=-2$: $4-24+5=-15=-3C$, כלומר $C=5$.\n</li>\n<li>\nהשוואת מקדמי $x^2$: $1=A+B$, כלומר $B=-1$.\n</li>\n</ul>\n<p>(בדיקה, מקדם חופשי: $4A-2B-C=8+2-5=5$, כנדרש.) לכן\n\\[ \\int\\frac{x^4+4x^3+4x^2+8x+1}{(x-1)(x+2)^2}\\,dx=\\int\\left(x+1+\\frac{2}{x-1}-\\frac{1}{x+2}+\\frac{5}{(x+2)^2}\\right)dx \\]\n\\[ \\boxed{=\\frac{x^2}{2}+x+2\\ln|x-1|-\\ln|x+2|-\\frac{5}{x+2}+C} \\]</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -2049,6 +2147,7 @@ window.BANK = {
     "<p>אורך עקומה: $L=\\int_a^b\\sqrt{1+(f'(x))^2}\\,dx$.</p>"
    ],
    "solution": "<p>$f'(x)=\\frac32x^{1/2}$, ולכן $1+(f'(x))^2=1+\\frac94x$. אורך העקומה:\n\\[ L=\\int_0^9\\sqrt{1+\\frac94x}\\,dx. \\]\nנציב $u=1+\\frac94x$, $du=\\frac94dx$; כאשר $x$ עובר מ-$0$ ל-$9$, $u$ עובר מ-$1$ ל-$1+\\frac{81}{4}=\\frac{85}{4}$:\n\\[ L=\\frac49\\int_1^{85/4}u^{1/2}\\,du=\\frac49\\cdot\\frac23\\left[u^{3/2}\\right]_1^{85/4}=\\frac{8}{27}\\left(\\left(\\frac{85}{4}\\right)^{3/2}-1\\right)=\\frac{8}{27}\\left(\\frac{85\\sqrt{85}}{8}-1\\right). \\]\n\\[ \\boxed{L=\\frac{85\\sqrt{85}-8}{27}\\approx28.73} \\]</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -2073,6 +2172,7 @@ window.BANK = {
     "<p>כפלו מונה ומכנה ב-$e^x$ והציבו $u=e^x$.</p>"
    ],
    "solution": "<p>נכפול מונה ומכנה ב-$e^x&gt;0$: $\\frac{1}{e^x+e^{-x}}=\\frac{e^x}{e^{2x}+1}$. לפי ההגדרה,\n\\[ \\int_0^\\infty\\frac{dx}{e^x+e^{-x}}=\\lim_{b\\to\\infty}\\int_0^b\\frac{e^x}{1+(e^x)^2}\\,dx. \\]\nנציב $u=e^x$, $du=e^x\\,dx$; $u$ עובר מ-$1$ ל-$e^b$:\n\\[ \\int_0^b\\frac{e^x\\,dx}{1+e^{2x}}=\\int_1^{e^b}\\frac{du}{1+u^2}=\\arctan(e^b)-\\arctan1=\\arctan(e^b)-\\frac\\pi4. \\]\nכאשר $b\\to\\infty$, $e^b\\to\\infty$ ו-$\\arctan(e^b)\\to\\frac\\pi2$. הגבול קיים וסופי, ולכן האינטגרל מתכנס:\n\\[ \\boxed{\\int_0^\\infty\\frac{dx}{e^x+e^{-x}}=\\frac\\pi2-\\frac\\pi4=\\frac\\pi4} \\]</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -2098,6 +2198,7 @@ window.BANK = {
     "<p>יש לחשב $\\int\\arcsin x\\,dx$ — השתמשו באינטגרציה בחלקים עם $u=\\arcsin x$, $v'=1$.</p>"
    ],
    "solution": "<p>$V=\\pi\\int_0^1f^2(x)\\,dx=\\pi\\int_0^1\\arcsin x\\,dx$. נחשב בחלקים, עם $u=\\arcsin x$, $v'=1$, $u'=\\frac{1}{\\sqrt{1-x^2}}$, $v=x$:\n\\[ \\int\\arcsin x\\,dx=x\\arcsin x-\\int\\frac{x}{\\sqrt{1-x^2}}\\,dx=x\\arcsin x+\\sqrt{1-x^2}+C \\]\n(האינטגרל האחרון — בהצבה $t=1-x^2$, $dt=-2x\\,dx$: $\\int\\frac{x\\,dx}{\\sqrt{1-x^2}}=-\\frac12\\int t^{-1/2}dt=-\\sqrt{1-x^2}$.) הפונקציה $x\\arcsin x+\\sqrt{1-x^2}$ רציפה ב-$[0,1]$ (האינטגרנד $\\arcsin x$ רציף בקטע הסגור), ולכן לפי המשפט היסודי\n\\[ \\int_0^1\\arcsin x\\,dx=\\left[x\\arcsin x+\\sqrt{1-x^2}\\right]_0^1=\\left(\\frac\\pi2+0\\right)-(0+1)=\\frac\\pi2-1. \\]\n\\[ \\boxed{V=\\pi\\left(\\frac\\pi2-1\\right)=\\frac{\\pi^2}{2}-\\pi} \\]</p>",
+   "src": "מועד ג' תשע\"ח סמסטר א'",
    "exam": "תשע\"ח סמסטר א מועד ג"
   },
   {
@@ -2122,6 +2223,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\cos\\alpha-\\cos\\beta=-2\\sin\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$ ובגבול היסודי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$.</p>"
    ],
    "solution": "<p>לפי ההגדרה $f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}$. לפי הזהות $\\cos\\alpha-\\cos\\beta=-2\\sin\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$:\n\\[\n\\frac{\\cos(x+h)-\\cos x}{h}=\\frac{-2\\sin\\left(x+\\frac h2\\right)\\sin\\frac h2}{h}=-\\sin\\left(x+\\frac h2\\right)\\cdot\\frac{\\sin\\frac h2}{\\frac h2}.\n\\]\nכאשר $h\\to0$: $\\sin\\left(x+\\frac h2\\right)\\to\\sin x$ (רציפות הסינוס) ו-$\\frac{\\sin(h/2)}{h/2}\\to1$ (הגבול היסודי). לפי אריתמטיקה של גבולות:\n\\[\n(\\cos x)'=\\lim_{h\\to0}\\frac{\\cos(x+h)-\\cos x}{h}=-\\sin x.\n\\]</p>",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2147,6 +2249,7 @@ window.BANK = {
     "<p>כתבו $\\ln(2x)=\\ln2+\\ln x$.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $x&gt;0$ (בשביל $\\ln x$ ו-$\\ln 2x$) ו-$\\ln x\\neq0$, כלומר $x\\in(0,1)\\cup(1,\\infty)$. בתחום זה\n\\[\nf(x)=\\frac{\\ln2+\\ln x}{\\ln x}=1+\\frac{\\ln2}{\\ln x}.\n\\]\n<strong>אנכיות:</strong> כאשר $x\\to1^+$, $\\ln x\\to0^+$ ולכן $f(x)\\to+\\infty$; כאשר $x\\to1^-$, $\\ln x\\to0^-$ ולכן $f(x)\\to-\\infty$. לכן $x=1$ אסימפטוטה אנכית.\nכאשר $x\\to0^+$: $\\ln x\\to-\\infty$ ולכן $f(x)\\to1$ — גבול סופי, ולכן $x=0$ <em>אינה</em> אסימפטוטה אנכית.\n\n<strong>אופקיות/משופעות:</strong> הפונקציה מוגדרת רק עבור $x&gt;0$, ולכן בודקים רק $x\\to+\\infty$: $\\ln x\\to\\infty$ ולכן $f(x)\\to1$. לכן $y=1$ אסימפטוטה אופקית ב-$+\\infty$ (ואין משופעת).\n\n<strong>תשובה:</strong> אסימפטוטה אנכית $x=1$ ואסימפטוטה אופקית $y=1$ (כאשר $x\\to+\\infty$).",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2172,6 +2275,7 @@ window.BANK = {
     "<p>נקודת פיתול היא נקודה שבה $f''$ מחליפה סימן. חשבו את $f''$ ובדקו לאילו ערכים של $a$ היא מחליפה סימן.</p>"
    ],
    "solution": "<p>$f''(x)=12x^2-2a$. נקודת פיתול היא נקודה שבה $f''$ מחליפה סימן.</p>\n<ul>\n<li>\nאם $a&gt;0$: $f''(x)=0\\iff x=\\pm\\sqrt{a/6}$, ו-$f''$ (פרבולה) מחליפה סימן בכל אחת מהנקודות האלה, לכן יש שתי נקודות פיתול.\n</li>\n<li>\nאם $a=0$: $f''(x)=12x^2\\ge0$, מתאפסת רק ב-$x=0$ בלי להחליף סימן — אין נקודות פיתול ($f=x^4$ קמורה).\n</li>\n<li>\nאם $a&lt;0$: $f''(x)=12x^2-2a&gt;0$ לכל $x$ — אין נקודות פיתול.\n</li>\n</ul>\n<p><strong>תשובה:</strong> $a\\le0$.</p>",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2197,6 +2301,7 @@ window.BANK = {
     "<p>$x=0$ אינו שורש. בודדו את הפרמטר: $a=\\frac{x^4+27}{x^3}=x+\\frac{27}{x^3}$, ומצאו את טווח הערכים של הפונקציה $g(x)=x+\\frac{27}{x^3}$.</p>"
    ],
    "solution": "<p>$x=0$ אינו שורש (מתקבל $27\\neq0$). עבור $x\\neq0$:\n\\[\nx^4-ax^3+27=0\\iff a=\\frac{x^4+27}{x^3}=x+\\frac{27}{x^3}=:g(x).\n\\]\nלכן למשוואה יש שורש ממשי אם ורק אם $a$ שייך לתמונה של $g$ על $\\R\\setminus\\{0\\}$. נמצא את התמונה.</p>\n<p><strong>עבור $x&gt;0$:</strong> $g'(x)=1-\\frac{81}{x^4}$, שמתאפסת ב-$x=3$; $g'&lt;0$ ב-$(0,3)$ ו-$g'&gt;0$ ב-$(3,\\infty)$. לכן $x=3$ מינימום מוחלט על $(0,\\infty)$, עם $g(3)=3+1=4$. בנוסף $g(x)\\to+\\infty$ כאשר $x\\to0^+$ וכאשר $x\\to+\\infty$. מכיוון ש-$g$ רציפה, לפי משפט ערך הביניים התמונה של $(0,\\infty)$ היא $[4,\\infty)$.</p>\n<p><strong>עבור $x&lt;0$:</strong> $g$ פונקציה אי-זוגית ($g(-x)=-g(x)$), ולכן התמונה של $(-\\infty,0)$ היא $(-\\infty,-4]$.</p>\n<p>לכן התמונה של $g$ היא $(-\\infty,-4]\\cup[4,\\infty)$, ולמשוואה יש שורש ממשי אם ורק אם $|a|\\ge4$. (בדיקה: עבור $a=4$, $x=3$: $81-108+27=0$.)</p>\n<p><strong>תשובה:</strong> אין שורשים ממשיים אם ורק אם $-4&lt;a&lt;4$.</p>",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2219,6 +2324,7 @@ window.BANK = {
    "question": "<p>(10 נק') חשבו את נפח הגוף שמתקבל על ידי סיבוב סביב ציר ה-$x$ של התחום המישורי החסום על ידי הקו $y=\\frac{x}{\\sqrt{x^2+1}}$ וציר ה-$x$ בקטע $[0,1]$. ציירו את הסקיצה המתאימה.</p>",
    "hints": [],
    "solution": "<strong>סקיצה:</strong> $y=\\frac{x}{\\sqrt{x^2+1}}$ עולה מ-$0$ (ב-$x=0$) עד $\\frac1{\\sqrt2}\\approx0.71$ (ב-$x=1$), ואי-שלילית בקטע. התחום הוא השטח שבין הגרף לציר $x$ עבור $0\\le x\\le1$, וסיבובו סביב ציר $x$ נותן גוף דמוי \"גביע\".\n\n<strong>נפח:</strong> לפי הנוסחה לנפח גוף סיבוב $V=\\pi\\int_a^by^2\\,dx$:\n\\[\nV=\\pi\\int_0^1\\frac{x^2}{x^2+1}dx=\\pi\\int_0^1\\left(1-\\frac{1}{x^2+1}\\right)dx=\\pi\\Big[x-\\arctan x\\Big]_0^1=\\pi\\left(1-\\frac\\pi4\\right).\n\\]\n<strong>תשובה:</strong> $V=\\pi\\left(1-\\frac\\pi4\\right)\\approx0.674$.",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2243,6 +2349,7 @@ window.BANK = {
     "<p>$5x^4\\sin x$ היא פונקציה אי-זוגית, ולכן האינטגרל שלה על $[-1,1]$ מתאפס. לחלק השני, אינטגרציה בחלקים עם $u=\\ln(x+2)$, $dv=5x^4dx$.</p>"
    ],
    "solution": "<strong>החלק עם הסינוס.</strong> $g(x)=5x^4\\sin x$ אי-זוגית ($g(-x)=-g(x)$) ורציפה, ולכן $\\int_{-1}^1 5x^4\\sin x\\,dx=0$.\n\n<strong>החלק עם הלוגריתם.</strong> אינטגרציה בחלקים עם $u=\\ln(x+2)$, $dv=5x^4dx$, $du=\\frac{dx}{x+2}$, $v=x^5$:\n\\[\n\\int_{-1}^15x^4\\ln(x+2)\\,dx=\\Big[x^5\\ln(x+2)\\Big]_{-1}^1-\\int_{-1}^1\\frac{x^5}{x+2}dx=\\ln3-\\int_{-1}^1\\frac{x^5}{x+2}dx\n\\]\n(כי ב-$x=-1$: $(-1)^5\\ln1=0$). חילוק פולינומים:\n\\[\n\\frac{x^5}{x+2}=x^4-2x^3+4x^2-8x+16-\\frac{32}{x+2}.\n\\]\nעל הקטע הסימטרי $[-1,1]$ האינטגרלים של החזקות האי-זוגיות מתאפסים, ולכן\n\\[\n\\int_{-1}^1\\frac{x^5}{x+2}dx=\\int_{-1}^1\\left(x^4+4x^2+16\\right)dx-32\\int_{-1}^1\\frac{dx}{x+2}\n=\\frac25+\\frac83+32-32\\ln3=\\frac{526}{15}-32\\ln3.\n\\]\n<strong>תשובה:</strong>\n\\[\n\\int_{-1}^15x^4\\big(\\ln(x+2)+\\sin x\\big)dx=\\ln3-\\frac{526}{15}+32\\ln3=33\\ln3-\\frac{526}{15}\\approx1.1875.\n\\]",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2268,6 +2375,7 @@ window.BANK = {
     "<p>הציבו $x=0$ כדי למצוא את $y(0)$, ואז גזרו את המשוואה (גזירה סתומה) פעמיים והציבו $x=0$.</p>"
    ],
    "solution": "<strong>ערך ב-$0$:</strong> בהצבה $x=0$: $y(0)\\cdot0-0+y(0)=2$, ולכן $y(0)=2$.\n\n<strong>נגזרת ראשונה</strong> (גזירה סתומה של שני האגפים לפי $x$, כאשר $y=y(x)$):\n\\[\ny'\\sin x+y\\cos x-\\cos x+x\\sin x+y'=0.\\tag{*}\n\\]\nבהצבה $x=0$: $y(0)-1+y'(0)=0$, ולכן $y'(0)=1-2=-1$.\n\n<strong>נגזרת שנייה</strong> (גזירה של (*)):\n\\[\ny''\\sin x+y'\\cos x+y'\\cos x-y\\sin x+\\sin x+\\sin x+x\\cos x+y''=0.\n\\]\nבהצבה $x=0$: $2y'(0)+y''(0)=0$, ולכן $y''(0)=2$.\n\n<strong>פולינום מקלורן מסדר 2:</strong>\n\\[\nP_2(x)=y(0)+y'(0)x+\\frac{y''(0)}{2}x^2=2-x+x^2.\n\\]\n(בדיקה: מהמשוואה $y=\\frac{2+x\\cos x}{1+\\sin x}$, ופיתוח ישיר נותן אותו פולינום.)",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2292,6 +2400,7 @@ window.BANK = {
     "<p>הכפילו בצמוד של המונה.</p>"
    ],
    "solution": "<p>ב-$x=3$ המונה והמכנה מתאפסים ($\\sqrt9-\\sqrt9=0$, $9-12+3=0$). נכפול בצמוד:\n\\[\n\\sqrt{x^2-2x+6}-\\sqrt{x^2+2x-6}=\\frac{(x^2-2x+6)-(x^2+2x-6)}{\\sqrt{x^2-2x+6}+\\sqrt{x^2+2x-6}}=\\frac{-4(x-3)}{\\sqrt{x^2-2x+6}+\\sqrt{x^2+2x-6}},\n\\]\nו-$x^2-4x+3=(x-1)(x-3)$. לכן עבור $x\\neq3$ (בסביבת $3$):\n\\[\n\\frac{\\sqrt{x^2-2x+6}-\\sqrt{x^2+2x-6}}{x^2-4x+3}=\\frac{-4}{(x-1)\\left(\\sqrt{x^2-2x+6}+\\sqrt{x^2+2x-6}\\right)}\\xrightarrow[x\\to3]{}\\frac{-4}{2\\cdot(3+3)}=-\\frac13.\n\\]\n<strong>תשובה:</strong> $-\\frac13$.</p>",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2317,6 +2426,7 @@ window.BANK = {
     "<p>טפלו בכל מחובר בנפרד: הראשון הוא מהצורה $1^\\infty$; השני הוא \"אפסה כפול חסומה\".</p>"
    ],
    "solution": "<p>יש לבדוק האם $\\lim_{x\\to0}f(x)=f(0)=e^{4/3}$.</p>\n<p><strong>המחובר הראשון.</strong> בסביבת $0$ מתקיים $1+\\sin2x&gt;0$, ולכן\n\\[\n(1+\\sin2x)^{\\frac{2}{3x}}=\\exp\\left(\\frac{2}{3x}\\ln(1+\\sin2x)\\right).\n\\]\nנחשב את המעריך:\n\\[\n\\frac{2\\ln(1+\\sin2x)}{3x}=\\frac23\\cdot\\frac{\\ln(1+\\sin2x)}{\\sin2x}\\cdot\\frac{\\sin2x}{2x}\\cdot2\\xrightarrow[x\\to0]{}\\frac23\\cdot1\\cdot1\\cdot2=\\frac43,\n\\]\nלפי הגבולות היסודיים $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ (עם $t=\\sin2x\\to0$) ו-$\\lim_{t\\to0}\\frac{\\sin t}{t}=1$. לפי רציפות האקספוננט, המחובר הראשון שואף ל-$e^{4/3}$.</p>\n<p><strong>המחובר השני.</strong> $\\arctan x\\to0$ כאשר $x\\to0$, ו-$\\left|\\cos\\frac1x\\right|\\le1$. מכפלה של פונקציה השואפת ל-$0$ בפונקציה חסומה שואפת ל-$0$, ולכן $\\arctan x\\cdot\\cos\\frac1x\\to0$.</p>\n<p>לכן $\\lim_{x\\to0}f(x)=e^{4/3}+0=e^{4/3}=f(0)$.</p>\n<p><strong>תשובה:</strong> כן, $f$ רציפה ב-$x=0$.</p>",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2341,6 +2451,7 @@ window.BANK = {
     "<p>השוו ל-$e^{-x}$.</p>"
    ],
    "solution": "<p>האינטגרנד $g(x)=\\frac{xe^{-x}}{(x+1)^4}$ רציף ואי-שלילי על $[0,\\infty)$, ולכן האינטגרל לא אמיתי רק בגלל הגבול האינסופי, ואפשר להשתמש במבחן ההשוואה.\nעבור $x\\ge0$: $0\\le x&lt;x+1\\le(x+1)^4$, ולכן $\\frac{x}{(x+1)^4}\\le1$ ו-\n\\[\n0\\le g(x)\\le e^{-x}.\n\\]\nהאינטגרל $\\int_0^\\infty e^{-x}dx=\\lim_{R\\to\\infty}\\left(1-e^{-R}\\right)=1$ מתכנס. לפי <em>מבחן ההשוואה</em> לאינטגרלים לא אמיתיים של פונקציות אי-שליליות, גם $\\int_0^\\infty g(x)\\,dx$ מתכנס (וערכו בין $0$ ל-$1$).</p>\n<p><strong>תשובה:</strong> כן, האינטגרל מתכנס.</p>",
+   "src": "מועד א' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד א"
   },
   {
@@ -2365,6 +2476,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\sin\\alpha-\\sin\\beta=2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$.</p>"
    ],
    "solution": "<p>לפי ההגדרה ולפי הזהות $\\sin\\alpha-\\sin\\beta=2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$:\n\\[\n\\frac{\\sin(2x+2h)-\\sin2x}{h}=\\frac{2\\cos(2x+h)\\sin h}{h}=2\\cos(2x+h)\\cdot\\frac{\\sin h}{h}.\n\\]\nכאשר $h\\to0$: $\\cos(2x+h)\\to\\cos2x$ (רציפות הקוסינוס) ו-$\\frac{\\sin h}{h}\\to1$ (הגבול היסודי). לכן\n\\[\n(\\sin2x)'=\\lim_{h\\to0}\\frac{\\sin2(x+h)-\\sin2x}{h}=2\\cos2x.\n\\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2390,6 +2502,7 @@ window.BANK = {
     "<p>הנקודות החשודות הן $x=2$ (שם $\\frac1{x-2}$ לא מוגדר) והנקודה שבה המכנה מתאפס. ב-$x=2$ חשבו גבולות חד-צדדיים בנפרד.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> צריך $x\\neq2$ וגם $5^{1/(x-2)}\\neq25$, כלומר $\\frac1{x-2}\\neq2$, כלומר $x\\neq\\frac52$. בכל נקודה אחרת $f$ היא הרכבה ומנה של פונקציות רציפות, ולכן רציפה. נקודות אי-הרציפות הן $x=2$ ו-$x=\\frac52$.\n\n<strong>הנקודה $x=2$:</strong>\n\n<ul>\n<li>\n$x\\to2^+$: $\\frac1{x-2}\\to+\\infty$, ולכן $5^{1/(x-2)}\\to+\\infty$ ו-$f(x)\\to0$.\n</li>\n<li>\n$x\\to2^-$: $\\frac1{x-2}\\to-\\infty$, ולכן $5^{1/(x-2)}\\to0$ ו-$f(x)\\to\\frac1{25}$.\n</li>\n</ul>\n<p>שני הגבולות החד-צדדיים קיימים, סופיים ושונים: <strong>אי-רציפות מסוג ראשון (קפיצה)</strong>.</p>\n<p><strong>הנקודה $x=\\frac52$:</strong> המכנה $25-5^{1/(x-2)}$ שואף ל-$0$. עבור $2&lt;x&lt;\\frac52$: $\\frac1{x-2}&gt;2$, ולכן $5^{1/(x-2)}&gt;25$ והמכנה שלילי: $f(x)\\to-\\infty$ כאשר $x\\to\\frac52^-$. עבור $x&gt;\\frac52$ המכנה חיובי: $f(x)\\to+\\infty$ כאשר $x\\to\\frac52^+$. הגבולות החד-צדדיים אינסופיים: <strong>אי-רציפות מסוג שני</strong> (ו-$x=\\frac52$ אסימפטוטה אנכית).</p>",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2413,6 +2526,7 @@ window.BANK = {
    "question": "<p>(5 נק') מהו שיפוע המשיק לקו $y=\\int_0^x\\frac{dt}{1+t^4}$ בנקודה עליו $x=1$.</p>",
    "hints": [],
    "solution": "<p>הפונקציה $\\frac1{1+t^4}$ רציפה על $\\R$, ולכן לפי <em>המשפט היסודי של החשבון האינפיניטסימלי</em> הפונקציה $y(x)=\\int_0^x\\frac{dt}{1+t^4}$ גזירה ו-$y'(x)=\\frac1{1+x^4}$. שיפוע המשיק ב-$x=1$:\n\\[\ny'(1)=\\frac1{1+1}=\\frac12.\n\\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2438,6 +2552,7 @@ window.BANK = {
     "<p>מצאו את המקסימום של $g(x)=3x^{2/3}-2x$ בקטע $(0,\\infty)$.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=3x^{2/3}-2x$ עבור $x&gt;0$; היא גזירה שם ו-\n\\[\ng'(x)=2x^{-1/3}-2=2\\left(\\frac{1}{\\sqrt[3]x}-1\\right).\n\\]\n$g'(x)&gt;0$ עבור $0&lt;x&lt;1$ ו-$g'(x)&lt;0$ עבור $x&gt;1$. לכן $g$ עולה ב-$(0,1]$ ויורדת ב-$[1,\\infty)$ (מסקנה ממשפט לגרנז'), ולכן $x=1$ נקודת מקסימום מוחלט של $g$ ב-$(0,\\infty)$:\n\\[\ng(x)\\le g(1)=3-2=1\\qquad\\text{לכל }x&gt;0.\n\\]\nזהו בדיוק $3\\sqrt[3]{x^2}-2x\\le1$, עם שוויון רק ב-$x=1$. $\\blacksquare$</p>",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2463,6 +2578,7 @@ window.BANK = {
     "<p>בדקו איזה מהגרפים נמצא מעל השני בקטע $[0,2]$. לאינטגרל של $xe^x$ השתמשו באינטגרציה בחלקים.</p>"
    ],
    "solution": "<strong>מי מעל מי.</strong> עבור $x\\in[0,2]$: $e^x\\ge1$ ו-$x\\ge0$, ולכן $xe^x\\ge x&gt;x-1$. כלומר הגרף של $y=xe^x$ מעל הישר $y=x-1$ בכל הקטע (ואין נקודות חיתוך בקטע).\n\n<strong>סקיצה:</strong> הישר $y=x-1$ עובר מ-$(0,-1)$ ל-$(2,1)$; העקום $y=xe^x$ עולה מ-$(0,0)$ ל-$(2,2e^2)\\approx(2,14.8)$. התחום חסום משמאל ע\"י $x=0$, מימין ע\"י $x=2$, מלמטה ע\"י הישר ומלמעלה ע\"י העקום.\n\n<strong>שטח:</strong>\n\\[\nS=\\int_0^2\\big(xe^x-(x-1)\\big)dx.\n\\]\nבאינטגרציה בחלקים ($u=x$, $dv=e^xdx$): $\\int xe^xdx=xe^x-e^x=(x-1)e^x$. לכן\n\\[\nS=\\Big[(x-1)e^x\\Big]_0^2-\\left[\\frac{x^2}{2}-x\\right]_0^2=\\big(e^2-(-1)\\big)-(2-2)=e^2+1.\n\\]\n<strong>תשובה:</strong> $S=e^2+1\\approx8.39$.",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2487,6 +2603,7 @@ window.BANK = {
     "<p>ב-(א) חלקו פולינומים ואז פרקו לשברים חלקיים: $x^3-2x^2=x^2(x-2)$. ב-(ב) הציבו $u=x+1$.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li class=\"custom\" data-label=\"(א)\">\n<strong>חילוק פולינומים:</strong> $x^3+2x^2-4=(x^3-2x^2)+4x^2-4$, ולכן\n  \\[\n  \\frac{x^3+2x^2-4}{x^3-2x^2}=1+\\frac{4x^2-4}{x^2(x-2)}.\n  \\]\n  <strong>שברים חלקיים:</strong>\n  \\[\n  \\frac{4x^2-4}{x^2(x-2)}=\\frac Ax+\\frac B{x^2}+\\frac C{x-2}\\iff 4x^2-4=Ax(x-2)+B(x-2)+Cx^2.\n  \\]\n  הצבת $x=2$: $12=4C\\Rightarrow C=3$. הצבת $x=0$: $-4=-2B\\Rightarrow B=2$. השוואת מקדמי $x^2$: $A+C=4\\Rightarrow A=1$.\n  (בדיקה: $x^2-2x+2x-4+3x^2=4x^2-4$.) לכן\n  \\[\n  \\int\\frac{x^3+2x^2-4}{x^3-2x^2}dx=\\int\\left(1+\\frac1x+\\frac2{x^2}+\\frac3{x-2}\\right)dx=x+\\ln|x|-\\frac2x+3\\ln|x-2|+C.\n  \\]\n\n  \n</li>\n<li class=\"custom\" data-label=\"(ב)\">\nנציב $u=x+1$, $du=dx$, $x=u-1$:\n  \\[\n  \\int\\frac{x}{\\sqrt{x+1}}dx=\\int\\frac{u-1}{\\sqrt u}du=\\int\\left(u^{1/2}-u^{-1/2}\\right)du=\\frac23u^{3/2}-2u^{1/2}+C.\n  \\]\n  <strong>תשובה:</strong> $\\displaystyle\\int\\frac{x}{\\sqrt{x+1}}dx=\\frac23(x+1)^{3/2}-2\\sqrt{x+1}+C=\\frac23(x-2)\\sqrt{x+1}+C$.\n</li>\n</ol>",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2509,6 +2626,7 @@ window.BANK = {
    "question": "<p>(10 נק') רשמו פולינום מקלורן מסדר 2 עבור הפונקציה $f(x)=\\cos(2x)-\\arctan(x+1)$.</p>",
    "hints": [],
    "solution": "<p>פולינום מקלורן מסדר 2: $P_2(x)=f(0)+f'(0)x+\\frac{f''(0)}{2}x^2$.\n\\[\nf(0)=\\cos0-\\arctan1=1-\\frac\\pi4.\n\\]\n\\[\nf'(x)=-2\\sin2x-\\frac{1}{1+(x+1)^2},\\qquad f'(0)=0-\\frac12=-\\frac12.\n\\]\n\\[\nf''(x)=-4\\cos2x+\\frac{2(x+1)}{\\big(1+(x+1)^2\\big)^2},\\qquad f''(0)=-4+\\frac{2}{4}=-\\frac72.\n\\]\n<strong>תשובה:</strong>\n\\[\nP_2(x)=1-\\frac\\pi4-\\frac12x-\\frac74x^2.\n\\]</p>",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2534,6 +2652,7 @@ window.BANK = {
     "<p>הפונקציה רציפה בתוך כל אחד משלושת הקטעים; יש לבדוק רק את נקודות התפר $x=0$ ו-$x=1$. ב-$x=0$ חלקו מונה ומכנה ב-$x$; ב-$x=1$ זהו גבול מהצורה $1^\\infty$.</p>"
    ],
    "solution": "<strong>רציפות בתוך הקטעים.</strong> ב-$\\left(-\\frac\\pi4,0\\right)$: $\\tan2x$ מוגדרת ורציפה (כי $2x\\in\\left(-\\frac\\pi2,0\\right)$), והמכנה $x+\\sin2x$ שלילי ממש (שני המחוברים שליליים), ולכן $f$ רציפה שם כמנה של רציפות. ב-$(0,1)$ $f$ פולינום. ב-$(1,\\infty)$: $x^{1/(x-1)}=e^{\\frac{\\ln x}{x-1}}$ רציפה. נותר לבדוק את $x=0$ ו-$x=1$.\n\n<strong>הנקודה $x=0$.</strong> $f(0)=b$, והגבול מימין הוא $b$. משמאל, נחלק מונה ומכנה ב-$x$:\n\\[\n\\lim_{x\\to0^-}\\frac{\\tan2x-x}{x+\\sin2x}=\\lim_{x\\to0^-}\\frac{2\\cdot\\frac{\\tan2x}{2x}-1}{1+2\\cdot\\frac{\\sin2x}{2x}}=\\frac{2-1}{1+2}=\\frac13,\n\\]\nלפי הגבולות היסודיים $\\frac{\\sin t}{t}\\to1$, $\\frac{\\tan t}{t}\\to1$. לכן צריך $b=\\frac13$.\n\n<strong>הנקודה $x=1$.</strong> $f(1)=a+b$, והגבול משמאל הוא $a+b$. מימין:\n\\[\n\\lim_{x\\to1^+}x^{1/(x-1)}=\\lim_{x\\to1^+}e^{\\frac{\\ln x}{x-1}}=e^1=e,\n\\]\nכי $\\lim_{x\\to1}\\frac{\\ln x}{x-1}=1$ (למשל לפי לופיטל: $\\frac{1/x}{1}\\to1$, או לפי $\\ln(1+t)/t\\to1$ עם $t=x-1$), ולפי רציפות האקספוננט. לכן צריך $a+b=e$, כלומר $a=e-\\frac13$.\n\n<strong>תשובה:</strong> $a=e-\\frac13$, $b=\\frac13$.",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2558,6 +2677,7 @@ window.BANK = {
     "<p>אינטגרציה בחלקים עם $u=\\ln x$, $dv=x^{-4}dx$.</p>"
    ],
    "solution": "<strong>פונקציה קדומה.</strong> אינטגרציה בחלקים עם $u=\\ln x$, $dv=x^{-4}dx$, $du=\\frac{dx}x$, $v=-\\frac1{3x^3}$:\n\\[\n\\int\\frac{\\ln x}{x^4}dx=-\\frac{\\ln x}{3x^3}+\\frac13\\int x^{-4}dx=-\\frac{\\ln x}{3x^3}-\\frac1{9x^3}+C.\n\\]\n<strong>האינטגרל הלא אמיתי:</strong>\n\\[\n\\int_1^{\\infty}\\frac{\\ln x}{x^4}dx=\\lim_{R\\to\\infty}\\left[-\\frac{\\ln x}{3x^3}-\\frac{1}{9x^3}\\right]_1^R\n=\\lim_{R\\to\\infty}\\left(-\\frac{\\ln R}{3R^3}-\\frac1{9R^3}\\right)+\\frac19=\\frac19,\n\\]\nכי $\\lim_{R\\to\\infty}\\frac{\\ln R}{R^3}=0$ (לפי לופיטל: $\\frac{1/R}{3R^2}=\\frac1{3R^3}\\to0$).\n\n<strong>תשובה:</strong> האינטגרל מתכנס ושווה $\\frac19$.",
+   "src": "מועד ב' תשע\"ח סמסטר ב'",
    "exam": "תשע\"ח סמסטר ב מועד ב"
   },
   {
@@ -2583,6 +2703,7 @@ window.BANK = {
     "<p>כתבו $(\\cos x)^{1/\\sin^22x}=e^{\\frac{\\ln\\cos x}{\\sin^22x}}$ וחשבו את גבול המעריך.</p>"
    ],
    "solution": "<p>זהו גבול מהצורה $1^\\infty$. בסביבה מנוקבת קטנה של $0$ מתקיים $\\cos x&gt;0$ ו-$\\sin2x\\neq0$, ולכן\n\\[ (\\cos x)^{\\frac1{\\sin^22x}}=e^{\\frac{\\ln\\cos x}{\\sin^22x}}. \\]\nנחשב את גבול המעריך. נכתוב\n\\[ \\frac{\\ln\\cos x}{\\sin^22x}=\\frac{\\ln\\cos x}{x^2}\\cdot\\frac{(2x)^2}{\\sin^22x}\\cdot\\frac14. \\]\nהגורם האמצעי שואף ל-$1$ לפי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$. עבור הגורם הראשון (צורה $\\frac00$) נשתמש בכלל לופיטל:\n\\[ \\lim_{x\\to0}\\frac{\\ln\\cos x}{x^2}=\\lim_{x\\to0}\\frac{-\\tan x}{2x}=-\\frac12. \\]\nלכן גבול המעריך הוא $-\\frac12\\cdot1\\cdot\\frac14=-\\frac18$, ומרציפות פונקציית האקספוננט\n\\[ \\lim_{x\\to0}(\\cos x)^{\\frac1{\\sin^22x}}=e^{-1/8}. \\]</p>",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2607,6 +2728,7 @@ window.BANK = {
     "<p>הכפילו בצמוד $\\sqrt{x+1}+\\sqrt x$ והשתמשו ב-$\\lim_{t\\to0}\\frac{\\sin t}{t}=1$ עם $t=\\frac1{\\sqrt x}$.</p>"
    ],
    "solution": "<p>נכפיל ונחלק בצמוד:\n\\[ \\frac{\\sin\\frac1{\\sqrt x}}{\\sqrt{x+1}-\\sqrt x}=\\sin\\!\\left(\\tfrac1{\\sqrt x}\\right)\\left(\\sqrt{x+1}+\\sqrt x\\right)\n=\\frac{\\sin\\frac1{\\sqrt x}}{\\frac1{\\sqrt x}}\\cdot\\frac{\\sqrt{x+1}+\\sqrt x}{\\sqrt x}\n=\\frac{\\sin\\frac1{\\sqrt x}}{\\frac1{\\sqrt x}}\\cdot\\left(\\sqrt{1+\\tfrac1x}+1\\right). \\]\nכאשר $x\\to\\infty$, $t=\\frac1{\\sqrt x}\\to0^+$ ולכן הגורם הראשון שואף ל-$1$ (גבול יסודי והרכבת גבולות), והגורם השני שואף ל-$1+1=2$. לכן הגבול הוא $\\boxed{2}$.</p>",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2631,6 +2753,7 @@ window.BANK = {
     "<p>השארית בצורת לגרנז' היא $R_2(x)=\\frac{f'''(c)}{3!}x^3$ עבור $c$ בין $0$ ל-$x$. חסמו את $|f'''(c)|$ עבור $c\\in(0,\\frac2{27})$.</p>"
    ],
    "solution": "<strong>פולינום מקלורין.</strong> נגזור את $f(x)=3(1+x)^{1/3}$:\n\\[ f'(x)=(1+x)^{-2/3},\\qquad f''(x)=-\\frac23(1+x)^{-5/3},\\qquad f'''(x)=\\frac{10}{9}(1+x)^{-8/3}. \\]\nלכן $f(0)=3$, $f'(0)=1$, $f''(0)=-\\frac23$ ו-\n\\[ P_2(x)=3+x-\\frac13x^2. \\]\n<strong>הקירוב.</strong> עבור $x=\\frac2{27}$:\n\\[ a\\approx P_2\\!\\left(\\tfrac2{27}\\right)=3+\\frac2{27}-\\frac13\\cdot\\frac{4}{729}=3+\\frac{162}{2187}-\\frac{4}{2187}=\\frac{6719}{2187}\\approx3.072245. \\]\n<strong>הערכת השגיאה.</strong> לפי נוסחת טיילור עם שארית לגרנז', קיים $c\\in(0,\\frac2{27})$ כך ש-\n\\[ a-P_2\\!\\left(\\tfrac2{27}\\right)=R_2\\!\\left(\\tfrac2{27}\\right)=\\frac{f'''(c)}{3!}\\left(\\frac2{27}\\right)^3=\\frac{10}{54}(1+c)^{-8/3}\\cdot\\frac{8}{19683}. \\]\nמכיוון ש-$c&gt;0$ מתקיים $0&lt;(1+c)^{-8/3}&lt;1$, ולכן\n\\[ 0&lt;R_2&lt;\\frac{10}{54}\\cdot\\frac{8}{19683}=\\frac{40}{531441}\\approx7.53\\cdot10^{-5}. \\]\nכלומר השגיאה קטנה מ-$7.6\\cdot10^{-5}$ (ובפרט מ-$10^{-4}$), והקירוב הוא קירוב מלמטה (השארית חיובית). לשם השוואה, $\\sqrt[3]{29}=3.0723168\\ldots$, והשגיאה בפועל היא כ-$7.17\\cdot10^{-5}$.",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2653,7 +2776,8 @@ window.BANK = {
    ],
    "question": "<p>(10 נק') תהיה פונקציה $f(x)$ מוגדרת בסביבת נקודה $x_0$. השלימו את ההגדרה הבאה:</p>\n<p><strong>מספר $a$ הוא גבול של $f(x)$ כאשר $x$ שואף ל-$x_0$ אם לכל …</strong></p>",
    "hints": [],
-   "solution": "<p>(הגדרת קושי, $\\eps$--$\\delta$) מספר $a$ הוא גבול של $f(x)$ כאשר $x$ שואף ל-$x_0$ אם לכל $\\eps&gt;0$ קיים $\\delta&gt;0$ כך שלכל $x$ המקיים $0&lt;|x-x_0|&lt;\\delta$ מתקיים $|f(x)-a|&lt;\\eps$.</p>\n<p>(הגדרה שקולה לפי היינה: לכל סדרה $x_n\\to x_0$ עם $x_n\\neq x_0$ מתקיים $f(x_n)\\to a$.)</p>",
+   "solution": "<p>(הגדרת קושי, $\\eps$–$\\delta$) מספר $a$ הוא גבול של $f(x)$ כאשר $x$ שואף ל-$x_0$ אם לכל $\\eps&gt;0$ קיים $\\delta&gt;0$ כך שלכל $x$ המקיים $0&lt;|x-x_0|&lt;\\delta$ מתקיים $|f(x)-a|&lt;\\eps$.</p>\n<p>(הגדרה שקולה לפי היינה: לכל סדרה $x_n\\to x_0$ עם $x_n\\neq x_0$ מתקיים $f(x_n)\\to a$.)</p>",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2679,6 +2803,7 @@ window.BANK = {
     "<p>השתמשו בהגדרת הגבול לפי היינה: מצאו שתי סדרות השואפות ל-$1$ שעליהן ערכי הפונקציה שואפים לגבולות שונים.</p>"
    ],
    "solution": "<p>נשתמש בהגדרת היינה. אם היה קיים $L=\\lim_{x\\to1}f(x)$, אז לכל סדרה $x_n\\to1$, $x_n\\ne1$, היה מתקיים $f(x_n)\\to L$.</p>\n<p>נשים לב שאם $\\frac{x+1}{x-1}=y$ אז $x=\\frac{y+1}{y-1}$. נבחר\n\\[ x_n=\\frac{2\\pi n+1}{2\\pi n-1},\\qquad z_n=\\frac{(2n+1)\\pi+1}{(2n+1)\\pi-1}. \\]\nשתי הסדרות שואפות ל-$1$ (מחלקים מונה ומכנה ב-$n$) ושונות מ-$1$. מתקיים $\\frac{x_n+1}{x_n-1}=2\\pi n$ ו-$\\frac{z_n+1}{z_n-1}=(2n+1)\\pi$, ולכן\n\\[ f(x_n)=\\cos(2\\pi n)=1\\to1,\\qquad f(z_n)=\\cos\\big((2n+1)\\pi\\big)=-1\\to-1. \\]\nקיבלנו שתי סדרות השואפות ל-$1$ שעליהן ערכי הפונקציה מתכנסים לגבולות שונים, בסתירה ליחידות הגבול. לכן ל-$f$ אין גבול ב-$1$.</p>\n<p>(באופן אינטואיטיבי: כאשר $x\\to1^\\pm$ הביטוי $\\frac{x+1}{x-1}\\to\\pm\\infty$, והקוסינוס מתנודד בין $-1$ ל-$1$ אינסוף פעמים.)</p>",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2704,6 +2829,7 @@ window.BANK = {
     "<p>בדקו בנפרד את הגבולות החד-צדדיים ב-$x=0$: כאשר $x\\to0^-$, $e^{1/x}\\to0$.</p>"
    ],
    "solution": "<strong>תחום הגדרה ורציפות.</strong> $x\\neq0$. בתחום הפונקציה רציפה (מכפלה והרכבה של פונקציות רציפות). נקודת חיתוך עם ציר $x$: $x=-2$; $y&gt;0$ עבור $x&gt;-2$, $x\\ne0$, ו-$y&lt;0$ עבור $x&lt;-2$.\n\n<strong>אסימפטוטות אנכיות.</strong> כאשר $x\\to0^+$: $\\frac1x\\to+\\infty$, $e^{1/x}\\to+\\infty$ ו-$x+2\\to2$, לכן $y\\to+\\infty$: הישר $x=0$ אסימפטוטה אנכית (מימין). כאשר $x\\to0^-$: $e^{1/x}\\to0$ ולכן $y\\to0$ – משמאל אין אסימפטוטה (הגרף \"נכנס\" לראשית; ב-$x=0$ אי-רציפות עיקרית).\n\n<strong>אסימפטוטות משופעות.</strong> $m=\\lim_{x\\to\\pm\\infty}\\frac{(x+2)e^{1/x}}{x}=\\lim\\left(1+\\frac2x\\right)e^{1/x}=1$. כעת\n\\[ y-x=x\\big(e^{1/x}-1\\big)+2e^{1/x}=\\frac{e^{1/x}-1}{1/x}+2e^{1/x}\\xrightarrow[x\\to\\pm\\infty]{}1+2=3, \\]\nלפי $\\lim_{t\\to0}\\frac{e^t-1}{t}=1$ עם $t=\\frac1x\\to0$. לכן $y=x+3$ אסימפטוטה משופעת בשני הכיוונים.\n\n<strong>עליה וירידה.</strong>\n\\[ y'=e^{1/x}+(x+2)e^{1/x}\\cdot\\left(-\\frac1{x^2}\\right)=e^{1/x}\\,\\frac{x^2-x-2}{x^2}=e^{1/x}\\,\\frac{(x-2)(x+1)}{x^2}. \\]\nסימן $y'$ כסימן $(x-2)(x+1)$: $y'&gt;0$ ב-$(-\\infty,-1)$ וב-$(2,\\infty)$ – הפונקציה עולה; $y'&lt;0$ ב-$(-1,0)$ וב-$(0,2)$ – הפונקציה יורדת.\n\n<strong>נקודות קיצון.</strong> ב-$x=-1$ הנגזרת מחליפה סימן מ-$+$ ל-$-$: מקסימום מקומי $y(-1)=e^{-1}=\\frac1e$. ב-$x=2$ מ-$-$ ל-$+$: מינימום מקומי $y(2)=4\\sqrt e\\approx6.59$.\n\n<strong>קמירות וקעירות.</strong> חישוב ישיר (גזירת $e^{1/x}(1-\\frac1x-\\frac2{x^2})$) נותן\n\\[ y''=e^{1/x}\\left(-\\frac1{x^2}\\right)\\left(1-\\frac1x-\\frac2{x^2}\\right)+e^{1/x}\\left(\\frac1{x^2}+\\frac4{x^3}\\right)=e^{1/x}\\,\\frac{5x+2}{x^4}. \\]\nסימן $y''$ כסימן $5x+2$: $y''&lt;0$ (קעורה, $\\cap$) ב-$(-\\infty,-\\frac25)$, ו-$y''&gt;0$ (קמורה, $\\cup$) ב-$(-\\frac25,0)$ וב-$(0,\\infty)$. נקודת פיתול: $x=-\\frac25$, $y\\left(-\\frac25\\right)=\\frac85e^{-5/2}\\approx0.131$.\n\n<strong>סקיצה.</strong> מהפיתוח $y=x+3+\\frac{5}{2x}+o\\!\\left(\\frac1x\\right)$ נובע שהגרף נמצא מתחת לאסימפטוטה כאשר $x\\to-\\infty$ ומעליה כאשר $x\\to+\\infty$. משמאל: הגרף מתקרב מלמטה לישר $y=x+3$, עולה וחוצה את ציר $x$ ב-$x=-2$, מגיע למקסימום $(-1,\\frac1e)$, יורד דרך נקודת הפיתול $(-\\frac25,\\frac85e^{-5/2})$ ושואף ל-$0$ כאשר $x\\to0^-$. מימין ל-$0$ הגרף יורד מ-$+\\infty$ (אסימפטוטה $x=0$) עד המינימום $(2,4\\sqrt e)$, ואז עולה ומתקרב לאסימפטוטה $y=x+3$ כאשר $x\\to+\\infty$.",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2728,6 +2854,7 @@ window.BANK = {
     "<p>בצעו אינטגרציה בחלקים פעמיים; תקבלו משוואה שבה האינטגרל המבוקש מופיע בשני האגפים.</p>"
    ],
    "solution": "<p>נסמן $I=\\int e^{2x}\\sin3x\\,dx$. אינטגרציה בחלקים עם $u=\\sin3x$, $dv=e^{2x}dx$ ($v=\\frac12e^{2x}$):\n\\[ I=\\frac12e^{2x}\\sin3x-\\frac32\\int e^{2x}\\cos3x\\,dx. \\]\nשוב בחלקים, $u=\\cos3x$, $dv=e^{2x}dx$:\n\\[ \\int e^{2x}\\cos3x\\,dx=\\frac12e^{2x}\\cos3x+\\frac32\\int e^{2x}\\sin3x\\,dx=\\frac12e^{2x}\\cos3x+\\frac32I. \\]\nלכן\n\\[ I=\\frac12e^{2x}\\sin3x-\\frac34e^{2x}\\cos3x-\\frac94I\\;\\Longrightarrow\\;\\frac{13}{4}I=\\frac{e^{2x}}{4}\\big(2\\sin3x-3\\cos3x\\big), \\]\nולבסוף\n\\[ \\int e^{2x}\\sin3x\\,dx=\\frac{e^{2x}\\big(2\\sin3x-3\\cos3x\\big)}{13}+C. \\]\n(בדיקה: גזירת התוצאה נותנת $\\frac{e^{2x}}{13}\\big(4\\sin3x-6\\cos3x+6\\cos3x+9\\sin3x\\big)=e^{2x}\\sin3x$.)</p>",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2753,6 +2880,7 @@ window.BANK = {
     "<p>$x^2+2x+1=(x+1)^2$; הציבו $u=x+1$ (או בצעו חילוק פולינומים).</p>"
    ],
    "solution": "<p>$x^2+2x+1=(x+1)^2$. נציב $u=x+1$, $x=u-1$, $u\\in[1,2]$:\n\\[ \\int_0^1\\frac{x^4}{(x+1)^2}\\,dx=\\int_1^2\\frac{(u-1)^4}{u^2}\\,du=\\int_1^2\\frac{u^4-4u^3+6u^2-4u+1}{u^2}\\,du=\\int_1^2\\left(u^2-4u+6-\\frac4u+\\frac1{u^2}\\right)du. \\]\n\\[ =\\left[\\frac{u^3}3-2u^2+6u-4\\ln u-\\frac1u\\right]_1^2=\\left(\\frac83-8+12-4\\ln2-\\frac12\\right)-\\left(\\frac13-2+6-1\\right)=\\left(\\frac{37}{6}-4\\ln2\\right)-\\frac{10}{3}=\\frac{17}{6}-4\\ln2. \\]\n<strong>תשובה:</strong> $\\dfrac{17}{6}-4\\ln2\\approx0.0607$.</p>",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2777,6 +2905,7 @@ window.BANK = {
     "<p>הנקודה הבעייתית היא $x=0$. חשבו $\\int_\\eps^1$ באינטגרציה בחלקים ($u=\\ln x$, $dv=x^{-1/2}dx$) והעבירו גבול $\\eps\\to0^+$.</p>"
    ],
    "solution": "<p>הפונקציה $\\frac{\\ln x}{\\sqrt x}$ רציפה ב-$(0,1]$ ולא חסומה ליד $0$ (שואפת ל-$-\\infty$), ולכן זהו אינטגרל לא אמיתי מסוג שני, המוגדר כ-$\\lim_{\\eps\\to0^+}\\int_\\eps^1\\frac{\\ln x}{\\sqrt x}\\,dx$.</p>\n<p>באינטגרציה בחלקים, $u=\\ln x$, $dv=x^{-1/2}dx$, $du=\\frac{dx}x$, $v=2\\sqrt x$:\n\\[ \\int_\\eps^1\\frac{\\ln x}{\\sqrt x}\\,dx=\\Big[2\\sqrt x\\ln x\\Big]_\\eps^1-\\int_\\eps^1\\frac{2\\sqrt x}{x}\\,dx=-2\\sqrt\\eps\\ln\\eps-\\Big[4\\sqrt x\\Big]_\\eps^1=-2\\sqrt\\eps\\ln\\eps-4+4\\sqrt\\eps. \\]\nכעת $\\lim_{\\eps\\to0^+}\\sqrt\\eps\\ln\\eps=\\lim_{\\eps\\to0^+}\\frac{\\ln\\eps}{\\eps^{-1/2}}$, ולפי לופיטל (צורה $\\frac{-\\infty}{\\infty}$):\n\\[ \\lim_{\\eps\\to0^+}\\frac{1/\\eps}{-\\frac12\\eps^{-3/2}}=\\lim_{\\eps\\to0^+}\\left(-2\\sqrt\\eps\\right)=0. \\]\nגם $4\\sqrt\\eps\\to0$. לכן הגבול קיים וסופי: האינטגרל <strong>מתכנס</strong>, ו-\n\\[ \\int_0^1\\frac{\\ln x}{\\sqrt x}\\,dx=-4. \\]</p>",
+   "src": "מועד א' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד א"
   },
   {
@@ -2802,6 +2931,7 @@ window.BANK = {
     "<p>השתמשו בפיתוחי מקלורן $\\cos x=1-\\frac{x^2}2+o(x^2)$, $\\sqrt{1+t}=1+\\frac t2+o(t)$, ו-$\\sin^2x\\sim x^2$.</p>"
    ],
    "solution": "<p>לפי פיתוחי מקלורן:\n\\[ \\cos x=1-\\frac{x^2}{2}+o(x^2),\\qquad \\sqrt{1-2x^2}=1+\\frac12(-2x^2)+o(x^2)=1-x^2+o(x^2). \\]\nלכן המונה הוא $\\cos x-\\sqrt{1-2x^2}=\\frac{x^2}{2}+o(x^2)$. כמו כן $\\frac{\\sin^2x}{x^2}\\to1$. מכאן\n\\[ \\lim_{x\\to0}\\frac{\\cos x-\\sqrt{1-2x^2}}{\\sin^2x}=\\lim_{x\\to0}\\frac{\\frac12+\\frac{o(x^2)}{x^2}}{\\frac{\\sin^2x}{x^2}}=\\frac12. \\]\n(אפשר גם בלופיטל: אחרי החלפת $\\sin^2x$ ב-$x^2$, $\\lim\\frac{-\\sin x+\\frac{2x}{\\sqrt{1-2x^2}}}{2x}=\\frac{-1+2}{2}=\\frac12$.)</p>",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -2826,6 +2956,7 @@ window.BANK = {
     "<p>אחרי המעבר לצורה $e^{g\\ln f}$, כתבו $\\ln\\frac{1-4x^2}{1-3x^2}=\\ln(1-4x^2)-\\ln(1-3x^2)$ והשתמשו בגבול היסודי $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$.</p>"
    ],
    "solution": "<p>זהו גבול מהצורה $1^\\infty$. בסביבה של $0$ הבסיס חיובי, ולפי הרמז\n\\[ \\left(\\frac{1-4x^2}{1-3x^2}\\right)^{\\frac2{x^2}}=\\exp\\!\\left(\\frac{2}{x^2}\\ln\\frac{1-4x^2}{1-3x^2}\\right)=\\exp\\!\\left(2\\cdot\\frac{\\ln(1-4x^2)-\\ln(1-3x^2)}{x^2}\\right). \\]\nלפי הגבול היסודי $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$:\n\\[ \\frac{\\ln(1-4x^2)}{x^2}=-4\\cdot\\frac{\\ln(1-4x^2)}{-4x^2}\\to-4,\\qquad \\frac{\\ln(1-3x^2)}{x^2}\\to-3. \\]\nלכן המעריך שואף ל-$2(-4+3)=-2$, ומרציפות האקספוננט הגבול הוא $e^{-2}$.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -2850,6 +2981,7 @@ window.BANK = {
     "<p>השארית בצורת לגרנז' היא $R_3(x)=\\frac{f^{(4)}(c)}{4!}(x-1)^4$ עם $c$ בין $1$ ל-$x$.</p>"
    ],
    "solution": "<strong>הפולינום.</strong> $f(x)=\\ln x$, $f'(x)=\\frac1x$, $f''(x)=-\\frac1{x^2}$, $f'''(x)=\\frac2{x^3}$, $f^{(4)}(x)=-\\frac6{x^4}$. בנקודה $1$: $f(1)=0$, $f'(1)=1$, $f''(1)=-1$, $f'''(1)=2$. לכן\n\\[ P_3(x)=(x-1)-\\frac{(x-1)^2}{2}+\\frac{(x-1)^3}{3}. \\]\n<strong>הקירוב.</strong> עבור $x=1.1$, $x-1=0.1$:\n\\[ \\ln(1.1)\\approx P_3(1.1)=0.1-\\frac{0.01}{2}+\\frac{0.001}{3}=0.1-0.005+0.000\\overline{3}=0.095\\overline{3}. \\]\n<strong>הערכת השגיאה.</strong> לפי נוסחת טיילור עם שארית לגרנז', קיים $c\\in(1,1.1)$ כך ש-\n\\[ R_3(1.1)=\\frac{f^{(4)}(c)}{4!}(0.1)^4=-\\frac{6}{24c^4}\\cdot10^{-4}=-\\frac{10^{-4}}{4c^4}. \\]\nמכיוון ש-$c&gt;1$, $c^4&gt;1$ ולכן\n\\[ |R_3(1.1)|&lt;\\frac{10^{-4}}{4}=2.5\\cdot10^{-5}. \\]\nכמו כן $R_3&lt;0$, כלומר הקירוב $0.09533$ גדול מעט מהערך האמיתי. (לשם השוואה $\\ln1.1=0.0953102\\ldots$, והשגיאה בפועל כ-$2.3\\cdot10^{-5}$.)",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -2875,6 +3007,7 @@ window.BANK = {
     "<p>חשבו את גבול מנת ההפרשים $\\frac{f(h)-f(0)}{h}=\\frac{h-\\tan h}{h^2\\tan h}$, למשל בעזרת פיתוח $\\tan h=h+\\frac{h^3}{3}+o(h^3)$.</p>"
    ],
    "solution": "<p>(הפונקציה מוגדרת בסביבה מנוקבת $0&lt;|x|&lt;\\frac\\pi2$ של $0$, ושם $\\tan x\\ne0$.) לפי הגדרת הנגזרת:\n\\[ f'(0)=\\lim_{h\\to0}\\frac{f(h)-f(0)}{h}=\\lim_{h\\to0}\\frac{\\frac1{\\tan h}-\\frac1h}{h}=\\lim_{h\\to0}\\frac{h-\\tan h}{h^2\\tan h}. \\]\nלפי פיתוח מקלורן $\\tan h=h+\\frac{h^3}{3}+o(h^3)$, ולכן $h-\\tan h=-\\frac{h^3}{3}+o(h^3)$. כמו כן $h^2\\tan h=h^3\\cdot\\frac{\\tan h}{h}$ ו-$\\frac{\\tan h}{h}\\to1$. לכן\n\\[ f'(0)=\\lim_{h\\to0}\\frac{-\\frac13+\\frac{o(h^3)}{h^3}}{\\frac{\\tan h}{h}}=-\\frac13. \\]\n(אפשר גם בלופיטל: $\\lim\\frac{h-\\tan h}{h^3}=\\lim\\frac{1-\\frac1{\\cos^2h}}{3h^2}=\\lim\\frac{-\\tan^2h}{3h^2}=-\\frac13$.)</p>\n<p><strong>תשובה:</strong> כן, $f$ גזירה ב-$0$ ו-$f'(0)=-\\frac13$. (בפרט $f$ רציפה ב-$0$: $\\lim_{x\\to0}f(x)=\\lim\\frac{x-\\tan x}{x\\tan x}=0=f(0)$.)</p>",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -2901,6 +3034,7 @@ window.BANK = {
     "<p>כתבו $f(x)-f(x_0)=\\frac{f(x)-f(x_0)}{x-x_0}\\cdot(x-x_0)$.</p>"
    ],
    "solution": "<strong>הטענה נכונה.</strong> נניח ש-$f$ גזירה ב-$x_0$, כלומר הגבול $f'(x_0)=\\lim_{x\\to x_0}\\frac{f(x)-f(x_0)}{x-x_0}$ קיים וסופי. לכל $x\\ne x_0$ בסביבת $x_0$:\n\\[ f(x)-f(x_0)=\\frac{f(x)-f(x_0)}{x-x_0}\\cdot(x-x_0). \\]\nלפי אריתמטיקה של גבולות (מכפלת שני גבולות סופיים):\n\\[ \\lim_{x\\to x_0}\\big(f(x)-f(x_0)\\big)=f'(x_0)\\cdot0=0, \\]\nכלומר $\\lim_{x\\to x_0}f(x)=f(x_0)$, ו-$f$ רציפה ב-$x_0$. $\\blacksquare$\n\n(הכיוון ההפוך אינו נכון: $|x|$ רציפה ב-$0$ אך אינה גזירה שם.)",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -2925,6 +3059,7 @@ window.BANK = {
     "<p>שימו לב שהפונקציה אי-זוגית. חילוק פולינומים נותן $f(x)=x+\\frac{4x}{x^2-4}$.</p>"
    ],
    "solution": "<strong>תחום הגדרה ורציפות.</strong> $x\\ne\\pm2$. בתחום $f$ רציפה (פונקציה רציונלית). $f(-x)=-f(x)$, כלומר $f$ אי-זוגית והגרף סימטרי ביחס לראשית. חיתוך עם הצירים: רק $(0,0)$.\n\n<strong>אסימפטוטות.</strong> אנכיות: ב-$x=\\pm2$ המונה $\\pm8\\ne0$ והמכנה מתאפס, לכן:\n\\[ \\lim_{x\\to2^\\pm}f(x)=\\pm\\infty,\\qquad \\lim_{x\\to-2^\\pm}f(x)=\\pm\\infty \\]\n(לדוגמה ליד $-2$: המונה $\\approx-8$, והמכנה $x^2-4$ שלילי עבור $x\\to-2^+$ וחיובי עבור $x\\to-2^-$). לכן $x=2$ ו-$x=-2$ אסימפטוטות אנכיות. משופעת: לפי חילוק פולינומים\n\\[ f(x)=x+\\frac{4x}{x^2-4},\\qquad \\frac{4x}{x^2-4}\\xrightarrow[x\\to\\pm\\infty]{}0, \\]\nולכן $y=x$ אסימפטוטה משופעת בשני הכיוונים.\n\n<strong>עליה וירידה.</strong>\n\\[ f'(x)=\\frac{3x^2(x^2-4)-x^3\\cdot2x}{(x^2-4)^2}=\\frac{x^2(x^2-12)}{(x^2-4)^2}. \\]\nנקודות חשודות: $x=0$, $x=\\pm2\\sqrt3$. $f'&gt;0$ עבור $|x|&gt;2\\sqrt3$ – $f$ עולה ב-$(-\\infty,-2\\sqrt3)$ וב-$(2\\sqrt3,\\infty)$. $f'&lt;0$ עבור $|x|&lt;2\\sqrt3$, $x\\ne0,\\pm2$ – $f$ יורדת ב-$(-2\\sqrt3,-2)$, ב-$(-2,2)$ (כולל $x=0$, שבה $f'=0$ אך הסימן לא מתחלף) וב-$(2,2\\sqrt3)$.\n\n<strong>קיצון.</strong> $x=-2\\sqrt3$: מקסימום מקומי, $f(-2\\sqrt3)=\\frac{-24\\sqrt3}{8}=-3\\sqrt3$. $x=2\\sqrt3$: מינימום מקומי, $f(2\\sqrt3)=3\\sqrt3$. ב-$x=0$ אין קיצון.\n\n<strong>קמירות וקעירות.</strong>\n\\[ f''(x)=\\frac{8x(x^2+12)}{(x^2-4)^3}. \\]\nמכיוון ש-$x^2+12&gt;0$, סימן $f''$ כסימן $\\frac{x}{(x^2-4)^3}$, כלומר כסימן $x(x^2-4)$:\n\n<ul>\n<li>\n$x&lt;-2$: שלילי – קעורה ($\\cap$);\n</li>\n<li>\n$-2&lt;x&lt;0$: חיובי – קמורה ($\\cup$);\n</li>\n<li>\n$0&lt;x&lt;2$: שלילי – קעורה ($\\cap$);\n</li>\n<li>\n$x&gt;2$: חיובי – קמורה ($\\cup$).\n</li>\n</ul>\n<p>נקודת פיתול: $(0,0)$ (שם $f''$ מחליפה סימן ו-$f$ מוגדרת). ב-$x=\\pm2$ $f$ אינה מוגדרת.</p>\n<p><strong>סקיצה.</strong> ב-$(-\\infty,-2)$: הגרף עולה מתחת לאסימפטוטה $y=x$ עד המקסימום $(-2\\sqrt3,-3\\sqrt3)\\approx(-3.46,-5.2)$ ואז יורד ל-$-\\infty$ ליד $x=-2$. ב-$(-2,2)$: יורד מ-$+\\infty$ דרך נקודת הפיתול $(0,0)$ (עם משיק אופקי) אל $-\\infty$. ב-$(2,\\infty)$: יורד מ-$+\\infty$ עד המינימום $(2\\sqrt3,3\\sqrt3)\\approx(3.46,5.2)$ ואז עולה ומתקרב מלמעלה לאסימפטוטה $y=x$.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -2950,6 +3085,7 @@ window.BANK = {
     "<p>בצעו אינטגרציה בחלקים פעמיים, בכל פעם גוזרים את החזקה של $x$.</p>"
    ],
    "solution": "<p>נבצע אינטגרציה בחלקים עם $u=x^2$, $dv=\\sin3x\\,dx$ ($du=2x\\,dx$, $v=-\\frac13\\cos3x$):\n\\[ \\int_0^\\pi x^2\\sin3x\\,dx=\\left[-\\frac{x^2\\cos3x}{3}\\right]_0^\\pi+\\frac23\\int_0^\\pi x\\cos3x\\,dx. \\]\nמכיוון ש-$\\cos3\\pi=-1$: $\\left[-\\frac{x^2\\cos3x}{3}\\right]_0^\\pi=\\frac{\\pi^2}{3}$.</p>\n<p>שוב בחלקים, $u=x$, $dv=\\cos3x\\,dx$ ($v=\\frac13\\sin3x$):\n\\[ \\int_0^\\pi x\\cos3x\\,dx=\\left[\\frac{x\\sin3x}{3}\\right]_0^\\pi-\\frac13\\int_0^\\pi\\sin3x\\,dx=0-\\frac13\\left[-\\frac{\\cos3x}{3}\\right]_0^\\pi=-\\frac13\\cdot\\frac{1+1}{3}=-\\frac29, \\]\n(כי $\\sin3\\pi=0$ ו-$-\\cos3\\pi+\\cos0=2$). לכן\n\\[ \\int_0^\\pi x^2\\sin3x\\,dx=\\frac{\\pi^2}{3}+\\frac23\\cdot\\left(-\\frac29\\right)=\\frac{\\pi^2}{3}-\\frac{4}{27}\\approx3.142. \\]</p>",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -2975,6 +3111,7 @@ window.BANK = {
     "<p>בדקו את המונוטוניות של $g(x)=e^{2x}-x-5$ בעזרת הנגזרת, ואת ערכה בנקודת המינימום. קיום – לפי משפט ערך הביניים, יחידות בכל קטע – לפי מונוטוניות.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=e^{2x}-x-5$, רציפה וגזירה בכל $\\R$, עם $g'(x)=2e^{2x}-1$. $g'(x)=0\\iff e^{2x}=\\frac12\\iff x_0=-\\frac{\\ln2}{2}$. עבור $x&lt;x_0$: $g'&lt;0$, $g$ יורדת ממש; עבור $x&gt;x_0$: $g'&gt;0$, $g$ עולה ממש. ערך המינימום:\n\\[ g(x_0)=\\frac12+\\frac{\\ln2}{2}-5\\approx-4.15&lt;0. \\]\n<strong>קיום:</strong> $\\lim_{x\\to-\\infty}g(x)=+\\infty$ (כי $e^{2x}\\to0$ ו-$-x\\to+\\infty$), ולמשל $g(-6)=e^{-12}+1&gt;0$. כמו כן $g(2)=e^4-7&gt;0$. לפי משפט ערך הביניים יש שורש ב-$(-6,x_0)$ ושורש ב-$(x_0,2)$.</p>\n<p><strong>יחידות:</strong> בכל אחד מהקטעים $(-\\infty,x_0]$ ו-$[x_0,\\infty)$ הפונקציה מונוטונית ממש ולכן חח\"ע, כך שיש בכל אחד לכל היותר שורש אחד (ו-$x_0$ עצמו אינו שורש). לכן למשוואה בדיוק שני פתרונות ממשיים.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -3000,6 +3137,7 @@ window.BANK = {
     "<p>אורך עקומה קוטבית הוא $L=\\int_\\alpha^\\beta\\sqrt{r^2+(r')^2}\\,d\\varphi$, והשתמשו ב-$1+\\cos\\varphi=2\\cos^2\\frac\\varphi2$.</p>"
    ],
    "solution": "<p>העקומה (קרדיואידה) היא $x=r\\cos\\varphi$, $y=r\\sin\\varphi$, ונוסחת האורך בקואורדינטות קוטביות היא\n\\[ L=\\int_0^{2\\pi}\\sqrt{r^2+\\left(\\frac{dr}{d\\varphi}\\right)^2}\\,d\\varphi. \\]\nכאן $r'=-\\sin\\varphi$ ולכן\n\\[ r^2+r'^2=(1+\\cos\\varphi)^2+\\sin^2\\varphi=2+2\\cos\\varphi=4\\cos^2\\frac\\varphi2. \\]\nמכאן $\\sqrt{r^2+r'^2}=2\\left|\\cos\\frac\\varphi2\\right|$. עבור $\\varphi\\in[0,2\\pi]$, $\\frac\\varphi2\\in[0,\\pi]$; ה-$\\cos$ אי-שלילי ב-$[0,\\pi]$ (לגבי $\\varphi$) ואי-חיובי ב-$[\\pi,2\\pi]$. מהסימטריה:\n\\[ L=2\\int_0^{\\pi}2\\cos\\frac\\varphi2\\,d\\varphi=4\\left[2\\sin\\frac\\varphi2\\right]_0^\\pi=8. \\]\n<strong>תשובה:</strong> אורך העקומה הוא $8$.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד ב"
   },
   {
@@ -3024,6 +3162,7 @@ window.BANK = {
     "<p>כתבו את הביטוי בצורה $e^{\\ln(\\cdots)/\\ln(2x^2+1)}$ והוציאו את החזקה הגבוהה ביותר מתוך כל לוגריתם.</p>"
    ],
    "solution": "<p>נסמן $p(x)=1+2x-4x^2+x^4$. עבור $x$ גדול מספיק $p(x)&gt;0$ (כי $p(x)\\to\\infty$), ולכן\n\\[ p(x)^{1/\\ln(2x^2+1)} = \\exp\\left(\\frac{\\ln p(x)}{\\ln(2x^2+1)}\\right). \\]\nנוציא את החזקה המובילה מכל לוגריתם:\n\\[ \\ln p(x) = \\ln\\left(x^4\\left(1+\\tfrac{2}{x^3}-\\tfrac{4}{x^2}+\\tfrac{1}{x^4}\\right)\\right) = 4\\ln x + \\ln\\left(1+\\tfrac{2}{x^3}-\\tfrac{4}{x^2}+\\tfrac{1}{x^4}\\right), \\]\n\\[ \\ln(2x^2+1) = 2\\ln x + \\ln\\left(2+\\tfrac{1}{x^2}\\right). \\]\nכאשר $x\\to\\infty$, הביטויים $\\ln\\left(1+\\tfrac{2}{x^3}-\\tfrac{4}{x^2}+\\tfrac{1}{x^4}\\right)\\to \\ln 1 = 0$ ו-$\\ln\\left(2+\\tfrac1{x^2}\\right)\\to\\ln 2$ (רציפות הלוגריתם), ואילו $\\ln x\\to\\infty$. נחלק מונה ומכנה ב-$\\ln x$:\n\\[ \\frac{\\ln p(x)}{\\ln(2x^2+1)} = \\frac{4 + \\frac{\\ln\\left(1+\\frac{2}{x^3}-\\frac{4}{x^2}+\\frac{1}{x^4}\\right)}{\\ln x}}{2+\\frac{\\ln\\left(2+\\frac{1}{x^2}\\right)}{\\ln x}} \\xrightarrow[x\\to\\infty]{} \\frac{4+0}{2+0}=2. \\]\n(אפשר גם להשתמש בכלל לופיטל במקרה $\\frac{\\infty}{\\infty}$: $\\frac{p'(x)/p(x)}{4x/(2x^2+1)}=\\frac{(4x^3-8x+2)(2x^2+1)}{4x\\,p(x)}\\to\\frac{8}{4}=2$.)</p>\n<p>מרציפות פונקציית האקספוננט נקבל\n\\[ \\lim_{x\\to\\infty}\\left(1+2x-4x^2+x^4\\right)^{1/\\ln(2x^2+1)} = e^{2}. \\]\n<strong>תשובה:</strong> $e^2$.</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3048,6 +3187,7 @@ window.BANK = {
     "<p>הכפילו וחלקו בצמוד $\\sqrt{(n^2+1)(n^2-4)}+\\sqrt{n^4-9}$.</p>"
    ],
    "solution": "<p>זהו ביטוי מהצורה $\\infty-\\infty$. נכפיל ונחלק בצמוד (עבור $n\\ge 2$ שני השורשים מוגדרים וחיוביים):\n\\[ \\sqrt{(n^2+1)(n^2-4)}-\\sqrt{n^4-9} = \\frac{(n^2+1)(n^2-4)-(n^4-9)}{\\sqrt{(n^2+1)(n^2-4)}+\\sqrt{n^4-9}}. \\]\nבמונה: $(n^2+1)(n^2-4) = n^4-3n^2-4$, ולכן המונה הוא $n^4-3n^2-4-n^4+9 = -3n^2+5$. נחלק מונה ומכנה ב-$n^2$:\n\\[ \\frac{-3+\\frac{5}{n^2}}{\\sqrt{\\left(1+\\frac{1}{n^2}\\right)\\left(1-\\frac{4}{n^2}\\right)}+\\sqrt{1-\\frac{9}{n^4}}} \\xrightarrow[n\\to\\infty]{} \\frac{-3}{1+1} = -\\frac{3}{2}, \\]\nלפי אריתמטיקה של גבולות ורציפות השורש.</p>\n<p><strong>תשובה:</strong> $-\\dfrac32$.</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3074,6 +3214,7 @@ window.BANK = {
     "<p>את $\\int x\\cdot\\frac{1}{\\cos^2 x}\\,dx$ חשבו באינטגרציה בחלקים, עם $u=x$ ו-$v'=\\frac{1}{\\cos^2x}$.</p>"
    ],
    "solution": "<p>לפי הזהות $1+\\tan^2 x = \\frac{1}{\\cos^2 x}$:\n\\[ \\int_0^{\\pi/4} x\\tan^2 x\\,dx = \\int_0^{\\pi/4} \\frac{x}{\\cos^2 x}\\,dx - \\int_0^{\\pi/4} x\\,dx. \\]\n(הפונקציות רציפות בקטע $[0,\\pi/4]$, ולכן כל האינטגרלים קיימים.)</p>\n<p><strong>האינטגרל הראשון</strong> — אינטגרציה בחלקים עם $u=x$, $v'=\\frac{1}{\\cos^2x}$, כלומר $u'=1$, $v=\\tan x$:\n\\[ \\int_0^{\\pi/4}\\frac{x}{\\cos^2x}\\,dx = \\Big[x\\tan x\\Big]_0^{\\pi/4} - \\int_0^{\\pi/4}\\tan x\\,dx. \\]\nמתקיים $\\int \\tan x\\,dx = \\int\\frac{\\sin x}{\\cos x}dx = -\\ln|\\cos x|+C$ (הצבה $t=\\cos x$), ולכן\n\\[ \\int_0^{\\pi/4}\\frac{x}{\\cos^2x}\\,dx = \\frac{\\pi}{4}\\cdot 1 - 0 + \\Big[\\ln\\cos x\\Big]_0^{\\pi/4} = \\frac{\\pi}{4} + \\ln\\frac{\\sqrt2}{2} - \\ln 1 = \\frac{\\pi}{4} - \\frac{\\ln 2}{2}. \\]</p>\n<p><strong>האינטגרל השני:</strong> $\\displaystyle\\int_0^{\\pi/4}x\\,dx = \\frac{x^2}{2}\\Big|_0^{\\pi/4} = \\frac{\\pi^2}{32}$.</p>\n<p>לסיכום:\n\\[ \\int_0^{\\pi/4} x\\tan^2 x\\,dx = \\frac{\\pi}{4} - \\frac{\\ln 2}{2} - \\frac{\\pi^2}{32} \\approx 0.1304. \\]</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3098,6 +3239,7 @@ window.BANK = {
     "<p>הציבו $u=\\sin(x^2)=x^2-\\frac{x^6}{6}+o(x^6)$ בפיתוח $\\sin u = u-\\frac{u^3}{6}+o(u^3)$.</p>"
    ],
    "solution": "<p>נשתמש בפיתוחי מקלורן הידועים $\\sin t = t - \\frac{t^3}{6} + o(t^4)$ (כאשר $t\\to0$).</p>\n<p>ראשית, עם $t=x^2$: $\\sin(x^2) = x^2 - \\frac{x^6}{6} + o(x^8)$.</p>\n<p>נסמן $u=\\sin(x^2)$; אז $u\\to 0$ כאשר $x\\to0$ ו-$u = O(x^2)$. לפי הפיתוח $\\sin u = u - \\frac{u^3}{6} + o(u^4)$, ומכיוון ש-$o(u^4)=o(x^8)$:\n\\[ u^3 = \\left(x^2-\\tfrac{x^6}{6}+o(x^8)\\right)^3 = x^6 + o(x^6), \\]\nולכן\n\\[ \\sin(\\sin(x^2)) = x^2 - \\frac{x^6}{6} - \\frac{x^6}{6} + o(x^6) = x^2 - \\frac{x^6}{3} + o(x^6). \\]\nמיחידות פולינום טיילור (פולינום ממעלה $\\le 6$ המקיים $f(x)-P(x)=o(x^6)$ הוא פולינום טיילור), פולינום מקלורן ממעלה 6 הוא\n\\[ P_6(x) = x^2 - \\frac{x^6}{3}. \\]</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3123,6 +3265,7 @@ window.BANK = {
     "<p>יש לחשב $\\lim_{x\\to1}\\left(\\frac{1}{\\ln x}-\\frac{1}{x-1}\\right)$: הביאו למכנה משותף וקבלו מקרה $\\frac00$.</p>"
    ],
    "solution": "<p>תחום ההגדרה של $f$ הוא $x&gt;0$ (נדרש $\\ln x$ מוגדר; בנקודה $x=1$ הפונקציה מוגדרת להיות $a$). בכל נקודה $x&gt;0$, $x\\ne1$, הפונקציה רציפה כהרכבה, הפרש ומנה של פונקציות רציפות עם מכנים שונים מאפס ($\\ln x\\ne0$ ו-$x-1\\ne0$). לכן $f$ רציפה בתחום הגדרתה אם ורק אם היא רציפה ב-$x=1$, כלומר אם ורק אם $a=\\lim_{x\\to1}f(x)$.</p>\n<p>נחשב: $\\displaystyle \\frac{1}{\\ln x}-\\frac{1}{x-1} = \\frac{x-1-\\ln x}{(x-1)\\ln x}$, מקרה $\\frac{0}{0}$. לפי כלל לופיטל (המונה והמכנה גזירים בסביבה של 1):\n\\[ \\lim_{x\\to1}\\frac{x-1-\\ln x}{(x-1)\\ln x} = \\lim_{x\\to1}\\frac{1-\\frac1x}{\\ln x+\\frac{x-1}{x}} = \\lim_{x\\to1}\\frac{x-1}{x\\ln x + x-1}, \\]\nשוב מקרה $\\frac00$, ולפי לופיטל שוב:\n\\[ \\lim_{x\\to1}\\frac{1}{\\ln x + 1 + 1} = \\frac{1}{2}. \\]\n(לחלופין, עם $x=1+h$: $\\ln(1+h)=h-\\frac{h^2}{2}+o(h^2)$, והמונה הוא $\\frac{h^2}{2}+o(h^2)$ והמכנה $h^2+o(h^2)$.)</p>\n<p><strong>תשובה:</strong> $a=\\dfrac12$.</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3148,6 +3291,7 @@ window.BANK = {
     "<p>$f'(x)=\\frac{2e^{2x-1}(x-1)}{x^3}$. שימו לב שהסימן של $x^3$ משתנה ב-$x=0$.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $x\\neq 0$, כלומר $(-\\infty,0)\\cup(0,\\infty)$.\n\n<strong>חיתוך עם הצירים:</strong> $x=0$ אינו בתחום, ולכן אין חיתוך עם ציר $y$. מכיוון ש-$e^{2x-1}&gt;0$ ו-$x^2&gt;0$, מתקיים $f(x)&gt;0$ לכל $x$ בתחום, ולכן אין חיתוך עם ציר $x$.\n\n<strong>אסימפטוטות:</strong>\n\n<ul>\n<li>\n<em>אנכית:</em> $\\lim_{x\\to0^\\pm}\\frac{e^{2x-1}}{x^2} = \\frac{e^{-1}}{0^+} = +\\infty$, לכן $x=0$ אסימפטוטה אנכית (הגרף עולה ל-$+\\infty$ משני הצדדים).\n  \n</li>\n<li>\n<em>ב-$-\\infty$:</em> $e^{2x-1}\\to0$ ו-$\\frac1{x^2}\\to0$, לכן $\\lim_{x\\to-\\infty}f(x)=0$, ו-$y=0$ אסימפטוטה אופקית משמאל.\n  \n</li>\n<li>\n<em>ב-$+\\infty$:</em> $\\frac{f(x)}{x}=\\frac{e^{2x-1}}{x^3}\\to\\infty$ (אקספוננט גובר על כל חזקה, למשל לפי לופיטל שלוש פעמים), ולכן אין אסימפטוטה אופקית או משופעת בצד ימין, ו-$f(x)\\to+\\infty$.\n\n</li>\n</ul>\n<p><strong>נגזרת ראשונה:</strong> לפי כלל המנה,\n\\[ f'(x) = \\frac{2e^{2x-1}x^2 - e^{2x-1}\\cdot 2x}{x^4} = \\frac{2e^{2x-1}(x-1)}{x^3}. \\]\n$f'(x)=0 \\iff x=1$. הסימן של $f'$ נקבע ע\"י $\\frac{x-1}{x^3}$:</p>\n<ul>\n<li>\n$x&lt;0$: $x-1&lt;0$, $x^3&lt;0$ ולכן $f'&gt;0$ — $f$ <strong>עולה</strong> ב-$(-\\infty,0)$.\n</li>\n<li>\n$0&lt;x&lt;1$: $x-1&lt;0$, $x^3&gt;0$ ולכן $f'&lt;0$ — $f$ <strong>יורדת</strong> ב-$(0,1)$.\n</li>\n<li>\n$x&gt;1$: $f'&gt;0$ — $f$ <strong>עולה</strong> ב-$(1,\\infty)$.\n</li>\n</ul>\n<p>לכן ב-$x=1$ יש <strong>מינימום מקומי</strong>: $f(1)=\\frac{e^{1}}{1}=e$, כלומר הנקודה $(1,e)$. אין נקודות קיצון נוספות ($x=0$ אינו בתחום).</p>\n<p><strong>נגזרת שנייה:</strong> נגזור את $f'(x)=2e^{2x-1}\\cdot\\frac{x-1}{x^3}$:\n\\[ \\left(\\frac{x-1}{x^3}\\right)' = \\frac{x^3-3x^2(x-1)}{x^6} = \\frac{-2x+3}{x^4}, \\]\n\\[ f''(x) = 2e^{2x-1}\\left(\\frac{2(x-1)}{x^3}+\\frac{3-2x}{x^4}\\right) = \\frac{2e^{2x-1}\\left(2x^2-4x+3\\right)}{x^4}. \\]\nלטרינום $2x^2-4x+3$ דיסקרימיננטה $16-24&lt;0$ ומקדם מוביל חיובי, ולכן הוא חיובי לכל $x$. גם $e^{2x-1}&gt;0$ ו-$x^4&gt;0$. לכן $f''(x)&gt;0$ לכל $x\\ne0$:\n$f$ <strong>קמורה</strong> (קמורה כלפי מעלה, $\\cup$) בכל אחד מהקטעים $(-\\infty,0)$ ו-$(0,\\infty)$, ואין נקודות פיתול.</p>\n<p><strong>סרטוט:</strong> משמאל הגרף מתחיל קרוב לציר $x$ (מעליו), עולה וקמור ושואף ל-$+\\infty$ כאשר $x\\to0^-$. מימין ל-$0$ הגרף יורד מ-$+\\infty$ עד המינימום $(1,e)$ ואז עולה במהירות אקספוננציאלית ל-$+\\infty$. כל הגרף מעל ציר $x$.</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3173,6 +3317,7 @@ window.BANK = {
     "<p>שטח תחום בקואורדינטות קוטביות: $S=\\frac12\\int_\\alpha^\\beta r^2(\\varphi)\\,d\\varphi$. כאן $r\\ge0$ לכל $\\varphi$, ולכן העקום נסגר כאשר $\\varphi$ עובר על $[0,2\\pi]$.</p>"
    ],
    "solution": "<strong>סרטוט:</strong> מתקיים $0\\le r=2(1-\\sin\\varphi)\\le 4$ לכל $\\varphi$, ו-$r$ מחזורית עם מחזור $2\\pi$, ולכן העקום סגור ומתקבל כאשר $\\varphi\\in[0,2\\pi]$. כמה ערכים:\n\\[ \\varphi=0:\\ r=2;\\quad \\varphi=\\tfrac{\\pi}{2}:\\ r=0;\\quad \\varphi=\\pi:\\ r=2;\\quad \\varphi=\\tfrac{3\\pi}{2}:\\ r=4. \\]\nכלומר העקום עובר בנקודות $(2,0)$, $(0,0)$, $(-2,0)$, $(0,-4)$ (בקואורדינטות קרטזיות). מכיוון ש-$r(\\pi-\\varphi)=r(\\varphi)$, העקום סימטרי ביחס לציר $y$. זוהי <strong>קרדיואידה</strong> (\"לב\") שהחוד שלה בראשית (כאשר $\\varphi=\\frac\\pi2$) והיא \"פתוחה\" כלפי מטה: הנקודה הרחוקה ביותר היא $(0,-4)$.\n\n<strong>שטח:</strong> לפי הנוסחה לשטח בקואורדינטות קוטביות, $S=\\frac12\\int_0^{2\\pi}r^2\\,d\\varphi$:\n\\[ S = \\frac12\\int_0^{2\\pi}4(1-\\sin\\varphi)^2\\,d\\varphi = 2\\int_0^{2\\pi}\\left(1-2\\sin\\varphi+\\sin^2\\varphi\\right)d\\varphi. \\]\nנחשב כל איבר בנפרד:\n\\[ \\int_0^{2\\pi}1\\,d\\varphi=2\\pi,\\qquad \\int_0^{2\\pi}\\sin\\varphi\\,d\\varphi = \\Big[-\\cos\\varphi\\Big]_0^{2\\pi}=0, \\]\n\\[ \\int_0^{2\\pi}\\sin^2\\varphi\\,d\\varphi = \\int_0^{2\\pi}\\frac{1-\\cos2\\varphi}{2}\\,d\\varphi = \\Big[\\frac{\\varphi}{2}-\\frac{\\sin2\\varphi}{4}\\Big]_0^{2\\pi} = \\pi. \\]\nלכן\n\\[ S = 2\\left(2\\pi - 0 + \\pi\\right) = 6\\pi. \\]\n<strong>תשובה:</strong> שטח התחום הוא $6\\pi$.",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3198,6 +3343,7 @@ window.BANK = {
     "<p>פרקו לשברים חלקיים: $\\frac{1}{x(x-2)}=\\frac12\\left(\\frac{1}{x-2}-\\frac1x\\right)$.</p>"
    ],
    "solution": "<p>בקטע $(-\\infty,-2]$ המכנה $x^2-2x=x(x-2)&gt;0$ (שני הגורמים שליליים), ולכן הפונקציה רציפה וחיובית שם, והבעיה היחידה היא הגבול $-\\infty$. לפי ההגדרה,\n\\[ \\int_{-\\infty}^{-2}\\frac{dx}{x^2-2x} = \\lim_{R\\to-\\infty}\\int_R^{-2}\\frac{dx}{x(x-2)}. \\]\nפירוק לשברים חלקיים: $\\frac{1}{x(x-2)}=\\frac{A}{x}+\\frac{B}{x-2}$, ומ-$1=A(x-2)+Bx$ נקבל ($x=0$) $A=-\\frac12$ ו-($x=2$) $B=\\frac12$. לכן\n\\[ \\int\\frac{dx}{x(x-2)} = \\frac12\\ln|x-2|-\\frac12\\ln|x| + C = \\frac12\\ln\\left|\\frac{x-2}{x}\\right| + C. \\]\nלפיכך\n\\[ \\int_R^{-2}\\frac{dx}{x(x-2)} = \\frac12\\ln\\frac{-4}{-2} - \\frac12\\ln\\left|\\frac{R-2}{R}\\right| = \\frac12\\ln2-\\frac12\\ln\\left|1-\\frac2R\\right|. \\]\nכאשר $R\\to-\\infty$, $1-\\frac2R\\to1$ ומרציפות הלוגריתם $\\ln\\left|1-\\frac2R\\right|\\to0$. לכן הגבול קיים וסופי:\n\\[ \\int_{-\\infty}^{-2}\\frac{dx}{x^2-2x} = \\frac{\\ln2}{2}. \\]\n<strong>תשובה:</strong> האינטגרל מתכנס וערכו $\\frac12\\ln2$.\n(אפשר גם לראות את ההתכנסות ממבחן ההשוואה הגבולי עם $\\frac1{x^2}$, אך החישוב הישיר נותן גם את הערך.)</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3223,6 +3369,7 @@ window.BANK = {
     "<p>הכפילו מונה ומכנה ב-$e^x$ והציבו $t=e^x$.</p>"
    ],
    "solution": "<p>בקטע $[\\ln2,\\ln3]$ מתקיים $e^x&gt;e^{-x}$, ולכן האינטגרנד רציף והאינטגרל אמיתי. נכפיל מונה ומכנה ב-$e^x$:\n\\[ \\int_{\\ln2}^{\\ln3}\\frac{dx}{e^x-e^{-x}} = \\int_{\\ln2}^{\\ln3}\\frac{e^x\\,dx}{e^{2x}-1}. \\]\nנציב $t=e^x$, $dt=e^x\\,dx$; הגבולות: $x=\\ln2\\mapsto t=2$, $x=\\ln3\\mapsto t=3$:\n\\[ = \\int_2^3\\frac{dt}{t^2-1} = \\int_2^3\\frac12\\left(\\frac{1}{t-1}-\\frac{1}{t+1}\\right)dt = \\frac12\\Big[\\ln\\frac{t-1}{t+1}\\Big]_2^3 = \\frac12\\left(\\ln\\frac12-\\ln\\frac13\\right) = \\frac12\\ln\\frac32. \\]\n<strong>תשובה:</strong> $\\dfrac12\\ln\\dfrac32\\approx0.2027$.</p>",
+   "src": "מועד מיוחד תשע\"ט סמסטר א'",
    "exam": "תשע\"ט סמסטר א מועד מיוחד"
   },
   {
@@ -3247,6 +3394,7 @@ window.BANK = {
     "<p>הכפילו את המונה והמכנה בצמוד $\\sqrt{5(x+h)+3}+\\sqrt{5x+3}$.</p>"
    ],
    "solution": "<p>הפונקציה מוגדרת עבור $x\\ge -\\tfrac35$, ונחשב את הנגזרת בנקודה $x&gt;-\\tfrac35$. לפי ההגדרה, בעזרת הכפלה בצמוד:\n\\begin{align*}\nf'(x)&amp;=\\lim_{h\\to0}\\frac{\\sqrt{5(x+h)+3}-\\sqrt{5x+3}}{h}\n=\\lim_{h\\to0}\\frac{\\big(5(x+h)+3\\big)-(5x+3)}{h\\left(\\sqrt{5x+5h+3}+\\sqrt{5x+3}\\right)}\\\\\n&amp;=\\lim_{h\\to0}\\frac{5}{\\sqrt{5x+5h+3}+\\sqrt{5x+3}}=\\frac{5}{2\\sqrt{5x+3}},\n\\end{align*}\nכאשר במעבר האחרון השתמשנו ברציפות פונקציית השורש ($\\sqrt{5x+5h+3}\\to\\sqrt{5x+3}&gt;0$). לכן\n\\[ f'(x)=\\frac{5}{2\\sqrt{5x+3}},\\qquad x&gt;-\\tfrac35. \\]\n(בנקודה $x=-\\tfrac35$ המנה $\\frac{\\sqrt{5h}}{h}\\to+\\infty$, ולכן שם הפונקציה אינה גזירה.)</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3272,6 +3420,7 @@ window.BANK = {
     "<p>פרקו את המונה $x^2+x-6=(x+3)(x-2)$ וטפלו בנפרד במקרים $x&gt;0$ ו-$x&lt;0$.</p>"
    ],
    "solution": "<p>תחום ההגדרה: $|x|\\neq2$, כלומר $x\\neq\\pm2$. נפרק $x^2+x-6=(x+3)(x-2)$.</p>\n<p><strong>עבור $x\\ge0$, $x\\ne 2$:</strong> $|x|-2=x-2$ ולכן $f(x)=\\dfrac{(x+3)(x-2)}{x-2}=x+3$.</p>\n<p><strong>עבור $x&lt;0$, $x\\ne-2$:</strong> $|x|-2=-x-2=-(x+2)$ ולכן\n\\[ f(x)=-\\frac{(x+3)(x-2)}{x+2}=-\\frac{x^2+x-6}{x+2}=-x+1+\\frac{4}{x+2}, \\]\n(חילוק פולינומים: $x^2+x-6=(x+2)(x-1)-4$).</p>\n<p><strong>אסימפטוטות אנכיות:</strong> ב-$x=2$: $\\lim_{x\\to2}f(x)=\\lim_{x\\to2}(x+3)=5$ סופי, ולכן זו נקודת אי-רציפות סליקה ואין שם אסימפטוטה. ב-$x=-2$: $\\lim_{x\\to-2^\\pm}\\left(-x+1+\\frac{4}{x+2}\\right)=\\pm\\infty$, ולכן $x=-2$ אסימפטוטה אנכית.</p>\n<p><strong>אסימפטוטות משופעות/אופקיות:</strong> כאשר $x\\to+\\infty$ מתקיים $f(x)=x+3$ בדיוק, ולכן $y=x+3$ אסימפטוטה משופעת ב-$+\\infty$. כאשר $x\\to-\\infty$:\n\\[ f(x)-(-x+1)=\\frac{4}{x+2}\\xrightarrow[x\\to-\\infty]{}0, \\]\nולכן $y=-x+1$ אסימפטוטה משופעת ב-$-\\infty$. (אין אסימפטוטות אופקיות.)</p>\n<p><strong>תשובה:</strong> $x=-2$ (אנכית), $y=x+3$ (ב-$+\\infty$), $y=-x+1$ (ב-$-\\infty$).</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3297,6 +3446,7 @@ window.BANK = {
     "<p>השתמשו במשפט היסודי של החשבון האינטגרלי יחד עם כלל השרשרת.</p>"
    ],
    "solution": "<p>נסמן $F(u)=\\int_0^u e^{-2t^2}\\,dt$. הפונקציה $e^{-2t^2}$ רציפה, ולכן לפי המשפט היסודי $F'(u)=e^{-2u^2}$. מכאן $y(x)=F(x+1)$ ולפי כלל השרשרת\n\\[ y'(x)=F'(x+1)\\cdot 1=e^{-2(x+1)^2}. \\]\nשיפוע המשיק בנקודה $x=0$ הוא $y'(0)=e^{-2}=\\dfrac{1}{e^2}$.</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3321,6 +3471,7 @@ window.BANK = {
     "<p>מצאו את ערך המינימום של $g(x)=x^2-\\ln x$ בתחום $x&gt;0$ והראו שהוא חיובי.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=x^2-\\ln x$, המוגדרת וגזירה בתחום $x&gt;0$ (לכן אין למשוואה פתרונות עם $x\\le0$). נגזור:\n\\[ g'(x)=2x-\\frac1x=\\frac{2x^2-1}{x}. \\]\nעבור $x&gt;0$: $g'(x)&lt;0$ כאשר $0&lt;x&lt;\\frac{1}{\\sqrt2}$ ו-$g'(x)&gt;0$ כאשר $x&gt;\\frac1{\\sqrt2}$. לכן $g$ יורדת ממש ב-$(0,\\frac1{\\sqrt2}]$ ועולה ממש ב-$[\\frac1{\\sqrt2},\\infty)$, ו-$x=\\frac1{\\sqrt2}$ נקודת מינימום מוחלט של $g$ בתחום:\n\\[ g\\!\\left(\\tfrac1{\\sqrt2}\\right)=\\frac12-\\ln\\frac1{\\sqrt2}=\\frac12+\\frac{\\ln2}{2}&gt;0. \\]\nלכן $g(x)\\ge\\frac{1+\\ln 2}{2}&gt;0$ לכל $x&gt;0$, ובפרט $g(x)\\ne0$: למשוואה אין פתרונות ממשיים.</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3345,6 +3496,7 @@ window.BANK = {
     "<p>בדקו איזה מהגרפים נמצא מעל השני בקטע $[0,2]$, ואת $\\int xe^x\\,dx$ חשבו באינטגרציה בחלקים.</p>"
    ],
    "solution": "<p>לכל $x\\in[0,2]$ מתקיים $e^x\\ge1$ ולכן $xe^x\\ge x&gt;x-1$. כלומר בקטע הגרף של $y=xe^x$ נמצא מעל הישר $y=x-1$ (הסקיצה: הישר $y=x-1$ עובר דרך $(0,-1)$ ו-$(2,1)$, והעקומה $y=xe^x$ עוברת דרך $(0,0)$ ו-$(2,2e^2)$; התחום חסום משמאל ומימין בישרים $x=0$, $x=2$). השטח:\n\\[ S=\\int_0^2\\big(xe^x-(x-1)\\big)\\,dx. \\]\nבאינטגרציה בחלקים ($u=x$, $dv=e^xdx$): $\\int xe^x\\,dx=xe^x-\\int e^x\\,dx=(x-1)e^x+C$. לכן\n\\[ \\int_0^2 xe^x\\,dx=\\big[(x-1)e^x\\big]_0^2=e^2-(-1)=e^2+1, \\qquad \\int_0^2(x-1)\\,dx=\\Big[\\tfrac{x^2}{2}-x\\Big]_0^2=0. \\]\n<strong>תשובה:</strong> $S=e^2+1$.</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3371,6 +3523,7 @@ window.BANK = {
     "<p>בסעיף ב' האינטגרל של פונקציה אי-זוגית על קטע סימטרי הוא $0$; בחלק השני הציבו $u=\\tan x$.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li class=\"custom\" data-label=\"א.\">\nמעלת המונה (2) קטנה ממעלת המכנה (3), ולכן נפרק ישירות לשברים חלקיים:\n  \\[ \\frac{(x+1)^2}{x(x+2)^2}=\\frac{A}{x}+\\frac{B}{x+2}+\\frac{C}{(x+2)^2}\n  \\;\\Longrightarrow\\; (x+1)^2=A(x+2)^2+Bx(x+2)+Cx. \\]\n  הצבת $x=0$: $1=4A$, כלומר $A=\\frac14$. הצבת $x=-2$: $1=-2C$, כלומר $C=-\\frac12$. השוואת מקדמי $x^2$: $1=A+B$, ולכן $B=\\frac34$. לכן\n  \\[ \\int\\frac{(x+1)^2}{x(x+2)^2}\\,dx=\\frac14\\ln|x|+\\frac34\\ln|x+2|+\\frac{1}{2(x+2)}+C. \\]\n</li>\n<li class=\"custom\" data-label=\"ב.\">\n<p>נפצל לשני אינטגרלים. הפונקציה $x\\cos^3x$ אי-זוגית (מכפלה של $x$ האי-זוגית ב-$\\cos^3x$ הזוגית) ורציפה, ולכן האינטגרל שלה על הקטע הסימטרי $[-\\frac\\pi4,\\frac\\pi4]$ שווה $0$.</p>\n<p>באינטגרל הראשון נציב $u=\\tan x$, $du=\\frac{dx}{\\cos^2x}$; כאשר $x$ עובר מ-$-\\frac\\pi4$ ל-$\\frac\\pi4$, $u$ עובר מ-$-1$ ל-$1$ (ובקטע זה $2+\\tan x\\ge1&gt;0$):\n  \\[ \\int_{-\\pi/4}^{\\pi/4}\\frac{dx}{\\cos^2x\\,(2+\\tan x)^2}=\\int_{-1}^{1}\\frac{du}{(2+u)^2}=\\left[-\\frac{1}{2+u}\\right]_{-1}^{1}=-\\frac13+1=\\frac23. \\]\n  <strong>תשובה:</strong> $\\frac23$.</p>\n</li>\n</ol>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3395,6 +3548,7 @@ window.BANK = {
     "<p>פתחו כל מחובר בנפרד: ל-$\\cos(2x)$ השתמשו בפיתוח הידוע של $\\cos t$, ול-$\\arctan(x+1)$ חשבו את $g(0),g'(0),g''(0)$.</p>"
    ],
    "solution": "<p>פולינום מקלורן מסדר 2: $P_2(x)=f(0)+f'(0)x+\\frac{f''(0)}{2}x^2$. נחשב בנפרד לכל מחובר.</p>\n<p>עבור $\\cos(2x)$: לפי הפיתוח $\\cos t=1-\\frac{t^2}{2}+o(t^2)$ נקבל $\\cos 2x=1-2x^2+o(x^2)$.</p>\n<p>עבור $g(x)=\\arctan(x+1)$:\n\\[ g(0)=\\arctan1=\\frac\\pi4,\\quad g'(x)=\\frac{1}{1+(x+1)^2}\\Rightarrow g'(0)=\\frac12,\\quad g''(x)=-\\frac{2(x+1)}{\\big(1+(x+1)^2\\big)^2}\\Rightarrow g''(0)=-\\frac24=-\\frac12. \\]\nלכן $\\arctan(x+1)=\\frac\\pi4+\\frac x2-\\frac{x^2}{4}+o(x^2)$. בחיסור:\n\\[ P_2(x)=\\left(1-\\frac\\pi4\\right)-\\frac12x-\\frac74x^2. \\]</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3422,6 +3576,7 @@ window.BANK = {
     "<p>את הגבול $\\lim_{x\\to1^+}x^{1/(x-1)}$ חשבו בעזרת $x^{1/(x-1)}=e^{\\frac{\\ln x}{x-1}}$.</p>"
    ],
    "solution": "<p>בקטעים $(-1,0)$, $(0,1)$, $(1,\\infty)$ הפונקציה רציפה (מנה/הרכבה של פונקציות רציפות, והמכנה $x\\ln(1+x)\\ne0$ ב-$(-1,0)$; ב-$(1,\\infty)$: $x^{1/(x-1)}=e^{\\ln x/(x-1)}$). נותר לבדוק את נקודות התפר.</p>\n<p><strong>הנקודה $x=0$:</strong> $f(0)=b=\\lim_{x\\to0^+}f(x)$. משמאל, בעזרת הגבולות הידועים $\\lim_{x\\to0}\\frac{1-\\cos x}{x^2}=\\frac12$ ו-$\\lim_{x\\to0}\\frac{\\ln(1+x)}{x}=1$:\n\\[ \\lim_{x\\to0^-}\\frac{1-\\cos x}{x\\ln(1+x)}=\\lim_{x\\to0^-}\\frac{1-\\cos x}{x^2}\\cdot\\frac{x}{\\ln(1+x)}=\\frac12\\cdot1=\\frac12. \\]\nלכן רציפות ב-$0$ שקולה ל-$b=\\frac12$.</p>\n<p><strong>הנקודה $x=1$:</strong> $f(1)=a+b=\\lim_{x\\to1^-}f(x)$. מימין:\n\\[ \\lim_{x\\to1^+}x^{1/(x-1)}=\\lim_{x\\to1^+}e^{\\frac{\\ln x}{x-1}}. \\]\nהגבול $\\lim_{x\\to1}\\frac{\\ln x}{x-1}$ הוא מהצורה $\\frac00$, ולפי לופיטל $=\\lim_{x\\to1}\\frac{1/x}{1}=1$ (זו גם הנגזרת של $\\ln$ ב-$1$). מרציפות האקספוננט הגבול הוא $e^1=e$. לכן רציפות ב-$1$ שקולה ל-$a+b=e$.</p>\n<p><strong>תשובה:</strong> $b=\\frac12$, $a=e-\\frac12$.</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3446,6 +3601,7 @@ window.BANK = {
     "<p>בצעו אינטגרציה בחלקים עם $u=\\ln x$, $dv=x^{-4}dx$ ואחר כך השאיפו את הגבול העליון לאינסוף.</p>"
    ],
    "solution": "<p>לפי הגדרת האינטגרל הלא אמיתי, $\\int_1^\\infty=\\lim_{R\\to\\infty}\\int_1^R$. באינטגרציה בחלקים עם $u=\\ln x$, $dv=x^{-4}dx$ ($du=\\frac{dx}{x}$, $v=-\\frac{1}{3x^3}$):\n\\[ \\int_1^R\\frac{\\ln x}{x^4}\\,dx=\\left[-\\frac{\\ln x}{3x^3}\\right]_1^R+\\frac13\\int_1^R\\frac{dx}{x^4}=-\\frac{\\ln R}{3R^3}+\\frac13\\left[-\\frac{1}{3x^3}\\right]_1^R=-\\frac{\\ln R}{3R^3}+\\frac19\\left(1-\\frac{1}{R^3}\\right). \\]\nכאשר $R\\to\\infty$: $\\frac{\\ln R}{R^3}\\to0$ (לפי לופיטל: $\\lim\\frac{1/R}{3R^2}=0$) ו-$\\frac1{R^3}\\to0$. לכן האינטגרל מתכנס ו-\n\\[ \\int_1^{+\\infty}\\frac{\\ln x}{x^4}\\,dx=\\frac19. \\]</p>",
+   "src": "מועד א' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד א"
   },
   {
@@ -3470,6 +3626,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\sin\\alpha-\\sin\\beta=2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$ ובגבול $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$.</p>"
    ],
    "solution": "<p>לפי ההגדרה ובעזרת הזהות $\\sin\\alpha-\\sin\\beta=2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$:\n\\begin{align*}\nf'(x)&amp;=\\lim_{h\\to0}\\frac{\\sin(3x+3h+4)-\\sin(3x+4)}{h}\n=\\lim_{h\\to0}\\frac{2\\cos\\!\\left(3x+4+\\frac{3h}{2}\\right)\\sin\\frac{3h}{2}}{h}\\\\\n&amp;=\\lim_{h\\to0}3\\cos\\!\\left(3x+4+\\tfrac{3h}{2}\\right)\\cdot\\frac{\\sin\\frac{3h}{2}}{\\frac{3h}{2}}=3\\cos(3x+4)\\cdot1,\n\\end{align*}\nכאשר השתמשנו ברציפות $\\cos$ ובגבול היסודי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$. לכן $f'(x)=3\\cos(3x+4)$.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3495,6 +3652,7 @@ window.BANK = {
     "<p>שימו לב לתחום ההגדרה $|x|\\ge1$ ולכך ש-$\\sqrt{x^2}=|x|$.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> צריך $x^2-1\\ge0$, כלומר $|x|\\ge1$, וגם $2x^2-1\\ne0$, כלומר $x\\ne\\pm\\frac1{\\sqrt2}$ – אך נקודות אלה ממילא אינן בתחום. לכן התחום הוא $(-\\infty,-1]\\cup[1,\\infty)$.\n\n<strong>אסימפטוטות אנכיות:</strong> בתחום המכנה מקיים $2x^2-1\\ge1&gt;0$, ולכן $f$ רציפה בכל תחומה (גם בקצוות $x=\\pm1$, שם $f(\\pm1)=0$). אין נקודה שבה $f$ שואפת לאינסוף, ולכן אין אסימפטוטות אנכיות.\n\n<strong>אסימפטוטות אופקיות:</strong> מכיוון ש-$\\sqrt{x^2-1}=|x|\\sqrt{1-\\frac1{x^2}}$,\n\\[ f(x)=\\frac{x|x|\\sqrt{1-\\frac1{x^2}}}{x^2\\left(2-\\frac1{x^2}\\right)}=\\frac{|x|}{x}\\cdot\\frac{\\sqrt{1-\\frac1{x^2}}}{2-\\frac1{x^2}}. \\]\nכאשר $x\\to+\\infty$: $\\frac{|x|}{x}=1$ ולכן $f(x)\\to\\frac12$. כאשר $x\\to-\\infty$: $\\frac{|x|}{x}=-1$ ולכן $f(x)\\to-\\frac12$. מכיוון שהגבולות סופיים, אין אסימפטוטות משופעות נוספות.\n\n<strong>תשובה:</strong> $y=\\frac12$ (ב-$+\\infty$) ו-$y=-\\frac12$ (ב-$-\\infty$); אין אסימפטוטות אנכיות.",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3519,6 +3677,7 @@ window.BANK = {
     "<p>בדקו מתי $y''$ מחליפה סימן.</p>"
    ],
    "solution": "<p>$y'=2x+a\\cos x$, $y''=2-a\\sin x$. נקודת פיתול היא נקודה שבה $y''$ מחליפה סימן.</p>\n<ul>\n<li>\nאם $|a|&lt;2$: $|a\\sin x|\\le|a|&lt;2$ ולכן $y''&gt;0$ לכל $x$ – אין נקודות פיתול.\n</li>\n<li>\nאם $a=2$: $y''=2(1-\\sin x)\\ge0$, ומתאפסת רק בנקודות מבודדות; הסימן לא מתחלף – אין פיתול. באופן דומה עבור $a=-2$: $y''=2(1+\\sin x)\\ge0$.\n</li>\n<li>\nאם $|a|&gt;2$: המשוואה $\\sin x=\\frac2a$ עם $0&lt;\\left|\\frac2a\\right|&lt;1$ יש לה פתרונות $x_0$, ובהם $\\cos x_0\\ne0$. לכן $(y'')'(x_0)=-a\\cos x_0\\ne0$, כלומר $y''$ עוברת דרך $0$ בצורה מונוטונית ממש ומחליפה סימן ב-$x_0$ – נקודת פיתול.\n</li>\n</ul>\n<p><strong>תשובה:</strong> $|a|&gt;2$.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3543,6 +3702,7 @@ window.BANK = {
     "<p>הגדירו $g(x)=\\frac{1}{x+1}+\\frac1x+\\frac1{x-1}-1$ ובדקו את הגבולות החד-צדדיים של $g$ בקצוות הקטעים $(-1,0)$ ו-$(0,1)$. השתמשו במשפט ערך הביניים.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=\\frac{1}{x+1}+\\frac1x+\\frac1{x-1}-1$, הרציפה בכל קטע שאינו מכיל את $-1,0,1$.</p>\n<p><strong>הקטע $(-1,0)$:</strong> כאשר $x\\to-1^+$, המחובר $\\frac1{x+1}\\to+\\infty$ ושאר המחוברים חסומים, ולכן $g(x)\\to+\\infty$. כאשר $x\\to0^-$, $\\frac1x\\to-\\infty$ ולכן $g(x)\\to-\\infty$. מכאן קיימות נקודות $-1&lt;p&lt;q&lt;0$ עם $g(p)&gt;0$ ו-$g(q)&lt;0$. $g$ רציפה ב-$[p,q]$, ולפי משפט ערך הביניים קיימת $x_1\\in(p,q)$ עם $g(x_1)=0$.</p>\n<p><strong>הקטע $(0,1)$:</strong> כאשר $x\\to0^+$, $\\frac1x\\to+\\infty$ ולכן $g\\to+\\infty$; כאשר $x\\to1^-$, $\\frac1{x-1}\\to-\\infty$ ולכן $g\\to-\\infty$. באותו אופן, לפי משפט ערך הביניים קיים $x_2\\in(0,1)$ עם $g(x_2)=0$.</p>\n<p>הקטעים זרים, ולכן $x_1\\ne x_2$ ולמשוואה לפחות שני פתרונות. (באותו אופן יש פתרון שלישי ב-$(1,\\infty)$: $g\\to+\\infty$ כאשר $x\\to1^+$ ו-$g\\to-1$ כאשר $x\\to\\infty$.)</p>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3567,6 +3727,7 @@ window.BANK = {
     "<p>נפח גוף סיבוב סביב ציר $x$ הוא $V=\\pi\\int_a^b y^2\\,dx$.</p>"
    ],
    "solution": "<p>הסקיצה: הפונקציה $y=\\sqrt{\\frac{x}{x+2}}$ עולה מ-$y(0)=0$ ל-$y(2)=\\sqrt{\\frac12}$; התחום הוא השטח שבין הגרף לציר $x$ בקטע $[0,2]$, והגוף נוצר מסיבובו סביב ציר $x$. לפי נוסחת נפח גוף סיבוב:\n\\[ V=\\pi\\int_0^2\\frac{x}{x+2}\\,dx=\\pi\\int_0^2\\left(1-\\frac{2}{x+2}\\right)dx=\\pi\\Big[x-2\\ln(x+2)\\Big]_0^2=\\pi\\big(2-2\\ln4+2\\ln2\\big). \\]\n<strong>תשובה:</strong> $V=\\pi(2-2\\ln2)=2\\pi(1-\\ln2)\\approx1.928$.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3592,6 +3753,7 @@ window.BANK = {
     "<p>בסעיף א' פרקו $x^3+4x^2=x^2(x+4)$ ולשברים חלקיים. בסעיף ב' הציבו $t=\\sqrt x$ ואחר כך בצעו אינטגרציה בחלקים.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li class=\"custom\" data-label=\"א.\">\n$x^3+4x^2=x^2(x+4)$, ומעלת המונה קטנה ממעלת המכנה. נפרק:\n  \\[ \\frac{x^2-8}{x^2(x+4)}=\\frac Ax+\\frac B{x^2}+\\frac C{x+4}\\;\\Longrightarrow\\;x^2-8=Ax(x+4)+B(x+4)+Cx^2. \\]\n  הצבת $x=0$: $-8=4B$, $B=-2$. הצבת $x=-4$: $8=16C$, $C=\\frac12$. מקדמי $x^2$: $1=A+C$, $A=\\frac12$. לכן\n  \\[ \\int\\frac{x^2-8}{x^3+4x^2}\\,dx=\\frac12\\ln|x|+\\frac2x+\\frac12\\ln|x+4|+C. \\]\n</li>\n<li class=\"custom\" data-label=\"ב.\">\nנציב $x=t^2$, $dx=2t\\,dt$, $t\\in[0,1]$:\n  \\[ \\int_0^1\\ln(1+\\sqrt x)\\,dx=\\int_0^1 2t\\ln(1+t)\\,dt. \\]\n  באינטגרציה בחלקים ($u=\\ln(1+t)$, $dv=2t\\,dt$, $v=t^2$):\n  \\[ =\\Big[t^2\\ln(1+t)\\Big]_0^1-\\int_0^1\\frac{t^2}{1+t}\\,dt=\\ln2-\\int_0^1\\left(t-1+\\frac1{1+t}\\right)dt=\\ln2-\\left(\\frac12-1+\\ln2\\right)=\\frac12. \\]\n  <strong>תשובה:</strong> $\\frac12$.\n</li>\n</ol>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3617,6 +3779,7 @@ window.BANK = {
     "<p>לפי המשפט היסודי $f'(x)=\\frac{1-x}{1+x^2}$; את $f(1)$ חשבו ישירות מהאינטגרל.</p>"
    ],
    "solution": "<p>פולינום טיילור מסדר 2 סביב $1$: $P_2(x)=f(1)+f'(1)(x-1)+\\frac{f''(1)}{2}(x-1)^2$.</p>\n<p>הפונקציה $\\frac{1-t}{1+t^2}$ רציפה בכל $\\R$, ולכן לפי המשפט היסודי של החשבון האינטגרלי $f'(x)=\\frac{1-x}{1+x^2}$, ומכאן $f'(1)=0$. נגזור שוב:\n\\[ f''(x)=\\frac{-(1+x^2)-(1-x)\\cdot2x}{(1+x^2)^2}=\\frac{x^2-2x-1}{(1+x^2)^2},\\qquad f''(1)=\\frac{-2}{4}=-\\frac12. \\]\nולבסוף\n\\[ f(1)=\\int_0^1\\frac{dt}{1+t^2}-\\int_0^1\\frac{t\\,dt}{1+t^2}=\\Big[\\arctan t\\Big]_0^1-\\Big[\\tfrac12\\ln(1+t^2)\\Big]_0^1=\\frac\\pi4-\\frac{\\ln2}{2}. \\]\n<strong>תשובה:</strong>\n\\[ P_2(x)=\\frac\\pi4-\\frac{\\ln2}{2}-\\frac14(x-1)^2. \\]</p>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3643,6 +3806,7 @@ window.BANK = {
     "<p>יש לבדוק רציפות רק בנקודות התפר $x=0$ ו-$x=1$. את הגבול מימין ל-$1$ כתבו בצורה $e^{\\frac{\\ln\\cos(x-1)}{x-1}}$.</p>"
    ],
    "solution": "<p>עבור $x&lt;0$ מתקיים $1-x&gt;1$ ולכן $\\ln(1-x)&gt;0$, כך שבקטע $(-\\infty,0)$ הפונקציה רציפה כמנה של פונקציות רציפות עם מכנה שונה מאפס. ב-$(0,1)$ היא פולינום. עבור $x&gt;1$ הביטוי $\\big(\\cos(x-1)\\big)^{1/(x-1)}=e^{\\frac{\\ln\\cos(x-1)}{x-1}}$ מוגדר ורציף כאשר $\\cos(x-1)&gt;0$, ובפרט בקטע $1&lt;x&lt;1+\\frac\\pi2$, שהוא הסביבה הרלוונטית לרציפות ב-$1$. (הערה: עבור $x&gt;1$ שבהם $\\cos(x-1)\\le0$ הביטוי אינו מוגדר במובן הממשי, ולכן את הדרישה \"רציפה לכל $x$\" יש להבין כרציפות בתחום ההגדרה.) נבדוק את נקודות התפר.</p>\n<p><strong>הנקודה $x=0$:</strong> $f(0)=b=\\lim_{x\\to0^+}f(x)$. משמאל:\n\\[ \\lim_{x\\to0^-}\\frac{\\sin3x}{\\ln(1-x)}=\\lim_{x\\to0^-}\\frac{\\sin3x}{3x}\\cdot\\frac{-x}{\\ln(1-x)}\\cdot(-3)=1\\cdot1\\cdot(-3)=-3, \\]\nלפי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$ ו-$\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ (עם $t=-x$). לכן $b=-3$.</p>\n<p><strong>הנקודה $x=1$:</strong> $f(1)=a+b=\\lim_{x\\to1^-}f(x)$. מימין, נסמן $u=x-1\\to0^+$:\n\\[ \\big(\\cos u\\big)^{1/u}=e^{\\frac{\\ln\\cos u}{u}},\\qquad \\lim_{u\\to0^+}\\frac{\\ln\\cos u}{u}\\overset{\\text{לופיטל}}{=}\\lim_{u\\to0^+}\\frac{-\\tan u}{1}=0. \\]\nמרציפות האקספוננט הגבול הוא $e^0=1$. לכן $a+b=1$.</p>\n<p><strong>תשובה:</strong> $b=-3$, $a=4$.</p>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3667,6 +3831,7 @@ window.BANK = {
     "<p>הציבו $t=\\sqrt x$.</p>"
    ],
    "solution": "<p>נציב $t=\\sqrt x$, $x=t^2$, $dx=2t\\,dt$; כאשר $x=0.25$, $t=\\frac12$, וכאשר $x\\to\\infty$, $t\\to\\infty$:\n\\[ \\int_{0.25}^{R}\\frac{dx}{(4x+1)\\sqrt x}=\\int_{1/2}^{\\sqrt R}\\frac{2t\\,dt}{(4t^2+1)t}=\\int_{1/2}^{\\sqrt R}\\frac{2\\,dt}{1+(2t)^2}=\\Big[\\arctan(2t)\\Big]_{1/2}^{\\sqrt R}=\\arctan(2\\sqrt R)-\\frac\\pi4. \\]\nכאשר $R\\to\\infty$, $\\arctan(2\\sqrt R)\\to\\frac\\pi2$. לכן האינטגרל מתכנס ו-\n\\[ \\int_{0.25}^{+\\infty}\\frac{dx}{(4x+1)\\sqrt x}=\\frac\\pi2-\\frac\\pi4=\\frac\\pi4. \\]</p>",
+   "src": "מועד ב' תשע\"ט סמסטר ב'",
    "exam": "תשע\"ט סמסטר ב מועד ב"
   },
   {
@@ -3692,6 +3857,7 @@ window.BANK = {
     "<p>פרקו את הביטוי למכפלה של גבולות יסודיים: $\\frac{\\sin t}{t}\\to 1$ ו-$\\frac{\\ln(1+t)}{t}\\to 1$ כאשר $t\\to 0$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ב)</strong> $\\frac{a}{bc}$ (בהנחה הסמויה בשאלה ש-$a,b,c\\neq 0$, אחרת הביטוי אינו מוגדר או שהגבול שונה).\n\nנכפול ונחלק כך שיופיעו גבולות יסודיים. עבור $x$ קרוב ל-0 ושונה ממנו:\n\\[\n\\frac{\\sin ax}{\\sin bx}\\cdot\\frac{x}{\\ln(1+cx)}\n=\\frac{\\sin ax}{ax}\\cdot\\frac{bx}{\\sin bx}\\cdot\\frac{cx}{\\ln(1+cx)}\\cdot\\frac{ax\\cdot x}{bx\\cdot cx}\n=\\frac{\\sin ax}{ax}\\cdot\\frac{bx}{\\sin bx}\\cdot\\frac{cx}{\\ln(1+cx)}\\cdot\\frac{a}{bc}.\n\\]\nכאשר $x\\to 0$ גם $ax,bx,cx\\to 0$, ולכן לפי הגבול היסודי $\\lim_{t\\to 0}\\frac{\\sin t}{t}=1$ (והצבה $t=ax$, $t=bx$) מתקיים\n$\\frac{\\sin ax}{ax}\\to 1$ ו-$\\frac{bx}{\\sin bx}\\to 1$, ולפי הגבול היסודי $\\lim_{t\\to 0}\\frac{\\ln(1+t)}{t}=1$ (מדף הנוסחאות, $\\lim_{t\\to0}\\frac{\\log_a(1+t)}{t}=\\frac{1}{\\ln a}$ עם בסיס $e$) מתקיים $\\frac{cx}{\\ln(1+cx)}\\to 1$.\nלפי אריתמטיקה של גבולות:\n\\[\n\\lim_{x\\to 0}\\frac{\\sin ax}{\\sin bx}\\,\\frac{x}{\\ln(1+cx)}=1\\cdot 1\\cdot 1\\cdot\\frac{a}{bc}=\\boxed{\\frac{a}{bc}}.\n\\]\n\n<strong>למה האחרות שגויות:</strong> (א), (ג), (ד) הן צירופים אחרים של $a,b,c$, ששונים מ-$\\frac{a}{bc}$ באופן כללי: למשל עבור $a=2,\\ b=3,\\ c=5$ הגבול הוא $\\frac{2}{15}$, בעוד (א) נותנת $\\frac{10}{3}$, (ג) נותנת $\\frac{15}{2}$ ו-(ד) נותנת $\\frac{3}{10}$. (ה) שגויה כי הראינו שהגבול קיים.",
+   "src": "בוחן תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א בוחן"
   },
   {
@@ -3717,6 +3883,7 @@ window.BANK = {
     "<p>זהו גבול מהצורה $1^\\infty$. כתבו את הבסיס כ-$1+t(x)$ עם $t(x)\\to 0$ והשתמשו ב-$\\lim_{y\\to\\infty}\\left(1+\\frac1y\\right)^y=e$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ד)</strong> $e^{-1}$.\n\nהבסיס שואף ל-1 (חלוקה ב-$x^2$: $\\frac{1-1/x^2}{1+3/x}\\to 1$) והמעריך שואף ל-$\\infty$, כלומר זהו גבול מהצורה $1^\\infty$. נכתוב\n\\[\n\\frac{x^2-1}{x^2+3x}=1+\\frac{x^2-1-x^2-3x}{x^2+3x}=1+t(x),\\qquad t(x)=\\frac{-3x-1}{x^2+3x}\\xrightarrow[x\\to\\infty]{}0 .\n\\]\nעבור $x$ גדול $t(x)\\neq 0$ ולכן\n\\[\n\\left(1+t(x)\\right)^{\\frac x3}=\\Bigl[\\left(1+t(x)\\right)^{\\frac{1}{t(x)}}\\Bigr]^{t(x)\\cdot\\frac{x}{3}} .\n\\]\nלפי הגבול היסודי $\\lim_{s\\to 0}(1+s)^{1/s}=e$ (הצבה $s=t(x)\\to 0$) הבסיס הפנימי שואף ל-$e$. המעריך:\n\\[\nt(x)\\cdot\\frac x3=\\frac{-3x-1}{x^2+3x}\\cdot\\frac{x}{3}=\\frac{-3x^2-x}{3x^2+9x}=\\frac{-3-\\frac1x}{3+\\frac9x}\\xrightarrow[x\\to\\infty]{}-1 .\n\\]\nמכיוון ש-$u^v=e^{v\\ln u}$ ופונקציות $\\ln$ ו-$\\exp$ רציפות, אם $u\\to e$ ו-$v\\to -1$ אז $u^v\\to e^{-1}$. לכן\n\\[\n\\lim_{x\\to\\infty}\\left(\\frac{x^2-1}{x^2+3x}\\right)^{\\frac{x}{3}}=\\boxed{e^{-1}} .\n\\]\n\n<strong>למה האחרות שגויות:</strong> (א), (ב), (ג) מתקבלות משגיאה בסימן או במקדם של המעריך (למשל התעלמות מכך ש-$t(x)$ שלילי). (ה) שגויה: הבסיס קטן מ-1 עבור $x$ גדול (המונה קטן מהמכנה), ולכן החזקה אף חסומה ע\"י 1 ואינה יכולה לשאוף ל-$\\infty$.",
+   "src": "בוחן תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א בוחן"
   },
   {
@@ -3740,6 +3907,7 @@ window.BANK = {
    "question": "<p>הנגזרת של $e^{2x}\\ln\\sqrt{1+x}$ שווה ל-</p>\n<ol class=\"parts\">\n<li>\n$e^{2x}\\ln\\sqrt{1+x}+e^{2x}\\frac{1}{2(1+x)}$\n</li>\n<li>\n$2e^{2x}\\ln\\sqrt{1+x}+e^{2x}\\frac{1}{2(1+x)}$\n</li>\n<li>\n$2e^{2x}\\ln\\sqrt{1+x}+e^{2x}\\frac{1}{(1+x)}$\n</li>\n<li>\n$e^{2x}\\ln\\sqrt{1+x}+e^{2x}\\frac{1}{(1+x)}$\n</li>\n<li>\n$2e^{2x}\\sqrt{1+x}+2e^{2x}\\frac{1}{(1+x)}$\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: (ב)</strong>.\n\nלפי כלל המכפלה $(fg)'=f'g+fg'$ עם $f(x)=e^{2x}$, $g(x)=\\ln\\sqrt{1+x}$ (מוגדרת עבור $x&gt;-1$).\n\nלפי כלל השרשרת: $f'(x)=e^{2x}\\cdot 2=2e^{2x}$.\n\nעבור $g$ נשתמש בכך ש-$\\ln\\sqrt{1+x}=\\frac12\\ln(1+x)$, ולכן $g'(x)=\\frac12\\cdot\\frac{1}{1+x}=\\frac{1}{2(1+x)}$.\n(לחלופין, בכלל השרשרת: $g'(x)=\\frac{1}{\\sqrt{1+x}}\\cdot\\frac{1}{2\\sqrt{1+x}}=\\frac{1}{2(1+x)}$.)\n\nלכן\n\\[\n\\left(e^{2x}\\ln\\sqrt{1+x}\\right)'=\\boxed{2e^{2x}\\ln\\sqrt{1+x}+e^{2x}\\frac{1}{2(1+x)}} .\n\\]\n\n<strong>למה האחרות שגויות:</strong> (א) ו-(ד) שוכחות את הגורם 2 מנגזרת המעריך $2x$ (כלל השרשרת). (ג) ו-(ד) שוכחות את הגורם $\\frac12$ שנובע מהשורש. (ה) מחליפה את $\\ln\\sqrt{1+x}$ ב-$\\sqrt{1+x}$ ואת המקדם של האיבר השני ב-2, וזו אינה הנגזרת.",
+   "src": "בוחן תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א בוחן"
   },
   {
@@ -3765,6 +3933,7 @@ window.BANK = {
     "<p>גזרו את שני אגפי המשוואה לפי $x$, כאשר $y=y(x)$ (כלל השרשרת), ואז הציבו $x=0,\\ y=0$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ב)</strong> $-\\frac12$.\n\nראשית, הנקודה $(0,0)$ מקיימת את המשוואה: $\\cos\\frac{\\pi}{2}-0=0$.\nנגזור את שני אגפי המשוואה $\\cos\\left(\\frac{\\pi}{2}+x+y(x)\\right)-y(x)=0$ לפי $x$, תוך שימוש בכלל השרשרת:\n\\[\n-\\sin\\left(\\frac{\\pi}{2}+x+y\\right)\\cdot\\left(1+y'\\right)-y'=0 .\n\\]\nנציב $x=0$, $y(0)=0$: $\\sin\\frac{\\pi}{2}=1$, ולכן\n\\[\n-(1+y'(0))-y'(0)=0\\quad\\Longrightarrow\\quad -1-2y'(0)=0\\quad\\Longrightarrow\\quad y'(0)=\\boxed{-\\frac12}.\n\\]\n(בדיקה: לפי הזהות $\\cos(\\frac{\\pi}{2}+\\theta)=-\\sin\\theta$ המשוואה היא $-\\sin(x+y)=y$; גזירה נותנת $-\\cos(x+y)(1+y')=y'$, ובנקודה $(0,0)$ שוב $y'(0)=-\\frac12$.)\n\n<strong>למה האחרות שגויות:</strong> (ד) מתקבלת משגיאת סימן בנגזרת של $\\cos$. (ה) מתקבלת אם שוכחים לגזור את $y$ שבתוך הקוסינוס או את האיבר $-y$. (א) ו-(ג) מתקבלות מבלבול בין ערך הזווית $\\frac{\\pi}{2}$ לבין הנגזרת; הנגזרת היא ערך יחיד שחישבנו, $-\\frac12$.",
+   "src": "בוחן תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א בוחן"
   },
   {
@@ -3791,6 +3960,7 @@ window.BANK = {
     "<p>רציפות אינה גוררת גזירות. חשבו על $f(x)=|x|$ בנקודה $x_0=0$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג)</strong>.\n\nלפי ההגדרה, $f$ רציפה ב-$x_0$ אם ורק אם $\\lim_{x\\to x_0}f(x)=f(x_0)$. לפי אריתמטיקה של גבולות (גבול של קבוע הוא הקבוע עצמו) זה שקול לכך ש-\n\\[\n\\lim_{x\\to x_0}\\bigl(f(x)-f(x_0)\\bigr)=f(x_0)-f(x_0)=0 ,\n\\]\nובפרט הגבול בטענה (ג) קיים (ושווה ל-0).\n\n<strong>למה האחרות שגויות:</strong> נתבונן ב-$f(x)=|x|$ וב-$x_0=0$. הפונקציה רציפה ב-0, אבל\n\\[\n\\frac{f(0+h)-f(0)}{h}=\\frac{|h|}{h}=\\begin{cases}1,&amp; h&gt;0\\\\ -1,&amp; h&lt;0\\end{cases}\n\\]\nולכן הגבולות החד-צדדיים של מנת ההפרשים הם $1$ ו-$-1$ והגבול אינו קיים. מכאן:\n\n<ul>\n<li>\n(ב) ו-(ד) שגויות: אלה שתי צורות כתיבה של הגדרת הנגזרת $f'(x_0)$, והראינו שהגבול לא קיים.\n</li>\n<li>\n(א) שגויה: גזירות ב-$x_0$ פירושה בדיוק קיום הגבול ב-(ב)/(ד).\n</li>\n<li>\n(ה) שגויה: $f'(0)$ כלל אינה מוגדרת, ולכן $f'$ אינה רציפה ב-0. (יתרה מזו, גם פונקציה גזירה יכולה להיות בעלת נגזרת לא רציפה, למשל $x^2\\sin\\frac1x$ עם $f(0)=0$.)\n</li>\n</ul>",
+   "src": "בוחן תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א בוחן"
   },
   {
@@ -3817,6 +3987,7 @@ window.BANK = {
     "<p>$y'=\\frac{e^{2x}(2x-1)}{x^2}$ ו-$y''=\\frac{2e^{2x}(2x^2-2x+1)}{x^3}$. בדקו את הסימן של כל גורם.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\n<strong>תחום הגדרה:</strong> $x\\neq0$, כלומר $(-\\infty,0)\\cup(0,\\infty)$.\n\n  <strong>חיתוך עם הצירים:</strong> $x=0$ לא בתחום — אין חיתוך עם ציר $y$. $e^{2x}&gt;0$ תמיד, ולכן $y\\ne0$ — אין חיתוך עם ציר $x$. (הסימן: $y&lt;0$ עבור $x&lt;0$ ו-$y&gt;0$ עבור $x&gt;0$.)\n\n  <strong>זוגיות:</strong> $y(-x)=\\frac{e^{-2x}}{-x}$. למשל $y(1)=e^2$, $y(-1)=-e^{-2}$, ולכן $y(-1)\\ne y(1)$ וגם $y(-1)\\ne -y(1)$. הפונקציה <strong>אינה זוגית ואינה אי-זוגית</strong>.\n\n  \n</li>\n<li>\nהפונקציה היא מנה של פונקציות רציפות ($e^{2x}$ ו-$x$) ולכן רציפה בכל נקודה שבה המכנה שונה מאפס, כלומר בכל תחום הגדרתה. הנקודה היחידה שבעייתית היא $x=0$ (שבה הפונקציה אינה מוגדרת):\n  \\[ \\lim_{x\\to0^-}\\frac{e^{2x}}{x}=\\frac{1}{0^-}=-\\infty,\\qquad \\lim_{x\\to0^+}\\frac{e^{2x}}{x}=\\frac{1}{0^+}=+\\infty, \\]\n  ולכן $x=0$ היא נקודת אי-רציפות מסוג שני (עיקרית).\n</li>\n<li>\n<strong>אסימפטוטה אנכית:</strong> $x=0$ (לפי הגבולות בסעיף הקודם).\n\n  <strong>ב-$-\\infty$:</strong> $e^{2x}\\to0$ ו-$\\frac1x\\to0$, לכן $\\lim_{x\\to-\\infty}y=0$ — אסימפטוטה אופקית $y=0$ משמאל (הגרף מתחת לציר).\n\n  <strong>ב-$+\\infty$:</strong> $\\frac{y}{x}=\\frac{e^{2x}}{x^2}\\to\\infty$ (לפי לופיטל פעמיים: $\\lim\\frac{e^{2x}}{x^2}=\\lim\\frac{2e^{2x}}{2x}=\\lim\\frac{4e^{2x}}{2}=\\infty$), לכן אין אסימפטוטה אופקית או משופעת מימין.\n\n  \n</li>\n<li>\nלפי כלל המנה:\n  \\[ y'=\\frac{2e^{2x}\\cdot x - e^{2x}}{x^2} = \\frac{e^{2x}(2x-1)}{x^2}. \\]\n  מכיוון ש-$e^{2x}&gt;0$ ו-$x^2&gt;0$, הסימן של $y'$ הוא הסימן של $2x-1$:\n<ul>\n<li>\n$y'&lt;0$ עבור $x&lt;0$ ועבור $0&lt;x&lt;\\frac12$: הפונקציה <strong>יורדת</strong> ב-$(-\\infty,0)$ וב-$(0,\\frac12)$.\n</li>\n<li>\n$y'&gt;0$ עבור $x&gt;\\frac12$: הפונקציה <strong>עולה</strong> ב-$(\\frac12,\\infty)$.\n</li>\n</ul>\nב-$x=\\frac12$ הנגזרת מחליפה סימן מ-$-$ ל-$+$, ולכן זו נקודת <strong>מינימום מקומי</strong>: $y(\\tfrac12)=\\frac{e}{1/2}=2e$, כלומר $(\\frac12,2e)$. אין נקודות קיצון נוספות.\n</li>\n<li>\nנגזור את $y'=e^{2x}\\cdot\\frac{2x-1}{x^2}$:\n  \\[ \\left(\\frac{2x-1}{x^2}\\right)'=\\frac{2x^2-2x(2x-1)}{x^4}=\\frac{2-2x}{x^3}, \\]\n  \\[ y''=e^{2x}\\left(\\frac{2(2x-1)}{x^2}+\\frac{2-2x}{x^3}\\right)=\\frac{e^{2x}\\left(4x^2-2x+2-2x\\right)}{x^3}=\\frac{2e^{2x}\\left(2x^2-2x+1\\right)}{x^3}. \\]\n  לטרינום $2x^2-2x+1$ דיסקרימיננטה $4-8&lt;0$ ומקדם מוביל חיובי, ולכן הוא חיובי תמיד. מכאן הסימן של $y''$ הוא הסימן של $x^3$, כלומר של $x$:\n<ul>\n<li>\n$x&lt;0$: $y''&lt;0$ — הפונקציה <strong>קעורה</strong> ($\\cap$) ב-$(-\\infty,0)$.\n</li>\n<li>\n$x&gt;0$: $y''&gt;0$ — הפונקציה <strong>קמורה</strong> ($\\cup$) ב-$(0,\\infty)$.\n</li>\n</ul>\nסימן $y''$ מתחלף רק ב-$x=0$, שאינה בתחום ההגדרה, ולכן <strong>אין נקודות פיתול</strong>.\n</li>\n<li>\n<strong>תיאור גרפי:</strong> משמאל לציר $y$ הגרף מתחת לציר $x$: מתחיל קרוב ל-$y=0$ ב-$-\\infty$, יורד (וקעור) ושואף ל-$-\\infty$ כאשר $x\\to0^-$. מימין לציר $y$ הגרף מעל ציר $x$: יורד מ-$+\\infty$ (ליד $x=0^+$) עד נקודת המינימום $(\\frac12,2e)\\approx(0.5,\\,5.44)$, ואז עולה (בקמירות) ל-$+\\infty$ במהירות אקספוננציאלית.\n\n</li>\n</ol>",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -3843,6 +4014,7 @@ window.BANK = {
     "<p>המועמדים הם קצות הקטע, נקודות שבהן $y'=0$, ונקודות שבהן $y$ אינה גזירה (שימו לב ל-$x=0$).</p>"
    ],
    "solution": "<p>הפונקציה $y=x^{1/3}+2x^{4/3}$ רציפה בקטע הסגור $[-8,1]$, ולכן לפי <strong>משפט ויירשטראס</strong> היא מקבלת בו מקסימום ומינימום. נקודות אלה הן בקצות הקטע או בנקודות פנימיות קריטיות (שבהן $y'=0$ או $y'$ לא קיימת), לפי משפט פרמה.</p>\n<p><strong>נגזרת</strong> (עבור $x\\ne0$):\n\\[ y' = \\frac13x^{-2/3}+\\frac83x^{1/3} = \\frac{1+8x}{3\\sqrt[3]{x^2}}. \\]</p>\n<ul>\n<li>\n$y'=0\\iff x=-\\frac18\\in(-8,1)$.\n</li>\n<li>\nב-$x=0$ הנגזרת אינה קיימת: $\\frac{y(h)-y(0)}{h}=\\frac{h^{1/3}(1+2h)}{h}=\\frac{1+2h}{h^{2/3}}\\to+\\infty$. לכן $x=0$ נקודה קריטית.\n</li>\n</ul>\n<p><strong>ערכי הפונקציה במועמדים:</strong>\n\\begin{align*}\ny(-8) &amp;= \\sqrt[3]{-8}\\,(1-16) = (-2)(-15) = 30,\\\\\ny\\left(-\\tfrac18\\right) &amp;= \\sqrt[3]{-\\tfrac18}\\left(1-\\tfrac14\\right) = -\\tfrac12\\cdot\\tfrac34 = -\\tfrac38,\\\\\ny(0) &amp;= 0,\\\\\ny(1) &amp;= 1\\cdot 3 = 3.\n\\end{align*}</p>\n<p><strong>תשובה:</strong> הערך הגדול ביותר הוא $30$ (מתקבל ב-$x=-8$), והערך הקטן ביותר הוא $-\\frac38$ (מתקבל ב-$x=-\\frac18$).</p>",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -3868,6 +4040,7 @@ window.BANK = {
     "<p>את $\\int x^2e^{2x}dx$ חשבו באינטגרציה בחלקים פעמיים (גוזרים את הפולינום).</p>"
    ],
    "solution": "<p>לפי לינאריות האינטגרל נחשב כל מחובר בנפרד.</p>\n<p><strong>המחובר הראשון.</strong> $x^2+2x+1=(x+1)^2$. המונה ממעלה 2 והמכנה ממעלה 3, ולכן נפרק לשברים חלקיים:\n\\[ \\frac{x^2-x-4}{(x-1)(x+1)^2} = \\frac{A}{x-1}+\\frac{B}{x+1}+\\frac{C}{(x+1)^2}, \\]\nכלומר $x^2-x-4 = A(x+1)^2+B(x-1)(x+1)+C(x-1)$.</p>\n<ul>\n<li>\n$x=1$: $1-1-4=4A$, ולכן $A=-1$.\n</li>\n<li>\n$x=-1$: $1+1-4=-2C$, ולכן $C=1$.\n</li>\n<li>\nהשוואת מקדמי $x^2$: $1=A+B$, ולכן $B=2$.\n</li>\n</ul>\n<p>(בדיקה, מקדם חופשי: $A-B-C=-1-2-1=-4$ $\\checkmark$.) לכן\n\\[ \\int\\frac{x^2-x-4}{(x-1)(x+1)^2}dx = -\\ln|x-1| + 2\\ln|x+1| - \\frac{1}{x+1}+C_1. \\]</p>\n<p><strong>המחובר השני.</strong> אינטגרציה בחלקים עם $u=x^2$, $v'=e^{2x}$ ($v=\\frac12e^{2x}$):\n\\[ \\int x^2e^{2x}dx = \\frac{x^2}{2}e^{2x} - \\int xe^{2x}dx. \\]\nשוב בחלקים עם $u=x$, $v'=e^{2x}$:\n\\[ \\int xe^{2x}dx = \\frac{x}{2}e^{2x}-\\frac12\\int e^{2x}dx = \\frac x2e^{2x}-\\frac14e^{2x}+C_2. \\]\nלכן\n\\[ \\int x^2e^{2x}dx = e^{2x}\\left(\\frac{x^2}{2}-\\frac{x}{2}+\\frac14\\right)+C_3. \\]</p>\n<p><strong>תשובה:</strong>\n\\[ \\int\\left(\\frac{x^2-x-4}{(x-1)(x^2+2x+1)}+e^{2x}x^2\\right)dx = -\\ln|x-1|+2\\ln|x+1|-\\frac{1}{x+1}+e^{2x}\\left(\\frac{x^2}{2}-\\frac{x}{2}+\\frac14\\right)+C. \\]\n(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)</p>",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -3895,6 +4068,7 @@ window.BANK = {
     "<p>איזה משפט מבטיח משהו לכל פונקציה רציפה בקטע סגור?</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ה).</strong>\n\nלפי <strong>משפט ויירשטראס הראשון</strong>, פונקציה רציפה בקטע סגור $[a,b]$ חסומה בו. לכן קיים $K$ כך ש-$f(x)\\le K$ לכל $x\\in[a,b]$, ואז $M=K+1$ מקיים $f(x)&lt;M$ לכל $x\\in[a,b]$.\n\nשאר התשובות אינן חייבות להתקיים:\n\n<ul>\n<li>\n(א) לא נכון: למשל $f(x)=x$ רציפה וגזירה ב-$(a,b)$.\n</li>\n<li>\n(ב) ו-(ד) לא נכונות: משפט לגרנז' דורש גם גזירות ב-$(a,b)$, ופונקציה רציפה אינה חייבת להיות גזירה. למשל בקטע $[-1,1]$ הפונקציה $f(x)=|x|$ רציפה אך אינה גזירה ב-$0$.\n</li>\n<li>\n(ג) לא נכון: משפט רול דורש גם גזירות וגם $f(a)=f(b)$; למשל $f(x)=x$ רציפה אך $f(a)\\ne f(b)$.\n</li>\n</ul>",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -3921,6 +4095,7 @@ window.BANK = {
     "<p>מה גזירות בנקודה גוררת?</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג).</strong>\n\nפונקציה גזירה בנקודה רציפה בה, ולכן $f$ רציפה ב-$(a,b)$. גם $\\sin x$ רציפה, וסכום של פונקציות רציפות רציף; לכן $f(x)+\\sin(x)$ רציפה ב-$(a,b)$.\n\nשאר התשובות אינן חייבות להתקיים:\n\n<ul>\n<li>\n(א) לא נכון: הנגזרת של פונקציה גזירה אינה חייבת להיות רציפה. הדוגמה הקלאסית: $f(x)=x^2\\sin\\frac1x$ עבור $x\\neq0$ ו-$f(0)=0$, בקטע $(-1,1)$. היא גזירה בכל נקודה ($f'(0)=\\lim_{h\\to0}h\\sin\\frac1h=0$), אך $f'(x)=2x\\sin\\frac1x-\\cos\\frac1x$ עבור $x\\ne0$, ול-$f'$ אין גבול ב-$0$.\n</li>\n<li>\n(ב), (ד) לא נכונות: למשל $f(x)=x^2$ בקטע $(-1,1)$ גזירה אך אינה מונוטונית.\n</li>\n<li>\n(ה) לא נכון: למשל $f(x)=x$ גזירה ו-$f'(x)=1\\ne0$ לכל $x$. (משפט רול דורש גם רציפות בקטע סגור ו-$f(a)=f(b)$.)\n</li>\n</ul>",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -3946,6 +4121,7 @@ window.BANK = {
     "<p>גזרו את שני אגפי המשוואה לפי $x$, כאשר $y=y(x)$ (כלל השרשרת), והציבו $x=0$, $y=0$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ה).</strong>\n\nראשית, הנקודה $(0,0)$ מקיימת את המשוואה: $\\cos\\frac{\\pi}{2}-0=0$. נגזור את שני אגפי המשוואה לפי $x$, כאשר $y=y(x)$, לפי כלל השרשרת:\n\\[ -\\sin\\left(\\frac{\\pi}{2}+x+y\\right)\\cdot\\left(1+y'\\right) - y' = 0. \\]\nנציב $x=0$, $y(0)=0$; אז $\\sin\\frac{\\pi}{2}=1$:\n\\[ -(1+y'(0)) - y'(0) = 0 \\quad\\Longrightarrow\\quad -1-2y'(0)=0 \\quad\\Longrightarrow\\quad y'(0) = -\\frac12. \\]\n(לחלופין: $\\cos\\left(\\frac\\pi2+t\\right)=-\\sin t$, ולכן המשוואה היא $\\sin(x+y)+y=0$; גזירה נותנת $\\cos(x+y)(1+y')+y'=0$, וב-$(0,0)$: $1+2y'=0$.)",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -3971,6 +4147,7 @@ window.BANK = {
     "<p>הציבו $t=-\\frac{x^2}{2}$ בפיתוח $e^t=1+t+\\frac{t^2}{2}+o(t^2)$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג).</strong>\n\nלפי פיתוח מקלורן $e^t=1+t+\\frac{t^2}{2}+o(t^2)$ כאשר $t\\to0$, עם $t=-\\frac{x^2}{2}$ (ואז $o(t^2)=o(x^4)$):\n\\[ e^{-x^2/2} = 1-\\frac{x^2}{2}+\\frac{x^4}{8}+o(x^4). \\]\nלכן\n\\[ 1-e^{-x^2/2} = \\frac{x^2}{2}-\\frac{x^4}{8}+o(x^4), \\]\nובחלוקה ב-$x$ (עבור $x\\neq0$; $\\frac{o(x^4)}{x}=o(x^3)$):\n\\[ f(x)=\\frac{x}{2}-\\frac{x^3}{8}+o(x^3). \\]",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -3997,6 +4174,7 @@ window.BANK = {
     "<p>מצאו את נקודות החיתוך של העקומות, וקבעו איזו מהן עליונה בין נקודות החיתוך.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (א).</strong>\n\nנקודות חיתוך: $5x-x^2=2x\\iff x^2-3x=0\\iff x=0$ או $x=3$.\nבקטע $(0,3)$ מתקיים $(5x-x^2)-2x = 3x-x^2 = x(3-x)&gt;0$, כלומר הפרבולה מעל הישר. לכן\n\\[ S=\\int_0^3\\left[(5x-x^2)-2x\\right]dx = \\int_0^3(3x-x^2)\\,dx = \\left[\\frac{3x^2}{2}-\\frac{x^3}{3}\\right]_0^3 = \\frac{27}{2}-9 = \\frac92. \\]",
+   "src": "מועד א' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד א"
   },
   {
@@ -4022,7 +4200,8 @@ window.BANK = {
    "hints": [
     "<p>כדאי לכתוב את הפונקציה בצורה $y=\\frac{x}{4}-\\frac{1}{4x^2}$: ממנה רואים מיד את האסימפטוטה המשופעת, והגזירה פשוטה.</p>"
    ],
-   "solution": "<p>נסמן $f(x)=\\frac{x^3-1}{4x^2}=\\frac{x}{4}-\\frac{1}{4x^2}$.</p>\n<ol class=\"parts\">\n<li>\n<strong>תחום הגדרה:</strong> המכנה מתאפס רק ב-$x=0$, ולכן $D=\\{x\\in\\R : x\\neq 0\\}$.\n\n  <strong>חיתוך עם הצירים:</strong> $x=0$ אינו בתחום, ולכן אין חיתוך עם ציר $y$. חיתוך עם ציר $x$: $x^3-1=0 \\iff x=1$, כלומר הנקודה $(1,0)$.\n\n  <strong>זוגיות:</strong> $f(-x)=\\frac{-x^3-1}{4x^2}$. למשל $f(1)=0$ ואילו $f(-1)=-\\frac12$, כך ש-$f(-1)\\neq f(1)$ וגם $f(-1)\\neq -f(1)$. לכן הפונקציה אינה זוגית ואינה אי-זוגית.\n\n  \n</li>\n<li>\n$f$ היא מנה של פולינומים, ולכן רציפה בכל תחום הגדרתה. הנקודה היחידה שבה $f$ אינה מוגדרת היא $x=0$. שם המונה שואף ל-$-1$ והמכנה $4x^2\\to 0^+$, ולכן\n  \\[ \\lim_{x\\to 0^-} f(x)=\\lim_{x\\to 0^+} f(x)=-\\infty , \\]\n  כלומר ב-$x=0$ יש נקודת אי-רציפות מסוג שני (אינסופית).\n</li>\n<li>\n<strong>אסימפטוטה אנכית:</strong> מהסעיף הקודם, $x=0$ היא אסימפטוטה אנכית (מ-2 הצדדים הפונקציה שואפת ל-$-\\infty$). אין אסימפטוטות אנכיות נוספות כי $f$ רציפה בכל נקודה אחרת.\n\n  <strong>אסימפטוטה משופעת:</strong>\n  \\[ m=\\lim_{x\\to\\pm\\infty}\\frac{f(x)}{x}=\\lim_{x\\to\\pm\\infty}\\frac{x^3-1}{4x^3}=\\frac14,\\qquad\n     n=\\lim_{x\\to\\pm\\infty}\\Big(f(x)-\\frac{x}{4}\\Big)=\\lim_{x\\to\\pm\\infty}\\Big(-\\frac{1}{4x^2}\\Big)=0 . \\]\n  לכן $y=\\frac{x}{4}$ היא אסימפטוטה משופעת גם ב-$+\\infty$ וגם ב-$-\\infty$. מאחר ש-$f(x)-\\frac{x}{4}=-\\frac{1}{4x^2}&lt;0$, הגרף נמצא מתחת לאסימפטוטה. אין אסימפטוטה אופקית (כי $f(x)\\to\\pm\\infty$ כאשר $x\\to\\pm\\infty$).\n\n  \n</li>\n<li>\nגוזרים:\n  \\[ f'(x)=\\frac14+\\frac{1}{2x^3}=\\frac{x^3+2}{4x^3}. \\]\n  $f'(x)=0 \\iff x^3=-2 \\iff x=-\\sqrt[3]{2}$. טבלת סימנים (המונה $x^3+2$ חיובי עבור $x&gt;-\\sqrt[3]{2}$, המכנה $4x^3$ חיובי עבור $x&gt;0$):\n<ul>\n<li>\n$x&lt;-\\sqrt[3]{2}$: מונה שלילי, מכנה שלילי, $f'&gt;0$ --- $f$ עולה.\n</li>\n<li>\n$-\\sqrt[3]{2}&lt;x&lt;0$: מונה חיובי, מכנה שלילי, $f'&lt;0$ --- $f$ יורדת.\n</li>\n<li>\n$x&gt;0$: מונה חיובי, מכנה חיובי, $f'&gt;0$ --- $f$ עולה.\n</li>\n</ul>\nלכן $f$ עולה ב-$(-\\infty,-\\sqrt[3]{2})$ וב-$(0,\\infty)$, ויורדת ב-$(-\\sqrt[3]{2},0)$.\n  ב-$x=-\\sqrt[3]{2}$ הנגזרת עוברת מחיובית לשלילית, ולכן זו נקודת מקסימום מקומי:\n  \\[ f(-\\sqrt[3]{2})=\\frac{-2-1}{4\\sqrt[3]{4}}=-\\frac{3}{4\\sqrt[3]{4}}\\approx -0.47 . \\]\n  אין נקודות קיצון נוספות (ב-$x=0$ הפונקציה אינה מוגדרת).\n</li>\n<li>\n\\[ f''(x)=\\Big(\\frac14+\\frac12x^{-3}\\Big)'=-\\frac{3}{2x^4}. \\]\n  לכל $x\\neq 0$ מתקיים $f''(x)&lt;0$. לכן $f$ קעורה ($\\cap$) בכל אחד מהקטעים $(-\\infty,0)$ ו-$(0,\\infty)$, ואינה קמורה ($\\cup$) באף קטע. הסימן של $f''$ לא מתחלף בתוך תחום ההגדרה, ולכן אין נקודות פיתול.\n</li>\n<li>\n<strong>תיאור גרפי:</strong> בצד שמאל הגרף נמצא מתחת לאסימפטוטה $y=\\frac{x}{4}$ וצמוד אליה כש-$x\\to-\\infty$. הוא עולה עד למקסימום $\\big(-\\sqrt[3]{2},-\\frac{3}{4\\sqrt[3]{4}}\\big)\\approx(-1.26,-0.47)$, ואז יורד ל-$-\\infty$ כש-$x\\to0^-$. בצד ימין הוא עולה מ-$-\\infty$ (כש-$x\\to0^+$), חותך את ציר $x$ ב-$(1,0)$, ומתקרב מלמטה לאסימפטוטה $y=\\frac{x}{4}$ כש-$x\\to\\infty$. הגרף קעור בכל מקום.\n\n</li>\n</ol>",
+   "solution": "<p>נסמן $f(x)=\\frac{x^3-1}{4x^2}=\\frac{x}{4}-\\frac{1}{4x^2}$.</p>\n<ol class=\"parts\">\n<li>\n<strong>תחום הגדרה:</strong> המכנה מתאפס רק ב-$x=0$, ולכן $D=\\{x\\in\\R : x\\neq 0\\}$.\n\n  <strong>חיתוך עם הצירים:</strong> $x=0$ אינו בתחום, ולכן אין חיתוך עם ציר $y$. חיתוך עם ציר $x$: $x^3-1=0 \\iff x=1$, כלומר הנקודה $(1,0)$.\n\n  <strong>זוגיות:</strong> $f(-x)=\\frac{-x^3-1}{4x^2}$. למשל $f(1)=0$ ואילו $f(-1)=-\\frac12$, כך ש-$f(-1)\\neq f(1)$ וגם $f(-1)\\neq -f(1)$. לכן הפונקציה אינה זוגית ואינה אי-זוגית.\n\n  \n</li>\n<li>\n$f$ היא מנה של פולינומים, ולכן רציפה בכל תחום הגדרתה. הנקודה היחידה שבה $f$ אינה מוגדרת היא $x=0$. שם המונה שואף ל-$-1$ והמכנה $4x^2\\to 0^+$, ולכן\n  \\[ \\lim_{x\\to 0^-} f(x)=\\lim_{x\\to 0^+} f(x)=-\\infty , \\]\n  כלומר ב-$x=0$ יש נקודת אי-רציפות מסוג שני (אינסופית).\n</li>\n<li>\n<strong>אסימפטוטה אנכית:</strong> מהסעיף הקודם, $x=0$ היא אסימפטוטה אנכית (מ-2 הצדדים הפונקציה שואפת ל-$-\\infty$). אין אסימפטוטות אנכיות נוספות כי $f$ רציפה בכל נקודה אחרת.\n\n  <strong>אסימפטוטה משופעת:</strong>\n  \\[ m=\\lim_{x\\to\\pm\\infty}\\frac{f(x)}{x}=\\lim_{x\\to\\pm\\infty}\\frac{x^3-1}{4x^3}=\\frac14,\\qquad\n     n=\\lim_{x\\to\\pm\\infty}\\Big(f(x)-\\frac{x}{4}\\Big)=\\lim_{x\\to\\pm\\infty}\\Big(-\\frac{1}{4x^2}\\Big)=0 . \\]\n  לכן $y=\\frac{x}{4}$ היא אסימפטוטה משופעת גם ב-$+\\infty$ וגם ב-$-\\infty$. מאחר ש-$f(x)-\\frac{x}{4}=-\\frac{1}{4x^2}&lt;0$, הגרף נמצא מתחת לאסימפטוטה. אין אסימפטוטה אופקית (כי $f(x)\\to\\pm\\infty$ כאשר $x\\to\\pm\\infty$).\n\n  \n</li>\n<li>\nגוזרים:\n  \\[ f'(x)=\\frac14+\\frac{1}{2x^3}=\\frac{x^3+2}{4x^3}. \\]\n  $f'(x)=0 \\iff x^3=-2 \\iff x=-\\sqrt[3]{2}$. טבלת סימנים (המונה $x^3+2$ חיובי עבור $x&gt;-\\sqrt[3]{2}$, המכנה $4x^3$ חיובי עבור $x&gt;0$):\n<ul>\n<li>\n$x&lt;-\\sqrt[3]{2}$: מונה שלילי, מכנה שלילי, $f'&gt;0$ — $f$ עולה.\n</li>\n<li>\n$-\\sqrt[3]{2}&lt;x&lt;0$: מונה חיובי, מכנה שלילי, $f'&lt;0$ — $f$ יורדת.\n</li>\n<li>\n$x&gt;0$: מונה חיובי, מכנה חיובי, $f'&gt;0$ — $f$ עולה.\n</li>\n</ul>\nלכן $f$ עולה ב-$(-\\infty,-\\sqrt[3]{2})$ וב-$(0,\\infty)$, ויורדת ב-$(-\\sqrt[3]{2},0)$.\n  ב-$x=-\\sqrt[3]{2}$ הנגזרת עוברת מחיובית לשלילית, ולכן זו נקודת מקסימום מקומי:\n  \\[ f(-\\sqrt[3]{2})=\\frac{-2-1}{4\\sqrt[3]{4}}=-\\frac{3}{4\\sqrt[3]{4}}\\approx -0.47 . \\]\n  אין נקודות קיצון נוספות (ב-$x=0$ הפונקציה אינה מוגדרת).\n</li>\n<li>\n\\[ f''(x)=\\Big(\\frac14+\\frac12x^{-3}\\Big)'=-\\frac{3}{2x^4}. \\]\n  לכל $x\\neq 0$ מתקיים $f''(x)&lt;0$. לכן $f$ קעורה ($\\cap$) בכל אחד מהקטעים $(-\\infty,0)$ ו-$(0,\\infty)$, ואינה קמורה ($\\cup$) באף קטע. הסימן של $f''$ לא מתחלף בתוך תחום ההגדרה, ולכן אין נקודות פיתול.\n</li>\n<li>\n<strong>תיאור גרפי:</strong> בצד שמאל הגרף נמצא מתחת לאסימפטוטה $y=\\frac{x}{4}$ וצמוד אליה כש-$x\\to-\\infty$. הוא עולה עד למקסימום $\\big(-\\sqrt[3]{2},-\\frac{3}{4\\sqrt[3]{4}}\\big)\\approx(-1.26,-0.47)$, ואז יורד ל-$-\\infty$ כש-$x\\to0^-$. בצד ימין הוא עולה מ-$-\\infty$ (כש-$x\\to0^+$), חותך את ציר $x$ ב-$(1,0)$, ומתקרב מלמטה לאסימפטוטה $y=\\frac{x}{4}$ כש-$x\\to\\infty$. הגרף קעור בכל מקום.\n\n</li>\n</ol>",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4049,6 +4228,7 @@ window.BANK = {
     "<p>במחובר השני כתבו $(\\cos x)^{\\frac{1}{\\sin^2(2x)}}=e^{\\frac{\\ln\\cos x}{\\sin^2(2x)}}$, וחשבו את גבול המעריך.</p>"
    ],
    "solution": "<p>נחשב כל מחובר לחוד. אם לשניהם יש גבול סופי, גבול הסכום שווה לסכום הגבולות (אריתמטיקה של גבולות).</p>\n<p><strong>המחובר הראשון.</strong> עבור $x=0$ מתקבל $\\frac{0}{0}$. נכפיל בצמודים. במונה:\n\\[ \\sqrt{x+9}-3=\\frac{(x+9)-9}{\\sqrt{x+9}+3}=\\frac{x}{\\sqrt{x+9}+3}. \\]\nבמכנה, $(x+2)^2+5=x^2+4x+9$, ולכן\n\\[ \\sqrt{x^2+4x+9}-(x+3)=\\frac{x^2+4x+9-(x+3)^2}{\\sqrt{x^2+4x+9}+x+3}=\\frac{-2x}{\\sqrt{x^2+4x+9}+x+3}. \\]\nלכן, עבור $x\\neq0$ קטן,\n\\[ \\frac{\\sqrt{x+9}-3}{\\sqrt{(x+2)^2+5}-x-3}=\\frac{x}{\\sqrt{x+9}+3}\\cdot\\frac{\\sqrt{x^2+4x+9}+x+3}{-2x}\n=-\\frac{\\sqrt{x^2+4x+9}+x+3}{2(\\sqrt{x+9}+3)}\\xrightarrow[x\\to0]{}-\\frac{3+3}{2\\cdot 6}=-\\frac12 , \\]\nכאשר השתמשנו ברציפות השורש.</p>\n<p><strong>המחובר השני.</strong> ליד $0$ מתקיים $\\cos x&gt;0$, ולכן\n\\[ (\\cos x)^{\\frac{1}{\\sin^2(2x)}}=\\exp\\Big(\\frac{\\ln(\\cos x)}{\\sin^2(2x)}\\Big). \\]\nנחשב את גבול המעריך בעזרת פיתוחי טיילור סביב $0$:\n$\\cos x=1-\\frac{x^2}{2}+o(x^2)$, ולכן $\\ln(\\cos x)=\\ln\\big(1+(-\\frac{x^2}{2}+o(x^2))\\big)=-\\frac{x^2}{2}+o(x^2)$.\nוגם $\\sin(2x)=2x+o(x)$, ולכן $\\sin^2(2x)=4x^2+o(x^2)$. מכאן\n\\[ \\lim_{x\\to0}\\frac{\\ln(\\cos x)}{\\sin^2(2x)}=\\lim_{x\\to0}\\frac{-\\frac{x^2}{2}+o(x^2)}{4x^2+o(x^2)}=-\\frac18 . \\]\n(אפשר לקבל את זה גם בלופיטל: $\\frac{\\ln\\cos x}{\\sin^2 2x}$ הוא מהצורה $\\frac00$, ויחס הנגזרות $\\frac{-\\tan x}{4\\sin(2x)\\cos(2x)}=\\frac{-\\tan x}{2\\sin(4x)}\\to -\\frac{1}{8}$, כי $\\frac{\\tan x}{x}\\to1$ ו-$\\frac{\\sin 4x}{4x}\\to 1$.)\nפונקציית האקספוננט רציפה, ולכן המחובר השני שואף ל-$e^{-1/8}$.</p>\n<p><strong>תשובה:</strong>\n\\[ \\lim_{x\\to 0}\\left(\\frac{\\sqrt{x+9}-3}{\\sqrt{(x+2)^2+5}-x-3}+(\\cos x)^{\\frac{1}{\\sin^2(2x)}}\\right)=\\boxed{e^{-1/8}-\\frac12}\\approx 0.3825 . \\]</p>",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4075,6 +4255,7 @@ window.BANK = {
     "<p>בסיבוב סביב ציר $x$ מתקבל גוף עם חור (שיטת הדסקיות/הטבעות): $V=\\pi\\int_a^b\\big(y_{\\text{עליונה}}^2-y_{\\text{תחתונה}}^2\\big)\\,dx$.</p>"
    ],
    "solution": "<strong>נקודות חיתוך:</strong> $\\frac4x=5-x \\iff 4=5x-x^2 \\iff x^2-5x+4=0 \\iff (x-1)(x-4)=0$, כלומר $x=1$ ו-$x=4$ (הנקודות $(1,4)$ ו-$(4,1)$).\n\n<strong>מי מעל מי:</strong> בקטע $(1,4)$, למשל ב-$x=2$: $5-2=3&gt;2=\\frac42$. ובאופן כללי, עבור $x&gt;0$,\n$5-x-\\frac4x=\\frac{-(x^2-5x+4)}{x}=\\frac{-(x-1)(x-4)}{x}&gt;0$ כאשר $1&lt;x&lt;4$. לכן הישר נמצא מעל ההיפרבולה, ושתי הפונקציות חיוביות בקטע.\n\n<strong>השטח:</strong> לפי הנוסחה לשטח בין שני גרפים,\n\\[ S=\\int_1^4\\Big(5-x-\\frac4x\\Big)dx=\\Big[5x-\\frac{x^2}{2}-4\\ln x\\Big]_1^4\n=\\Big(20-8-4\\ln4\\Big)-\\Big(5-\\frac12\\Big)=\\frac{15}{2}-8\\ln2 . \\]\nכלומר $\\boxed{S=\\frac{15}{2}-8\\ln 2\\approx 1.955}$.\n\n<strong>הנפח:</strong> בסיבוב סביב ציר $x$, כל חתך אנכי בנקודה $x\\in[1,4]$ הוא טבעת עם רדיוס חיצוני $5-x$ ורדיוס פנימי $\\frac4x$ (שני הרדיוסים חיוביים). לכן\n\\[ V=\\pi\\int_1^4\\Big((5-x)^2-\\frac{16}{x^2}\\Big)dx=\\pi\\Big[-\\frac{(5-x)^3}{3}+\\frac{16}{x}\\Big]_1^4\n=\\pi\\Big[\\Big(-\\frac13+4\\Big)-\\Big(-\\frac{64}{3}+16\\Big)\\Big]=\\pi\\Big(\\frac{11}{3}+\\frac{16}{3}\\Big)=9\\pi . \\]\nכלומר $\\boxed{V=9\\pi}$.",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4100,7 +4281,8 @@ window.BANK = {
    "hints": [
     "<p>כתבו את $f+\\cos$ כסכום של $f+\\sin$ ופונקציה גזירה ידועה.</p>"
    ],
-   "solution": "<strong>התשובה הנכונה: א.</strong>\n\nנסמן $g(x)=f(x)+\\sin x$, גזירה ב-$(a,b)$. אז\n\\[ f(x)+\\cos x=g(x)-\\sin x+\\cos x , \\]\nוזה סכום של פונקציות גזירות ב-$(a,b)$ ($\\sin$ ו-$\\cos$ גזירות בכל $\\R$), ולכן גזיר ב-$(a,b)$. כלומר א' נכונה תמיד.\n\nשאר הטענות אינן חייבות להתקיים. דוגמה נגדית: $f(x)=\\frac{1}{x-a}-\\sin x$ ב-$(a,b)$. אז $f(x)+\\sin x=\\frac{1}{x-a}$ גזירה ב-$(a,b)$, אבל:\n\n<ul>\n<li>\n$f+\\sin$ ו-$f$ אינן מוגדרות (ובוודאי אינן רציפות) ב-$x=a$ --- ב' וג' נופלות. (גם אם נגדיר להן ערך כלשהו ב-$a$, הן אינן חסומות ליד $a$ ולכן אינן רציפות בה.)\n</li>\n<li>\n$\\frac{1}{x-a}\\to+\\infty$ כאשר $x\\to a^+$, ולכן $f+\\sin$ אינה חסומה ב-$(a,b)$ --- ה' נופלת; וגם $f=\\frac{1}{x-a}-\\sin x$ אינה חסומה (כי $\\sin$ חסומה) --- ד' נופלת.\n</li>\n</ul>",
+   "solution": "<strong>התשובה הנכונה: א.</strong>\n\nנסמן $g(x)=f(x)+\\sin x$, גזירה ב-$(a,b)$. אז\n\\[ f(x)+\\cos x=g(x)-\\sin x+\\cos x , \\]\nוזה סכום של פונקציות גזירות ב-$(a,b)$ ($\\sin$ ו-$\\cos$ גזירות בכל $\\R$), ולכן גזיר ב-$(a,b)$. כלומר א' נכונה תמיד.\n\nשאר הטענות אינן חייבות להתקיים. דוגמה נגדית: $f(x)=\\frac{1}{x-a}-\\sin x$ ב-$(a,b)$. אז $f(x)+\\sin x=\\frac{1}{x-a}$ גזירה ב-$(a,b)$, אבל:\n\n<ul>\n<li>\n$f+\\sin$ ו-$f$ אינן מוגדרות (ובוודאי אינן רציפות) ב-$x=a$ — ב' וג' נופלות. (גם אם נגדיר להן ערך כלשהו ב-$a$, הן אינן חסומות ליד $a$ ולכן אינן רציפות בה.)\n</li>\n<li>\n$\\frac{1}{x-a}\\to+\\infty$ כאשר $x\\to a^+$, ולכן $f+\\sin$ אינה חסומה ב-$(a,b)$ — ה' נופלת; וגם $f=\\frac{1}{x-a}-\\sin x$ אינה חסומה (כי $\\sin$ חסומה) — ד' נופלת.\n</li>\n</ul>",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4126,7 +4308,8 @@ window.BANK = {
    "hints": [
     "<p>בדקו עבור כל פונקציה באילו זוויות $r=0$ (שם העקומה עוברת בראשית) ובאילו זוויות $r$ מקסימלי (הנקודות הרחוקות ביותר מהראשית).</p>"
    ],
-   "solution": "<strong>התשובה הנכונה: א.</strong>\n\nבגרף העקומה עוברת בראשית בכיוון ציר $x$ (שם שתי הלולאות נוגעות), והנקודות הרחוקות ביותר מהראשית נמצאות על ציר $y$, למעלה ולמטה, באותו מרחק. כמו כן יש שתי לולאות.\n\n\n<ul>\n<li>\n$r=\\sin^2\\phi$: מתקיים $r\\ge0$ לכל $\\phi$, $r=0$ בדיוק עבור $\\phi=0,\\pi$ (כיוון ציר $x$), ו-$r=1$ מקסימלי עבור $\\phi=\\frac{\\pi}{2},\\frac{3\\pi}{2}$, כלומר בנקודות $(0,1)$ ו-$(0,-1)$. כש-$\\phi$ עובר מ-$0$ ל-$\\pi$ נוצרת לולאה בחצי העליון, וכש-$\\phi$ עובר מ-$\\pi$ ל-$2\\pi$ נוצרת לולאה בחצי התחתון. זה בדיוק הגרף הנתון.\n</li>\n<li>\n$r=1\\pm\\cos\\phi$: קרדיואידות --- לולאה אחת בלבד (עם \"שקע\" בראשית), סימטרית סביב ציר $x$. לא מתאים.\n</li>\n<li>\n$r=\\cos^2\\phi$: שתי לולאות, אבל לאורך ציר $x$ (מקסימום ב-$\\phi=0,\\pi$). לא מתאים.\n</li>\n<li>\n$r=\\cos\\phi$: מעגל אחד, $x^2+y^2=x$, שמרכזו $(\\frac12,0)$. לא מתאים.\n</li>\n</ul>",
+   "solution": "<strong>התשובה הנכונה: א.</strong>\n\nבגרף העקומה עוברת בראשית בכיוון ציר $x$ (שם שתי הלולאות נוגעות), והנקודות הרחוקות ביותר מהראשית נמצאות על ציר $y$, למעלה ולמטה, באותו מרחק. כמו כן יש שתי לולאות.\n\n\n<ul>\n<li>\n$r=\\sin^2\\phi$: מתקיים $r\\ge0$ לכל $\\phi$, $r=0$ בדיוק עבור $\\phi=0,\\pi$ (כיוון ציר $x$), ו-$r=1$ מקסימלי עבור $\\phi=\\frac{\\pi}{2},\\frac{3\\pi}{2}$, כלומר בנקודות $(0,1)$ ו-$(0,-1)$. כש-$\\phi$ עובר מ-$0$ ל-$\\pi$ נוצרת לולאה בחצי העליון, וכש-$\\phi$ עובר מ-$\\pi$ ל-$2\\pi$ נוצרת לולאה בחצי התחתון. זה בדיוק הגרף הנתון.\n</li>\n<li>\n$r=1\\pm\\cos\\phi$: קרדיואידות — לולאה אחת בלבד (עם \"שקע\" בראשית), סימטרית סביב ציר $x$. לא מתאים.\n</li>\n<li>\n$r=\\cos^2\\phi$: שתי לולאות, אבל לאורך ציר $x$ (מקסימום ב-$\\phi=0,\\pi$). לא מתאים.\n</li>\n<li>\n$r=\\cos\\phi$: מעגל אחד, $x^2+y^2=x$, שמרכזו $(\\frac12,0)$. לא מתאים.\n</li>\n</ul>",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4150,6 +4333,7 @@ window.BANK = {
    "question": "<p>הנגזרת $y'(0)$ של הפונקציה הסתומה $y(x)$ המוגדרת על ידי המשוואה $\\sin(x-y)-y=0$ בסביבה של הנקודה $(0,0)$ שווה ל-</p>\n<ol class=\"parts\">\n<li>\n$\\frac12$\n</li>\n<li>\n$-\\frac12$\n</li>\n<li>\n$\\frac{\\pi}{2}$\n</li>\n<li>\n$1+\\frac{\\pi}{2}$\n</li>\n<li>\n$0$\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: א.</strong>\n\nהנקודה $(0,0)$ מקיימת את המשוואה: $\\sin(0)-0=0$. נגזור את שני האגפים לפי $x$, כאשר $y=y(x)$ (כלל השרשרת):\n\\[ \\cos(x-y)\\cdot(1-y')-y'=0 . \\]\nנציב $x=0,\\ y=0$: $\\cos 0\\cdot(1-y'(0))-y'(0)=0$, כלומר $1-2y'(0)=0$, ולכן $y'(0)=\\frac12$.\n\n(באופן כללי: $y'=\\frac{\\cos(x-y)}{1+\\cos(x-y)}$, וב-$(0,0)$ זה $\\frac{1}{2}$.)",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4175,6 +4359,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\sin^2x=\\frac{1-\\cos(2x)}{2}$ ובפיתוח המוכר של $\\cos$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: א.</strong>\n\nלפי הזהות $\\sin^2x=\\frac{1-\\cos 2x}{2}$ ופיתוח מקלורן $\\cos t=1-\\frac{t^2}{2}+\\frac{t^4}{24}+o(t^4)$ עם $t=2x$:\n\\[ \\cos 2x=1-2x^2+\\frac{16x^4}{24}+o(x^4)=1-2x^2+\\frac{2x^4}{3}+o(x^4), \\]\nולכן\n\\[ \\sin^2x=\\frac{1-\\cos2x}{2}=x^2-\\frac{x^4}{3}+o(x^4). \\]\n(בדיקה בדרך אחרת: $\\sin x=x-\\frac{x^3}{6}+o(x^4)$, ולכן $\\sin^2x=x^2-2\\cdot x\\cdot\\frac{x^3}{6}+o(x^4)=x^2-\\frac{x^4}{3}+o(x^4)$.)",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4200,7 +4385,8 @@ window.BANK = {
    "hints": [
     "<p>בדקו את סימן הנגזרת משני צידי כל נקודה קריטית. שימו לב שהגורם $(x-1)^2$ אינו מחליף סימן.</p>"
    ],
-   "solution": "<strong>התשובה הנכונה: א.</strong>\n\n$f$ גזירה בכל $\\R$, ולכן נקודות קיצון אפשריות רק היכן ש-$f'=0$ (משפט פרמה): $x=-2,\\,1,\\,5$. נבדוק את סימן $f'$. הגורם $(x-1)^2\\ge0$ ואינו מחליף סימן, ולכן הסימן נקבע על ידי $(x+2)(x-5)$:\n\n<ul>\n<li>\n$x&lt;-2$: $(x+2)(x-5)&gt;0$, ולכן $f'&gt;0$ --- $f$ עולה.\n</li>\n<li>\n$-2&lt;x&lt;5$, $x\\neq 1$: $(x+2)(x-5)&lt;0$, ולכן $f'&lt;0$ --- $f$ יורדת.\n</li>\n<li>\n$x&gt;5$: $f'&gt;0$ --- $f$ עולה.\n</li>\n</ul>\n<p>לכן ב-$x=-2$ הנגזרת עוברת מחיובית לשלילית --- מקסימום מקומי; ב-$x=5$ היא עוברת משלילית לחיובית --- מינימום מקומי; וב-$x=1$ הנגזרת שלילית משני הצדדים, כך ש-$f$ יורדת ממש בסביבת $1$ ואין שם קיצון.</p>",
+   "solution": "<strong>התשובה הנכונה: א.</strong>\n\n$f$ גזירה בכל $\\R$, ולכן נקודות קיצון אפשריות רק היכן ש-$f'=0$ (משפט פרמה): $x=-2,\\,1,\\,5$. נבדוק את סימן $f'$. הגורם $(x-1)^2\\ge0$ ואינו מחליף סימן, ולכן הסימן נקבע על ידי $(x+2)(x-5)$:\n\n<ul>\n<li>\n$x&lt;-2$: $(x+2)(x-5)&gt;0$, ולכן $f'&gt;0$ — $f$ עולה.\n</li>\n<li>\n$-2&lt;x&lt;5$, $x\\neq 1$: $(x+2)(x-5)&lt;0$, ולכן $f'&lt;0$ — $f$ יורדת.\n</li>\n<li>\n$x&gt;5$: $f'&gt;0$ — $f$ עולה.\n</li>\n</ul>\n<p>לכן ב-$x=-2$ הנגזרת עוברת מחיובית לשלילית — מקסימום מקומי; ב-$x=5$ היא עוברת משלילית לחיובית — מינימום מקומי; וב-$x=1$ הנגזרת שלילית משני הצדדים, כך ש-$f$ יורדת ממש בסביבת $1$ ואין שם קיצון.</p>",
+   "src": "מועד ב' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ב"
   },
   {
@@ -4226,7 +4412,8 @@ window.BANK = {
    "hints": [
     "<p>בגזירה לפי כלל המנה כדאי לצמצם גורם $(x-1)$ אחד מהמונה והמכנה לפני שמפשטים.</p>"
    ],
-   "solution": "<p>נסמן $f(x)=\\frac{2x-1}{(x-1)^2}$.</p>\n<ol class=\"parts\">\n<li>\n<strong>תחום הגדרה:</strong> $D=\\{x\\in\\R: x\\neq1\\}$.\n\n  <strong>חיתוך עם הצירים:</strong> $f(0)=\\frac{-1}{1}=-1$, כלומר $(0,-1)$ על ציר $y$. $f(x)=0\\iff 2x-1=0\\iff x=\\frac12$, כלומר $(\\frac12,0)$ על ציר $x$.\n\n  <strong>זוגיות:</strong> תחום ההגדרה אינו סימטרי ביחס ל-$0$ ($-1\\in D$ אבל $1\\notin D$), ולכן הפונקציה אינה זוגית ואינה אי-זוגית.\n\n  \n</li>\n<li>\n$f$ מנה של פולינומים, ולכן רציפה בכל תחום הגדרתה. ב-$x=1$: המונה שואף ל-$1&gt;0$ והמכנה $(x-1)^2\\to0^+$, ולכן $\\lim_{x\\to1^\\pm}f(x)=+\\infty$ --- נקודת אי-רציפות מסוג שני (אינסופית).\n</li>\n<li>\n<strong>אנכית:</strong> $x=1$ (משני הצדדים $f\\to+\\infty$).\n  <strong>אופקית:</strong> $\\lim_{x\\to\\pm\\infty}\\frac{2x-1}{(x-1)^2}=\\lim_{x\\to\\pm\\infty}\\frac{\\frac2x-\\frac1{x^2}}{(1-\\frac1x)^2}=0$, ולכן $y=0$ אסימפטוטה אופקית ב-$\\pm\\infty$ (ולכן אין אסימפטוטה משופעת).\n\n  \n</li>\n<li>\nלפי כלל המנה:\n  \\[ f'(x)=\\frac{2(x-1)^2-(2x-1)\\cdot2(x-1)}{(x-1)^4}=\\frac{2(x-1)-2(2x-1)}{(x-1)^3}=\\frac{-2x}{(x-1)^3}. \\]\n  $f'(x)=0\\iff x=0$. סימנים:\n<ul>\n<li>\n$x&lt;0$: מונה $-2x&gt;0$, מכנה $&lt;0$, ולכן $f'&lt;0$ --- יורדת.\n</li>\n<li>\n$0&lt;x&lt;1$: מונה $&lt;0$, מכנה $&lt;0$, ולכן $f'&gt;0$ --- עולה.\n</li>\n<li>\n$x&gt;1$: מונה $&lt;0$, מכנה $&gt;0$, ולכן $f'&lt;0$ --- יורדת.\n</li>\n</ul>\nלכן $f$ יורדת ב-$(-\\infty,0)$ וב-$(1,\\infty)$ ועולה ב-$(0,1)$. ב-$x=0$ הנגזרת עוברת משלילית לחיובית: <strong>מינימום מקומי</strong> $(0,-1)$. (זה גם מינימום מוחלט: עבור $x&lt;\\frac12$ הפונקציה יורדת ל-$-1$ ואז עולה, ועבור $x\\ge\\frac12$, $f\\ge0$.)\n</li>\n<li>\nנגזור את $f'(x)=-2x(x-1)^{-3}$:\n  \\[ f''(x)=-2(x-1)^{-3}+6x(x-1)^{-4}=\\frac{-2(x-1)+6x}{(x-1)^4}=\\frac{2(2x+1)}{(x-1)^4}. \\]\n  המכנה חיובי לכל $x\\neq1$, ולכן הסימן הוא של $2x+1$:\n  $f''&lt;0$ עבור $x&lt;-\\frac12$ --- $f$ קעורה ($\\cap$) ב-$(-\\infty,-\\frac12)$;\n  $f''&gt;0$ עבור $-\\frac12&lt;x&lt;1$ ו-$x&gt;1$ --- $f$ קמורה ($\\cup$) ב-$(-\\frac12,1)$ וב-$(1,\\infty)$.\n  ב-$x=-\\frac12$ הסימן מתחלף והפונקציה רציפה, ולכן זו <strong>נקודת פיתול</strong>: $f(-\\frac12)=\\frac{-2}{9/4}=-\\frac89$, כלומר $(-\\frac12,-\\frac89)$.\n</li>\n<li>\n<strong>תיאור גרפי:</strong> משמאל הגרף מתחיל מתחת לציר $x$, קרוב לאסימפטוטה $y=0$ כש-$x\\to-\\infty$, יורד (קעור) עד נקודת הפיתול $(-\\frac12,-\\frac89)$, ממשיך לרדת (קמור) עד המינימום $(0,-1)$, עולה וחותך את ציר $x$ ב-$(\\frac12,0)$ ושואף ל-$+\\infty$ כש-$x\\to1^-$. מימין ל-$x=1$ הוא יורד מ-$+\\infty$ ומתקרב מלמעלה ל-$y=0$ כש-$x\\to\\infty$ (קמור).\n\n</li>\n</ol>",
+   "solution": "<p>נסמן $f(x)=\\frac{2x-1}{(x-1)^2}$.</p>\n<ol class=\"parts\">\n<li>\n<strong>תחום הגדרה:</strong> $D=\\{x\\in\\R: x\\neq1\\}$.\n\n  <strong>חיתוך עם הצירים:</strong> $f(0)=\\frac{-1}{1}=-1$, כלומר $(0,-1)$ על ציר $y$. $f(x)=0\\iff 2x-1=0\\iff x=\\frac12$, כלומר $(\\frac12,0)$ על ציר $x$.\n\n  <strong>זוגיות:</strong> תחום ההגדרה אינו סימטרי ביחס ל-$0$ ($-1\\in D$ אבל $1\\notin D$), ולכן הפונקציה אינה זוגית ואינה אי-זוגית.\n\n  \n</li>\n<li>\n$f$ מנה של פולינומים, ולכן רציפה בכל תחום הגדרתה. ב-$x=1$: המונה שואף ל-$1&gt;0$ והמכנה $(x-1)^2\\to0^+$, ולכן $\\lim_{x\\to1^\\pm}f(x)=+\\infty$ — נקודת אי-רציפות מסוג שני (אינסופית).\n</li>\n<li>\n<strong>אנכית:</strong> $x=1$ (משני הצדדים $f\\to+\\infty$).\n  <strong>אופקית:</strong> $\\lim_{x\\to\\pm\\infty}\\frac{2x-1}{(x-1)^2}=\\lim_{x\\to\\pm\\infty}\\frac{\\frac2x-\\frac1{x^2}}{(1-\\frac1x)^2}=0$, ולכן $y=0$ אסימפטוטה אופקית ב-$\\pm\\infty$ (ולכן אין אסימפטוטה משופעת).\n\n  \n</li>\n<li>\nלפי כלל המנה:\n  \\[ f'(x)=\\frac{2(x-1)^2-(2x-1)\\cdot2(x-1)}{(x-1)^4}=\\frac{2(x-1)-2(2x-1)}{(x-1)^3}=\\frac{-2x}{(x-1)^3}. \\]\n  $f'(x)=0\\iff x=0$. סימנים:\n<ul>\n<li>\n$x&lt;0$: מונה $-2x&gt;0$, מכנה $&lt;0$, ולכן $f'&lt;0$ — יורדת.\n</li>\n<li>\n$0&lt;x&lt;1$: מונה $&lt;0$, מכנה $&lt;0$, ולכן $f'&gt;0$ — עולה.\n</li>\n<li>\n$x&gt;1$: מונה $&lt;0$, מכנה $&gt;0$, ולכן $f'&lt;0$ — יורדת.\n</li>\n</ul>\nלכן $f$ יורדת ב-$(-\\infty,0)$ וב-$(1,\\infty)$ ועולה ב-$(0,1)$. ב-$x=0$ הנגזרת עוברת משלילית לחיובית: <strong>מינימום מקומי</strong> $(0,-1)$. (זה גם מינימום מוחלט: עבור $x&lt;\\frac12$ הפונקציה יורדת ל-$-1$ ואז עולה, ועבור $x\\ge\\frac12$, $f\\ge0$.)\n</li>\n<li>\nנגזור את $f'(x)=-2x(x-1)^{-3}$:\n  \\[ f''(x)=-2(x-1)^{-3}+6x(x-1)^{-4}=\\frac{-2(x-1)+6x}{(x-1)^4}=\\frac{2(2x+1)}{(x-1)^4}. \\]\n  המכנה חיובי לכל $x\\neq1$, ולכן הסימן הוא של $2x+1$:\n  $f''&lt;0$ עבור $x&lt;-\\frac12$ — $f$ קעורה ($\\cap$) ב-$(-\\infty,-\\frac12)$;\n  $f''&gt;0$ עבור $-\\frac12&lt;x&lt;1$ ו-$x&gt;1$ — $f$ קמורה ($\\cup$) ב-$(-\\frac12,1)$ וב-$(1,\\infty)$.\n  ב-$x=-\\frac12$ הסימן מתחלף והפונקציה רציפה, ולכן זו <strong>נקודת פיתול</strong>: $f(-\\frac12)=\\frac{-2}{9/4}=-\\frac89$, כלומר $(-\\frac12,-\\frac89)$.\n</li>\n<li>\n<strong>תיאור גרפי:</strong> משמאל הגרף מתחיל מתחת לציר $x$, קרוב לאסימפטוטה $y=0$ כש-$x\\to-\\infty$, יורד (קעור) עד נקודת הפיתול $(-\\frac12,-\\frac89)$, ממשיך לרדת (קמור) עד המינימום $(0,-1)$, עולה וחותך את ציר $x$ ב-$(\\frac12,0)$ ושואף ל-$+\\infty$ כש-$x\\to1^-$. מימין ל-$x=1$ הוא יורד מ-$+\\infty$ ומתקרב מלמעלה ל-$y=0$ כש-$x\\to\\infty$ (קמור).\n\n</li>\n</ol>",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4254,6 +4441,7 @@ window.BANK = {
     "<p>השתמשו בזהות $1+\\cos\\varphi=2\\cos^2\\frac{\\varphi}{2}$, ושימו לב לסימן של $\\cos\\frac\\varphi2$ בקטע.</p>"
    ],
    "solution": "<p>העקומה (קרדיואידה) היא $r(\\varphi)=a(1+\\cos\\varphi)\\ge0$, ו-$r'(\\varphi)=-a\\sin\\varphi$.</p>\n<p><strong>אורך:</strong> לפי נוסחת אורך עקומה בקואורדינטות פולריות,\n\\[ r^2+(r')^2=a^2\\big(1+2\\cos\\varphi+\\cos^2\\varphi+\\sin^2\\varphi\\big)=2a^2(1+\\cos\\varphi)=4a^2\\cos^2\\frac{\\varphi}{2}. \\]\nלכן\n\\[ L=\\int_0^{2\\pi}\\sqrt{r^2+(r')^2}\\,d\\varphi=\\int_0^{2\\pi}2a\\Big|\\cos\\frac{\\varphi}{2}\\Big|\\,d\\varphi . \\]\nעבור $0\\le\\varphi\\le\\pi$, $\\cos\\frac\\varphi2\\ge0$, ועבור $\\pi\\le\\varphi\\le2\\pi$, $\\cos\\frac\\varphi2\\le0$. מסימטריה (או ישירות):\n\\[ L=2\\int_0^{\\pi}2a\\cos\\frac{\\varphi}{2}\\,d\\varphi=4a\\Big[2\\sin\\frac\\varphi2\\Big]_0^{\\pi}=8a . \\]\nכלומר $\\boxed{L=8a}$.</p>\n<p><strong>שטח:</strong> לפי נוסחת השטח בקואורדינטות פולריות,\n\\[ S=\\frac12\\int_0^{2\\pi}a^2(1+\\cos\\varphi)^2d\\varphi=\\frac{a^2}{2}\\int_0^{2\\pi}\\Big(1+2\\cos\\varphi+\\frac{1+\\cos2\\varphi}{2}\\Big)d\\varphi\n=\\frac{a^2}{2}\\Big[\\frac32\\varphi+2\\sin\\varphi+\\frac{\\sin2\\varphi}{4}\\Big]_0^{2\\pi}=\\frac{a^2}{2}\\cdot3\\pi . \\]\nכלומר $\\boxed{S=\\frac{3\\pi a^2}{2}}$.</p>",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4278,7 +4466,8 @@ window.BANK = {
    "hints": [
     "<p>חשבו כל מחובר בנפרד. במחובר הראשון כתבו $(x^2+x+1)^{1/x^2}=e^{\\frac{\\ln(1+x+x^2)}{x^2}}$.</p>"
    ],
-   "solution": "<p>(בנוסח המקורי מופיעה סוגר מיותרת; המחובר הראשון הוא $(x^2+x+1)^{1/x^2}$.)</p>\n<p><strong>המחובר השני:</strong> $x\\ln x=\\frac{\\ln x}{1/x}$, מהצורה $\\frac{-\\infty}{\\infty}$. לפי כלל לופיטל:\n\\[ \\lim_{x\\to0^+}\\frac{\\ln x}{1/x}=\\lim_{x\\to0^+}\\frac{1/x}{-1/x^2}=\\lim_{x\\to0^+}(-x)=0 . \\]</p>\n<p><strong>המחובר הראשון:</strong> עבור $x&gt;0$, $x^2+x+1&gt;1$, ולכן\n\\[ (x^2+x+1)^{\\frac{1}{x^2}}=\\exp\\Big(\\frac{\\ln(1+x+x^2)}{x^2}\\Big). \\]\nהמעריך: $\\frac{\\ln(1+x+x^2)}{x^2}=\\frac{\\ln(1+x+x^2)}{x+x^2}\\cdot\\frac{x+x^2}{x^2}=\\frac{\\ln(1+t)}{t}\\Big|_{t=x+x^2}\\cdot\\Big(\\frac1x+1\\Big)$.\nכאשר $x\\to0^+$: $t=x+x^2\\to0^+$ ולכן $\\frac{\\ln(1+t)}{t}\\to1$, ואילו $\\frac1x+1\\to+\\infty$. לכן המעריך שואף ל-$+\\infty$, ומכאן\n\\[ \\lim_{x\\to0^+}(x^2+x+1)^{\\frac{1}{x^2}}=+\\infty . \\]\n(אינטואיטיבית: זה גבול מהצורה $1^\\infty$, אבל הבסיס מתקרב ל-$1$ \"לאט\" --- כמו $1+x$ --- בעוד שהמעריך גדל כמו $\\frac{1}{x^2}$, ולכן $\\big(1+x\\big)^{1/x^2}\\approx e^{1/x}\\to\\infty$.)</p>\n<p><strong>סיכום:</strong> סכום של פונקציה השואפת ל-$+\\infty$ ופונקציה השואפת לגבול סופי ($0$) שואף ל-$+\\infty$. לכן\n\\[ \\lim_{x\\to0^+}\\left((x^2+x+1)^{\\frac{1}{x^2}}+x\\ln x\\right)=\\boxed{+\\infty} . \\]</p>",
+   "solution": "<p>(בנוסח המקורי מופיעה סוגר מיותרת; המחובר הראשון הוא $(x^2+x+1)^{1/x^2}$.)</p>\n<p><strong>המחובר השני:</strong> $x\\ln x=\\frac{\\ln x}{1/x}$, מהצורה $\\frac{-\\infty}{\\infty}$. לפי כלל לופיטל:\n\\[ \\lim_{x\\to0^+}\\frac{\\ln x}{1/x}=\\lim_{x\\to0^+}\\frac{1/x}{-1/x^2}=\\lim_{x\\to0^+}(-x)=0 . \\]</p>\n<p><strong>המחובר הראשון:</strong> עבור $x&gt;0$, $x^2+x+1&gt;1$, ולכן\n\\[ (x^2+x+1)^{\\frac{1}{x^2}}=\\exp\\Big(\\frac{\\ln(1+x+x^2)}{x^2}\\Big). \\]\nהמעריך: $\\frac{\\ln(1+x+x^2)}{x^2}=\\frac{\\ln(1+x+x^2)}{x+x^2}\\cdot\\frac{x+x^2}{x^2}=\\frac{\\ln(1+t)}{t}\\Big|_{t=x+x^2}\\cdot\\Big(\\frac1x+1\\Big)$.\nכאשר $x\\to0^+$: $t=x+x^2\\to0^+$ ולכן $\\frac{\\ln(1+t)}{t}\\to1$, ואילו $\\frac1x+1\\to+\\infty$. לכן המעריך שואף ל-$+\\infty$, ומכאן\n\\[ \\lim_{x\\to0^+}(x^2+x+1)^{\\frac{1}{x^2}}=+\\infty . \\]\n(אינטואיטיבית: זה גבול מהצורה $1^\\infty$, אבל הבסיס מתקרב ל-$1$ \"לאט\" — כמו $1+x$ — בעוד שהמעריך גדל כמו $\\frac{1}{x^2}$, ולכן $\\big(1+x\\big)^{1/x^2}\\approx e^{1/x}\\to\\infty$.)</p>\n<p><strong>סיכום:</strong> סכום של פונקציה השואפת ל-$+\\infty$ ופונקציה השואפת לגבול סופי ($0$) שואף ל-$+\\infty$. לכן\n\\[ \\lim_{x\\to0^+}\\left((x^2+x+1)^{\\frac{1}{x^2}}+x\\ln x\\right)=\\boxed{+\\infty} . \\]</p>",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4302,6 +4491,7 @@ window.BANK = {
    "question": "<p>נתונה $h(x)=\\begin{cases}x^2+a, &amp; x&lt;-1\\\\ x^3-8, &amp; x\\ge-1\\end{cases}$. לאיזה ערך של הפרמטר $a$ הפונקציה היא רציפה לכל $x$ ממשי,</p>\n<ol class=\"parts\">\n<li>\n$-1$\n</li>\n<li>\n$-9$\n</li>\n<li>\n$-10$\n</li>\n<li>\n$-8$\n</li>\n<li>\n$-2$\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: ג ($a=-10$).</strong>\n\nבכל אחד מהקטעים $x&lt;-1$ ו-$x&gt;-1$ הפונקציה פולינום ולכן רציפה. נותר לבדוק את $x=-1$:\n\\[ h(-1)=\\lim_{x\\to-1^+}h(x)=(-1)^3-8=-9,\\qquad \\lim_{x\\to-1^-}h(x)=(-1)^2+a=1+a . \\]\nרציפות ב-$-1$ מתקיימת אם ורק אם $1+a=-9$, כלומר $a=-10$.",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4328,6 +4518,7 @@ window.BANK = {
     "<p>מה אומר משפט לגרנז' על $f(x_2)-f(x_1)$ כאשר $a&lt;x_1&lt;x_2&lt;b$?</p>"
    ],
    "solution": "<strong>התשובה הנכונה: ד.</strong>\n\nיהיו $a&lt;x_1&lt;x_2&lt;b$. $f$ גזירה ולכן רציפה ב-$[x_1,x_2]$ וגזירה ב-$(x_1,x_2)$, ולפי משפט לגרנז' קיימת $c\\in(x_1,x_2)$ כך ש-\n\\[ f(x_2)-f(x_1)=f'(c)(x_2-x_1)&gt;0 . \\]\nלכן $f$ עולה (ממש) ב-$(a,b)$.\n\nדוגמאות נגדיות לשאר הטענות, למשל בקטע $(0,1)$:\n\n<ul>\n<li>\n$f(x)=-\\frac1x$: $f'(x)=\\frac1{x^2}&gt;0$, אבל $f$ אינה חסומה ב-$(0,1)$ (א' נופלת), אינה מוגדרת ב-$0$ ובפרט אינה רציפה ב-$[0,1]$ (ג' נופלת) ואינה מונוטונית בקטע הסגור (ה' נופלת, $f$ כלל לא מוגדרת שם).\n</li>\n<li>\n$f(x)=x-5$: $f'=1&gt;0$ אבל $f&lt;0$ בכל $(0,1)$ (ב' נופלת).\n</li>\n</ul>",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4351,6 +4542,7 @@ window.BANK = {
    "question": "<p>נתונה פונקציה $F(x)=\\int_0^x\\sqrt{t^2+1}\\,dt$. חשבו את $F'(\\sqrt2)$.</p>\n<ol class=\"parts\">\n<li>\n$\\sqrt3$\n</li>\n<li>\n$\\frac{1}{\\sqrt3}$\n</li>\n<li>\n$\\sqrt2$\n</li>\n<li>\n$3$\n</li>\n<li>\n$\\sqrt2+1$\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: א.</strong>\n\nהפונקציה $t\\mapsto\\sqrt{t^2+1}$ רציפה בכל $\\R$, ולכן לפי המשפט היסודי של החשבון האינטגרלי $F$ גזירה ו-$F'(x)=\\sqrt{x^2+1}$. לכן\n\\[ F'(\\sqrt2)=\\sqrt{2+1}=\\sqrt3 . \\]",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4375,6 +4567,7 @@ window.BANK = {
    "question": "<p>מצאו את הערך הקטן ביותר בתחום הגדרה של הפונקציה: $f(x)=x^4+4x$</p>\n<ol class=\"parts\">\n<li>\n$-4$\n</li>\n<li>\n$1$\n</li>\n<li>\n$-3$\n</li>\n<li>\n$-5$\n</li>\n<li>\n$-2$\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: ג ($-3$).</strong>\n\n$f$ פולינום, מוגדר וגזיר בכל $\\R$. $f'(x)=4x^3+4=4(x+1)(x^2-x+1)$, והגורם $x^2-x+1$ חיובי תמיד (דיסקרימיננטה שלילית). לכן $f'&lt;0$ עבור $x&lt;-1$ ו-$f'&gt;0$ עבור $x&gt;-1$: $f$ יורדת ב-$(-\\infty,-1]$ ועולה ב-$[-1,\\infty)$. מכאן ש-$x=-1$ היא נקודת מינימום מוחלט, והערך הקטן ביותר הוא\n\\[ f(-1)=1-4=-3 . \\]",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4401,6 +4594,7 @@ window.BANK = {
     "<p>פונקציה גזירה בנקודה היא רציפה בה. הפעילו זאת על $f'$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: א.</strong>\n\n$f$ גזירה פעמיים ב-$(a,b)$, כלומר $f'$ גזירה בכל נקודה של $(a,b)$. פונקציה גזירה בנקודה רציפה בה, ולכן $f'$ רציפה ב-$(a,b)$.\n\nדוגמאות נגדיות לשאר הטענות, בקטע $(0,1)$ (אלא אם צוין אחרת):\n\n<ul>\n<li>\n$f(x)=x^2$ (ב-$(0,1)$): $f''=2&gt;0$, אין נקודת פיתול (ב' נופלת).\n</li>\n<li>\n$f(x)=\\left(x-\\frac12\\right)^2$: לא מונוטונית ב-$(0,1)$ (ג' נופלת).\n</li>\n<li>\n$f(x)=x^4\\sin\\frac1x$ ($f(0)=0$) בקטע $(-1,1)$: גזירה פעמיים, אבל $f''(x)=12x^2\\sin\\frac1x-6x\\cos\\frac1x-\\sin\\frac1x$ עבור $x\\neq0$ ו-$f''(0)=0$, ו-$f''$ אינה רציפה ב-$0$ (ד' נופלת).\n</li>\n<li>\n$f(x)=\\frac1x$ ב-$(0,1)$: גזירה פעמיים אך אינה חסומה (ה' נופלת).\n</li>\n</ul>",
+   "src": "מועד ג' תש\"פ סמסטר א'",
    "exam": "תש\"פ סמסטר א מועד ג"
   },
   {
@@ -4425,6 +4619,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\sin\\alpha-\\sin\\beta=2\\sin\\frac{\\alpha-\\beta}{2}\\cos\\frac{\\alpha+\\beta}{2}$ ובגבול $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$.</p>"
    ],
    "solution": "<p>לפי ההגדרה, $f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}$. לפי הזהות לסכום והפרש פונקציות,\n\\[ \\sin(2x+2h+1)-\\sin(2x+1)=2\\sin(h)\\cos(2x+1+h). \\]\nלכן\n\\[ f'(x)=\\lim_{h\\to0}\\frac{2\\sin h\\cos(2x+1+h)}{h}=2\\lim_{h\\to0}\\frac{\\sin h}{h}\\cdot\\lim_{h\\to0}\\cos(2x+1+h)=2\\cdot1\\cdot\\cos(2x+1), \\]\nכאשר השתמשנו בגבול היסודי $\\frac{\\sin h}{h}\\to1$ וברציפות $\\cos$. כלומר $\\boxed{f'(x)=2\\cos(2x+1)}$.</p>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4450,6 +4645,7 @@ window.BANK = {
     "<p>בגבול השני הכפילו וחלקו בצמוד.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\nנחלק מונה ומכנה ב-$x$ (עבור $x&gt;0$):\n  \\[ \\frac{x+2\\sin x}{3x-\\cos x}=\\frac{1+2\\frac{\\sin x}{x}}{3-\\frac{\\cos x}{x}} . \\]\n  מאחר ש-$|\\sin x|,|\\cos x|\\le1$ ו-$\\frac1x\\to0$, לפי \"חסומה כפול שואפת לאפס\" $\\frac{\\sin x}{x}\\to0$ ו-$\\frac{\\cos x}{x}\\to0$. לכן הגבול הוא $\\boxed{\\frac13}$.\n</li>\n<li>\nנכפיל ונחלק בצמוד (עבור $x&gt;1$ שני השורשים מוגדרים):\n  \\[ \\sqrt{x+\\sqrt x}-\\sqrt{x-\\sqrt x}=\\frac{(x+\\sqrt x)-(x-\\sqrt x)}{\\sqrt{x+\\sqrt x}+\\sqrt{x-\\sqrt x}}=\\frac{2\\sqrt x}{\\sqrt{x+\\sqrt x}+\\sqrt{x-\\sqrt x}}\n  =\\frac{2}{\\sqrt{1+\\frac{1}{\\sqrt x}}+\\sqrt{1-\\frac{1}{\\sqrt x}}} , \\]\n  כאשר חילקנו מונה ומכנה ב-$\\sqrt x$. כאשר $x\\to+\\infty$, $\\frac{1}{\\sqrt x}\\to0$, ולכן (רציפות השורש) הגבול הוא $\\frac{2}{1+1}=\\boxed{1}$.\n</li>\n</ol>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4475,6 +4671,7 @@ window.BANK = {
     "<p>מתי השורש של המכנה הוא גם שורש של המונה?</p>"
    ],
    "solution": "<p>הפונקציה רציפה בכל נקודה שבה $x\\neq -a$, ולכן אסימפטוטה אנכית יכולה להיות רק ב-$x=-a$. ב-$x\\to-a$ המכנה שואף ל-$0$, ולכן:</p>\n<ul>\n<li>\nאם המונה אינו מתאפס ב-$-a$, כלומר $a^2-9\\neq0$, אז $|f(x)|\\to\\infty$ כאשר $x\\to-a$, ו-$x=-a$ היא אסימפטוטה אנכית.\n</li>\n<li>\nאם $a^2=9$, כלומר $a=3$ או $a=-3$: עבור $a=3$, $f(x)=\\frac{(x-3)(x+3)}{x+3}=x-3$ לכל $x\\neq-3$, ולכן $\\lim_{x\\to-3}f(x)=-6$ סופי (נקודת אי-רציפות סליקה), ואין אסימפטוטה אנכית. באופן דומה עבור $a=-3$, $f(x)=x+3$ לכל $x\\neq3$ ו-$\\lim_{x\\to3}f(x)=6$.\n</li>\n</ul>\n<p>לכן אין אסימפטוטה אנכית בדיוק כאשר $\\boxed{a=3 \\text{ או } a=-3}$.</p>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4500,6 +4697,7 @@ window.BANK = {
     "<p>חקרו את הפונקציה $g(x)=(x-1)^2e^x$ (תחומי מונוטוניות, קיצון, גבולות ב-$\\pm\\infty$), וספרו כמה פעמים הישר האופקי $y=a$ חותך את הגרף.</p>"
    ],
    "solution": "<p>המשוואה שקולה ל-$g(x)=a$ עבור $g(x)=(x-1)^2e^x$. נחקור את $g$, שהיא גזירה בכל $\\R$:\n\\[ g'(x)=2(x-1)e^x+(x-1)^2e^x=e^x(x-1)(x+1). \\]\n$e^x&gt;0$, ולכן $g'&gt;0$ ב-$(-\\infty,-1)$, $g'&lt;0$ ב-$(-1,1)$ ו-$g'&gt;0$ ב-$(1,\\infty)$. כלומר $g$ עולה ממש ב-$(-\\infty,-1]$, יורדת ממש ב-$[-1,1]$ ועולה ממש ב-$[1,\\infty)$, עם מקסימום מקומי $g(-1)=\\frac{4}{e}$ ומינימום מקומי $g(1)=0$.</p>\n<p>גבולות: $\\lim_{x\\to\\infty}g(x)=\\infty$; וכאשר $x\\to-\\infty$, $(x-1)^2e^x=\\frac{(x-1)^2}{e^{-x}}\\to0$ (האקספוננט גובר על פולינום, למשל לפי לופיטל פעמיים). כמו כן $g(x)\\ge0$ לכל $x$, עם שוויון רק ב-$x=1$.</p>\n<p>לפי משפט ערך הביניים ומונוטוניות ממש בכל קטע, בכל קטע מונוטוניות כל ערך בטווח של הקטע מתקבל בדיוק פעם אחת. טווחי הקטעים: $(-\\infty,-1]\\mapsto(0,\\frac4e]$, $[-1,1]\\mapsto[0,\\frac4e]$, $[1,\\infty)\\mapsto[0,\\infty)$. לכן מספר הפתרונות:</p>\n<ul>\n<li>\n$a&lt;0$: אין פתרונות ($g\\ge0$).\n</li>\n<li>\n$a=0$: פתרון יחיד, $x=1$.\n</li>\n<li>\n$0&lt;a&lt;\\frac4e$: שלושה פתרונות (אחד בכל קטע מונוטוניות).\n</li>\n<li>\n$a=\\frac4e$: שני פתרונות ($x=-1$, ועוד אחד ב-$(1,\\infty)$).\n</li>\n<li>\n$a&gt;\\frac4e$: פתרון יחיד (ב-$(1,\\infty)$; בשני הקטעים האחרים $g\\le\\frac4e&lt;a$).\n</li>\n</ul>\n<p><strong>תשובה:</strong> למשוואה פתרון ממשי יחיד עבור $\\boxed{a=0 \\text{ או } a&gt;\\frac{4}{e}}$.</p>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4524,6 +4722,7 @@ window.BANK = {
     "<p>הגבולות של האינטגרל הם $x=0$ (שם $xe^{-x}=0$) ו-$x=2$. את $\\int x^2e^{-2x}dx$ מחשבים באינטגרציה בחלקים פעמיים.</p>"
    ],
    "solution": "<strong>סקיצה:</strong> $y=xe^{-x}$ עוברת בראשית, חיובית עבור $x&gt;0$, עולה עד למקסימום $(1,\\frac1e)$ ($y'=(1-x)e^{-x}$) ואחר כך יורדת, וב-$x=2$ ערכה $2e^{-2}\\approx0.27$. הצורה החסומה היא האזור שבין הגרף לבין ציר $x$, עבור $0\\le x\\le 2$ (הגרף חותך את $y=0$ ב-$x=0$).\n\n<strong>הנפח:</strong> לפי נוסחת נפח גוף סיבוב סביב ציר $x$,\n\\[ V=\\pi\\int_0^2\\big(xe^{-x}\\big)^2dx=\\pi\\int_0^2x^2e^{-2x}dx . \\]\nנחשב באינטגרציה בחלקים פעמיים:\n\\[ \\int x^2e^{-2x}dx=-\\frac{x^2}{2}e^{-2x}+\\int xe^{-2x}dx=-\\frac{x^2}{2}e^{-2x}-\\frac{x}{2}e^{-2x}+\\frac12\\int e^{-2x}dx\n=-e^{-2x}\\Big(\\frac{x^2}{2}+\\frac{x}{2}+\\frac14\\Big)+C . \\]\nלכן\n\\[ V=\\pi\\Big[-e^{-2x}\\Big(\\frac{x^2}{2}+\\frac{x}{2}+\\frac14\\Big)\\Big]_0^2=\\pi\\Big(-\\frac{13}{4}e^{-4}+\\frac14\\Big)=\\boxed{\\frac{\\pi}{4}\\big(1-13e^{-4}\\big)}\\approx0.4357 . \\]",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4550,6 +4749,7 @@ window.BANK = {
     "<p>באינטגרל השני הציבו $t=\\sqrt x$ ואז בצעו אינטגרציה בחלקים.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\nהמכנה: $x^4+x^3+2x^2=x^2(x^2+x+2)$, ו-$x^2+x+2$ אי-פריק (הדיסקרימיננטה $1-8&lt;0$). נפרק לשברים חלקיים:\n  \\[ \\frac{5x+2}{x^2(x^2+x+2)}=\\frac{A}{x}+\\frac{B}{x^2}+\\frac{Cx+D}{x^2+x+2}, \\]\n  כלומר $5x+2=Ax(x^2+x+2)+B(x^2+x+2)+(Cx+D)x^2$. השוואת מקדמים: מקדם חופשי $2B=2\\Rightarrow B=1$; מקדם $x$: $2A+B=5\\Rightarrow A=2$; מקדם $x^3$: $A+C=0\\Rightarrow C=-2$; מקדם $x^2$: $A+B+D=0\\Rightarrow D=-3$. לכן\n  \\[ \\frac{5x+2}{x^4+x^3+2x^2}=\\frac{2}{x}+\\frac{1}{x^2}-\\frac{2x+3}{x^2+x+2}. \\]\n  את המחובר האחרון נפרק: $2x+3=(2x+1)+2$, ו-$x^2+x+2=\\big(x+\\frac12\\big)^2+\\frac74$. לכן\n  \\[ \\int\\frac{2x+3}{x^2+x+2}dx=\\ln(x^2+x+2)+2\\int\\frac{dx}{(x+\\frac12)^2+\\frac74}=\\ln(x^2+x+2)+\\frac{4}{\\sqrt7}\\arctan\\frac{2x+1}{\\sqrt7}. \\]\n  <strong>תשובה:</strong>\n  \\[ \\int\\frac{5x+2}{x^4+x^3+2x^2}dx=2\\ln|x|-\\frac1x-\\ln(x^2+x+2)-\\frac{4}{\\sqrt7}\\arctan\\frac{2x+1}{\\sqrt7}+C . \\]\n</li>\n<li>\nנציב $t=\\sqrt x$, כלומר $x=t^2$, $dx=2t\\,dt$, והגבולות $0\\to0$, $1\\to1$:\n  \\[ \\int_0^1\\ln(1+\\sqrt x)\\,dx=\\int_0^12t\\ln(1+t)\\,dt . \\]\n  אינטגרציה בחלקים עם $u=\\ln(1+t)$, $v'=2t$ ($v=t^2$):\n  \\[ =\\Big[t^2\\ln(1+t)\\Big]_0^1-\\int_0^1\\frac{t^2}{1+t}dt=\\ln2-\\int_0^1\\Big(t-1+\\frac{1}{1+t}\\Big)dt=\\ln2-\\Big(\\frac12-1+\\ln2\\Big)=\\boxed{\\frac12} . \\]\n  (השתמשנו בחילוק פולינומים $\\frac{t^2}{1+t}=t-1+\\frac{1}{1+t}$.)\n</li>\n</ol>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4574,6 +4774,7 @@ window.BANK = {
     "<p>הרכיבו את הפיתוח של $\\sin$ בתוך עצמו.</p>"
    ],
    "solution": "<p>לפי פיתוח מקלורן, $\\sin u=u-\\frac{u^3}{6}+o(u^3)$ ו-$\\sin x=x-\\frac{x^3}{6}+o(x^3)$. נציב $u=\\sin x$; מאחר ש-$u=x+o(x)$, מתקיים $u^3=x^3+o(x^3)$ ו-$o(u^3)=o(x^3)$. לכן\n\\[ \\sin(\\sin x)=\\Big(x-\\frac{x^3}{6}\\Big)-\\frac{x^3}{6}+o(x^3)=x-\\frac{x^3}{3}+o(x^3). \\]\nמיחידות פולינום טיילור, פולינום מקלורן מסדר 3 הוא\n\\[ \\boxed{P_3(x)=x-\\frac{x^3}{3}} . \\]\n(בדיקה ישירה: $f'(x)=\\cos(\\sin x)\\cos x$, $f'(0)=1$; $f$ אי-זוגית ולכן $f(0)=f''(0)=0$; וחישוב נותן $f'''(0)=-2$, ואכן $\\frac{-2}{3!}=-\\frac13$.)</p>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4599,6 +4800,7 @@ window.BANK = {
     "<p>דרשו שהגבולות החד-צדדיים בנקודות התפר $x=0$ ו-$x=1$ יהיו שווים לערך הפונקציה. בגבול ב-$x=1^+$ (מהצורה $1^\\infty$) עברו ל-$e^{\\ln(\\cdot)}$.</p>"
    ],
    "solution": "<p>בכל אחד מהקטעים הפתוחים $(-\\infty,0)$, $(0,1)$, $(1,\\frac\\pi2+1)$ הפונקציה רציפה כהרכבה ומנה של פונקציות אלמנטריות: עבור $x&lt;0$, $1-x&gt;1$ ולכן $\\ln(1-x)&gt;0$ (המכנה לא מתאפס); עבור $1&lt;x&lt;\\frac\\pi2+1$, $0&lt;x-1&lt;\\frac\\pi2$ ולכן $\\cos(x-1)&gt;0$ והחזקה מוגדרת. נותר לבדוק את נקודות התפר.</p>\n<p><strong>ב-$x=0$:</strong> $f(0)=b=\\lim_{x\\to0^+}f(x)$. משמאל, בעזרת $\\frac{\\sin 3x}{3x}\\to1$ ו-$\\frac{\\ln(1-x)}{-x}\\to1$:\n\\[ \\lim_{x\\to0^-}\\frac{\\sin3x}{\\ln(1-x)}=\\lim_{x\\to0^-}\\frac{\\sin3x}{3x}\\cdot\\frac{-x}{\\ln(1-x)}\\cdot\\frac{3x}{-x}=1\\cdot1\\cdot(-3)=-3 . \\]\nלכן רציפות ב-$0$ דורשת $b=-3$.</p>\n<p><strong>ב-$x=1$:</strong> $f(1)=a+b=\\lim_{x\\to1^-}f(x)$. מימין נסמן $t=x-1\\to0^+$:\n\\[ (\\cos t)^{1/t}=\\exp\\Big(\\frac{\\ln\\cos t}{t}\\Big),\\qquad \\lim_{t\\to0^+}\\frac{\\ln\\cos t}{t}\\overset{\\text{לופיטל}}{=}\\lim_{t\\to0^+}\\frac{-\\tan t}{1}=0 , \\]\n(הגבול מהצורה $\\frac00$, והנגזרות קיימות), ולכן מרציפות האקספוננט $\\lim_{x\\to1^+}f(x)=e^0=1$. רציפות ב-$1$ דורשת $a+b=1$, כלומר $a=4$.</p>\n<p><strong>תשובה:</strong> $\\boxed{a=4,\\ b=-3}$.</p>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4623,6 +4825,7 @@ window.BANK = {
     "<p>גזרו את שני אגפי המשוואה לפי $x$, כאשר $y=y(x)$, והציבו את הנקודה.</p>"
    ],
    "solution": "<p>הנקודה על העקומה: $e^{0}+2^3=1+8=9$. נגזור את המשוואה לפי $x$ (גזירה סתומה, $y=y(x)$):\n\\[ e^{xy}\\,(y+xy')+3y^2y'=0 . \\]\nנציב $x=0$, $y=2$: $1\\cdot(2+0)+12y'=0$, ולכן $y'(0)=-\\frac16$. משוואת המשיק:\n\\[ \\boxed{y=2-\\frac{x}{6}} . \\]</p>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4647,6 +4850,7 @@ window.BANK = {
     "<p>הציבו $t=\\sqrt x$.</p>"
    ],
    "solution": "<p>זהו אינטגרל לא אמיתי (גבול עליון אינסופי). נציב $t=\\sqrt x$, $x=t^2$, $dx=2t\\,dt$; כש-$x=0.25$, $t=\\frac12$, וכש-$x\\to\\infty$, $t\\to\\infty$:\n\\[ \\int_{0.25}^{R}\\frac{dx}{(4x+1)\\sqrt x}=\\int_{1/2}^{\\sqrt R}\\frac{2t\\,dt}{(4t^2+1)t}=\\int_{1/2}^{\\sqrt R}\\frac{2\\,dt}{1+(2t)^2}=\\Big[\\arctan(2t)\\Big]_{1/2}^{\\sqrt R}=\\arctan(2\\sqrt R)-\\frac{\\pi}{4}. \\]\nכאשר $R\\to\\infty$, $\\arctan(2\\sqrt R)\\to\\frac\\pi2$. לכן האינטגרל מתכנס ו-\n\\[ \\int_{0.25}^{+\\infty}\\frac{dx}{(4x+1)\\sqrt{x}}=\\frac\\pi2-\\frac\\pi4=\\boxed{\\frac{\\pi}{4}} . \\]</p>",
+   "src": "מועד ב' תש\"פ סמסטר ב'",
    "exam": "תש\"פ סמסטר ב מועד ב"
   },
   {
@@ -4673,6 +4877,7 @@ window.BANK = {
     "<p>בסעיף ב' חשבו את הנגזרת ב-$0$ לפי ההגדרה (גבול מנת ההפרשים). בסעיף ג' חשבו את $f'(x)$ עבור $x\\neq0$ לפי כללי הגזירה ובדקו את הגבול כאשר $x\\to 0$.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\n<strong>כן.</strong> לכל $x\\neq 0$ מתקיים\n  \\[ 0\\le |f(x)| = |x|^3\\left|\\sin\\left(\\tfrac{5}{x}\\right)\\right| \\le |x|^3 \\xrightarrow[x\\to0]{} 0, \\]\n  ולכן לפי משפט הסנדוויץ' $\\lim_{x\\to0} f(x)=0=f(0)$. כלומר $f$ רציפה ב-$0$.\n  \n</li>\n<li>\n<strong>כן.</strong> לפי הגדרת הנגזרת:\n  \\[ f'(0)=\\lim_{h\\to0}\\frac{f(h)-f(0)}{h}=\\lim_{h\\to0}\\frac{h^3\\sin(5/h)}{h}=\\lim_{h\\to0} h^2\\sin\\left(\\tfrac{5}{h}\\right). \\]\n  כאן $h^2\\to0$ ו-$\\sin(5/h)$ חסומה, ולכן (אפסה כפול חסומה) הגבול שווה $0$. לכן $f$ גזירה ב-$0$ ו-$f'(0)=0$.\n  \n</li>\n<li>\n<strong>כן.</strong> עבור $x\\neq0$, לפי כלל המכפלה וכלל השרשרת:\n  \\[ f'(x)=3x^2\\sin\\left(\\tfrac{5}{x}\\right)+x^3\\cos\\left(\\tfrac{5}{x}\\right)\\cdot\\left(-\\tfrac{5}{x^2}\\right)=3x^2\\sin\\left(\\tfrac{5}{x}\\right)-5x\\cos\\left(\\tfrac{5}{x}\\right). \\]\n  שני המחוברים הם מהצורה \"אפסה כפול חסומה\" ($3x^2\\to0$, $5x\\to0$ ו-$|\\sin|,|\\cos|\\le1$), ולכן\n  \\[ \\lim_{x\\to0}f'(x)=0=f'(0). \\]\n  מכאן ש-$f'$ רציפה בנקודה $x=0$.\n\n</li>\n</ol>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4698,6 +4903,7 @@ window.BANK = {
     "<p>חלקו את המונה ב-$x$: $f(x)=2x-3+\\frac1x$.</p>"
    ],
    "solution": "<p>תחום ההגדרה: $x\\neq0$. לכל $x\\neq 0$:\n\\[ f(x)=2x-3+\\frac{1}{x}. \\]\n<strong>אסימפטוטה אנכית:</strong> המונה ב-$x=0$ שווה $1\\neq0$, ולכן\n\\[ \\lim_{x\\to0^+}f(x)=+\\infty,\\qquad \\lim_{x\\to0^-}f(x)=-\\infty, \\]\nכלומר $x=0$ אסימפטוטה אנכית. זו הנקודה היחידה מחוץ לתחום, ו-$f$ רציפה בכל נקודה אחרת, לכן אין אסימפטוטות אנכיות נוספות.</p>\n<p><strong>אסימפטוטה משופעת/אופקית:</strong> נחשב\n\\[ m=\\lim_{x\\to\\pm\\infty}\\frac{f(x)}{x}=\\lim_{x\\to\\pm\\infty}\\left(2-\\frac3x+\\frac1{x^2}\\right)=2, \\]\n\\[ n=\\lim_{x\\to\\pm\\infty}\\big(f(x)-2x\\big)=\\lim_{x\\to\\pm\\infty}\\left(-3+\\frac1x\\right)=-3. \\]\nלכן $y=2x-3$ אסימפטוטה משופעת גם ב-$+\\infty$ וגם ב-$-\\infty$. כיוון ש-$f(x)\\to\\pm\\infty$ כאשר $x\\to\\pm\\infty$, אין אסימפטוטה אופקית.</p>\n<p><strong>תשובה:</strong> $x=0$ (אנכית) ו-$y=2x-3$ (משופעת בשני הכיוונים).</p>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4722,6 +4928,7 @@ window.BANK = {
     "<p>חשבו את $f''$ ובדקו את סימנה; שימו לב ש-$e^{-x}&gt;0$ תמיד.</p>"
    ],
    "solution": "<p>$f$ מוגדרת וגזירה פעמיים בכל $\\R$.\n\\[ f'(x)=2xe^{-x}-x^2e^{-x}=(2x-x^2)e^{-x}, \\]\n\\[ f''(x)=(2-2x)e^{-x}-(2x-x^2)e^{-x}=(x^2-4x+2)e^{-x}. \\]\nכיוון ש-$e^{-x}&gt;0$, סימן $f''$ הוא סימן $x^2-4x+2$, שאפסיו $x=2\\pm\\sqrt2$. זהו טרינום עם מקדם מוביל חיובי, ולכן:</p>\n<ul>\n<li>\n$f''&gt;0$ ב-$(-\\infty,\\,2-\\sqrt2)$ וב-$(2+\\sqrt2,\\,\\infty)$: שם $f$ <strong>קמורה</strong> (קעורה כלפי מעלה).\n</li>\n<li>\n$f''&lt;0$ ב-$(2-\\sqrt2,\\,2+\\sqrt2)$: שם $f$ <strong>קעורה</strong> (קעורה כלפי מטה).\n</li>\n</ul>\n<p>בנקודות $x=2\\pm\\sqrt2$ הפונקציה רציפה ו-$f''$ מחליפה סימן, ולכן אלו <strong>נקודות פיתול</strong>:\n\\[ \\left(2-\\sqrt2,\\ (2-\\sqrt2)^2e^{-(2-\\sqrt2)}\\right)=\\left(2-\\sqrt2,\\ (6-4\\sqrt2)e^{\\sqrt2-2}\\right), \\]\n\\[ \\left(2+\\sqrt2,\\ (6+4\\sqrt2)e^{-2-\\sqrt2}\\right). \\]</p>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4747,6 +4954,7 @@ window.BANK = {
     "<p>את השגיאה חסמו בעזרת שארית לגרנז': $R_1(x)=\\frac{f''(c)}{2}(x-a)^2$ עבור $c$ בין $a$ ל-$x$.</p>"
    ],
    "solution": "<p>נבחר $f(x)=x^{1/4}$ ונפתח סביב $a=16$ (כי $\\sqrt[4]{16}=2$).\n\\[ f'(x)=\\tfrac14x^{-3/4},\\qquad f''(x)=-\\tfrac{3}{16}x^{-7/4}. \\]\nלכן $f(16)=2$, $f'(16)=\\frac14\\cdot16^{-3/4}=\\frac14\\cdot\\frac18=\\frac1{32}$, ופולינום טיילור מסדר ראשון הוא\n\\[ P_1(x)=2+\\frac{1}{32}(x-16). \\]\nהקירוב:\n\\[ \\sqrt[4]{18}\\approx P_1(18)=2+\\frac{2}{32}=\\frac{33}{16}=2.0625. \\]</p>\n<p><strong>חסם לשגיאה.</strong> לפי משפט טיילור עם שארית לגרנז' ($f$ גזירה פעמיים ב-$(0,\\infty)$), קיימת $c\\in(16,18)$ כך ש-\n\\[ R_1(18)=f(18)-P_1(18)=\\frac{f''(c)}{2!}(18-16)^2=-\\frac{3}{16}c^{-7/4}\\cdot\\frac{4}{2}=-\\frac{3}{8}c^{-7/4}. \\]\nהפונקציה $c^{-7/4}$ יורדת, ולכן עבור $c&gt;16$:\n\\[ |R_1(18)|=\\frac38c^{-7/4}&lt;\\frac38\\cdot16^{-7/4}=\\frac38\\cdot\\frac{1}{2^7}=\\frac{3}{1024}\\approx0.0029. \\]</p>\n<p><strong>תשובה:</strong> $\\sqrt[4]{18}\\approx2.0625$ עם שגיאה קטנה מ-$\\frac{3}{1024}\\approx 0.003$. יתרה מזו, כיוון ש-$R_1&lt;0$, הקירוב גדול מהערך האמיתי:\n$2.0625-\\frac{3}{1024}&lt;\\sqrt[4]{18}&lt;2.0625$.\n(לבדיקה: $\\sqrt[4]{18}\\approx2.05977$.)</p>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4771,6 +4979,7 @@ window.BANK = {
     "<p>הציבו $t=e^x$.</p>"
    ],
    "solution": "<p>נציב $t=e^x$, $dt=e^x\\,dx$:\n\\[ \\int\\frac{e^x}{e^{2x}+1}\\,dx=\\int\\frac{dt}{t^2+1}=\\arctan t+C=\\boxed{\\arctan(e^x)+C}. \\]\nבדיקה: $\\left(\\arctan e^x\\right)'=\\frac{e^x}{1+e^{2x}}$.</p>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4795,6 +5004,7 @@ window.BANK = {
     "<p>זו משוואה פרידה: העבירו את כל ה-$y$ לצד אחד ואת כל ה-$x$ לצד השני. אל תשכחו את הפתרון $y\\equiv0$.</p>"
    ],
    "solution": "<p>המשוואה שקולה ל-\n\\[ y'=-\\frac{2x}{x^2+4}\\,y^2 \\]\n(כי $x^2+4&gt;0$), וזו משוואה פרידה.</p>\n<p><strong>פתרון קבוע:</strong> $y\\equiv0$ מקיים את המשוואה.</p>\n<p><strong>פתרונות עם $y\\neq0$:</strong> נחלק ב-$y^2$:\n\\[ \\frac{y'}{y^2}=-\\frac{2x}{x^2+4}\\ \\Longrightarrow\\ \\int\\frac{dy}{y^2}=-\\int\\frac{2x}{x^2+4}\\,dx \\ \\Longrightarrow\\ -\\frac1y=-\\ln(x^2+4)+C. \\]\n(השתמשנו ב-$\\int\\frac{2x}{x^2+4}dx=\\ln(x^2+4)$, שכן המונה הוא נגזרת המכנה.) לכן\n\\[ \\boxed{y=\\frac{1}{\\ln(x^2+4)+C}},\\quad C\\in\\R, \\]\nבכל קטע שבו המכנה אינו מתאפס, ובנוסף הפתרון $\\boxed{y\\equiv0}$.</p>\n<p>בדיקה: עבור $y=\\frac1{\\ln(x^2+4)+C}$ מתקיים $y'=-\\frac{2x}{x^2+4}\\cdot y^2$, ולכן $(x^2+4)y'+2xy^2=0$.</p>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4820,6 +5030,7 @@ window.BANK = {
     "<p>את $\\frac{2x+5}{x^2+2x+2}$ פצלו ל-$\\frac{2x+2}{x^2+2x+2}+\\frac{3}{(x+1)^2+1}$.</p>"
    ],
    "solution": "<strong>פירוק המכנה.</strong> $x^3+2x^2+2x=x(x^2+2x+2)$, והדיסקרימיננטה של $x^2+2x+2$ היא $4-8&lt;0$, ולכן הוא אי-פריק מעל $\\R$. מעלת המונה קטנה ממעלת המכנה, ולכן נחפש פירוק לשברים חלקיים:\n\\[ \\frac{6x^2+13x+8}{x(x^2+2x+2)}=\\frac{A}{x}+\\frac{Bx+C}{x^2+2x+2}. \\]\nכפל במכנה: $6x^2+13x+8=A(x^2+2x+2)+(Bx+C)x$.\n\n<ul>\n<li>\nהצבת $x=0$: $8=2A$, ולכן $A=4$.\n</li>\n<li>\nאז $6x^2+13x+8-4(x^2+2x+2)=2x^2+5x=Bx^2+Cx$, ולכן $B=2$, $C=5$.\n</li>\n</ul>\n<p>\\[ \\frac{6x^2+13x+8}{x^3+2x^2+2x}=\\frac4x+\\frac{2x+5}{x^2+2x+2}=\\frac4x+\\frac{2x+2}{x^2+2x+2}+\\frac{3}{(x+1)^2+1}. \\]</p>\n<p><strong>אינטגרציה.</strong></p>\n<ul>\n<li>\n$\\int\\frac4x\\,dx=4\\ln|x|$.\n</li>\n<li>\n$\\int\\frac{2x+2}{x^2+2x+2}\\,dx=\\ln(x^2+2x+2)$ (המונה הוא נגזרת המכנה, והמכנה חיובי).\n</li>\n<li>\n$\\int\\frac{3}{(x+1)^2+1}\\,dx=3\\arctan(x+1)$ (הצבה $t=x+1$).\n</li>\n</ul>\n<p><strong>תשובה:</strong>\n\\[ \\int\\frac{6x^2+13x+8}{x^3+2x^2+2x}dx=\\boxed{4\\ln|x|+\\ln(x^2+2x+2)+3\\arctan(x+1)+C}. \\]\n(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)</p>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4844,6 +5055,7 @@ window.BANK = {
     "<p>מצאו את נקודות החיתוך, וקבעו איזו פונקציה עליונה בין שתיהן.</p>"
    ],
    "solution": "<strong>נקודות חיתוך:</strong> $x^2=-x+2\\iff x^2+x-2=0\\iff (x+2)(x-1)=0$, כלומר $x=-2$ ו-$x=1$.\nבקטע $(-2,1)$ מתקיים $-x+2-x^2=-(x+2)(x-1)&gt;0$, ולכן הישר מעל הפרבולה. השטח:\n\\[ S=\\int_{-2}^{1}\\left(-x+2-x^2\\right)dx=\\left[-\\frac{x^2}{2}+2x-\\frac{x^3}{3}\\right]_{-2}^{1}\n=\\left(-\\frac12+2-\\frac13\\right)-\\left(-2-4+\\frac83\\right)=\\frac76+\\frac{10}{3}=\\boxed{\\frac92}. \\]",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4868,6 +5080,7 @@ window.BANK = {
     "<p>חשבו את $\\int_0^R xe^{-x}dx$ באינטגרציה בחלקים, ואז השאיפו $R\\to\\infty$.</p>"
    ],
    "solution": "<p>לפי ההגדרה, $\\int_0^\\infty xe^{-x}dx=\\lim_{R\\to\\infty}\\int_0^R xe^{-x}dx$.\nבאינטגרציה בחלקים ($u=x$, $v'=e^{-x}$, כלומר $u'=1$, $v=-e^{-x}$):\n\\[ \\int_0^R xe^{-x}dx=\\Big[-xe^{-x}\\Big]_0^R+\\int_0^R e^{-x}dx=-Re^{-R}+\\Big[-e^{-x}\\Big]_0^R=-Re^{-R}-e^{-R}+1. \\]\nכאשר $R\\to\\infty$: $e^{-R}\\to0$, וגם $Re^{-R}=\\frac{R}{e^R}\\to0$ (למשל לפי כלל לופיטל: $\\lim\\frac{R}{e^R}=\\lim\\frac1{e^R}=0$). לכן\n\\[ \\int_0^\\infty xe^{-x}dx=\\lim_{R\\to\\infty}\\left(1-Re^{-R}-e^{-R}\\right)=\\boxed{1}, \\]\nוהאינטגרל מתכנס.</p>",
+   "src": "מועד א' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד א"
   },
   {
@@ -4893,6 +5106,7 @@ window.BANK = {
     "<p>חשבו בנפרד את הגבולות החד-צדדיים ב-$0$. משמאל: \"אפסה כפול חסומה\". מימין: כתבו $x\\ln x=\\frac{\\ln x}{1/x}$ והשתמשו בכלל לופיטל.</p>"
    ],
    "solution": "<p>$f$ רציפה ב-$0$ אם ורק אם שני הגבולות החד-צדדיים קיימים ושווים ל-$f(0)=b+3$.</p>\n<p><strong>גבול משמאל.</strong> לכל $a\\in\\R$: $\\sin(ax)\\to\\sin0=0$ כאשר $x\\to0^-$ (רציפות הסינוס), ו-$|\\sin(1/x)|\\le1$. לפי \"אפסה כפול חסומה\":\n\\[ \\lim_{x\\to0^-}\\sin(ax)\\sin\\left(\\tfrac1x\\right)=0. \\]\n(במפורש: $0\\le|\\sin(ax)\\sin(1/x)|\\le|\\sin(ax)|\\le|a||x|\\to0$.) הגבול שווה $0$ <strong>לכל</strong> ערך של $a$.</p>\n<p><strong>גבול מימין.</strong> זהו גבול מהצורה $0\\cdot(-\\infty)$. נכתוב כמנה מהצורה $\\frac{-\\infty}{\\infty}$ ונשתמש בכלל לופיטל:\n\\[ \\lim_{x\\to0^+}x\\ln x=\\lim_{x\\to0^+}\\frac{\\ln x}{1/x}\\overset{L}{=}\\lim_{x\\to0^+}\\frac{1/x}{-1/x^2}=\\lim_{x\\to0^+}(-x)=0. \\]</p>\n<p><strong>מסקנה.</strong> שני הגבולות החד-צדדיים שווים $0$, ולכן $\\lim_{x\\to0}f(x)=0$. הרציפות ב-$0$ שקולה ל-$b+3=0$.</p>\n<p><strong>תשובה:</strong> $f$ רציפה ב-$0$ אם ורק אם $\\boxed{b=-3}$, ו-$a\\in\\R$ כלשהו.</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -4917,6 +5131,7 @@ window.BANK = {
     "<p>חשבו את $f'$ לפי כלל המנה ובדקו את סימנה; המכנה של $f'$ חיובי תמיד.</p>"
    ],
    "solution": "<p>$f$ מוגדרת וגזירה בכל $\\R$ (המכנה חיובי). לפי כלל המנה:\n\\[ f'(x)=\\frac{2(x^2+1)-2x\\cdot2x}{(x^2+1)^2}=\\frac{2(1-x^2)}{(x^2+1)^2}. \\]\n$f'(x)=0\\iff x=\\pm1$. סימן $f'$ הוא סימן $1-x^2$:</p>\n<ul>\n<li>\n$f'&lt;0$ ב-$(-\\infty,-1)$: $f$ <strong>יורדת</strong>.\n</li>\n<li>\n$f'&gt;0$ ב-$(-1,1)$: $f$ <strong>עולה</strong>.\n</li>\n<li>\n$f'&lt;0$ ב-$(1,\\infty)$: $f$ <strong>יורדת</strong>.\n</li>\n</ul>\n<p>לכן ב-$x=-1$ יש <strong>מינימום מקומי</strong> $f(-1)=-1$, וב-$x=1$ יש <strong>מקסימום מקומי</strong> $f(1)=1$.\n(למעשה אלו גם קיצון מוחלט: $|2x|\\le x^2+1$ כי $(|x|-1)^2\\ge0$, ולכן $-1\\le f\\le 1$.)</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -4941,6 +5156,7 @@ window.BANK = {
     "<p>מצאו קודם את תחום ההגדרה, ושימו לב שהפונקציה זוגית ואי-שלילית. בדקו גם את הגבול באינסוף.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $x^2-1\\ge0$ ו-$x\\neq0$, כלומר $D=(-\\infty,-1]\\cup[1,\\infty)$.\n$f$ זוגית, ולכן מספיק לחקור את $[1,\\infty)$.\n\n<strong>מינימום מוחלט:</strong> $f(x)\\ge0$ לכל $x\\in D$, ו-$f(\\pm1)=0$. לכן המינימום המוחלט הוא $\\boxed{0}$, המתקבל ב-$x=\\pm1$.\n\n<strong>מקסימום מוחלט:</strong> עבור $x&gt;1$:\n\\[ f'(x)=\\frac{\\frac{x}{\\sqrt{x^2-1}}\\cdot x^2-2x\\sqrt{x^2-1}}{x^4}=\\frac{x^2-2(x^2-1)}{x^3\\sqrt{x^2-1}}=\\frac{2-x^2}{x^3\\sqrt{x^2-1}}. \\]\nלכן $f'&gt;0$ ב-$(1,\\sqrt2)$ ו-$f'&lt;0$ ב-$(\\sqrt2,\\infty)$: $f$ עולה ב-$[1,\\sqrt2]$ ויורדת ב-$[\\sqrt2,\\infty)$ (רציפה בקצה $1$). מכאן שלכל $x\\ge1$ מתקיים $f(x)\\le f(\\sqrt2)$, ו-\n\\[ f(\\sqrt2)=\\frac{\\sqrt{2-1}}{2}=\\frac12. \\]\n(נשים לב גם ש-$\\lim_{x\\to\\infty}f(x)=\\lim\\frac{\\sqrt{1-1/x^2}}{x}=0$, כך שאין \"בריחה\" באינסוף.) מזוגיות, אותו דבר נכון ב-$(-\\infty,-1]$.\n\n<strong>תשובה:</strong> המקסימום המוחלט הוא $\\boxed{\\tfrac12}$, המתקבל ב-$x=\\pm\\sqrt2$; המינימום המוחלט הוא $\\boxed{0}$, המתקבל ב-$x=\\pm1$.",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -4966,6 +5182,7 @@ window.BANK = {
     "<p>כדי לחסום את $e^c$ עבור $0&lt;c&lt;\\frac14$ אפשר להשתמש ב-$e^c&lt;e&lt;3$.</p>"
    ],
    "solution": "<p>נכתוב $\\sqrt[4]{e}=e^{1/4}$ ונשתמש בפולינום מקלורן של $f(x)=e^x$. כל הנגזרות הן $f^{(k)}(x)=e^x$, ולכן $f^{(k)}(0)=1$ ו-\n\\[ P_n(x)=\\sum_{k=0}^n\\frac{x^k}{k!}. \\]\nלפי משפט טיילור עם שארית לגרנז', לכל $n$ קיימת $c\\in(0,\\tfrac14)$ כך ש-\n\\[ R_n\\left(\\tfrac14\\right)=\\frac{e^c}{(n+1)!}\\left(\\tfrac14\\right)^{n+1}. \\]\nכיוון ש-$e^x$ עולה, $e^c&lt;e^{1/4}&lt;e&lt;3$, ולכן\n\\[ 0&lt;R_n\\left(\\tfrac14\\right)&lt;\\frac{3}{(n+1)!\\,4^{n+1}}. \\]</p>\n<ul>\n<li>\n$n=2$: החסם הוא $\\frac{3}{6\\cdot64}=\\frac{1}{128}$ — לא מספיק.\n</li>\n<li>\n$n=3$: החסם הוא $\\frac{3}{24\\cdot256}=\\frac{1}{2048}&lt;\\frac{1}{1000}$ — מספיק.\n</li>\n</ul>\n<p>(ואכן $n=2$ באמת אינו מספיק, ולא רק החסם שלו: $R_2=\\frac{e^c}{6\\cdot64}&gt;\\frac{1}{384}&gt;\\frac1{1000}$, כי $e^c&gt;1$.)</p>\n<p>לכן נבחר $n=3$:\n\\[ \\sqrt[4]{e}\\approx P_3\\left(\\tfrac14\\right)=1+\\frac14+\\frac{1}{2\\cdot16}+\\frac{1}{6\\cdot64}=1+\\frac14+\\frac1{32}+\\frac1{384}=\\frac{493}{384}\\approx1.28385, \\]\nוהשגיאה מקיימת $0&lt;\\sqrt[4]{e}-\\frac{493}{384}&lt;\\frac{1}{2048}&lt;\\frac{1}{1000}$.</p>\n<p><strong>תשובה:</strong> $\\boxed{\\sqrt[4]{e}\\approx\\frac{493}{384}\\approx1.2839}$ (הערך האמיתי $\\approx1.28403$).</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -4990,6 +5207,7 @@ window.BANK = {
     "<p>כתבו $\\sin^3x=(1-\\cos^2x)\\sin x$ והציבו $t=\\cos x$.</p>"
    ],
    "solution": "<p>נכתוב $\\cos^2x\\sin^3x=\\cos^2x(1-\\cos^2x)\\sin x$ ונציב $t=\\cos x$, $dt=-\\sin x\\,dx$:\n\\[ \\int\\cos^2x\\sin^3x\\,dx=-\\int t^2(1-t^2)\\,dt=-\\frac{t^3}{3}+\\frac{t^5}{5}+C=\\boxed{\\frac{\\cos^5x}{5}-\\frac{\\cos^3x}{3}+C}. \\]\nבדיקה: $\\left(\\frac{\\cos^5x}{5}-\\frac{\\cos^3x}{3}\\right)'=-\\cos^4x\\sin x+\\cos^2x\\sin x=\\cos^2x\\sin x(1-\\cos^2x)=\\cos^2x\\sin^3x$.</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -5014,6 +5232,7 @@ window.BANK = {
     "<p>זו משוואה פרידה: $e^{-y}y'=\\frac{x}{x^2+1}$.</p>"
    ],
    "solution": "<p>כיוון ש-$x^2+1&gt;0$ ו-$e^y&gt;0$, נוכל לכתוב\n\\[ e^{-y}\\,y'=\\frac{x}{x^2+1}. \\]\n(אין פתרונות קבועים: עבור $y\\equiv c$ נקבל $xe^c=0$ לכל $x$, וזה בלתי אפשרי.) נבצע אינטגרציה של שני האגפים:\n\\[ \\int e^{-y}dy=\\int\\frac{x}{x^2+1}dx\\ \\Longrightarrow\\ -e^{-y}=\\frac12\\ln(x^2+1)-C. \\]\nלכן $e^{-y}=C-\\frac12\\ln(x^2+1)$, ומכאן\n\\[ \\boxed{y=-\\ln\\left(C-\\tfrac12\\ln(x^2+1)\\right)},\\qquad C\\in\\R, \\]\nבתחום שבו $C-\\frac12\\ln(x^2+1)&gt;0$ (בפרט נדרש $C&gt;0$; התחום הוא $|x|&lt;\\sqrt{e^{2C}-1}$).</p>\n<p>בדיקה: $y'=\\frac{\\frac{x}{x^2+1}}{C-\\frac12\\ln(x^2+1)}=\\frac{x}{x^2+1}e^{y}$, ולכן $(x^2+1)y'=xe^y$.</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -5038,6 +5257,7 @@ window.BANK = {
     "<p>$x^4+4x^2=x^2(x^2+4)$. הפירוק לשברים חלקיים הוא מהצורה $\\frac Ax+\\frac B{x^2}+\\frac{Cx+D}{x^2+4}$.</p>"
    ],
    "solution": "<strong>פירוק לשברים חלקיים.</strong> $x^4+4x^2=x^2(x^2+4)$, ו-$x^2+4$ אי-פריק מעל $\\R$. מעלת המונה קטנה ממעלת המכנה, ולכן\n\\[ \\frac{5x^3+4x^2+8x+12}{x^2(x^2+4)}=\\frac Ax+\\frac B{x^2}+\\frac{Cx+D}{x^2+4}, \\]\n\\[ 5x^3+4x^2+8x+12=Ax(x^2+4)+B(x^2+4)+(Cx+D)x^2=(A+C)x^3+(B+D)x^2+4Ax+4B. \\]\nהשוואת מקדמים:\n\\[ 4B=12\\Rightarrow B=3,\\quad 4A=8\\Rightarrow A=2,\\quad A+C=5\\Rightarrow C=3,\\quad B+D=4\\Rightarrow D=1. \\]\nלכן\n\\[ \\frac{5x^3+4x^2+8x+12}{x^4+4x^2}=\\frac2x+\\frac3{x^2}+\\frac{3x}{x^2+4}+\\frac{1}{x^2+4}. \\]\n\n<strong>אינטגרציה.</strong>\n\n<ul>\n<li>\n$\\int\\frac2x\\,dx=2\\ln|x|$, &emsp;$\\int\\frac3{x^2}\\,dx=-\\frac3x$.\n</li>\n<li>\n$\\int\\frac{3x}{x^2+4}\\,dx=\\frac32\\int\\frac{2x}{x^2+4}\\,dx=\\frac32\\ln(x^2+4)$.\n</li>\n<li>\n$\\int\\frac{dx}{x^2+4}=\\frac14\\int\\frac{dx}{(x/2)^2+1}=\\frac12\\arctan\\frac x2$ (הצבה $t=\\frac x2$).\n</li>\n</ul>\n<p><strong>תשובה:</strong>\n\\[ \\int\\frac{5x^3+4x^2+8x+12}{x^4+4x^2}dx=\\boxed{2\\ln|x|-\\frac3x+\\frac32\\ln(x^2+4)+\\frac12\\arctan\\frac x2+C}. \\]</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -5062,6 +5282,7 @@ window.BANK = {
     "<p>השתמשו בנוסחה $V=\\pi\\int_a^b f^2(x)\\,dx$ ובזהות $\\sin^2x=\\frac{1-\\cos2x}{2}$.</p>"
    ],
    "solution": "<p>נפח גוף הסיבוב סביב ציר ה-$x$:\n\\[ V=\\pi\\int_0^\\pi\\sin^2x\\,dx=\\pi\\int_0^\\pi\\frac{1-\\cos2x}{2}\\,dx=\\pi\\left[\\frac x2-\\frac{\\sin2x}{4}\\right]_0^\\pi=\\pi\\cdot\\frac\\pi2=\\boxed{\\frac{\\pi^2}{2}}. \\]</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -5086,6 +5307,7 @@ window.BANK = {
     "<p>האינטגרנד חיובי בקטע. השתמשו במבחן ההשוואה, עם $0&lt;\\sin t\\le t$ עבור $0&lt;t\\le1$.</p>"
    ],
    "solution": "<p>עבור $x\\ge1$ מתקיים $0&lt;\\frac1x\\le1&lt;\\pi$, ולכן $\\sin\\frac1x&gt;0$, והאינטגרנד חיובי ורציף ב-$[1,\\infty)$ (כך שהבעיה היחידה היא באינסוף). מהאי-שוויון $\\sin t\\le t$ עבור $t\\ge0$:\n\\[ 0&lt;\\frac{\\sin(1/x)}{2+x\\sqrt x}\\le\\frac{1/x}{x\\sqrt x}=\\frac{1}{x^{5/2}}. \\]\nהאינטגרל $\\int_1^\\infty\\frac{dx}{x^{p}}$ מתכנס עבור $p&gt;1$, ובפרט עבור $p=\\frac52$. לפי <strong>מבחן ההשוואה</strong> לאינטגרלים לא אמיתיים של פונקציות אי-שליליות, האינטגרל\n\\[ \\int_1^\\infty\\frac{\\sin(1/x)}{2+x\\sqrt x}dx \\]\n<strong>מתכנס</strong>.</p>\n<p>(דרך חלופית: מבחן ההשוואה הגבולי עם $g(x)=x^{-5/2}$: $\\lim_{x\\to\\infty}\\frac{f(x)}{g(x)}=\\lim\\frac{\\sin(1/x)}{1/x}\\cdot\\frac{x^{3/2}}{2+x^{3/2}}=1$.)</p>",
+   "src": "מועד ב' תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד ב"
   },
   {
@@ -5112,6 +5334,7 @@ window.BANK = {
     "<p>ב-$x=9$: $x^2-8x-9=(x-9)(x+1)$ ו-$x-9=(\\sqrt x-3)(\\sqrt x+3)$.</p>"
    ],
    "solution": "<strong>רציפות בתוך התחומים.</strong> ב-$(-\\infty,0)$ הפונקציה $e^{1/x}$ רציפה (הרכבת רציפות). ב-$(0,9)$ $f$ פולינום. ב-$(9,\\infty)$ $f$ מנה של פונקציות רציפות שהמכנה שלה $3-\\sqrt x&lt;0$ אינו מתאפס. לכן $f$ רציפה בכל $x\\neq0,9$ לכל $a,b$, ויש לבדוק רק את $x=0$ ואת $x=9$.\n\n<strong>הנקודה $x=0$.</strong> $f(0)=b-6$, והגבול מימין הוא $\\lim_{x\\to0^+}(ax+b-6)=b-6$. משמאל: כאשר $x\\to0^-$ מתקיים $\\frac1x\\to-\\infty$, ולכן\n\\[ \\lim_{x\\to0^-}e^{1/x}=0. \\]\nרציפות ב-$0$ שקולה ל-$b-6=0$, כלומר $b=6$.\n\n<strong>הנקודה $x=9$.</strong> $f(9)=9a+b-6$, וזה גם הגבול משמאל. מימין, עבור $x&gt;9$:\n\\[ \\frac{x^2-8x-9}{3-\\sqrt x}=\\frac{(x-9)(x+1)}{3-\\sqrt x}=\\frac{(\\sqrt x-3)(\\sqrt x+3)(x+1)}{-(\\sqrt x-3)}=-(\\sqrt x+3)(x+1), \\]\nולכן\n\\[ \\lim_{x\\to9^+}f(x)=-(3+3)(9+1)=-60. \\]\nרציפות ב-$9$ שקולה ל-$9a+b-6=-60$.\n\n<strong>פתרון המערכת.</strong> מ-$b=6$ נקבל $9a=-60$, כלומר $a=-\\frac{20}{3}$.\n\n<strong>תשובה:</strong> $f$ רציפה בכל $\\R$ אם ורק אם $\\boxed{a=-\\tfrac{20}{3},\\ b=6}$.",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5136,6 +5359,7 @@ window.BANK = {
     "<p>בדקו את הגבולות ב-$\\pm\\infty$ כדי להכריע אם יש קיצון מוחלט.</p>"
    ],
    "solution": "<p>$f$ גזירה בכל $\\R$, ו-\n\\[ f'(x)=2xe^{-x}-x^2e^{-x}=x(2-x)e^{-x}. \\]\nכיוון ש-$e^{-x}&gt;0$, $f'(x)=0\\iff x=0$ או $x=2$, וסימן $f'$ הוא סימן $x(2-x)$:</p>\n<ul>\n<li>\n$f'&lt;0$ ב-$(-\\infty,0)$: $f$ יורדת.\n</li>\n<li>\n$f'&gt;0$ ב-$(0,2)$: $f$ עולה.\n</li>\n<li>\n$f'&lt;0$ ב-$(2,\\infty)$: $f$ יורדת.\n</li>\n</ul>\n<p>לכן ב-$x=0$ יש <strong>מינימום מקומי</strong> $f(0)=0$, וב-$x=2$ יש <strong>מקסימום מקומי</strong> $f(2)=\\frac{4}{e^2}$.</p>\n<p><strong>קיצון מוחלט.</strong></p>\n<ul>\n<li>\n$f(x)=x^2e^{-x}\\ge0=f(0)$ לכל $x$, ולכן $x=0$ היא <strong>מינימום מוחלט</strong>, ערכו $0$.\n</li>\n<li>\n$\\lim_{x\\to-\\infty}x^2e^{-x}=+\\infty$ (שני הגורמים שואפים ל-$+\\infty$), ולכן $f$ אינה חסומה מלעיל ו<strong>אין מקסימום מוחלט</strong>. בפרט המקסימום המקומי ב-$x=2$ אינו מוחלט (למשל $f(-2)=4e^2&gt;\\frac4{e^2}$).\n</li>\n</ul>\n<p>(לשלמות: $\\lim_{x\\to+\\infty}\\frac{x^2}{e^x}=0$ לפי לופיטל פעמיים.)</p>",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5161,6 +5385,7 @@ window.BANK = {
     "<p>הקיום נובע ממשפט ערך הביניים, והיחידות — ממונוטוניות: $f'(x)=x^4+2x^2+1$ (או ממשפט רול).</p>"
    ],
    "solution": "<strong>קיום.</strong> $f$ פולינום ולכן רציפה בכל $\\R$. מתקיים $f(0)=7&gt;0$ ו-\n\\[ f(-2)=-\\frac{32}{5}-\\frac{16}{3}-2+7=-\\frac{101}{15}&lt;0. \\]\nלפי <strong>משפט ערך הביניים</strong> קיים $x_0\\in(-2,0)$ עם $f(x_0)=0$.\n\n<strong>יחידות.</strong>\n\\[ f'(x)=x^4+2x^2+1=(x^2+1)^2&gt;0\\quad\\text{לכל } x, \\]\nולכן $f$ עולה ממש ב-$\\R$, ובפרט חד-חד-ערכית — היא מקבלת את הערך $0$ לכל היותר פעם אחת.\n(לחלופין, לפי משפט רול: אם היו שני שורשים $x_1&lt;x_2$, היה קיים $c\\in(x_1,x_2)$ עם $f'(c)=0$, בסתירה ל-$f'&gt;0$.)\n\nלכן ל-$f$ יש שורש ממשי יחיד, והוא נמצא בקטע $(-2,0)$.",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5185,6 +5410,7 @@ window.BANK = {
     "<p>פתחו את $f(x)=\\arctan x$ סביב $a=0$ וחסמו את השגיאה בעזרת שארית לגרנז' $R_1=\\frac{f''(c)}{2}x^2$.</p>"
    ],
    "solution": "<p>נפתח את $f(x)=\\arctan x$ סביב $a=0$:\n\\[ f'(x)=\\frac{1}{1+x^2},\\qquad f''(x)=-\\frac{2x}{(1+x^2)^2}. \\]\n$f(0)=0$, $f'(0)=1$, ולכן $P_1(x)=x$ והקירוב הוא\n\\[ \\arctan(0.2)\\approx P_1(0.2)=\\boxed{0.2}. \\]</p>\n<p><strong>חסם לשגיאה.</strong> לפי משפט טיילור עם שארית לגרנז', קיימת $c\\in(0,0.2)$ כך ש-\n\\[ R_1(0.2)=\\frac{f''(c)}{2}(0.2)^2=-\\frac{c}{(1+c^2)^2}\\cdot0.04. \\]\nעבור $0&lt;c&lt;0.2$ מתקיים $(1+c^2)^2&gt;1$, ולכן $\\frac{c}{(1+c^2)^2}&lt;c&lt;0.2$, ומכאן\n\\[ |R_1(0.2)|&lt;0.2\\cdot0.04=0.008. \\]</p>\n<p><strong>תשובה:</strong> $\\arctan(0.2)\\approx0.2$ עם שגיאה קטנה מ-$0.008$. יתרה מזו $R_1&lt;0$, ולכן $0.192&lt;\\arctan(0.2)&lt;0.2$.</p>\n<p><strong>הערה (חסם טוב יותר).</strong> כיוון ש-$f''(0)=0$, מתקיים $P_2=P_1$, ולכן אפשר להשתמש בשארית מסדר שני: $R_2(0.2)=\\frac{f'''(c)}{6}(0.2)^3$ עם $f'''(x)=\\frac{6x^2-2}{(1+x^2)^3}$. עבור $0&lt;c&lt;0.2$ מתקיים $|6c^2-2|\\le 2$ ו-$(1+c^2)^3&gt;1$, ולכן $|f'''(c)|&lt;2$ ו-\n\\[ |R_2(0.2)|&lt;\\frac{2}{6}\\cdot0.008=\\frac{0.008}{3}\\approx0.0027. \\]\n(לבדיקה: $\\arctan(0.2)\\approx0.19740$, והשגיאה בפועל $\\approx0.0026$.)</p>",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5209,6 +5435,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\cos\\alpha\\cos\\beta=\\frac12\\left[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\right]$.</p>"
    ],
    "solution": "<p>לפי הזהות $\\cos\\alpha\\cos\\beta=\\frac12\\left[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\right]$:\n\\[ \\cos(3x)\\cos(7x)=\\frac12\\left[\\cos(4x)+\\cos(10x)\\right]. \\]\nלכן\n\\[ \\int\\cos(3x)\\cos(7x)\\,dx=\\frac12\\left[\\frac{\\sin(4x)}{4}+\\frac{\\sin(10x)}{10}\\right]+C=\\boxed{\\frac{\\sin(4x)}{8}+\\frac{\\sin(10x)}{20}+C}. \\]</p>",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5233,6 +5460,7 @@ window.BANK = {
     "<p>$e^{x-y}=e^x\\cdot e^{-y}$, ולכן זו משוואה פרידה.</p>"
    ],
    "solution": "<p>$y'=e^x e^{-y}$, ולכן $e^{y}y'=e^x$ (אין פתרונות קבועים, כי $e^{x-y}&gt;0$). אינטגרציה של שני האגפים:\n\\[ \\int e^y\\,dy=\\int e^x\\,dx\\ \\Longrightarrow\\ e^y=e^x+C. \\]\nלכן\n\\[ \\boxed{y=\\ln\\left(e^x+C\\right)},\\qquad C\\in\\R, \\]\nבתחום שבו $e^x+C&gt;0$ (לכל $x$ אם $C\\ge0$; עבור $C&lt;0$ — בתחום $x&gt;\\ln(-C)$).</p>\n<p>בדיקה: $y'=\\frac{e^x}{e^x+C}=\\frac{e^x}{e^y}=e^{x-y}$.</p>",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5257,6 +5485,7 @@ window.BANK = {
     "<p>$x^3-1=(x-1)(x^2+x+1)$, והגורם הריבועי אי-פריק. פרקו לשברים חלקיים.</p>"
    ],
    "solution": "<strong>פירוק לשברים חלקיים.</strong> $x^3-1=(x-1)(x^2+x+1)$, ולגורם $x^2+x+1$ דיסקרימיננטה $1-4&lt;0$, ולכן הוא אי-פריק. מעלת המונה קטנה ממעלת המכנה:\n\\[ \\frac{5x^2+2x+2}{(x-1)(x^2+x+1)}=\\frac{A}{x-1}+\\frac{Bx+C}{x^2+x+1}, \\]\n\\[ 5x^2+2x+2=A(x^2+x+1)+(Bx+C)(x-1). \\]\n\n<ul>\n<li>\nהצבת $x=1$: $9=3A$, ולכן $A=3$.\n</li>\n<li>\nאז $5x^2+2x+2-3(x^2+x+1)=2x^2-x-1=(x-1)(2x+1)$, ולכן $Bx+C=2x+1$, כלומר $B=2$, $C=1$.\n</li>\n</ul>\n<p>\\[ \\frac{5x^2+2x+2}{x^3-1}=\\frac{3}{x-1}+\\frac{2x+1}{x^2+x+1}. \\]</p>\n<p><strong>אינטגרציה.</strong> $\\int\\frac{3}{x-1}dx=3\\ln|x-1|$, והמונה $2x+1$ הוא בדיוק נגזרת המכנה $x^2+x+1&gt;0$, ולכן $\\int\\frac{2x+1}{x^2+x+1}dx=\\ln(x^2+x+1)$.</p>\n<p><strong>תשובה:</strong>\n\\[ \\int\\frac{5x^2+2x+2}{x^3-1}dx=\\boxed{3\\ln|x-1|+\\ln(x^2+x+1)+C}. \\]</p>",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5281,6 +5510,7 @@ window.BANK = {
     "<p>שימו לב שהפונקציה מחליפה סימן בין נקודות החיתוך עם הציר — יש לחשב את השטח של כל חלק בנפרד (או להשתמש באי-זוגיות).</p>"
    ],
    "solution": "<strong>חיתוך עם ציר ה-$x$:</strong> $x^3-x=x(x-1)(x+1)=0\\iff x\\in\\{-1,0,1\\}$.\nבקטע $(-1,0)$ מתקיים $f&gt;0$, ובקטע $(0,1)$ מתקיים $f&lt;0$. מחוץ ל-$[-1,1]$ התחום בין הגרף לציר אינו חסום, ולכן השטח הסופי החסום הוא שני ה\"עלים\" שבין $-1$ ל-$1$:\n\\[ S=\\int_{-1}^0(x^3-x)\\,dx+\\int_0^1(x-x^3)\\,dx. \\]\n\\[ \\int_0^1(x-x^3)\\,dx=\\left[\\frac{x^2}{2}-\\frac{x^4}{4}\\right]_0^1=\\frac14,\\qquad \\int_{-1}^0(x^3-x)\\,dx=\\left[\\frac{x^4}{4}-\\frac{x^2}{2}\\right]_{-1}^0=-\\left(\\frac14-\\frac12\\right)=\\frac14. \\]\n(השוויון נובע גם מכך ש-$f$ אי-זוגית.) לכן\n\\[ S=\\frac14+\\frac14=\\boxed{\\frac12}. \\]\n(שימו לב: $\\int_{-1}^1(x^3-x)\\,dx=0$ — זה אינו השטח.)",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5305,6 +5535,7 @@ window.BANK = {
     "<p>הפונקציה הקדומה היא $\\arctan(e^x)$ (הצבה $t=e^x$).</p>"
    ],
    "solution": "<p>נציב $t=e^x$, $dt=e^xdx$: $\\int\\frac{e^x}{e^{2x}+1}dx=\\int\\frac{dt}{t^2+1}=\\arctan(e^x)+C$. לכן\n\\[ \\int_1^R\\frac{e^x}{e^{2x}+1}dx=\\arctan(e^R)-\\arctan(e). \\]\nכאשר $R\\to\\infty$: $e^R\\to\\infty$ ו-$\\lim_{t\\to\\infty}\\arctan t=\\frac\\pi2$, ולכן\n\\[ \\int_1^\\infty\\frac{e^x}{e^{2x}+1}dx=\\lim_{R\\to\\infty}\\left(\\arctan(e^R)-\\arctan e\\right)=\\boxed{\\frac\\pi2-\\arctan e}\\approx0.3466. \\]\nהאינטגרל <strong>מתכנס</strong>.</p>\n<p>(לחלופין, ללא חישוב: $0&lt;\\frac{e^x}{e^{2x}+1}&lt;\\frac{e^x}{e^{2x}}=e^{-x}$, ו-$\\int_1^\\infty e^{-x}dx=e^{-1}$ מתכנס, ולכן לפי מבחן ההשוואה האינטגרל מתכנס.)</p>",
+   "src": "מועד מיוחד תשפ\"ב סמסטר א'",
    "exam": "תשפ\"ב סמסטר א מועד מיוחד"
   },
   {
@@ -5329,6 +5560,7 @@ window.BANK = {
     "<p>פתחו את הערך המוחלט: מה ערכה של $f$ עבור $x&lt;0$? לפונקציה יש הפוכה רק אם היא חד-חד-ערכית.</p>"
    ],
    "solution": "<p>הפונקציה מוגדרת לכל $x\\in\\R$. נפתח את הערך המוחלט:\n\\[ f(x)=\\begin{cases} 2x, &amp; x\\ge 0\\\\ 0, &amp; x&lt;0.\\end{cases} \\]\nלפונקציה קיימת פונקציה הפוכה (בתחום הגדרתה) אם ורק אם היא חד-חד-ערכית. אבל למשל $f(-1)=f(-2)=0$ בעוד $-1\\neq -2$, ולכן $f$ אינה חד-חד-ערכית על $\\R$, ו<strong>לא קיימת לה פונקציה הפוכה</strong> בתחום הגדרתה.</p>\n<p>(הערה: אם מצמצמים את $f$ לקרן $[0,\\infty)$ היא שם $f(x)=2x$, חד-חד-ערכית ועל $[0,\\infty)$, וההפוכה של הצמצום היא $f^{-1}(y)=\\frac{y}{2}$, $y\\ge 0$. אך זו כבר לא $f$ על כל תחום הגדרתה.)</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5353,6 +5585,7 @@ window.BANK = {
     "<p>חשבו בנפרד את הגבולות החד-צדדיים ודרשו שיהיו שווים. שימו לב למקרה $a=0$.</p>"
    ],
    "solution": "<p>לפונקציה יש גבול ב-$x=0$ אם ורק אם שני הגבולות החד-צדדיים קיימים (סופיים) ושווים.</p>\n<p><strong>גבול משמאל:</strong> לפי הגבול היסודי $\\lim_{t\\to 0}\\frac{\\sin t}{t}=1$,\n\\[ \\lim_{x\\to 0^-}\\frac{\\sin(2x)}{x}=\\lim_{x\\to 0^-}2\\cdot\\frac{\\sin(2x)}{2x}=2. \\]</p>\n<p><strong>גבול מימין:</strong> אם $a\\neq 0$, המונה והמכנה רציפים ב-$0$ והמכנה שונה מ-$0$ שם, ולכן\n\\[ \\lim_{x\\to 0^+}\\frac{x+3}{4x+a}=\\frac{3}{a}. \\]\nאם $a=0$, אז $\\frac{x+3}{4x}\\to +\\infty$ כאשר $x\\to 0^+$ (המונה שואף ל-$3$ והמכנה ל-$0^+$), והגבול מימין אינו סופי, לכן אין גבול.</p>\n<p>לכן עבור $a\\ne 0$ דרוש $\\frac{3}{a}=2$, כלומר $a=\\frac32$. (במקרה זה המכנה $4x+\\frac32&gt;0$ לכל $x\\ge 0$, כך שהפונקציה מוגדרת היטב בסביבה ימנית של $0$.)</p>\n<p><strong>תשובה:</strong> לפונקציה יש גבול ב-$x=0$ רק עבור $a=\\frac{3}{2}$, וערך הגבול הוא $2$.</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5377,6 +5610,7 @@ window.BANK = {
     "<p>בחרו נקודה קרובה ל-$28$ שבה השורש השלישי ידוע.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=\\sqrt[3]{x}=x^{1/3}$ ונקודת בסיס $x_0=27$, שבה $g(27)=3$. הנגזרת:\n\\[ g'(x)=\\frac{1}{3}x^{-2/3}=\\frac{1}{3\\sqrt[3]{x^2}},\\qquad g'(27)=\\frac{1}{3\\cdot 9}=\\frac{1}{27}. \\]\nהקירוב הלינארי (המשיק) בסביבת $x_0$: $g(x)\\approx g(x_0)+g'(x_0)(x-x_0)$. עם $x=28$, $x-x_0=1$:\n\\[ \\sqrt[3]{28}\\approx 3+\\frac{1}{27}\\approx 3.037. \\]\n(הערך האמיתי הוא $3.0366\\ldots$.)</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5401,6 +5635,7 @@ window.BANK = {
     "<p>הגדירו $g(x)=2x+f(x)-3$ ומצאו נקודה שבה $g$ שלילית ונקודה שבה $g$ חיובית, בעזרת החסם $|f(x)|\\le 7$.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=2x+f(x)-3$. הפונקציה $g$ רציפה על כל $\\R$ כסכום של פונקציות רציפות. מהנתון $-7\\le f(x)\\le 7$ לכל $x$, ולכן:\n\\[ g(-10)=-20+f(-10)-3\\le -23+7=-16&lt;0,\\qquad g(10)=20+f(10)-3\\ge 17-7=10&gt;0. \\]\n$g$ רציפה בקטע הסגור $[-10,10]$ ומקבלת בקצותיו ערכים בעלי סימנים מנוגדים, ולכן לפי <strong>משפט ערך הביניים</strong> (משפט בולצאנו) קיימת $c\\in(-10,10)$ שבה $g(c)=0$, כלומר $2c+f(c)=3$. לכן למשוואה יש לפחות פתרון אחד. $\\blacksquare$</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5423,6 +5658,7 @@ window.BANK = {
    "question": "<p>(10 נק') מצאו תחומי קמירות ונקודות פיתול עבור הפונקציה $f(x)=\\ln(1+4x^2)$.</p>",
    "hints": [],
    "solution": "<p>תחום ההגדרה: $1+4x^2&gt;0$ לכל $x$, ולכן $D=\\R$. נגזור:\n\\[ f'(x)=\\frac{8x}{1+4x^2},\\qquad\nf''(x)=\\frac{8(1+4x^2)-8x\\cdot 8x}{(1+4x^2)^2}=\\frac{8-32x^2}{(1+4x^2)^2}=\\frac{8(1-2x)(1+2x)}{(1+4x^2)^2}. \\]\nהמכנה חיובי תמיד, ולכן סימן $f''$ הוא סימן $1-4x^2$:</p>\n<ul>\n<li>\n$f''(x)&gt;0$ עבור $-\\frac12&lt;x&lt;\\frac12$: הפונקציה <strong>קמורה</strong> (קמורה כלפי מעלה, $\\cup$) בקטע $\\left(-\\frac12,\\frac12\\right)$.\n</li>\n<li>\n$f''(x)&lt;0$ עבור $|x|&gt;\\frac12$: הפונקציה <strong>קעורה</strong> ($\\cap$) בתחומים $\\left(-\\infty,-\\frac12\\right)$ ו-$\\left(\\frac12,\\infty\\right)$.\n</li>\n</ul>\n<p>ב-$x=\\pm\\frac12$ הנגזרת השנייה מחליפה סימן והפונקציה רציפה (וגזירה) שם, ולכן אלה נקודות פיתול. $f(\\pm\\tfrac12)=\\ln(1+1)=\\ln 2$.</p>\n<p><strong>תשובה:</strong> קמורה ב-$\\left(-\\frac12,\\frac12\\right)$, קעורה ב-$\\left(-\\infty,-\\frac12\\right)\\cup\\left(\\frac12,\\infty\\right)$; נקודות פיתול $\\left(-\\frac12,\\ln 2\\right)$ ו-$\\left(\\frac12,\\ln 2\\right)$.</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5447,6 +5683,7 @@ window.BANK = {
     "<p>הפעילו את משפט לגרנז' על $\\arctan$ בקטע שבין $x$ ל-$y$.</p>"
    ],
    "solution": "<p>אם $x=y$ שני האגפים שווים $0$ ואין מה להוכיח. נניח $x\\neq y$, ובלי הגבלת הכלליות $x&lt;y$. הפונקציה $g(t)=\\arctan t$ רציפה ב-$[x,y]$ וגזירה ב-$(x,y)$, ולכן לפי <strong>משפט לגרנז'</strong> קיימת $c\\in(x,y)$ כך ש-\n\\[ \\arctan y-\\arctan x=g'(c)(y-x)=\\frac{1}{1+c^2}(y-x). \\]\nמכיוון ש-$1+c^2\\ge 1$ מתקיים $0&lt;\\frac{1}{1+c^2}\\le 1$, ולכן\n\\[ |\\arctan x-\\arctan y|=\\frac{1}{1+c^2}\\,|x-y|\\le|x-y|. \\qquad\\blacksquare \\]</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5469,6 +5706,7 @@ window.BANK = {
    "question": "<p>(10 נק') חשבו את הגבול $\\displaystyle\\lim_{x\\to 1}\\frac{x^2+\\ln(x)-1}{e^x-e}$.</p>",
    "hints": [],
    "solution": "<p>בהצבת $x=1$: המונה $1+0-1=0$ והמכנה $e-e=0$, כלומר ביטוי מהצורה $\\frac00$. המונה והמכנה גזירים בסביבת $1$, ונגזרת המכנה $e^x\\neq 0$. לפי <strong>כלל לופיטל</strong>:\n\\[ \\lim_{x\\to1}\\frac{x^2+\\ln x-1}{e^x-e}=\\lim_{x\\to1}\\frac{2x+\\frac1x}{e^x}=\\frac{2+1}{e}=\\frac{3}{e}, \\]\nכאשר הגבול האחרון מחושב בהצבה (רציפות), ולכן גם הגבול המקורי קיים ושווה ל-$\\frac{3}{e}$.</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5493,6 +5731,7 @@ window.BANK = {
     "<p>השתמשו בפולינום מקלורן של $\\sin x$ והעריכו את השארית בצורת לגרנז'.</p>"
    ],
    "solution": "<p>נשתמש בפולינום מקלורן של $f(x)=\\sin x$. מתקיים $f(0)=0$, $f'(0)=\\cos 0=1$, $f''(0)=-\\sin 0=0$, ולכן\n\\[ P_2(x)=x. \\]\nלפי נוסחת טיילור עם שארית לגרנז', קיימת $c$ בין $0$ ל-$x$ כך ש-\n\\[ \\sin x=P_2(x)+R_2(x),\\qquad R_2(x)=\\frac{f'''(c)}{3!}x^3=\\frac{-\\cos c}{6}x^3. \\]\nעבור $x=0.1$, ומכיוון ש-$|\\cos c|\\le 1$:\n\\[ |R_2(0.1)|\\le\\frac{(0.1)^3}{6}=\\frac{0.001}{6}\\approx 0.000167&lt;0.001. \\]\nלכן $\\sin 0.1\\approx 0.1$, בשגיאה קטנה מ-$0.001$ כנדרש.</p>\n<p>(לקירוב מדויק יותר אפשר לקחת $P_4(x)=x-\\frac{x^3}{6}$, ואז $\\sin 0.1\\approx 0.0998333$ בשגיאה $\\le\\frac{(0.1)^5}{120}&lt;10^{-7}$; הערך האמיתי $0.0998334\\ldots$.)</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5515,6 +5754,7 @@ window.BANK = {
    "question": "<p>(10 נק') חשבו את האינטגרל $\\displaystyle\\int\\sqrt{2x+3}\\,dx$.</p>",
    "hints": [],
    "solution": "<p>נציב $t=2x+3$, ואז $dt=2\\,dx$, כלומר $dx=\\frac{dt}{2}$:\n\\[ \\int\\sqrt{2x+3}\\,dx=\\frac12\\int t^{1/2}\\,dt=\\frac12\\cdot\\frac{t^{3/2}}{3/2}+C=\\frac13(2x+3)^{3/2}+C. \\]\nבדיקה: $\\left(\\frac13(2x+3)^{3/2}\\right)'=\\frac13\\cdot\\frac32(2x+3)^{1/2}\\cdot 2=\\sqrt{2x+3}$.</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5539,6 +5779,7 @@ window.BANK = {
     "<p>בדקו האם הפונקציה $\\tan x$ זוגית או אי-זוגית, והאם היא רציפה בקטע $[-1,1]$.</p>"
    ],
    "solution": "<p>מכיוון ש-$1&lt;\\frac{\\pi}{2}$, הפונקציה $\\tan x=\\frac{\\sin x}{\\cos x}$ רציפה בקטע $[-1,1]$ (שם $\\cos x&gt;0$), ולכן האינטגרל המסוים קיים. היא אי-זוגית: $\\tan(-x)=-\\tan x$. לאינטגרל של פונקציה אי-זוגית רציפה על קטע סימטרי $[-a,a]$ ערך $0$. ישירות: פונקציה קדומה היא $-\\ln|\\cos x|$ (כי $(-\\ln\\cos x)'=\\frac{\\sin x}{\\cos x}$), ולפי <strong>המשפט היסודי</strong> (ניוטון-לייבניץ):\n\\[ \\int_{-1}^{1}\\tan x\\,dx=\\Big[-\\ln(\\cos x)\\Big]_{-1}^{1}=-\\ln(\\cos 1)+\\ln(\\cos(-1))=0, \\]\nכי $\\cos$ זוגית. <strong>תשובה:</strong> $0$.</p>",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5563,6 +5804,7 @@ window.BANK = {
     "<p>מצאו את נקודות החיתוך $\\sin^2x=\\frac14$ בקטע, וחלקו את הקטע לפי איזו פונקציה גדולה יותר. השתמשו בזהות $\\sin^2x=\\frac{1-\\cos 2x}{2}$.</p>"
    ],
    "solution": "<strong>נקודות חיתוך:</strong> $\\sin^2x=\\frac14\\iff\\sin x=\\pm\\frac12$. בקטע $[0,\\pi]$ מתקיים $\\sin x\\ge 0$, ולכן $\\sin x=\\frac12$, כלומר $x=\\frac{\\pi}{6}$ או $x=\\frac{5\\pi}{6}$.\n\nבקטעים $[0,\\frac{\\pi}{6})$ ו-$(\\frac{5\\pi}{6},\\pi]$ מתקיים $0\\le\\sin x&lt;\\frac12$, ולכן $\\sin^2x&lt;\\frac14$; בקטע $(\\frac{\\pi}{6},\\frac{5\\pi}{6})$ מתקיים $\\sin^2x&gt;\\frac14$.\n\n<strong>פונקציה קדומה:</strong> לפי $\\sin^2x=\\frac{1-\\cos2x}{2}$,\n\\[ \\int\\left(\\sin^2x-\\frac14\\right)dx=\\int\\left(\\frac14-\\frac{\\cos 2x}{2}\\right)dx=\\frac{x}{4}-\\frac{\\sin 2x}{4}=:F(x). \\]\nערכים: $F(0)=0$, $F(\\frac{\\pi}{6})=\\frac{\\pi}{24}-\\frac{\\sqrt3}{8}$, $F(\\frac{5\\pi}{6})=\\frac{5\\pi}{24}+\\frac{\\sqrt3}{8}$, $F(\\pi)=\\frac{\\pi}{4}$.\n\n<strong>השטח</strong> הוא $\\int_0^\\pi|f-g|\\,dx$:\n\\begin{align*}\nS_1&amp;=\\int_0^{\\pi/6}\\left(\\tfrac14-\\sin^2x\\right)dx=-\\big(F(\\tfrac{\\pi}{6})-F(0)\\big)=\\frac{\\sqrt3}{8}-\\frac{\\pi}{24},\\\\\nS_2&amp;=\\int_{\\pi/6}^{5\\pi/6}\\left(\\sin^2x-\\tfrac14\\right)dx=F(\\tfrac{5\\pi}{6})-F(\\tfrac{\\pi}{6})=\\frac{\\pi}{6}+\\frac{\\sqrt3}{4},\\\\\nS_3&amp;=\\int_{5\\pi/6}^{\\pi}\\left(\\tfrac14-\\sin^2x\\right)dx=-\\big(F(\\pi)-F(\\tfrac{5\\pi}{6})\\big)=\\frac{\\sqrt3}{8}-\\frac{\\pi}{24}.\n\\end{align*}\nסה\"כ:\n\\[ S=S_1+S_2+S_3=\\frac{\\sqrt3}{2}+\\frac{\\pi}{12}\\approx 1.128. \\]\n(אם מתכוונים רק לתחום הסגור שבין שתי נקודות החיתוך, שטחו $S_2=\\frac{\\pi}{6}+\\frac{\\sqrt3}{4}\\approx 0.957$.)",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5587,6 +5829,7 @@ window.BANK = {
     "<p>חשבו את האינטגרל עד $R$ בעזרת אינטגרציה בחלקים פעמיים (האינטגרל \"חוזר על עצמו\"), ואז העבירו $R\\to\\infty$.</p>"
    ],
    "solution": "<strong>התכנסות:</strong> $|e^{-2x}\\sin x|\\le e^{-2x}$ ו-$\\int_0^\\infty e^{-2x}dx=\\frac12$ מתכנס, ולכן לפי <strong>מבחן ההשוואה</strong> האינטגרל מתכנס (בהחלט).\n\n<strong>חישוב:</strong> נסמן $I(R)=\\int_0^R e^{-2x}\\sin x\\,dx$ ונמצא פונקציה קדומה $J=\\int e^{-2x}\\sin x\\,dx$ באינטגרציה בחלקים פעמיים ($u=e^{-2x}$):\n\\begin{align*}\nJ&amp;=-e^{-2x}\\cos x-\\int 2e^{-2x}\\cos x\\,dx\n =-e^{-2x}\\cos x-2\\left(e^{-2x}\\sin x+\\int 2e^{-2x}\\sin x\\,dx\\right)\\\\\n &amp;=-e^{-2x}\\cos x-2e^{-2x}\\sin x-4J.\n\\end{align*}\nלכן $5J=-e^{-2x}(\\cos x+2\\sin x)$, כלומר\n\\[ \\int e^{-2x}\\sin x\\,dx=-\\frac{e^{-2x}(\\cos x+2\\sin x)}{5}+C. \\]\nמכאן\n\\[ I(R)=\\frac{1}{5}-\\frac{e^{-2R}(\\cos R+2\\sin R)}{5}. \\]\nכאשר $R\\to\\infty$: $|\\cos R+2\\sin R|\\le 3$ ו-$e^{-2R}\\to 0$, ולכן (חסומה כפול שואפת לאפס) האיבר השני שואף ל-$0$. לכן\n\\[ \\int_0^\\infty e^{-2x}\\sin x\\,dx=\\frac15. \\]",
+   "src": "מועד א' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד א"
   },
   {
@@ -5609,6 +5852,7 @@ window.BANK = {
    "question": "<p>(10 נק') חשבו את הגבולות החד צדדיים של הפונקציה $f(x)=2^{\\frac{1}{x}}$ בנקודה הנתונה $x=0$. קבעו האם יש לה גבול $\\lim_{x\\to 0}f(x)$.</p>",
    "hints": [],
    "solution": "<p>נסמן $t=\\frac1x$. כאשר $x\\to 0^+$ מתקיים $t\\to+\\infty$, וכאשר $x\\to 0^-$ מתקיים $t\\to-\\infty$. מכיוון ש-$2&gt;1$, $\\lim_{t\\to+\\infty}2^t=+\\infty$ ו-$\\lim_{t\\to-\\infty}2^t=0$. לכן (גבול של הרכבה)\n\\[ \\lim_{x\\to0^+}2^{1/x}=+\\infty,\\qquad \\lim_{x\\to0^-}2^{1/x}=0. \\]\nהגבולות החד-צדדיים שונים (והימני אף אינו סופי), ולכן <strong>הגבול $\\lim_{x\\to0}2^{1/x}$ אינו קיים</strong>.</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5631,6 +5875,7 @@ window.BANK = {
    "question": "<p>(10 נק') מיינו את נקודות אי הרציפות של הפונקציה\n\\[ f(x)=\\begin{cases}\\dfrac{x^3-8}{x-2}, &amp; x\\neq 2\\\\[2mm] 1, &amp; x=2\\end{cases} \\]</p>",
    "hints": [],
    "solution": "<p>לכל $x\\neq 2$ הפונקציה היא מנה של פולינומים עם מכנה שונה מאפס, ולכן רציפה שם. נבדוק את $x=2$. לפי נוסחת הפרש חזקות שלישיות $x^3-8=(x-2)(x^2+2x+4)$, ולכן עבור $x\\neq2$:\n\\[ f(x)=x^2+2x+4\\ \\Longrightarrow\\ \\lim_{x\\to2}f(x)=4+4+4=12. \\]\nהגבול קיים וסופי, אך $f(2)=1\\neq 12$. לכן $x=2$ היא נקודת אי-רציפות <strong>סליקה</strong> (ממין ראשון סליקה): אם נגדיר מחדש $f(2)=12$ הפונקציה תהיה רציפה. זו נקודת אי הרציפות היחידה.</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5655,6 +5900,7 @@ window.BANK = {
     "<p>גזרו את המשוואה בצורה סתומה.</p>"
    ],
    "solution": "<p>הנקודה על המעגל: $9+16=25$. בסביבת $(3,4)$ ($y&gt;0$) המעגל הוא גרף של פונקציה גזירה $y(x)$. נגזור את המשוואה בצורה סתומה לפי $x$:\n\\[ 2x+2y\\,y'=0\\ \\Longrightarrow\\ y'=-\\frac{x}{y},\\qquad y'(3)=-\\frac34. \\]\nמשוואת המשיק: $y-4=-\\frac34(x-3)$, כלומר\n\\[ y=-\\frac34x+\\frac{25}{4}\\qquad\\Longleftrightarrow\\qquad 3x+4y=25. \\]\n(בהתאם לגאומטריה: המשיק ניצב לרדיוס בכיוון $(3,4)$.)</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5679,6 +5925,7 @@ window.BANK = {
     "<p>השתמשו בנקודה $0.5$, שבה $\\arcsin$ ידוע.</p>"
    ],
    "solution": "<p>נגדיר $f(x)=\\arcsin x$ ונקודת בסיס $x_0=0.5$: $f(0.5)=\\frac{\\pi}{6}$, ו-\n\\[ f'(x)=\\frac{1}{\\sqrt{1-x^2}},\\qquad f'(0.5)=\\frac{1}{\\sqrt{3/4}}=\\frac{2}{\\sqrt3}. \\]\nקירוב לינארי: $f(x)\\approx f(x_0)+f'(x_0)(x-x_0)$, עם $x-x_0=0.04$:\n\\[ \\arcsin(0.54)\\approx\\frac{\\pi}{6}+\\frac{2}{\\sqrt3}\\cdot0.04=\\frac{\\pi}{6}+\\frac{0.08}{\\sqrt3}\\approx 0.5236+0.0462=0.5698. \\]\n(הערך האמיתי $0.5704\\ldots$.)</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5702,6 +5949,7 @@ window.BANK = {
    "question": "<p>(10 נק') חשבו נקודות קיצון מוחלט של הפונקציה $f(x)=\\frac{x^2}{x-3}$ בקטע $[-2,2]$.</p>",
    "hints": [],
    "solution": "<p>הנקודה $x=3$ אינה בקטע, ולכן $f$ רציפה בקטע הסגור $[-2,2]$, ולפי <strong>משפט ויירשטראס</strong> היא מקבלת בו מקסימום ומינימום. הם מתקבלים בנקודות קריטיות פנימיות או בקצוות.\n\\[ f'(x)=\\frac{2x(x-3)-x^2}{(x-3)^2}=\\frac{x^2-6x}{(x-3)^2}=\\frac{x(x-6)}{(x-3)^2}. \\]\n$f'(x)=0\\iff x=0$ או $x=6$; בקטע $(-2,2)$ רק $x=0$. נשווה ערכים:\n\\[ f(-2)=\\frac{4}{-5}=-\\frac45,\\qquad f(0)=0,\\qquad f(2)=\\frac{4}{-1}=-4. \\]\n<strong>תשובה:</strong> מקסימום מוחלט $0$ בנקודה $x=0$; מינימום מוחלט $-4$ בנקודה $x=2$.</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5726,6 +5974,7 @@ window.BANK = {
     "<p>חקרו את הפונקציה $g(x)=e^x-x-1$: מצאו את נקודת המינימום שלה.</p>"
    ],
    "solution": "<p>נוכיח ש<strong>אין</strong> פתרון עם $x\\neq 0$. נגדיר $g(x)=e^x-x-1$, גזירה על $\\R$, עם $g(0)=0$ ו-\n\\[ g'(x)=e^x-1. \\]\nעבור $x&lt;0$: $g'(x)&lt;0$, ולכן $g$ יורדת ממש ב-$(-\\infty,0]$; עבור $x&gt;0$: $g'(x)&gt;0$, ולכן $g$ עולה ממש ב-$[0,\\infty)$. (מונוטוניות ממש נובעת ממשפט לגרנז'.) לכן:</p>\n<ul>\n<li>\nלכל $x&lt;0$: $g(x)&gt;g(0)=0$;\n</li>\n<li>\nלכל $x&gt;0$: $g(x)&gt;g(0)=0$.\n</li>\n</ul>\n<p>כלומר $e^x&gt;x+1$ לכל $x\\neq0$, ולמשוואה $e^x=x+1$ אין פתרון בתחום $x\\ne 0$ (הפתרון היחיד שלה הוא $x=0$). $\\blacksquare$</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5748,6 +5997,7 @@ window.BANK = {
    "question": "<p>(10 נק') חשבו את הגבול $\\displaystyle\\lim_{x\\to0}\\frac{x-\\sin(x)}{x^3}$.</p>",
    "hints": [],
    "solution": "<p>ביטוי מהצורה $\\frac00$. נפעיל את <strong>כלל לופיטל</strong> (התנאים מתקיימים: גזירות בסביבת $0$, נגזרת המכנה שונה מ-$0$ ליד $0$):\n\\[ \\lim_{x\\to0}\\frac{x-\\sin x}{x^3}=\\lim_{x\\to0}\\frac{1-\\cos x}{3x^2}=\\lim_{x\\to0}\\frac{\\sin x}{6x}=\\frac16, \\]\nכאשר בשלב השני הפעלנו שוב לופיטל (שוב $\\frac00$) ובאחרון השתמשנו ב-$\\lim\\frac{\\sin x}{x}=1$.\n(לחלופין: $\\sin x=x-\\frac{x^3}{6}+o(x^3)$, ולכן $\\frac{x-\\sin x}{x^3}=\\frac16+o(1)$.) <strong>תשובה:</strong> $\\frac16$.</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5772,6 +6022,7 @@ window.BANK = {
     "<p>פתחו את $f(x)=x^{1/4}$ סביב $x_0=81$ והשתמשו בשארית לגרנז'.</p>"
    ],
    "solution": "<p>$f(x)=x^{1/4}$, $x_0=81$, $f(81)=3$.\n\\[ f'(x)=\\tfrac14x^{-3/4},\\quad f''(x)=-\\tfrac{3}{16}x^{-7/4},\\quad f'''(x)=\\tfrac{21}{64}x^{-11/4}. \\]\n\\[ f'(81)=\\frac{1}{4\\cdot27}=\\frac{1}{108},\\qquad f''(81)=-\\frac{3}{16\\cdot 3^7}=-\\frac{1}{16\\cdot729}=-\\frac{1}{11664}. \\]\nפולינום טיילור מסדר 2 סביב $81$, בנקודה $x=82$ ($x-x_0=1$):\n\\[ \\sqrt[4]{82}\\approx P_2(82)=3+\\frac{1}{108}-\\frac{1}{2\\cdot11664}=3+\\frac{1}{108}-\\frac{1}{23328}=\\frac{70199}{23328}\\approx 3.0092164. \\]\n<strong>הערכת שגיאה</strong> (שארית לגרנז'): קיימת $c\\in(81,82)$ כך ש-\n\\[ R_2=\\frac{f'''(c)}{3!}(82-81)^3=\\frac{21}{64\\cdot 6}\\,c^{-11/4}. \\]\n$c^{-11/4}$ יורדת, ולכן $c^{-11/4}&lt;81^{-11/4}=3^{-11}$, ומכאן\n\\[ 0&lt;R_2&lt;\\frac{21}{384\\cdot 3^{11}}=\\frac{21}{384\\cdot177147}\\approx 3.1\\cdot10^{-7}. \\]\nכלומר $\\sqrt[4]{82}\\approx3.0092164$ בשגיאה קטנה מ-$3.1\\cdot 10^{-7}$ (והקירוב קטן מעט מהערך האמיתי, $3.0092167\\ldots$).</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5794,6 +6045,7 @@ window.BANK = {
    "question": "<p>(10 נק') חשבו את האינטגרל $\\displaystyle\\int\\frac{x}{\\sqrt{1+x^2}}\\,dx$.</p>",
    "hints": [],
    "solution": "<p>נציב $t=1+x^2$, $dt=2x\\,dx$:\n\\[ \\int\\frac{x}{\\sqrt{1+x^2}}\\,dx=\\frac12\\int t^{-1/2}\\,dt=t^{1/2}+C=\\sqrt{1+x^2}+C. \\]\nבדיקה: $\\left(\\sqrt{1+x^2}\\right)'=\\frac{2x}{2\\sqrt{1+x^2}}=\\frac{x}{\\sqrt{1+x^2}}$.</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5818,6 +6070,7 @@ window.BANK = {
     "<p>זו משוואה פרידה: העבירו אגף ובצעו אינטגרציה לכל צד בנפרד.</p>"
    ],
    "solution": "<p>המשוואה פרידה: $y\\,dy=e^x\\,dx$ (כלומר $y\\,y'=e^x$). נבצע אינטגרציה לשני האגפים:\n\\[ \\int y\\,dy=\\int e^x\\,dx\\ \\Longrightarrow\\ \\frac{y^2}{2}=e^x+C. \\]\nמתנאי ההתחלה $y(0)=1$: $\\frac12=1+C$, ולכן $C=-\\frac12$, ו-\n\\[ y^2=2e^x-1. \\]\nמכיוון ש-$y(0)=1&gt;0$ ופתרון רציף אינו יכול לעבור לערכים שליליים בלי לעבור ב-$0$, נבחר את הענף החיובי:\n\\[ y(x)=\\sqrt{2e^x-1}, \\]\nהמוגדר כאשר $2e^x-1&gt;0$, כלומר $x&gt;-\\ln 2$.\nבדיקה: $y'=\\frac{e^x}{\\sqrt{2e^x-1}}$, ולכן $y\\,y'=e^x$ ✓, ו-$y(0)=\\sqrt{1}=1$ ✓.</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5842,6 +6095,7 @@ window.BANK = {
     "<p>פרקו את הפולינום לגורמים כדי למצוא את נקודות החיתוך עם ציר $x$ ואת הסימן בכל קטע.</p>"
    ],
    "solution": "<p>פירוק: $f(x)=x(x^2+x-2)=x(x+2)(x-1)$. נקודות החיתוך עם ציר $x$: $x=-2,0,1$. סימן: ב-$(-2,0)$ $f&gt;0$ (למשל $f(-1)=2$), וב-$(0,1)$ $f&lt;0$ (למשל $f(\\frac12)=-\\frac58$). התחום הסופי החסום בין הגרף לציר הוא מעל $[-2,1]$.</p>\n<p>פונקציה קדומה: $F(x)=\\frac{x^4}{4}+\\frac{x^3}{3}-x^2$. אז $F(-2)=4-\\frac83-4=-\\frac83$, $F(0)=0$, $F(1)=\\frac14+\\frac13-1=-\\frac{5}{12}$.\n\\[ S=\\int_{-2}^0 f\\,dx-\\int_0^1 f\\,dx=\\big(F(0)-F(-2)\\big)-\\big(F(1)-F(0)\\big)=\\frac83+\\frac{5}{12}=\\frac{37}{12}. \\]\n<strong>תשובה:</strong> $S=\\frac{37}{12}$.</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5866,6 +6120,7 @@ window.BANK = {
     "<p>בדקו כיצד מתנהגת הפונקציה כאשר $x\\to\\infty$ והשוו ל-$x^{p}$ מתאים (מבחן ההשוואה הגבולי).</p>"
    ],
    "solution": "<p>הפונקציה $g(x)=\\frac{x^{5/2}}{2x^2+3x+40}$ רציפה וחיובית ב-$[1,\\infty)$. נשווה ל-$h(x)=x^{1/2}$:\n\\[ \\lim_{x\\to\\infty}\\frac{g(x)}{h(x)}=\\lim_{x\\to\\infty}\\frac{x^2}{2x^2+3x+40}=\\frac12\\in(0,\\infty). \\]\nלפי <strong>מבחן ההשוואה הגבולי</strong>, $\\int_1^\\infty g$ ו-$\\int_1^\\infty x^{1/2}dx$ מתכנסים או מתבדרים יחד. $\\int_1^\\infty x^{p}dx$ מתכנס רק עבור $p&lt;-1$, ו-$p=\\frac12$, לכן $\\int_1^\\infty x^{1/2}dx=\\infty$.\n(אפשר גם לשים לב שאפילו $g(x)\\to\\infty$, ולכן בוודאי שהאינטגרל מתבדר.)</p>\n<p><strong>תשובה:</strong> האינטגרל <strong>מתבדר</strong> (שווה $+\\infty$).</p>",
+   "src": "מועד ב' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ב"
   },
   {
@@ -5890,6 +6145,7 @@ window.BANK = {
     "<p>פרקו את הערך המוחלט: רשמו את $f$ בנפרד עבור $x\\ge 0$ ועבור $x&lt;0$, ובדקו שהיא חח\"ע ועל.</p>"
    ],
    "solution": "<p>הפונקציה מוגדרת על כל $\\R$. נפרק את הערך המוחלט:\n\\[ f(x)=\\begin{cases} 3x, &amp; x\\ge 0\\\\ x, &amp; x&lt;0. \\end{cases} \\]\n<strong>חח\"ע:</strong> בכל אחד מהתחומים $f$ עולה ממש (שיפוע $3$ ושיפוע $1$), ובנוסף $f(x)\\ge 0$ עבור $x\\ge0$ ו-$f(x)&lt;0$ עבור $x&lt;0$, כך שערכים משני התחומים אינם יכולים להתלכד. לכן $f$ עולה ממש על כל $\\R$, ובפרט חח\"ע.</p>\n<p><strong>על:</strong> התמונה של $[0,\\infty)$ תחת $3x$ היא $[0,\\infty)$, והתמונה של $(-\\infty,0)$ תחת $x$ היא $(-\\infty,0)$. לכן התמונה היא כל $\\R$.</p>\n<p>מכאן ש-$f:\\R\\to\\R$ הפיכה. נמצא את ההפכית: אם $y\\ge 0$ אז $y=3x$ עם $x\\ge 0$, כלומר $x=y/3$; אם $y&lt;0$ אז $y=x$. לכן\n\\[ \\boxed{f^{-1}(y)=\\begin{cases} \\dfrac{y}{3}, &amp; y\\ge 0\\\\[2mm] y, &amp; y&lt;0. \\end{cases}} \\]\n(בדיקה: $f^{-1}(f(x))=x$ בשני התחומים.)</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -5912,6 +6168,7 @@ window.BANK = {
    "question": "<p>מיינו את נקודות אי הרציפות של הפונקציה\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(2x)}{x}, &amp; x\\neq 0\\\\[2mm] 1, &amp; x=0 \\end{cases} \\]</p>",
    "hints": [],
    "solution": "<p>לכל $x\\neq 0$ הפונקציה היא מנה של פונקציות רציפות ($\\sin(2x)$ ו-$x$) שהמכנה שלה אינו מתאפס, ולכן רציפה. נבדוק את $x=0$: לפי הגבול היסודי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$,\n\\[ \\lim_{x\\to0}\\frac{\\sin(2x)}{x}=\\lim_{x\\to0}2\\cdot\\frac{\\sin(2x)}{2x}=2. \\]\nהגבול קיים וסופי, אך $f(0)=1\\neq 2$. לכן $x=0$ היא <strong>נקודת אי-רציפות סליקה</strong> (ניתן לתקן ע\"י הגדרה מחדש $f(0)=2$), וזו נקודת אי-הרציפות היחידה.</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -5936,6 +6193,7 @@ window.BANK = {
     "<p>בחרו נקודה קרובה ל-$10$ שבה $\\log_2$ ידוע, למשל $x_0=8$.</p>"
    ],
    "solution": "<p>נגדיר $f(x)=\\log_2 x=\\frac{\\ln x}{\\ln 2}$, ואז $f'(x)=\\frac{1}{x\\ln 2}$. הקירוב הלינארי סביב $x_0$ הוא\n\\[ f(x)\\approx f(x_0)+f'(x_0)(x-x_0). \\]\nניקח $x_0=8$ (שם $\\log_2 8=3$) ו-$x=10$:\n\\[ \\log_2 10\\approx 3+\\frac{1}{8\\ln 2}\\cdot 2=3+\\frac{1}{4\\ln 2}\\approx 3+0.3607=\\boxed{3.3607}. \\]\n(הערך המדויק $\\log_2 10\\approx 3.3219$; הקירוב גבוה מעט מהערך האמיתי, כצפוי, כי $\\log_2$ קעורה ולכן המשיק נמצא מעל הגרף.)</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -5960,6 +6218,7 @@ window.BANK = {
     "<p>מצאו תחילה את $y(0)$ מתוך המשוואה, ואז גזרו את שני האגפים לפי $x$ (כלל השרשרת ונגזרת מכפלה).</p>"
    ],
    "solution": "<strong>ערך הפונקציה:</strong> נציב $x=0$ במשוואה: $y+0-0=0$, ולכן $y(0)=0$.\n\n<strong>גזירה סתומה:</strong> נגזור את שני האגפים לפי $x$ (כאשר $y=y(x)$):\n\\[ y'+3x^2y^3+3x^3y^2y'-3y-3xy'=5x^4. \\]\nנציב $x=0,\\ y=0$:\n\\[ y'(0)+0+0-3\\cdot 0-0=0 \\quad\\Longrightarrow\\quad \\boxed{y'(0)=0}. \\]\n(באופן כללי $y'=\\dfrac{5x^4-3x^2y^3+3y}{1+3x^3y^2-3x}$, והמכנה שווה $1\\neq 0$ בנקודה $(0,0)$.)",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -5982,6 +6241,7 @@ window.BANK = {
    "question": "<p>מצאו את הנקודות על העקומה $y=2x^3-3x^2-12x-5$ שבהן המשיק מקביל לציר $x$.</p>",
    "hints": [],
    "solution": "<p>המשיק מקביל לציר $x$ בדיוק כאשר שיפועו $0$, כלומר $y'=0$:\n\\[ y'=6x^2-6x-12=6(x^2-x-2)=6(x-2)(x+1)=0\\iff x=2\\ \\text{או}\\ x=-1. \\]\nנחשב את ערכי $y$: $y(2)=16-12-24-5=-25$ ו-$y(-1)=-2-3+12-5=2$. הנקודות הן\n\\[ \\boxed{(-1,\\,2)\\quad\\text{ו-}\\quad(2,\\,-25)}. \\]</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6004,6 +6264,7 @@ window.BANK = {
    "question": "<p>מצאו תחומי קמירות ונקודות פיתול עבור הפונקציה $f(x)=e^{-x^2+2x}$</p>",
    "hints": [],
    "solution": "<p>$f$ מוגדרת וגזירה פעמיים על כל $\\R$. לפי כלל השרשרת\n\\[ f'(x)=(2-2x)e^{-x^2+2x}, \\]\n\\[ f''(x)=-2e^{-x^2+2x}+(2-2x)^2e^{-x^2+2x}=(4x^2-8x+2)e^{-x^2+2x}=2(2x^2-4x+1)e^{-x^2+2x}. \\]\nמכיוון ש-$e^{-x^2+2x}&gt;0$, סימן $f''$ הוא סימן $2x^2-4x+1$, שאפסיו\n\\[ x_{1,2}=\\frac{4\\pm\\sqrt{16-8}}{4}=1\\pm\\frac{\\sqrt2}{2}. \\]\nזו פרבולה עם מקדם מוביל חיובי, ולכן:</p>\n<ul>\n<li>\n$f''&gt;0$ ($f$ <strong>קמורה</strong>) עבור $x&lt;1-\\frac{\\sqrt2}{2}$ ועבור $x&gt;1+\\frac{\\sqrt2}{2}$;\n</li>\n<li>\n$f''&lt;0$ ($f$ <strong>קעורה</strong>) עבור $1-\\frac{\\sqrt2}{2}&lt;x&lt;1+\\frac{\\sqrt2}{2}$.\n</li>\n</ul>\n<p>בשתי הנקודות $x=1\\pm\\frac{\\sqrt2}{2}$ הנגזרת השנייה מחליפה סימן והפונקציה רציפה, ולכן אלה נקודות פיתול. מכיוון ש-$-x^2+2x=1-(x-1)^2=1-\\frac12=\\frac12$ בנקודות אלה, נקודות הפיתול הן\n\\[ \\boxed{\\left(1-\\tfrac{\\sqrt2}{2},\\ \\sqrt e\\right),\\quad \\left(1+\\tfrac{\\sqrt2}{2},\\ \\sqrt e\\right)}. \\]</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6027,6 +6288,7 @@ window.BANK = {
    "question": "<p>חשבו את הגבול $\\displaystyle\\lim_{x\\to0}\\frac{e^{2x}-e^x}{x}$</p>",
    "hints": [],
    "solution": "<p>זהו גבול מהצורה $\\frac00$, והמונה והמכנה גזירים, לכן לפי כלל לופיטל\n\\[ \\lim_{x\\to0}\\frac{e^{2x}-e^x}{x}=\\lim_{x\\to0}\\frac{2e^{2x}-e^x}{1}=2-1=\\boxed{1}. \\]\n(לחלופין: $\\frac{e^{2x}-e^x}{x}=2\\cdot\\frac{e^{2x}-1}{2x}-\\frac{e^x-1}{x}\\to 2-1=1$ לפי הגבול היסודי $\\lim_{t\\to0}\\frac{e^t-1}{t}=1$.)</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6051,6 +6313,7 @@ window.BANK = {
     "<p>השתמשו בשארית לגראנז' $R_2(x)=\\frac{f'''(c)}{3!}x^3$ עם $c$ בין $0$ ל-$0.1$, וחסמו את $e^c$.</p>"
    ],
    "solution": "<p>עבור $f(x)=e^x$ כל הנגזרות הן $e^x$ ושוות $1$ ב-$0$, לכן פולינום מקלורן מסדר שני הוא\n\\[ P_2(x)=1+x+\\frac{x^2}{2}, \\qquad e^{0.1}\\approx P_2(0.1)=1+0.1+0.005=\\boxed{1.105}. \\]\n<strong>הערכת השגיאה:</strong> לפי משפט טיילור עם שארית לגראנז', קיימת $c\\in(0,0.1)$ כך ש-\n\\[ R_2(0.1)=e^{0.1}-P_2(0.1)=\\frac{e^{c}}{3!}(0.1)^3. \\]\nמכיוון ש-$e^x$ עולה, $e^c&lt;e^{0.1}&lt;e^1&lt;3$, ולכן\n\\[ 0&lt;R_2(0.1)&lt;\\frac{3}{6}\\cdot 0.001=0.0005. \\]\n(חסם הדוק יותר: $e^{0.1}&lt;1.2$ נותן $R_2&lt;0.0002$.) השגיאה חיובית, כלומר הקירוב חסר. הערך האמיתי $e^{0.1}\\approx 1.10517$, והשגיאה בפועל כ-$0.00017$.</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6073,6 +6336,7 @@ window.BANK = {
    "question": "<p>חשבו את האינטגרל $\\displaystyle\\int x\\cdot\\sqrt{1-x^2}\\,dx$</p>",
    "hints": [],
    "solution": "<p>נציב $t=1-x^2$, $dt=-2x\\,dx$, כלומר $x\\,dx=-\\frac12dt$:\n\\[ \\int x\\sqrt{1-x^2}\\,dx=-\\frac12\\int t^{1/2}\\,dt=-\\frac12\\cdot\\frac{2}{3}t^{3/2}+C=\\boxed{-\\frac13(1-x^2)^{3/2}+C}. \\]\nבדיקה בגזירה: $\\left(-\\frac13(1-x^2)^{3/2}\\right)'=-\\frac13\\cdot\\frac32(1-x^2)^{1/2}\\cdot(-2x)=x\\sqrt{1-x^2}$.</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6095,6 +6359,7 @@ window.BANK = {
    "question": "<p>חשבו את האינטגרל $\\displaystyle\\int_2^4\\frac{dx}{x+4}$</p>",
    "hints": [],
    "solution": "<p>הפונקציה $\\frac{1}{x+4}$ רציפה על $[2,4]$, ופונקציה קדומה שלה היא $\\ln|x+4|$. לפי המשפט היסודי (ניוטון-לייבניץ):\n\\[ \\int_2^4\\frac{dx}{x+4}=\\ln(x+4)\\Big|_2^4=\\ln8-\\ln6=\\boxed{\\ln\\frac43}\\approx 0.2877. \\]</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6119,6 +6384,7 @@ window.BANK = {
     "<p>את האינטגרל לא ניתן לחשב בפונקציות אלמנטריות. פצלו ב-$x=1$ והשוו את $e^{-x^2}$ לפונקציה פשוטה יותר עבור $x\\ge1$.</p>"
    ],
    "solution": "<p>נפצל: $\\int_0^\\infty e^{-x^2}dx=\\int_0^1 e^{-x^2}dx+\\int_1^\\infty e^{-x^2}dx$.\nהאינטגרל הראשון הוא אינטגרל מסוים רגיל של פונקציה רציפה על קטע סגור, ולכן קיים וסופי.</p>\n<p>עבור $x\\ge 1$ מתקיים $x^2\\ge x$, ולכן $0&lt;e^{-x^2}\\le e^{-x}$. האינטגרל\n\\[ \\int_1^\\infty e^{-x}dx=\\lim_{R\\to\\infty}\\left(e^{-1}-e^{-R}\\right)=e^{-1} \\]\nמתכנס. לפי <strong>מבחן ההשוואה</strong> לאינטגרלים לא-אמיתיים של פונקציות אי-שליליות, גם $\\int_1^\\infty e^{-x^2}dx$ מתכנס. לכן $\\boxed{\\int_0^\\infty e^{-x^2}dx\\ \\text{מתכנס}}$\n(וערכו, כידוע, $\\frac{\\sqrt\\pi}{2}$, אך זה לא נדרש).</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6141,6 +6407,7 @@ window.BANK = {
    "question": "<p>חשבו את האינטגרל הלא-אמיתי $\\displaystyle\\int_1^\\infty\\frac{dx}{x^3}$ או הראו שאינו מתכנס.</p>",
    "hints": [],
    "solution": "<p>לפי ההגדרה:\n\\[ \\int_1^\\infty\\frac{dx}{x^3}=\\lim_{R\\to\\infty}\\int_1^R x^{-3}dx=\\lim_{R\\to\\infty}\\left[-\\frac{1}{2x^2}\\right]_1^R=\\lim_{R\\to\\infty}\\left(\\frac12-\\frac{1}{2R^2}\\right)=\\boxed{\\frac12}. \\]\nהאינטגרל מתכנס (בהתאם לכך ש-$\\int_1^\\infty\\frac{dx}{x^p}$ מתכנס עבור $p&gt;1$).</p>",
+   "src": "מועד ג' תשפ\"ג סמסטר א'",
    "exam": "תשפ\"ג סמסטר א מועד ג"
   },
   {
@@ -6167,6 +6434,7 @@ window.BANK = {
     "<p>בסעיף ב' שימו לב ש-$f(-|x|)$ היא פונקציה זוגית, ועבור $x\\ge0$ היא שווה ל-$f(-x)$, כלומר שיקוף של החלק של גרף $f$ שמשמאל לציר $y$.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\n<strong>תחום הגדרה:</strong> $x\\neq -1$, כלומר $D=(-\\infty,-1)\\cup(-1,\\infty)$.\n\n  <strong>חיתוך עם הצירים וסימן:</strong> $e^{2x+1}&gt;0$ ו-$(x+1)^2&gt;0$ בתחום, ולכן $f(x)&gt;0$ לכל $x\\in D$; אין חיתוך עם ציר $x$. חיתוך עם ציר $y$: $f(0)=e$, הנקודה $(0,e)$.\n\n  <strong>אסימפטוטות:</strong>\n  \n<ul>\n<li>\nאנכית: $\\lim_{x\\to-1^\\pm}f(x)=\\frac{e^{-1}}{0^+}=+\\infty$, ולכן $x=-1$ אסימפטוטה אנכית (משני הצדדים הפונקציה שואפת ל-$+\\infty$).\n</li>\n<li>\nב-$-\\infty$: $e^{2x+1}\\to 0$ ו-$(x+1)^2\\to\\infty$, לכן $f(x)\\to0$: $y=0$ אסימפטוטה אופקית משמאל.\n</li>\n<li>\nב-$+\\infty$: לפי לופיטל (פעמיים) $\\lim_{x\\to\\infty}\\frac{e^{2x+1}}{(x+1)^2}=\\lim\\frac{4e^{2x+1}}{2}=\\infty$, ובאופן דומה $\\frac{f(x)}{x}\\to\\infty$, לכן אין אסימפטוטה אופקית או משופעת מימין.\n</li>\n</ul>\n<strong>מונוטוניות וקיצון:</strong> לפי כלל המנה,\n  \\[ f'(x)=\\frac{2e^{2x+1}(x+1)^2-e^{2x+1}\\cdot2(x+1)}{(x+1)^4}=\\frac{2e^{2x+1}\\,x}{(x+1)^3}. \\]\n  $f'(x)=0\\iff x=0$. סימן $f'$ הוא סימן $\\frac{x}{(x+1)^3}$:\n<ul>\n<li>\n$x&lt;-1$: מונה שלילי, מכנה שלילי $\\Rightarrow f'&gt;0$, $f$ <strong>עולה</strong>.\n</li>\n<li>\n$-1&lt;x&lt;0$: מונה שלילי, מכנה חיובי $\\Rightarrow f'&lt;0$, $f$ <strong>יורדת</strong>.\n</li>\n<li>\n$x&gt;0$: $f'&gt;0$, $f$ <strong>עולה</strong>.\n</li>\n</ul>\n<p>לכן ב-$x=0$ יש <strong>מינימום מקומי</strong> $(0,e)$. אין מקסימום מקומי (ב-$x=-1$ הפונקציה אינה מוגדרת).</p>\n<p><strong>קמירות:</strong> גזירה נוספת נותנת\n  \\[ f''(x)=\\frac{2e^{2x+1}(2x^2+1)}{(x+1)^4}. \\]\n  (נגזור $f'=2e^{2x+1}\\cdot x(x+1)^{-3}$: $f''=2e^{2x+1}\\left[2x(x+1)^{-3}+(x+1)^{-3}-3x(x+1)^{-4}\\right]=\\frac{2e^{2x+1}\\left[(2x+1)(x+1)-3x\\right]}{(x+1)^4}$ ו-$(2x+1)(x+1)-3x=2x^2+1$.)\n  מכיוון ש-$2x^2+1&gt;0$, מתקיים $f''&gt;0$ בכל התחום: $f$ <strong>קמורה</strong> על $(-\\infty,-1)$ ועל $(-1,\\infty)$, ו<strong>אין נקודות פיתול</strong>.</p>\n<p><strong>סקיצה (תיאור במילים):</strong> משמאל הגרף יוצא מעל האסימפטוטה $y=0$ (קרוב ל-$0$ ב-$-\\infty$), עולה בצורה קמורה ושואף ל-$+\\infty$ כאשר $x\\to-1^-$. מימין לאסימפטוטה $x=-1$ הגרף יורד מ-$+\\infty$ עד המינימום $(0,e)$ ואז עולה במהירות (אקספוננציאלית) ל-$+\\infty$. הגרף כולו מעל ציר $x$.</p>\n</li>\n<li>\n<p>נסמן $g(x)=f(-|x|)$. מתקיים $g(-x)=g(x)$, כלומר $g$ <strong>זוגית</strong> – הגרף סימטרי ביחס לציר $y$. עבור $x\\ge0$: $g(x)=f(-x)$, כלומר הגרף של $g$ עבור $x\\ge0$ הוא שיקוף ביחס לציר $y$ של גרף $f$ עבור $x\\le 0$, והגרף עבור $x&lt;0$ הוא פשוט גרף $f$ עבור $x&lt;0$.</p>\n<p>בפרט: $g$ מוגדרת עבור $x\\neq\\pm1$, $g(0)=e$, ויש לה אסימפטוטות אנכיות $x=\\pm1$ (שם $g\\to+\\infty$) ואסימפטוטה אופקית $y=0$ ב-$\\pm\\infty$. על $(-1,0)$ $g=f$ יורדת, ועל $(0,1)$ $g$ עולה; ב-$x=0$ יש מינימום מקומי $(0,e)$ (ומכיוון ש-$f'(0)=0$ אין שם \"שפיץ\": הנגזרות החד-צדדיות של $g$ שתיהן $0$). על $(-\\infty,-1)$ $g$ עולה מ-$0$ ל-$+\\infty$, ועל $(1,\\infty)$ היא יורדת מ-$+\\infty$ ל-$0$. $g$ קמורה בכל אחד מהקטעים.</p>\n</li>\n</ol>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6191,6 +6459,7 @@ window.BANK = {
     "<p>פרקו לשברים חלקיים: $x^3-x=x(x-1)(x+1)$.</p>"
    ],
    "solution": "<p>$x^3-x=x(x-1)(x+1)$, ודרגת המונה קטנה מדרגת המכנה. נפרק:\n\\[ \\frac{x^2+1}{x(x-1)(x+1)}=\\frac{A}{x}+\\frac{B}{x-1}+\\frac{C}{x+1}. \\]\nבשיטת הכיסוי: $A=\\frac{0+1}{(0-1)(0+1)}=-1$, $B=\\frac{1+1}{1\\cdot 2}=1$, $C=\\frac{1+1}{(-1)(-2)}=1$. לכן\n\\[ \\int\\frac{x^2+1}{x^3-x}dx=-\\ln|x|+\\ln|x-1|+\\ln|x+1|+C=\\boxed{\\ln\\left|\\frac{x^2-1}{x}\\right|+C}. \\]</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6215,6 +6484,7 @@ window.BANK = {
     "<p>השתמשו בנוסחאות הורדת חזקה $\\sin^2\\alpha=\\frac{1-\\cos2\\alpha}{2}$, $\\cos^2\\alpha=\\frac{1+\\cos2\\alpha}{2}$.</p>"
    ],
    "solution": "<p>לפי נוסחאות הורדת חזקה:\n\\[ \\sin^2 4x\\cos^2x=\\frac{1-\\cos8x}{2}\\cdot\\frac{1+\\cos2x}{2}=\\frac14\\left(1+\\cos2x-\\cos8x-\\cos8x\\cos2x\\right). \\]\nלפי נוסחת מכפלה-לסכום $\\cos8x\\cos2x=\\frac12(\\cos10x+\\cos6x)$, ולכן\n\\[ \\sin^2 4x\\cos^2x=\\frac14+\\frac14\\cos2x-\\frac14\\cos8x-\\frac18\\cos10x-\\frac18\\cos6x. \\]\nנבצע אינטגרציה איבר-איבר:\n\\[ \\boxed{\\int\\sin^2 4x\\cos^2x\\,dx=\\frac{x}{4}+\\frac{\\sin2x}{8}-\\frac{\\sin8x}{32}-\\frac{\\sin6x}{48}-\\frac{\\sin10x}{80}+C}. \\]</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6239,6 +6509,7 @@ window.BANK = {
     "<p>הציבו $t=x+2$ ושימו לב לזוגיות/אי-זוגיות.</p>"
    ],
    "solution": "<p>נציב $t=x+2$, $dt=dx$; הגבולות: $x=-3\\mapsto t=-1$, $x=-1\\mapsto t=1$:\n\\[ \\int_{-3}^{-1}\\operatorname{arctg}(x+2)\\,dx=\\int_{-1}^{1}\\arctan t\\,dt. \\]\n$\\arctan$ פונקציה אי-זוגית ורציפה, והקטע סימטרי סביב $0$, לכן האינטגרל $\\boxed{=0}$.</p>\n<p>(ישירות: באינטגרציה בחלקים $\\int\\arctan t\\,dt=t\\arctan t-\\frac12\\ln(1+t^2)+C$, ובין $-1$ ל-$1$: $\\left(\\frac\\pi4-\\frac12\\ln2\\right)-\\left(\\frac\\pi4-\\frac12\\ln2\\right)=0$.)</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6263,6 +6534,7 @@ window.BANK = {
     "<p>המונה הוא בדיוק הנגזרת של מה שמתחת לשורש.</p>"
    ],
    "solution": "<p>על $[2,5]$ מתקיים $x^2-x&gt;0$, כך שהאינטגרנד רציף. נציב $u=x^2-x$, $du=(2x-1)dx$; הגבולות $u(2)=2$, $u(5)=20$:\n\\[ \\int_2^5\\frac{2x-1}{\\sqrt{x^2-x}}dx=\\int_2^{20}u^{-1/2}du=2\\sqrt u\\Big|_2^{20}=2\\sqrt{20}-2\\sqrt2=\\boxed{4\\sqrt5-2\\sqrt2}\\approx 6.116. \\]</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6287,6 +6559,7 @@ window.BANK = {
     "<p>מצאו היכן $e^x=3$ ופצלו את האינטגרל בנקודה זו.</p>"
    ],
    "solution": "<p>$e^x\\le 3\\iff x\\le\\ln3$ (כי $e^x$ עולה). לכן על $[0,4]$:\n\\[ \\min(e^x,3)=\\begin{cases} e^x, &amp; 0\\le x\\le\\ln 3\\\\ 3, &amp; \\ln3\\le x\\le 4,\\end{cases} \\]\nושימו לב ש-$\\ln3\\approx1.0986\\in[0,4]$. הפונקציה חיובית, ולכן השטח הוא\n\\[ S=\\int_0^{\\ln3}e^x\\,dx+\\int_{\\ln3}^{4}3\\,dx=\\left(e^{\\ln3}-e^0\\right)+3(4-\\ln3)=2+12-3\\ln3=\\boxed{14-3\\ln3}\\approx 10.70. \\]</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6311,6 +6584,7 @@ window.BANK = {
     "<p>חשבו את $f''$ והפרידו למקרים $b&gt;0$, $b=0$, $b&lt;0$. זכרו שנקודת פיתול חייבת להיות בתחום ההגדרה.</p>"
    ],
    "solution": "<p>נגזור: $f'(x)=-\\frac{2x}{(x^2+b)^2}$, ו-\n\\[ f''(x)=\\frac{-2(x^2+b)^2+2x\\cdot2(x^2+b)\\cdot2x}{(x^2+b)^4}=\\frac{6x^2-2b}{(x^2+b)^3}. \\]</p>\n<ul>\n<li>\n$b&gt;0$: $f$ מוגדרת על כל $\\R$, המכנה חיובי, והמונה $6x^2-2b$ מחליף סימן ב-$x=\\pm\\sqrt{b/3}$. לכן יש שתי נקודות פיתול.\n</li>\n<li>\n$b=0$: $f=\\frac1{x^2}$, $x\\neq0$, ו-$f''=\\frac{6}{x^4}&gt;0$: אין נקודות פיתול.\n</li>\n<li>\n$b&lt;0$: $f$ מוגדרת עבור $x\\neq\\pm\\sqrt{-b}$. המונה $6x^2-2b=6x^2+2|b|&gt;0$ תמיד, ולכן $f''$ לא מתאפסת. סימן $f''$ משתנה רק במעבר דרך $x=\\pm\\sqrt{-b}$, שאינן בתחום ההגדרה (אסימפטוטות אנכיות), ולכן אינן נקודות פיתול. אין נקודות פיתול.\n</li>\n</ul>\n<p><strong>תשובה:</strong> לגרף אין נקודות פיתול בדיוק עבור $\\boxed{b\\le 0}$.</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6336,6 +6610,7 @@ window.BANK = {
     "<p>בגבול (2) רשמו את הביטוי בצורה $e^{g(x)}$ וחשבו את הגבול של המעריך.</p>"
    ],
    "solution": "<strong>(1)</strong> גבול מהצורה $\\frac00$; לפי כלל לופיטל:\n\\[ \\lim_{x\\to0}\\frac{\\ln(1+2x)}{\\sin2x-\\sin6x}=\\lim_{x\\to0}\\frac{\\frac{2}{1+2x}}{2\\cos2x-6\\cos6x}=\\frac{2}{2-6}=\\boxed{-\\frac12}. \\]\n(לחלופין, בעזרת $\\ln(1+2x)\\sim2x$, $\\sin2x\\sim2x$, $\\sin6x\\sim6x$: $\\frac{2x}{2x-6x}=-\\frac12$.)\n\n<strong>(2)</strong> עבור $x$ קרוב ל-$0$ ($x&gt;-\\frac12$, $x\\neq0$) הבסיס חיובי, ו-\n\\[ \\left(\\sqrt{1+2x}\\right)^{-1/x}=e^{-\\frac{\\ln(1+2x)}{2x}}. \\]\nלפי הגבול היסודי (או לופיטל) $\\lim_{x\\to0}\\frac{\\ln(1+2x)}{2x}=1$. מרציפות פונקציית האקספוננט,\n\\[ \\lim_{x\\to0}\\left(\\sqrt{1+2x}\\right)^{\\frac{1}{-x}}=e^{-1}=\\boxed{\\frac1e}. \\]",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6360,6 +6635,7 @@ window.BANK = {
     "<p>השוו את $a$ לערך המינימלי של $x^2+x$. אם הישר $y=a$ חותך את הפרבולה, מה קורה לנגזרות החד-צדדיות בנקודת החיתוך?</p>"
    ],
    "solution": "<p>הפרבולה $p(x)=x^2+x=\\left(x+\\frac12\\right)^2-\\frac14$ מקבלת ערך מינימלי $-\\frac14$ ב-$x=-\\frac12$.</p>\n<ul>\n<li>\nאם $a\\le-\\frac14$: $p(x)\\ge-\\frac14\\ge a$ לכל $x$, ולכן $f(x)\\equiv a$ קבועה, וגזירה בכל $\\R$.\n</li>\n<li>\nאם $a&gt;-\\frac14$: למשוואה $x^2+x=a$ שני שורשים $x_1&lt;x_2$, $x_{1,2}=\\frac{-1\\mp\\sqrt{1+4a}}{2}$. אז $f(x)=x^2+x$ על $[x_1,x_2]$ ו-$f(x)=a$ מחוצה לו. בנקודה $x_1$ (שבה $f$ רציפה) הנגזרת השמאלית היא $0$ (פונקציה קבועה), והימנית היא $p'(x_1)=2x_1+1=-\\sqrt{1+4a}\\neq0$. הנגזרות החד-צדדיות שונות ולכן $f$ אינה גזירה ב-$x_1$ (ובאופן דומה ב-$x_2$, שם הנגזרת השמאלית $\\sqrt{1+4a}$ והימנית $0$).\n</li>\n</ul>\n<p><strong>תשובה:</strong> $f$ גזירה לכל $x$ ממשי אם ורק אם $\\boxed{a\\le-\\frac14}$.</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6385,6 +6661,7 @@ window.BANK = {
     "<p>מצאו תחילה את ערך הפרמטר $t_0$ המתאים לנקודה $M_0$ (שתי המשוואות צריכות להתקיים בו-זמנית), ואז השתמשו ב-$\\frac{dy}{dx}=\\frac{y'(t)}{x'(t)}$.</p>"
    ],
    "solution": "<strong>מציאת הפרמטר:</strong> מ-$y=-2$: $t^3-3t+2=0\\iff(t-1)^2(t+2)=0$, כלומר $t=1$ או $t=-2$.\nמ-$x=1$: $3t^2+et-3=e$. עבור $t=1$: $3+e-3=e$ ✓. עבור $t=-2$: $12-2e-3=9-2e\\neq e$ (כי $e\\neq3$). לכן $t_0=1$.\n\n<strong>הנגזרת:</strong> לפי נוסחת הנגזרת של פונקציה הנתונה פרמטרית,\n\\[ x'(t)=\\frac{6t+e}{3t^2+et-3},\\qquad y'(t)=3t^2-3. \\]\nב-$t_0=1$: $x'(1)=\\frac{6+e}{e}\\neq 0$ ו-$y'(1)=0$, ולכן\n\\[ \\frac{dy}{dx}\\Big|_{M_0}=\\frac{y'(1)}{x'(1)}=0. \\]\n<strong>משוואת המשיק:</strong> $y-(-2)=0\\cdot(x-1)$, כלומר $\\boxed{y=-2}$ (משיק אופקי).",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6407,6 +6684,7 @@ window.BANK = {
    "question": "<p>(5 נק') תנו הגדרה של פונקציה קדומה לפונקציה $f(x)$. יש להוסיף דוגמה.</p>",
    "hints": [],
    "solution": "<strong>הגדרה:</strong> תהי $f$ מוגדרת על קטע $I$. פונקציה $F$ נקראת <strong>פונקציה קדומה</strong> של $f$ על $I$ אם $F$ גזירה על $I$ ומתקיים $F'(x)=f(x)$ לכל $x\\in I$.\n(אם $F$ קדומה של $f$ על קטע, אז כל הקדומות הן מהצורה $F+C$, $C$ קבוע.)\n\n<strong>דוגמה:</strong> $F(x)=\\frac{x^3}{3}$ היא פונקציה קדומה של $f(x)=x^2$ על $\\R$, כי $\\left(\\frac{x^3}{3}\\right)'=x^2$; גם $\\frac{x^3}{3}+5$ קדומה שלה. דוגמה נוספת: $-\\cos x$ קדומה של $\\sin x$.",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6430,6 +6708,7 @@ window.BANK = {
    "question": "<p>(20 נק') רשמו את פולינום מקלורן מסדר 2 לפונקציה $y=f(x)$ המוגדרת בצורה סתומה: $x^2+x+e^x+2y=0$.</p>",
    "hints": [],
    "solution": "<p>נמצא $y(0)$, $y'(0)$, $y''(0)$ בגזירה סתומה.</p>\n<ul>\n<li>\n$x=0$: $0+0+1+2y(0)=0\\Rightarrow y(0)=-\\frac12$.\n</li>\n<li>\nגזירה: $2x+1+e^x+2y'=0\\Rightarrow y'=-\\frac{2x+1+e^x}{2}$, ולכן $y'(0)=-\\frac{2}{2}=-1$.\n</li>\n<li>\nגזירה נוספת: $2+e^x+2y''=0\\Rightarrow y''=-\\frac{2+e^x}{2}$, ולכן $y''(0)=-\\frac32$.\n</li>\n</ul>\n<p>פולינום מקלורן מסדר 2:\n\\[ P_2(x)=y(0)+y'(0)x+\\frac{y''(0)}{2}x^2=\\boxed{-\\frac12-x-\\frac34x^2}. \\]\n(בדיקה: כאן אפשר גם לבודד $y=-\\frac12(x^2+x+e^x)$ ולהציב $e^x=1+x+\\frac{x^2}{2}+\\dots$, ומתקבל אותו פולינום.)</p>",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6454,6 +6733,7 @@ window.BANK = {
     "<p>בדקו מה קורה עבור $x&lt;0$: $e^x$ קטן מאוד, ו-$\\sin x$ מגיע ל-$1$. נסו את משפט ערך הביניים על קטע מתאים.</p>"
    ],
    "solution": "<strong>לא</strong> – למשוואה יש פתרונות ממשיים. נגדיר $g(x)=e^x-\\sin x$, רציפה על $\\R$.\n\\[ g(-\\pi)=e^{-\\pi}-0&gt;0,\\qquad g\\left(-\\tfrac{3\\pi}{2}\\right)=e^{-3\\pi/2}-\\sin\\left(-\\tfrac{3\\pi}{2}\\right)=e^{-3\\pi/2}-1&lt;0, \\]\nכי $e^{-3\\pi/2}&lt;1$. לפי <strong>משפט ערך הביניים</strong> קיים $c\\in\\left(-\\frac{3\\pi}2,-\\pi\\right)$ עם $g(c)=0$, כלומר $e^c=\\sin c$ (מספרית $c\\approx-3.183$). באותו אופן, בכל קטע $\\left(-\\frac{3\\pi}{2}-2\\pi k,\\,-\\pi-2\\pi k\\right)$ יש פתרון, כך שיש אינסוף פתרונות (כולם שליליים: עבור $x\\ge0$, $e^x\\ge1\\ge\\sin x$ עם שוויון בלתי אפשרי בו-זמנית, ולכן אין פתרונות אי-שליליים).",
+   "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },
   {
@@ -6478,6 +6758,7 @@ window.BANK = {
     "<p>זהו גבול מהצורה $1^\\infty$. כתבו את הבסיס בצורה $1+\\frac{1}{x^2+x+1}$ והשתמשו בגבול $\\lim_{t\\to\\infty}\\left(1+\\frac1t\\right)^t=e$.</p>"
    ],
    "solution": "<p>כאשר $x\\to\\infty$ הבסיס שואף ל-$1$ והמעריך שואף ל-$\\infty$, כלומר זהו ביטוי לא מוגדר מהצורה $1^\\infty$.\nנכתוב את הבסיס בצורה\n\\[ \\frac{x^2+x+2}{x^2+x+1} = 1+\\frac{1}{x^2+x+1}. \\]\nנסמן $t=x^2+x+1$; כאשר $x\\to\\infty$ גם $t\\to\\infty$. אז\n\\[ \\left(1+\\frac{1}{x^2+x+1}\\right)^{2x^2+4} = \\left[\\left(1+\\frac1t\\right)^{t}\\right]^{\\frac{2x^2+4}{x^2+x+1}}. \\]\nהביטוי שבסוגריים המרובעים שואף ל-$e$ (הגבול המפורסם $\\lim_{t\\to\\infty}(1+\\frac1t)^t=e$), והמעריך מקיים\n\\[ \\lim_{x\\to\\infty}\\frac{2x^2+4}{x^2+x+1} = \\lim_{x\\to\\infty}\\frac{2+\\frac{4}{x^2}}{1+\\frac1x+\\frac1{x^2}} = 2. \\]\nמרציפות הפונקציה $(u,v)\\mapsto u^v=e^{v\\ln u}$ עבור $u&gt;0$ (או: לפי $e^{v\\ln u}$ ורציפות $\\ln$ ו-$\\exp$) נקבל\n\\[ \\lim_{x\\to\\infty}\\left(\\frac{x^2+x+2}{x^2+x+1}\\right)^{2x^2+4} = e^{2}. \\]</p>\n<p><strong>דרך נוספת:</strong> נכתוב את הביטוי כ-$e^{(2x^2+4)\\ln\\left(1+\\frac{1}{x^2+x+1}\\right)}$. מכיוון ש-$\\ln(1+s)\\sim s$ כאשר $s\\to0$,\n\\[ (2x^2+4)\\ln\\left(1+\\frac{1}{x^2+x+1}\\right) \\sim \\frac{2x^2+4}{x^2+x+1}\\xrightarrow[x\\to\\infty]{}2, \\]\nושוב מרציפות האקספוננט מתקבל הגבול $\\boxed{e^2}$.</p>",
+   "src": "מועד א' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד א"
   },
   {
@@ -6504,6 +6785,7 @@ window.BANK = {
     "<p>בגבול ב-$x=4$ פרקו את המונה $x^2-3x-4=(x-4)(x+1)$ וכתבו $x-4=(\\sqrt x-2)(\\sqrt x+2)$.</p>"
    ],
    "solution": "<strong>רציפות בתוך כל תחום.</strong>\n\n<ul>\n<li>\nבתחום $x&lt;0$: $f(x)=\\frac{\\sin 8x}{x}$ היא מנה של פונקציות רציפות שהמכנה שלה אינו מתאפס, ולכן רציפה.\n</li>\n<li>\nבתחום $0&lt;x&lt;4$: $f(x)=ax+b$ פולינום, רציף.\n</li>\n<li>\nבתחום $x&gt;4$: $f(x)=\\frac{x^2-3x-4}{2-\\sqrt x}$ מנה של פונקציות רציפות, והמכנה מתאפס רק ב-$x=4$ שאינו בתחום. לכן רציפה.\n</li>\n</ul>\n<p>לכן $f$ רציפה ב-$\\R$ אם ורק אם היא רציפה בנקודות $x=0$ ו-$x=4$.</p>\n<p><strong>הנקודה $x=0$.</strong> $f(0)=b$, ומימין $\\lim_{x\\to0^+}f(x)=\\lim_{x\\to0^+}(ax+b)=b$. משמאל, לפי הגבול היסודי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$:\n\\[ \\lim_{x\\to0^-}\\frac{\\sin(8x)}{x} = \\lim_{x\\to0^-}8\\cdot\\frac{\\sin(8x)}{8x} = 8. \\]\nלכן רציפות ב-$0$ מתקיימת אם ורק אם $b=8$.</p>\n<p><strong>הנקודה $x=4$.</strong> $f(4)=4a+b$, ומשמאל $\\lim_{x\\to4^-}(ax+b)=4a+b$. מימין, עבור $x&gt;4$:\n\\[ \\frac{x^2-3x-4}{2-\\sqrt x} = \\frac{(x-4)(x+1)}{2-\\sqrt x} = \\frac{(\\sqrt x-2)(\\sqrt x+2)(x+1)}{-(\\sqrt x-2)} = -(\\sqrt x+2)(x+1), \\]\nולכן\n\\[ \\lim_{x\\to4^+}f(x) = -(2+2)(4+1) = -20. \\]\nרציפות ב-$4$ מתקיימת אם ורק אם $4a+b=-20$.</p>\n<p><strong>מסקנה.</strong> עם $b=8$ נקבל $4a=-28$, כלומר\n\\[ \\boxed{a=-7,\\quad b=8}, \\]\nורק עבור ערכים אלה $f$ רציפה בכל $\\R$.</p>",
+   "src": "מועד א' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד א"
   },
   {
@@ -6527,6 +6809,7 @@ window.BANK = {
    "question": "<p>(14 נק') חשבו תחומי עלייה וירידה וקיצון מוחלט של הפונקציה\n\\[ f(x)=\\sqrt{2x-x^2} \\]\nבתחום הגדרתה.</p>",
    "hints": [],
    "solution": "<strong>תחום הגדרה.</strong> יש לדרוש $2x-x^2=x(2-x)\\ge0$, כלומר $0\\le x\\le 2$. תחום ההגדרה הוא הקטע הסגור $[0,2]$.\n\n<strong>נגזרת.</strong> בקטע הפתוח $(0,2)$ הביטוי שבשורש חיובי, ולכן לפי כלל השרשרת\n\\[ f'(x)=\\frac{2-2x}{2\\sqrt{2x-x^2}}=\\frac{1-x}{\\sqrt{2x-x^2}},\\qquad 0&lt;x&lt;2. \\]\n(בנקודות $x=0,2$ הפונקציה אינה גזירה – הנגזרת החד-צדדית אינסופית – אבל הן נקודות קצה.)\n\n<strong>סימן הנגזרת.</strong> המכנה חיובי, ולכן סימן $f'$ הוא סימן $1-x$:\n\n<ul>\n<li>\nעבור $0&lt;x&lt;1$: $f'(x)&gt;0$, ולכן $f$ עולה ממש בקטע $[0,1]$.\n</li>\n<li>\nעבור $1&lt;x&lt;2$: $f'(x)&lt;0$, ולכן $f$ יורדת ממש בקטע $[1,2]$.\n</li>\n</ul>\n<p>(המעבר לקטעים הסגורים מוצדק כי $f$ רציפה בהם – מסקנה ממשפט לגרנז'.)</p>\n<p><strong>קיצון מוחלט.</strong> $f$ רציפה בקטע הסגור $[0,2]$, ולכן לפי משפט ויירשטראס היא מקבלת בו מקסימום ומינימום. הנקודות החשודות הן נקודת הקריטית $x=1$ ונקודות הקצה:\n\\[ f(0)=0,\\qquad f(1)=\\sqrt{2-1}=1,\\qquad f(2)=0. \\]\nלכן\n\\[ \\boxed{\\max_{[0,2]}f=f(1)=1,\\qquad \\min_{[0,2]}f=f(0)=f(2)=0.} \\]\n(אכן $f\\ge0$ תמיד כשורש, כך שהמינימום $0$ ברור גם ישירות. בנוסף, $y=\\sqrt{2x-x^2}$ שקולה ל-$(x-1)^2+y^2=1,\\ y\\ge0$ – חצי המעגל העליון שמרכזו $(1,0)$ ורדיוסו $1$, מה שמאשר את התוצאות.)</p>",
+   "src": "מועד א' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד א"
   },
   {
@@ -6552,6 +6835,7 @@ window.BANK = {
     "<p>לחסם השגיאה השתמשו בשארית לגרנז' של פולינום טיילור מסדר 1: $R_1(x)=\\frac{f''(c)}{2}(x-x_0)^2$.</p>"
    ],
    "solution": "<p>נבחר $f(x)=\\sqrt[3]{x}=x^{1/3}$ ו-$x_0=27$ (נקודה קרובה ל-$30$ שבה $f(27)=3$).</p>\n<p><strong>הקירוב הלינארי.</strong> $f'(x)=\\frac13x^{-2/3}$, ולכן $f'(27)=\\frac{1}{3\\cdot 9}=\\frac1{27}$. הקירוב הלינארי (פולינום טיילור מסדר 1):\n\\[ f(x)\\approx f(27)+f'(27)(x-27)=3+\\frac{x-27}{27}, \\]\nובפרט\n\\[ \\sqrt[3]{30}\\approx 3+\\frac{3}{27}=3+\\frac19=\\frac{28}{9}\\approx 3.1111. \\]</p>\n<p><strong>חסם לשגיאה.</strong> לפי משפט טיילור עם שארית לגרנז', קיימת $c\\in(27,30)$ כך ש-\n\\[ \\sqrt[3]{30}-\\frac{28}{9} = R_1(30) = \\frac{f''(c)}{2!}(30-27)^2. \\]\n$f''(x)=-\\frac29x^{-5/3}$, ולכן\n\\[ |R_1(30)| = \\frac{2}{9}c^{-5/3}\\cdot\\frac{9}{2} = \\frac{1}{c^{5/3}} &lt; \\frac{1}{27^{5/3}}=\\frac{1}{3^5}=\\frac1{243}\\approx 0.0041, \\]\nכי $c&gt;27$ והפונקציה $c^{-5/3}$ יורדת.</p>\n<p>בנוסף, $f''&lt;0$ ולכן $R_1&lt;0$: הקירוב הוא הערכת-יתר. לסיכום\n\\[ \\boxed{\\sqrt[3]{30}\\approx\\frac{28}{9}\\approx3.111,\\qquad 0&lt;\\frac{28}{9}-\\sqrt[3]{30}&lt;\\frac{1}{243}\\approx0.0041.} \\]\n(לבדיקה: $\\sqrt[3]{30}\\approx3.1072$, והשגיאה בפועל כ-$0.0039$.)</p>",
+   "src": "מועד א' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד א"
   },
   {
@@ -6577,6 +6861,7 @@ window.BANK = {
     "<p>באינטגרל של $\\frac{Bx+C}{x^2+2x+5}$ פצלו למונה שהוא נגזרת המכנה ועוד קבוע, והשלימו לריבוע: $x^2+2x+5=(x+1)^2+4$.</p>"
    ],
    "solution": "<strong>פירוק המכנה.</strong> $x^3+2x^2+5x=x(x^2+2x+5)$, והדיסקרימיננטה של $x^2+2x+5$ היא $4-20&lt;0$, כך שהגורם הריבועי אי-פריק. מעלת המונה קטנה ממעלת המכנה, לכן ניתן לפרק ישירות לשברים חלקיים:\n\\[ \\frac{4x^2+9x+10}{x(x^2+2x+5)}=\\frac{A}{x}+\\frac{Bx+C}{x^2+2x+5}. \\]\nכפל במכנה: $4x^2+9x+10=A(x^2+2x+5)+(Bx+C)x$.\n\n<ul>\n<li>\nהצבת $x=0$: $10=5A$, כלומר $A=2$.\n</li>\n<li>\nהשוואת מקדמי $x^2$: $4=A+B$, כלומר $B=2$.\n</li>\n<li>\nהשוואת מקדמי $x$: $9=2A+C$, כלומר $C=5$.\n</li>\n</ul>\n<p>לכן\n\\[ f(x)=\\frac{2}{x}+\\frac{2x+5}{x^2+2x+5}. \\]</p>\n<p><strong>אינטגרציה.</strong> $\\int\\frac{2}{x}\\,dx=2\\ln|x|$. בשבר השני נפצל $2x+5=(2x+2)+3$, כאשר $2x+2$ היא נגזרת המכנה:\n\\[ \\int\\frac{2x+5}{x^2+2x+5}\\,dx=\\int\\frac{2x+2}{x^2+2x+5}\\,dx+3\\int\\frac{dx}{(x+1)^2+4}. \\]\nהאינטגרל הראשון שווה $\\ln(x^2+2x+5)$ (הצבה $u=x^2+2x+5$; ללא ערך מוחלט כי הביטוי חיובי). בשני נציב $x+1=2t$:\n\\[ 3\\int\\frac{dx}{(x+1)^2+4}=\\frac32\\arctan\\frac{x+1}{2}. \\]</p>\n<p><strong>תשובה.</strong>\n\\[ \\boxed{\\int f(x)\\,dx = 2\\ln|x|+\\ln(x^2+2x+5)+\\frac32\\arctan\\frac{x+1}{2}+C} \\]\n(בכל אחד מהקטעים $x&gt;0$ ו-$x&lt;0$ בנפרד; ניתן לבדוק בגזירה שמתקבלת $f$.)</p>",
+   "src": "מועד א' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד א"
   },
   {
@@ -6601,6 +6886,7 @@ window.BANK = {
     "<p>השתמשו בזהות $\\sin^2x=\\frac{1-\\cos 2x}{2}$ ואחר כך באינטגרציה בחלקים עבור $\\int x\\cos2x\\,dx$.</p>"
    ],
    "solution": "<p>לפי הזהות $\\sin^2x=\\frac{1-\\cos2x}{2}$:\n\\[ \\int_0^{\\pi}x\\sin^2x\\,dx=\\frac12\\int_0^{\\pi}x\\,dx-\\frac12\\int_0^{\\pi}x\\cos2x\\,dx. \\]\n<strong>האינטגרל הראשון:</strong> $\\frac12\\int_0^\\pi x\\,dx=\\frac12\\cdot\\frac{\\pi^2}{2}=\\frac{\\pi^2}{4}$.</p>\n<p><strong>האינטגרל השני</strong> – אינטגרציה בחלקים עם $u=x$, $dv=\\cos2x\\,dx$, כלומר $du=dx$, $v=\\frac12\\sin2x$:\n\\[ \\int_0^{\\pi}x\\cos2x\\,dx=\\left[\\frac{x\\sin2x}{2}\\right]_0^{\\pi}-\\frac12\\int_0^{\\pi}\\sin2x\\,dx = 0+\\left[\\frac{\\cos2x}{4}\\right]_0^{\\pi}=\\frac14-\\frac14=0. \\]\nלכן\n\\[ \\boxed{\\int_0^{\\pi}x\\sin^2x\\,dx=\\frac{\\pi^2}{4}} \\]</p>\n<p><strong>בדיקה (דרך נוספת):</strong> בהצבה $x=\\pi-t$ מתקבל $I=\\int_0^\\pi(\\pi-t)\\sin^2t\\,dt=\\pi\\int_0^\\pi\\sin^2t\\,dt-I$, ולכן $I=\\frac\\pi2\\cdot\\frac\\pi2=\\frac{\\pi^2}{4}$.</p>",
+   "src": "מועד א' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד א"
   },
   {
@@ -6626,6 +6912,7 @@ window.BANK = {
     "<p>נפח גוף סיבוב סביב ציר $x$ הוא $V=\\pi\\int_a^b f^2(x)\\,dx$. כאן $f^2(x)=\\sin x\\cos^4x$, ומתאימה ההצבה $u=\\cos x$.</p>"
    ],
    "solution": "<p>בקטע $[0,\\pi]$ מתקיים $\\sin x\\ge0$, כך ש-$f$ מוגדרת ורציפה בכל הקטע. נוסחת נפח גוף הסיבוב סביב ציר ה-$x$:\n\\[ V=\\pi\\int_0^{\\pi}f^2(x)\\,dx=\\pi\\int_0^{\\pi}\\sin x\\cos^4x\\,dx. \\]\nנציב $u=\\cos x$, $du=-\\sin x\\,dx$; כאשר $x=0$: $u=1$, וכאשר $x=\\pi$: $u=-1$. לכן\n\\[ \\int_0^{\\pi}\\sin x\\cos^4x\\,dx=\\int_{1}^{-1}u^4\\,(-du)=\\int_{-1}^{1}u^4\\,du=\\left[\\frac{u^5}{5}\\right]_{-1}^{1}=\\frac25. \\]\nומכאן\n\\[ \\boxed{V=\\frac{2\\pi}{5}} \\]</p>",
+   "src": "מועד א' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד א"
   },
   {
@@ -6650,7 +6937,8 @@ window.BANK = {
    "hints": [
     "<p>פצלו את הביטוי למכפלה של $\\frac{\\sin(x-1)}{x-1}$ ושל $\\frac{x^2+\\ln x-1}{e^x-e}$, וחשבו כל גבול בנפרד.</p>"
    ],
-   "solution": "<p>כאשר $x\\to1$ המונה והמכנה שואפים שניהם ל-$0$. נכתוב את הביטוי כמכפלה (עבור $x$ קרוב ל-$1$, $x\\neq1$, $x&gt;0$):\n\\[ \\frac{(x^2+\\ln x-1)\\sin(x-1)}{(x-1)(e^x-e)}=\\frac{\\sin(x-1)}{x-1}\\cdot\\frac{x^2+\\ln x-1}{e^x-e}. \\]\n<strong>הגורם הראשון:</strong> נציב $t=x-1\\to0$, ומהגבול היסודי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$ נקבל $\\lim_{x\\to1}\\frac{\\sin(x-1)}{x-1}=1$.</p>\n<p><strong>הגורם השני:</strong> המונה $x^2+\\ln x-1\\to 1+0-1=0$ והמכנה $e^x-e\\to0$, כלומר זהו מקרה $\\frac00$. שתי הפונקציות גזירות בסביבת $1$ ונגזרת המכנה $e^x\\neq0$, ולכן לפי כלל לופיטל\n\\[ \\lim_{x\\to1}\\frac{x^2+\\ln x-1}{e^x-e}=\\lim_{x\\to1}\\frac{2x+\\frac1x}{e^x}=\\frac{2+1}{e}=\\frac3e, \\]\nבתנאי שהגבול מימין קיים -- והוא אכן קיים (הפונקציה $\\frac{2x+1/x}{e^x}$ רציפה ב-$1$).</p>\n<p><strong>סיכום:</strong> לפי אריתמטיקה של גבולות (מכפלת שני גבולות סופיים),\n\\[ \\lim_{x\\to 1}\\frac{(x^2+\\ln x-1)\\sin(x-1)}{(x-1)(e^x-e)}=1\\cdot\\frac3e=\\boxed{\\frac3e}. \\]</p>",
+   "solution": "<p>כאשר $x\\to1$ המונה והמכנה שואפים שניהם ל-$0$. נכתוב את הביטוי כמכפלה (עבור $x$ קרוב ל-$1$, $x\\neq1$, $x&gt;0$):\n\\[ \\frac{(x^2+\\ln x-1)\\sin(x-1)}{(x-1)(e^x-e)}=\\frac{\\sin(x-1)}{x-1}\\cdot\\frac{x^2+\\ln x-1}{e^x-e}. \\]\n<strong>הגורם הראשון:</strong> נציב $t=x-1\\to0$, ומהגבול היסודי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$ נקבל $\\lim_{x\\to1}\\frac{\\sin(x-1)}{x-1}=1$.</p>\n<p><strong>הגורם השני:</strong> המונה $x^2+\\ln x-1\\to 1+0-1=0$ והמכנה $e^x-e\\to0$, כלומר זהו מקרה $\\frac00$. שתי הפונקציות גזירות בסביבת $1$ ונגזרת המכנה $e^x\\neq0$, ולכן לפי כלל לופיטל\n\\[ \\lim_{x\\to1}\\frac{x^2+\\ln x-1}{e^x-e}=\\lim_{x\\to1}\\frac{2x+\\frac1x}{e^x}=\\frac{2+1}{e}=\\frac3e, \\]\nבתנאי שהגבול מימין קיים – והוא אכן קיים (הפונקציה $\\frac{2x+1/x}{e^x}$ רציפה ב-$1$).</p>\n<p><strong>סיכום:</strong> לפי אריתמטיקה של גבולות (מכפלת שני גבולות סופיים),\n\\[ \\lim_{x\\to 1}\\frac{(x^2+\\ln x-1)\\sin(x-1)}{(x-1)(e^x-e)}=1\\cdot\\frac3e=\\boxed{\\frac3e}. \\]</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד ב"
   },
   {
@@ -6676,7 +6964,8 @@ window.BANK = {
     "<p>בתוך כל אחד מהתחומים הפונקציה היא הרכבה/מנה של פונקציות אלמנטריות. בדקו היכן מתאפס מכנה, ובנפרד את נקודות התפר $x=0$ ו-$x=1$.</p>",
     "<p>ליד $0$: $\\ln(1+x^2)\\approx x^2$ ו-$\\sin^2x\\approx x^2$.</p>"
    ],
-   "solution": "<strong>בתוך התחומים הפתוחים.</strong>\n\n<ul>\n<li>\nבקטע $(0,1)$ הפונקציה קבועה ולכן רציפה.\n</li>\n<li>\nבקטע $(1,\\infty)$: $f(x)=\\frac{x}{x^2-1}$ היא מנה של פולינומים שהמכנה שלה אינו מתאפס שם ($x^2-1&gt;0$), ולכן רציפה.\n</li>\n<li>\nבקטע $(-\\infty,0)$: $f(x)=\\frac{\\ln(1+x^2)}{\\sin^2x}$ היא מנה של פונקציות רציפות, ולכן רציפה בכל נקודה שבה $\\sin x\\neq0$. המכנה מתאפס בנקודות $x=-k\\pi$, $k=1,2,3,\\dots$, ושם הפונקציה אינה מוגדרת. בנקודות אלה המונה שואף ל-$\\ln(1+k^2\\pi^2)&gt;0$ והמכנה שואף ל-$0^+$ (כי $\\sin^2x&gt;0$ בסביבה מנוקבת), ולכן\n  \\[ \\lim_{x\\to-k\\pi^\\pm}f(x)=+\\infty. \\]\n  הגבולות החד-צדדיים אינם סופיים, ולכן $x=-k\\pi$ ($k\\in\\N$) הן נקודות אי-רציפות <strong>עיקריות</strong> (מסוג שני).\n</li>\n</ul>\n<p><strong>הנקודה $x=0$.</strong> $f(0)=0$, ומימין $f\\equiv0$ ולכן $\\lim_{x\\to0^+}f(x)=0$. משמאל:\n\\[ \\lim_{x\\to0^-}\\frac{\\ln(1+x^2)}{\\sin^2x}=\\lim_{x\\to0^-}\\frac{\\ln(1+x^2)}{x^2}\\cdot\\left(\\frac{x}{\\sin x}\\right)^2=1\\cdot1^2=1, \\]\nכאשר השתמשנו בגבול היסודי $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ (עם $t=x^2\\to0$) וב-$\\lim_{x\\to0}\\frac{\\sin x}{x}=1$. שני הגבולות החד-צדדיים סופיים ושונים ($1\\neq0$), ולכן ב-$x=0$ יש אי-רציפות מסוג <strong>קפיצה</strong>.</p>\n<p><strong>הנקודה $x=1$.</strong> $f(1)=0$ ו-$\\lim_{x\\to1^-}f(x)=0$. מימין, המונה שואף ל-$1$ והמכנה $x^2-1\\to0^+$, לכן\n\\[ \\lim_{x\\to1^+}\\frac{x}{x^2-1}=+\\infty. \\]\nהגבול החד-צדדי מימין אינו סופי, ולכן ב-$x=1$ יש אי-רציפות <strong>עיקרית</strong>.</p>\n<p><strong>תשובה:</strong> ב-$x=0$ -- אי-רציפות מסוג קפיצה; ב-$x=1$ -- אי-רציפות עיקרית; בנקודות $x=-k\\pi$, $k=1,2,\\dots$ (שבהן $f$ אינה מוגדרת) -- אי-רציפות עיקרית (הגבול שם הוא $+\\infty$). בכל שאר הנקודות $f$ רציפה.</p>",
+   "solution": "<strong>בתוך התחומים הפתוחים.</strong>\n\n<ul>\n<li>\nבקטע $(0,1)$ הפונקציה קבועה ולכן רציפה.\n</li>\n<li>\nבקטע $(1,\\infty)$: $f(x)=\\frac{x}{x^2-1}$ היא מנה של פולינומים שהמכנה שלה אינו מתאפס שם ($x^2-1&gt;0$), ולכן רציפה.\n</li>\n<li>\nבקטע $(-\\infty,0)$: $f(x)=\\frac{\\ln(1+x^2)}{\\sin^2x}$ היא מנה של פונקציות רציפות, ולכן רציפה בכל נקודה שבה $\\sin x\\neq0$. המכנה מתאפס בנקודות $x=-k\\pi$, $k=1,2,3,\\dots$, ושם הפונקציה אינה מוגדרת. בנקודות אלה המונה שואף ל-$\\ln(1+k^2\\pi^2)&gt;0$ והמכנה שואף ל-$0^+$ (כי $\\sin^2x&gt;0$ בסביבה מנוקבת), ולכן\n  \\[ \\lim_{x\\to-k\\pi^\\pm}f(x)=+\\infty. \\]\n  הגבולות החד-צדדיים אינם סופיים, ולכן $x=-k\\pi$ ($k\\in\\N$) הן נקודות אי-רציפות <strong>עיקריות</strong> (מסוג שני).\n</li>\n</ul>\n<p><strong>הנקודה $x=0$.</strong> $f(0)=0$, ומימין $f\\equiv0$ ולכן $\\lim_{x\\to0^+}f(x)=0$. משמאל:\n\\[ \\lim_{x\\to0^-}\\frac{\\ln(1+x^2)}{\\sin^2x}=\\lim_{x\\to0^-}\\frac{\\ln(1+x^2)}{x^2}\\cdot\\left(\\frac{x}{\\sin x}\\right)^2=1\\cdot1^2=1, \\]\nכאשר השתמשנו בגבול היסודי $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ (עם $t=x^2\\to0$) וב-$\\lim_{x\\to0}\\frac{\\sin x}{x}=1$. שני הגבולות החד-צדדיים סופיים ושונים ($1\\neq0$), ולכן ב-$x=0$ יש אי-רציפות מסוג <strong>קפיצה</strong>.</p>\n<p><strong>הנקודה $x=1$.</strong> $f(1)=0$ ו-$\\lim_{x\\to1^-}f(x)=0$. מימין, המונה שואף ל-$1$ והמכנה $x^2-1\\to0^+$, לכן\n\\[ \\lim_{x\\to1^+}\\frac{x}{x^2-1}=+\\infty. \\]\nהגבול החד-צדדי מימין אינו סופי, ולכן ב-$x=1$ יש אי-רציפות <strong>עיקרית</strong>.</p>\n<p><strong>תשובה:</strong> ב-$x=0$ – אי-רציפות מסוג קפיצה; ב-$x=1$ – אי-רציפות עיקרית; בנקודות $x=-k\\pi$, $k=1,2,\\dots$ (שבהן $f$ אינה מוגדרת) – אי-רציפות עיקרית (הגבול שם הוא $+\\infty$). בכל שאר הנקודות $f$ רציפה.</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד ב"
   },
   {
@@ -6702,6 +6991,7 @@ window.BANK = {
     "<p>פשטו קודם: $\\ln\\frac{e^x}{1+e^x}=x-\\ln(1+e^x)$.</p>"
    ],
    "solution": "<strong>תחום הגדרה.</strong> לכל $x$ ממשי $\\frac{e^x}{1+e^x}&gt;0$, ולכן $f$ מוגדרת על כל $\\R$. לפי חוקי לוגריתמים\n\\[ f(x)=\\ln e^x-\\ln(1+e^x)=x-\\ln(1+e^x). \\]\n\n<strong>נגזרת ראשונה.</strong>\n\\[ f'(x)=1-\\frac{e^x}{1+e^x}=\\frac{1}{1+e^x}. \\]\n\n<strong>נגזרת שנייה.</strong> לפי כלל השרשרת,\n\\[ f''(x)=-\\frac{e^x}{(1+e^x)^2}. \\]\nלכל $x\\in\\R$ מתקיים $e^x&gt;0$ ו-$(1+e^x)^2&gt;0$, ולכן $f''(x)&lt;0$ לכל $x$.\n\n<strong>מסקנה.</strong> מאחר ש-$f''&lt;0$ על כל $\\R$, הפונקציה קמורה כלפי מטה (קעורה, $\\cap$) על כל הישר $(-\\infty,\\infty)$, ואין תחום שבו היא קמורה כלפי מעלה. נקודת פיתול היא נקודה שבה משתנה כיוון הקמירות; מאחר ש-$f''$ אינה מחליפה סימן (ואף אינה מתאפסת), <strong>אין לפונקציה נקודות פיתול</strong>.",
+   "src": "מועד ב' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד ב"
   },
   {
@@ -6726,6 +7016,7 @@ window.BANK = {
     "<p>השתמשו בפולינום מקלורן של $e^x$ מסדר $2$ בנקודה $x=\\frac13$, ובשארית בצורת לגרנז'.</p>"
    ],
    "solution": "<p>נשתמש בפונקציה $f(x)=e^x$ סביב $x_0=0$, ונציב $x=\\frac13$, שכן $\\sqrt[3]{e}=e^{1/3}$.</p>\n<p><strong>פולינום טיילור.</strong> לכל $n$, $f^{(n)}(x)=e^x$ ולכן $f^{(n)}(0)=1$. פולינום מקלורן מסדר $2$:\n\\[ P_2(x)=1+x+\\frac{x^2}{2}. \\]\nלכן\n\\[ \\sqrt[3]{e}\\approx P_2\\!\\left(\\tfrac13\\right)=1+\\frac13+\\frac1{18}=\\frac{25}{18}\\approx1.3889. \\]</p>\n<p><strong>חסם לשגיאה.</strong> לפי משפט טיילור עם שארית לגרנז', קיימת $c$ בין $0$ ל-$\\frac13$ כך ש-\n\\[ R_2\\!\\left(\\tfrac13\\right)=e^{1/3}-P_2\\!\\left(\\tfrac13\\right)=\\frac{f'''(c)}{3!}\\left(\\frac13\\right)^3=\\frac{e^c}{6\\cdot27}=\\frac{e^c}{162}. \\]\nמאחר ש-$e^x$ עולה ו-$0&lt;c&lt;\\frac13$, מתקיים $e^c&lt;e^{1/3}$. כיוון ש-$e&lt;3&lt;\\frac{27}{8}=1.5^3$, נקבל $e^{1/3}&lt;1.5$. לכן\n\\[ 0&lt;R_2\\!\\left(\\tfrac13\\right)&lt;\\frac{1.5}{162}=\\frac1{108}\\approx0.0093. \\]\n(אפשר גם להשתמש בחסם הגס יותר $e^c&lt;e&lt;3$ ולקבל שגיאה קטנה מ-$\\frac{3}{162}=\\frac1{54}$.)</p>\n<p><strong>תשובה:</strong> $\\sqrt[3]{e}\\approx\\frac{25}{18}\\approx1.3889$, והשגיאה חיובית וקטנה מ-$\\frac1{108}$. (לבדיקה: $\\sqrt[3]{e}=1.39561\\ldots$, והשגיאה בפועל היא כ-$0.0067$.)</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד ב"
   },
   {
@@ -6750,6 +7041,7 @@ window.BANK = {
     "<p>פרקו את המכנה: $x^4+x^2=x^2(x^2+1)$, והשתמשו בפירוק לשברים חלקיים מהצורה $\\frac Ax+\\frac B{x^2}+\\frac{Cx+D}{x^2+1}$.</p>"
    ],
    "solution": "<p>מעלת המונה ($3$) קטנה ממעלת המכנה ($4$), ולכן אין צורך בחילוק פולינומים. נפרק את המכנה: $x^4+x^2=x^2(x^2+1)$, כאשר $x^2+1$ אי-פריק מעל $\\R$. נחפש פירוק לשברים חלקיים:\n\\[ \\frac{5x^3+x^2+x-2}{x^2(x^2+1)}=\\frac Ax+\\frac B{x^2}+\\frac{Cx+D}{x^2+1}. \\]\nנכפול ב-$x^2(x^2+1)$:\n\\[ 5x^3+x^2+x-2=Ax(x^2+1)+B(x^2+1)+(Cx+D)x^2=(A+C)x^3+(B+D)x^2+Ax+B. \\]\nהשוואת מקדמים: $B=-2$, $A=1$, $A+C=5\\Rightarrow C=4$, $B+D=1\\Rightarrow D=3$. לכן\n\\[ f(x)=\\frac1x-\\frac2{x^2}+\\frac{4x+3}{x^2+1}=\\frac1x-\\frac2{x^2}+2\\cdot\\frac{2x}{x^2+1}+\\frac{3}{x^2+1}. \\]\nנאנטגרל איבר-איבר בעזרת האינטגרלים המיידיים $\\int\\frac{dx}x=\\ln|x|$, $\\int x^{-2}dx=-x^{-1}$, $\\int\\frac{2x}{x^2+1}dx=\\ln(x^2+1)$ (הצבה $t=x^2+1$) ו-$\\int\\frac{dx}{x^2+1}=\\arctan x$:\n\\[ \\boxed{\\int f(x)\\,dx=\\ln|x|+\\frac2x+2\\ln(x^2+1)+3\\arctan x+C} \\]\n(בכל אחד מהקטעים $x&gt;0$ ו-$x&lt;0$ בנפרד; הקבוע יכול להיות שונה בכל קטע).</p>\n<p><strong>בדיקה:</strong> גזירה נותנת $\\frac1x-\\frac2{x^2}+\\frac{4x}{x^2+1}+\\frac3{x^2+1}=f(x)$.</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד ב"
   },
   {
@@ -6774,6 +7066,7 @@ window.BANK = {
     "<p>אינטגרציה בחלקים פעמיים, כאשר בכל פעם גוזרים את הפולינום.</p>"
    ],
    "solution": "<p>נשתמש באינטגרציה בחלקים: $\\int u\\,v'=uv-\\int u'v$.</p>\n<p><strong>שלב ראשון:</strong> $u=(x+1)^2$, $v'=e^x$, ולכן $u'=2(x+1)$, $v=e^x$:\n\\[ \\int_0^1(x+1)^2e^x\\,dx=\\Big[(x+1)^2e^x\\Big]_0^1-2\\int_0^1(x+1)e^x\\,dx=(4e-1)-2\\int_0^1(x+1)e^x\\,dx. \\]</p>\n<p><strong>שלב שני:</strong> $u=x+1$, $v'=e^x$, ולכן $u'=1$, $v=e^x$:\n\\[ \\int_0^1(x+1)e^x\\,dx=\\Big[(x+1)e^x\\Big]_0^1-\\int_0^1e^x\\,dx=(2e-1)-(e-1)=e. \\]</p>\n<p><strong>סיכום:</strong>\n\\[ \\int_0^1(x+1)^2e^x\\,dx=4e-1-2e=\\boxed{2e-1}\\approx 4.4366. \\]\n(לחלופין: פונקציה קדומה היא $F(x)=e^x\\big((x+1)^2-2(x+1)+2\\big)=e^x(x^2+1)$, ולפי המשפט היסודי $F(1)-F(0)=2e-1$.)</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד ב"
   },
   {
@@ -6799,6 +7092,7 @@ window.BANK = {
     "<p>לאינסוף, הפונקציה מתנהגת כמו $\\frac{x^{1/5}}{3x^2}$. השוו (במבחן ההשוואה הגבולי) ל-$\\frac{1}{x^{9/5}}$.</p>"
    ],
    "solution": "<p>הפונקציה $f(x)=\\frac{\\sqrt[5]{x}}{3x^2+x+100}$ רציפה וחיובית על $[2,\\infty)$ (המכנה חיובי), ולכן האינטגרל לא-אמיתי רק בגלל הגבול העליון, ומותר להשתמש במבחני ההשוואה לפונקציות אי-שליליות.</p>\n<p>נשווה ל-$g(x)=\\frac{1}{x^{9/5}}=\\frac{x^{1/5}}{x^2}$, שגם היא חיובית על $[2,\\infty)$:\n\\[ \\lim_{x\\to\\infty}\\frac{f(x)}{g(x)}=\\lim_{x\\to\\infty}\\frac{x^{1/5}\\cdot x^{2}}{x^{1/5}(3x^2+x+100)}=\\lim_{x\\to\\infty}\\frac{1}{3+\\frac1x+\\frac{100}{x^2}}=\\frac13. \\]\nהגבול סופי וחיובי, ולכן לפי <strong>מבחן ההשוואה הגבולי</strong> האינטגרלים $\\int_2^\\infty f$ ו-$\\int_2^\\infty g$ מתכנסים או מתבדרים יחד.</p>\n<p>האינטגרל $\\int_2^\\infty\\frac{dx}{x^p}$ מתכנס אם ורק אם $p&gt;1$; כאן $p=\\frac95&gt;1$, ובאופן מפורש\n\\[ \\int_2^\\infty x^{-9/5}dx=\\lim_{R\\to\\infty}\\left[-\\frac54x^{-4/5}\\right]_2^R=\\frac54\\cdot2^{-4/5}&lt;\\infty. \\]</p>\n<p><strong>תשובה:</strong> האינטגרל $\\int_2^\\infty\\frac{\\sqrt[5]{x}}{3x^2+x+100}\\,dx$ <strong>מתכנס</strong>.</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד ב"
   },
   {
@@ -6824,6 +7118,7 @@ window.BANK = {
     "<p>זהו מקרה $\\frac{\\infty}{\\infty}$; השתמשו בכלל לופיטל.</p>"
    ],
    "solution": "<p>כאשר $x\\to0^+$: $e^x-1\\to0^+$ ולכן $\\ln(e^x-1)\\to-\\infty$, וגם $3\\ln x\\to-\\infty$. זהו מקרה $\\frac{\\infty}{\\infty}$. המונה והמכנה גזירים ב-$(0,\\infty)$ ונגזרת המכנה $\\frac3x\\neq0$, לכן לפי כלל לופיטל (בתנאי שהגבול מימין קיים):\n\\[ \\lim_{x\\to0^+}\\frac{\\ln(e^x-1)}{3\\ln x}=\\lim_{x\\to0^+}\\frac{\\frac{e^x}{e^x-1}}{\\frac3x}=\\lim_{x\\to0^+}\\frac{e^x}{3}\\cdot\\frac{x}{e^x-1}. \\]\nמתקיים $e^x\\to1$ ומהגבול היסודי $\\lim_{x\\to0}\\frac{e^x-1}{x}=1$ נקבל $\\frac{x}{e^x-1}\\to1$. לפי אריתמטיקה של גבולות הגבול מימין קיים ושווה $\\frac13\\cdot1=\\frac13$, ולכן\n\\[ \\lim_{x\\to0^+}\\frac{\\ln(e^x-1)}{3\\ln x}=\\boxed{\\frac13}. \\]</p>",
+   "src": "מועד מיוחד תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד מיוחד"
   },
   {
@@ -6850,6 +7145,7 @@ window.BANK = {
     "<p>עבור $x&gt;1$: $x^2+x-2=(x-1)(x+2)$ ו-$x-1=(\\sqrt x-1)(\\sqrt x+1)$.</p>"
    ],
    "solution": "<strong>בתוך התחומים.</strong> ב-$(-\\infty,0)$ הפונקציה $\\frac{\\sin x}{x}$ רציפה (מנה של רציפות, מכנה שונה מ-$0$), ו-$2^t$ רציפה, ולכן ההרכבה רציפה. ב-$(0,1)$ זו פונקציה לינארית, רציפה. ב-$(1,\\infty)$ זו מנה של פונקציות רציפות שהמכנה שלה $\\sqrt x-1&gt;0$, ולכן רציפה. לכן לכל $a,b$ הפונקציה רציפה בכל נקודה פרט אולי ל-$x=0$ ו-$x=1$.\n\n<strong>רציפות ב-$x=0$.</strong> $f(0)=b$, ומימין $\\lim_{x\\to0^+}(ax+b)=b$. משמאל, מאחר ש-$\\lim_{x\\to0}\\frac{\\sin x}{x}=1$ ו-$2^t$ רציפה ב-$t=1$, לפי משפט הגבול של פונקציה מורכבת\n\\[ \\lim_{x\\to0^-}2^{\\frac{\\sin x}{x}}=2^1=2. \\]\nלכן $f$ רציפה ב-$0$ אם ורק אם $b=2$.\n\n<strong>רציפות ב-$x=1$.</strong> $f(1)=a+b$ ו-$\\lim_{x\\to1^-}f(x)=a+b$. מימין, עבור $x&gt;1$:\n\\[ \\frac{x^2+x-2}{\\sqrt x-1}=\\frac{(x-1)(x+2)}{\\sqrt x-1}=\\frac{(\\sqrt x-1)(\\sqrt x+1)(x+2)}{\\sqrt x-1}=(\\sqrt x+1)(x+2), \\]\nולכן $\\lim_{x\\to1^+}f(x)=(1+1)(1+2)=6$. לכן $f$ רציפה ב-$1$ אם ורק אם $a+b=6$.\n\n<strong>תשובה:</strong> $f$ רציפה בכל $\\R$ אם ורק אם $\\boxed{b=2,\\ a=4}$.",
+   "src": "מועד מיוחד תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד מיוחד"
   },
   {
@@ -6875,6 +7171,7 @@ window.BANK = {
     "<p>מצאו את תחומי העלייה והירידה בעזרת $f'$, ובדקו את התנהגות הפונקציה כאשר $x\\to\\pm\\infty$.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> כל $\\R$; $f$ גזירה בכל נקודה.\n\n<strong>נגזרת:</strong> לפי כלל המכפלה\n\\[ f'(x)=e^x+(x+2)e^x=(x+3)e^x. \\]\nכיוון ש-$e^x&gt;0$, סימן $f'$ הוא סימן $x+3$: $f'&lt;0$ ב-$(-\\infty,-3)$ ו-$f'&gt;0$ ב-$(-3,\\infty)$. לכן (לפי מסקנה ממשפט לגרנז') $f$ יורדת ממש ב-$(-\\infty,-3]$ ועולה ממש ב-$[-3,\\infty)$.\n\n<strong>מינימום מוחלט:</strong> מהמונוטוניות, לכל $x\\le-3$ מתקיים $f(x)\\ge f(-3)$, ולכל $x\\ge-3$ מתקיים $f(x)\\ge f(-3)$. לכן $x=-3$ היא נקודת מינימום מוחלט, וערך המינימום הוא\n\\[ f(-3)=(-3+2)e^{-3}=-\\frac1{e^3}\\approx-0.0498. \\]\n\n<strong>מקסימום מוחלט:</strong> $\\lim_{x\\to\\infty}(x+2)e^x=+\\infty$, ולכן הפונקציה אינה חסומה מלעיל ואין לה מקסימום מוחלט. (לשלמות: $\\lim_{x\\to-\\infty}(x+2)e^x=\\lim_{x\\to-\\infty}\\frac{x+2}{e^{-x}}=0$ לפי לופיטל, כך שהפונקציה שואפת ל-$0^-$ משמאל, אך מימין אינה חסומה.)\n\n<strong>תשובה:</strong> מינימום מוחלט $-e^{-3}$ המתקבל ב-$x=-3$; מקסימום מוחלט אינו קיים כי $f(x)\\to+\\infty$ כאשר $x\\to\\infty$.",
+   "src": "מועד מיוחד תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד מיוחד"
   },
   {
@@ -6901,6 +7198,7 @@ window.BANK = {
     "<p>קיום: משפט ערך הביניים עבור $g(x)=2x^3+\\arctan x+\\sqrt x-7$ בקטע מתאים. יחידות: הראו ש-$g$ עולה ממש.</p>"
    ],
    "solution": "<p>נגדיר $g(x)=2x^3+\\arctan x+\\sqrt x-7$ על $[0,\\infty)$. $g$ רציפה שם כסכום של פונקציות רציפות, וגזירה ב-$(0,\\infty)$.</p>\n<p><strong>קיום.</strong> $g(0)=-7&lt;0$, ו-\n\\[ g(2)=16+\\arctan2+\\sqrt2-7=9+\\arctan 2+\\sqrt2&gt;0. \\]\nלפי משפט ערך הביניים קיימת $x_0\\in(0,2)$ עם $g(x_0)=0$, כלומר פתרון חיובי של המשוואה.</p>\n<p><strong>יחידות.</strong> לכל $x&gt;0$:\n\\[ g'(x)=6x^2+\\frac1{1+x^2}+\\frac1{2\\sqrt x}&gt;0. \\]\nלכן $g$ עולה ממש ב-$(0,\\infty)$ (מסקנה ממשפט לגרנז': אם $0&lt;x_1&lt;x_2$ אז $g(x_2)-g(x_1)=g'(c)(x_2-x_1)&gt;0$). פונקציה עולה ממש מקבלת כל ערך לכל היותר פעם אחת, ולכן יש לה לכל היותר אפס אחד ב-$(0,\\infty)$.</p>\n<p>(לחלופין: אם היו שני פתרונות חיוביים $x_1&lt;x_2$, אז לפי משפט רול הייתה $c\\in(x_1,x_2)$ עם $g'(c)=0$, בסתירה ל-$g'&gt;0$.)</p>\n<p><strong>מסקנה:</strong> למשוואה יש פתרון ממשי חיובי יחיד (מספרית $x_0\\approx1.3486$).</p>",
+   "src": "מועד מיוחד תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד מיוחד"
   },
   {
@@ -6925,6 +7223,7 @@ window.BANK = {
     "<p>החזקה של $\\cos x$ אי-זוגית: הפרידו גורם אחד $\\cos x$, כתבו $\\cos^4x=(1-\\sin^2x)^2$ והציבו $t=\\sin x$.</p>"
    ],
    "solution": "<p>נכתוב $\\cos^5x=\\cos^4x\\cdot\\cos x=(1-\\sin^2x)^2\\cos x$. לכן\n\\[ \\int\\sin^2x\\cos^5x\\,dx=\\int\\sin^2x(1-\\sin^2x)^2\\cos x\\,dx. \\]\nנציב $t=\\sin x$, $dt=\\cos x\\,dx$:\n\\[ \\int t^2(1-t^2)^2\\,dt=\\int\\left(t^2-2t^4+t^6\\right)dt=\\frac{t^3}3-\\frac{2t^5}5+\\frac{t^7}7+C. \\]\nנחזור למשתנה $x$:\n\\[ \\boxed{\\int\\sin^2x\\cos^5x\\,dx=\\frac{\\sin^3x}{3}-\\frac{2\\sin^5x}{5}+\\frac{\\sin^7x}{7}+C}. \\]\n<strong>בדיקה:</strong> הנגזרת היא $\\cos x\\left(\\sin^2x-2\\sin^4x+\\sin^6x\\right)=\\cos x\\sin^2x(1-\\sin^2x)^2=\\sin^2x\\cos^5x$.</p>",
+   "src": "מועד מיוחד תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד מיוחד"
   },
   {
@@ -6947,9 +7246,10 @@ window.BANK = {
    ],
    "question": "<p>חשבו את נפח גוף הסיבוב סביב ציר ה-$x$ של הפונקציה\n\\[ f(x)=\\frac{1}{\\sqrt{x}(x-1)} \\]\nבקטע $[4,9]$.</p>",
    "hints": [
-    "<p>נפח גוף סיבוב: $V=\\pi\\int_a^b f^2(x)\\,dx$. כאן $f^2(x)=\\frac1{x(x-1)^2}$ -- השתמשו בשברים חלקיים.</p>"
+    "<p>נפח גוף סיבוב: $V=\\pi\\int_a^b f^2(x)\\,dx$. כאן $f^2(x)=\\frac1{x(x-1)^2}$ – השתמשו בשברים חלקיים.</p>"
    ],
    "solution": "<p>$f$ רציפה על $[4,9]$, ונפח גוף הסיבוב סביב ציר ה-$x$ הוא\n\\[ V=\\pi\\int_4^9f^2(x)\\,dx=\\pi\\int_4^9\\frac{dx}{x(x-1)^2}. \\]\n<strong>שברים חלקיים:</strong>\n\\[ \\frac1{x(x-1)^2}=\\frac Ax+\\frac B{x-1}+\\frac C{(x-1)^2}\\ \\Longrightarrow\\ 1=A(x-1)^2+Bx(x-1)+Cx. \\]\nהצבת $x=0$ נותנת $A=1$; הצבת $x=1$ נותנת $C=1$; השוואת מקדם $x^2$: $A+B=0$, ולכן $B=-1$:\n\\[ \\frac1{x(x-1)^2}=\\frac1x-\\frac1{x-1}+\\frac1{(x-1)^2}. \\]\n<strong>אינטגרציה:</strong> פונקציה קדומה (ל-$x&gt;1$) היא $F(x)=\\ln x-\\ln(x-1)-\\frac1{x-1}$, ולפי המשפט היסודי\n\\begin{align*}\n\\int_4^9\\frac{dx}{x(x-1)^2}&amp;=\\left[\\ln\\frac{x}{x-1}-\\frac1{x-1}\\right]_4^9=\\left(\\ln\\frac98-\\frac18\\right)-\\left(\\ln\\frac43-\\frac13\\right)\\\\\n&amp;=\\ln\\left(\\frac98\\cdot\\frac34\\right)+\\frac13-\\frac18=\\ln\\frac{27}{32}+\\frac5{24}.\n\\end{align*}\n<strong>תשובה:</strong>\n\\[ V=\\pi\\left(\\frac5{24}+\\ln\\frac{27}{32}\\right)=\\pi\\left(\\frac5{24}-\\ln\\frac{32}{27}\\right)\\approx0.1207. \\]</p>",
+   "src": "מועד מיוחד תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד מיוחד"
   },
   {
@@ -6975,6 +7275,7 @@ window.BANK = {
     "<p>אינטגרציה בחלקים עם $u=x$, $v'=e^{-x}$, ואחר כך גבול כאשר הגבול העליון שואף לאינסוף.</p>"
    ],
    "solution": "<p>לפי ההגדרה, $\\int_2^\\infty xe^{-x}\\,dx=\\lim_{R\\to\\infty}\\int_2^Rxe^{-x}\\,dx$, אם הגבול קיים.</p>\n<p><strong>פונקציה קדומה:</strong> אינטגרציה בחלקים עם $u=x$, $v'=e^{-x}$ ($u'=1$, $v=-e^{-x}$):\n\\[ \\int xe^{-x}\\,dx=-xe^{-x}+\\int e^{-x}\\,dx=-xe^{-x}-e^{-x}+C=-(x+1)e^{-x}+C. \\]\nלכן\n\\[ \\int_2^Rxe^{-x}\\,dx=\\Big[-(x+1)e^{-x}\\Big]_2^R=3e^{-2}-\\frac{R+1}{e^R}. \\]\n<strong>מעבר לגבול:</strong> $\\lim_{R\\to\\infty}\\frac{R+1}{e^R}$ הוא מקרה $\\frac\\infty\\infty$, ולפי כלל לופיטל $\\lim_{R\\to\\infty}\\frac{1}{e^R}=0$. לכן\n\\[ \\int_2^\\infty xe^{-x}\\,dx=\\boxed{\\frac{3}{e^2}}\\approx0.406, \\]\nוהאינטגרל מתכנס.</p>",
+   "src": "מועד מיוחד תשפ\"ד סמסטר א'",
    "exam": "תשפ\"ד סמסטר א מועד מיוחד"
   },
   {
@@ -7000,6 +7301,7 @@ window.BANK = {
     "<p>כתבו $\\ln(x+1)-\\ln x=\\ln\\left(1+\\frac1x\\right)$ והציבו $t=\\frac1x$.</p>"
    ],
    "solution": "<p>לפי חוקי הלוגריתם, $\\ln(x+1)-\\ln(x)=\\ln\\frac{x+1}{x}=\\ln\\left(1+\\frac1x\\right)$. נציב $t=\\frac1x$; כאשר $x\\to\\infty$ מתקיים $t\\to0^+$, ולכן\n\\[ \\lim_{x\\to\\infty} x\\ln\\left(1+\\frac1x\\right)=\\lim_{t\\to0^+}\\frac{\\ln(1+t)}{t}. \\]\nזהו גבול מהצורה $\\frac00$; לפי כלל לופיטל (או הגבול היסודי $\\frac{\\ln(1+t)}{t}\\to1$):\n\\[ \\lim_{t\\to0^+}\\frac{\\ln(1+t)}{t}=\\lim_{t\\to0^+}\\frac{1/(1+t)}{1}=1. \\]\nהתשובה: $\\boxed{1}$.</p>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7023,6 +7325,7 @@ window.BANK = {
    "question": "<p>חשבו\n\\[ \\lim_{x\\to 0} \\frac{x^2+\\sin(x)\\cos(x)}{1-e^x} \\]</p>",
    "hints": [],
    "solution": "<p>כאשר $x\\to0$ המונה שואף ל-$0+\\sin0\\cos0=0$ והמכנה ל-$1-e^0=0$, כלומר גבול מהצורה $\\frac00$. המונה והמכנה גזירים, ונגזרת המכנה $-e^x\\neq0$ בסביבת $0$, לכן לפי כלל לופיטל:\n\\[ \\lim_{x\\to0}\\frac{x^2+\\sin x\\cos x}{1-e^x}=\\lim_{x\\to0}\\frac{2x+\\cos^2x-\\sin^2x}{-e^x}=\\frac{0+1-0}{-1}=-1, \\]\nכאשר השתמשנו ברציפות הביטוי שהתקבל ב-$0$. (לחלופין: $\\sin x\\cos x=\\frac12\\sin2x$, ומחלקים מונה ומכנה ב-$x$: $\\frac{x+\\frac{\\sin 2x}{2x}}{\\frac{1-e^x}{x}}\\to\\frac{0+1}{-1}$.)\nהתשובה: $\\boxed{-1}$.</p>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7048,6 +7351,7 @@ window.BANK = {
     "<p>$\\sin\\left(\\frac3x\\right)$ חסומה; השתמשו במשפט הסנדוויץ' (או \"אפסה כפול חסומה\").</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\nלכל $x\\neq0$ מתקיים $\\left|\\sin\\frac3x\\right|\\le1$, ולכן\n  \\[ 0\\le |f(x)|=x^2\\left|\\sin\\frac3x\\right|\\le x^2. \\]\n  מכיוון ש-$x^2\\to0$ כאשר $x\\to0$, לפי משפט הסנדוויץ' $|f(x)|\\to0$, כלומר $\\lim_{x\\to0}f(x)=0=f(0)$. לכן $f$ <strong>רציפה</strong> ב-$x=0$.\n</li>\n<li>\nנחשב את הנגזרת לפי ההגדרה:\n  \\[ f'(0)=\\lim_{h\\to0}\\frac{f(h)-f(0)}{h}=\\lim_{h\\to0}\\frac{h^2\\sin\\frac3h}{h}=\\lim_{h\\to0}h\\sin\\frac3h. \\]\n  שוב $0\\le\\left|h\\sin\\frac3h\\right|\\le|h|\\to0$, ולפי משפט הסנדוויץ' הגבול קיים ושווה $0$ (פונקציה השואפת לאפס כפול פונקציה חסומה). לכן $f$ <strong>גזירה</strong> ב-$x=0$ ו-$f'(0)=0$.\n</li>\n</ol>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7073,6 +7377,7 @@ window.BANK = {
     "<p>אחרי הצמצום ניתן לכתוב $f(x)=-3-\\frac{1}{x-1}$ (עבור $x\\neq\\pm1$).</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $x^2-1\\neq0$, כלומר $x\\neq\\pm1$.\n\n<strong>פישוט:</strong> $2-x-3x^2=-(3x^2+x-2)=-(3x-2)(x+1)$ ו-$x^2-1=(x-1)(x+1)$. לכן לכל $x\\neq\\pm1$:\n\\[ f(x)=\\frac{-(3x-2)(x+1)}{(x-1)(x+1)}=\\frac{2-3x}{x-1}=-3-\\frac{1}{x-1}. \\]\n(בדיקה: $-3(x-1)-1=2-3x$.)\n\n<strong>הנקודה $x=-1$:</strong> $\\lim_{x\\to-1}f(x)=\\frac{2+3}{-2}=-\\frac52$ — גבול סופי, ולכן זו נקודת אי-רציפות סליקה (\"חור\" בגרף בנקודה $(-1,-\\frac52)$), ואין בה אסימפטוטה אנכית.\n\n<strong>חיתוך עם הצירים:</strong> $f(0)=-2$; $f(x)=0\\iff x=\\frac23$. הנקודות $(0,-2)$, $(\\frac23,0)$.\n\n<strong>נגזרת ראשונה:</strong> $f'(x)=\\frac{1}{(x-1)^2}&gt;0$ לכל $x$ בתחום. לכן $f$ עולה בכל אחד מהקטעים $(-\\infty,-1)$, $(-1,1)$, $(1,\\infty)$, ו<strong>אין נקודות קיצון מקומיות</strong> (הנגזרת לא מתאפסת בשום מקום, ולפי משפט פרמה אין קיצון פנימי).\n\n<strong>נגזרת שנייה:</strong> $f''(x)=-\\frac{2}{(x-1)^3}$.\n\n<ul>\n<li>\nעבור $x&lt;1$ ($x\\neq-1$): $(x-1)^3&lt;0$, לכן $f''&gt;0$ — $f$ <strong>קמורה</strong> ($\\cup$) ב-$(-\\infty,-1)$ וב-$(-1,1)$.\n</li>\n<li>\nעבור $x&gt;1$: $f''&lt;0$ — $f$ <strong>קעורה</strong> ($\\cap$) ב-$(1,\\infty)$.\n</li>\n</ul>\n<p>אין נקודות פיתול: שינוי הקמירות קורה רק ב-$x=1$, שאינה בתחום ההגדרה.</p>\n<p><strong>אסימפטוטות:</strong></p>\n<ul>\n<li>\nאנכית: $x=1$. $\\lim_{x\\to1^-}f(x)=-3-\\frac{1}{0^-}=+\\infty$, $\\lim_{x\\to1^+}f(x)=-\\infty$.\n</li>\n<li>\nאופקית: $\\lim_{x\\to\\pm\\infty}f(x)=-3$ (המעלות במונה ובמכנה שוות, יחס המקדמים המובילים $\\frac{-3}{1}$). לכן $y=-3$ אסימפטוטה אופקית בשני הכיוונים; אין אסימפטוטה משופעת.\n</li>\n</ul>\n<p><strong>הגרף:</strong> היפרבולה $y=-3-\\frac1{x-1}$ (הזזה של $-\\frac1x$) עם חור בנקודה $(-1,-\\frac52)$. משמאל ל-$x=1$ הגרף עולה מהאסימפטוטה $y=-3$ (מעליה) דרך החור $(-1,-2.5)$, $(0,-2)$, $(\\frac23,0)$ ושואף ל-$+\\infty$ כאשר $x\\to1^-$, והוא קמור. מימין ל-$x=1$ הגרף עולה מ-$-\\infty$ ומתקרב מלמטה ל-$y=-3$, והוא קעור.</p>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7095,6 +7400,7 @@ window.BANK = {
    "question": "<p>כתבו את פולינום מקלורן מסדר 3 של $f(x)=\\ln(1+x)$.</p>",
    "hints": [],
    "solution": "<p>נחשב נגזרות ב-$0$:\n\\[ f(x)=\\ln(1+x),\\quad f'(x)=\\frac1{1+x},\\quad f''(x)=-\\frac1{(1+x)^2},\\quad f'''(x)=\\frac{2}{(1+x)^3}, \\]\nולכן $f(0)=0,\\ f'(0)=1,\\ f''(0)=-1,\\ f'''(0)=2$. פולינום מקלורן:\n\\[ P_3(x)=f(0)+f'(0)x+\\frac{f''(0)}{2!}x^2+\\frac{f'''(0)}{3!}x^3=\\boxed{x-\\frac{x^2}{2}+\\frac{x^3}{3}}. \\]</p>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7119,6 +7425,7 @@ window.BANK = {
     "<p>השתמשו במשיק לגרף $g(x)=\\sqrt x$ בנקודה קרובה ל-$15$ שבה השורש ידוע.</p>"
    ],
    "solution": "<p>נשתמש בפונקציה $g(x)=\\sqrt x$ סביב הנקודה $a=16$ (הקרובה ל-$15$, שבה השורש ידוע). $g(16)=4$, $g'(x)=\\frac{1}{2\\sqrt x}$, $g'(16)=\\frac18$. הקירוב הלינארי (משוואת המשיק):\n\\[ g(x)\\approx g(16)+g'(16)(x-16)=4+\\frac{x-16}{8}. \\]\nעבור $x=15$: $\\sqrt{15}\\approx4-\\frac18=\\boxed{3.875}$.\n(לשם השוואה $\\sqrt{15}\\approx3.873$. מאחר ש-$g''&lt;0$ — $g$ קעורה — המשיק נמצא מעל הגרף, ולכן זהו קירוב מלמעלה; לפי שארית לגרנז' השגיאה היא $\\frac{|g''(c)|}{2}\\cdot1^2=\\frac{1}{8c^{3/2}}&lt;\\frac{1}{8\\cdot 15^{3/2}}&lt;0.003$.)</p>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7143,6 +7450,7 @@ window.BANK = {
     "<p>חילוק פולינומים ואז פירוק לשברים חלקיים ($x^2+x-6=(x+3)(x-2)$).</p>"
    ],
    "solution": "<p>מעלת המונה גדולה ממעלת המכנה, לכן נחלק פולינומים:\n\\[ x^3+2x^2-3x+5=(x+1)(x^2+x-6)+(2x+11), \\]\n(בדיקה: $(x+1)(x^2+x-6)=x^3+2x^2-5x-6$, והשארית היא $x^3+2x^2-3x+5-(x^3+2x^2-5x-6)=2x+11$.) לכן\n\\[ \\frac{x^3+2x^2-3x+5}{x^2+x-6}=x+1+\\frac{2x+11}{(x+3)(x-2)}. \\]\nפירוק לשברים חלקיים: $\\frac{2x+11}{(x+3)(x-2)}=\\frac{A}{x+3}+\\frac{B}{x-2}$, כלומר $2x+11=A(x-2)+B(x+3)$. הצבת $x=2$: $15=5B\\Rightarrow B=3$; הצבת $x=-3$: $5=-5A\\Rightarrow A=-1$. לכן\n\\[ \\int\\frac{x^3+2x^2-3x+5}{x^2+x-6}\\,dx=\\int\\left(x+1-\\frac1{x+3}+\\frac3{x-2}\\right)dx=\\boxed{\\frac{x^2}{2}+x-\\ln|x+3|+3\\ln|x-2|+C}. \\]</p>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7167,6 +7475,7 @@ window.BANK = {
     "<p>אינטגרציה בחלקים פעמיים, עם $u=(\\ln x)^2,\\ v'=1$.</p>"
    ],
    "solution": "<p>אינטגרציה בחלקים עם $u=(\\ln x)^2$, $v'=1$, כלומר $u'=\\frac{2\\ln x}{x}$, $v=x$:\n\\[ \\int_1^e(\\ln x)^2dx=\\Big[x(\\ln x)^2\\Big]_1^e-\\int_1^e 2\\ln x\\,dx=e-2\\int_1^e\\ln x\\,dx. \\]\nשוב בחלקים ($u=\\ln x,\\ v'=1$): $\\int_1^e\\ln x\\,dx=\\big[x\\ln x\\big]_1^e-\\int_1^e1\\,dx=e-(e-1)=1$. לכן\n\\[ \\int_1^e(\\ln x)^2dx=\\boxed{e-2}\\approx0.718. \\]</p>",
+   "src": "מועד א' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד א"
   },
   {
@@ -7192,6 +7501,7 @@ window.BANK = {
     "<p>כתבו $\\sqrt[x]{1-2x}=(1-2x)^{1/x}=e^{\\frac{\\ln(1-2x)}{x}}$.</p>"
    ],
    "solution": "<p>לכל $x\\neq0$ קרוב ל-$0$ מתקיים $1-2x&gt;0$, ולכן\n\\[ \\sqrt[x]{1-2x}=(1-2x)^{1/x}=e^{\\frac{\\ln(1-2x)}{x}}. \\]\nנחשב את גבול המעריך. זהו גבול מהצורה $\\frac00$, ולפי כלל לופיטל:\n\\[ \\lim_{x\\to0}\\frac{\\ln(1-2x)}{x}=\\lim_{x\\to0}\\frac{\\frac{-2}{1-2x}}{1}=-2. \\]\nמרציפות פונקציית האקספוננט נקבל\n\\[ \\lim_{x\\to0}\\sqrt[x]{1-2x}=e^{-2}=\\boxed{\\frac1{e^2}}. \\]\n(זו גם צורה של הגבול היסודי $\\lim_{t\\to0}(1+t)^{1/t}=e$ עם $t=-2x$.)</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7216,6 +7526,7 @@ window.BANK = {
     "<p>הוציאו $\\tan x$ כגורם משותף במונה: $\\tan x-\\sin x=\\tan x\\,(1-\\cos x)$.</p>"
    ],
    "solution": "<p>בסביבה מנוקבת של $0$ מתקיים $\\sin x\\neq0$, $\\cos x\\neq0$, ו-\n\\[ \\tan x-\\sin x=\\frac{\\sin x}{\\cos x}-\\sin x=\\frac{\\sin x\\,(1-\\cos x)}{\\cos x}. \\]\nלכן, בעזרת $1-\\cos^2x=\\sin^2x$:\n\\[ \\frac{\\tan x-\\sin x}{\\sin^3x}=\\frac{1-\\cos x}{\\cos x\\,\\sin^2x}=\\frac{1-\\cos x}{\\cos x\\,(1-\\cos x)(1+\\cos x)}=\\frac{1}{\\cos x\\,(1+\\cos x)}. \\]\n(הצמצום מותר כי $\\cos x\\neq1$ עבור $0&lt;|x|&lt;2\\pi$.) הביטוי שהתקבל רציף ב-$0$, ולכן\n\\[ \\lim_{x\\to0}\\frac{\\tan x-\\sin x}{\\sin^3x}=\\frac{1}{1\\cdot2}=\\boxed{\\frac12}. \\]</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7242,6 +7553,7 @@ window.BANK = {
     "<p>גזירות גוררת רציפות. חשבו את הנגזרות החד-צדדיות לפי ההגדרה.</p>"
    ],
    "solution": "<strong>הערה:</strong> בתנאי של השורה השלישית נכתב \"$0&gt;x$\", וזו כמובן טעות דפוס — השורה הראשונה כבר מכסה את $x&lt;0$, וב-$x&lt;0$ הביטוי $\\ln x$ אינו מוגדר. הכוונה היא $0&lt;x$, ונפתור בהתאם.\n\n<ol class=\"parts\">\n<li>\n<strong>גבול משמאל:</strong> $\\lim_{x\\to0^-}\\sin(ax)=\\sin0=0$ (רציפות הסינוס), לכל $a$.\n\n  <strong>גבול מימין:</strong> $\\lim_{x\\to0^+}x^2\\ln x$ הוא מהצורה $0\\cdot(-\\infty)$. נכתוב כמנה ונשתמש בכלל לופיטל:\n  \\[ \\lim_{x\\to0^+}\\frac{\\ln x}{x^{-2}}=\\lim_{x\\to0^+}\\frac{1/x}{-2x^{-3}}=\\lim_{x\\to0^+}\\left(-\\frac{x^2}{2}\\right)=0. \\]\n  לכן הגבול של $f$ ב-$0$ קיים ושווה $0$ לכל $a$, ו-$f$ רציפה ב-$0$ אם ורק אם $f(0)=b-2=0$.\n  <strong>תשובה:</strong> $f$ רציפה ב-$0$ עבור $b=2$ ו-$a\\in\\R$ כלשהו.\n  \n</li>\n<li>\nאם $f$ גזירה ב-$0$ היא בפרט רציפה שם, ולכן חייב להתקיים $b=2$, כלומר $f(0)=0$. נחשב את הנגזרות החד-צדדיות לפי ההגדרה:\n  \\[ f'_-(0)=\\lim_{h\\to0^-}\\frac{\\sin(ah)-0}{h}=a\\lim_{h\\to0^-}\\frac{\\sin(ah)}{ah}=a \\]\n  (עבור $a=0$ המנה זהותית $0$, וגם אז הגבול $0=a$), ו-\n  \\[ f'_+(0)=\\lim_{h\\to0^+}\\frac{h^2\\ln h-0}{h}=\\lim_{h\\to0^+}h\\ln h=\\lim_{h\\to0^+}\\frac{\\ln h}{1/h}\\overset{\\text{לופיטל}}{=}\\lim_{h\\to0^+}\\frac{1/h}{-1/h^2}=\\lim_{h\\to0^+}(-h)=0. \\]\n  $f$ גזירה ב-$0$ אם ורק אם שתי הנגזרות החד-צדדיות שוות, כלומר $a=0$.\n  <strong>תשובה:</strong> כן — $f$ גזירה ב-$0$ בדיוק עבור $a=0,\\ b=2$, ואז $f'(0)=0$.\n</li>\n</ol>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7266,6 +7578,7 @@ window.BANK = {
     "<p>בנגזרת, המונה הוא $e^x(x^2-2x-3)=e^x(x-3)(x+1)$. שימו לב שנקודות הקיצון חייבות להיות בתחום ההגדרה, וש-$-\\sqrt3&lt;-1&lt;\\sqrt3&lt;3$.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $x^2\\neq3$, כלומר $x\\neq\\pm\\sqrt3$.\n\n<strong>סימן וחיתוך עם הצירים:</strong> $e^x&gt;0$, לכן אין חיתוך עם ציר $x$, ו-$f&gt;0$ עבור $|x|&gt;\\sqrt3$, $f&lt;0$ עבור $|x|&lt;\\sqrt3$. חיתוך עם ציר $y$: $f(0)=-\\frac13$.\n\n<strong>נגזרת:</strong> לפי כלל המנה\n\\[ f'(x)=\\frac{e^x(x^2-3)-e^x\\cdot2x}{(x^2-3)^2}=\\frac{e^x(x^2-2x-3)}{(x^2-3)^2}=\\frac{e^x(x-3)(x+1)}{(x^2-3)^2}. \\]\nהמכנה ו-$e^x$ חיוביים, ולכן סימן $f'$ הוא סימן $(x-3)(x+1)$. מתקיים $-\\sqrt3\\approx-1.73&lt;-1&lt;\\sqrt3\\approx1.73&lt;3$:\n\n<ul>\n<li>\n$(-\\infty,-\\sqrt3)$ ו-$(-\\sqrt3,-1)$: $f'&gt;0$, $f$ <strong>עולה</strong>.\n</li>\n<li>\n$(-1,\\sqrt3)$ ו-$(\\sqrt3,3)$: $f'&lt;0$, $f$ <strong>יורדת</strong>.\n</li>\n<li>\n$(3,\\infty)$: $f'&gt;0$, $f$ <strong>עולה</strong>.\n</li>\n</ul>\n<p><strong>נקודות קיצון:</strong> $f'$ מחליפה סימן מ-$+$ ל-$-$ ב-$x=-1$, לכן זו נקודת <strong>מקסימום מקומי</strong>: $f(-1)=\\frac{e^{-1}}{-2}=-\\frac1{2e}\\approx-0.18$. ב-$x=3$ הסימן מתחלף מ-$-$ ל-$+$, לכן <strong>מינימום מקומי</strong>: $f(3)=\\frac{e^3}{6}\\approx3.35$.</p>\n<p><strong>אסימפטוטות:</strong></p>\n<ul>\n<li>\nאנכיות $x=\\pm\\sqrt3$ (המונה $e^{\\pm\\sqrt3}\\neq0$ והמכנה מתאפס):\n  $\\lim_{x\\to-\\sqrt3^-}f=+\\infty$, $\\lim_{x\\to-\\sqrt3^+}f=-\\infty$, $\\lim_{x\\to\\sqrt3^-}f=-\\infty$, $\\lim_{x\\to\\sqrt3^+}f=+\\infty$ (לפי סימן $x^2-3$ משני הצדדים).\n</li>\n<li>\nב-$-\\infty$: $e^x\\to0$ ו-$x^2-3\\to\\infty$, לכן $f\\to0$: אסימפטוטה אופקית $y=0$ (הגרף מעליה).\n</li>\n<li>\nב-$+\\infty$: לפי כלל לופיטל (פעמיים) $\\lim_{x\\to\\infty}\\frac{e^x}{x^2-3}=\\lim\\frac{e^x}{2}=\\infty$, וגם $\\frac{f(x)}{x}=\\frac{e^x}{x^3-3x}\\to\\infty$; לכן אין אסימפטוטה אופקית או משופעת ב-$+\\infty$.\n</li>\n</ul>\n<p><strong>הגרף:</strong> משמאל הגרף יוצא מעל ציר $x$ קרוב ל-$y=0$, עולה ל-$+\\infty$ כאשר $x\\to-\\sqrt3^-$. בין $-\\sqrt3$ ל-$\\sqrt3$ הגרף שלילי: עולה מ-$-\\infty$ עד המקסימום המקומי $(-1,-\\frac1{2e})$, יורד דרך $(0,-\\frac13)$ ל-$-\\infty$ כאשר $x\\to\\sqrt3^-$. מימין ל-$\\sqrt3$ הגרף יורד מ-$+\\infty$ עד המינימום המקומי $(3,\\frac{e^3}{6})$ ואז עולה ל-$+\\infty$.</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7290,6 +7603,7 @@ window.BANK = {
     "<p>$\\sin x\\cos x=\\frac12\\sin(2x)$.</p>"
    ],
    "solution": "<p>לפי זהות הזווית הכפולה $f(x)=\\sin x\\cos x=\\frac12\\sin(2x)$. פולינום מקלורן של $\\sin t$ מסדר 4 הוא $t-\\frac{t^3}{6}$ (המקדם של $t^4$ הוא $0$). נציב $t=2x$:\n\\[ P_4(x)=\\frac12\\left(2x-\\frac{(2x)^3}{6}\\right)=\\boxed{x-\\frac{2}{3}x^3}. \\]\n(ישירות: $f'(x)=\\cos2x$, $f''=-2\\sin2x$, $f'''=-4\\cos2x$, $f^{(4)}=8\\sin2x$; בנקודה $0$: $f=0,\\ f'=1,\\ f''=0,\\ f'''=-4,\\ f^{(4)}=0$, ולכן $P_4=x-\\frac{4}{6}x^3$.)</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7314,6 +7628,7 @@ window.BANK = {
     "<p>בחרו $g(x)=x^{2/3}$ ונקודה קרובה ל-$5$ שבה הערך ידוע.</p>"
    ],
    "solution": "<p>נשתמש ב-$g(x)=x^{2/3}$ סביב $a=8$ (שם $8^{2/3}=4$). $g'(x)=\\frac23x^{-1/3}$, ולכן $g'(8)=\\frac23\\cdot\\frac12=\\frac13$. הקירוב הלינארי:\n\\[ g(x)\\approx g(8)+g'(8)(x-8)=4+\\frac{x-8}{3}. \\]\nעבור $x=5$: $5^{2/3}\\approx4+\\frac{-3}{3}=\\boxed{3}$.\n(הערך האמיתי $\\approx2.924$; השגיאה גדולה יחסית כי $5$ רחוקה מ-$8$. בחירה אחרת, למשל $a=1$, נותנת $1+\\frac23\\cdot4\\approx3.67$ — פחות מדויק.)</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7338,6 +7653,7 @@ window.BANK = {
     "<p>חילוק פולינומים ואז שברים חלקיים, $x^2+x-6=(x+3)(x-2)$.</p>"
    ],
    "solution": "<p>חילוק פולינומים:\n\\[ 2x^3+7x^2-5x-19=(2x+5)(x^2+x-6)+(2x+11), \\]\n(בדיקה: $(2x+5)(x^2+x-6)=2x^3+7x^2-7x-30$, והשארית $(-5x-19)-(-7x-30)=2x+11$.) שברים חלקיים: $\\frac{2x+11}{(x+3)(x-2)}=\\frac{A}{x+3}+\\frac{B}{x-2}$, כלומר $2x+11=A(x-2)+B(x+3)$. עבור $x=2$: $15=5B$, $B=3$. עבור $x=-3$: $5=-5A$, $A=-1$. לכן\n\\[ \\int\\frac{2x^3+7x^2-5x-19}{x^2+x-6}dx=\\int\\left(2x+5-\\frac1{x+3}+\\frac3{x-2}\\right)dx=\\boxed{x^2+5x-\\ln|x+3|+3\\ln|x-2|+C}. \\]</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7362,6 +7678,7 @@ window.BANK = {
     "<p>אינטגרציה בחלקים פעמיים; האינטגרל המקורי יופיע שוב באגף ימין, ופותרים משוואה עבורו.</p>"
    ],
    "solution": "<p>נסמן $I=\\int_0^\\pi e^x\\sin x\\,dx$. בחלקים עם $u=\\sin x$, $v'=e^x$:\n\\[ I=\\big[e^x\\sin x\\big]_0^\\pi-\\int_0^\\pi e^x\\cos x\\,dx=0-\\int_0^\\pi e^x\\cos x\\,dx. \\]\nשוב בחלקים עם $u=\\cos x$, $v'=e^x$:\n\\[ \\int_0^\\pi e^x\\cos x\\,dx=\\big[e^x\\cos x\\big]_0^\\pi+\\int_0^\\pi e^x\\sin x\\,dx=(-e^\\pi-1)+I. \\]\nלכן $I=e^\\pi+1-I$, כלומר\n\\[ I=\\boxed{\\frac{e^\\pi+1}{2}}\\approx12.07. \\]</p>",
+   "src": "מועד ב' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ב"
   },
   {
@@ -7386,6 +7703,7 @@ window.BANK = {
     "<p>כתבו $\\frac{x+3}{x-4}=1+\\frac{7}{x-4}$ והשתמשו בגבול $\\lim_{t\\to\\infty}\\left(1+\\frac1t\\right)^t=e$.</p>"
    ],
    "solution": "<p>לכל $x&gt;4$: $\\frac{x+3}{x-4}=1+\\frac{7}{x-4}$. נסמן $t=\\frac{x-4}{7}\\to\\infty$, אז $x=7t+4$ ו-\n\\[ \\left(\\frac{x+3}{x-4}\\right)^x=\\left(1+\\frac1t\\right)^{7t+4}=\\left[\\left(1+\\frac1t\\right)^{t}\\right]^7\\cdot\\left(1+\\frac1t\\right)^4\\xrightarrow[t\\to\\infty]{}e^7\\cdot1. \\]\n(לחלופין: $x\\ln\\frac{x+3}{x-4}=\\frac{\\ln(x+3)-\\ln(x-4)}{1/x}$, ולפי לופיטל הגבול הוא $\\lim\\frac{\\frac1{x+3}-\\frac1{x-4}}{-1/x^2}=\\lim\\frac{7x^2}{(x+3)(x-4)}=7$.)\nהתשובה: $\\boxed{e^7}$.</p>",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7410,6 +7728,7 @@ window.BANK = {
     "<p>בדקו קודם את תחום ההגדרה של $\\sqrt{1+x}$ ליד $x=-8$.</p>"
    ],
    "solution": "<strong>כפי שהשאלה מודפסת</strong>, הביטוי $\\sqrt{1+x}$ מוגדר (בממשיים) רק עבור $x\\ge-1$, ולכן הפונקציה אינה מוגדרת באף סביבה מנוקבת של $x=-8$, והגבול <strong>אינו מוגדר</strong>. (גם ההצבה $x=-8$ נותנת $\\sqrt{-7}$.)\n\nככל הנראה נפלה טעות דפוס, והכוונה ל-$\\frac{\\sqrt{1-x}-3}{2+\\sqrt[3]{x}}$ — אז בנקודה $x=-8$ המונה $\\sqrt9-3=0$ והמכנה $2+(-2)=0$, גבול מהצורה $\\frac00$. נפתור גבול זה. נכפיל ב\"צמודים\": במונה $\\sqrt{1-x}-3=\\frac{(1-x)-9}{\\sqrt{1-x}+3}=\\frac{-(x+8)}{\\sqrt{1-x}+3}$, ובמכנה, לפי $a^3+b^3=(a+b)(a^2-ab+b^2)$ עם $a=2,\\ b=\\sqrt[3]x$:\n\\[ 2+\\sqrt[3]{x}=\\frac{8+x}{4-2\\sqrt[3]{x}+\\sqrt[3]{x^2}}. \\]\nלכן עבור $x\\neq-8$:\n\\[ \\frac{\\sqrt{1-x}-3}{2+\\sqrt[3]{x}}=-\\frac{4-2\\sqrt[3]{x}+\\sqrt[3]{x^2}}{\\sqrt{1-x}+3}\\xrightarrow[x\\to-8]{}-\\frac{4+4+4}{3+3}=-2, \\]\nלפי רציפות הביטוי האחרון ב-$x=-8$. (אותה תוצאה מתקבלת מכלל לופיטל: $\\frac{-\\frac{1}{2\\sqrt{1-x}}}{\\frac{1}{3\\sqrt[3]{x^2}}}\\to\\frac{-1/6}{1/12}=-2$.)\nהתשובה: כפי שמודפס — הגבול אינו מוגדר; בגרסה המתוקנת $\\sqrt{1-x}$ — הגבול הוא $\\boxed{-2}$.",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7435,6 +7754,7 @@ window.BANK = {
     "<p>גזירות גוררת רציפות, אז תנאי סעיף א' חייב להתקיים. חשבו את הנגזרות החד-צדדיות לפי ההגדרה.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\nהפולינומים רציפים, לכן\n  \\[ \\lim_{x\\to0^-}f(x)=a\\cdot0+b\\cdot0+1=1,\\qquad \\lim_{x\\to0^+}f(x)=1. \\]\n  הגבול ב-$0$ קיים ושווה $1$ לכל $a,b$, ו-$f$ רציפה ב-$0$ אם ורק אם $f(0)=b-2=1$.\n  <strong>תשובה:</strong> $b=3$ ו-$a\\in\\R$ כלשהו.\n</li>\n<li>\nאם $f$ גזירה ב-$0$ אז היא רציפה שם, לכן $b=3$ ו-$f(0)=1$. נחשב נגזרות חד-צדדיות לפי ההגדרה:\n  \\[ f'_-(0)=\\lim_{h\\to0^-}\\frac{ah^2+bh+1-1}{h}=\\lim_{h\\to0^-}(ah+b)=b, \\qquad f'_+(0)=\\lim_{h\\to0^+}\\frac{bh^2+ah+1-1}{h}=\\lim_{h\\to0^+}(bh+a)=a. \\]\n  $f$ גזירה ב-$0$ אם ורק אם $f'_-(0)=f'_+(0)$, כלומר $a=b$. יחד עם $b=3$:\n  <strong>תשובה:</strong> כן, בדיוק עבור $a=b=3$, ואז $f'(0)=3$.\n</li>\n</ol>",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7459,6 +7779,7 @@ window.BANK = {
     "<p>$f=e^{g}$ עם $g(x)=3x-x^3$; מכיוון ש-$e^t$ עולה, $f$ עולה/יורדת בדיוק היכן ש-$g$ עולה/יורדת.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> כל $\\R$; $f$ רציפה וגזירה בכל מקום, ו-$f(x)&gt;0$ לכל $x$ (אין חיתוך עם ציר $x$). חיתוך עם ציר $y$: $f(0)=e^0=1$.\n\n<strong>נגזרת:</strong> לפי כלל השרשרת\n\\[ f'(x)=e^{-(x^3-3x)}\\cdot(-(3x^2-3))=3(1-x^2)\\,e^{-(x^3-3x)}=3(1-x)(1+x)\\,e^{3x-x^3}. \\]\nהאקספוננט חיובי, לכן סימן $f'$ הוא סימן $1-x^2$:\n\n<ul>\n<li>\n$(-\\infty,-1)$: $f'&lt;0$, $f$ <strong>יורדת</strong>.\n</li>\n<li>\n$(-1,1)$: $f'&gt;0$, $f$ <strong>עולה</strong>.\n</li>\n<li>\n$(1,\\infty)$: $f'&lt;0$, $f$ <strong>יורדת</strong>.\n</li>\n</ul>\n<p><strong>נקודות קיצון:</strong> ב-$x=-1$ הנגזרת עוברת מ-$-$ ל-$+$: <strong>מינימום מקומי</strong> $f(-1)=e^{-(-1+3)}=e^{-2}\\approx0.135$. ב-$x=1$ הנגזרת עוברת מ-$+$ ל-$-$: <strong>מקסימום מקומי</strong> $f(1)=e^{-(1-3)}=e^{2}\\approx7.39$.</p>\n<p><strong>אסימפטוטות:</strong></p>\n<ul>\n<li>\nאנכיות: אין, $f$ רציפה על כל הישר.\n</li>\n<li>\n$x\\to+\\infty$: $3x-x^3=-x^3\\left(1-\\frac{3}{x^2}\\right)\\to-\\infty$, לכן $f(x)\\to0$: אסימפטוטה אופקית $y=0$ (הגרף מעליה).\n</li>\n<li>\n$x\\to-\\infty$: $3x-x^3\\to+\\infty$, לכן $f(x)\\to+\\infty$; גם $\\frac{f(x)}{x}\\to-\\infty$ (מונה $\\to+\\infty$, מכנה $\\to-\\infty$), ולכן אין אסימפטוטה אופקית או משופעת ב-$-\\infty$.\n</li>\n</ul>\n<p><strong>הגרף:</strong> מגיע מ-$+\\infty$ בצד שמאל, יורד עד המינימום המקומי $(-1,e^{-2})$, עולה דרך $(0,1)$ עד המקסימום המקומי $(1,e^2)$, ואז יורד ושואף ל-$0$ (מעל ציר $x$) כאשר $x\\to\\infty$. הגרף כולו מעל ציר $x$.</p>",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7483,6 +7804,7 @@ window.BANK = {
     "<p>$f$ זוגית, ולכן מקדם $x$ ומקדם $x^3$ מתאפסים; נשאר לחשב את $f(0)$ ו-$f''(0)$.</p>"
    ],
    "solution": "<p>נחשב נגזרות לפי כלל השרשרת:\n\\[ f'(x)=\\cos(\\cos x)\\cdot(-\\sin x)=-\\sin x\\cos(\\cos x), \\]\n\\[ f''(x)=-\\cos x\\cos(\\cos x)-\\sin x\\cdot\\sin(\\cos x)\\cdot\\sin x=-\\cos x\\cos(\\cos x)-\\sin^2x\\,\\sin(\\cos x). \\]\nבנקודה $0$: $f(0)=\\sin1$, $f'(0)=0$, $f''(0)=-\\cos1$. מכיוון ש-$f(-x)=\\sin(\\cos(-x))=f(x)$, הפונקציה זוגית, ולכן כל נגזרותיה מסדר אי-זוגי מתאפסות ב-$0$ (הנגזרת של פונקציה זוגית היא אי-זוגית), ובפרט $f'''(0)=0$. לכן\n\\[ P_3(x)=f(0)+f'(0)x+\\frac{f''(0)}{2}x^2+\\frac{f'''(0)}{6}x^3=\\boxed{\\sin1-\\frac{\\cos1}{2}x^2}. \\]\n(בקירוב: $0.8415-0.2702x^2$.)</p>",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7507,6 +7829,7 @@ window.BANK = {
     "<p>השתמשו במשיק לגרף $f$ בנקודה קרובה ל-$7$ שבה הערך ידוע.</p>"
    ],
    "solution": "<p>$f(x)=\\sqrt[3]{x^2}=x^{2/3}$ סביב $a=8$, שם $f(8)=4$. $f'(x)=\\frac23x^{-1/3}$, $f'(8)=\\frac23\\cdot\\frac12=\\frac13$. הקירוב הלינארי:\n\\[ f(x)\\approx4+\\frac13(x-8), \\qquad \\sqrt[3]{7^2}=f(7)\\approx4-\\frac13=\\boxed{\\frac{11}{3}\\approx3.667}. \\]\n(הערך האמיתי $\\sqrt[3]{49}\\approx3.659$.)</p>",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7531,6 +7854,7 @@ window.BANK = {
     "<p>חילוק פולינומים ושברים חלקיים, $x^2+x-2=(x+2)(x-1)$.</p>"
    ],
    "solution": "<p>חילוק פולינומים:\n\\[ x^3=(x-1)(x^2+x-2)+(3x-2), \\]\n(בדיקה: $(x-1)(x^2+x-2)=x^3-3x+2$, והשארית $x^3-(x^3-3x+2)=3x-2$.) שברים חלקיים: $\\frac{3x-2}{(x+2)(x-1)}=\\frac{A}{x+2}+\\frac{B}{x-1}$, כלומר $3x-2=A(x-1)+B(x+2)$. עבור $x=1$: $1=3B$, $B=\\frac13$. עבור $x=-2$: $-8=-3A$, $A=\\frac83$. לכן\n\\[ \\int\\frac{x^3}{x^2+x-2}dx=\\int\\left(x-1+\\frac{8/3}{x+2}+\\frac{1/3}{x-1}\\right)dx=\\boxed{\\frac{x^2}{2}-x+\\frac83\\ln|x+2|+\\frac13\\ln|x-1|+C}. \\]</p>",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7555,6 +7879,7 @@ window.BANK = {
     "<p>אינטגרציה בחלקים עם $u=x$.</p>"
    ],
    "solution": "<p>אינטגרציה בחלקים עם $u=x$, $v'=e^{-x}$, כלומר $u'=1$, $v=-e^{-x}$:\n\\[ \\int_0^{\\ln2}xe^{-x}dx=\\Big[-xe^{-x}\\Big]_0^{\\ln2}+\\int_0^{\\ln2}e^{-x}dx=-\\frac{\\ln2}{2}+\\Big[-e^{-x}\\Big]_0^{\\ln2}=-\\frac{\\ln2}{2}+\\left(1-\\frac12\\right), \\]\nכי $e^{-\\ln2}=\\frac12$. לכן\n\\[ \\int_0^{\\ln2}xe^{-x}dx=\\boxed{\\frac{1-\\ln2}{2}}\\approx0.153. \\]</p>",
+   "src": "מועד ג' תשפ\"ד סמסטר ב'",
    "exam": "תשפ\"ד סמסטר ב מועד ג"
   },
   {
@@ -7579,6 +7904,7 @@ window.BANK = {
     "<p>זהו גבול מהצורה $1^\\infty$. כתבו את הבסיס בצורה $1+\\frac{1}{x^2+x+1}$.</p>"
    ],
    "solution": "<p>הבסיס שואף ל-1 והמעריך ל-$\\infty$ — גבול מהצורה $1^\\infty$. נכתוב את הבסיס כ-\n\\[\n\\frac{x^2+x+2}{x^2+x+1}=\\frac{x^2+x+1+1}{x^2+x+1}=1+\\frac{1}{x^2+x+1},\n\\]\nונכפול ונחלק את המעריך ב-$x^2+x+1$:\n\\[\n\\left(1+\\frac{1}{x^2+x+1}\\right)^{2x^2+4}\n=\\left[\\left(1+\\frac{1}{x^2+x+1}\\right)^{x^2+x+1}\\right]^{\\frac{2x^2+4}{x^2+x+1}} .\n\\]\n<strong>הבסיס הפנימי:</strong> נציב $y=x^2+x+1$; כאשר $x\\to\\infty$ גם $y\\to\\infty$, ולפי הגבול היסודי\n\\[\n\\lim_{y\\to\\infty}\\left(1+\\frac1y\\right)^y=e\n\\]\n(ומשפט הגבול של הרכבה) הבסיס הפנימי שואף ל-$e$.</p>\n<p><strong>המעריך:</strong> חלוקה ב-$x^2$ נותנת\n\\[\n\\lim_{x\\to\\infty}\\frac{2x^2+4}{x^2+x+1}=\\lim_{x\\to\\infty}\\frac{2+\\frac4{x^2}}{1+\\frac1x+\\frac1{x^2}}=2 .\n\\]\n<strong>סיכום:</strong> אם $u(x)\\to e&gt;0$ ו-$v(x)\\to2$ אז $u^v=e^{v\\ln u}\\to e^{2\\ln e}=e^2$, מרציפות $\\ln$ ו-$\\exp$ (גבול של מנה/מכפלה ורציפות). לכן\n\\[\n\\lim_{x\\to\\infty}\\left(\\frac{x^2+x+2}{x^2+x+1}\\right)^{2x^2+4}=\\boxed{e^2}.\n\\]</p>",
+   "src": "בוחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן לדוגמה"
   },
   {
@@ -7605,6 +7931,7 @@ window.BANK = {
     "<p>ב-$x=4$: $x^2-3x-4=(x-4)(x+1)$, וכפלו וחלקו ב-$2+\\sqrt x$.</p>"
    ],
    "solution": "<strong>נקודות שאינן נקודות תפר.</strong> בכל נקודה $x&lt;0$ הפונקציה היא מנה של פונקציות רציפות עם מכנה שונה מ-0; בכל נקודה $0&lt;x&lt;4$ היא פולינום; ובכל נקודה $x&gt;4$ היא מנה של פונקציות רציפות עם מכנה $2-\\sqrt x\\neq0$ (כי $\\sqrt x&gt;2$). מכיוון שבכל אחת מהנקודות האלה $f$ מתלכדת עם הנוסחה בסביבה שלמה, $f$ רציפה בהן לכל $a,b$. נותר לבדוק את $x=0$ ואת $x=4$.\n\n<strong>הנקודה $x=0$.</strong> $f(0)=b$. משמאל, לפי $\\lim_{y\\to0}\\frac{\\sin y}{y}=1$ עם $y=8x$:\n\\[\n\\lim_{x\\to0^-}\\frac{\\sin(8x)}{x}=8\\lim_{x\\to0^-}\\frac{\\sin(8x)}{8x}=8\\lim_{y\\to0^-}\\frac{\\sin y}{y}=8\\cdot1=8 .\n\\]\nמימין: $\\lim_{x\\to0^+}(ax+b)=b=f(0)$ (רציפות פולינום). לכן $f$ רציפה ב-0 אם ורק אם $\\boxed{b=8}$.\n\n<strong>הנקודה $x=4$.</strong> $f(4)=4a+b=4a+8$, ומשמאל $\\lim_{x\\to4^-}(ax+8)=4a+8=f(4)$. מימין, גבול מהצורה $\\frac00$. נכפול בצמוד:\n\\[\n\\frac{x^2-3x-4}{2-\\sqrt x}\\cdot\\frac{2+\\sqrt x}{2+\\sqrt x}=\\frac{(x-4)(x+1)(2+\\sqrt x)}{4-x}=-(x+1)(2+\\sqrt x)\\qquad(x\\neq4),\n\\]\nולכן, מרציפות הביטוי האחרון ב-4,\n\\[\n\\lim_{x\\to4^+}f(x)=-(4+1)(2+\\sqrt4)=-5\\cdot4=-20 .\n\\]\n$f$ רציפה ב-4 אם ורק אם $4a+8=-20$, כלומר $\\boxed{a=-7}$.\n\n<strong>תשובה:</strong> $f$ רציפה ב-$\\R$ אם ורק אם $a=-7,\\ b=8$.\n\n(הערה: בפתרון בכתב יד המצורף הסימן \"$-$\" הושמט בשורה $-\\lim(x+1)(2+\\sqrt x)=5\\cdot4=20$, אבל בשורה הבאה נכתב נכון $4a+8=-20$ והתשובה $a=-7$ נכונה.)",
+   "src": "בוחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן לדוגמה"
   },
   {
@@ -7629,6 +7956,7 @@ window.BANK = {
     "<p>הגדירו $f(x)=x^2+\\ln x$ על $(0,\\infty)$ וחפשו נקודות שבהן קל לחשב את $\\ln$, כמו $x=1$ ו-$x=\\frac1e$.</p>"
    ],
    "solution": "<p>נגדיר $f(x)=x^2+\\ln x$ על $(0,\\infty)$. $f$ רציפה שם כסכום של פולינום ושל פונקציית הלוגריתם, הרציפה בתחום הגדרתה.</p>\n<p>נחשב:\n\\[\nf\\!\\left(\\tfrac1e\\right)=\\frac1{e^2}+\\ln\\frac1e=\\frac{1}{e^2}-1&lt;0,\\qquad f(1)=1^2+\\ln1=1&gt;0 ,\n\\]\nכי $e^2&gt;1$.</p>\n<p>$f$ רציפה בקטע הסגור $\\left[\\frac1e,1\\right]\\subset(0,\\infty)$ ומחליפה סימן בקצותיו. לפי משפט ערך הביניים (בולצאנו) קיים $c\\in\\left(\\frac1e,1\\right)$ עם $f(c)=0$, כלומר שורש ממשי של המשוואה.</p>\n<p><strong>הקטע המבוקש:</strong> $\\left[\\frac1e,1\\right]$, שאורכו $1-\\frac1e&lt;1$.</p>\n<p>(הערה: השורש יחיד, כי $f$ עולה ממש כסכום של $x^2$ ו-$\\ln x$, שתיהן עולות ממש על $(0,\\infty)$. מספרית $c\\approx0.653$. אפשר גם לבחור קטע שלא מצריך את $e$, למשל $\\left[\\frac12,1\\right]$: $f(\\frac12)=\\frac14-\\ln2&lt;0$.)</p>",
+   "src": "בוחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן לדוגמה"
   },
   {
@@ -7654,6 +7982,7 @@ window.BANK = {
     "<p>מכפלה של זוגית בזוגית היא זוגית; מכפלה של אי-זוגית בזוגית היא אי-זוגית. להפרכה מספיקה דוגמה אחת, למשל $f\\equiv1$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (א)</strong>.\n\n<strong>(א) נכונה:</strong> תחום ההגדרה של $g$ הוא תחום ההגדרה של $f$, שהוא סימטרי (כי $f$ זוגית). לכל $x$ בתחום, מכיוון ש-$f(-x)=f(x)$, $(-x)^2=x^2$ ו-$|-x|=|x|$:\n\\[\ng(-x)=(-x)^2f(-x)-\\frac{1}{|-x|+1}=x^2f(x)-\\frac{1}{|x|+1}=g(x).\n\\]\n\n<strong>למה האחרות שגויות</strong> (הטענות צריכות להתקיים לכל $f$ זוגית, ולכן מספיקה דוגמה נגדית אחת; ניקח $f(x)\\equiv1$, שהיא זוגית):\n\n<ul>\n<li>\n(ב) — $g(x)=x^3-x|x|$: $g(2)=8-4=4$ ואילו $g(-2)=-8+4=-4\\neq g(2)$. (באופן כללי $g$ זו היא אי-זוגית, כהפרש של שתי פונקציות אי-זוגיות.)\n</li>\n<li>\n(ג) — $g(x)=x^3+1$: $g(1)=2$ ואילו $g(-1)=0$.\n</li>\n<li>\n(ד) — $g(x)=\\frac{1}{x^2+x}=\\frac{1}{x(x+1)}$ מוגדרת ב-$x=1$ אבל לא ב-$x=-1$, ולכן תחום ההגדרה אינו סימטרי ו-$g$ אינה אי-זוגית. (גם ללא שיקול התחום: $g(2)=\\frac16$ ו-$g(-2)=\\frac{1}{4-2}=\\frac12\\neq-\\frac16=-g(2)$.)\n</li>\n</ul>",
+   "src": "בוחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן לדוגמה"
   },
   {
@@ -7679,6 +8008,7 @@ window.BANK = {
     "<p>בדקו כל חלק בנפרד, ואז השוו ערך כלשהו משמאל ל-0 לערך כלשהו מימין ל-0.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג)</strong>.\n\n(שימו לב: כפי שהפונקציה כתובה, היא אינה מוגדרת ב-$x=0$; בפתרון המצורף נכתב $x\\le0$ בחלק הראשון. התשובה זהה בשני המקרים.)\n\nיהיו $x_1&lt;x_2$ בתחום ההגדרה. נבחין בשלושה מקרים:\n\n<ul>\n<li>\n$x_1&lt;x_2&lt;0$: $f(x_2)-f(x_1)=3(x_2-x_1)&gt;0$.\n</li>\n<li>\n$0&lt;x_1&lt;x_2$: $f(x_2)-f(x_1)=x_2^2-x_1^2=(x_2-x_1)(x_2+x_1)&gt;0$, כי שני הגורמים חיוביים.\n</li>\n<li>\n$x_1&lt;0&lt;x_2$: $f(x_1)=3x_1-1&lt;-1&lt;0&lt;x_2^2=f(x_2)$.\n</li>\n</ul>\n<p>(אם מגדירים $f(0)=3\\cdot0-1=-1$, גם המקרים $x_1&lt;0=x_2$ ו-$x_1=0&lt;x_2$ מקיימים $f(x_1)&lt;f(x_2)$ באותו אופן.)\nבכל המקרים $f(x_1)&lt;f(x_2)$, ולכן $f$ עולה ממש.</p>\n<p><strong>למה האחרות שגויות:</strong> (א) — הראינו ש-$f$ מונוטונית. (ב) — למשל $f(1)=1&gt;f(-1)=-4$, ולכן אינה יורדת. (ד) — \"מונוטונית אך לא ממש\" אומר שקיימים $x_1&lt;x_2$ עם $f(x_1)=f(x_2)$, וזה לא קורה כי $f$ עולה ממש.</p>",
+   "src": "בוחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן לדוגמה"
   },
   {
@@ -7702,6 +8032,7 @@ window.BANK = {
    "question": "<p>תהי $f(x)$ הפונקציה שהוגדרה בשאלה קודמת. אילו מהטענות הבאות נכונה?</p>\n<ol class=\"parts\">\n<li>\nהפונקציה חח\"ע ועל $\\R$.\n</li>\n<li>\nהפונקציה חח\"ע אך אינה על $\\R$.\n</li>\n<li>\nהפונקציה על $\\R$ אך אינה חח\"ע.\n</li>\n<li>\nהפונקציה אינה חח\"ע ואינה על $\\R$.\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: (ב)</strong>.\n\n(הפונקציה מהשאלה הקודמת: $f(x)=3x-1$ עבור $x&lt;0$ ו-$f(x)=x^2$ עבור $x&gt;0$.)\n\n<strong>חח\"ע:</strong> בשאלה הקודמת הראינו ש-$f$ עולה ממש, ופונקציה עולה ממש היא חח\"ע: אם $x_1\\neq x_2$, נניח $x_1&lt;x_2$, אז $f(x_1)&lt;f(x_2)$ ובפרט $f(x_1)\\neq f(x_2)$.\n\n<strong>אינה על $\\R$:</strong> עבור $x&lt;0$ מתקיים $f(x)=3x-1&lt;-1$, ועבור $x&gt;0$ מתקיים $f(x)=x^2&gt;0$. לכן אף ערך בקטע $[-1,0]$ אינו מתקבל; למשל אין $x$ עם $f(x)=-\\frac12$. (התמונה היא $(-\\infty,-1)\\cup(0,\\infty)$; אם מגדירים $f(0)=-1$ כמו בפתרון המצורף, התמונה היא $(-\\infty,-1]\\cup(0,\\infty)$, ועדיין $-\\frac12$ אינו מתקבל.)\n\n<strong>למה האחרות שגויות:</strong> (א) ו-(ג) טוענות ש-$f$ על $\\R$ — הפרכנו. (ג) ו-(ד) טוענות ש-$f$ אינה חח\"ע — הפרכנו.",
+   "src": "בוחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן לדוגמה"
   },
   {
@@ -7728,6 +8059,7 @@ window.BANK = {
     "<p>משמאל: פונקציה השואפת ל-0 כפול פונקציה חסומה.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג)</strong>.\n\n<strong>משמאל:</strong> $\\lim_{x\\to0^-}\\sin x=0$ (רציפות $\\sin$) ו-$\\left|\\cos\\frac1x\\right|\\le1$ לכל $x\\neq0$. לפי המשפט \"אפסה כפול חסומה שואפת ל-0\" (או בסנדוויץ' $-|\\sin x|\\le\\sin x\\cos\\frac1x\\le|\\sin x|$):\n\\[\n\\lim_{x\\to0^-}f(x)=\\lim_{x\\to0^-}\\sin(x)\\cos\\left(\\tfrac1x\\right)=0 .\n\\]\n<strong>מימין:</strong> $\\frac{1}{1+x^2}$ רציפה, ולכן $\\lim_{x\\to0^+}f(x)=\\frac{1}{1+0}=1=f(0)$.\n\nשני הגבולות החד-צדדיים קיימים וסופיים אך שונים ($0\\neq1$), ולכן יש ב-0 אי-רציפות מסוג קפיצה.\n\n<strong>למה האחרות שגויות:</strong> (א) ו-(ב) — שתיהן דורשות שהגבול הדו-צדדי ב-0 יהיה קיים, והוא אינו קיים. (ד) — אף על פי ש-$\\cos\\frac1x$ לבדה אינה בעלת גבול ב-0, המכפלה עם $\\sin x$ כן שואפת ל-0, ולכן שני הגבולות החד-צדדיים קיימים וסופיים; אי-רציפות עיקרית דורשת שאחד מהם לא יהיה קיים כגבול סופי.",
+   "src": "בוחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן לדוגמה"
   },
   {
@@ -7752,6 +8084,7 @@ window.BANK = {
     "<p>זהו גבול מהצורה $\\infty-\\infty$. כפלו וחלקו בצמוד $\\sqrt{x^2+5x}+\\sqrt{x^2-5x}$.</p>"
    ],
    "solution": "<p>עבור $x&gt;5$ שני השורשים מוגדרים וחיוביים. זהו גבול מהצורה $\\infty-\\infty$, ולכן נכפול ונחלק בביטוי הצמוד (החיובי):\n\\[\n\\sqrt{x^2+5x}-\\sqrt{x^2-5x}\n=\\frac{(x^2+5x)-(x^2-5x)}{\\sqrt{x^2+5x}+\\sqrt{x^2-5x}}\n=\\frac{10x}{\\sqrt{x^2+5x}+\\sqrt{x^2-5x}} .\n\\]\nנחלק מונה ומכנה ב-$x$. מכיוון ש-$x&gt;0$ מתקיים $x=\\sqrt{x^2}$, ולכן\n\\[\n=\\frac{10}{\\sqrt{1+\\frac5x}+\\sqrt{1-\\frac5x}} .\n\\]\nכאשר $x\\to\\infty$: $\\frac5x\\to 0$, ומרציפות פונקציית השורש ב-1 נקבל $\\sqrt{1\\pm\\frac5x}\\to 1$. לפי אריתמטיקה של גבולות (המכנה שואף ל-$2\\neq 0$):\n\\[\n\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+5x}-\\sqrt{x^2-5x}\\right)=\\frac{10}{1+1}=\\boxed{5}.\n\\]</p>",
+   "src": "בוחן תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן"
   },
   {
@@ -7778,6 +8111,7 @@ window.BANK = {
     "<p>השתמשו בגבולות היסודיים $\\frac{\\sin t}{t}\\to1$, $\\frac{1-\\cos x}{x^2}\\to\\frac12$, $\\frac{e^x-1}{x}\\to1$ (אסור להשתמש בכלל לופיטל בבוחן).</p>"
    ],
    "solution": "<p>הפונקציה רציפה ב-0 אם ורק אם\n\\[\n\\lim_{x\\to0^-}f(x)=\\lim_{x\\to0^+}f(x)=f(0)=b .\n\\]</p>\n<p><strong>הגבול משמאל.</strong> נשתמש בגבול היסודי\n\\[\n\\lim_{x\\to0}\\frac{1-\\cos x}{x^2}=\\frac12 ,\n\\]\nהנובע מהזהות $1-\\cos x=2\\sin^2\\frac x2$: $\\frac{1-\\cos x}{x^2}=\\frac12\\left(\\frac{\\sin(x/2)}{x/2}\\right)^2\\to\\frac12$.\nאם $a\\neq0$ נכתוב, עבור $x&lt;0$ קרוב ל-0:\n\\[\n\\frac{x\\sin(ax)}{1-\\cos x}=a\\cdot\\frac{\\sin(ax)}{ax}\\cdot\\frac{x^2}{1-\\cos x}\\xrightarrow[x\\to0^-]{}a\\cdot1\\cdot2=2a ,\n\\]\nלפי $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$ (הצבה $t=ax\\to0$) ואריתמטיקה של גבולות.\nאם $a=0$ אז $f(x)=0$ לכל $x&lt;0$ והגבול משמאל הוא $0=2a$. בכל מקרה\n\\[\n\\lim_{x\\to0^-}f(x)=2a .\n\\]</p>\n<p><strong>הגבול מימין.</strong>\n\\[\n\\frac{e^x-1}{xe^x}=\\frac{e^x-1}{x}\\cdot\\frac{1}{e^x}\\xrightarrow[x\\to0^+]{}1\\cdot\\frac{1}{e^0}=1 ,\n\\]\nלפי הגבול היסודי $\\lim_{x\\to0}\\frac{e^x-1}{x}=\\ln e=1$ (מדף הנוסחאות) ורציפות $e^x$ ב-0.</p>\n<p><strong>מסקנה.</strong> $f$ רציפה ב-0 אם ורק אם $2a=1=b$, כלומר\n\\[\n\\boxed{a=\\tfrac12,\\quad b=1.}\n\\]</p>",
+   "src": "בוחן תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן"
   },
   {
@@ -7802,6 +8136,7 @@ window.BANK = {
     "<p>תחום ההגדרה של הפונקציה ההפוכה הוא התמונה של $f$. מצאו את התמונה, ואז חלצו את $x$ מהמשוואה $y=\\ln(1+\\sqrt x)$.</p>"
    ],
    "solution": "<strong>תחום ההגדרה והתמונה של $f$.</strong> $\\sqrt x$ מוגדר עבור $x\\ge0$, ואז $1+\\sqrt x\\ge1&gt;0$ ולכן $\\ln(1+\\sqrt x)$ מוגדר. לכן $D_f=[0,\\infty)$.\n\n$f$ עולה ממש: $\\sqrt x$ עולה ממש על $[0,\\infty)$ ו-$\\ln$ עולה ממש, והרכבה של פונקציות עולות ממש היא עולה ממש. בפרט $f$ חד-חד-ערכית ולכן הפיכה על התמונה שלה.\n\nהתמונה: $f(0)=\\ln 1=0$ ולכן $f(x)\\ge0$ לכל $x\\ge0$. לכל $y\\ge0$ נמצא בהמשך $x\\ge0$ עם $f(x)=y$, ולכן $\\operatorname{Im}f=[0,\\infty)$.\n\n<strong>חישוב ההופכית.</strong> יהי $y\\ge0$. נפתור $y=\\ln(1+\\sqrt x)$:\n\\[\ne^y=1+\\sqrt x\\iff \\sqrt x=e^y-1 .\n\\]\nמכיוון ש-$y\\ge0$ מתקיים $e^y-1\\ge0$, ולכן יש פתרון יחיד $x=(e^y-1)^2\\ge0$. (עבור $y&lt;0$ היה מתקבל $\\sqrt x&lt;0$ — אין פתרון, כצפוי מכך ש-$y$ אינו בתמונה.)\n\nלכן\n\\[\n\\boxed{f^{-1}(x)=\\left(e^x-1\\right)^2,\\qquad D_{f^{-1}}=[0,\\infty).}\n\\]\n<strong>בדיקה:</strong> עבור $x\\ge0$: $f(f^{-1}(x))=\\ln\\left(1+\\sqrt{(e^x-1)^2}\\right)=\\ln\\left(1+|e^x-1|\\right)=\\ln(e^x)=x$, כי $e^x-1\\ge0$. שימו לב שהגבלת התחום ל-$[0,\\infty)$ הכרחית: הנוסחה $(e^x-1)^2$ מוגדרת לכל $x$, אבל עבור $x&lt;0$ היא אינה הפכית של $f$.",
+   "src": "בוחן תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן"
   },
   {
@@ -7825,6 +8160,7 @@ window.BANK = {
    "question": "<p>יהיו\n\\[\nf(x)=e^x,\\qquad g(x)=\\cos(2x)\n\\]\nאילו מהטענות הבאות נכונה?</p>\n<ol class=\"parts\">\n<li>\nהפונקציה $f\\circ g$ מחזורית.\n</li>\n<li>\nהפונקציה $f\\circ g$ זוגית.\n</li>\n<li>\nהפונקציה $f\\circ g$ חסומה ב-$\\R$.\n</li>\n<li>\nכל התשובות נכונות\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: (ד)</strong>.\n\n$(f\\circ g)(x)=f(g(x))=e^{\\cos 2x}$, מוגדרת לכל $x\\in\\R$. נבדוק כל טענה:\n\n<ul>\n<li>\n<strong>(א) נכונה:</strong> $\\cos$ מחזורית עם מחזור $2\\pi$, ולכן $\\cos(2(x+\\pi))=\\cos(2x+2\\pi)=\\cos 2x$, ומכאן $(f\\circ g)(x+\\pi)=e^{\\cos 2x}=(f\\circ g)(x)$ לכל $x$. כלומר $f\\circ g$ מחזורית (עם מחזור $\\pi$).\n  \n</li>\n<li>\n<strong>(ב) נכונה:</strong> $\\cos$ זוגית, ולכן $(f\\circ g)(-x)=e^{\\cos(-2x)}=e^{\\cos 2x}=(f\\circ g)(x)$ לכל $x$.\n  \n</li>\n<li>\n<strong>(ג) נכונה:</strong> $-1\\le\\cos 2x\\le 1$ ו-$e^t$ עולה ממש, ולכן $e^{-1}\\le e^{\\cos 2x}\\le e$ לכל $x\\in\\R$.\n\n</li>\n</ul>\n<p>מכיוון ששלוש הטענות נכונות, התשובה היא (ד). (כל אחת מ-(א), (ב), (ג) לבדה אינה התשובה המלאה, שכן גם האחרות נכונות.)</p>",
+   "src": "בוחן תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן"
   },
   {
@@ -7848,6 +8184,7 @@ window.BANK = {
    "question": "<p>תהי $f(x)=3^{-3x+3}$. אילו מהטענות הבאות נכונה?</p>\n<ol class=\"parts\">\n<li>\nהפונקציה אינה מונוטונית.\n</li>\n<li>\nהפונקציה מונוטונית יורדת ממש.\n</li>\n<li>\nהפונקציה מונוטונית עולה ממש.\n</li>\n<li>\nהפונקציה מונוטונית אך לא ממש.\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: (ב)</strong>.\n\n$f$ היא הרכבה $f=h\\circ u$ של $u(x)=-3x+3$ ו-$h(t)=3^t$. הפונקציה $u$ יורדת ממש (פונקציה לינארית עם שיפוע $-3&lt;0$) והפונקציה $h$ עולה ממש (פונקציה מעריכית עם בסיס $3&gt;1$).\n\nלכן אם $x_1&lt;x_2$ אז $u(x_1)&gt;u(x_2)$, ומכאן $3^{u(x_1)}&gt;3^{u(x_2)}$, כלומר $f(x_1)&gt;f(x_2)$: $f$ יורדת ממש על $\\R$.\n(לחלופין: $f(x)=27\\cdot\\left(\\frac{1}{27}\\right)^{x}$, פונקציה מעריכית עם בסיס $\\frac1{27}&lt;1$ כפול קבוע חיובי.)\n\n<strong>למה האחרות שגויות:</strong> (א) — הראינו שהיא מונוטונית. (ג) — למשל $f(0)=27&gt;f(1)=1$, ולכן אינה עולה. (ד) — \"מונוטונית אך לא ממש\" אומר שיש $x_1&lt;x_2$ עם $f(x_1)=f(x_2)$, אבל $f$ יורדת ממש ולכן חד-חד-ערכית.",
+   "src": "בוחן תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן"
   },
   {
@@ -7874,6 +8211,7 @@ window.BANK = {
     "<p>פרקו: $x^3+x^2=x^2(x+1)$. כמה שורשים יש?</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג)</strong>.\n\n<strong>אינה חח\"ע:</strong> $f(x)=x^2(x+1)$, ולכן $f(0)=0=f(-1)$ עם $0\\neq-1$.\n\n<strong>על $\\R$:</strong> $f$ פולינום ולכן רציפה על $\\R$. כמו כן\n\\[\n\\lim_{x\\to\\infty}x^3\\left(1+\\tfrac1x\\right)=\\infty,\\qquad \\lim_{x\\to-\\infty}x^3\\left(1+\\tfrac1x\\right)=-\\infty .\n\\]\nיהי $y\\in\\R$. לפי הגדרת הגבולות האינסופיים קיימים $x_1&lt;x_2$ עם $f(x_1)&lt;y&lt;f(x_2)$. לפי משפט ערך הביניים ($f$ רציפה על $[x_1,x_2]$) קיים $c\\in(x_1,x_2)$ עם $f(c)=y$. לכן $f$ על $\\R$.\n\n<strong>למה האחרות שגויות:</strong> (א) ו-(ב) טוענות ש-$f$ חח\"ע — הפרכנו. (ד) טוענת ש-$f$ אינה על — הוכחנו שהיא על.",
+   "src": "בוחן תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן"
   },
   {
@@ -7900,6 +8238,7 @@ window.BANK = {
     "<p>חשבו בנפרד את הגבולות החד-צדדיים: לאן שואף $\\frac{1}{x-2}$ כאשר $x\\to2^+$ וכאשר $x\\to2^-$?</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג)</strong>.\n\nנחשב את הגבולות החד-צדדיים ב-2.\n\n<strong>מימין:</strong> כאשר $x\\to2^+$, $x-2\\to0^+$ ולכן $\\frac1{x-2}\\to+\\infty$. מכיוון ש-$4&gt;1$, $\\lim_{t\\to+\\infty}4^t=\\infty$, ולכן $1+4^{\\frac{1}{x-2}}\\to\\infty$ ו-\n\\[\n\\lim_{x\\to2^+}f(x)=0 .\n\\]\n<strong>משמאל:</strong> כאשר $x\\to2^-$, $\\frac1{x-2}\\to-\\infty$ ו-$\\lim_{t\\to-\\infty}4^t=0$, ולכן\n\\[\n\\lim_{x\\to2^-}f(x)=\\frac{1}{1+0}=1 .\n\\]\nשני הגבולות החד-צדדיים קיימים (סופיים) אך שונים, ולכן הגבול $\\lim_{x\\to2}f(x)$ אינו קיים, וזו בדיוק אי-רציפות מסוג קפיצה (מסוג ראשון לא סליקה).\n\n<strong>למה האחרות שגויות:</strong> (א) — הגבול ב-2 לא קיים, ולכן $f$ אינה רציפה ב-2 (העובדה ש-$f(2)=0$ שווה לגבול מימין נותנת רק רציפות מימין). (ב) — אי-רציפות סליקה דורשת שהגבול הדו-צדדי יהיה קיים. (ד) — אי-רציפות עיקרית (מסוג שני) פירושה שלפחות אחד הגבולות החד-צדדיים אינו קיים כגבול סופי, וכאן שניהם קיימים.",
+   "src": "בוחן תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א בוחן"
   },
   {
@@ -7925,6 +8264,7 @@ window.BANK = {
     "<p>השתמשו בכך ש-$\\sin$ חסומה: \"אפסה כפול חסומה\" שואפת לאפס. לגזירות חשבו את גבול מנת ההפרשים לפי ההגדרה.</p>"
    ],
    "solution": "<strong>רציפות.</strong> לכל $x \\ne 0$ מתקיים $\\left|\\sin\\frac{5}{x}\\right| \\le 1$, ולכן\n\\[ 0 \\le |f(x)| = |x|^3\\left|\\sin\\tfrac{5}{x}\\right| \\le |x|^3 \\xrightarrow[x\\to0]{} 0. \\]\nלפי כלל הסנדוויץ' $\\lim_{x\\to0} f(x) = 0 = f(0)$, ולכן $f$ רציפה ב-$x = 0$.\n\n<strong>גזירות.</strong> לפי הגדרת הנגזרת:\n\\[ \\frac{f(x) - f(0)}{x - 0} = \\frac{x^3\\sin\\frac5x}{x} = x^2\\sin\\frac5x, \\qquad 0 \\le \\left| x^2 \\sin\\tfrac5x \\right| \\le x^2 \\xrightarrow[x\\to0]{} 0. \\]\nשוב לפי כלל הסנדוויץ' (אפסה כפול חסומה), הגבול קיים ושווה $0$. לכן $f$ גזירה ב-$x = 0$ ו-$f'(0) = 0$.\n\n<strong>תשובה:</strong> $f$ רציפה וגזירה ב-$x = 0$, ו-$f'(0) = 0$. (גזירות גוררת רציפות, כך שהרציפות נובעת גם מהגזירות.)",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -7950,6 +8290,7 @@ window.BANK = {
     "<p>זה ביטוי $1^\\infty$. כתבו $(\\tan x)^{\\tan 2x} = e^{\\tan(2x)\\ln(\\tan x)}$ וחשבו את גבול המעריך (למשל בהצבה $t = \\tan x$ ובכלל לופיטל).</p>"
    ],
    "solution": "<p>בסביבה מנוקבת של $\\frac{\\pi}{4}$ מתקיים $\\tan x &gt; 0$, ולכן הביטוי מוגדר ו-\n\\[ (\\tan x)^{\\tan 2x} = e^{\\tan(2x)\\cdot\\ln(\\tan x)}. \\]\nכאשר $x \\to \\frac{\\pi}{4}$: $\\tan x \\to 1$ ו-$|\\tan 2x| \\to \\infty$ (ביטוי $1^\\infty$). נחשב את גבול המעריך. לפי נוסחת הזווית הכפולה $\\tan 2x = \\frac{2\\tan x}{1 - \\tan^2 x}$; נציב $t = \\tan x$, ואז $t \\to 1$ כאשר $x \\to \\frac{\\pi}{4}$ ($\\tan$ רציפה), ו-$t \\ne 1$ בסביבה מנוקבת:\n\\[ \\lim_{x\\to\\frac{\\pi}{4}} \\tan(2x)\\ln(\\tan x) = \\lim_{t\\to1} \\frac{2t\\ln t}{1 - t^2}. \\]\nזה ביטוי $\\frac00$; לפי כלל לופיטל:\n\\[ \\lim_{t\\to1} \\frac{2t\\ln t}{1 - t^2} = \\lim_{t\\to1} \\frac{2\\ln t + 2}{-2t} = \\frac{0 + 2}{-2} = -1. \\]\n(לחלופין: $\\frac{2t\\ln t}{1 - t^2} = -\\frac{2t}{1 + t}\\cdot\\frac{\\ln t}{t - 1} \\to -1\\cdot 1$.)\nמרציפות פונקציית האקספוננט:\n\\[ \\boxed{\\lim_{x\\to\\frac{\\pi}{4}} (\\tan x)^{\\tan(2x)} = e^{-1} = \\frac1e}. \\]\nשימו לב שהגבול הוא דו-צדדי: אף ש-$\\tan 2x \\to +\\infty$ משמאל ו-$\\tan 2x \\to -\\infty$ מימין, המכפלה $\\tan(2x)\\ln(\\tan x)$ שואפת ל-$-1$ משני הצדדים.</p>",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -7975,6 +8316,7 @@ window.BANK = {
     "<p>$lan(x)$ הוא כנראה $\\ln(x)$. קבעו את תחום ההגדרה, ובדקו אסימפטוטה אנכית ב-$x = 0^+$ ואסימפטוטה משופעת $y = ax + b$ כאשר $x \\to +\\infty$.</p>"
    ],
    "solution": "<strong>הערה:</strong> בטופס הבחינה מופיע $lan(x)$, וזו כנראה טעות דפוס של $\\ln(x)$. נפתור עבור\n\\[ f(x) = \\frac{2x^2 - 3x + \\ln x}{x} = 2x - 3 + \\frac{\\ln x}{x}. \\]\n<strong>תחום הגדרה:</strong> $x &gt; 0$ (בגלל $\\ln x$; ממילא $x \\ne 0$). $f$ רציפה ב-$(0, \\infty)$.\n\n<strong>אסימפטוטה אנכית.</strong> הנקודה היחידה החשודה היא קצה התחום $x = 0$. כאשר $x \\to 0^+$: $\\ln x \\to -\\infty$ ו-$\\frac1x \\to +\\infty$, ולכן $\\frac{\\ln x}{x} = \\ln x\\cdot\\frac1x \\to -\\infty$, ואילו $2x - 3 \\to -3$. לכן\n\\[ \\lim_{x\\to0^+} f(x) = -\\infty, \\]\nו-$x = 0$ אסימפטוטה אנכית (מימין). בכל נקודה אחרת $f$ רציפה ולכן אין שם אסימפטוטה אנכית.\n\n<strong>אסימפטוטה משופעת.</strong> התחום אינסופי רק ב-$+\\infty$. נחשב\n\\[ a = \\lim_{x\\to\\infty}\\frac{f(x)}{x} = \\lim_{x\\to\\infty}\\left( 2 - \\frac3x + \\frac{\\ln x}{x^2} \\right) = 2, \\]\n\\[ b = \\lim_{x\\to\\infty}\\bigl(f(x) - 2x\\bigr) = \\lim_{x\\to\\infty}\\left( -3 + \\frac{\\ln x}{x} \\right) = -3, \\]\nכאשר השתמשנו ב-$\\lim_{x\\to\\infty}\\frac{\\ln x}{x} = 0$ (לפי לופיטל: $\\lim \\frac{1/x}{1} = 0$), ומכאן גם $\\frac{\\ln x}{x^2} \\to 0$. לכן $y = 2x - 3$ אסימפטוטה משופעת ב-$+\\infty$, ואין אסימפטוטה אופקית.\n\n<strong>תשובה:</strong> אסימפטוטה אנכית $x = 0$, ואסימפטוטה משופעת $y = 2x - 3$ כאשר $x \\to +\\infty$.",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -7999,6 +8341,7 @@ window.BANK = {
     "<p>$f''(x) = e^{-x}(x^2 - 4x + 2)$; בדקו את סימן הגורם הריבועי.</p>"
    ],
    "solution": "<p>$f(x) = x^2 e^{-x}$ מוגדרת וגזירה אינסוף פעמים בכל $\\R$.\n\\[ f'(x) = 2xe^{-x} - x^2e^{-x} = e^{-x}(2x - x^2), \\]\n\\[ f''(x) = -e^{-x}(2x - x^2) + e^{-x}(2 - 2x) = e^{-x}(x^2 - 4x + 2). \\]\nמכיוון ש-$e^{-x} &gt; 0$, הסימן של $f''$ הוא הסימן של $x^2 - 4x + 2$, ששורשיו\n\\[ x_{1,2} = \\frac{4 \\pm \\sqrt{16 - 8}}{2} = 2 \\pm \\sqrt2. \\]\nזו פרבולה \"מחייכת\", ולכן:</p>\n<ul>\n<li>\n$f'' &gt; 0$ ב-$(-\\infty, 2 - \\sqrt2)$ וב-$(2 + \\sqrt2, \\infty)$: שם $f$ <strong>קמורה</strong>;\n</li>\n<li>\n$f'' &lt; 0$ ב-$(2 - \\sqrt2, 2 + \\sqrt2)$: שם $f$ <strong>קעורה</strong>.\n</li>\n</ul>\n<p>בנקודות $x = 2 \\pm \\sqrt2$ הפונקציה גזירה ו-$f''$ מחליפה סימן, ולכן אלה נקודות פיתול. הערכים:\n\\[ f(2 \\pm \\sqrt2) = (2 \\pm \\sqrt2)^2 e^{-(2 \\pm \\sqrt2)} = (6 \\pm 4\\sqrt2)\\,e^{-2 \\mp \\sqrt2}. \\]</p>\n<p><strong>תשובה:</strong> $f$ קמורה ב-$(-\\infty, 2 - \\sqrt2)$ וב-$(2 + \\sqrt2, \\infty)$, קעורה ב-$(2 - \\sqrt2, 2 + \\sqrt2)$, ונקודות הפיתול הן $x = 2 - \\sqrt2$ ו-$x = 2 + \\sqrt2$.</p>",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -8023,6 +8366,7 @@ window.BANK = {
     "<p>פתחו את $f(x) = \\sqrt[4]{x}$ סביב $a = 16$, כי $\\sqrt[4]{16} = 2$, וחסמו את שארית לגרנז' $R_1$.</p>"
    ],
    "solution": "<p>נגדיר $f(x) = \\sqrt[4]{x} = x^{1/4}$ ונפתח סביב $a = 16$, הנקודה הקרובה ל-$18$ שבה השורש הרביעי ידוע. עבור $x &gt; 0$:\n\\[ f'(x) = \\frac14 x^{-3/4}, \\qquad f''(x) = -\\frac{3}{16} x^{-7/4}, \\]\nולכן $f(16) = 2$ ו-$f'(16) = \\frac{1}{4\\cdot 16^{3/4}} = \\frac{1}{4\\cdot 8} = \\frac{1}{32}$.</p>\n<p><strong>קירוב לינארי:</strong>\n\\[ P_1(x) = f(16) + f'(16)(x - 16) = 2 + \\frac{x - 16}{32}, \\qquad\n   \\sqrt[4]{18} \\approx P_1(18) = 2 + \\frac{2}{32} = 2 + \\frac{1}{16} = \\frac{33}{16} = 2.0625. \\]</p>\n<p><strong>חסם לשגיאה.</strong> לפי משפט טיילור עם שארית לגרנז', קיימת $c \\in (16, 18)$ כך ש-\n\\[ R_1(18) = \\frac{f''(c)}{2!}(18 - 16)^2 = \\frac{-\\frac{3}{16}c^{-7/4}}{2}\\cdot 4 = -\\frac{3}{8\\,c^{7/4}}. \\]\nמכיוון ש-$c &gt; 16$, מתקיים $c^{7/4} &gt; 16^{7/4} = 2^7 = 128$, ולכן\n\\[ |R_1(18)| = \\frac{3}{8c^{7/4}} &lt; \\frac{3}{8\\cdot128} = \\frac{3}{1024} \\approx 0.0029. \\]</p>\n<p><strong>תשובה:</strong> $\\sqrt[4]{18} \\approx \\frac{33}{16} = 2.0625$, עם שגיאה קטנה מ-$\\frac{3}{1024}$. מכיוון ש-$R_1 &lt; 0$, הקירוב גדול מהערך האמיתי: $\\frac{33}{16} - \\frac{3}{1024} &lt; \\sqrt[4]{18} &lt; \\frac{33}{16}$.</p>\n<p>(בדיקה: $\\sqrt[4]{18} \\approx 2.05977$, והשגיאה בפועל כ-$0.00273 &lt; \\frac{3}{1024}$.)</p>",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -8047,6 +8391,7 @@ window.BANK = {
     "<p>$x^3 + 2x^2 + 2x = x(x^2 + 2x + 2)$ והגורם הריבועי אי-פריק. פרקו ל-$\\frac{A}{x} + \\frac{Bx + C}{x^2 + 2x + 2}$.</p>"
    ],
    "solution": "<strong>פירוק המכנה:</strong> $x^3 + 2x^2 + 2x = x(x^2 + 2x + 2)$, והדיסקרימיננטה של $x^2 + 2x + 2$ היא $4 - 8 &lt; 0$, לכן הגורם הריבועי אי-פריק ($x^2 + 2x + 2 = (x + 1)^2 + 1 &gt; 0$). מעלת המונה קטנה ממעלת המכנה.\n\n<strong>שברים חלקיים:</strong>\n\\[ \\frac{6x^2 + 13x + 8}{x(x^2 + 2x + 2)} = \\frac{A}{x} + \\frac{Bx + C}{x^2 + 2x + 2}, \\]\nכלומר $6x^2 + 13x + 8 = A(x^2 + 2x + 2) + (Bx + C)x$.\n\n<ul>\n<li>\n$x = 0$: $8 = 2A$, ולכן $A = 4$.\n</li>\n<li>\nמקדמי $x^2$: $6 = A + B$, ולכן $B = 2$.\n</li>\n<li>\nמקדמי $x$: $13 = 2A + C$, ולכן $C = 5$.\n</li>\n</ul>\n<p>לכן\n\\[ \\int \\frac{6x^2 + 13x + 8}{x^3 + 2x^2 + 2x}\\,dx = \\int \\left( \\frac4x + \\frac{2x + 2}{x^2 + 2x + 2} + \\frac{3}{(x + 1)^2 + 1} \\right) dx, \\]\nכאשר כתבנו $2x + 5 = (2x + 2) + 3$.</p>\n<ul>\n<li>\n$\\int \\frac4x\\,dx = 4\\ln|x| + C$.\n</li>\n<li>\nבהצבה $t = x^2 + 2x + 2$, $dt = (2x + 2)\\,dx$: $\\int \\frac{2x + 2}{x^2 + 2x + 2}\\,dx = \\ln(x^2 + 2x + 2) + C$.\n</li>\n<li>\nבהצבה $u = x + 1$: $\\int \\frac{3\\,dx}{(x + 1)^2 + 1} = 3\\arctan(x + 1) + C$.\n</li>\n</ul>\n<p><strong>תשובה:</strong>\n\\[ \\boxed{\\int \\frac{6x^2 + 13x + 8}{x^3 + 2x^2 + 2x}\\,dx = 4\\ln|x| + \\ln(x^2 + 2x + 2) + 3\\arctan(x + 1) + C.} \\]</p>",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -8071,6 +8416,7 @@ window.BANK = {
     "<p>המשוואה פרידה: $\\frac{dy}{y^2} = -\\frac{2x}{x^2 + 4}\\,dx$. אל תשכחו את הפתרון $y \\equiv 0$.</p>"
    ],
    "solution": "<p>נכתוב את המשוואה בצורה ($x^2 + 4 &gt; 0$ לכל $x$):\n\\[ \\frac{dy}{dx} = -\\frac{2x}{x^2 + 4}\\, y^2, \\]\nוזו משוואה פרידה.</p>\n<p><strong>הפתרון הקבוע:</strong> $y \\equiv 0$ מקיים את המשוואה, ולכן הוא פתרון.</p>\n<p><strong>עבור $y \\ne 0$:</strong>\n\\[ \\int \\frac{dy}{y^2} = -\\int \\frac{2x}{x^2 + 4}\\,dx. \\]\nבאגף שמאל $-\\frac1y$. באגף ימין, בהצבה $t = x^2 + 4$, $dt = 2x\\,dx$: $\\int \\frac{2x}{x^2 + 4}\\,dx = \\ln(x^2 + 4) + C$. לכן\n\\[ -\\frac{1}{y} = -\\ln(x^2 + 4) + C \\quad\\Longrightarrow\\quad y = \\frac{1}{\\ln(x^2 + 4) - C}. \\]</p>\n<p><strong>תשובה:</strong> הפתרון הכללי הוא\n\\[ \\boxed{y = \\frac{1}{\\ln(x^2 + 4) + C}}, \\quad C \\in \\R \\]\n(שינינו את שם הקבוע; בכל קטע שבו המכנה אינו מתאפס), ובנוסף הפתרון $y \\equiv 0$.</p>",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -8095,6 +8441,7 @@ window.BANK = {
     "<p>בסיבוב סביב ציר ה-$x$: $V = \\pi\\int_0^{\\pi/2} f^2(x)\\,dx = \\pi\\int_0^{\\pi/2}\\cos x\\,\\sin^4 x\\,dx$; הציבו $t = \\sin x$.</p>"
    ],
    "solution": "<p>נבין את השאלה כסיבוב גרף $f$ סביב ציר ה-$x$. $f$ מוגדרת ורציפה ב-$[0, \\frac{\\pi}{2}]$ (שם $\\cos x \\ge 0$), ונפח גוף הסיבוב הוא\n\\[ V = \\pi\\int_0^{\\pi/2} f^2(x)\\,dx = \\pi\\int_0^{\\pi/2} \\cos x\\,\\sin^4 x\\,dx. \\]\nנציב $t = \\sin x$, $dt = \\cos x\\,dx$; כאשר $x = 0$ מתקיים $t = 0$, וכאשר $x = \\frac{\\pi}{2}$ מתקיים $t = 1$:\n\\[ V = \\pi\\int_0^1 t^4\\,dt = \\pi\\left[\\frac{t^5}{5}\\right]_0^1 = \\frac{\\pi}{5}. \\]\n<strong>תשובה:</strong> $\\boxed{V = \\frac{\\pi}{5}}$.</p>",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -8120,6 +8467,7 @@ window.BANK = {
     "<p>מצאו פונקציה קדומה באינטגרציה בחלקים, ואז חשבו את הגבול כאשר הגבול העליון שואף לאינסוף.</p>"
    ],
    "solution": "<p>האינטגרנד רציף ב-$[0, \\infty)$, ולפי ההגדרה\n\\[ \\int_0^\\infty xe^{-x}\\,dx = \\lim_{A\\to\\infty}\\int_0^A xe^{-x}\\,dx. \\]\n<strong>פונקציה קדומה</strong> באינטגרציה בחלקים, $u = x$, $v' = e^{-x}$ ($u' = 1$, $v = -e^{-x}$):\n\\[ \\int xe^{-x}\\,dx = -xe^{-x} + \\int e^{-x}\\,dx = -xe^{-x} - e^{-x} + C = -(x + 1)e^{-x} + C. \\]\nלכן, לפי ניוטון-לייבניץ,\n\\[ \\int_0^A xe^{-x}\\,dx = \\Bigl[-(x + 1)e^{-x}\\Bigr]_0^A = 1 - \\frac{A + 1}{e^A}. \\]\nכאשר $A \\to \\infty$, $\\frac{A + 1}{e^A} \\to 0$ (ביטוי $\\frac{\\infty}{\\infty}$; לפי לופיטל $\\lim \\frac{1}{e^A} = 0$).</p>\n<p><strong>תשובה:</strong> האינטגרל מתכנס ו-$\\boxed{\\int_0^\\infty xe^{-x}\\,dx = 1}$.</p>",
+   "src": "מבחן לדוגמה תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מבחן לדוגמה"
   },
   {
@@ -8145,6 +8493,7 @@ window.BANK = {
     "<p>כתבו $e^x - 1 = x \\cdot \\frac{e^x - 1}{x}$ והשתמשו בגבול הידוע $\\lim_{x\\to 0}\\frac{e^x-1}{x} = 1$.</p>"
    ],
    "solution": "<p>לכל $a,b$ מתקיים $f(0) = a\\cdot 0 + b = b$, ולשמאל של $0$ הפונקציה היא הפולינום $ax^2+b$, ולכן\n$\\lim_{x\\to 0^-} f(x) = b = f(0)$. לכן $f$ רציפה ב-$0$ אם ורק אם $\\lim_{x\\to 0^+} f(x) = b$.</p>\n<p>נחשב את הגבול מימין. עבור $x&gt;0$ מתקיים $e^x - 1 &gt; 0$ ולכן\n\\[ \\ln(e^x - 1) = \\ln\\left( x \\cdot \\frac{e^x-1}{x} \\right) = \\ln x + \\ln\\frac{e^x - 1}{x}. \\]\nלכן\n\\[ f(x) = \\frac{\\ln x + \\ln\\frac{e^x-1}{x}}{2\\ln x} = \\frac12 + \\frac{\\ln\\frac{e^x-1}{x}}{2\\ln x}. \\]\nמכיוון ש-$\\lim_{x\\to 0}\\frac{e^x - 1}{x} = 1$ (זו הנגזרת של $e^x$ ב-$0$) ו-$\\ln$ רציפה ב-$1$, המונה של השבר השני שואף ל-$\\ln 1 = 0$,\nבעוד ש-$2\\ln x \\to -\\infty$. לכן השבר השני שואף ל-$0$ ומתקבל\n\\[ \\lim_{x\\to 0^+} f(x) = \\frac12. \\]\n(אפשר גם להשתמש בכלל לופיטל במקרה $\\frac{\\infty}{\\infty}$:\n$\\lim_{x\\to0^+}\\frac{\\ln(e^x-1)}{2\\ln x} = \\lim_{x\\to0^+}\\frac{e^x/(e^x-1)}{2/x} = \\lim_{x\\to 0^+}\\frac{e^x}{2}\\cdot\\frac{x}{e^x-1} = \\frac12$.)</p>\n<p><strong>תשובה:</strong> $f$ רציפה ב-$x=0$ אם ורק אם $b = \\frac12$, ו-$a$ כלשהו ($a \\in \\R$).</p>",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8170,6 +8519,7 @@ window.BANK = {
     "<p>הגדירו $g(x) = x + \\sqrt{x} - 17$ על $[0,\\infty)$: קיום פתרון נובע ממשפט ערך הביניים, ויחידותו ממונוטוניות.</p>"
    ],
    "solution": "<p>נגדיר $g(x) = x + \\sqrt{x} - 17$. המשוואה מוגדרת רק עבור $x \\ge 0$, ו-$g$ רציפה על $[0,\\infty)$.</p>\n<p><strong>קיום:</strong> $g(0) = -17 &lt; 0$ ו-$g(17) = \\sqrt{17} &gt; 0$. לפי משפט ערך הביניים קיימת $c \\in (0,17)$ עם $g(c) = 0$.</p>\n<p><strong>יחידות:</strong> עבור $x &gt; 0$ מתקיים $g'(x) = 1 + \\frac{1}{2\\sqrt{x}} &gt; 0$, ולכן (מסקנה ממשפט לגרנז') $g$ עולה ממש על $[0,\\infty)$\n(למעשה זה ברור גם ישירות: סכום של שתי פונקציות עולות ממש). פונקציה עולה ממש מקבלת כל ערך לכל היותר פעם אחת, ולכן יש לכל היותר פתרון אחד.</p>\n<p><strong>תשובה:</strong> למשוואה פתרון ממשי <strong>אחד בדיוק</strong>. (למעשה, בהצבה $t = \\sqrt{x}\\ge 0$ מקבלים $t^2 + t - 17 = 0$, כלומר $t = \\frac{-1+\\sqrt{69}}{2}$, ו-$x = \\left(\\frac{-1+\\sqrt{69}}{2}\\right)^2 \\approx 13.35$.)</p>",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8195,6 +8545,7 @@ window.BANK = {
     "<p>שימו לב לתחום ההגדרה: בגלל $\\sqrt{x}$ הפונקציה מוגדרת רק עבור $x \\ge 0$. אילו אפסים של המכנה נמצאים בתחום?</p>"
    ],
    "solution": "<strong>תחום הגדרה.</strong> $\\sqrt{x}$ מוגדר עבור $x\\ge0$, והמכנה מתפרק: $x^2 + x - 2 = (x-1)(x+2)$. לכן התחום הוא $[0,1)\\cup(1,\\infty)$\n(הנקודה $x=-2$ אינה בתחום בכלל).\n\n<strong>אסימפטוטות אנכיות.</strong> $f$ רציפה בכל נקודה בתחומה (מנה של פונקציות רציפות), ולכן אסימפטוטה אנכית יכולה להיות רק ב-$x=1$.\nשם המונה שואף ל-$1 - 3 + 3 + 1 = 2 \\neq 0$ והמכנה שואף ל-$0$, כאשר $x^2+x-2 &lt; 0$ עבור $0\\le x&lt;1$ ו-$&gt;0$ עבור $x&gt;1$. לכן\n\\[ \\lim_{x\\to1^-} f(x) = -\\infty, \\qquad \\lim_{x\\to1^+} f(x) = +\\infty, \\]\nו-$x = 1$ אסימפטוטה אנכית. ב-$x=0$ הפונקציה מוגדרת ($f(0)=0$) ורציפה מימין, כך שאין שם אסימפטוטה.\n\n<strong>אסימפטוטות משופעות/אופקיות.</strong> יש לבדוק רק $x\\to+\\infty$ (הפונקציה אינה מוגדרת עבור $x&lt;0$). נחפש $y = mx + n$:\n\\[ m = \\lim_{x\\to\\infty}\\frac{f(x)}{x} = \\lim_{x\\to\\infty}\\frac{x^3 - 3x^2 + 3x + \\sqrt{x}}{x^3 + x^2 - 2x}\n= \\lim_{x\\to\\infty}\\frac{1 - \\frac3x + \\frac3{x^2} + x^{-5/2}}{1 + \\frac1x - \\frac2{x^2}} = 1. \\]\nבחילוק פולינומים $x^3 - 3x^2 + 3x = (x^2+x-2)(x-4) + (9x - 8)$, ולכן\n\\[ f(x) - x = -4 + \\frac{9x - 8 + \\sqrt{x}}{x^2 + x - 2} \\xrightarrow[x\\to\\infty]{} -4 + 0 = -4, \\]\nכי במונה של השבר החזקה הגבוהה היא $x$ ובמכנה $x^2$. לכן $n=-4$.\n\n<strong>תשובה:</strong> אסימפטוטה אנכית $x = 1$, ואסימפטוטה משופעת $y = x - 4$ כאשר $x \\to +\\infty$. אין אסימפטוטות נוספות.",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8219,6 +8570,7 @@ window.BANK = {
     "<p>שימו לב ש-$f(x) \\ge 0$ לכל $x$. מה קורה כאשר $x \\to \\infty$?</p>"
    ],
    "solution": "<p>$f$ מוגדרת וגזירה על כל $\\R$.\n\\[ f'(x) = e^x(x-1)^2 + 2e^x(x-1) = e^x(x-1)(x+1). \\]\nנקודות קריטיות: $x = \\pm 1$. $f' &gt; 0$ על $(-\\infty,-1)$, $f'&lt;0$ על $(-1,1)$, $f'&gt;0$ על $(1,\\infty)$.\nלכן $x=-1$ מקסימום מקומי ($f(-1) = 4/e$) ו-$x=1$ מינימום מקומי ($f(1)=0$).</p>\n<p><strong>מינימום מוחלט:</strong> לכל $x$ מתקיים $e^x&gt;0$ ו-$(x-1)^2 \\ge 0$, ולכן $f(x) \\ge 0 = f(1)$. לכן המינימום המוחלט הוא $0$, ומתקבל ב-$x=1$.</p>\n<p><strong>מקסימום מוחלט:</strong> $\\lim_{x\\to\\infty} e^x(x-1)^2 = \\infty$ (מכפלה של שני גורמים השואפים ל-$\\infty$), ולכן $f$ אינה חסומה מלעיל ואין לה מקסימום מוחלט.\n(המקסימום המקומי $4/e$ ב-$x=-1$ אינו מוחלט, למשל $f(3) = 4e^3 &gt; 4/e$.)</p>\n<p><strong>תשובה:</strong> מינימום מוחלט $0$ בנקודה $x=1$; מקסימום מוחלט אינו קיים כי $f(x)\\to\\infty$ כאשר $x\\to\\infty$.</p>",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8244,6 +8596,7 @@ window.BANK = {
     "<p>בדקו: האם קירוב לינארי (סדר 1) מספיק כדי להבטיח שגיאה קטנה מ-$\\frac1{10}$? אם לא, עברו לסדר 2.</p>"
    ],
    "solution": "<p>נגדיר $f(x) = x^{1/3}$ ונפתח סביב $x_0 = 1$ (שם הערכים ידועים). הנגזרות:\n\\[ f'(x) = \\tfrac13 x^{-2/3},\\quad f''(x) = -\\tfrac29 x^{-5/3},\\quad f'''(x) = \\tfrac{10}{27}x^{-8/3}, \\]\nולכן $f(1) = 1$, $f'(1) = \\frac13$, $f''(1) = -\\frac29$.</p>\n<p><strong>ניסיון בסדר 1.</strong> $P_1(2) = 1 + \\frac13 = \\frac43$, ולפי שארית לגרנז' קיימת $c\\in(1,2)$ עם\n$R_1 = \\frac{f''(c)}{2!}(2-1)^2 = -\\frac19 c^{-5/3}$. מכאן רק $|R_1| &lt; \\frac19$, וזה <em>אינו</em> מבטיח שגיאה קטנה מ-$\\frac1{10}$. לכן נעבור לסדר 2.</p>\n<p><strong>סדר 2.</strong> פולינום טיילור מסדר 2 סביב $1$:\n\\[ P_2(x) = 1 + \\tfrac13(x-1) - \\tfrac19(x-1)^2, \\qquad P_2(2) = 1 + \\tfrac13 - \\tfrac19 = \\tfrac{11}{9}. \\]\nלפי משפט טיילור עם שארית לגרנז', קיימת $c \\in (1,2)$ כך ש-\n\\[ \\sqrt[3]{2} - \\tfrac{11}{9} = R_2(2) = \\frac{f'''(c)}{3!}(2-1)^3 = \\frac{10}{27\\cdot 6}\\,c^{-8/3} = \\frac{5}{81}\\,c^{-8/3}. \\]\nמכיוון ש-$c &gt; 1$ מתקיים $c^{-8/3} &lt; 1$, ולכן\n\\[ 0 &lt; R_2(2) &lt; \\frac{5}{81} &lt; \\frac{1}{10} \\qquad (\\text{כי } 50 &lt; 81). \\]</p>\n<p><strong>תשובה:</strong> $\\sqrt[3]{2} \\approx \\frac{11}{9} \\approx 1.222$, עם שגיאה קטנה מ-$\\frac{5}{81}&lt;\\frac1{10}$ (ובפרט $\\frac{11}{9} &lt; \\sqrt[3]{2} &lt; \\frac{11}{9} + \\frac{5}{81}$).\nלבדיקה: $\\sqrt[3]{2} \\approx 1.2599$, והשגיאה בפועל היא כ-$0.038$.</p>\n<p><strong>דרך חלופית (קירוב לינארי בנקודה קרובה יותר).</strong> $\\left(\\frac54\\right)^3 = \\frac{125}{64}$, שקרוב ל-$2$. קירוב לינארי סביב $x_0 = \\frac{125}{64}$:\n$f(2) \\approx \\frac54 + \\frac13\\cdot\\frac{16}{25}\\cdot\\frac{3}{64} = \\frac54 + \\frac1{100} = 1.26$, והשגיאה חסומה ע\"י $\\frac19 c^{-5/3}\\left(\\frac3{64}\\right)^2 &lt; \\frac{1}{9}\\cdot\\frac{9}{4096}&lt;\\frac1{10}$ (כי $c&gt;1$).</p>",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8268,6 +8621,7 @@ window.BANK = {
     "<p>פרקו את המכנה: $x^3 - 4x^2 + 8x = x(x^2 - 4x + 8)$, כאשר לגורם הריבועי אין שורשים ממשיים, ופרקו לשברים חלקיים.</p>"
    ],
    "solution": "<strong>פירוק המכנה.</strong> $x^3 - 4x^2 + 8x = x(x^2 - 4x + 8)$, ול-$x^2 - 4x + 8 = (x-2)^2 + 4$ אין שורשים ממשיים (הדיסקרימיננטה $16 - 32 &lt; 0$).\n\n<strong>שברים חלקיים.</strong> נחפש\n\\[ \\frac{2x^2 + 8}{x(x^2 - 4x + 8)} = \\frac{A}{x} + \\frac{Bx + C}{x^2 - 4x + 8}, \\]\nכלומר $2x^2 + 8 = A(x^2 - 4x + 8) + x(Bx + C)$. הצבת $x = 0$ נותנת $8 = 8A$, כלומר $A = 1$. אז\n$2x^2 + 8 = x^2 - 4x + 8 + Bx^2 + Cx$, ומהשוואת מקדמים $B = 1$, $C = 4$.\n\n<strong>אינטגרציה.</strong>\n\\[ \\int\\frac{dx}{x} = \\ln|x|. \\]\nלגורם השני נכתוב $x + 4 = \\frac12(2x - 4) + 6$, כאשר $(x^2 - 4x + 8)' = 2x - 4$:\n\\[ \\int\\frac{x+4}{x^2-4x+8}\\,dx = \\frac12\\int\\frac{2x-4}{x^2-4x+8}\\,dx + 6\\int\\frac{dx}{(x-2)^2 + 4}\n= \\frac12\\ln(x^2-4x+8) + 6\\cdot\\frac12\\arctan\\frac{x-2}{2}, \\]\nכאשר באינטגרל האחרון השתמשנו ב-$\\int\\frac{dt}{t^2 + a^2} = \\frac1a\\arctan\\frac ta$ עם $t = x-2$, $a = 2$.\n\n<strong>תשובה:</strong>\n\\[ \\int \\frac{2x^2 + 8}{x^3 - 4x^2 + 8x}\\,dx = \\ln|x| + \\frac12\\ln(x^2 - 4x + 8) + 3\\arctan\\frac{x-2}{2} + C. \\]\n(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8292,6 +8646,7 @@ window.BANK = {
     "<p>$e^{x+y} = e^x e^y$, ולכן זו משוואה פרידה (מפרידת משתנים).</p>"
    ],
    "solution": "<p>$y' = e^x e^y$. מכיוון ש-$e^y &gt; 0$ תמיד, אין פתרונות קבועים (עבור $y\\equiv c$ היינו מקבלים $0 = e^{x+c}$, סתירה), ומותר לחלק ב-$e^y$:\n\\[ e^{-y}\\,y' = e^x \\quad\\Longrightarrow\\quad \\int e^{-y}\\,dy = \\int e^x\\,dx \\quad\\Longrightarrow\\quad -e^{-y} = e^x + c. \\]\nנסמן $C = -c$: $e^{-y} = C - e^x$. הצד השמאלי חיובי, ולכן הפתרון מוגדר רק עבור $x$ שמקיימים $e^x &lt; C$ (בפרט נדרש $C &gt; 0$), ושם\n\\[ y = -\\ln\\left(C - e^x\\right), \\qquad C &gt; 0,\\ x &lt; \\ln C. \\]\n<strong>בדיקה:</strong> $y' = \\frac{e^x}{C - e^x}$, ומצד שני $e^{x+y} = e^x\\cdot\\frac{1}{C - e^x}$. שווה.</p>\n<p><strong>תשובה:</strong> הפתרון הכללי $y(x) = -\\ln(C - e^x)$ (באופן שקול: $e^{-y} + e^x = C$), עם קבוע $C&gt;0$, בתחום $x &lt; \\ln C$.</p>",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8317,6 +8672,7 @@ window.BANK = {
     "<p>כתבו $\\cos^3 x = (1 - \\sin^2 x)\\cos x$ והציבו $t = \\sin x$.</p>"
    ],
    "solution": "<p>בקטע $[0,\\frac\\pi2]$ מתקיים $\\sin^2 x \\ge 0$ ו-$\\cos x\\ge 0$, ולכן $f(x) \\ge 0$ והשטח הוא פשוט $\\int_0^{\\pi/2} f(x)\\,dx$.\nנכתוב $\\sin^2 x\\cos^3 x = \\sin^2 x(1 - \\sin^2 x)\\cos x$ ונציב $t = \\sin x$, $dt = \\cos x\\,dx$; כאשר $x$ עובר מ-$0$ ל-$\\frac\\pi2$, $t$ עובר מ-$0$ ל-$1$:\n\\[ S = \\int_0^{\\pi/2}\\sin^2 x\\cos^3 x\\,dx = \\int_0^1 (t^2 - t^4)\\,dt = \\left[\\frac{t^3}{3} - \\frac{t^5}{5}\\right]_0^1 = \\frac13 - \\frac15 = \\frac{2}{15}. \\]\n<strong>תשובה:</strong> $S = \\frac{2}{15}$.</p>",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8341,6 +8697,7 @@ window.BANK = {
     "<p>הציבו $t = \\sqrt{x}$.</p>"
    ],
    "solution": "<p>לפי ההגדרה, $\\int_1^\\infty g = \\lim_{R\\to\\infty}\\int_1^R g$. נחשב את האינטגרל על $[1,R]$ בהצבה $t = \\sqrt{x}$, כלומר $x = t^2$, $dx = 2t\\,dt$; כאשר $x$ עובר מ-$1$ ל-$R$, $t$ עובר מ-$1$ ל-$\\sqrt R$:\n\\[ \\int_1^R \\frac{dx}{(1+x)\\sqrt{x}} = \\int_1^{\\sqrt R}\\frac{2t\\,dt}{(1+t^2)\\,t} = 2\\int_1^{\\sqrt R}\\frac{dt}{1+t^2} = 2\\left(\\arctan\\sqrt R - \\arctan 1\\right). \\]\nכאשר $R \\to \\infty$ גם $\\sqrt R \\to \\infty$, ו-$\\arctan\\sqrt R \\to \\frac\\pi2$. לכן\n\\[ \\int_1^\\infty \\frac{dx}{(1+x)\\sqrt{x}} = 2\\left(\\frac\\pi2 - \\frac\\pi4\\right) = \\frac{\\pi}{2}. \\]\n(התכנסות אפשר גם לראות מראש במבחן ההשוואה: $0 &lt; \\frac{1}{(1+x)\\sqrt x} &lt; \\frac{1}{x^{3/2}}$, ו-$\\int_1^\\infty x^{-3/2}dx$ מתכנס.)</p>\n<p><strong>תשובה:</strong> האינטגרל מתכנס וערכו $\\frac{\\pi}{2}$.</p>",
+   "src": "מועד א' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד א"
   },
   {
@@ -8366,6 +8723,7 @@ window.BANK = {
     "<p>הכפילו מונה ומכנה בצמוד $\\sqrt{x+4} + 2$.</p>"
    ],
    "solution": "<p>$f(0) = a\\cdot|0 - 1| = a$, ומימין ל-$0$ (בסביבה ימנית) $f(x) = a|x-1|$ רציפה, ולכן $\\lim_{x\\to0^+}f(x) = a = f(0)$.\nלכן $f$ רציפה ב-$0$ אם ורק אם $\\lim_{x\\to 0^-} f(x) = a$.</p>\n<p>עבור $-2 &lt; x &lt; 0$ נכפיל בצמוד:\n\\[ \\frac{\\sqrt{x+4} - 2}{x^2 + 2x} = \\frac{(x + 4) - 4}{x(x+2)\\left(\\sqrt{x+4} + 2\\right)} = \\frac{1}{(x+2)\\left(\\sqrt{x+4}+2\\right)}. \\]\nהביטוי האחרון רציף ב-$x=0$, ולכן\n\\[ \\lim_{x\\to 0^-} f(x) = \\frac{1}{2\\cdot(2 + 2)} = \\frac18. \\]\n<strong>תשובה:</strong> $f$ רציפה ב-$0$ אם ורק אם $a = \\frac18$.</p>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8390,6 +8748,7 @@ window.BANK = {
     "<p>חשבו את הנגזרות החד-צדדיות של $a|x-1|$ ב-$x=1$.</p>"
    ],
    "solution": "<p>בסביבה של $x = 1$ (למשל עבור $x&gt;0$) $f(x) = a|x - 1|$, ו-$f(1) = 0$. נחשב נגזרות חד-צדדיות:\n\\[ f'_+(1) = \\lim_{h\\to0^+}\\frac{a|h| - 0}{h} = a, \\qquad f'_-(1) = \\lim_{h\\to0^-}\\frac{a|h|}{h} = \\lim_{h\\to 0^-}\\frac{-ah}{h} = -a. \\]\n$f$ גזירה ב-$1$ אם ורק אם שתי הנגזרות החד-צדדיות קיימות ושוות: $a = -a$, כלומר $a = 0$.\nבמקרה זה $f \\equiv 0$ ב-$[0,\\infty)$ ו-$f'(1) = 0$.</p>\n<p><strong>תשובה:</strong> $f$ גזירה ב-$x=1$ אם ורק אם $a = 0$.</p>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8412,6 +8771,7 @@ window.BANK = {
    "question": "<p>נגדיר פונקציה\n\\[ f(x) = \\frac{x^2}{e^x} \\]</p>\n<ol class=\"parts\">\n<li>\n(11 נק') חשבו נקודות קיצון מקומי, ותחומי עלייה וירידה של הפונקציה. נמקו.\n</li>\n<li>\n(10 נק') חשבו נקודות פיתול, ותחומי קמירות של הפונקציה. נמקו.\n</li>\n</ol>",
    "hints": [],
    "solution": "<p>$f(x) = x^2e^{-x}$ מוגדרת וגזירה אינסוף פעמים על כל $\\R$.</p>\n<ol class=\"parts\">\n<li>\n\\[ f'(x) = 2xe^{-x} - x^2e^{-x} = x(2 - x)e^{-x}. \\]\n  מכיוון ש-$e^{-x} &gt; 0$, הסימן של $f'$ הוא הסימן של $x(2-x)$:\n<ul>\n<li>\n$x &lt; 0$: $f' &lt; 0$, $f$ יורדת;\n</li>\n<li>\n$0 &lt; x &lt; 2$: $f' &gt; 0$, $f$ עולה;\n</li>\n<li>\n$x &gt; 2$: $f' &lt; 0$, $f$ יורדת.\n</li>\n</ul>\n<strong>תשובה:</strong> $f$ יורדת ב-$(-\\infty,0]$, עולה ב-$[0,2]$ ויורדת ב-$[2,\\infty)$.\n  לפי מבחן הנגזרת הראשונה (החלפת סימן של $f'$): $x = 0$ נקודת מינימום מקומי, $f(0) = 0$; $x = 2$ נקודת מקסימום מקומי, $f(2) = \\frac{4}{e^2}$.\n</li>\n<li>\n\\[ f''(x) = (2 - 2x)e^{-x} - (2x - x^2)e^{-x} = (x^2 - 4x + 2)e^{-x}. \\]\n  $f''(x) = 0 \\iff x^2 - 4x + 2 = 0 \\iff x = 2 \\pm \\sqrt{2}$. הסימן של $f''$ הוא סימן הפרבולה $x^2 - 4x + 2$ (הפותחת כלפי מעלה):\n<ul>\n<li>\n$x &lt; 2 - \\sqrt2$ או $x &gt; 2+\\sqrt2$: $f'' &gt; 0$, $f$ קמורה (כלפי מעלה, $\\cup$);\n</li>\n<li>\n$2-\\sqrt2 &lt; x &lt; 2 + \\sqrt 2$: $f'' &lt; 0$, $f$ קעורה (כלפי מטה, $\\cap$).\n</li>\n</ul>\n<p>בשתי הנקודות $x = 2\\pm\\sqrt2$ $f''$ מחליפה סימן, ולכן הן נקודות פיתול.</p>\n<p><strong>תשובה:</strong> $f$ קמורה ב-$(-\\infty, 2 - \\sqrt2]$ וב-$[2+\\sqrt2, \\infty)$, וקעורה ב-$[2-\\sqrt2, 2+\\sqrt2]$.\n  נקודות הפיתול: $x = 2 \\pm \\sqrt2$, עם ערכים $f(2\\pm\\sqrt2) = (6 \\pm 4\\sqrt2)\\,e^{-(2\\pm\\sqrt2)}$\n  (כלומר בערך $(0.586,\\ 0.191)$ ו-$(3.414,\\ 0.384)$).</p>\n</li>\n</ol>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8436,6 +8796,7 @@ window.BANK = {
     "<p>השתמשו בפולינום טיילור מסדר 1 של $\\ln x$ סביב $x_0 = 1$, והעריכו את השגיאה בעזרת שארית לגרנז'.</p>"
    ],
    "solution": "<p>נגדיר $f(x) = \\ln x$ ונבחר $x_0 = 1$ (נקודה קרובה ל-$1.2$ שבה הערכים ידועים). $f(1) = 0$, $f'(x) = \\frac1x$, $f'(1) = 1$, $f''(x) = -\\frac{1}{x^2}$.</p>\n<p><strong>קירוב לינארי:</strong> $P_1(x) = f(1) + f'(1)(x - 1) = x - 1$, ולכן\n\\[ \\ln(1.2) \\approx P_1(1.2) = 0.2. \\]</p>\n<p><strong>הערכת השגיאה:</strong> לפי משפט טיילור עם שארית לגרנז', קיימת $c\\in(1, 1.2)$ כך ש-\n\\[ \\ln(1.2) - 0.2 = R_1(1.2) = \\frac{f''(c)}{2!}(1.2 - 1)^2 = -\\frac{1}{2c^2}\\cdot 0.04 = -\\frac{0.02}{c^2}. \\]\nמכיוון ש-$1 &lt; c &lt; 1.2$ מתקיים $1 &lt; c^2 &lt; 1.44$, ולכן\n\\[ \\frac{0.02}{1.44} &lt; |R_1| &lt; 0.02, \\qquad\\text{כלומר}\\qquad 0.0138 &lt; |R_1| &lt; 0.02, \\]\nוהשגיאה שלילית, כלומר הקירוב $0.2$ גדול מהערך האמיתי.</p>\n<p><strong>תשובה:</strong> $\\ln(1.2) \\approx 0.2$, עם שגיאה קטנה מ-$0.02$ (ובפרט $0.18 &lt; \\ln(1.2) &lt; 0.2$).\nלבדיקה: $\\ln(1.2) \\approx 0.1823$, והשגיאה בפועל כ-$0.0177$.</p>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8461,6 +8822,7 @@ window.BANK = {
     "<p>הציבו $x = \\sin t$, ואחר כך השתמשו בזהות $\\sin^2 t = \\frac{1 - \\cos 2t}{2}$.</p>"
    ],
    "solution": "<p>נציב $x = \\sin t$ עם $t\\in[0,\\frac\\pi4]$ (פונקציה גזירה ועולה, $\\sin 0 = 0$, $\\sin\\frac\\pi4 = \\frac{\\sqrt2}2$), $dx = \\cos t\\,dt$.\nבתחום זה $\\cos t &gt; 0$, ולכן $\\sqrt{1 - \\sin^2 t} = \\cos t$:\n\\[ \\int_0^{\\frac{\\sqrt2}{2}}\\frac{x^2}{\\sqrt{1-x^2}}\\,dx = \\int_0^{\\pi/4}\\frac{\\sin^2 t}{\\cos t}\\cos t\\,dt = \\int_0^{\\pi/4}\\sin^2 t\\,dt\n= \\int_0^{\\pi/4}\\frac{1 - \\cos 2t}{2}\\,dt = \\left[\\frac t2 - \\frac{\\sin 2t}{4}\\right]_0^{\\pi/4}. \\]\nלכן\n\\[ \\int_0^{\\frac{\\sqrt2}{2}}\\frac{x^2}{\\sqrt{1-x^2}}\\,dx = \\frac\\pi8 - \\frac{\\sin\\frac\\pi2}{4} = \\frac{\\pi}{8} - \\frac14. \\]\n(האינטגרנד רציף על הקטע הסגור, כי $1 - x^2 \\ge \\frac12$ שם, כך שזה אינטגרל רגיל.)</p>\n<p><strong>תשובה:</strong> $\\frac\\pi8 - \\frac14 \\approx 0.1427$.</p>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8485,6 +8847,7 @@ window.BANK = {
     "<p>זו משוואה פרידה: $y\\,dy = \\frac{x^3}{x^4 + 4}\\,dx$.</p>"
    ],
    "solution": "<p>$x^4 + 4 &gt; 0$ לכל $x$, ולכן אפשר לחלק: $y y' = \\frac{x^3}{x^4 + 4}$. זו משוואה פרידה. נבצע אינטגרציה לפי $x$ של שני האגפים:\n\\[ \\int y\\,dy = \\int\\frac{x^3}{x^4 + 4}\\,dx \\quad\\Longrightarrow\\quad \\frac{y^2}{2} = \\frac14\\ln(x^4 + 4) + c, \\]\nכאשר באגף ימין הצבנו $u = x^4 + 4$, $du = 4x^3dx$. כפל ב-$2$ וסימון $C = 2c$:\n\\[ y^2 = \\frac12\\ln(x^4 + 4) + C. \\]\n(שימו לב ש-$y\\equiv0$ אינו פתרון, כי אז נקבל $0 = x^3$, שאינו מתקיים לכל $x$. כמו כן, לא נדרשה חלוקה ב-$y$: השתמשנו רק בכך ש-$yy' = \\left(\\frac{y^2}{2}\\right)'$.)</p>\n<p><strong>תשובה:</strong> הפתרון הכללי נתון בצורה סתומה ע\"י $y^2 = \\frac12\\ln(x^4+4) + C$, או במפורש\n\\[ y = \\pm\\sqrt{\\tfrac12\\ln(x^4 + 4) + C}, \\]\nבתחום שבו הביטוי בתוך השורש חיובי. <strong>בדיקה:</strong> גזירת $y^2 = \\frac12\\ln(x^4+4)+C$ נותנת $2yy' = \\frac{2x^3}{x^4+4}$, כלומר $(x^4+4)yy' = x^3$.</p>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8509,6 +8872,7 @@ window.BANK = {
     "<p>נפח גוף הסיבוב הוא $V = \\pi\\int_a^b f^2(x)\\,dx$. שימו לב ש-$(x^2 + x)' = 2x + 1$.</p>"
    ],
    "solution": "<p>נפח גוף הסיבוב של גרף $f$ סביב ציר ה-$x$ מעל $[a,b]$ הוא $V = \\pi\\int_a^b f(x)^2\\,dx$. כאן\n$f(x)^2 = \\frac{2x+1}{(x^2 + x)^2}$, רציפה על $[1,4]$. נציב $u = x^2 + x$, $du = (2x + 1)\\,dx$; כאשר $x$ עובר מ-$1$ ל-$4$, $u$ עובר מ-$2$ ל-$20$:\n\\[ V = \\pi\\int_1^4\\frac{2x+1}{(x^2+x)^2}\\,dx = \\pi\\int_2^{20}\\frac{du}{u^2} = \\pi\\left[-\\frac1u\\right]_2^{20} = \\pi\\left(\\frac12 - \\frac1{20}\\right) = \\frac{9\\pi}{20}. \\]\n<strong>תשובה:</strong> $V = \\frac{9\\pi}{20}$.</p>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8533,6 +8897,7 @@ window.BANK = {
     "<p>מצאו פונקציה קדומה בהצבה $u = \\ln x$.</p>"
    ],
    "solution": "<p>לפי ההגדרה $\\int_1^\\infty\\frac{\\ln x}{x}dx = \\lim_{R\\to\\infty}\\int_1^R\\frac{\\ln x}{x}dx$. בהצבה $u = \\ln x$, $du = \\frac{dx}{x}$:\n\\[ \\int_1^R\\frac{\\ln x}{x}\\,dx = \\int_0^{\\ln R}u\\,du = \\frac{(\\ln R)^2}{2} \\xrightarrow[R\\to\\infty]{} \\infty. \\]\n(לחלופין, במבחן ההשוואה: עבור $x \\ge e$ מתקיים $\\frac{\\ln x}{x} \\ge \\frac1x \\ge 0$, ו-$\\int_e^\\infty\\frac{dx}x$ מתבדר.)</p>\n<p><strong>תשובה:</strong> האינטגרל אינו מתכנס (מתבדר ל-$\\infty$).</p>",
+   "src": "מועד ב' תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד ב"
   },
   {
@@ -8557,6 +8922,7 @@ window.BANK = {
     "<p>הכפילו וחלקו בצמוד $\\sqrt{x^2+4} + \\sqrt{x^2-4}$.</p>"
    ],
    "solution": "<p>עבור $x \\ge 2$ נכפיל ונחלק בצמוד (שהוא חיובי):\n\\[ x\\left(\\sqrt{x^2+4} - \\sqrt{x^2-4}\\right) = x\\cdot\\frac{(x^2 + 4) - (x^2 - 4)}{\\sqrt{x^2+4} + \\sqrt{x^2-4}} = \\frac{8x}{\\sqrt{x^2+4} + \\sqrt{x^2-4}}. \\]\nנחלק מונה ומכנה ב-$x$ (עבור $x&gt;0$, $\\sqrt{x^2 + 4} = x\\sqrt{1 + 4/x^2}$):\n\\[ = \\frac{8}{\\sqrt{1 + \\frac4{x^2}} + \\sqrt{1 - \\frac4{x^2}}} \\xrightarrow[x\\to\\infty]{} \\frac{8}{1 + 1} = 4, \\]\nלפי אריתמטיקה של גבולות ורציפות השורש.</p>\n<p><strong>תשובה:</strong> הגבול שווה ל-$4$.</p>",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8581,6 +8947,7 @@ window.BANK = {
     "<p>השתמשו בהגדרת הנגזרת ובכך ש-$|\\cos(\\frac1x)| \\le 1$.</p>"
    ],
    "solution": "<p>לפי הגדרת הנגזרת, עבור $h \\neq 0$:\n\\[ \\frac{f(h) - f(0)}{h} = \\frac{h^3\\cos(\\frac1h)}{h} = h^2\\cos\\left(\\tfrac1h\\right). \\]\nמכיוון ש-$|\\cos(\\frac1h)| \\le 1$ מתקיים $0 \\le \\left|h^2\\cos(\\frac1h)\\right| \\le h^2 \\to 0$, ולכן לפי משפט הסנדוויץ' (סדרה/פונקציה חסומה כפול שואפת לאפס)\n\\[ \\lim_{h\\to 0}\\frac{f(h) - f(0)}{h} = 0. \\]\n<strong>תשובה:</strong> כן, $f$ גזירה ב-$x=0$ ו-$f'(0) = 0$.</p>",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8604,6 +8971,7 @@ window.BANK = {
    "question": "<p>נגדיר פונקציה\n\\[ f(x) = \\frac{x}{x^4 + 3} \\]</p>\n<ol class=\"parts\">\n<li>\n(11 נק') חשבו נקודות קיצון מקומי, ותחומי עלייה וירידה של הפונקציה בתחום הגדרתה. נמקו.\n</li>\n<li>\n(10 נק') חשבו את כל האסימפטוטות של הפונקציה. נמקו.\n</li>\n</ol>",
    "hints": [],
    "solution": "<p>תחום ההגדרה: $x^4 + 3 \\ge 3 &gt; 0$ לכל $x$, ולכן $f$ מוגדרת, רציפה וגזירה על כל $\\R$.</p>\n<ol class=\"parts\">\n<li>\nלפי כלל המנה:\n  \\[ f'(x) = \\frac{(x^4 + 3) - x\\cdot 4x^3}{(x^4+3)^2} = \\frac{3 - 3x^4}{(x^4 + 3)^2} = \\frac{3(1 - x^2)(1 + x^2)}{(x^4+3)^2}. \\]\n  המכנה ו-$1 + x^2$ חיוביים, ולכן סימן $f'$ הוא סימן $1 - x^2$:\n<ul>\n<li>\n$|x| &lt; 1$: $f' &gt; 0$, $f$ עולה ב-$[-1, 1]$;\n</li>\n<li>\n$|x| &gt; 1$: $f' &lt; 0$, $f$ יורדת ב-$(-\\infty, -1]$ וב-$[1, \\infty)$.\n</li>\n</ul>\nלפי מבחן הנגזרת הראשונה: $x=-1$ נקודת מינימום מקומי, $f(-1) = -\\frac14$; $x = 1$ נקודת מקסימום מקומי, $f(1) = \\frac14$.\n  (מכיוון ש-$f\\to0$ באינסוף, אלה גם הקיצונים המוחלטים.)\n</li>\n<li>\n<strong>אנכיות:</strong> $f$ רציפה על כל $\\R$, ולכן בכל נקודה $x_0$ מתקיים $\\lim_{x\\to x_0}f(x) = f(x_0)$ סופי, ואין אסימפטוטות אנכיות.\n\n  <strong>אופקיות/משופעות:</strong>\n  \\[ \\lim_{x\\to\\pm\\infty}\\frac{x}{x^4 + 3} = \\lim_{x\\to\\pm\\infty}\\frac{1/x^3}{1 + 3/x^4} = 0. \\]\n  לכן $y = 0$ אסימפטוטה אופקית גם ב-$+\\infty$ וגם ב-$-\\infty$ (ולכן אין אסימפטוטה משופעת נוספת: $m = \\lim \\frac{f(x)}{x} = 0$, $n = \\lim f(x) = 0$).\n\n  <strong>תשובה:</strong> האסימפטוטה היחידה היא $y = 0$ (אופקית, בשני הכיוונים); אין אסימפטוטות אנכיות.\n\n</li>\n</ol>",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8628,6 +8996,7 @@ window.BANK = {
     "<p>בחרו נקודה קרובה ל-$10$ שבה השורש השלישי ידוע: $x_0 = 8$. העריכו את השגיאה בעזרת שארית לגרנז'.</p>"
    ],
    "solution": "<p>נגדיר $f(x) = x^{1/3}$ ונבחר $x_0 = 8$ (כי $\\sqrt[3]{8} = 2$). הנגזרות:\n\\[ f'(x) = \\tfrac13x^{-2/3}, \\qquad f''(x) = -\\tfrac29x^{-5/3}, \\]\nולכן $f(8) = 2$, $f'(8) = \\frac13\\cdot\\frac14 = \\frac1{12}$.</p>\n<p><strong>קירוב לינארי:</strong> $P_1(x) = 2 + \\frac{1}{12}(x - 8)$, ולכן\n\\[ \\sqrt[3]{10} \\approx P_1(10) = 2 + \\frac{2}{12} = \\frac{13}{6} \\approx 2.1667. \\]</p>\n<p><strong>הערכת השגיאה:</strong> לפי משפט טיילור עם שארית לגרנז' קיימת $c \\in (8, 10)$ כך ש-\n\\[ \\sqrt[3]{10} - \\frac{13}{6} = R_1(10) = \\frac{f''(c)}{2!}(10 - 8)^2 = -\\frac19c^{-5/3}\\cdot 4 = -\\frac{4}{9}c^{-5/3}. \\]\nמכיוון ש-$c &gt; 8$ מתקיים $c^{-5/3} &lt; 8^{-5/3} = \\frac1{32}$, ולכן\n\\[ |R_1(10)| &lt; \\frac49\\cdot\\frac{1}{32} = \\frac{1}{72} \\approx 0.0139, \\]\nוהשגיאה שלילית, כלומר הקירוב גדול מהערך האמיתי.</p>\n<p><strong>תשובה:</strong> $\\sqrt[3]{10} \\approx \\frac{13}{6} \\approx 2.1667$, עם שגיאה קטנה מ-$\\frac{1}{72}$; בפרט $\\frac{13}{6} - \\frac1{72} &lt; \\sqrt[3]{10} &lt; \\frac{13}{6}$.\nלבדיקה: $\\sqrt[3]{10} \\approx 2.1544$, והשגיאה בפועל כ-$0.0122$.</p>",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8652,6 +9021,7 @@ window.BANK = {
     "<p>$x^3 + 2x^2 + 2x = x\\left((x+1)^2 + 1\\right)$. פרקו לשברים חלקיים.</p>"
    ],
    "solution": "<strong>פירוק המכנה.</strong> $x^3 + 2x^2 + 2x = x(x^2 + 2x + 2)$, ול-$x^2 + 2x + 2 = (x+1)^2 + 1$ אין שורשים ממשיים.\n\n<strong>שברים חלקיים.</strong>\n\\[ \\frac{7x^2 + 6}{x(x^2 + 2x + 2)} = \\frac{A}{x} + \\frac{Bx + C}{x^2 + 2x + 2}, \\qquad 7x^2 + 6 = A(x^2 + 2x + 2) + x(Bx + C). \\]\nהצבת $x = 0$: $6 = 2A$, כלומר $A = 3$. אז $7x^2 + 6 = 3x^2 + 6x + 6 + Bx^2 + Cx$, ומהשוואת מקדמים $B = 4$, $C = -6$.\n\n<strong>אינטגרציה.</strong> נכתוב $4x - 6 = 2(2x + 2) - 10$, כאשר $(x^2 + 2x + 2)' = 2x + 2$:\n\\[ \\int\\frac{4x - 6}{x^2 + 2x + 2}\\,dx = 2\\int\\frac{2x+2}{x^2+2x+2}\\,dx - 10\\int\\frac{dx}{(x+1)^2 + 1} = 2\\ln(x^2 + 2x + 2) - 10\\arctan(x + 1). \\]\n\n<strong>תשובה:</strong>\n\\[ \\int\\frac{7x^2 + 6}{x^3 + 2x^2 + 2x}\\,dx = 3\\ln|x| + 2\\ln(x^2 + 2x + 2) - 10\\arctan(x+1) + C. \\]\n(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8676,6 +9046,7 @@ window.BANK = {
     "<p>העבירו אגף: $y' = x(y^2 + 4)$ — זו משוואה פרידה.</p>"
    ],
    "solution": "<p>נעביר אגף: $y' = xy^2 + 4x = x(y^2 + 4)$. זו משוואה פרידה. מכיוון ש-$y^2 + 4 &gt; 0$ תמיד, אין פתרונות קבועים (עבור $y\\equiv c$: $0 = x(c^2+4)$ לא מתקיים לכל $x$), ומותר לחלק:\n\\[ \\frac{y'}{y^2 + 4} = x \\quad\\Longrightarrow\\quad \\int\\frac{dy}{y^2 + 4} = \\int x\\,dx \\quad\\Longrightarrow\\quad \\frac12\\arctan\\frac y2 = \\frac{x^2}{2} + c. \\]\nנכפול ב-$2$ ונסמן $C = 2c$: $\\arctan\\frac y2 = x^2 + C$, ולכן\n\\[ y = 2\\tan\\left(x^2 + C\\right), \\]\nבתחום שבו $x^2 + C \\in (-\\frac\\pi2, \\frac\\pi2)$ (כי $\\arctan$ מקבלת ערכים רק בקטע זה).</p>\n<p><strong>בדיקה:</strong> $y' = 2\\cdot 2x\\left(1 + \\tan^2(x^2 + C)\\right) = 4x + x\\cdot 4\\tan^2(x^2+C) = 4x + xy^2$. מתקיים.</p>\n<p><strong>תשובה:</strong> $y(x) = 2\\tan(x^2 + C)$, $C \\in \\R$.</p>",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8700,6 +9071,7 @@ window.BANK = {
     "<p>מצאו תחילה את נקודות החיתוך: $xe^x = ex \\iff x(e^x - e) = 0$. את $\\int xe^x\\,dx$ חשבו באינטגרציה בחלקים.</p>"
    ],
    "solution": "<strong>נקודות חיתוך:</strong> $xe^x = ex \\iff x(e^x - e) = 0 \\iff x = 0$ או $e^x = e$, כלומר $x = 0$ או $x = 1$.\n\n<strong>איזה גרף מעל:</strong> $ex - xe^x = x(e - e^x)$. עבור $0 &lt; x &lt; 1$: $x &gt; 0$ ו-$e^x &lt; e$, ולכן $ex &gt; xe^x$ — הישר מעל הגרף.\n(עבור $x &lt; 0$ שתי הפונקציות לא נחתכות שוב, והתחום ביניהן אינסופי ושטחו אינסופי, כי $ex \\to -\\infty$ בעוד $xe^x \\to 0$; לכן \"השטח הסופי\" הוא זה שבין $0$ ל-$1$.)\n\n<strong>חישוב:</strong> באינטגרציה בחלקים ($u = x$, $dv = e^xdx$): $\\int xe^x\\,dx = xe^x - e^x + C$. לכן\n\\[ S = \\int_0^1\\left(ex - xe^x\\right)dx = \\left[\\frac{ex^2}{2}\\right]_0^1 - \\left[xe^x - e^x\\right]_0^1 = \\frac e2 - \\left((e - e) - (0 - 1)\\right) = \\frac e2 - 1. \\]\n<strong>תשובה:</strong> $S = \\frac e2 - 1 \\approx 0.359$.",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8724,6 +9096,7 @@ window.BANK = {
     "<p>הציבו $u = \\ln x$.</p>"
    ],
    "solution": "<p>לפי ההגדרה, $\\int_e^\\infty = \\lim_{R\\to\\infty}\\int_e^R$. בהצבה $u = \\ln x$, $du = \\frac{dx}{x}$ ($x = e \\mapsto u = 1$, $x = R\\mapsto u = \\ln R$):\n\\[ \\int_e^R\\frac{dx}{x\\ln^2x} = \\int_1^{\\ln R}\\frac{du}{u^2} = \\left[-\\frac1u\\right]_1^{\\ln R} = 1 - \\frac{1}{\\ln R} \\xrightarrow[R\\to\\infty]{} 1, \\]\nכי $\\ln R \\to \\infty$.</p>\n<p><strong>תשובה:</strong> האינטגרל מתכנס וערכו $1$.</p>",
+   "src": "מועד מיוחד תשפ\"ה סמסטר א'",
    "exam": "תשפ\"ה סמסטר א מועד מיוחד"
   },
   {
@@ -8748,6 +9121,7 @@ window.BANK = {
     "<p>פונקציה הפיכה מ-$\\R$ ל-$\\R$ חייבת להיות גם חח\"ע וגם על $\\R$. מהי התמונה של כל אחד משני החלקים?</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\n<strong>הגרף:</strong> עבור $x&lt;1$ זהו גרף הפרבולה הקובית $y=x^3$: עולה ממש, עובר בנקודות $(-1,-1)$, $(0,0)$ (נקודת פיתול עם משיק אופקי), ומתקרב לנקודה $(1,1)$ — נקודה זו <em>אינה</em> שייכת לגרף (עיגול ריק). עבור $x\\ge1$ זו קרן ישרה עם שיפוע 2 שמתחילה בנקודה $(1,3)$ (עיגול מלא) ועוברת ב-$(2,5)$. בנקודה $x=1$ יש \"קפיצה\" מגובה 1 לגובה 3.\n  \n</li>\n<li>\n<strong>הפונקציה אינה הפיכה כפונקציה מ-$\\R$ ל-$\\R$</strong>, כי היא אינה על $\\R$.\n\n  נמצא את התמונה. עבור $x&lt;1$: $x^3$ עולה ממש, ולכן $x^3&lt;1^3=1$; כלומר ערכי החלק הראשון קטנים מ-1 (ולמעשה מכסים את $(-\\infty,1)$). עבור $x\\ge1$: $2x+1\\ge3$; כלומר ערכי החלק השני גדולים או שווים ל-3 (ומכסים את $[3,\\infty)$). לכן\n  \\[\n  \\operatorname{Im}f=(-\\infty,1)\\cup[3,\\infty).\n  \\]\n  בפרט, לא קיים $x\\in\\R$ עם $f(x)=2$: אם $x&lt;1$ אז $f(x)&lt;1$, ואם $x\\ge1$ אז $f(x)\\ge3$. לכן $f$ אינה על $\\R$, ולכן אין לה הופכית $f^{-1}:\\R\\to\\R$.\n\n  (הערה: $f$ כן חח\"ע — היא עולה ממש, שכן כל חלק עולה ממש וכל ערך של החלק הראשון קטן מכל ערך של החלק השני. לכן $f$ הפיכה כפונקציה מ-$\\R$ אל התמונה שלה $(-\\infty,1)\\cup[3,\\infty)$, עם $f^{-1}(y)=\\sqrt[3]{y}$ עבור $y&lt;1$ ו-$f^{-1}(y)=\\frac{y-1}{2}$ עבור $y\\ge3$; אבל לא כפונקציה מ-$\\R$ ל-$\\R$.)\n\n</li>\n</ol>",
+   "src": "בוחן תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א בוחן"
   },
   {
@@ -8773,6 +9147,7 @@ window.BANK = {
     "<p>בגבול משמאל פרקו את המונה לגורמים. בגבול מימין הציבו $y=x-1$ והשתמשו בגבול היסודי $\\frac{\\ln(1+y)}{y}\\to1$.</p>"
    ],
    "solution": "<p>הפונקציה רציפה ב-1 אם ורק אם הגבולות החד-צדדיים ב-1 קיימים ושווים ל-$f(1)=a$.</p>\n<p><strong>הגבול משמאל.</strong> $x^2-4x+3=(x-1)(x-3)$, ועבור $x\\neq1$ מותר לצמצם:\n\\[\n\\lim_{x\\to1^-}f(x)=\\lim_{x\\to1^-}\\frac{(x-1)(x-3)}{x-1}=\\lim_{x\\to1^-}(x-3)=1-3=-2 ,\n\\]\nכאשר בשוויון האחרון השתמשנו ברציפות הפולינום $x-3$.</p>\n<p><strong>הגבול מימין.</strong> לפי אריתמטיקה של גבולות (הקבוע $2b$ יוצא מהגבול), ועם ההצבה $y=x-1$ ($y\\to0^+$ כאשר $x\\to1^+$):\n\\[\n\\lim_{x\\to1^+}f(x)=2b\\cdot\\lim_{x\\to1^+}\\frac{\\ln x}{x-1}=2b\\cdot\\lim_{y\\to0^+}\\frac{\\ln(1+y)}{y}=2b\\cdot1=2b ,\n\\]\nלפי הגבול היסודי $\\lim_{y\\to0}\\frac{\\ln(1+y)}{y}=1$ (מדף הנוסחאות: $\\lim_{y\\to0}\\frac{\\log_a(1+y)}{y}=\\frac{1}{\\ln a}$ עם $a=e$).</p>\n<p><strong>מסקנה.</strong> $f$ רציפה ב-1 אם ורק אם $-2=a=2b$, כלומר\n\\[\n\\boxed{a=-2,\\quad b=-1.}\n\\]</p>",
+   "src": "בוחן תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א בוחן"
   },
   {
@@ -8797,6 +9172,7 @@ window.BANK = {
     "<p>הגדירו $f(x)=x^5+e^x$ ובדקו את הסימן שלה בנקודות שלמות קרובות ל-0.</p>"
    ],
    "solution": "<p>נגדיר $f(x)=x^5+e^x$. $f$ רציפה על $\\R$ כסכום של פולינום ושל פונקציה מעריכית, שתיהן רציפות.</p>\n<p>נחשב:\n\\[\nf(0)=0^5+e^0=1&gt;0,\\qquad f(-1)=(-1)^5+e^{-1}=-1+\\frac1e&lt;0 ,\n\\]\nכי $e&gt;1$ ולכן $\\frac1e&lt;1$.</p>\n<p>$f$ רציפה בקטע הסגור $[-1,0]$ ומחליפה בו סימן בקצוות. לפי משפט ערך הביניים (משפט בולצאנו) קיים $c\\in(-1,0)$ כך ש-$f(c)=0$, כלומר $c^5+e^c=0$, ו-$c$ הוא פתרון ממשי של המשוואה.</p>\n<p><strong>הקטע המבוקש:</strong> $[-1,0]$, שאורכו 1.</p>\n<p>(הערה: הפתרון יחיד — $f$ עולה ממש כסכום של שתי פונקציות עולות ממש $x^5$ ו-$e^x$ — ולכן \"הפתרון\" מוגדר היטב. מספרית $c\\approx-0.845$.)</p>",
+   "src": "בוחן תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א בוחן"
   },
   {
@@ -8820,6 +9196,7 @@ window.BANK = {
    "question": "<p>יהיו\n\\[\nf(x)=\\sqrt[3]{x},\\qquad g(x)=\\cos(x)-\\sin(x)\n\\]\nאילו מהטענות הבאות נכונה?</p>\n<ol class=\"parts\">\n<li>\nהפונקציה $f\\circ g$ זוגית.\n</li>\n<li>\nהפונקציה $f\\circ g$ אי זוגית.\n</li>\n<li>\nהפונקציה $f\\circ g$ מונוטונית.\n</li>\n<li>\nהפונקציה $f\\circ g$ מחזורית.\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: (ד)</strong>.\n\n$(f\\circ g)(x)=f(g(x))=\\sqrt[3]{\\cos x-\\sin x}$, מוגדרת לכל $x\\in\\R$ (שורש שלישי מוגדר לכל מספר ממשי).\n\n<strong>(ד) נכונה:</strong> $\\sin$ ו-$\\cos$ מחזוריות עם מחזור $2\\pi$, ולכן לכל $x$:\n\\[\n(f\\circ g)(x+2\\pi)=\\sqrt[3]{\\cos(x+2\\pi)-\\sin(x+2\\pi)}=\\sqrt[3]{\\cos x-\\sin x}=(f\\circ g)(x).\n\\]\n\n<strong>למה האחרות שגויות:</strong> נסמן $h=f\\circ g$.\n\n<ul>\n<li>\n(א) — $h(-x)=\\sqrt[3]{\\cos x+\\sin x}$. למשל $h\\!\\left(\\frac\\pi4\\right)=\\sqrt[3]{0}=0$ אבל $h\\!\\left(-\\frac\\pi4\\right)=\\sqrt[3]{\\sqrt2}\\neq0$, ולכן $h$ אינה זוגית.\n</li>\n<li>\n(ב) — פונקציה אי-זוגית המוגדרת ב-0 מקיימת $h(0)=-h(0)$, כלומר $h(0)=0$; אבל $h(0)=\\sqrt[3]{1}=1\\neq0$.\n</li>\n<li>\n(ג) — פונקציה מחזורית שאינה קבועה אינה מונוטונית: למשל $h(0)=1$, $h\\!\\left(\\frac\\pi4\\right)=0$, $h(2\\pi)=1$, כלומר $h(0)&gt;h(\\frac\\pi4)&lt;h(2\\pi)$ — הפונקציה יורדת ואחר כך עולה.\n</li>\n</ul>",
+   "src": "בוחן תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א בוחן"
   },
   {
@@ -8845,6 +9222,7 @@ window.BANK = {
     "<p>לאן שואף הבסיס? זה <em>לא</em> גבול מהצורה $1^\\infty$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג)</strong>.\n\nהבסיס שואף ל-$\\frac13$ (חלוקה ב-$x^2$), ולא ל-1, ולכן זה אינו גבול מהצורה $1^\\infty$. נשתמש בכלל הסנדוויץ'. עבור $x&gt;0$:\n\\[\n0\\le\\frac{x^2+2x}{3x^2+7x}\\le\\frac{x^2+2x}{3x^2+6x}=\\frac{x(x+2)}{3x(x+2)}=\\frac13 ,\n\\]\nכי המונה חיובי והקטנת המכנה החיובי ($7x&gt;6x$) מגדילה את השבר. מכיוון שהפונקציה $t\\mapsto t^{x^2}$ עולה על $[0,\\infty)$ (עבור $x^2&gt;0$):\n\\[\n0\\le\\left(\\frac{x^2+2x}{3x^2+7x}\\right)^{x^2}\\le\\left(\\frac13\\right)^{x^2}.\n\\]\nכאשר $x\\to\\infty$ גם $x^2\\to\\infty$, ומכיוון ש-$0&lt;\\frac13&lt;1$ מתקיים $\\left(\\frac13\\right)^{x^2}\\to0$. לפי כלל הסנדוויץ'\n\\[\n\\lim_{x\\to\\infty}\\left(\\frac{x^2+2x}{3x^2+7x}\\right)^{x^2}=\\boxed{0}.\n\\]\n\n<strong>למה האחרות שגויות:</strong> (א) — הביטוי חסום ע\"י $\\left(\\frac13\\right)^{x^2}\\le1$, ולכן אינו שואף ל-$\\infty$. (ב) ו-(ד) — ערכים אלה מתקבלים מטיפול שגוי בביטוי כאילו היה מהצורה $1^\\infty$; כאן הבסיס שואף ל-$\\frac13&lt;1$ והגבול הוא 0.",
+   "src": "בוחן תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א בוחן"
   },
   {
@@ -8869,6 +9247,7 @@ window.BANK = {
    "question": "<p>תהי $f(x)=x+e^x$. אילו מהטענות הבאות נכונה?</p>\n<ol class=\"parts\">\n<li>\nהפונקציה חח\"ע ועל $\\R$.\n</li>\n<li>\nהפונקציה חח\"ע אך אינה על $\\R$.\n</li>\n<li>\nהפונקציה על $\\R$ אך אינה חח\"ע.\n</li>\n<li>\nהפונקציה אינה חח\"ע ואינה על $\\R$.\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>התשובה הנכונה: (א)</strong>.\n\n<strong>חח\"ע:</strong> יהיו $x_1&lt;x_2$. מכיוון ש-$e^x$ עולה ממש, $e^{x_1}&lt;e^{x_2}$. נחבר את שני אי-השוויונות ונקבל $x_1+e^{x_1}&lt;x_2+e^{x_2}$, כלומר $f$ עולה ממש ובפרט חח\"ע.\n\n<strong>על $\\R$:</strong> $f$ רציפה על $\\R$ כסכום של פונקציות רציפות, ו-\n\\[\n\\lim_{x\\to-\\infty}(x+e^x)=-\\infty+0=-\\infty,\\qquad \\lim_{x\\to\\infty}(x+e^x)=\\infty+\\infty=\\infty .\n\\]\nיהי $y\\in\\R$. לפי הגבולות האלה קיימים $x_1&lt;x_2$ עם $f(x_1)&lt;y&lt;f(x_2)$, ולפי משפט ערך הביניים על $[x_1,x_2]$ קיים $c$ עם $f(c)=y$. לכן $f$ על $\\R$.\n\n<strong>למה האחרות שגויות:</strong> (ב) ו-(ד) טוענות ש-$f$ אינה על, (ג) ו-(ד) טוענות שאינה חח\"ע — שתי הטענות הופרכו לעיל.",
+   "src": "בוחן תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א בוחן"
   },
   {
@@ -8895,6 +9274,7 @@ window.BANK = {
     "<p>בגבול מימין כפלו מונה ומכנה בצמודים של שני הביטויים: $\\sqrt{x+7}+\\sqrt{10}$ ו-$\\sqrt{x+4}+\\sqrt7$.</p>"
    ],
    "solution": "<strong>התשובה הנכונה: (ג)</strong>.\n\n<strong>משמאל:</strong> $\\sqrt{x^2+1}$ רציפה (הרכבה של פולינום ושורש), ולכן\n\\[\n\\lim_{x\\to3^-}f(x)=\\sqrt{3^2+1}=\\sqrt{10}=f(3).\n\\]\n<strong>מימין:</strong> גבול מהצורה $\\frac00$. נכפול בצמודים:\n\\[\n\\frac{\\sqrt{x+7}-\\sqrt{10}}{\\sqrt{x+4}-\\sqrt7}\\cdot\\frac{\\sqrt{x+4}+\\sqrt7}{\\sqrt{x+4}+\\sqrt7}\\cdot\\frac{\\sqrt{x+7}+\\sqrt{10}}{\\sqrt{x+7}+\\sqrt{10}}\n=\\frac{\\bigl((x+7)-10\\bigr)\\left(\\sqrt{x+4}+\\sqrt7\\right)}{\\bigl((x+4)-7\\bigr)\\left(\\sqrt{x+7}+\\sqrt{10}\\right)}\n=\\frac{\\sqrt{x+4}+\\sqrt7}{\\sqrt{x+7}+\\sqrt{10}},\n\\]\nכאשר צמצמנו את $x-3\\neq0$. הביטוי האחרון רציף ב-3, ולכן\n\\[\n\\lim_{x\\to3^+}f(x)=\\frac{\\sqrt7+\\sqrt7}{\\sqrt{10}+\\sqrt{10}}=\\frac{2\\sqrt7}{2\\sqrt{10}}=\\frac{\\sqrt7}{\\sqrt{10}} .\n\\]\nשני הגבולות החד-צדדיים קיימים וסופיים, אך $\\frac{\\sqrt7}{\\sqrt{10}}\\neq\\sqrt{10}$. לכן הגבול ב-3 אינו קיים, ויש ב-3 אי-רציפות מסוג קפיצה.\n\n<strong>למה האחרות שגויות:</strong> (א) — הגבול ב-3 אינו קיים, ולכן אין רציפות (יש רק רציפות משמאל). (ב) — אי-רציפות סליקה דורשת קיום הגבול הדו-צדדי. (ד) — אי-רציפות עיקרית דורשת שלפחות אחד הגבולות החד-צדדיים לא יהיה קיים כגבול סופי, וכאן שניהם קיימים.",
+   "src": "בוחן תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א בוחן"
   },
   {
@@ -8920,6 +9300,7 @@ window.BANK = {
     "<p>הציבו $t = x^2$ וקבלו משוואה ריבועית ב-$t$; זכרו ש-$t = x^2$ חייב להיות אי-שלילי.</p>"
    ],
    "solution": "<strong>דרך 1 (הצבה).</strong> נעביר אגפים: $x^4 + 2x^2 - 1 = 0$. נציב $t = x^2 \\ge 0$ ונקבל\n\\[ t^2 + 2t - 1 = 0 \\quad\\Longrightarrow\\quad t_{1,2} = \\frac{-2 \\pm \\sqrt{4 + 4}}{2} = -1 \\pm \\sqrt{2}. \\]\nהפתרון $t = -1 - \\sqrt{2} &lt; 0$ נפסל, כי $x^2 \\ge 0$ לכל $x$ ממשי, ולכן אין לו פתרון ממשי.\nהפתרון $t = -1 + \\sqrt{2} &gt; 0$ (כי $\\sqrt 2 &gt; 1$) נותן\n\\[ x^2 = \\sqrt{2} - 1 \\quad\\Longrightarrow\\quad x_{1,2} = \\pm\\sqrt{\\sqrt{2} - 1}, \\]\nשני מספרים ממשיים שונים.\n\n<strong>דרך 2 (חקירה).</strong> נגדיר $f(x) = x^4 + 2x^2 - 1$, פונקציה רציפה וגזירה בכל $\\R$. מתקיים\n\\[ f'(x) = 4x^3 + 4x = 4x(x^2 + 1), \\]\nומכיוון ש-$x^2 + 1 &gt; 0$, הסימן של $f'$ הוא הסימן של $x$: $f' &lt; 0$ ב-$(-\\infty, 0)$ ו-$f' &gt; 0$ ב-$(0, \\infty)$.\nלכן $f$ יורדת ממש ב-$(-\\infty, 0]$ ועולה ממש ב-$[0, \\infty)$, ובכל אחד מהקטעים האלה יש לה לכל היותר אפס אחד.\nכעת $f(0) = -1 &lt; 0$ ו-$f(1) = f(-1) = 2 &gt; 0$. לפי משפט ערך הביניים יש ל-$f$ אפס ב-$(-1, 0)$ ואפס ב-$(0, 1)$, ולפי המונוטוניות אלה האפסים היחידים.\n\n<strong>תשובה:</strong> למשוואה יש בדיוק <strong>שני</strong> פתרונות ממשיים, $x = \\pm\\sqrt{\\sqrt 2 - 1}$.",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -8945,6 +9326,7 @@ window.BANK = {
     "<p>זהו את סוג הביטוי ($\\frac{0}{0}$) והשתמשו בכלל לופיטל.</p>"
    ],
    "solution": "<p>כאשר $x \\to 0$ המונה $x - \\sin x \\to 0$ והמכנה $\\cos x - 1 \\to 0$, כלומר ביטוי מהצורה $\\frac{0}{0}$.\nהמונה והמכנה גזירים בסביבת $0$, ונגזרת המכנה $-\\sin x \\ne 0$ בסביבה מנוקבת של $0$. לפי כלל לופיטל (בתנאי שהגבול החדש קיים):\n\\[ \\lim_{x\\to 0} \\frac{x - \\sin x}{\\cos x - 1} = \\lim_{x\\to 0} \\frac{1 - \\cos x}{-\\sin x}. \\]\nגם זה ביטוי $\\frac{0}{0}$. נחשב אותו בעזרת $1 - \\cos x = 2\\sin^2\\frac{x}{2}$:\n\\[ \\frac{1 - \\cos x}{-\\sin x} = \\frac{2\\sin^2\\frac{x}{2}}{-\\sin x}\n   = -\\frac{2\\left(\\dfrac{\\sin\\frac{x}{2}}{\\frac{x}{2}}\\right)^2 \\cdot \\dfrac{x^2}{4}}{\\dfrac{\\sin x}{x} \\cdot x}\n   = -\\frac{\\left(\\dfrac{\\sin\\frac{x}{2}}{\\frac{x}{2}}\\right)^2}{\\dfrac{\\sin x}{x}} \\cdot \\frac{x}{2}\n   \\xrightarrow[x\\to 0]{} -\\frac{1^2}{1}\\cdot 0 = 0, \\]\nכאשר השתמשנו בגבול היסודי $\\lim_{u\\to 0}\\frac{\\sin u}{u} = 1$ ובאריתמטיקה של גבולות.\n(לחלופין, הפעלה נוספת של לופיטל: $\\lim_{x\\to0}\\frac{\\sin x}{-\\cos x} = \\frac{0}{-1} = 0$.)\nמכיוון שהגבול אחרי לופיטל קיים, גם הגבול המקורי קיים ושווה לו:\n\\[ \\boxed{\\lim_{x\\to 0} \\frac{x - \\sin x}{\\cos x - 1} = 0}. \\]</p>",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -8970,6 +9352,7 @@ window.BANK = {
     "<p>התחילו מתחום ההגדרה: הנקודות ה\"חשודות\" לאסימפטוטה אנכית הן קצוות התחום ונקודות שבהן המכנה מתאפס. אסימפטוטה משופעת $y = ax + b$ יש לבדוק רק בכיוון שבו התחום אינסופי.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $\\ln x$ מוגדר עבור $x &gt; 0$, והמכנה מתאפס ב-$x = 1$. לכן התחום הוא $(0,1)\\cup(1,\\infty)$, ו-$f$ רציפה בו.\n\n<strong>אסימפטוטות אנכיות.</strong> הנקודות החשודות הן $x = 0$ (קצה התחום) ו-$x = 1$.\n\n<ul>\n<li>\n$x \\to 0^+$: המונה $x^2 - 2\\ln x \\to 0 - (-\\infty) = +\\infty$ והמכנה $x - 1 \\to -1$, ולכן\n  \\[ \\lim_{x\\to 0^+} f(x) = -\\infty. \\]\n  לכן $x = 0$ אסימפטוטה אנכית (מימין).\n</li>\n<li>\n$x \\to 1$: המונה $\\to 1 - 2\\ln 1 = 1 &gt; 0$ והמכנה $\\to 0$, כאשר $x - 1 &lt; 0$ משמאל ו-$x - 1 &gt; 0$ מימין. לכן\n  \\[ \\lim_{x\\to 1^-} f(x) = -\\infty, \\qquad \\lim_{x\\to 1^+} f(x) = +\\infty, \\]\n  ו-$x = 1$ אסימפטוטה אנכית (משני הצדדים).\n</li>\n</ul>\n<p><strong>אסימפטוטות אופקיות/משופעות.</strong> התחום אינסופי רק בכיוון $+\\infty$, לכן בודקים רק $x \\to +\\infty$. נחפש $y = ax + b$:\n\\[ a = \\lim_{x\\to\\infty} \\frac{f(x)}{x} = \\lim_{x\\to\\infty} \\frac{x^2 - 2\\ln x}{x^2 - x}\n     = \\lim_{x\\to\\infty} \\frac{x^2\\left(1 - \\frac{2\\ln x}{x^2}\\right)}{x^2\\left(1 - \\frac{1}{x}\\right)} = \\frac{1 - 0}{1 - 0} = 1, \\]\nכי $\\frac{\\ln x}{x^2} \\to 0$ (למשל לפי לופיטל: $\\lim \\frac{1/x}{2x} = 0$).\n\\[ b = \\lim_{x\\to\\infty} \\bigl(f(x) - x\\bigr) = \\lim_{x\\to\\infty} \\frac{x^2 - 2\\ln x - x^2 + x}{x - 1}\n     = \\lim_{x\\to\\infty} \\frac{x\\left(1 - \\frac{2\\ln x}{x}\\right)}{x\\left(1 - \\frac{1}{x}\\right)} = 1, \\]\nכי $\\frac{\\ln x}{x} \\to 0$. מכיוון ששני הגבולות סופיים, הישר $y = x + 1$ הוא אסימפטוטה משופעת ב-$+\\infty$ (ואין אסימפטוטה אופקית).</p>\n<p><strong>תשובה:</strong> אסימפטוטות אנכיות $x = 0$ ו-$x = 1$; אסימפטוטה משופעת $y = x + 1$ כאשר $x \\to +\\infty$.</p>",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -8994,6 +9377,7 @@ window.BANK = {
     "<p>מצאו את הנקודות הקריטיות, קבעו תחומי עלייה וירידה, ובדקו את התנהגות $f$ בקצוות התחום ($x = 0$ ו-$x \\to \\infty$).</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> $x \\ge 0$ (בגלל $\\sqrt{x}$). $f$ רציפה ב-$[0,\\infty)$, $f(x) \\ge 0$ לכל $x$, ו-$f(0) = 0$.\n\n<strong>נגזרת</strong> (עבור $x &gt; 0$):\n\\[ f'(x) = \\frac{\\frac{1}{2\\sqrt{x}}\\, e^x - \\sqrt{x}\\, e^x}{e^{2x}} = \\frac{e^x(1 - 2x)}{2\\sqrt{x}\\, e^{2x}} = \\frac{1 - 2x}{2\\sqrt{x}\\, e^x}. \\]\nהמכנה חיובי, ולכן $f'(x) = 0 \\iff x = \\frac12$, $f' &gt; 0$ ב-$(0, \\frac12)$ ו-$f' &lt; 0$ ב-$(\\frac12, \\infty)$.\nכלומר $f$ עולה ממש ב-$[0, \\frac12]$ ויורדת ממש ב-$[\\frac12, \\infty)$ (כולל הקצה, כי $f$ רציפה שם).\n\n<strong>מקסימום מוחלט:</strong> מהמונוטוניות, $f(x) \\le f(\\frac12)$ לכל $x \\ge 0$, ולכן\n\\[ \\max f = f\\left(\\tfrac12\\right) = \\frac{\\sqrt{1/2}}{e^{1/2}} = \\frac{1}{\\sqrt{2e}}, \\]\nהמתקבל ב-$x = \\frac12$.\n\n<strong>מינימום מוחלט:</strong> $f(x) \\ge 0 = f(0)$ לכל $x$ בתחום (מונה אי-שלילי ומכנה חיובי), ולכן\n\\[ \\min f = f(0) = 0, \\]\nהמתקבל ב-$x = 0$. (שימו לב: אמנם $\\lim_{x\\to\\infty} f(x) = 0$, אבל הערך $0$ מתקבל בפועל ב-$x = 0$, ולכן המינימום קיים.)\n\n<strong>תשובה:</strong> מינימום מוחלט $0$ ב-$x = 0$; מקסימום מוחלט $\\frac{1}{\\sqrt{2e}}$ ב-$x = \\frac12$.",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -9018,6 +9402,7 @@ window.BANK = {
     "<p>פתחו את $f(x) = \\ln x$ סביב $x_0 = 1$ (שם הערכים של $f$ ונגזרותיה רציונליים) והשתמשו בשארית לגרנז' מסדר שני.</p>"
    ],
    "solution": "<p>נגדיר $f(x) = \\ln x$ ונפתח סביב $x_0 = 1$, נקודה קרובה ל-$1.2$ שבה כל הערכים ידועים. $f$ גזירה אינסוף פעמים ב-$(0,\\infty)$:\n\\[ f(x) = \\ln x,\\quad f'(x) = \\frac{1}{x},\\quad f''(x) = -\\frac{1}{x^2},\\quad f'''(x) = \\frac{2}{x^3}, \\]\nולכן $f(1) = 0$, $f'(1) = 1$, $f''(1) = -1$.</p>\n<p><strong>פולינום טיילור מסדר שני סביב $1$:</strong>\n\\[ P_2(x) = f(1) + f'(1)(x - 1) + \\frac{f''(1)}{2!}(x - 1)^2 = (x - 1) - \\frac{(x - 1)^2}{2}. \\]\nלכן\n\\[ \\ln(1.2) \\approx P_2(1.2) = 0.2 - \\frac{0.04}{2} = 0.18 = \\frac{9}{50}. \\]</p>\n<p><strong>הערכת השגיאה.</strong> לפי משפט טיילור עם שארית לגרנז', קיימת נקודה $c$ בין $1$ ל-$1.2$ כך ש-\n\\[ R_2(1.2) = \\ln(1.2) - P_2(1.2) = \\frac{f'''(c)}{3!}(1.2 - 1)^3 = \\frac{2}{6c^3}\\cdot (0.2)^3 = \\frac{0.008}{3c^3}. \\]\nמכיוון ש-$1 &lt; c &lt; 1.2$, מתקיים $c^3 &gt; 1$, ולכן $\\frac{1}{c^3} &lt; 1$ ו-\n\\[ 0 &lt; R_2(1.2) &lt; \\frac{0.008}{3} = \\frac{8}{3000} = \\frac{1}{375}. \\]</p>\n<p><strong>תשובה:</strong> $\\ln(1.2) \\approx 0.18 = \\frac{9}{50}$, והשגיאה קטנה מ-$\\frac{1}{375}$ (בפרט, מכיוון שהשארית חיובית, $0.18 &lt; \\ln(1.2) &lt; 0.18 + \\frac{1}{375}$).</p>\n<p>(בדיקה: $\\ln 1.2 \\approx 0.18232$, והשגיאה בפועל היא כ-$0.0023 &lt; \\frac{1}{375} \\approx 0.00267$.)</p>",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -9042,6 +9427,7 @@ window.BANK = {
     "<p>חלקו את המכנה ב-$(x - 1)$, בדקו שהגורם הריבועי שנותר אי-פריק, ופרקו לשברים חלקיים מהצורה $\\frac{A}{x-1} + \\frac{Bx + C}{x^2 + 2x + 2}$.</p>"
    ],
    "solution": "<strong>פירוק המכנה.</strong> $1^3 + 1^2 - 2 = 0$, ולכן $(x - 1)$ מחלק את המכנה. חילוק פולינומים נותן\n\\[ x^3 + x^2 - 2 = (x - 1)(x^2 + 2x + 2). \\]\nהדיסקרימיננטה של $x^2 + 2x + 2$ היא $4 - 8 &lt; 0$, לכן הגורם הריבועי אי-פריק מעל $\\R$ (ובפרט $x^2 + 2x + 2 = (x+1)^2 + 1 &gt; 0$).\n\n<strong>שברים חלקיים.</strong> דרגת המונה קטנה מדרגת המכנה, לכן נחפש\n\\[ \\frac{-3x - 7}{(x - 1)(x^2 + 2x + 2)} = \\frac{A}{x - 1} + \\frac{Bx + C}{x^2 + 2x + 2}, \\]\nכלומר $-3x - 7 = A(x^2 + 2x + 2) + (Bx + C)(x - 1)$ לכל $x$.\n\n<ul>\n<li>\n$x = 1$: $-10 = 5A$, ולכן $A = -2$.\n</li>\n<li>\n$x = 0$: $-7 = 2A - C$, ולכן $C = 2A + 7 = 3$.\n</li>\n<li>\nהשוואת מקדמי $x^2$: $0 = A + B$, ולכן $B = 2$.\n</li>\n</ul>\n<p>לכן\n\\[ \\int \\frac{-3x - 7}{x^3 + x^2 - 2}\\,dx = \\int \\left( \\frac{-2}{x - 1} + \\frac{2x + 3}{x^2 + 2x + 2} \\right) dx\n   = \\int \\left( \\frac{-2}{x - 1} + \\frac{2x + 2}{x^2 + 2x + 2} + \\frac{1}{(x + 1)^2 + 1} \\right) dx. \\]</p>\n<ul>\n<li>\n$\\int \\frac{-2}{x - 1}\\,dx = -2\\ln|x - 1| + C$.\n</li>\n<li>\nבמחובר השני המונה הוא נגזרת המכנה: בהצבה $t = x^2 + 2x + 2$, $dt = (2x + 2)\\,dx$,\n  \\[ \\int \\frac{2x + 2}{x^2 + 2x + 2}\\,dx = \\int \\frac{dt}{t} = \\ln|t| + C = \\ln(x^2 + 2x + 2) + C. \\]\n</li>\n<li>\nבהשלמה לריבוע ובהצבה $u = x + 1$: $\\int \\frac{dx}{(x + 1)^2 + 1} = \\arctan(x + 1) + C$.\n</li>\n</ul>\n<p><strong>תשובה:</strong>\n\\[ \\boxed{\\int \\frac{-3x - 7}{x^3 + x^2 - 2}\\,dx = -2\\ln|x - 1| + \\ln(x^2 + 2x + 2) + \\arctan(x + 1) + C.} \\]\n(בדיקה: גזירת התוצאה מחזירה את האינטגרנד.)</p>",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -9066,6 +9452,7 @@ window.BANK = {
     "<p>זו משוואה פרידה: העבירו את $y^2$ לאגף של $dy$, ואת $\\int x\\sin x\\,dx$ חשבו באינטגרציה בחלקים. אל תשכחו את הפתרון $y \\equiv 0$.</p>"
    ],
    "solution": "<p>זו משוואה פרידה: $\\frac{dy}{dx} = y^2 \\cdot x\\sin x$.</p>\n<p><strong>הפתרון הקבוע:</strong> $y \\equiv 0$ מקיים $y' = 0 = 0^2 \\cdot x\\sin x$, ולכן הוא פתרון.</p>\n<p><strong>עבור $y \\ne 0$:</strong> נפריד משתנים ונבצע אינטגרציה:\n\\[ \\int \\frac{dy}{y^2} = \\int x\\sin x\\,dx. \\]\nבאגף שמאל $\\int y^{-2}\\,dy = -\\frac{1}{y}$. באגף ימין אינטגרציה בחלקים עם $u = x$, $dv = \\sin x\\,dx$ (כלומר $du = dx$, $v = -\\cos x$):\n\\[ \\int x\\sin x\\,dx = -x\\cos x + \\int \\cos x\\,dx = -x\\cos x + \\sin x + C. \\]\nלכן\n\\[ -\\frac{1}{y} = -x\\cos x + \\sin x + C \\quad\\Longrightarrow\\quad \\boxed{y = \\frac{1}{x\\cos x - \\sin x - C}}, \\]\nכאשר $C$ קבוע ממשי כלשהו (בכל קטע שבו המכנה אינו מתאפס).</p>\n<p><strong>תשובה:</strong> הפתרון הכללי הוא $y = \\dfrac{1}{x\\cos x - \\sin x + C}$ ($C \\in \\R$, שינינו את שם הקבוע), ובנוסף הפתרון $y \\equiv 0$.</p>",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -9090,6 +9477,7 @@ window.BANK = {
     "<p>פתחו את $(\\sin x + \\cos x)^2$ והשתמשו בזהויות $\\sin^2 x + \\cos^2 x = 1$ ו-$2\\sin x\\cos x = \\sin 2x$.</p>"
    ],
    "solution": "<p>נפח גוף הסיבוב של גרף $f$ סביב ציר ה-$x$ בקטע $[a,b]$ הוא $V = \\pi\\int_a^b f^2(x)\\,dx$. כאן\n\\[ f^2(x) = \\sin^2 x + 2\\sin x\\cos x + \\cos^2 x = 1 + \\sin 2x, \\]\nולכן, לפי המשפט היסודי של החשבון האינטגרלי (ניוטון-לייבניץ),\n\\[ V = \\pi\\int_0^{\\pi/2} (1 + \\sin 2x)\\,dx = \\pi\\left[ x - \\frac{\\cos 2x}{2} \\right]_0^{\\pi/2}\n     = \\pi\\left[ \\left(\\frac{\\pi}{2} - \\frac{\\cos\\pi}{2}\\right) - \\left(0 - \\frac{\\cos 0}{2}\\right) \\right]\n     = \\pi\\left[ \\frac{\\pi}{2} + \\frac12 + \\frac12 \\right]. \\]\n<strong>תשובה:</strong> $\\boxed{V = \\pi\\left(\\frac{\\pi}{2} + 1\\right) = \\frac{\\pi^2}{2} + \\pi}$.</p>",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -9114,6 +9502,7 @@ window.BANK = {
     "<p>הציבו $t = \\ln x$.</p>"
    ],
    "solution": "<p>האינטגרנד $\\frac{1}{x\\ln^3 x}$ רציף וחיובי ב-$[e, \\infty)$, ולכן האינטגרל מוכלל רק בגלל הגבול העליון האינסופי. לפי ההגדרה\n\\[ \\int_e^\\infty \\frac{dx}{x\\ln^3 x} = \\lim_{A\\to\\infty} \\int_e^A \\frac{dx}{x\\ln^3 x}. \\]\nנמצא פונקציה קדומה בהצבה $t = \\ln x$, $dt = \\frac{dx}{x}$:\n\\[ \\int \\frac{dx}{x\\ln^3 x} = \\int \\frac{dt}{t^3} = -\\frac{1}{2t^2} + C = -\\frac{1}{2\\ln^2 x} + C. \\]\nלכן, עבור $A &gt; e$:\n\\[ \\int_e^A \\frac{dx}{x\\ln^3 x} = \\left[ -\\frac{1}{2\\ln^2 x} \\right]_e^A = -\\frac{1}{2\\ln^2 A} + \\frac{1}{2\\ln^2 e} = \\frac12 - \\frac{1}{2\\ln^2 A}. \\]\nכאשר $A \\to \\infty$ מתקיים $\\ln A \\to \\infty$, ולכן $\\frac{1}{2\\ln^2 A} \\to 0$.</p>\n<p><strong>תשובה:</strong> האינטגרל מתכנס ו-$\\boxed{\\int_e^\\infty \\frac{dx}{x\\ln^3 x} = \\frac12}$.</p>",
+   "src": "מועד א' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד א"
   },
   {
@@ -9139,6 +9528,7 @@ window.BANK = {
     "<p>פונקציה רציפה על קטע סגור מקבלת מינימום ומקסימום (ויירשטראס) וכל ערך ביניהם (ערך הביניים). נשאר למצוא את המינימום והמקסימום.</p>"
    ],
    "solution": "<p>$f$ פולינום, ולכן רציפה בקטע הסגור $[-3, 5]$. לפי משפט ויירשטראס השני $f$ מקבלת בקטע מינימום $c$ ומקסימום $d$, ולפי משפט ערך הביניים היא מקבלת כל ערך בין $c$ ל-$d$. לכן התמונה היא בדיוק הקטע הסגור $[c, d]$, ונותר לחשב את $c$ ו-$d$.</p>\n<p>נקודות קיצון מוחלט של פונקציה גזירה בקטע סגור נמצאות בנקודות קריטיות פנימיות או בקצוות.\n\\[ f'(x) = 3x^2 - 12 = 3(x^2 - 4) = 0 \\iff x = \\pm 2, \\]\nושתי הנקודות נמצאות בתוך הקטע. נחשב את ערכי $f$ בנקודות החשודות:\n\\[ f(-3) = -27 + 36 + 8 = 17,\\quad f(-2) = -8 + 24 + 8 = 24,\\quad f(2) = 8 - 24 + 8 = -8,\\quad f(5) = 125 - 60 + 8 = 73. \\]\nלכן המינימום הוא $c = -8$ (ב-$x = 2$) והמקסימום הוא $d = 73$ (ב-$x = 5$).</p>\n<p><strong>תשובה:</strong> $\\{ f(x) : -3 \\le x \\le 5 \\} = [-8, 73]$.</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9163,6 +9553,7 @@ window.BANK = {
     "<p>זה ביטוי מהצורה $1^\\infty$. כתבו $\\frac{x^3 + 1}{x^3 - 2} = 1 + \\frac{3}{x^3 - 2}$ והשתמשו בגבול $\\left(1 + \\frac{1}{u}\\right)^u \\to e$.</p>"
    ],
    "solution": "<p>כאשר $x \\to \\infty$ הבסיס שואף ל-$1$ והמעריך ל-$\\infty$ (ביטוי $1^\\infty$). נכתוב\n\\[ \\frac{x^3 + 1}{x^3 - 2} = \\frac{(x^3 - 2) + 3}{x^3 - 2} = 1 + \\frac{3}{x^3 - 2}, \\qquad x^3 + 3 = (x^3 - 2) + 5, \\]\nולכן (עבור $x$ גדול, כך ש-$x^3 - 2 &gt; 0$)\n\\[ \\left( \\frac{x^3 + 1}{x^3 - 2} \\right)^{x^3 + 3} = \\left( 1 + \\frac{3}{x^3 - 2} \\right)^{x^3 - 2} \\cdot \\left( 1 + \\frac{3}{x^3 - 2} \\right)^{5}. \\]\nנסמן $u = \\frac{x^3 - 2}{3} \\to \\infty$. אז הגורם הראשון שווה $\\left[\\left(1 + \\frac{1}{u}\\right)^{u}\\right]^3 \\to e^3$, לפי הגבול היסודי $\\lim_{u\\to\\infty}\\left(1 + \\frac1u\\right)^u = e$ ורציפות $t \\mapsto t^3$.\nהגורם השני שואף ל-$1^5 = 1$, כי $\\frac{3}{x^3 - 2} \\to 0$.\nלפי אריתמטיקה של גבולות:\n\\[ \\boxed{\\lim_{x\\to\\infty} \\left( \\frac{x^3 + 1}{x^3 - 2} \\right)^{x^3 + 3} = e^3 \\cdot 1 = e^3}. \\]\n(דרך חלופית: $\\ln$ של הביטוי הוא $(x^3 + 3)\\ln\\left(1 + \\frac{3}{x^3 - 2}\\right)$, ומכיוון ש-$\\ln(1 + t) \\sim t$ כאשר $t \\to 0$, הוא שואף ל-$\\lim \\frac{3(x^3 + 3)}{x^3 - 2} = 3$.)</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9188,6 +9579,7 @@ window.BANK = {
     "<p>כתבו $f(x) = (6x + 12)^{1/3}$, גזרו פעמיים ובדקו את סימן $f''$. שימו לב לנקודה שבה $f''$ אינה מוגדרת.</p>"
    ],
    "solution": "<strong>תחום הגדרה:</strong> שורש שלישי מוגדר לכל מספר ממשי, לכן $f$ מוגדרת ורציפה בכל $\\R$. נכתוב $f(x) = (6x + 12)^{1/3}$. עבור $x \\ne -2$ (כלומר $6x + 12 \\ne 0$), לפי כלל השרשרת:\n\\[ f'(x) = \\frac13 (6x + 12)^{-2/3} \\cdot 6 = 2(6x + 12)^{-2/3}, \\]\n\\[ f''(x) = 2\\cdot\\left(-\\frac23\\right)(6x + 12)^{-5/3} \\cdot 6 = -8(6x + 12)^{-5/3} = \\frac{-8}{(6x + 12)^{5/3}}. \\]\nב-$x = -2$ הפונקציה אינה גזירה: $\\frac{f(x) - f(-2)}{x + 2} = \\frac{(6(x+2))^{1/3}}{x + 2} = \\frac{6^{1/3}}{(x + 2)^{2/3}} \\to +\\infty$ (משיק אנכי).\n\n<strong>סימן $f''$:</strong> החזקה $(6x + 12)^{5/3}$ היא בעלת אותו סימן כמו $6x + 12$ (חזקה אי-זוגית של שורש שלישי). לכן\n\n<ul>\n<li>\n$x &lt; -2 \\iff 6x + 12 &lt; 0 \\iff f''(x) &gt; 0$, ולכן $f$ קמורה ב-$(-\\infty, -2]$;\n</li>\n<li>\n$x &gt; -2 \\iff 6x + 12 &gt; 0 \\iff f''(x) &lt; 0$, ולכן $f$ קעורה ב-$[-2, \\infty)$.\n</li>\n</ul>\n<p><strong>נקודת פיתול:</strong> ב-$x = -2$ הפונקציה רציפה, יש לגרף משיק (אנכי) והקמירות מתחלפת משני צדי הנקודה. לכן $(-2, f(-2)) = (-2, 0)$ היא נקודת פיתול, אף על פי ש-$f$ אינה גזירה שם. אין נקודות פיתול נוספות, כי $f'' \\ne 0$ בכל נקודה אחרת.</p>\n<p><strong>תשובה:</strong> $f$ קמורה ב-$(-\\infty, -2)$, קעורה ב-$(-2, \\infty)$, ונקודת הפיתול היא $(-2, 0)$.</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9212,6 +9604,7 @@ window.BANK = {
     "<p>חקרו את $g(x) = \\frac{x^2}{e^x}$ ב-$[0, \\infty)$ ומצאו את המקסימום שלה.</p>"
    ],
    "solution": "<p>נגדיר $g(x) = \\frac{x^2}{e^x} = x^2 e^{-x}$ ב-$[0, \\infty)$; $g$ רציפה וגזירה שם.</p>\n<p><strong>אי-השוויון השמאלי:</strong> $x^2 \\ge 0$ ו-$e^x &gt; 0$, ולכן $g(x) \\ge 0$ לכל $x$.</p>\n<p><strong>אי-השוויון הימני:</strong> נחשב\n\\[ g'(x) = \\frac{2x e^x - x^2 e^x}{e^{2x}} = \\frac{x(2 - x)}{e^x}. \\]\nב-$(0, 2)$ מתקיים $g' &gt; 0$ וב-$(2, \\infty)$ מתקיים $g' &lt; 0$. לכן $g$ עולה ב-$[0, 2]$ ויורדת ב-$[2, \\infty)$, ו-$x = 2$ היא נקודת מקסימום מוחלט של $g$ ב-$[0, \\infty)$. לכן לכל $x \\ge 0$:\n\\[ g(x) \\le g(2) = \\frac{4}{e^2} = \\left( \\frac{2}{e} \\right)^2 &lt; 1, \\]\nכי $0 &lt; 2 &lt; e$ ולכן $0 &lt; \\frac{2}{e} &lt; 1$.</p>\n<p>מכאן, לכל $x \\ge 0$: $0 \\le \\frac{x^2}{e^x} \\le \\frac{4}{e^2} &lt; 1$, ובפרט $0 \\le \\frac{x^2}{e^x} \\le 1$. $\\blacksquare$</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9236,6 +9629,7 @@ window.BANK = {
     "<p>פתחו את $f(x) = \\sqrt[3]{x}$ סביב $a = 8$ (כי $\\sqrt[3]{8} = 2$). התחילו מפולינום מסדר ראשון ובדקו אם שארית לגרנז' כבר קטנה מ-$\\frac{1}{10}$.</p>"
    ],
    "solution": "<p>נגדיר $f(x) = \\sqrt[3]{x} = x^{1/3}$ ונפתח סביב $a = 8$, הנקודה הקרובה ל-$11$ שבה השורש השלישי ידוע ($\\sqrt[3]{8} = 2$). נחפש את $n$ המינימלי כך ש-$|R_n(11)| &lt; \\frac{1}{10}$.</p>\n<p><strong>נגזרות</strong> (עבור $x &gt; 0$):\n\\[ f'(x) = \\frac13 x^{-2/3}, \\qquad f''(x) = -\\frac29 x^{-5/3}, \\]\nולכן $f(8) = 2$ ו-$f'(8) = \\frac{1}{3\\cdot 8^{2/3}} = \\frac{1}{3\\cdot 4} = \\frac{1}{12}$.</p>\n<p><strong>שארית לגרנז' עבור $n = 1$:</strong> לפי משפט טיילור, קיימת $c$ בין $8$ ל-$11$ כך ש-\n\\[ R_1(11) = \\frac{f''(c)}{2!}(11 - 8)^2 = \\frac{-\\frac29 c^{-5/3}}{2}\\cdot 9 = -\\frac{1}{c^{5/3}}. \\]\nמכיוון ש-$8 &lt; c &lt; 11$, מתקיים $c^{5/3} &gt; 8^{5/3} = 2^5 = 32$, ולכן\n\\[ |R_1(11)| = \\frac{1}{c^{5/3}} &lt; \\frac{1}{32} &lt; \\frac{1}{10}. \\]\nמכאן שפולינום טיילור מסדר ראשון מספיק ($n = 1$).</p>\n<p><strong>הקירוב:</strong>\n\\[ P_1(x) = f(8) + f'(8)(x - 8) = 2 + \\frac{1}{12}(x - 8), \\]\n\\[ \\sqrt[3]{11} = f(11) \\approx P_1(11) = 2 + \\frac{3}{12} = 2\\frac14 = \\frac94. \\]</p>\n<p><strong>תשובה:</strong> $\\sqrt[3]{11} \\approx \\frac{9}{4} = 2.25$, עם שגיאה קטנה מ-$\\frac{1}{32} &lt; \\frac{1}{10}$. (מכיוון ש-$R_1(11) &lt; 0$, הקירוב גדול מהערך האמיתי: $\\frac94 - \\frac{1}{32} &lt; \\sqrt[3]{11} &lt; \\frac94$.)</p>\n<p>(בדיקה: $\\sqrt[3]{11} \\approx 2.22398$, והשגיאה בפועל כ-$0.026 &lt; \\frac{1}{32} \\approx 0.031$.)</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9260,6 +9654,7 @@ window.BANK = {
     "<p>פרקו את המכנה: $x^4 - 4x^3 + 8x^2 = x^2(x^2 - 4x + 8)$, והגורם הריבועי אי-פריק. הפירוק לשברים חלקיים הוא מהצורה $\\frac{A}{x} + \\frac{B}{x^2} + \\frac{Cx + D}{x^2 - 4x + 8}$.</p>"
    ],
    "solution": "<p>זו פונקציה רציונלית, ונפעל לפי השלבים הרגילים.</p>\n<ul>\n<li>\n<strong>מעלות:</strong> מעלת המונה ($3$) קטנה ממעלת המכנה ($4$), ולכן אין צורך בחילוק פולינומים.\n  \n</li>\n<li>\n<strong>פירוק המכנה:</strong> $x^4 - 4x^3 + 8x^2 = x^2(x^2 - 4x + 8)$, והדיסקרימיננטה של $x^2 - 4x + 8$ היא $16 - 32 &lt; 0$, לכן הגורם הריבועי אי-פריק; למעשה $x^2 - 4x + 8 = (x - 2)^2 + 4$.\n  \n</li>\n<li>\n<strong>שברים חלקיים:</strong>\n  \\[ \\frac{6x^3 - 12x + 24}{x^2(x^2 - 4x + 8)} = \\frac{A}{x} + \\frac{B}{x^2} + \\frac{Cx + D}{x^2 - 4x + 8}, \\]\n  כלומר $6x^3 - 12x + 24 = Ax(x^2 - 4x + 8) + B(x^2 - 4x + 8) + (Cx + D)x^2$. השוואת מקדמים:\n  \\begin{align*}\n    x^0 &amp;: \\ 8B = 24 \\ \\Rightarrow\\ B = 3, \\\\\n    x^1 &amp;: \\ 8A - 4B = -12 \\ \\Rightarrow\\ 8A = 0 \\ \\Rightarrow\\ A = 0, \\\\\n    x^2 &amp;: \\ -4A + B + D = 0 \\ \\Rightarrow\\ D = -3, \\\\\n    x^3 &amp;: \\ A + C = 6 \\ \\Rightarrow\\ C = 6.\n  \\end{align*}\n  לכן\n  \\[ \\frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2} = \\frac{3}{x^2} + \\frac{6x - 3}{x^2 - 4x + 8}. \\]\n\n</li>\n</ul>\n<p><strong>אינטגרציה.</strong> נכתוב $6x - 3 = 3(2x - 4) + 9$, כך שבחלק הראשון המונה הוא נגזרת המכנה, ובחלק השני נשלים לריבוע:\n\\[ \\int \\left( \\frac{3}{x^2} + 3\\cdot\\frac{2x - 4}{x^2 - 4x + 8} + \\frac{9}{(x - 2)^2 + 4} \\right) dx. \\]</p>\n<ul>\n<li>\n$\\int \\frac{3}{x^2}\\,dx = -\\frac{3}{x} + C$.\n</li>\n<li>\nבהצבה $t = x^2 - 4x + 8$, $dt = (2x - 4)\\,dx$: $\\int \\frac{2x - 4}{x^2 - 4x + 8}\\,dx = \\ln|t| = \\ln(x^2 - 4x + 8) + C$ (המכנה חיובי תמיד).\n</li>\n<li>\nבהצבה $x - 2 = 2u$, $dx = 2\\,du$: $\\int \\frac{9\\,dx}{(x - 2)^2 + 4} = \\int \\frac{18\\,du}{4u^2 + 4} = \\frac92\\arctan u + C = \\frac92 \\arctan\\frac{x - 2}{2} + C$.\n</li>\n</ul>\n<p><strong>תשובה:</strong>\n\\[ \\boxed{\\int \\frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2}\\,dx = -\\frac{3}{x} + 3\\ln(x^2 - 4x + 8) + \\frac92\\arctan\\left(\\frac{x - 2}{2}\\right) + C.} \\]</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9284,6 +9679,7 @@ window.BANK = {
     "<p>המשוואה פרידה. אחרי ההפרדה, באגף של $x$ הציבו $t = \\arcsin x$.</p>"
    ],
    "solution": "<p>המשוואה מוגדרת עבור $-1 &lt; x &lt; 1$, ושם $\\sqrt{1 - x^2} &gt; 0$. נכתוב אותה בצורה\n\\[ \\frac{dy}{dx} = y^2 \\cdot \\frac{\\arcsin x}{\\sqrt{1 - x^2}}, \\]\nוזו משוואה פרידה.</p>\n<p><strong>הפתרון הקבוע:</strong> $y \\equiv 0$ מקיים את המשוואה ($0 = 0$), ולכן הוא פתרון.</p>\n<p><strong>עבור $y \\ne 0$:</strong> נפריד משתנים:\n\\[ \\int \\frac{dy}{y^2} = \\int \\frac{\\arcsin x}{\\sqrt{1 - x^2}}\\,dx. \\]\nבאגף שמאל מתקבל $-\\frac{1}{y}$. באגף ימין נציב $t = \\arcsin x$, $dt = \\frac{dx}{\\sqrt{1 - x^2}}$:\n\\[ \\int \\frac{\\arcsin x}{\\sqrt{1 - x^2}}\\,dx = \\int t\\,dt = \\frac{t^2}{2} + C = \\frac{\\arcsin^2 x}{2} + C. \\]\nלכן\n\\[ -\\frac{1}{y} = \\frac{\\arcsin^2 x}{2} + C \\quad\\Longrightarrow\\quad y = \\frac{-1}{\\frac{\\arcsin^2 x}{2} + C} = \\frac{-2}{\\arcsin^2 x + 2C}. \\]</p>\n<p><strong>תשובה:</strong> הפתרון הכללי הוא\n\\[ \\boxed{y = \\frac{-2}{\\arcsin^2 x + C}}, \\quad C \\in \\R \\]\n(בכל קטע שבו המכנה אינו מתאפס), ובנוסף הפתרון $y \\equiv 0$.</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9309,6 +9705,7 @@ window.BANK = {
     "<p>שימו לב ש-$f$ מחליפה סימן ב-$x = 0$: השטח הוא $\\int_{-1}^1 |f(x)|\\,dx$. את הפונקציה הקדומה מצאו באינטגרציה בחלקים.</p>"
    ],
    "solution": "<p>מכיוון ש-$e^x &gt; 0$, הסימן של $f(x) = xe^x$ הוא הסימן של $x$: $f \\le 0$ ב-$[-1, 0]$ ו-$f \\ge 0$ ב-$[0, 1]$. לכן השטח הוא\n\\[ S = \\int_{-1}^1 |f(x)|\\,dx = -\\int_{-1}^0 f(x)\\,dx + \\int_0^1 f(x)\\,dx. \\]\n<strong>פונקציה קדומה</strong> באינטגרציה בחלקים, עם $u = x$, $v' = e^x$ (כלומר $u' = 1$, $v = e^x$):\n\\[ F(x) = \\int xe^x\\,dx = xe^x - \\int e^x\\,dx = xe^x - e^x + C = (x - 1)e^x + C. \\]\nלפי ניוטון-לייבניץ:\n\\[ S = -\\bigl(F(0) - F(-1)\\bigr) + \\bigl(F(1) - F(0)\\bigr) = F(1) - 2F(0) + F(-1). \\]\nכאן $F(1) = 0$, $F(0) = -1$, $F(-1) = -2e^{-1}$, ולכן\n\\[ S = 0 - 2\\cdot(-1) - \\frac{2}{e} = 2 - \\frac{2}{e}. \\]\n<strong>תשובה:</strong> $\\boxed{S = 2\\left(1 - \\frac1e\\right)}$.</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   },
   {
@@ -9333,6 +9730,7 @@ window.BANK = {
     "<p>האינטגרנד אינו בעל סימן קבוע. בדקו התכנסות בהחלט: חסמו $|f(x)| \\le \\frac{1}{x^2 - \\ln x}$ והשוו (במבחן ההשוואה הגבולי) ל-$\\frac{1}{x^2}$.</p>"
    ],
    "solution": "<p>נסמן $f(x) = \\frac{\\cos x}{x^2 - \\ln x}$. המכנה חיובי ב-$[1, \\infty)$ (כפי שמותר להניח; למעשה $\\ln x \\le x - 1 &lt; x \\le x^2$ עבור $x \\ge 1$), ולכן $f$ רציפה שם והאינטגרל מוכלל רק בגלל הגבול האינסופי. $f$ מחליפה סימן אינסוף פעמים, לכן נבדוק <strong>התכנסות בהחלט</strong>.</p>\n<p><strong>חסימה:</strong> לכל $x \\ge 1$,\n\\[ 0 \\le |f(x)| = \\frac{|\\cos x|}{x^2 - \\ln x} \\le \\frac{1}{x^2 - \\ln x} =: h(x). \\]</p>\n<p><strong>התכנסות $\\int_1^\\infty h$:</strong> נשווה ל-$g(x) = \\frac{1}{x^2}$. שתי הפונקציות חיוביות, ו-\n\\[ \\lim_{x\\to\\infty} \\frac{g(x)}{h(x)} = \\lim_{x\\to\\infty} \\frac{x^2 - \\ln x}{x^2} = \\lim_{x\\to\\infty} \\left( 1 - \\frac{\\ln x}{x^2} \\right) = 1, \\]\nכי $\\frac{\\ln x}{x^2} \\to 0$ (לופיטל: $\\frac{1/x}{2x} \\to 0$). הגבול סופי וחיובי, ולכן לפי מבחן ההשוואה הגבולי $\\int_1^\\infty h$ ו-$\\int_1^\\infty g$ מתכנסים או מתבדרים יחד. מכיוון ש-$\\int_1^\\infty \\frac{dx}{x^\\alpha}$ מתכנס עבור $\\alpha &gt; 1$, ובפרט $\\int_1^\\infty \\frac{dx}{x^2} = 1$, גם $\\int_1^\\infty h$ מתכנס.</p>\n<p><strong>מסקנה:</strong> לפי מבחן ההשוואה (כי $0 \\le |f| \\le h$), $\\int_1^\\infty |f|$ מתכנס. אינטגרל מוכלל שמתכנס בהחלט מתכנס, ולכן\n\\[ \\int_1^\\infty \\frac{\\cos x}{x^2 - \\ln x}\\,dx \\ \\text{מתכנס (ואף בהחלט).} \\]</p>",
+   "src": "מועד ב' תשפ\"ו סמסטר א'",
    "exam": "תשפ\"ו סמסטר א מועד ב"
   }
  ]

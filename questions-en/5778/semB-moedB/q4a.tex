@@ -1,0 +1,31 @@
+% English translation of questions/5778/semB-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) For which values of the parameters $a$ and $b$ will the function
+\[
+f(x)=\begin{cases}\dfrac{\tan(2x)-x}{x+\sin(2x)}, & -\frac\pi4<x<0\\[1ex] ax+b, & 0\le x\le1\\[0.5ex] x^{1/(x-1)}, & x>1\end{cases}
+\]
+be continuous on the domain $x>-\frac\pi4$?
+\end{question}
+
+\begin{hint}
+The function is continuous inside each of the three intervals; only the junction points $x=0$ and $x=1$ need to be checked. At $x=0$ divide the numerator and denominator by $x$; at $x=1$ this is a limit of the form $1^\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{Continuity inside the intervals.} On $\left(-\frac\pi4,0\right)$: $\tan2x$ is defined and continuous (since $2x\in\left(-\frac\pi2,0\right)$), and the denominator $x+\sin2x$ is strictly negative (both summands are negative), so $f$ is continuous there as a quotient of continuous functions. On $(0,1)$ $f$ is a polynomial. On $(1,\infty)$: $x^{1/(x-1)}=e^{\frac{\ln x}{x-1}}$ is continuous. It remains to check $x=0$ and $x=1$.
+
+\textbf{The point $x=0$.} $f(0)=b$, and the limit from the right is $b$. From the left, divide the numerator and denominator by $x$:
+\[
+\lim_{x\to0^-}\frac{\tan2x-x}{x+\sin2x}=\lim_{x\to0^-}\frac{2\cdot\frac{\tan2x}{2x}-1}{1+2\cdot\frac{\sin2x}{2x}}=\frac{2-1}{1+2}=\frac13,
+\]
+by the fundamental limits $\frac{\sin t}{t}\to1$, $\frac{\tan t}{t}\to1$. Hence we need $b=\frac13$.
+
+\textbf{The point $x=1$.} $f(1)=a+b$, and the limit from the left is $a+b$. From the right:
+\[
+\lim_{x\to1^+}x^{1/(x-1)}=\lim_{x\to1^+}e^{\frac{\ln x}{x-1}}=e^1=e,
+\]
+since $\lim_{x\to1}\frac{\ln x}{x-1}=1$ (for example by L'Hôpital's rule: $\frac{1/x}{1}\to1$, or by $\ln(1+t)/t\to1$ with $t=x-1$), and by the continuity of the exponential. Hence we need $a+b=e$, i.e. $a=e-\frac13$.
+
+\textbf{Answer:} $a=e-\frac13$, $b=\frac13$.
+\end{solution}

@@ -1,0 +1,15 @@
+% English translation of questions/5778/semB-moedA/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the volume of the solid obtained by rotating about the $x$-axis the plane region bounded by the line $y=\frac{x}{\sqrt{x^2+1}}$ and the $x$-axis on the interval $[0,1]$. Draw the corresponding sketch.
+\end{question}
+
+\begin{solution}
+\textbf{Sketch:} $y=\frac{x}{\sqrt{x^2+1}}$ increases from $0$ (at $x=0$) to $\frac1{\sqrt2}\approx0.71$ (at $x=1$), and is non-negative on the interval. The region is the area between the graph and the $x$-axis for $0\le x\le1$, and rotating it about the $x$-axis gives a ``goblet''-like solid.
+
+\textbf{Volume:} by the formula for the volume of a solid of revolution $V=\pi\int_a^by^2\,dx$:
+\[
+V=\pi\int_0^1\frac{x^2}{x^2+1}dx=\pi\int_0^1\left(1-\frac{1}{x^2+1}\right)dx=\pi\Big[x-\arctan x\Big]_0^1=\pi\left(1-\frac\pi4\right).
+\]
+\textbf{Answer:} $V=\pi\left(1-\frac\pi4\right)\approx0.674$.
+\end{solution}

@@ -1,0 +1,18 @@
+% English translation of questions/5776/semB-moedB/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Show that:
+\[ \frac15\le \arctan(3)-\arctan(1)\le 1. \]
+\end{question}
+
+\begin{hint}
+Apply Lagrange's theorem to $\arctan$ on the interval $[1,3]$ and bound the derivative.
+\end{hint}
+
+\begin{solution}
+Define $g(t)=\arctan t$. The function is continuous on $[1,3]$ and differentiable on $(1,3)$ with $g'(t)=\frac{1}{1+t^2}$. By Lagrange's theorem there exists $c\in(1,3)$ such that
+\[ \arctan(3)-\arctan(1)=g'(c)(3-1)=\frac{2}{1+c^2}. \]
+Since $1<c<3$ we have $2<1+c^2<10$, and therefore
+\[ \frac{2}{10}<\frac{2}{1+c^2}<\frac{2}{2}, \qquad\text{i.e.}\qquad \frac15<\arctan(3)-\arctan(1)<1, \]
+and in particular the required weak inequality holds. (Numerical check: $\arctan 3-\arctan 1\approx 0.4636$.)
+\end{solution}

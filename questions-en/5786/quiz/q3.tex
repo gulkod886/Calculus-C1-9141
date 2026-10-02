@@ -1,0 +1,29 @@
+% English translation of questions/5786/quiz/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Prove that the equation
+\[
+x^5+e^x=0
+\]
+has a real solution, and find an interval of length at most 1 that contains the solution. Justify your answer.
+\end{question}
+
+\begin{hint}
+Define $f(x)=x^5+e^x$ and check its sign at integer points close to 0.
+\end{hint}
+
+\begin{solution}
+Define $f(x)=x^5+e^x$. $f$ is continuous on $\R$ as the sum of a polynomial and an exponential function, both of which are continuous.
+
+We compute:
+\[
+f(0)=0^5+e^0=1>0,\qquad f(-1)=(-1)^5+e^{-1}=-1+\frac1e<0 ,
+\]
+since $e>1$ and hence $\frac1e<1$.
+
+$f$ is continuous on the closed interval $[-1,0]$ and has opposite signs at its endpoints. By the Intermediate Value Theorem (Bolzano's theorem) there exists $c\in(-1,0)$ such that $f(c)=0$, i.e. $c^5+e^c=0$, and $c$ is a real solution of the equation.
+
+\textbf{The required interval:} $[-1,0]$, whose length is 1.
+
+(Remark: the solution is unique --- $f$ is strictly increasing as the sum of the two strictly increasing functions $x^5$ and $e^x$ --- so ``the solution'' is well defined. Numerically, $c\approx-0.845$.)
+\end{solution}

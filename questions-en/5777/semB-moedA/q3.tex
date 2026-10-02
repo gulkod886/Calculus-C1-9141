@@ -1,0 +1,20 @@
+% English translation of questions/5777/semB-moedA/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\[ \int x^3e^{-x^2}\,dx \]
+\end{question}
+
+\begin{hint}
+Substitute $t=x^2$ (or $t=-x^2$) and then integrate by parts.
+\end{hint}
+
+\begin{solution}
+Substitute $t=x^2$, $dt=2x\,dx$. Then $x^3\,dx=x^2\cdot x\,dx=\frac t2\,dt$:
+\[ \int x^3e^{-x^2}dx=\frac12\int te^{-t}dt. \]
+Integration by parts with $u=t$, $v'=e^{-t}$ ($u'=1$, $v=-e^{-t}$):
+\[ \int te^{-t}dt=-te^{-t}+\int e^{-t}dt=-te^{-t}-e^{-t}+C=-(t+1)e^{-t}+C. \]
+Return to the variable $x$:
+\[ \boxed{\int x^3e^{-x^2}dx=-\frac12(x^2+1)e^{-x^2}+C.} \]
+\textbf{Check:} $\frac{d}{dx}\left[-\frac12(x^2+1)e^{-x^2}\right]=-xe^{-x^2}+\frac12(x^2+1)\cdot2xe^{-x^2}=x^3e^{-x^2}$.
+\end{solution}

@@ -1,0 +1,21 @@
+% English translation of questions/5779/semA-moedB/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Is the function
+\[ f(x)=\begin{cases}\dfrac{1}{\tan x}-\dfrac1x & x\neq0\\[2mm] 0 & x=0\end{cases} \]
+differentiable at the point $x=0$? Explain.
+\end{question}
+
+\begin{hint}
+Compute the limit of the difference quotient $\frac{f(h)-f(0)}{h}=\frac{h-\tan h}{h^2\tan h}$, for example using the expansion $\tan h=h+\frac{h^3}{3}+o(h^3)$.
+\end{hint}
+
+\begin{solution}
+(The function is defined in the punctured neighborhood $0<|x|<\frac\pi2$ of $0$, and there $\tan x\ne0$.) By the definition of the derivative:
+\[ f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\frac{\frac1{\tan h}-\frac1h}{h}=\lim_{h\to0}\frac{h-\tan h}{h^2\tan h}. \]
+By the Maclaurin expansion $\tan h=h+\frac{h^3}{3}+o(h^3)$, hence $h-\tan h=-\frac{h^3}{3}+o(h^3)$. Also $h^2\tan h=h^3\cdot\frac{\tan h}{h}$ and $\frac{\tan h}{h}\to1$. Therefore
+\[ f'(0)=\lim_{h\to0}\frac{-\frac13+\frac{o(h^3)}{h^3}}{\frac{\tan h}{h}}=-\frac13. \]
+(One can also use L'Hôpital's rule: $\lim\frac{h-\tan h}{h^3}=\lim\frac{1-\frac1{\cos^2h}}{3h^2}=\lim\frac{-\tan^2h}{3h^2}=-\frac13$.)
+
+\textbf{Answer:} yes, $f$ is differentiable at $0$ and $f'(0)=-\frac13$. (In particular $f$ is continuous at $0$: $\lim_{x\to0}f(x)=\lim\frac{x-\tan x}{x\tan x}=0=f(0)$.)
+\end{solution}

@@ -1,0 +1,35 @@
+% English translation of questions/5782/semA-moedA/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Define a function by
+\[ f(x)=\begin{cases} x^3 \sin(\frac{5}{x}), & \text{if } x\neq 0,\\ 0, & \text{if } x=0 \end{cases} \]
+\begin{enumerate}
+  \item (6 pts) Is $f$ continuous at the point $x=0$ ? Justify.
+  \item (6 pts) Is $f$ differentiable at the point $x=0$ ? Justify.
+  \item (5 pts) Is the derivative $f'(x)$ continuous at the point $x=0$ ? Justify.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+``Tends to zero times bounded'': $\left|\sin(\frac{5}{x})\right|\le 1$ for every $x\neq 0$.
+\end{hint}
+
+\begin{hint}
+In part (b), compute the derivative at $0$ by definition (limit of the difference quotient). In part (c), compute $f'(x)$ for $x\neq0$ using the differentiation rules and check the limit as $x\to 0$.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item \textbf{Yes.} For every $x\neq 0$ we have
+  \[ 0\le |f(x)| = |x|^3\left|\sin\left(\tfrac{5}{x}\right)\right| \le |x|^3 \xrightarrow[x\to0]{} 0, \]
+  and hence by the Squeeze theorem $\lim_{x\to0} f(x)=0=f(0)$. That is, $f$ is continuous at $0$.
+  \item \textbf{Yes.} By the definition of the derivative:
+  \[ f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\frac{h^3\sin(5/h)}{h}=\lim_{h\to0} h^2\sin\left(\tfrac{5}{h}\right). \]
+  Here $h^2\to0$ and $\sin(5/h)$ is bounded, and hence (tends to zero times bounded) the limit equals $0$. Hence $f$ is differentiable at $0$ and $f'(0)=0$.
+  \item \textbf{Yes.} For $x\neq0$, by the product rule and the chain rule:
+  \[ f'(x)=3x^2\sin\left(\tfrac{5}{x}\right)+x^3\cos\left(\tfrac{5}{x}\right)\cdot\left(-\tfrac{5}{x^2}\right)=3x^2\sin\left(\tfrac{5}{x}\right)-5x\cos\left(\tfrac{5}{x}\right). \]
+  Both terms are of the form ``tends to zero times bounded'' ($3x^2\to0$, $5x\to0$ and $|\sin|,|\cos|\le1$), and hence
+  \[ \lim_{x\to0}f'(x)=0=f'(0). \]
+  It follows that $f'$ is continuous at the point $x=0$.
+\end{enumerate}
+\end{solution}

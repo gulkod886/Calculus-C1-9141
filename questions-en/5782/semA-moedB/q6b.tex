@@ -1,0 +1,20 @@
+% English translation of questions/5782/semA-moedB/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Determine the convergence of the improper integral
+\[ \int_1^\infty\frac{\sin(\frac1x)}{2+x\sqrt{x}}dx \]
+\end{question}
+
+\begin{hint}
+The integrand is positive on the interval. Use the comparison test, with $0<\sin t\le t$ for $0<t\le1$.
+\end{hint}
+
+\begin{solution}
+For $x\ge1$ we have $0<\frac1x\le1<\pi$, hence $\sin\frac1x>0$, and the integrand is positive and continuous on $[1,\infty)$ (so the only problem is at infinity). From the inequality $\sin t\le t$ for $t\ge0$:
+\[ 0<\frac{\sin(1/x)}{2+x\sqrt x}\le\frac{1/x}{x\sqrt x}=\frac{1}{x^{5/2}}. \]
+The integral $\int_1^\infty\frac{dx}{x^{p}}$ converges for $p>1$, and in particular for $p=\frac52$. By the \textbf{comparison test} for improper integrals of non-negative functions, the integral
+\[ \int_1^\infty\frac{\sin(1/x)}{2+x\sqrt x}dx \]
+\textbf{converges}.
+
+(Alternative method: the limit comparison test with $g(x)=x^{-5/2}$: $\lim_{x\to\infty}\frac{f(x)}{g(x)}=\lim\frac{\sin(1/x)}{1/x}\cdot\frac{x^{3/2}}{2+x^{3/2}}=1$.)
+\end{solution}

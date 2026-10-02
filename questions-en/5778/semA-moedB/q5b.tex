@@ -1,0 +1,31 @@
+% English translation of questions/5778/semA-moedB/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+{(10 pts)} Find the area enclosed inside the loop formed by the graph of the function $r=\tan\frac\theta2$ in polar coordinates.
+
+(The exam includes a figure: the curve passes through the origin, forms a small loop above the origin, and its two branches extend upward and to the sides.)
+\end{question}
+
+\begin{hint}
+Find for which values of $\theta$ the curve returns to the same point: compare the points obtained for $\theta=\frac\pi2$ and $\theta=-\frac\pi2$.
+\end{hint}
+
+\begin{hint}
+Area in polar coordinates: $S=\frac12\int_\alpha^\beta r^2\,d\theta$, and use $\tan^2u=\frac1{\cos^2u}-1$.
+\end{hint}
+
+\begin{solution}
+The curve $r=\tan\frac\theta2$ is defined for $\theta\in(-\pi,\pi)$, and $r\to\pm\infty$ as $\theta\to\pm\pi$ (these are the two branches). The Cartesian point is $(r\cos\theta,\ r\sin\theta)$.
+\begin{itemize}
+  \item $\theta=0$: $r=0$ — the origin.
+  \item $\theta=\frac\pi2$: $r=\tan\frac\pi4=1$, the point $(0,1)$.
+  \item $\theta=-\frac\pi2$: $r=\tan\left(-\frac\pi4\right)=-1$, the point $(-1\cdot\cos(-\frac\pi2),\,-1\cdot\sin(-\frac\pi2))=(0,1)$.
+\end{itemize}
+That is, the curve passes through the point $(0,1)$ twice, at $\theta=\pm\frac\pi2$: it intersects itself there. As $\theta$ runs from $-\frac\pi2$ to $\frac\pi2$, the curve leaves $(0,1)$, passes through the origin and returns to $(0,1)$ — this is the loop. (For $\theta\in(-\frac\pi2,0)$, $r<0$ and the points lie in the second quadrant; for $\theta\in(0,\frac\pi2)$ in the first quadrant; the loop is symmetric with respect to the $y$-axis.)
+
+The area enclosed by the loop, by $S=\frac12\int_\alpha^\beta r^2\,d\theta$ (the formula is valid also when $r<0$, since $r^2$ is the square of the distance from the origin):
+\[ S=\frac12\int_{-\pi/2}^{\pi/2}\tan^2\frac\theta2\,d\theta=\int_0^{\pi/2}\tan^2\frac\theta2\,d\theta \]
+(the integrand is even). With $\tan^2u=\frac1{\cos^2u}-1$:
+\[ S=\int_0^{\pi/2}\left(\frac{1}{\cos^2\frac\theta2}-1\right)d\theta=\left[2\tan\frac\theta2-\theta\right]_0^{\pi/2}=2\tan\frac\pi4-\frac\pi2=2-\frac\pi2. \]
+\[ \boxed{S=2-\frac\pi2\approx0.429} \]
+\end{solution}

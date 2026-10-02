@@ -1,0 +1,37 @@
+% English translation of questions/5786/quiz/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the limit
+\[
+\lim_{x\to\infty}\left(\frac{x^2+2x}{3x^2+7x}\right)^{x^2}
+\]
+\begin{enumerate}
+  \item The limit exists in the wide sense and equals $\infty$.
+  \item The limit exists and equals $e$.
+  \item The limit exists and equals $0$.
+  \item The limit exists and equals $1$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+What does the base tend to? This is \emph{not} a limit of the form $1^\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c)}.
+
+The base tends to $\frac13$ (divide by $x^2$), not to 1, so this is not a limit of the form $1^\infty$. We use the Squeeze theorem. For $x>0$:
+\[
+0\le\frac{x^2+2x}{3x^2+7x}\le\frac{x^2+2x}{3x^2+6x}=\frac{x(x+2)}{3x(x+2)}=\frac13 ,
+\]
+since the numerator is positive and decreasing the positive denominator ($7x>6x$) increases the fraction. Since the function $t\mapsto t^{x^2}$ is increasing on $[0,\infty)$ (for $x^2>0$):
+\[
+0\le\left(\frac{x^2+2x}{3x^2+7x}\right)^{x^2}\le\left(\frac13\right)^{x^2}.
+\]
+As $x\to\infty$ also $x^2\to\infty$, and since $0<\frac13<1$ we have $\left(\frac13\right)^{x^2}\to0$. By the Squeeze theorem
+\[
+\lim_{x\to\infty}\left(\frac{x^2+2x}{3x^2+7x}\right)^{x^2}=\boxed{0}.
+\]
+
+\textbf{Why the others are false:} (a) --- the expression is bounded by $\left(\frac13\right)^{x^2}\le1$, so it does not tend to $\infty$. (b) and (d) --- these values come from wrongly treating the expression as if it were of the form $1^\infty$; here the base tends to $\frac13<1$ and the limit is 0.
+\end{solution}

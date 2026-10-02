@@ -1,0 +1,24 @@
+% English translation of questions/5784/semA-moedB/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the definite integral
+\[ \int_0^1 (x+1)^2\cdot e^x\,dx \]
+\end{question}
+
+\begin{hint}
+Integration by parts twice, each time differentiating the polynomial.
+\end{hint}
+
+\begin{solution}
+We use integration by parts: $\int u\,v'=uv-\int u'v$.
+
+\textbf{First step:} $u=(x+1)^2$, $v'=e^x$, hence $u'=2(x+1)$, $v=e^x$:
+\[ \int_0^1(x+1)^2e^x\,dx=\Big[(x+1)^2e^x\Big]_0^1-2\int_0^1(x+1)e^x\,dx=(4e-1)-2\int_0^1(x+1)e^x\,dx. \]
+
+\textbf{Second step:} $u=x+1$, $v'=e^x$, hence $u'=1$, $v=e^x$:
+\[ \int_0^1(x+1)e^x\,dx=\Big[(x+1)e^x\Big]_0^1-\int_0^1e^x\,dx=(2e-1)-(e-1)=e. \]
+
+\textbf{Summary:}
+\[ \int_0^1(x+1)^2e^x\,dx=4e-1-2e=\boxed{2e-1}\approx 4.4366. \]
+(Alternatively: an antiderivative is $F(x)=e^x\big((x+1)^2-2(x+1)+2\big)=e^x(x^2+1)$, and by the Fundamental Theorem $F(1)-F(0)=2e-1$.)
+\end{solution}

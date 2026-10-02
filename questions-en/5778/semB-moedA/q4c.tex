@@ -1,0 +1,20 @@
+% English translation of questions/5778/semB-moedA/q4c.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Does the improper integral $\displaystyle\int_0^{+\infty}\frac{x\cdot e^{-x}}{(x+1)^4}dx$ converge?
+\end{question}
+
+\begin{hint}
+Compare with $e^{-x}$.
+\end{hint}
+
+\begin{solution}
+The integrand $g(x)=\frac{xe^{-x}}{(x+1)^4}$ is continuous and non-negative on $[0,\infty)$, so the integral is improper only because of the infinite limit of integration, and we may use the comparison test.
+For $x\ge0$: $0\le x<x+1\le(x+1)^4$, hence $\frac{x}{(x+1)^4}\le1$ and
+\[
+0\le g(x)\le e^{-x}.
+\]
+The integral $\int_0^\infty e^{-x}dx=\lim_{R\to\infty}\left(1-e^{-R}\right)=1$ converges. By the \emph{comparison test} for improper integrals of non-negative functions, $\int_0^\infty g(x)\,dx$ converges as well (and its value lies between $0$ and $1$).
+
+\textbf{Answer:} yes, the integral converges.
+\end{solution}

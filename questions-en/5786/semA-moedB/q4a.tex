@@ -1,0 +1,38 @@
+% English translation of questions/5786/semA-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(12 pts) Compute the integral
+\[ \int \frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2}\,dx \]
+\end{question}
+
+\begin{hint}
+Factor the denominator: $x^4 - 4x^3 + 8x^2 = x^2(x^2 - 4x + 8)$, and the quadratic factor is irreducible. The partial fraction decomposition has the form $\frac{A}{x} + \frac{B}{x^2} + \frac{Cx + D}{x^2 - 4x + 8}$.
+\end{hint}
+
+\begin{solution}
+This is a rational function, and we follow the usual steps.
+\begin{itemize}
+  \item \textbf{Degrees:} the degree of the numerator ($3$) is less than the degree of the denominator ($4$), so no polynomial division is needed.
+  \item \textbf{Factoring the denominator:} $x^4 - 4x^3 + 8x^2 = x^2(x^2 - 4x + 8)$, and the discriminant of $x^2 - 4x + 8$ is $16 - 32 < 0$, so the quadratic factor is irreducible; in fact $x^2 - 4x + 8 = (x - 2)^2 + 4$.
+  \item \textbf{Partial fractions:}
+  \[ \frac{6x^3 - 12x + 24}{x^2(x^2 - 4x + 8)} = \frac{A}{x} + \frac{B}{x^2} + \frac{Cx + D}{x^2 - 4x + 8}, \]
+  i.e. $6x^3 - 12x + 24 = Ax(x^2 - 4x + 8) + B(x^2 - 4x + 8) + (Cx + D)x^2$. Comparing coefficients:
+  \begin{align*}
+    x^0 &: \ 8B = 24 \ \Rightarrow\ B = 3, \\
+    x^1 &: \ 8A - 4B = -12 \ \Rightarrow\ 8A = 0 \ \Rightarrow\ A = 0, \\
+    x^2 &: \ -4A + B + D = 0 \ \Rightarrow\ D = -3, \\
+    x^3 &: \ A + C = 6 \ \Rightarrow\ C = 6.
+  \end{align*}
+  Hence
+  \[ \frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2} = \frac{3}{x^2} + \frac{6x - 3}{x^2 - 4x + 8}. \]
+\end{itemize}
+\textbf{Integration.} Write $6x - 3 = 3(2x - 4) + 9$, so that in the first part the numerator is the derivative of the denominator, and in the second part we complete the square:
+\[ \int \left( \frac{3}{x^2} + 3\cdot\frac{2x - 4}{x^2 - 4x + 8} + \frac{9}{(x - 2)^2 + 4} \right) dx. \]
+\begin{itemize}
+  \item $\int \frac{3}{x^2}\,dx = -\frac{3}{x} + C$.
+  \item With the substitution $t = x^2 - 4x + 8$, $dt = (2x - 4)\,dx$: $\int \frac{2x - 4}{x^2 - 4x + 8}\,dx = \ln|t| = \ln(x^2 - 4x + 8) + C$ (the denominator is always positive).
+  \item With the substitution $x - 2 = 2u$, $dx = 2\,du$: $\int \frac{9\,dx}{(x - 2)^2 + 4} = \int \frac{18\,du}{4u^2 + 4} = \frac92\arctan u + C = \frac92 \arctan\frac{x - 2}{2} + C$.
+\end{itemize}
+\textbf{Answer:}
+\[ \boxed{\int \frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2}\,dx = -\frac{3}{x} + 3\ln(x^2 - 4x + 8) + \frac92\arctan\left(\frac{x - 2}{2}\right) + C.} \]
+\end{solution}

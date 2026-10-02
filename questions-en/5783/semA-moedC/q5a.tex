@@ -1,0 +1,11 @@
+% English translation of questions/5783/semA-moedC/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the integral $\displaystyle\int x\cdot\sqrt{1-x^2}\,dx$
+\end{question}
+
+\begin{solution}
+Substitute $t=1-x^2$, $dt=-2x\,dx$, i.e. $x\,dx=-\frac12dt$:
+\[ \int x\sqrt{1-x^2}\,dx=-\frac12\int t^{1/2}\,dt=-\frac12\cdot\frac{2}{3}t^{3/2}+C=\boxed{-\frac13(1-x^2)^{3/2}+C}. \]
+Check by differentiation: $\left(-\frac13(1-x^2)^{3/2}\right)'=-\frac13\cdot\frac32(1-x^2)^{1/2}\cdot(-2x)=x\sqrt{1-x^2}$.
+\end{solution}

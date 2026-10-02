@@ -1,0 +1,15 @@
+% English translation of questions/5783/semA-moedA/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the integral $\displaystyle\int_{-1}^{1}\tan x\,dx$.
+\end{question}
+
+\begin{hint}
+Check whether the function $\tan x$ is even or odd, and whether it is continuous on the interval $[-1,1]$.
+\end{hint}
+
+\begin{solution}
+Since $1<\frac{\pi}{2}$, the function $\tan x=\frac{\sin x}{\cos x}$ is continuous on the interval $[-1,1]$ (there $\cos x>0$), and hence the definite integral exists. It is odd: $\tan(-x)=-\tan x$. The integral of a continuous odd function over a symmetric interval $[-a,a]$ equals $0$. Directly: an antiderivative is $-\ln|\cos x|$ (since $(-\ln\cos x)'=\frac{\sin x}{\cos x}$), and by \textbf{the Fundamental Theorem} (Newton--Leibniz):
+\[ \int_{-1}^{1}\tan x\,dx=\Big[-\ln(\cos x)\Big]_{-1}^{1}=-\ln(\cos 1)+\ln(\cos(-1))=0, \]
+since $\cos$ is even. \textbf{Answer:} $0$.
+\end{solution}

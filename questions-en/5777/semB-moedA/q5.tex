@@ -1,0 +1,17 @@
+% English translation of questions/5777/semB-moedA/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Define: $f(x)=\ln(1+x^2)$. Compute $f^{(4)}(0)$.
+\end{question}
+
+\begin{hint}
+Instead of differentiating four times, use the Maclaurin polynomial of $\ln(1+t)$ with $t=x^2$, and compare coefficients: the coefficient of $x^4$ is $\frac{f^{(4)}(0)}{4!}$.
+\end{hint}
+
+\begin{solution}
+From the Maclaurin expansion $\ln(1+t)=t-\frac{t^2}{2}+o(t^2)$, with $t=x^2$:
+\[ \ln(1+x^2)=x^2-\frac{x^4}{2}+o(x^4). \]
+$f$ is infinitely differentiable, and by the uniqueness of the Taylor polynomial (the only polynomial of degree $\le4$ approximating $f$ up to $o(x^4)$ is the Taylor polynomial), the Taylor polynomial of order $4$ of $f$ around $0$ is $x^2-\frac{x^4}{2}$. The coefficient of $x^4$ in the Taylor polynomial is $\frac{f^{(4)}(0)}{4!}$, and therefore
+\[ \frac{f^{(4)}(0)}{24}=-\frac12\quad\Longrightarrow\quad\boxed{f^{(4)}(0)=-12}. \]
+(Check by direct differentiation: $f'(x)=\frac{2x}{1+x^2}$, $f''(x)=\frac{2-2x^2}{(1+x^2)^2}$, $f'''(x)=\frac{4x^3-12x}{(1+x^2)^3}$, $f^{(4)}(x)=\frac{-12x^4+72x^2-12}{(1+x^2)^4}$, and $f^{(4)}(0)=-12$.)
+\end{solution}

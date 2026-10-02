@@ -1,0 +1,30 @@
+% English translation of questions/5785/semA-moedA/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Find all the asymptotes of the function
+\[ f(x) = \frac{x^3 - 3x^2 + 3x + \sqrt{x}}{x^2 + x - 2} \]
+Justify.
+\end{question}
+
+\begin{hint}
+Pay attention to the domain: because of $\sqrt{x}$, the function is defined only for $x \ge 0$. Which zeros of the denominator lie in the domain?
+\end{hint}
+
+\begin{solution}
+\textbf{Domain.} $\sqrt{x}$ is defined for $x\ge0$, and the denominator factors: $x^2 + x - 2 = (x-1)(x+2)$. Hence the domain is $[0,1)\cup(1,\infty)$
+(the point $x=-2$ is not in the domain at all).
+
+\textbf{Vertical asymptotes.} $f$ is continuous at every point of its domain (a quotient of continuous functions), so a vertical asymptote can occur only at $x=1$.
+There the numerator tends to $1 - 3 + 3 + 1 = 2 \neq 0$ and the denominator tends to $0$, where $x^2+x-2 < 0$ for $0\le x<1$ and $>0$ for $x>1$. Hence
+\[ \lim_{x\to1^-} f(x) = -\infty, \qquad \lim_{x\to1^+} f(x) = +\infty, \]
+and $x = 1$ is a vertical asymptote. At $x=0$ the function is defined ($f(0)=0$) and continuous from the right, so there is no asymptote there.
+
+\textbf{Oblique/horizontal asymptotes.} Only $x\to+\infty$ needs to be checked (the function is not defined for $x<0$). We look for $y = mx + n$:
+\[ m = \lim_{x\to\infty}\frac{f(x)}{x} = \lim_{x\to\infty}\frac{x^3 - 3x^2 + 3x + \sqrt{x}}{x^3 + x^2 - 2x}
+= \lim_{x\to\infty}\frac{1 - \frac3x + \frac3{x^2} + x^{-5/2}}{1 + \frac1x - \frac2{x^2}} = 1. \]
+By polynomial long division $x^3 - 3x^2 + 3x = (x^2+x-2)(x-4) + (9x - 8)$, and therefore
+\[ f(x) - x = -4 + \frac{9x - 8 + \sqrt{x}}{x^2 + x - 2} \xrightarrow[x\to\infty]{} -4 + 0 = -4, \]
+since in the numerator of the fraction the highest power is $x$ and in the denominator it is $x^2$. Hence $n=-4$.
+
+\textbf{Answer:} vertical asymptote $x = 1$, and oblique asymptote $y = x - 4$ as $x \to +\infty$. There are no other asymptotes.
+\end{solution}

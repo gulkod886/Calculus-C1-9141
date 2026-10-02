@@ -1,0 +1,22 @@
+% English translation of questions/5778/semA-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit:
+the limit of the function $\displaystyle \lim_{x\to\pi/2}(\tan x)\cdot\arctan\left(x-\frac{\pi}{2}\right)$.
+\end{question}
+
+\begin{hint}
+Write $\tan x=\frac{1}{\cot x}$ and obtain an expression of the form $\frac00$.
+\end{hint}
+
+\begin{solution}
+For $x$ close to $\frac\pi2$, $x\neq\frac\pi2$, we have $\tan x=\frac{1}{\cot x}$, hence
+\[ (\tan x)\cdot\arctan\left(x-\frac{\pi}{2}\right)=\frac{\arctan\left(x-\frac{\pi}{2}\right)}{\cot x}. \]
+As $x\to\frac\pi2$: the numerator tends to $\arctan 0=0$ and the denominator tends to $\cot\frac\pi2=0$ (both functions are continuous). This is an expression of the form $\frac00$, both functions are differentiable in a punctured neighborhood of $\frac\pi2$, and the derivative of the denominator $-\frac{1}{\sin^2x}\neq 0$ there, so L'Hôpital's rule can be applied:
+\[ \lim_{x\to\pi/2}\frac{\arctan\left(x-\frac{\pi}{2}\right)}{\cot x}
+   =\lim_{x\to\pi/2}\frac{\dfrac{1}{1+\left(x-\frac\pi2\right)^2}}{-\dfrac{1}{\sin^2x}}
+   =\lim_{x\to\pi/2}\left(-\frac{\sin^2x}{1+\left(x-\frac\pi2\right)^2}\right)=-\frac{1}{1+0}=-1, \]
+where the last limit is computed by continuity ($\sin^2\frac\pi2=1$). Since the limit of the quotient of the derivatives exists, by L'Hôpital's rule
+\[ \lim_{x\to\pi/2}(\tan x)\cdot\arctan\left(x-\frac{\pi}{2}\right)=-1. \]
+(Another way: $\arctan t\sim t$ as $t\to0$, and $(x-\frac\pi2)\tan x=-\frac{(x-\frac\pi2)\cos(x-\frac\pi2)}{\sin(x-\frac\pi2)}\to-1$.)
+\end{solution}

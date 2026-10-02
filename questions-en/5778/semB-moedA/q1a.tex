@@ -1,0 +1,20 @@
+% English translation of questions/5778/semB-moedA/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the derivative of the function $f(x)=\cos x$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).
+\end{question}
+
+\begin{hint}
+Use the identity $\cos\alpha-\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$ and the fundamental limit $\lim_{t\to0}\frac{\sin t}{t}=1$.
+\end{hint}
+
+\begin{solution}
+By definition $f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$. By the identity $\cos\alpha-\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$:
+\[
+\frac{\cos(x+h)-\cos x}{h}=\frac{-2\sin\left(x+\frac h2\right)\sin\frac h2}{h}=-\sin\left(x+\frac h2\right)\cdot\frac{\sin\frac h2}{\frac h2}.
+\]
+As $h\to0$: $\sin\left(x+\frac h2\right)\to\sin x$ (continuity of the sine) and $\frac{\sin(h/2)}{h/2}\to1$ (the fundamental limit). By the arithmetic of limits:
+\[
+(\cos x)'=\lim_{h\to0}\frac{\cos(x+h)-\cos x}{h}=-\sin x.
+\]
+\end{solution}

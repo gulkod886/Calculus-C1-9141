@@ -1,0 +1,37 @@
+% English translation of questions/5780/quiz/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The function $f(x)$ is continuous at the point $x=x_0$. Which statement is true?
+\begin{enumerate}
+  \item $f(x)$ is differentiable at the point $x=x_0$
+  \item the limit $\displaystyle\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$ exists
+  \item the limit $\displaystyle\lim_{x\to x_0}\left(f(x)-f(x_0)\right)$ exists
+  \item the limit $\displaystyle\lim_{h\to 0}\frac{f(x_0+h)-f(x_0)}{h}$ exists
+  \item $f'(x)$ is continuous at the point $x=x_0$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Continuity does not imply differentiability. Think of $f(x)=|x|$ at the point $x_0=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c)}.
+
+By definition, $f$ is continuous at $x_0$ if and only if $\lim_{x\to x_0}f(x)=f(x_0)$. By the arithmetic of limits (the limit of a constant is the constant itself) this is equivalent to
+\[
+\lim_{x\to x_0}\bigl(f(x)-f(x_0)\bigr)=f(x_0)-f(x_0)=0 ,
+\]
+and in particular the limit in statement (c) exists (and equals 0).
+
+\textbf{Why the others are wrong:} consider $f(x)=|x|$ and $x_0=0$. The function is continuous at 0, but
+\[
+\frac{f(0+h)-f(0)}{h}=\frac{|h|}{h}=\begin{cases}1,& h>0\\ -1,& h<0\end{cases}
+\]
+hence the one-sided limits of the difference quotient are $1$ and $-1$ and the limit does not exist. Therefore:
+\begin{itemize}
+  \item (b) and (d) are wrong: these are two ways of writing the definition of the derivative $f'(x_0)$, and we showed that the limit does not exist.
+  \item (a) is wrong: differentiability at $x_0$ means exactly the existence of the limit in (b)/(d).
+  \item (e) is wrong: $f'(0)$ is not even defined, hence $f'$ is not continuous at 0. (Moreover, even a differentiable function can have a discontinuous derivative, for example $x^2\sin\frac1x$ with $f(0)=0$.)
+\end{itemize}
+\end{solution}

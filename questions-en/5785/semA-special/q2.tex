@@ -1,0 +1,33 @@
+% English translation of questions/5785/semA-special/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Define a function
+\[ f(x) = \frac{x}{x^4 + 3} \]
+\begin{enumerate}
+  \item (11 pts) Compute the local extremum points and the intervals of increase and decrease of the function on its domain. Justify your answer.
+  \item (10 pts) Compute all asymptotes of the function. Justify your answer.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+Domain: $x^4 + 3 \ge 3 > 0$ for every $x$, so $f$ is defined, continuous and differentiable on all of $\R$.
+\begin{enumerate}
+  \item By the quotient rule:
+  \[ f'(x) = \frac{(x^4 + 3) - x\cdot 4x^3}{(x^4+3)^2} = \frac{3 - 3x^4}{(x^4 + 3)^2} = \frac{3(1 - x^2)(1 + x^2)}{(x^4+3)^2}. \]
+  The denominator and $1 + x^2$ are positive, so the sign of $f'$ is the sign of $1 - x^2$:
+  \begin{itemize}
+    \item $|x| < 1$: $f' > 0$, $f$ is increasing on $[-1, 1]$;
+    \item $|x| > 1$: $f' < 0$, $f$ is decreasing on $(-\infty, -1]$ and on $[1, \infty)$.
+  \end{itemize}
+  By the first derivative test: $x=-1$ is a local minimum point, $f(-1) = -\frac14$; $x = 1$ is a local maximum point, $f(1) = \frac14$.
+  (Since $f\to0$ at infinity, these are also the absolute extrema.)
+
+  \item \textbf{Vertical:} $f$ is continuous on all of $\R$, so at every point $x_0$ we have $\lim_{x\to x_0}f(x) = f(x_0)$, which is finite, and there are no vertical asymptotes.
+
+  \textbf{Horizontal/oblique:}
+  \[ \lim_{x\to\pm\infty}\frac{x}{x^4 + 3} = \lim_{x\to\pm\infty}\frac{1/x^3}{1 + 3/x^4} = 0. \]
+  Hence $y = 0$ is a horizontal asymptote both at $+\infty$ and at $-\infty$ (so there is no additional oblique asymptote: $m = \lim \frac{f(x)}{x} = 0$, $n = \lim f(x) = 0$).
+
+  \textbf{Answer:} the only asymptote is $y = 0$ (horizontal, in both directions); there are no vertical asymptotes.
+\end{enumerate}
+\end{solution}

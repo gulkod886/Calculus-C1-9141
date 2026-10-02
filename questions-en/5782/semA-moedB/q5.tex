@@ -1,0 +1,30 @@
+% English translation of questions/5782/semA-moedB/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(17 pts) Compute the integral
+\[ \int\frac{5x^3+4x^2+8x+12}{x^4+4x^2}dx \]
+\end{question}
+
+\begin{hint}
+$x^4+4x^2=x^2(x^2+4)$. The partial fraction decomposition is of the form $\frac Ax+\frac B{x^2}+\frac{Cx+D}{x^2+4}$.
+\end{hint}
+
+\begin{solution}
+\textbf{Partial fraction decomposition.} $x^4+4x^2=x^2(x^2+4)$, and $x^2+4$ is irreducible over $\R$. The degree of the numerator is less than the degree of the denominator, and hence
+\[ \frac{5x^3+4x^2+8x+12}{x^2(x^2+4)}=\frac Ax+\frac B{x^2}+\frac{Cx+D}{x^2+4}, \]
+\[ 5x^3+4x^2+8x+12=Ax(x^2+4)+B(x^2+4)+(Cx+D)x^2=(A+C)x^3+(B+D)x^2+4Ax+4B. \]
+Comparing coefficients:
+\[ 4B=12\Rightarrow B=3,\quad 4A=8\Rightarrow A=2,\quad A+C=5\Rightarrow C=3,\quad B+D=4\Rightarrow D=1. \]
+Hence
+\[ \frac{5x^3+4x^2+8x+12}{x^4+4x^2}=\frac2x+\frac3{x^2}+\frac{3x}{x^2+4}+\frac{1}{x^2+4}. \]
+
+\textbf{Integration.}
+\begin{itemize}
+  \item $\int\frac2x\,dx=2\ln|x|$, \quad $\int\frac3{x^2}\,dx=-\frac3x$.
+  \item $\int\frac{3x}{x^2+4}\,dx=\frac32\int\frac{2x}{x^2+4}\,dx=\frac32\ln(x^2+4)$.
+  \item $\int\frac{dx}{x^2+4}=\frac14\int\frac{dx}{(x/2)^2+1}=\frac12\arctan\frac x2$ (substitution $t=\frac x2$).
+\end{itemize}
+
+\textbf{Answer:}
+\[ \int\frac{5x^3+4x^2+8x+12}{x^4+4x^2}dx=\boxed{2\ln|x|-\frac3x+\frac32\ln(x^2+4)+\frac12\arctan\frac x2+C}. \]
+\end{solution}

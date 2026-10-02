@@ -1,0 +1,30 @@
+% English translation of questions/5785/semA-moedA/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Compute the integral
+\[ \int \frac{2x^2 + 8}{x^3 - 4x^2 + 8x}\,dx \]
+\end{question}
+
+\begin{hint}
+Factor the denominator: $x^3 - 4x^2 + 8x = x(x^2 - 4x + 8)$, where the quadratic factor has no real roots, and decompose into partial fractions.
+\end{hint}
+
+\begin{solution}
+\textbf{Factoring the denominator.} $x^3 - 4x^2 + 8x = x(x^2 - 4x + 8)$, and $x^2 - 4x + 8 = (x-2)^2 + 4$ has no real roots (the discriminant is $16 - 32 < 0$).
+
+\textbf{Partial fractions.} We look for
+\[ \frac{2x^2 + 8}{x(x^2 - 4x + 8)} = \frac{A}{x} + \frac{Bx + C}{x^2 - 4x + 8}, \]
+i.e. $2x^2 + 8 = A(x^2 - 4x + 8) + x(Bx + C)$. Substituting $x = 0$ gives $8 = 8A$, i.e. $A = 1$. Then
+$2x^2 + 8 = x^2 - 4x + 8 + Bx^2 + Cx$, and comparing coefficients gives $B = 1$, $C = 4$.
+
+\textbf{Integration.}
+\[ \int\frac{dx}{x} = \ln|x|. \]
+For the second term write $x + 4 = \frac12(2x - 4) + 6$, where $(x^2 - 4x + 8)' = 2x - 4$:
+\[ \int\frac{x+4}{x^2-4x+8}\,dx = \frac12\int\frac{2x-4}{x^2-4x+8}\,dx + 6\int\frac{dx}{(x-2)^2 + 4}
+= \frac12\ln(x^2-4x+8) + 6\cdot\frac12\arctan\frac{x-2}{2}, \]
+where in the last integral we used $\int\frac{dt}{t^2 + a^2} = \frac1a\arctan\frac ta$ with $t = x-2$, $a = 2$.
+
+\textbf{Answer:}
+\[ \int \frac{2x^2 + 8}{x^3 - 4x^2 + 8x}\,dx = \ln|x| + \frac12\ln(x^2 - 4x + 8) + 3\arctan\frac{x-2}{2} + C. \]
+(Check: differentiating the result gives back the integrand.)
+\end{solution}

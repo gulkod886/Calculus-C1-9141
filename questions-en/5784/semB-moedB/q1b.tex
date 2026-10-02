@@ -1,0 +1,19 @@
+% English translation of questions/5784/semB-moedB/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \lim_{x\to0}\frac{\tan(x)-\sin(x)}{\sin^3(x)} \]
+\end{question}
+
+\begin{hint}
+Factor out $\tan x$ in the numerator: $\tan x-\sin x=\tan x\,(1-\cos x)$.
+\end{hint}
+
+\begin{solution}
+In a punctured neighborhood of $0$ we have $\sin x\neq0$, $\cos x\neq0$, and
+\[ \tan x-\sin x=\frac{\sin x}{\cos x}-\sin x=\frac{\sin x\,(1-\cos x)}{\cos x}. \]
+Hence, using $1-\cos^2x=\sin^2x$:
+\[ \frac{\tan x-\sin x}{\sin^3x}=\frac{1-\cos x}{\cos x\,\sin^2x}=\frac{1-\cos x}{\cos x\,(1-\cos x)(1+\cos x)}=\frac{1}{\cos x\,(1+\cos x)}. \]
+(The cancellation is allowed since $\cos x\neq1$ for $0<|x|<2\pi$.) The resulting expression is continuous at $0$, and therefore
+\[ \lim_{x\to0}\frac{\tan x-\sin x}{\sin^3x}=\frac{1}{1\cdot2}=\boxed{\frac12}. \]
+\end{solution}

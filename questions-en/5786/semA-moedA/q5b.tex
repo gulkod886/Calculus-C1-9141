@@ -1,0 +1,22 @@
+% English translation of questions/5786/semA-moedA/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following improper integral, or show that it diverges:
+\[ \int_e^\infty \frac{dx}{x \cdot \ln^3 x} \]
+\end{question}
+
+\begin{hint}
+Substitute $t = \ln x$.
+\end{hint}
+
+\begin{solution}
+The integrand $\frac{1}{x\ln^3 x}$ is continuous and positive on $[e, \infty)$, so the integral is improper only because of the infinite upper limit. By definition
+\[ \int_e^\infty \frac{dx}{x\ln^3 x} = \lim_{A\to\infty} \int_e^A \frac{dx}{x\ln^3 x}. \]
+We find an antiderivative with the substitution $t = \ln x$, $dt = \frac{dx}{x}$:
+\[ \int \frac{dx}{x\ln^3 x} = \int \frac{dt}{t^3} = -\frac{1}{2t^2} + C = -\frac{1}{2\ln^2 x} + C. \]
+Hence, for $A > e$:
+\[ \int_e^A \frac{dx}{x\ln^3 x} = \left[ -\frac{1}{2\ln^2 x} \right]_e^A = -\frac{1}{2\ln^2 A} + \frac{1}{2\ln^2 e} = \frac12 - \frac{1}{2\ln^2 A}. \]
+As $A \to \infty$ we have $\ln A \to \infty$, and hence $\frac{1}{2\ln^2 A} \to 0$.
+
+\textbf{Answer:} the integral converges and $\boxed{\int_e^\infty \frac{dx}{x\ln^3 x} = \frac12}$.
+\end{solution}

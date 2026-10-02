@@ -1,0 +1,19 @@
+% English translation of questions/5779/semA-moedB/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Prove or disprove: if a function $f(x)$ is differentiable at a point $x_0$, then it is continuous at $x_0$.
+\end{question}
+
+\begin{hint}
+Write $f(x)-f(x_0)=\frac{f(x)-f(x_0)}{x-x_0}\cdot(x-x_0)$.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is true.} Suppose $f$ is differentiable at $x_0$, i.e. the limit $f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$ exists and is finite. For every $x\ne x_0$ in a neighborhood of $x_0$:
+\[ f(x)-f(x_0)=\frac{f(x)-f(x_0)}{x-x_0}\cdot(x-x_0). \]
+By the arithmetic of limits (product of two finite limits):
+\[ \lim_{x\to x_0}\big(f(x)-f(x_0)\big)=f'(x_0)\cdot0=0, \]
+i.e. $\lim_{x\to x_0}f(x)=f(x_0)$, and $f$ is continuous at $x_0$. $\blacksquare$
+
+(The converse is false: $|x|$ is continuous at $0$ but not differentiable there.)
+\end{solution}

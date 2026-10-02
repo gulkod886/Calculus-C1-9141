@@ -1,0 +1,22 @@
+% English translation of questions/5779/semB-moedB/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Write the Taylor polynomial of order 2 for the function
+\[ f(x)=\int_0^x\frac{1-t}{1+t^2}\,dt \]
+about the point $x=1$.
+\end{question}
+
+\begin{hint}
+By the Fundamental Theorem, $f'(x)=\frac{1-x}{1+x^2}$; compute $f(1)$ directly from the integral.
+\end{hint}
+
+\begin{solution}
+The Taylor polynomial of order 2 about $1$: $P_2(x)=f(1)+f'(1)(x-1)+\frac{f''(1)}{2}(x-1)^2$.
+
+The function $\frac{1-t}{1+t^2}$ is continuous on all of $\R$, hence by the Fundamental Theorem of Calculus $f'(x)=\frac{1-x}{1+x^2}$, and therefore $f'(1)=0$. Differentiating again:
+\[ f''(x)=\frac{-(1+x^2)-(1-x)\cdot2x}{(1+x^2)^2}=\frac{x^2-2x-1}{(1+x^2)^2},\qquad f''(1)=\frac{-2}{4}=-\frac12. \]
+Finally,
+\[ f(1)=\int_0^1\frac{dt}{1+t^2}-\int_0^1\frac{t\,dt}{1+t^2}=\Big[\arctan t\Big]_0^1-\Big[\tfrac12\ln(1+t^2)\Big]_0^1=\frac\pi4-\frac{\ln2}{2}. \]
+\textbf{Answer:}
+\[ P_2(x)=\frac\pi4-\frac{\ln2}{2}-\frac14(x-1)^2. \]
+\end{solution}

@@ -1,0 +1,19 @@
+% English translation of questions/5784/semB-moedB/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \int_0^{\pi}e^x\sin(x)\,dx \]
+\end{question}
+
+\begin{hint}
+Integrate by parts twice; the original integral will appear again on the right-hand side, and one solves an equation for it.
+\end{hint}
+
+\begin{solution}
+Denote $I=\int_0^\pi e^x\sin x\,dx$. By parts with $u=\sin x$, $v'=e^x$:
+\[ I=\big[e^x\sin x\big]_0^\pi-\int_0^\pi e^x\cos x\,dx=0-\int_0^\pi e^x\cos x\,dx. \]
+Again by parts with $u=\cos x$, $v'=e^x$:
+\[ \int_0^\pi e^x\cos x\,dx=\big[e^x\cos x\big]_0^\pi+\int_0^\pi e^x\sin x\,dx=(-e^\pi-1)+I. \]
+Hence $I=e^\pi+1-I$, i.e.
+\[ I=\boxed{\frac{e^\pi+1}{2}}\approx12.07. \]
+\end{solution}

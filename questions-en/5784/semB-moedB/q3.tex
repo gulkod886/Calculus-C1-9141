@@ -1,0 +1,38 @@
+% English translation of questions/5784/semB-moedB/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Analyze the following function (local extrema, intervals of increase/decrease, asymptotes):
+\[ f(x)=\frac{e^x}{x^2-3} \]
+Sketch its graph.
+\end{question}
+
+\begin{hint}
+In the derivative, the numerator is $e^x(x^2-2x-3)=e^x(x-3)(x+1)$. Note that the extremum points must lie in the domain, and that $-\sqrt3<-1<\sqrt3<3$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $x^2\neq3$, i.e. $x\neq\pm\sqrt3$.
+
+\textbf{Sign and intersections with the axes:} $e^x>0$, so there is no intersection with the $x$-axis, and $f>0$ for $|x|>\sqrt3$, $f<0$ for $|x|<\sqrt3$. Intersection with the $y$-axis: $f(0)=-\frac13$.
+
+\textbf{Derivative:} by the quotient rule
+\[ f'(x)=\frac{e^x(x^2-3)-e^x\cdot2x}{(x^2-3)^2}=\frac{e^x(x^2-2x-3)}{(x^2-3)^2}=\frac{e^x(x-3)(x+1)}{(x^2-3)^2}. \]
+The denominator and $e^x$ are positive, so the sign of $f'$ is the sign of $(x-3)(x+1)$. We have $-\sqrt3\approx-1.73<-1<\sqrt3\approx1.73<3$:
+\begin{itemize}
+  \item $(-\infty,-\sqrt3)$ and $(-\sqrt3,-1)$: $f'>0$, $f$ is \textbf{increasing}.
+  \item $(-1,\sqrt3)$ and $(\sqrt3,3)$: $f'<0$, $f$ is \textbf{decreasing}.
+  \item $(3,\infty)$: $f'>0$, $f$ is \textbf{increasing}.
+\end{itemize}
+
+\textbf{Extremum points:} $f'$ changes sign from $+$ to $-$ at $x=-1$, so this is a \textbf{local maximum} point: $f(-1)=\frac{e^{-1}}{-2}=-\frac1{2e}\approx-0.18$. At $x=3$ the sign changes from $-$ to $+$, so it is a \textbf{local minimum}: $f(3)=\frac{e^3}{6}\approx3.35$.
+
+\textbf{Asymptotes:}
+\begin{itemize}
+  \item Vertical: $x=\pm\sqrt3$ (the numerator $e^{\pm\sqrt3}\neq0$ and the denominator vanishes):
+  $\lim_{x\to-\sqrt3^-}f=+\infty$, $\lim_{x\to-\sqrt3^+}f=-\infty$, $\lim_{x\to\sqrt3^-}f=-\infty$, $\lim_{x\to\sqrt3^+}f=+\infty$ (according to the sign of $x^2-3$ on each side).
+  \item At $-\infty$: $e^x\to0$ and $x^2-3\to\infty$, so $f\to0$: horizontal asymptote $y=0$ (the graph lies above it).
+  \item At $+\infty$: by L'Hôpital's rule (twice) $\lim_{x\to\infty}\frac{e^x}{x^2-3}=\lim\frac{e^x}{2}=\infty$, and also $\frac{f(x)}{x}=\frac{e^x}{x^3-3x}\to\infty$; hence there is no horizontal or oblique asymptote at $+\infty$.
+\end{itemize}
+
+\textbf{The graph:} on the left, the graph starts above the $x$-axis close to $y=0$ and rises to $+\infty$ as $x\to-\sqrt3^-$. Between $-\sqrt3$ and $\sqrt3$ the graph is negative: it rises from $-\infty$ up to the local maximum $(-1,-\frac1{2e})$, then descends through $(0,-\frac13)$ to $-\infty$ as $x\to\sqrt3^-$. To the right of $\sqrt3$ the graph descends from $+\infty$ to the local minimum $(3,\frac{e^3}{6})$ and then rises to $+\infty$.
+\end{solution}

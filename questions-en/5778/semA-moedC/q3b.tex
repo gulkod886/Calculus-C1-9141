@@ -1,0 +1,19 @@
+% English translation of questions/5778/semA-moedC/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Let $f$ be a function differentiable at every real number $x$, and assume that the equation $f'(x)=0$ has exactly $k$ solutions. Prove that the equation $f(x)=0$ has at most $k+1$ solutions.
+\end{question}
+
+\begin{hint}
+Between any two roots of $f$ there is a root of $f'$ (Rolle's theorem). Prove by contradiction.
+\end{hint}
+
+\begin{solution}
+Assume by contradiction that the equation $f(x)=0$ has at least $k+2$ distinct solutions, and denote $k+2$ of them by $x_1<x_2<\dots<x_{k+2}$.
+
+For every $i=1,\dots,k+1$, the function $f$ is continuous on the interval $[x_i,x_{i+1}]$ and differentiable on the interval $(x_i,x_{i+1})$ (since it is differentiable on all of $\R$, and hence also continuous), and $f(x_i)=f(x_{i+1})=0$. By \textbf{Rolle's theorem} there exists a point $c_i\in(x_i,x_{i+1})$ such that $f'(c_i)=0$.
+
+The intervals $(x_1,x_2),(x_2,x_3),\dots,(x_{k+1},x_{k+2})$ are pairwise disjoint, hence $c_1<c_2<\dots<c_{k+1}$ are $k+1$ distinct points at which $f'=0$. This contradicts the assumption that the equation $f'(x)=0$ has exactly $k$ solutions.
+
+Therefore the equation $f(x)=0$ has at most $k+1$ solutions. $\blacksquare$
+\end{solution}

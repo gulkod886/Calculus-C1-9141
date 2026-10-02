@@ -1,0 +1,17 @@
+% English translation of questions/5783/semA-moedB/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the finite area bounded between the graph of the function $f(x)=x^3+x^2-2x$ and the $x$-axis.
+\end{question}
+
+\begin{hint}
+Factor the polynomial to find the intersection points with the $x$-axis and the sign on each interval.
+\end{hint}
+
+\begin{solution}
+Factoring: $f(x)=x(x^2+x-2)=x(x+2)(x-1)$. The intersection points with the $x$-axis: $x=-2,0,1$. Sign: on $(-2,0)$ $f>0$ (for example $f(-1)=2$), and on $(0,1)$ $f<0$ (for example $f(\frac12)=-\frac58$). The finite region bounded between the graph and the axis lies over $[-2,1]$.
+
+Antiderivative: $F(x)=\frac{x^4}{4}+\frac{x^3}{3}-x^2$. Then $F(-2)=4-\frac83-4=-\frac83$, $F(0)=0$, $F(1)=\frac14+\frac13-1=-\frac{5}{12}$.
+\[ S=\int_{-2}^0 f\,dx-\int_0^1 f\,dx=\big(F(0)-F(-2)\big)-\big(F(1)-F(0)\big)=\frac83+\frac{5}{12}=\frac{37}{12}. \]
+\textbf{Answer:} $S=\frac{37}{12}$.
+\end{solution}

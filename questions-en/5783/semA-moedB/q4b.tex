@@ -1,0 +1,22 @@
+% English translation of questions/5783/semA-moedB/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Use a second-order Taylor polynomial to estimate the expression $\sqrt[4]{82}$, and estimate the error.
+\end{question}
+
+\begin{hint}
+Expand $f(x)=x^{1/4}$ around $x_0=81$ and use the Lagrange remainder.
+\end{hint}
+
+\begin{solution}
+$f(x)=x^{1/4}$, $x_0=81$, $f(81)=3$.
+\[ f'(x)=\tfrac14x^{-3/4},\quad f''(x)=-\tfrac{3}{16}x^{-7/4},\quad f'''(x)=\tfrac{21}{64}x^{-11/4}. \]
+\[ f'(81)=\frac{1}{4\cdot27}=\frac{1}{108},\qquad f''(81)=-\frac{3}{16\cdot 3^7}=-\frac{1}{16\cdot729}=-\frac{1}{11664}. \]
+The Taylor polynomial of order 2 around $81$, at the point $x=82$ ($x-x_0=1$):
+\[ \sqrt[4]{82}\approx P_2(82)=3+\frac{1}{108}-\frac{1}{2\cdot11664}=3+\frac{1}{108}-\frac{1}{23328}=\frac{70199}{23328}\approx 3.0092164. \]
+\textbf{Error estimate} (Lagrange remainder): there exists $c\in(81,82)$ such that
+\[ R_2=\frac{f'''(c)}{3!}(82-81)^3=\frac{21}{64\cdot 6}\,c^{-11/4}. \]
+$c^{-11/4}$ is decreasing, hence $c^{-11/4}<81^{-11/4}=3^{-11}$, and therefore
+\[ 0<R_2<\frac{21}{384\cdot 3^{11}}=\frac{21}{384\cdot177147}\approx 3.1\cdot10^{-7}. \]
+That is, $\sqrt[4]{82}\approx3.0092164$ with an error less than $3.1\cdot 10^{-7}$ (and the approximation is slightly smaller than the true value, $3.0092167\ldots$).
+\end{solution}

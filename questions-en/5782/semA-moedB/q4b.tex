@@ -1,0 +1,22 @@
+% English translation of questions/5782/semA-moedB/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Solve the differential equation
+\[ xe^y=(x^2+1)y' \]
+\end{question}
+
+\begin{hint}
+This is a separable equation: $e^{-y}y'=\frac{x}{x^2+1}$.
+\end{hint}
+
+\begin{solution}
+Since $x^2+1>0$ and $e^y>0$, we can write
+\[ e^{-y}\,y'=\frac{x}{x^2+1}. \]
+(There are no constant solutions: for $y\equiv c$ we get $xe^c=0$ for every $x$, which is impossible.) Integrate both sides:
+\[ \int e^{-y}dy=\int\frac{x}{x^2+1}dx\ \Longrightarrow\ -e^{-y}=\frac12\ln(x^2+1)-C. \]
+Hence $e^{-y}=C-\frac12\ln(x^2+1)$, and therefore
+\[ \boxed{y=-\ln\left(C-\tfrac12\ln(x^2+1)\right)},\qquad C\in\R, \]
+on the domain where $C-\frac12\ln(x^2+1)>0$ (in particular $C>0$ is required; the domain is $|x|<\sqrt{e^{2C}-1}$).
+
+Check: $y'=\frac{\frac{x}{x^2+1}}{C-\frac12\ln(x^2+1)}=\frac{x}{x^2+1}e^{y}$, and hence $(x^2+1)y'=xe^y$.
+\end{solution}

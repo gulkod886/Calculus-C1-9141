@@ -1,0 +1,15 @@
+% English translation of questions/5778/semA-moedA/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\tan x$ and the $x$-axis, for $0\le x\le\frac\pi4$.
+\end{question}
+
+\begin{hint}
+Use the identity $\tan^2x=\frac{1}{\cos^2x}-1$.
+\end{hint}
+
+\begin{solution}
+The volume of a solid of revolution about the $x$-axis is $V=\pi\int_a^b f^2(x)\,dx$. Hence, using $\tan^2x=\frac1{\cos^2x}-1$:
+\[ V=\pi\int_0^{\pi/4}\tan^2x\,dx=\pi\int_0^{\pi/4}\left(\frac1{\cos^2x}-1\right)dx=\pi\Big[\tan x-x\Big]_0^{\pi/4}=\pi\left(1-\frac\pi4\right). \]
+\[ \boxed{V=\pi-\frac{\pi^2}{4}} \]
+\end{solution}

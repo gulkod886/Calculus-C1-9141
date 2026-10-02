@@ -1,0 +1,22 @@
+% English translation of questions/5785/quiz/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)=3^{-3x+3}$. Which of the following statements is true?
+\begin{enumerate}
+  \item The function is not monotone.
+  \item The function is strictly decreasing.
+  \item The function is strictly increasing.
+  \item The function is monotone but not strictly.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: (b)}.
+
+$f$ is the composition $f=h\circ u$ of $u(x)=-3x+3$ and $h(t)=3^t$. The function $u$ is strictly decreasing (a linear function with slope $-3<0$) and the function $h$ is strictly increasing (an exponential function with base $3>1$).
+
+Hence if $x_1<x_2$ then $u(x_1)>u(x_2)$, and so $3^{u(x_1)}>3^{u(x_2)}$, i.e. $f(x_1)>f(x_2)$: $f$ is strictly decreasing on $\R$.
+(Alternatively: $f(x)=27\cdot\left(\frac{1}{27}\right)^{x}$, an exponential function with base $\frac1{27}<1$ times a positive constant.)
+
+\textbf{Why the others are wrong:} (a): we showed that it is monotone. (c): for example $f(0)=27>f(1)=1$, so it is not increasing. (d): ``monotone but not strictly'' means that there are $x_1<x_2$ with $f(x_1)=f(x_2)$, but $f$ is strictly decreasing and therefore one-to-one.
+\end{solution}

@@ -1,0 +1,18 @@
+% English translation of questions/5785/semA-special/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following improper integral, or show that it does not converge:
+\[ \int_e^\infty\frac{1}{x\ln^2 x}\,dx \]
+\end{question}
+
+\begin{hint}
+Substitute $u = \ln x$.
+\end{hint}
+
+\begin{solution}
+By definition, $\int_e^\infty = \lim_{R\to\infty}\int_e^R$. With the substitution $u = \ln x$, $du = \frac{dx}{x}$ ($x = e \mapsto u = 1$, $x = R\mapsto u = \ln R$):
+\[ \int_e^R\frac{dx}{x\ln^2x} = \int_1^{\ln R}\frac{du}{u^2} = \left[-\frac1u\right]_1^{\ln R} = 1 - \frac{1}{\ln R} \xrightarrow[R\to\infty]{} 1, \]
+since $\ln R \to \infty$.
+
+\textbf{Answer:} the integral converges and its value is $1$.
+\end{solution}

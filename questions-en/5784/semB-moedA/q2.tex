@@ -1,0 +1,25 @@
+% English translation of questions/5784/semB-moedA/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Define a function as follows:
+\[ f(x)=\begin{cases} x^2\sin\left(\frac{3}{x}\right) & x\neq0\\ 0 & x=0\end{cases} \]
+\begin{enumerate}
+  \item Is $f(x)$ continuous at the point $x=0$?
+  \item Is $f(x)$ differentiable at the point $x=0$?
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+$\sin\left(\frac3x\right)$ is bounded; use the Squeeze theorem (or ``tends to zero times bounded'').
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item For every $x\neq0$ we have $\left|\sin\frac3x\right|\le1$, and therefore
+  \[ 0\le |f(x)|=x^2\left|\sin\frac3x\right|\le x^2. \]
+  Since $x^2\to0$ as $x\to0$, by the Squeeze theorem $|f(x)|\to0$, i.e. $\lim_{x\to0}f(x)=0=f(0)$. Hence $f$ is \textbf{continuous} at $x=0$.
+  \item We compute the derivative by definition:
+  \[ f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\frac{h^2\sin\frac3h}{h}=\lim_{h\to0}h\sin\frac3h. \]
+  Again $0\le\left|h\sin\frac3h\right|\le|h|\to0$, and by the Squeeze theorem the limit exists and equals $0$ (a function tending to zero times a bounded function). Hence $f$ is \textbf{differentiable} at $x=0$ and $f'(0)=0$.
+\end{enumerate}
+\end{solution}

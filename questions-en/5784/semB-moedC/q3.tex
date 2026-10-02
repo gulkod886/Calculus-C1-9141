@@ -1,0 +1,35 @@
+% English translation of questions/5784/semB-moedC/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Analyze the following function (local extrema, intervals of increase/decrease, asymptotes):
+\[ f(x)=e^{-(x^3-3x)} \]
+Sketch its graph.
+\end{question}
+
+\begin{hint}
+$f=e^{g}$ with $g(x)=3x-x^3$; since $e^t$ is increasing, $f$ increases/decreases exactly where $g$ increases/decreases.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} all of $\R$; $f$ is continuous and differentiable everywhere, and $f(x)>0$ for every $x$ (no intersection with the $x$-axis). Intersection with the $y$-axis: $f(0)=e^0=1$.
+
+\textbf{Derivative:} by the chain rule
+\[ f'(x)=e^{-(x^3-3x)}\cdot(-(3x^2-3))=3(1-x^2)\,e^{-(x^3-3x)}=3(1-x)(1+x)\,e^{3x-x^3}. \]
+The exponential is positive, so the sign of $f'$ is the sign of $1-x^2$:
+\begin{itemize}
+  \item $(-\infty,-1)$: $f'<0$, $f$ is \textbf{decreasing}.
+  \item $(-1,1)$: $f'>0$, $f$ is \textbf{increasing}.
+  \item $(1,\infty)$: $f'<0$, $f$ is \textbf{decreasing}.
+\end{itemize}
+
+\textbf{Extremum points:} at $x=-1$ the derivative changes from $-$ to $+$: \textbf{local minimum} $f(-1)=e^{-(-1+3)}=e^{-2}\approx0.135$. At $x=1$ the derivative changes from $+$ to $-$: \textbf{local maximum} $f(1)=e^{-(1-3)}=e^{2}\approx7.39$.
+
+\textbf{Asymptotes:}
+\begin{itemize}
+  \item Vertical: none, $f$ is continuous on the whole line.
+  \item $x\to+\infty$: $3x-x^3=-x^3\left(1-\frac{3}{x^2}\right)\to-\infty$, so $f(x)\to0$: horizontal asymptote $y=0$ (the graph lies above it).
+  \item $x\to-\infty$: $3x-x^3\to+\infty$, so $f(x)\to+\infty$; also $\frac{f(x)}{x}\to-\infty$ (numerator $\to+\infty$, denominator $\to-\infty$), and therefore there is no horizontal or oblique asymptote at $-\infty$.
+\end{itemize}
+
+\textbf{The graph:} it comes from $+\infty$ on the left, decreases to the local minimum $(-1,e^{-2})$, increases through $(0,1)$ to the local maximum $(1,e^2)$, and then decreases and tends to $0$ (above the $x$-axis) as $x\to\infty$. The whole graph lies above the $x$-axis.
+\end{solution}

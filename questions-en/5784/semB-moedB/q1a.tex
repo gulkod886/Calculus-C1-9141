@@ -1,0 +1,20 @@
+% English translation of questions/5784/semB-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \lim_{x\to0}\sqrt[x]{1-2x} \]
+\end{question}
+
+\begin{hint}
+Write $\sqrt[x]{1-2x}=(1-2x)^{1/x}=e^{\frac{\ln(1-2x)}{x}}$.
+\end{hint}
+
+\begin{solution}
+For every $x\neq0$ close to $0$ we have $1-2x>0$, and therefore
+\[ \sqrt[x]{1-2x}=(1-2x)^{1/x}=e^{\frac{\ln(1-2x)}{x}}. \]
+We compute the limit of the exponent. This is a limit of the form $\frac00$, and by L'Hôpital's rule:
+\[ \lim_{x\to0}\frac{\ln(1-2x)}{x}=\lim_{x\to0}\frac{\frac{-2}{1-2x}}{1}=-2. \]
+By continuity of the exponential function we get
+\[ \lim_{x\to0}\sqrt[x]{1-2x}=e^{-2}=\boxed{\frac1{e^2}}. \]
+(This is also a form of the fundamental limit $\lim_{t\to0}(1+t)^{1/t}=e$ with $t=-2x$.)
+\end{solution}

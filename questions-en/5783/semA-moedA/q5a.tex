@@ -1,0 +1,11 @@
+% English translation of questions/5783/semA-moedA/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the integral $\displaystyle\int\sqrt{2x+3}\,dx$.
+\end{question}
+
+\begin{solution}
+Substitute $t=2x+3$; then $dt=2\,dx$, i.e. $dx=\frac{dt}{2}$:
+\[ \int\sqrt{2x+3}\,dx=\frac12\int t^{1/2}\,dt=\frac12\cdot\frac{t^{3/2}}{3/2}+C=\frac13(2x+3)^{3/2}+C. \]
+Check: $\left(\frac13(2x+3)^{3/2}\right)'=\frac13\cdot\frac32(2x+3)^{1/2}\cdot 2=\sqrt{2x+3}$.
+\end{solution}

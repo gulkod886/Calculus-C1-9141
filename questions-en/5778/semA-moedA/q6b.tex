@@ -1,0 +1,22 @@
+% English translation of questions/5778/semA-moedA/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Define $r=f(\theta)=\theta^2-1$ in polar coordinates. Compute the length of this curve between $\theta=1$ and $\theta=9$.
+
+(The exam includes a figure of the curve — a spiral — on a polar grid.)
+\end{question}
+
+\begin{hint}
+The arc length of a curve in polar coordinates is $\int_\alpha^\beta\sqrt{r^2+\left(\frac{dr}{d\theta}\right)^2}\,d\theta$. Check that the expression under the root is a perfect square.
+\end{hint}
+
+\begin{solution}
+The arc length of a curve in polar coordinates $r=f(\theta)$, $\alpha\le\theta\le\beta$:
+\[ L=\int_\alpha^\beta\sqrt{r^2+\left(\frac{dr}{d\theta}\right)^2}\,d\theta. \]
+Here $\frac{dr}{d\theta}=2\theta$, hence
+\[ r^2+\left(\frac{dr}{d\theta}\right)^2=(\theta^2-1)^2+4\theta^2=\theta^4-2\theta^2+1+4\theta^2=\theta^4+2\theta^2+1=(\theta^2+1)^2. \]
+Since $\theta^2+1>0$, $\sqrt{(\theta^2+1)^2}=\theta^2+1$, and
+\[ L=\int_1^9(\theta^2+1)\,d\theta=\left[\frac{\theta^3}{3}+\theta\right]_1^9=\left(243+9\right)-\left(\frac13+1\right)=252-\frac43=\frac{752}{3}. \]
+\[ \boxed{L=\frac{752}{3}=250\tfrac23} \]
+\textbf{Remark:} the official solution writes $252-\frac13+1=252\frac23$ — a sign error when substituting the lower limit; the correct value is $252-\left(\frac13+1\right)=250\frac23$.
+\end{solution}

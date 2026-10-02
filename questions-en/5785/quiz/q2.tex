@@ -1,0 +1,54 @@
+% English translation of questions/5785/quiz/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $a,b\in\R$. Define a function by
+\[
+f(x)=\begin{cases}
+\frac{x\sin(ax)}{1-\cos x}, & \text{if } x<0,\\
+b, & \text{if } x=0,\\
+\frac{e^x-1}{xe^x}, & \text{if } x>0
+\end{cases}
+\]
+For which values of $a,b$ is the function continuous at $0$ ? Justify.
+\end{question}
+
+\begin{hint}
+$f$ is continuous at 0 if and only if both one-sided limits at 0 exist and are equal to $f(0)=b$.
+\end{hint}
+
+\begin{hint}
+Use the fundamental limits $\frac{\sin t}{t}\to1$, $\frac{1-\cos x}{x^2}\to\frac12$, $\frac{e^x-1}{x}\to1$ (L'Hôpital's rule is not allowed in the quiz).
+\end{hint}
+
+\begin{solution}
+The function is continuous at 0 if and only if
+\[
+\lim_{x\to0^-}f(x)=\lim_{x\to0^+}f(x)=f(0)=b .
+\]
+
+\textbf{The left limit.} We use the fundamental limit
+\[
+\lim_{x\to0}\frac{1-\cos x}{x^2}=\frac12 ,
+\]
+which follows from the identity $1-\cos x=2\sin^2\frac x2$: $\frac{1-\cos x}{x^2}=\frac12\left(\frac{\sin(x/2)}{x/2}\right)^2\to\frac12$.
+If $a\neq0$ we write, for $x<0$ close to 0:
+\[
+\frac{x\sin(ax)}{1-\cos x}=a\cdot\frac{\sin(ax)}{ax}\cdot\frac{x^2}{1-\cos x}\xrightarrow[x\to0^-]{}a\cdot1\cdot2=2a ,
+\]
+by $\lim_{t\to0}\frac{\sin t}{t}=1$ (substitution $t=ax\to0$) and the arithmetic of limits.
+If $a=0$ then $f(x)=0$ for every $x<0$ and the left limit is $0=2a$. In any case
+\[
+\lim_{x\to0^-}f(x)=2a .
+\]
+
+\textbf{The right limit.}
+\[
+\frac{e^x-1}{xe^x}=\frac{e^x-1}{x}\cdot\frac{1}{e^x}\xrightarrow[x\to0^+]{}1\cdot\frac{1}{e^0}=1 ,
+\]
+by the fundamental limit $\lim_{x\to0}\frac{e^x-1}{x}=\ln e=1$ (from the formula sheet) and continuity of $e^x$ at 0.
+
+\textbf{Conclusion.} $f$ is continuous at 0 if and only if $2a=1=b$, i.e.
+\[
+\boxed{a=\tfrac12,\quad b=1.}
+\]
+\end{solution}

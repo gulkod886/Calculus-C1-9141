@@ -1,0 +1,29 @@
+% English translation of questions/5782/semA-special/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Find all the local and absolute (global) extremum points on the whole line of the function
+\[ f(x)=x^2\cdot e^{-x} \]
+\end{question}
+
+\begin{hint}
+Check the limits at $\pm\infty$ to decide whether there is an absolute extremum.
+\end{hint}
+
+\begin{solution}
+$f$ is differentiable on all of $\R$, and
+\[ f'(x)=2xe^{-x}-x^2e^{-x}=x(2-x)e^{-x}. \]
+Since $e^{-x}>0$, $f'(x)=0\iff x=0$ or $x=2$, and the sign of $f'$ is the sign of $x(2-x)$:
+\begin{itemize}
+  \item $f'<0$ on $(-\infty,0)$: $f$ is decreasing.
+  \item $f'>0$ on $(0,2)$: $f$ is increasing.
+  \item $f'<0$ on $(2,\infty)$: $f$ is decreasing.
+\end{itemize}
+Hence at $x=0$ there is a \textbf{local minimum} $f(0)=0$, and at $x=2$ there is a \textbf{local maximum} $f(2)=\frac{4}{e^2}$.
+
+\textbf{Absolute extrema.}
+\begin{itemize}
+  \item $f(x)=x^2e^{-x}\ge0=f(0)$ for every $x$, and hence $x=0$ is an \textbf{absolute minimum}, with value $0$.
+  \item $\lim_{x\to-\infty}x^2e^{-x}=+\infty$ (both factors tend to $+\infty$), hence $f$ is not bounded above and \textbf{there is no absolute maximum}. In particular, the local maximum at $x=2$ is not absolute (for example $f(-2)=4e^2>\frac4{e^2}$).
+\end{itemize}
+(For completeness: $\lim_{x\to+\infty}\frac{x^2}{e^x}=0$ by L'Hôpital's rule twice.)
+\end{solution}

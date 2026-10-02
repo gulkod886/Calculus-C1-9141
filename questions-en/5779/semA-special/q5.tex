@@ -1,0 +1,25 @@
+% English translation of questions/5779/semA-special/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) The equation of the curve in polar coordinates is: $r=2(1-\sin\varphi)$.
+Sketch the curve and compute the area of the region bounded by the curve.
+\end{question}
+
+\begin{hint}
+Area of a region in polar coordinates: $S=\frac12\int_\alpha^\beta r^2(\varphi)\,d\varphi$. Here $r\ge0$ for every $\varphi$, so the curve closes up as $\varphi$ runs over $[0,2\pi]$.
+\end{hint}
+
+\begin{solution}
+\textbf{Sketch:} we have $0\le r=2(1-\sin\varphi)\le 4$ for every $\varphi$, and $r$ is periodic with period $2\pi$, so the curve is closed and is obtained for $\varphi\in[0,2\pi]$. A few values:
+\[ \varphi=0:\ r=2;\quad \varphi=\tfrac{\pi}{2}:\ r=0;\quad \varphi=\pi:\ r=2;\quad \varphi=\tfrac{3\pi}{2}:\ r=4. \]
+That is, the curve passes through the points $(2,0)$, $(0,0)$, $(-2,0)$, $(0,-4)$ (in Cartesian coordinates). Since $r(\pi-\varphi)=r(\varphi)$, the curve is symmetric with respect to the $y$-axis. This is a \textbf{cardioid} (``heart'') whose cusp is at the origin (when $\varphi=\frac\pi2$) and which ``opens'' downwards: the farthest point is $(0,-4)$.
+
+\textbf{Area:} by the formula for area in polar coordinates, $S=\frac12\int_0^{2\pi}r^2\,d\varphi$:
+\[ S = \frac12\int_0^{2\pi}4(1-\sin\varphi)^2\,d\varphi = 2\int_0^{2\pi}\left(1-2\sin\varphi+\sin^2\varphi\right)d\varphi. \]
+We compute each term separately:
+\[ \int_0^{2\pi}1\,d\varphi=2\pi,\qquad \int_0^{2\pi}\sin\varphi\,d\varphi = \Big[-\cos\varphi\Big]_0^{2\pi}=0, \]
+\[ \int_0^{2\pi}\sin^2\varphi\,d\varphi = \int_0^{2\pi}\frac{1-\cos2\varphi}{2}\,d\varphi = \Big[\frac{\varphi}{2}-\frac{\sin2\varphi}{4}\Big]_0^{2\pi} = \pi. \]
+Hence
+\[ S = 2\left(2\pi - 0 + \pi\right) = 6\pi. \]
+\textbf{Answer:} the area of the region is $6\pi$.
+\end{solution}

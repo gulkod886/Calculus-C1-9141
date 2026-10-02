@@ -1,0 +1,19 @@
+% English translation of questions/5777/semB-moedA/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute the derivative of the function $f(x)=\ln(2x)$ at the point $x$ ($x>0$), from the definition (without using known derivatives).
+\end{question}
+
+\begin{hint}
+Use the laws of logarithms to write the difference quotient as $\frac{\ln(1+\frac hx)}{h}$, and then the fundamental limit $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$.
+\end{hint}
+
+\begin{solution}
+Let $x>0$. For $h\ne0$ with $|h|<x$ (so that $x+h>0$), by the laws of logarithms:
+\[ \frac{f(x+h)-f(x)}{h}=\frac{\ln(2x+2h)-\ln(2x)}{h}=\frac{1}{h}\ln\frac{2(x+h)}{2x}=\frac1h\ln\left(1+\frac hx\right). \]
+Substitute $t=\frac hx$; as $h\to0$ also $t\to0$ and $t\ne0$, so by the fundamental limit $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$ (and the substitution rule for limits):
+\[ \frac1h\ln\left(1+\frac hx\right)=\frac1x\cdot\frac{\ln(1+t)}{t}\xrightarrow[h\to0]{}\frac1x\cdot1. \]
+Hence
+\[ \boxed{f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}=\frac1x}. \]
+(Note that the result is identical to the derivative of $\ln x$, since $\ln(2x)=\ln2+\ln x$.)
+\end{solution}

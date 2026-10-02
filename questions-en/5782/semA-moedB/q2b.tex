@@ -1,0 +1,26 @@
+% English translation of questions/5782/semA-moedB/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Compute the absolute minimum and maximum values of the following function on its domain:
+\[ f(x)=\frac{\sqrt{x^2-1}}{x^2} \]
+or explain why they do not exist.
+\end{question}
+
+\begin{hint}
+First find the domain, and note that the function is even and non-negative. Also check the limit at infinity.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $x^2-1\ge0$ and $x\neq0$, i.e. $D=(-\infty,-1]\cup[1,\infty)$.
+$f$ is even, so it suffices to study $[1,\infty)$.
+
+\textbf{Absolute minimum:} $f(x)\ge0$ for every $x\in D$, and $f(\pm1)=0$. Hence the absolute minimum is $\boxed{0}$, attained at $x=\pm1$.
+
+\textbf{Absolute maximum:} for $x>1$:
+\[ f'(x)=\frac{\frac{x}{\sqrt{x^2-1}}\cdot x^2-2x\sqrt{x^2-1}}{x^4}=\frac{x^2-2(x^2-1)}{x^3\sqrt{x^2-1}}=\frac{2-x^2}{x^3\sqrt{x^2-1}}. \]
+Hence $f'>0$ on $(1,\sqrt2)$ and $f'<0$ on $(\sqrt2,\infty)$: $f$ is increasing on $[1,\sqrt2]$ and decreasing on $[\sqrt2,\infty)$ (it is continuous at the endpoint $1$). It follows that $f(x)\le f(\sqrt2)$ for every $x\ge1$, and
+\[ f(\sqrt2)=\frac{\sqrt{2-1}}{2}=\frac12. \]
+(Note also that $\lim_{x\to\infty}f(x)=\lim\frac{\sqrt{1-1/x^2}}{x}=0$, so nothing ``escapes'' at infinity.) By evenness, the same holds on $(-\infty,-1]$.
+
+\textbf{Answer:} the absolute maximum is $\boxed{\tfrac12}$, attained at $x=\pm\sqrt2$; the absolute minimum is $\boxed{0}$, attained at $x=\pm1$.
+\end{solution}

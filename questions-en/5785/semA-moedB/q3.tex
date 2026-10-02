@@ -1,0 +1,25 @@
+% English translation of questions/5785/semA-moedB/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(16 pts) Use a linear approximation to compute $\ln(1.2)$, and estimate the error. Justify.
+\end{question}
+
+\begin{hint}
+Use the Taylor polynomial of order 1 of $\ln x$ around $x_0 = 1$, and estimate the error using the Lagrange remainder.
+\end{hint}
+
+\begin{solution}
+Define $f(x) = \ln x$ and choose $x_0 = 1$ (a point close to $1.2$ where the values are known). $f(1) = 0$, $f'(x) = \frac1x$, $f'(1) = 1$, $f''(x) = -\frac{1}{x^2}$.
+
+\textbf{Linear approximation:} $P_1(x) = f(1) + f'(1)(x - 1) = x - 1$, and therefore
+\[ \ln(1.2) \approx P_1(1.2) = 0.2. \]
+
+\textbf{Error estimate:} by Taylor's theorem with the Lagrange remainder, there exists $c\in(1, 1.2)$ such that
+\[ \ln(1.2) - 0.2 = R_1(1.2) = \frac{f''(c)}{2!}(1.2 - 1)^2 = -\frac{1}{2c^2}\cdot 0.04 = -\frac{0.02}{c^2}. \]
+Since $1 < c < 1.2$ we have $1 < c^2 < 1.44$, and therefore
+\[ \frac{0.02}{1.44} < |R_1| < 0.02, \qquad\text{i.e.}\qquad 0.0138 < |R_1| < 0.02, \]
+and the error is negative, i.e. the approximation $0.2$ is larger than the true value.
+
+\textbf{Answer:} $\ln(1.2) \approx 0.2$, with an error smaller than $0.02$ (and in particular $0.18 < \ln(1.2) < 0.2$).
+As a check: $\ln(1.2) \approx 0.1823$, and the actual error is about $0.0177$.
+\end{solution}

@@ -1,0 +1,26 @@
+% English translation of questions/5784/semA-moedB/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Estimate $\sqrt[3]{e}$ using a second-order Taylor approximation, and give a bound for the error.
+\end{question}
+
+\begin{hint}
+Use the Maclaurin polynomial of $e^x$ of order $2$ at the point $x=\frac13$, and the remainder in Lagrange form.
+\end{hint}
+
+\begin{solution}
+We use the function $f(x)=e^x$ around $x_0=0$, and substitute $x=\frac13$, since $\sqrt[3]{e}=e^{1/3}$.
+
+\textbf{Taylor polynomial.} For every $n$, $f^{(n)}(x)=e^x$, hence $f^{(n)}(0)=1$. The Maclaurin polynomial of order $2$:
+\[ P_2(x)=1+x+\frac{x^2}{2}. \]
+Hence
+\[ \sqrt[3]{e}\approx P_2\!\left(\tfrac13\right)=1+\frac13+\frac1{18}=\frac{25}{18}\approx1.3889. \]
+
+\textbf{Error bound.} By Taylor's theorem with the Lagrange remainder, there exists $c$ between $0$ and $\frac13$ such that
+\[ R_2\!\left(\tfrac13\right)=e^{1/3}-P_2\!\left(\tfrac13\right)=\frac{f'''(c)}{3!}\left(\frac13\right)^3=\frac{e^c}{6\cdot27}=\frac{e^c}{162}. \]
+Since $e^x$ is increasing and $0<c<\frac13$, we have $e^c<e^{1/3}$. Since $e<3<\frac{27}{8}=1.5^3$, we get $e^{1/3}<1.5$. Hence
+\[ 0<R_2\!\left(\tfrac13\right)<\frac{1.5}{162}=\frac1{108}\approx0.0093. \]
+(One can also use the cruder bound $e^c<e<3$ and get an error smaller than $\frac{3}{162}=\frac1{54}$.)
+
+\textbf{Answer:} $\sqrt[3]{e}\approx\frac{25}{18}\approx1.3889$, and the error is positive and smaller than $\frac1{108}$. (For verification: $\sqrt[3]{e}=1.39561\ldots$, and the actual error is about $0.0067$.)
+\end{solution}

@@ -1,0 +1,23 @@
+% English translation of questions/5785/semA-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Compute the integral
+\[ \int_0^{\frac{\sqrt2}{2}} \frac{x^2}{\sqrt{1 - x^2}}\,dx \]
+Reminder: $\sin(\frac\pi4) = \cos(\frac\pi4) = \frac{\sqrt2}{2}$.
+\end{question}
+
+\begin{hint}
+Substitute $x = \sin t$, and then use the identity $\sin^2 t = \frac{1 - \cos 2t}{2}$.
+\end{hint}
+
+\begin{solution}
+Substitute $x = \sin t$ with $t\in[0,\frac\pi4]$ (a differentiable increasing function, $\sin 0 = 0$, $\sin\frac\pi4 = \frac{\sqrt2}2$), $dx = \cos t\,dt$.
+On this interval $\cos t > 0$, and therefore $\sqrt{1 - \sin^2 t} = \cos t$:
+\[ \int_0^{\frac{\sqrt2}{2}}\frac{x^2}{\sqrt{1-x^2}}\,dx = \int_0^{\pi/4}\frac{\sin^2 t}{\cos t}\cos t\,dt = \int_0^{\pi/4}\sin^2 t\,dt
+= \int_0^{\pi/4}\frac{1 - \cos 2t}{2}\,dt = \left[\frac t2 - \frac{\sin 2t}{4}\right]_0^{\pi/4}. \]
+Hence
+\[ \int_0^{\frac{\sqrt2}{2}}\frac{x^2}{\sqrt{1-x^2}}\,dx = \frac\pi8 - \frac{\sin\frac\pi2}{4} = \frac{\pi}{8} - \frac14. \]
+(The integrand is continuous on the closed interval, since $1 - x^2 \ge \frac12$ there, so this is an ordinary integral.)
+
+\textbf{Answer:} $\frac\pi8 - \frac14 \approx 0.1427$.
+\end{solution}

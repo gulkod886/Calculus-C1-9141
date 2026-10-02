@@ -1,0 +1,19 @@
+% English translation of questions/5784/semB-moedA/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \int\frac{x^3+2x^2-3x+5}{x^2+x-6}\,dx \]
+\end{question}
+
+\begin{hint}
+Polynomial long division, then partial fractions ($x^2+x-6=(x+3)(x-2)$).
+\end{hint}
+
+\begin{solution}
+The degree of the numerator is greater than the degree of the denominator, so we divide the polynomials:
+\[ x^3+2x^2-3x+5=(x+1)(x^2+x-6)+(2x+11), \]
+(check: $(x+1)(x^2+x-6)=x^3+2x^2-5x-6$, and the remainder is $x^3+2x^2-3x+5-(x^3+2x^2-5x-6)=2x+11$.) Hence
+\[ \frac{x^3+2x^2-3x+5}{x^2+x-6}=x+1+\frac{2x+11}{(x+3)(x-2)}. \]
+Partial fraction decomposition: $\frac{2x+11}{(x+3)(x-2)}=\frac{A}{x+3}+\frac{B}{x-2}$, i.e. $2x+11=A(x-2)+B(x+3)$. Substituting $x=2$: $15=5B\Rightarrow B=3$; substituting $x=-3$: $5=-5A\Rightarrow A=-1$. Hence
+\[ \int\frac{x^3+2x^2-3x+5}{x^2+x-6}\,dx=\int\left(x+1-\frac1{x+3}+\frac3{x-2}\right)dx=\boxed{\frac{x^2}{2}+x-\ln|x+3|+3\ln|x-2|+C}. \]
+\end{solution}

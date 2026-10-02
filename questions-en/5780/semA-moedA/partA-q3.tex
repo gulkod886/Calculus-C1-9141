@@ -1,0 +1,40 @@
+% English translation of questions/5780/semA-moedA/partA-q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Find the integral
+\[ \int\left(\frac{x^2-x-4}{(x-1)(x^2+2x+1)}+e^{2x}x^2\right)dx. \]
+\end{question}
+
+\begin{hint}
+Note that $x^2+2x+1=(x+1)^2$, and decompose into partial fractions of the form $\frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{(x+1)^2}$.
+\end{hint}
+
+\begin{hint}
+Compute $\int x^2e^{2x}dx$ by integrating by parts twice (differentiating the polynomial).
+\end{hint}
+
+\begin{solution}
+By linearity of the integral we compute each term separately.
+
+\textbf{The first term.} $x^2+2x+1=(x+1)^2$. The numerator has degree 2 and the denominator has degree 3, hence we decompose into partial fractions:
+\[ \frac{x^2-x-4}{(x-1)(x+1)^2} = \frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{(x+1)^2}, \]
+i.e. $x^2-x-4 = A(x+1)^2+B(x-1)(x+1)+C(x-1)$.
+\begin{itemize}
+  \item $x=1$: $1-1-4=4A$, hence $A=-1$.
+  \item $x=-1$: $1+1-4=-2C$, hence $C=1$.
+  \item Comparing coefficients of $x^2$: $1=A+B$, hence $B=2$.
+\end{itemize}
+(Check, constant term: $A-B-C=-1-2-1=-4$ $\checkmark$.) Hence
+\[ \int\frac{x^2-x-4}{(x-1)(x+1)^2}dx = -\ln|x-1| + 2\ln|x+1| - \frac{1}{x+1}+C_1. \]
+
+\textbf{The second term.} Integration by parts with $u=x^2$, $v'=e^{2x}$ ($v=\frac12e^{2x}$):
+\[ \int x^2e^{2x}dx = \frac{x^2}{2}e^{2x} - \int xe^{2x}dx. \]
+Again by parts with $u=x$, $v'=e^{2x}$:
+\[ \int xe^{2x}dx = \frac{x}{2}e^{2x}-\frac12\int e^{2x}dx = \frac x2e^{2x}-\frac14e^{2x}+C_2. \]
+Hence
+\[ \int x^2e^{2x}dx = e^{2x}\left(\frac{x^2}{2}-\frac{x}{2}+\frac14\right)+C_3. \]
+
+\textbf{Answer:}
+\[ \int\left(\frac{x^2-x-4}{(x-1)(x^2+2x+1)}+e^{2x}x^2\right)dx = -\ln|x-1|+2\ln|x+1|-\frac{1}{x+1}+e^{2x}\left(\frac{x^2}{2}-\frac{x}{2}+\frac14\right)+C. \]
+(Check: differentiating the result gives back the integrand.)
+\end{solution}

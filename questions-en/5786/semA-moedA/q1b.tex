@@ -1,0 +1,25 @@
+% English translation of questions/5786/semA-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit
+\[ \lim_{x\to 0} \frac{x - \sin x}{\cos x - 1} \]
+\end{question}
+
+\begin{hint}
+Identify the type of the expression ($\frac{0}{0}$) and use L'Hôpital's rule.
+\end{hint}
+
+\begin{solution}
+As $x \to 0$ the numerator $x - \sin x \to 0$ and the denominator $\cos x - 1 \to 0$, i.e. an expression of the form $\frac{0}{0}$.
+The numerator and the denominator are differentiable in a neighborhood of $0$, and the derivative of the denominator satisfies $-\sin x \ne 0$ in a punctured neighborhood of $0$. By L'Hôpital's rule (provided the new limit exists):
+\[ \lim_{x\to 0} \frac{x - \sin x}{\cos x - 1} = \lim_{x\to 0} \frac{1 - \cos x}{-\sin x}. \]
+This is also a $\frac{0}{0}$ expression. We compute it using $1 - \cos x = 2\sin^2\frac{x}{2}$:
+\[ \frac{1 - \cos x}{-\sin x} = \frac{2\sin^2\frac{x}{2}}{-\sin x}
+   = -\frac{2\left(\dfrac{\sin\frac{x}{2}}{\frac{x}{2}}\right)^2 \cdot \dfrac{x^2}{4}}{\dfrac{\sin x}{x} \cdot x}
+   = -\frac{\left(\dfrac{\sin\frac{x}{2}}{\frac{x}{2}}\right)^2}{\dfrac{\sin x}{x}} \cdot \frac{x}{2}
+   \xrightarrow[x\to 0]{} -\frac{1^2}{1}\cdot 0 = 0, \]
+where we used the basic limit $\lim_{u\to 0}\frac{\sin u}{u} = 1$ and the arithmetic of limits.
+(Alternatively, applying L'Hôpital once more: $\lim_{x\to0}\frac{\sin x}{-\cos x} = \frac{0}{-1} = 0$.)
+Since the limit after L'Hôpital exists, the original limit also exists and is equal to it:
+\[ \boxed{\lim_{x\to 0} \frac{x - \sin x}{\cos x - 1} = 0}. \]
+\end{solution}

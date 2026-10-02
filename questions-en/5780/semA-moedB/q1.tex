@@ -1,0 +1,58 @@
+% English translation of questions/5780/semA-moedB/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Investigate the function $y=\frac{x^3-1}{4x^2}$ according to the following items:
+\begin{enumerate}
+  \item Domain, intersection points with the axes, evenness, oddness
+  \item Continuity, points of discontinuity
+  \item Asymptotes
+  \item Intervals of increase and decrease, extremum points
+  \item Intervals of convexity and concavity, inflection points
+  \item Graphical description.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+It is convenient to write the function in the form $y=\frac{x}{4}-\frac{1}{4x^2}$: from it one immediately sees the oblique asymptote, and differentiation is simple.
+\end{hint}
+
+\begin{solution}
+Denote $f(x)=\frac{x^3-1}{4x^2}=\frac{x}{4}-\frac{1}{4x^2}$.
+\begin{enumerate}
+  \item \textbf{Domain:} the denominator vanishes only at $x=0$, hence $D=\{x\in\R : x\neq 0\}$.
+
+  \textbf{Intersection with the axes:} $x=0$ is not in the domain, hence there is no intersection with the $y$-axis. Intersection with the $x$-axis: $x^3-1=0 \iff x=1$, i.e. the point $(1,0)$.
+
+  \textbf{Evenness:} $f(-x)=\frac{-x^3-1}{4x^2}$. For example $f(1)=0$ whereas $f(-1)=-\frac12$, so that $f(-1)\neq f(1)$ and also $f(-1)\neq -f(1)$. Hence the function is neither even nor odd.
+
+  \item $f$ is a quotient of polynomials, hence continuous on its entire domain. The only point where $f$ is not defined is $x=0$. There the numerator tends to $-1$ and the denominator $4x^2\to 0^+$, hence
+  \[ \lim_{x\to 0^-} f(x)=\lim_{x\to 0^+} f(x)=-\infty , \]
+  i.e. at $x=0$ there is a discontinuity of the second kind (infinite).
+
+  \item \textbf{Vertical asymptote:} by the previous item, $x=0$ is a vertical asymptote (from both sides the function tends to $-\infty$). There are no other vertical asymptotes since $f$ is continuous at every other point.
+
+  \textbf{Oblique asymptote:}
+  \[ m=\lim_{x\to\pm\infty}\frac{f(x)}{x}=\lim_{x\to\pm\infty}\frac{x^3-1}{4x^3}=\frac14,\qquad
+     n=\lim_{x\to\pm\infty}\Big(f(x)-\frac{x}{4}\Big)=\lim_{x\to\pm\infty}\Big(-\frac{1}{4x^2}\Big)=0 . \]
+  Hence $y=\frac{x}{4}$ is an oblique asymptote both at $+\infty$ and at $-\infty$. Since $f(x)-\frac{x}{4}=-\frac{1}{4x^2}<0$, the graph lies below the asymptote. There is no horizontal asymptote (since $f(x)\to\pm\infty$ as $x\to\pm\infty$).
+
+  \item Differentiating:
+  \[ f'(x)=\frac14+\frac{1}{2x^3}=\frac{x^3+2}{4x^3}. \]
+  $f'(x)=0 \iff x^3=-2 \iff x=-\sqrt[3]{2}$. Sign table (the numerator $x^3+2$ is positive for $x>-\sqrt[3]{2}$, the denominator $4x^3$ is positive for $x>0$):
+  \begin{itemize}
+    \item $x<-\sqrt[3]{2}$: numerator negative, denominator negative, $f'>0$ --- $f$ is increasing.
+    \item $-\sqrt[3]{2}<x<0$: numerator positive, denominator negative, $f'<0$ --- $f$ is decreasing.
+    \item $x>0$: numerator positive, denominator positive, $f'>0$ --- $f$ is increasing.
+  \end{itemize}
+  Hence $f$ is increasing on $(-\infty,-\sqrt[3]{2})$ and on $(0,\infty)$, and decreasing on $(-\sqrt[3]{2},0)$.
+  At $x=-\sqrt[3]{2}$ the derivative changes from positive to negative, hence this is a local maximum point:
+  \[ f(-\sqrt[3]{2})=\frac{-2-1}{4\sqrt[3]{4}}=-\frac{3}{4\sqrt[3]{4}}\approx -0.47 . \]
+  There are no other extremum points (at $x=0$ the function is not defined).
+
+  \item
+  \[ f''(x)=\Big(\frac14+\frac12x^{-3}\Big)'=-\frac{3}{2x^4}. \]
+  For every $x\neq 0$ we have $f''(x)<0$. Hence $f$ is concave ($\cap$) on each of the intervals $(-\infty,0)$ and $(0,\infty)$, and is not convex ($\cup$) on any interval. The sign of $f''$ does not change within the domain, hence there are no inflection points.
+
+  \item \textbf{Graphical description:} on the left side the graph lies below the asymptote $y=\frac{x}{4}$ and hugs it as $x\to-\infty$. It increases up to the maximum $\big(-\sqrt[3]{2},-\frac{3}{4\sqrt[3]{4}}\big)\approx(-1.26,-0.47)$, and then decreases to $-\infty$ as $x\to0^-$. On the right side it increases from $-\infty$ (as $x\to0^+$), crosses the $x$-axis at $(1,0)$, and approaches the asymptote $y=\frac{x}{4}$ from below as $x\to\infty$. The graph is concave everywhere.
+\end{enumerate}
+\end{solution}

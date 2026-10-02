@@ -1,0 +1,35 @@
+% English translation of questions/5780/semB-moedB/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\begin{enumerate}
+  \item (7 pts) $\displaystyle\int\frac{5x+2}{x^4+x^3+2x^2}\,dx$
+  \item (8 pts) $\displaystyle\int_0^1\ln(1+\sqrt{x})\,dx$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+In the first integral, decompose into partial fractions: $x^4+x^3+2x^2=x^2(x^2+x+2)$, and the quadratic factor is irreducible.
+\end{hint}
+
+\begin{hint}
+In the second integral, substitute $t=\sqrt x$ and then integrate by parts.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item The denominator: $x^4+x^3+2x^2=x^2(x^2+x+2)$, and $x^2+x+2$ is irreducible (the discriminant is $1-8<0$). We decompose into partial fractions:
+  \[ \frac{5x+2}{x^2(x^2+x+2)}=\frac{A}{x}+\frac{B}{x^2}+\frac{Cx+D}{x^2+x+2}, \]
+  i.e. $5x+2=Ax(x^2+x+2)+B(x^2+x+2)+(Cx+D)x^2$. Comparing coefficients: constant term $2B=2\Rightarrow B=1$; coefficient of $x$: $2A+B=5\Rightarrow A=2$; coefficient of $x^3$: $A+C=0\Rightarrow C=-2$; coefficient of $x^2$: $A+B+D=0\Rightarrow D=-3$. Hence
+  \[ \frac{5x+2}{x^4+x^3+2x^2}=\frac{2}{x}+\frac{1}{x^2}-\frac{2x+3}{x^2+x+2}. \]
+  We split the last term: $2x+3=(2x+1)+2$, and $x^2+x+2=\big(x+\frac12\big)^2+\frac74$. Hence
+  \[ \int\frac{2x+3}{x^2+x+2}dx=\ln(x^2+x+2)+2\int\frac{dx}{(x+\frac12)^2+\frac74}=\ln(x^2+x+2)+\frac{4}{\sqrt7}\arctan\frac{2x+1}{\sqrt7}. \]
+  \textbf{Answer:}
+  \[ \int\frac{5x+2}{x^4+x^3+2x^2}dx=2\ln|x|-\frac1x-\ln(x^2+x+2)-\frac{4}{\sqrt7}\arctan\frac{2x+1}{\sqrt7}+C . \]
+  \item Substitute $t=\sqrt x$, i.e. $x=t^2$, $dx=2t\,dt$, and the limits are $0\to0$, $1\to1$:
+  \[ \int_0^1\ln(1+\sqrt x)\,dx=\int_0^12t\ln(1+t)\,dt . \]
+  Integration by parts with $u=\ln(1+t)$, $v'=2t$ ($v=t^2$):
+  \[ =\Big[t^2\ln(1+t)\Big]_0^1-\int_0^1\frac{t^2}{1+t}dt=\ln2-\int_0^1\Big(t-1+\frac{1}{1+t}\Big)dt=\ln2-\Big(\frac12-1+\ln2\Big)=\boxed{\frac12} . \]
+  (We used the polynomial division $\frac{t^2}{1+t}=t-1+\frac{1}{1+t}$.)
+\end{enumerate}
+\end{solution}

@@ -1,0 +1,17 @@
+% English translation of questions/5778/semA-moedA/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit:
+the limit of the sequence $\displaystyle \lim_{n\to\infty}\left(\frac{n}{n+1}\right)^{3n}$.
+\end{question}
+
+\begin{hint}
+Invert the fraction: $\frac{n}{n+1}=\frac{1}{1+\frac1n}$, and use the famous limit $\left(1+\frac1n\right)^n\to e$.
+\end{hint}
+
+\begin{solution}
+For every $n$:
+\[ \left(\frac{n}{n+1}\right)^{3n}=\frac{1}{\left(\frac{n+1}{n}\right)^{3n}}=\frac{1}{\left[\left(1+\frac1n\right)^{n}\right]^{3}}. \]
+It is known that $\left(1+\frac1n\right)^n\xrightarrow[n\to\infty]{} e$. By the arithmetic of limits (a product of three convergent sequences, and a quotient where the limit of the denominator is $e^3\neq 0$) we get
+\[ \lim_{n\to\infty}\left(\frac{n}{n+1}\right)^{3n}=\frac{1}{e^3}. \]
+\end{solution}

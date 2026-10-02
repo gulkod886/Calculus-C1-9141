@@ -1,0 +1,22 @@
+% English translation of questions/5779/semA-special/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Does the following improper integral $\displaystyle\int_{-\infty}^{-2}\frac{dx}{x^2-2x}$ converge? If so, find it.
+\end{question}
+
+\begin{hint}
+Decompose into partial fractions: $\frac{1}{x(x-2)}=\frac12\left(\frac{1}{x-2}-\frac1x\right)$.
+\end{hint}
+
+\begin{solution}
+On the interval $(-\infty,-2]$ the denominator $x^2-2x=x(x-2)>0$ (both factors are negative), so the function is continuous and positive there, and the only problem is the limit $-\infty$. By definition,
+\[ \int_{-\infty}^{-2}\frac{dx}{x^2-2x} = \lim_{R\to-\infty}\int_R^{-2}\frac{dx}{x(x-2)}. \]
+Partial fraction decomposition: $\frac{1}{x(x-2)}=\frac{A}{x}+\frac{B}{x-2}$, and from $1=A(x-2)+Bx$ we get ($x=0$) $A=-\frac12$ and ($x=2$) $B=\frac12$. Hence
+\[ \int\frac{dx}{x(x-2)} = \frac12\ln|x-2|-\frac12\ln|x| + C = \frac12\ln\left|\frac{x-2}{x}\right| + C. \]
+Therefore
+\[ \int_R^{-2}\frac{dx}{x(x-2)} = \frac12\ln\frac{-4}{-2} - \frac12\ln\left|\frac{R-2}{R}\right| = \frac12\ln2-\frac12\ln\left|1-\frac2R\right|. \]
+As $R\to-\infty$, $1-\frac2R\to1$ and by the continuity of the logarithm $\ln\left|1-\frac2R\right|\to0$. Hence the limit exists and is finite:
+\[ \int_{-\infty}^{-2}\frac{dx}{x^2-2x} = \frac{\ln2}{2}. \]
+\textbf{Answer:} the integral converges and its value is $\frac12\ln2$.
+(The convergence can also be seen from the limit comparison test with $\frac1{x^2}$, but the direct computation also gives the value.)
+\end{solution}

@@ -1,0 +1,11 @@
+% English translation of questions/5783/semA-moedA/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the limit $\displaystyle\lim_{x\to 1}\frac{x^2+\ln(x)-1}{e^x-e}$.
+\end{question}
+
+\begin{solution}
+Substituting $x=1$: the numerator is $1+0-1=0$ and the denominator is $e-e=0$, i.e. an expression of the form $\frac00$. The numerator and the denominator are differentiable near $1$, and the derivative of the denominator is $e^x\neq 0$. By \textbf{L'Hôpital's rule}:
+\[ \lim_{x\to1}\frac{x^2+\ln x-1}{e^x-e}=\lim_{x\to1}\frac{2x+\frac1x}{e^x}=\frac{2+1}{e}=\frac{3}{e}, \]
+where the last limit is computed by substitution (continuity), and hence the original limit also exists and equals $\frac{3}{e}$.
+\end{solution}

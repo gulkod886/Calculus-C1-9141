@@ -1,0 +1,22 @@
+% English translation of questions/5777/semA-moedB/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Draw the graph of the function $r=f(\theta)=\theta^2$ in polar coordinates for $0\le\theta\le\pi$ and compute the length of the curve.
+\end{question}
+
+\begin{hint}
+Use the formula for the arc length of a curve in polar coordinates $L=\int_\alpha^\beta\sqrt{r^2+(r')^2}\,d\theta$.
+\end{hint}
+
+\begin{solution}
+\textbf{Sketch:} $r=\theta^2$ increases from $0$ to $\pi^2\approx9.87$ as $\theta$ increases from $0$ to $\pi$: a spiral that leaves the origin (tangent to the positive $x$-axis), passes through $\left(\theta=\frac\pi2,\ r=\frac{\pi^2}4\approx2.47\right)$ on the positive $y$-axis, and reaches the point $(-\pi^2,0)$ on the negative $x$-axis; the whole curve lies in the upper half-plane $y\ge0$.
+
+\textbf{Length:} By the formula for arc length in polar coordinates, with $r'=2\theta$:
+\[
+L=\int_0^\pi\sqrt{r^2+(r')^2}\,d\theta=\int_0^\pi\sqrt{\theta^4+4\theta^2}\,d\theta=\int_0^\pi\theta\sqrt{\theta^2+4}\,d\theta
+\]
+(since $\theta\ge0$). With the substitution $u=\theta^2+4$, $du=2\theta\,d\theta$:
+\[
+L=\frac12\int_4^{\pi^2+4}\sqrt u\,du=\frac13\Big[u^{3/2}\Big]_4^{\pi^2+4}=\frac13\left((\pi^2+4)^{3/2}-8\right)\approx14.55.
+\]
+\end{solution}

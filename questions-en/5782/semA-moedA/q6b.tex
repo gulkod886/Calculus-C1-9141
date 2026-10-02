@@ -1,0 +1,18 @@
+% English translation of questions/5782/semA-moedA/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Compute the improper integral $\int_0^\infty xe^{-x}dx$, or show that it does not converge.
+\end{question}
+
+\begin{hint}
+Compute $\int_0^R xe^{-x}dx$ by integration by parts, and then let $R\to\infty$.
+\end{hint}
+
+\begin{solution}
+By definition, $\int_0^\infty xe^{-x}dx=\lim_{R\to\infty}\int_0^R xe^{-x}dx$.
+By integration by parts ($u=x$, $v'=e^{-x}$, i.e. $u'=1$, $v=-e^{-x}$):
+\[ \int_0^R xe^{-x}dx=\Big[-xe^{-x}\Big]_0^R+\int_0^R e^{-x}dx=-Re^{-R}+\Big[-e^{-x}\Big]_0^R=-Re^{-R}-e^{-R}+1. \]
+As $R\to\infty$: $e^{-R}\to0$, and also $Re^{-R}=\frac{R}{e^R}\to0$ (for example by L'Hôpital's rule: $\lim\frac{R}{e^R}=\lim\frac1{e^R}=0$). Hence
+\[ \int_0^\infty xe^{-x}dx=\lim_{R\to\infty}\left(1-Re^{-R}-e^{-R}\right)=\boxed{1}, \]
+and the integral converges.
+\end{solution}

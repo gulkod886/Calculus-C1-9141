@@ -1,0 +1,23 @@
+% English translation of questions/5782/semA-moedB/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Find the local extremum points and the intervals of increase and decrease of the function
+\[ f(x)=\frac{2x}{x^2+1} \]
+\end{question}
+
+\begin{hint}
+Compute $f'$ by the quotient rule and check its sign; the denominator of $f'$ is always positive.
+\end{hint}
+
+\begin{solution}
+$f$ is defined and differentiable on all of $\R$ (the denominator is positive). By the quotient rule:
+\[ f'(x)=\frac{2(x^2+1)-2x\cdot2x}{(x^2+1)^2}=\frac{2(1-x^2)}{(x^2+1)^2}. \]
+$f'(x)=0\iff x=\pm1$. The sign of $f'$ is the sign of $1-x^2$:
+\begin{itemize}
+  \item $f'<0$ on $(-\infty,-1)$: $f$ is \textbf{decreasing}.
+  \item $f'>0$ on $(-1,1)$: $f$ is \textbf{increasing}.
+  \item $f'<0$ on $(1,\infty)$: $f$ is \textbf{decreasing}.
+\end{itemize}
+Hence at $x=-1$ there is a \textbf{local minimum} $f(-1)=-1$, and at $x=1$ there is a \textbf{local maximum} $f(1)=1$.
+(In fact these are also global extrema: $|2x|\le x^2+1$ since $(|x|-1)^2\ge0$, and hence $-1\le f\le 1$.)
+\end{solution}

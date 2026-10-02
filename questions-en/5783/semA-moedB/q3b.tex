@@ -1,0 +1,20 @@
+% English translation of questions/5783/semA-moedB/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) For the equation $e^x=x+1$, prove that a solution exists or prove that no solution exists in the domain $x\neq0$.
+\end{question}
+
+\begin{hint}
+Study the function $g(x)=e^x-x-1$: find its minimum point.
+\end{hint}
+
+\begin{solution}
+We prove that there is \textbf{no} solution with $x\neq 0$. Define $g(x)=e^x-x-1$, differentiable on $\R$, with $g(0)=0$ and
+\[ g'(x)=e^x-1. \]
+For $x<0$: $g'(x)<0$, hence $g$ is strictly decreasing on $(-\infty,0]$; for $x>0$: $g'(x)>0$, hence $g$ is strictly increasing on $[0,\infty)$. (Strict monotonicity follows from Lagrange's theorem.) Hence:
+\begin{itemize}
+  \item for every $x<0$: $g(x)>g(0)=0$;
+  \item for every $x>0$: $g(x)>g(0)=0$.
+\end{itemize}
+That is, $e^x>x+1$ for every $x\neq0$, and the equation $e^x=x+1$ has no solution in the domain $x\ne 0$ (its only solution is $x=0$). $\blacksquare$
+\end{solution}

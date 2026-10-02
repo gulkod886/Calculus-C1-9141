@@ -1,0 +1,19 @@
+% English translation of questions/5777/semA-moedB/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Is there a value $c$ such that
+\[
+f(x)=\begin{cases}\dfrac1x, & x\ge1\\[1ex] 2x+c, & x<1\end{cases}
+\]
+is continuous at $x=1$?
+\end{question}
+
+\begin{solution}
+$f$ is continuous at $x=1$ if and only if $\lim_{x\to1^-}f(x)=\lim_{x\to1^+}f(x)=f(1)$.
+\[
+f(1)=\frac11=1,\qquad \lim_{x\to1^+}\frac1x=1,\qquad \lim_{x\to1^-}(2x+c)=2+c.
+\]
+Hence we need $2+c=1$, i.e., $c=-1$.
+
+\textbf{Answer:} Yes, for $c=-1$ (and only for it).
+\end{solution}

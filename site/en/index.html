@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam Question Bank – Calculus 1</title>
+<link rel="stylesheet" href="../style.css?v=8">
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEnvironments: true,
+      packages: {'[+]': ['boldsymbol']},
+      macros: { R: '\\mathbb{R}', N: '\\mathbb{N}', Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', eps: '\\varepsilon' }
+    },
+    loader: { load: ['[tex]/boldsymbol'] },
+    startup: { typeset: false }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+<script defer src="data/questions.js?v=8"></script>
+<script defer src="../app.js?v=8"></script>
+</head>
+<body>
+<main>
+<header class="banner">
+  <h1><span class="ico" aria-hidden="true">📘</span>Exam Question Bank</h1>
+  <p class="sub">Infinitesimal Calculus 1 · Course number: 9141<a class="lang" href="../index.html" lang="he" dir="rtl">עברית</a></p>
+</header>
+
+  <details class="filters panel" id="filters" aria-label="Filters">
+    <summary class="panel-head">
+      <span class="ico" aria-hidden="true">🔎</span><span class="nowrap">Filter questions</span>
+      <span id="active" class="active-badge" hidden></span>
+      <span class="head-end"><span id="count" class="head-count" aria-live="polite"></span><span class="chev" aria-hidden="true"></span></span>
+    </summary>
+    <div class="panel-body">
+    <div class="row">
+      <label>Year
+        <select id="f-year"><option value="">All</option></select>
+      </label>
+      <label>Type
+        <select id="f-type"><option value="">All</option></select>
+      </label>
+      <label>Semester
+        <select id="f-semester"><option value="">All</option></select>
+      </label>
+      <label>Moed
+        <select id="f-moed"><option value="">All</option></select>
+      </label>
+      <label class="grow">Search
+        <input id="f-text" type="search" placeholder="Search the question text…">
+      </label>
+    </div>
+    <div class="cats-head">
+      <span>Categories</span>
+      <label class="mode"><input type="checkbox" id="f-all"> All selected categories (instead of any one)</label>
+    </div>
+    <div id="f-cats" class="chips"></div>
+    <div class="row actions">
+      <button type="button" id="reset" class="link">Clear filters</button>
+      <button type="button" id="close-filters" class="btn primary">Show questions</button>
+    </div>
+    </div>
+  </details>
+
+  <section id="results"></section>
+</main>
+
+<template id="tpl-question">
+  <article class="q">
+    <header class="q-head">
+      <h3 class="q-title"><span class="q-num"></span> <span class="q-src"></span></h3>
+      <div class="q-cats"></div>
+    </header>
+    <div class="q-body"></div>
+    <div class="q-hints"></div>
+    <div class="q-actions">
+      <button type="button" class="btn hint-btn"></button>
+      <button type="button" class="btn primary sol-btn">Show solution</button>
+    </div>
+    <div class="q-solution" hidden>
+      <h4>Solution</h4>
+      <div class="sol-body"></div>
+    </div>
+  </article>
+</template>
+</body>
+</html>

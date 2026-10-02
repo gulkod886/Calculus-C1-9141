@@ -1,0 +1,38 @@
+% English translation of questions/5786/quiz/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $a,b\in\R$. Define a function by
+\[
+f(x)=\begin{cases}
+\frac{x^2-4x+3}{x-1}, & \text{if } x<1,\\
+a, & \text{if } x=1,\\
+2b\cdot\frac{\ln x}{x-1}, & \text{if } x>1
+\end{cases}
+\]
+For which values of $a,b$ is the function continuous at $1$ ? Justify your answer.
+\end{question}
+
+\begin{hint}
+For the left limit, factor the numerator. For the right limit, substitute $y=x-1$ and use the basic limit $\frac{\ln(1+y)}{y}\to1$.
+\end{hint}
+
+\begin{solution}
+The function is continuous at 1 if and only if the one-sided limits at 1 exist and are equal to $f(1)=a$.
+
+\textbf{The left limit.} $x^2-4x+3=(x-1)(x-3)$, and for $x\neq1$ we may cancel:
+\[
+\lim_{x\to1^-}f(x)=\lim_{x\to1^-}\frac{(x-1)(x-3)}{x-1}=\lim_{x\to1^-}(x-3)=1-3=-2 ,
+\]
+where in the last equality we used the continuity of the polynomial $x-3$.
+
+\textbf{The right limit.} By the arithmetic of limits (the constant $2b$ comes out of the limit), and with the substitution $y=x-1$ ($y\to0^+$ as $x\to1^+$):
+\[
+\lim_{x\to1^+}f(x)=2b\cdot\lim_{x\to1^+}\frac{\ln x}{x-1}=2b\cdot\lim_{y\to0^+}\frac{\ln(1+y)}{y}=2b\cdot1=2b ,
+\]
+by the basic limit $\lim_{y\to0}\frac{\ln(1+y)}{y}=1$ (from the formula sheet: $\lim_{y\to0}\frac{\log_a(1+y)}{y}=\frac{1}{\ln a}$ with $a=e$).
+
+\textbf{Conclusion.} $f$ is continuous at 1 if and only if $-2=a=2b$, i.e.
+\[
+\boxed{a=-2,\quad b=-1.}
+\]
+\end{solution}

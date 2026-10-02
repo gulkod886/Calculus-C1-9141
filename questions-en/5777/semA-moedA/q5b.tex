@@ -1,0 +1,32 @@
+% English translation of questions/5777/semA-moedA/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Sketch the curve $r=2\cos\varphi-1$ (given in polar coordinates) and compute the area of the region bounded by the curve.
+\end{question}
+
+\begin{hint}
+Find for which angles $r\ge0$, and use the formula $S=\frac12\int_\alpha^\beta r^2\,d\varphi$.
+\end{hint}
+
+\begin{solution}
+\textbf{Range of angles.} $r=2\cos\varphi-1\ge0\iff\cos\varphi\ge\frac12\iff -\frac\pi3\le\varphi\le\frac\pi3$ (within one period). At the endpoints $\varphi=\pm\frac\pi3$ we have $r=0$ (the curve passes through the origin), and for $\varphi=0$ we have $r=1$ (the point $(1,0)$). The curve is symmetric with respect to the $x$-axis (since $\cos$ is even).
+
+\textbf{Sketch:} As $\varphi$ increases from $-\frac\pi3$ to $\frac\pi3$, the point leaves the origin in the direction of the angle $-\frac\pi3$, reaches $(1,0)$ and returns to the origin in the direction of the angle $\frac\pi3$: a single closed ``teardrop''-shaped loop in the half-plane $x\ge0$, symmetric with respect to the $x$-axis.
+
+\textbf{Area} (by the formula for area in polar coordinates $S=\frac12\int_\alpha^\beta r^2\,d\varphi$):
+\[
+(2\cos\varphi-1)^2=4\cos^2\varphi-4\cos\varphi+1=3+2\cos2\varphi-4\cos\varphi,
+\]
+\[
+S=\frac12\int_{-\pi/3}^{\pi/3}\left(3+2\cos2\varphi-4\cos\varphi\right)d\varphi
+=\frac12\Big[3\varphi+\sin2\varphi-4\sin\varphi\Big]_{-\pi/3}^{\pi/3}
+=\frac12\left(2\pi+\sqrt3-4\sqrt3\right)=\pi-\frac{3\sqrt3}{2}\approx0.544.
+\]
+\textbf{Answer:} $S=\pi-\frac{3\sqrt3}{2}$.
+
+\textbf{Remark:} If negative values of $r$ are allowed (the point $(r,\varphi)$ with $r<0$ is plotted in the direction $\varphi+\pi$ at distance $|r|$), then for $\frac\pi3<\varphi<\frac{5\pi}3$ a large outer loop is obtained, and the whole curve is a limaçon (Pascal's snail) with an inner loop -- the loop computed above. In this case the area bounded by the outer loop is
+\[
+\frac12\int_{\pi/3}^{5\pi/3}(2\cos\varphi-1)^2\,d\varphi=2\pi+\frac{3\sqrt3}{2},
+\]
+and the area between the two loops is $\left(2\pi+\frac{3\sqrt3}{2}\right)-\left(\pi-\frac{3\sqrt3}{2}\right)=\pi+3\sqrt3$.
+\end{solution}

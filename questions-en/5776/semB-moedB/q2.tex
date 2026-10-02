@@ -1,0 +1,18 @@
+% English translation of questions/5776/semB-moedB/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\textbf{Prove or disprove:} The following function is differentiable at zero:
+\[ f(x)=\begin{cases} x\sqrt{|x|}\cos(\frac{1}{x}), & x\neq 0\\ 0, & x=0\end{cases}. \]
+\end{question}
+
+\begin{hint}
+Compute the derivative by the definition, as the limit of the difference quotient, and use the fact that ``bounded times tending to zero tends to zero''.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is true.} We compute using the definition of the derivative. For $h\neq 0$:
+\[ \frac{f(h)-f(0)}{h}=\frac{h\sqrt{|h|}\cos(\frac1h)-0}{h}=\sqrt{|h|}\cos\!\left(\frac1h\right). \]
+We have $\left|\sqrt{|h|}\cos(\frac1h)\right|\le \sqrt{|h|}$, and $\sqrt{|h|}\to 0$ as $h\to 0$. By the Squeeze theorem (or: a bounded function, $\cos(\frac1h)$, times a function tending to zero, $\sqrt{|h|}$, tends to zero):
+\[ f'(0)=\lim_{h\to 0}\frac{f(h)-f(0)}{h}=\lim_{h\to0}\sqrt{|h|}\cos\!\left(\frac1h\right)=0. \]
+The limit exists and is finite, hence $f$ is differentiable at zero and $\boxed{f'(0)=0}$.
+\end{solution}

@@ -11,22 +11,38 @@
   // ------------------------------------------------------------ helpers
 
   const uniq = arr => [...new Set(arr.filter(Boolean))];
-  const byNum = (a, b) => (parseInt(a) - parseInt(b)) || String(a).localeCompare(String(b), 'he');
-
+  
   const examLabel = q => q.exam;
 
-  // "מועד א' תשפ"ה סמסטר א'" — shown next to the question number.
-  function sourceLabel(q) {
-    let what;
-    if (q.type === 'בוחן') what = q.moed === 'לדוגמה' ? 'בוחן לדוגמה' : 'בוחן';
-    else if (q.moed === 'לדוגמה') what = 'מבחן לדוגמה';
-    else if (q.moed === 'מיוחד') what = 'מועד מיוחד';
-    else what = `מועד ${q.moed}'`;
-    let s = `${what} ${q.year}`;
-    if (q.semester) s += ` סמסטר ${q.semester}'`;
-    if (q.note) s += ` (${q.note})`;
-    return s;
-  }
+  // UI strings; the page language (<html lang>) picks the set.
+  const EN = document.documentElement.lang === 'en';
+  const T = EN ? {
+    question: (part, num, pts) => (part ? `Part ${part} · ` : '') + `Question ${num}` + (pts ? ` (${pts} pts)` : ''),
+    catTitle: 'Show all questions in this category',
+    hint: n => 'Show hint' + (n > 1 ? ` (${n} hints)` : ''),
+    moreHint: (i, n) => `Next hint (${i}/${n})`,
+    hintLabel: i => 'Hint' + (i ? ' ' + i : ''),
+    officialNote: 'Based on a solution attached to the exam, expanded and checked.',
+    showSol: 'Show solution', hideSol: 'Hide solution',
+    count: (n, e) => `${n} question${n === 1 ? '' : 's'}<span class="count-of"> from ${e} exam${e === 1 ? '' : 's'}</span>`,
+    none: 'No results',
+    active: n => n === 1 ? '1 active filter' : `${n} active filters`,
+    emptyBank: 'The bank is empty. Run <code>python3 scripts/build.py</code> after adding questions.',
+    noMatch: 'No questions match the filter.',
+  } : {
+    question: (part, num, pts) => (part ? `חלק ${part}' · ` : '') + `שאלה ${num}` + (pts ? ` (${pts} נק')` : ''),
+    catTitle: 'הצגת כל השאלות בקטגוריה',
+    hint: n => n === 1 ? 'הצגת רמז' : `הצגת רמז (${n} רמזים)`,
+    moreHint: (i, n) => `רמז נוסף (${i}/${n})`,
+    hintLabel: i => 'רמז' + (i ? ' ' + i : ''),
+    officialNote: 'מבוסס על פתרון שצורף לבחינה, בהרחבה ולאחר בדיקה.',
+    showSol: 'הצגת פתרון', hideSol: 'הסתרת פתרון',
+    count: (n, e) => `${n} שאלות<span class="count-of"> מתוך ${e} בחינות</span>`,
+    none: 'אין תוצאות',
+    active: n => n === 1 ? 'מסנן פעיל אחד' : `${n} מסננים פעילים`,
+    emptyBank: 'המאגר עדיין ריק. הריצו <code>python3 scripts/build.py</code> לאחר הוספת שאלות.',
+    noMatch: 'לא נמצאו שאלות התואמות את הסינון.',
+  };
 
   function plainText(htmlStr) {
     const d = document.createElement('div');
@@ -82,7 +98,7 @@
     fillSelect($('f-year'), uniq(qs.map(q => q.year)).sort((a, b) => yv[b] - yv[a]));
     fillSelect($('f-type'), uniq(qs.map(q => q.type)));
     fillSelect($('f-semester'), uniq(qs.map(q => q.semester)).sort());
-    const mo = ['א', 'ב', 'ג', 'מיוחד', 'לדוגמה'];
+    const mo = ['א', 'ב', 'ג', 'מיוחד', 'לדוגמה', 'A', 'B', 'C', 'Special', 'Sample'];
     fillSelect($('f-moed'), uniq(qs.map(q => q.moed)).sort((a, b) => mo.indexOf(a) - mo.indexOf(b)));
     if (!uniq(qs.map(q => q.semester)).length) $('f-semester').closest('label').hidden = true;
 
@@ -156,9 +172,8 @@
   function renderQuestion(q) {
     const node = $('tpl-question').content.firstElementChild.cloneNode(true);
     node.id = 'q-' + q.id.replace(/[^\w-]/g, '_');
-    node.querySelector('.q-num').textContent =
-      (q.part ? `חלק ${q.part}' · ` : '') + `שאלה ${q.number}` + (q.points ? ` (${q.points} נק')` : '');
-    node.querySelector('.q-src').textContent = sourceLabel(q);
+    node.querySelector('.q-num').textContent = T.question(q.part, q.number, q.points);
+    node.querySelector('.q-src').textContent = q.src;
 
     const cats = node.querySelector('.q-cats');
     for (const c of q.categories) {
@@ -166,7 +181,7 @@
       tag.type = 'button';
       tag.className = 'tag';
       tag.textContent = catName[c] || c;
-      tag.title = 'הצגת כל השאלות בקטגוריה';
+      tag.title = T.catTitle;
       tag.addEventListener('click', () => {
         Object.assign(state, EMPTY(), { cats: new Set([c]) });
         update();
@@ -183,14 +198,13 @@
     let shown = 0;
     const setHintLabel = () => {
       hintBtn.hidden = shown >= q.hints.length;
-      hintBtn.textContent = q.hints.length === 1 ? 'הצגת רמז'
-        : (shown === 0 ? `הצגת רמז (${q.hints.length} רמזים)` : `רמז נוסף (${shown + 1}/${q.hints.length})`);
+      hintBtn.textContent = shown === 0 ? T.hint(q.hints.length) : T.moreHint(shown + 1, q.hints.length);
     };
     setHintLabel();
     hintBtn.addEventListener('click', () => {
       const div = document.createElement('div');
       div.className = 'hint';
-      div.innerHTML = `<b>רמז${q.hints.length > 1 ? ' ' + (shown + 1) : ''}</b>` + q.hints[shown];
+      div.innerHTML = `<b>${T.hintLabel(q.hints.length > 1 ? shown + 1 : 0)}</b>` + q.hints[shown];
       hintsBox.appendChild(div);
       typeset(div);
       shown++;
@@ -209,7 +223,7 @@
         if (q.officialSolution) {
           const note = document.createElement('p');
           note.className = 'sol-note';
-          note.textContent = 'מבוסס על פתרון שצורף לבחינה, בהרחבה ולאחר בדיקה.';
+          note.textContent = T.officialNote;
           body.prepend(note);
         }
         sol.hidden = false;
@@ -217,7 +231,7 @@
       } else {
         sol.hidden = !sol.hidden;
       }
-      solBtn.textContent = sol.hidden ? 'הצגת פתרון' : 'הסתרת פתרון';
+      solBtn.textContent = sol.hidden ? T.showSol : T.hideSol;
     });
 
     return node;
@@ -229,19 +243,17 @@
     box.innerHTML = '';
 
     const exams = new Set(list.map(examLabel));
-    $('count').innerHTML = list.length
-      ? `${list.length} שאלות<span class="count-of"> מתוך ${exams.size} בחינות</span>`
-      : 'אין תוצאות';
+    $('count').innerHTML = list.length ? T.count(list.length, exams.size) : T.none;
     const nActive = ['year', 'type', 'semester', 'moed', 'text'].filter(k => state[k]).length + state.cats.size;
     $('active').hidden = !nActive;
-    $('active').textContent = nActive === 1 ? 'מסנן פעיל אחד' : `${nActive} מסננים פעילים`;
+    $('active').textContent = T.active(nActive);
 
     if (!BANK.questions.length) {
-      box.innerHTML = '<p class="empty">המאגר עדיין ריק. הריצו <code>python3 scripts/build.py</code> לאחר הוספת שאלות.</p>';
+      box.innerHTML = `<p class="empty">${T.emptyBank}</p>`;
       return;
     }
     if (!list.length) {
-      box.innerHTML = '<p class="empty">לא נמצאו שאלות התואמות את הסינון.</p>';
+      box.innerHTML = `<p class="empty">${T.noMatch}</p>`;
       return;
     }
 

@@ -1,0 +1,17 @@
+% English translation of questions/5785/semA-sample/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the volume of the solid of revolution of the function $f(x) = \sqrt{\cos x} \cdot \sin^2 x$ on the interval $[0, \frac{\pi}{2}]$.
+\end{question}
+
+\begin{hint}
+For revolution about the $x$-axis: $V = \pi\int_0^{\pi/2} f^2(x)\,dx = \pi\int_0^{\pi/2}\cos x\,\sin^4 x\,dx$; substitute $t = \sin x$.
+\end{hint}
+
+\begin{solution}
+We interpret the question as revolving the graph of $f$ about the $x$-axis. $f$ is defined and continuous on $[0, \frac{\pi}{2}]$ (where $\cos x \ge 0$), and the volume of the solid of revolution is
+\[ V = \pi\int_0^{\pi/2} f^2(x)\,dx = \pi\int_0^{\pi/2} \cos x\,\sin^4 x\,dx. \]
+Substitute $t = \sin x$, $dt = \cos x\,dx$; when $x = 0$ we have $t = 0$, and when $x = \frac{\pi}{2}$ we have $t = 1$:
+\[ V = \pi\int_0^1 t^4\,dt = \pi\left[\frac{t^5}{5}\right]_0^1 = \frac{\pi}{5}. \]
+\textbf{Answer:} $\boxed{V = \frac{\pi}{5}}$.
+\end{solution}

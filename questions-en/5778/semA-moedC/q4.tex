@@ -1,0 +1,57 @@
+% English translation of questions/5778/semA-moedC/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts)
+Investigate the function $f(x)=\sqrt{\frac{x^3}{x-1}}$ and sketch its graph. In this question there is no need to compute $f''(x)$, and no need to deal with convexity, concavity and inflection points.
+\end{question}
+
+\begin{hint}
+The domain: where $\frac{x^3}{x-1}\ge0$. Note that it consists of two separate parts.
+\end{hint}
+
+\begin{hint}
+For the oblique asymptote note that $\sqrt{x^2}=|x|$, hence the slopes at $+\infty$ and at $-\infty$ are different.
+\end{hint}
+
+\begin{solution}
+\textbf{1. General description.}
+\begin{itemize}
+  \item \textbf{Domain:} we need $x\neq1$ and $\frac{x^3}{x-1}\ge0$. The sign of $x^3$ is the sign of $x$, hence the quotient is non-negative when $x\le0$ (numerator $\le0$, denominator $<0$) or $x>1$ (both positive). The domain: $(-\infty,0]\cup(1,\infty)$.
+  \item \textbf{Intersection with the axes:} $f(x)=0\iff x=0$. The only intersection point (with both axes) is $(0,0)$.
+  \item \textbf{Parity/periodicity:} the domain is not symmetric with respect to $0$, hence $f$ is neither even nor odd; it is not periodic.
+  \item \textbf{Sign:} $f(x)\ge0$ on the whole domain, with equality only at $x=0$.
+\end{itemize}
+
+\textbf{2. Continuity:} $f$ is a composition of elementary functions, hence continuous on its whole domain (at $x=0$ — continuous from the left). The point $x=1$ is not in the domain, and as $x\to1^+$: $x^3\to1$, $x-1\to0^+$, hence $f(x)\to+\infty$.
+
+\textbf{3. Asymptotes.}
+\begin{itemize}
+  \item \textbf{Vertical:} $x=1$ (from the right).
+  \item \textbf{As $x\to+\infty$:} $f(x)=\sqrt{x^2\cdot\frac{x}{x-1}}=x\sqrt{\frac{x}{x-1}}$ (since $x>0$).
+  \[ a=\lim_{x\to\infty}\frac{f(x)}{x}=\lim_{x\to\infty}\sqrt{\frac{x}{x-1}}=1, \]
+  \[ b=\lim_{x\to\infty}\left(f(x)-x\right)=\lim_{x\to\infty}x\left(\sqrt{\tfrac{x}{x-1}}-1\right)=\lim_{x\to\infty}\frac{x\left(\frac{x}{x-1}-1\right)}{\sqrt{\frac{x}{x-1}}+1}=\lim_{x\to\infty}\frac{\frac{x}{x-1}}{\sqrt{\frac{x}{x-1}}+1}=\frac{1}{2}. \]
+  Asymptote: $y=x+\frac12$.
+  \item \textbf{As $x\to-\infty$:} here $\sqrt{x^2}=|x|=-x$, hence $f(x)=-x\sqrt{\frac{x}{x-1}}$.
+  \[ a=\lim_{x\to-\infty}\frac{f(x)}{x}=-\lim_{x\to-\infty}\sqrt{\frac{x}{x-1}}=-1, \]
+  \[ b=\lim_{x\to-\infty}\left(f(x)+x\right)=\lim_{x\to-\infty}(-x)\left(\sqrt{\tfrac{x}{x-1}}-1\right)=-\lim_{x\to-\infty}\frac{\frac{x}{x-1}}{\sqrt{\frac{x}{x-1}}+1}=-\frac12. \]
+  Asymptote: $y=-x-\frac12$.
+\end{itemize}
+
+\textbf{4. Increase, decrease and extrema.} Denote $g(x)=\frac{x^3}{x-1}$. Then
+\[ g'(x)=\frac{3x^2(x-1)-x^3}{(x-1)^2}=\frac{x^2(2x-3)}{(x-1)^2}, \]
+and at the points where $g(x)>0$ (i.e. $x<0$ or $x>1$), by the chain rule
+\[ f'(x)=\frac{g'(x)}{2\sqrt{g(x)}}=\frac{x^2(2x-3)}{2(x-1)^2\sqrt{\frac{x^3}{x-1}}}. \]
+The sign of $f'$ is the sign of $2x-3$ (the other factors are positive):
+\begin{itemize}
+  \item On $(-\infty,0)$: $2x-3<0$, hence $f$ is (strictly) decreasing. Since $f$ is continuous at $0$ from the left, it is decreasing on all of $(-\infty,0]$.
+  \item On $\left(1,\frac32\right)$: $f'<0$, $f$ is decreasing.
+  \item On $\left(\frac32,\infty\right)$: $f'>0$, $f$ is increasing.
+\end{itemize}
+Hence:
+\begin{itemize}
+  \item At $x=\frac32$ there is a local minimum: $f\left(\frac32\right)=\sqrt{\frac{27/8}{1/2}}=\sqrt{\frac{27}{4}}=\frac{3\sqrt3}{2}\approx2.6$.
+  \item At $x=0$ (the endpoint of the domain on the left) there is a local, and even absolute, minimum, $f(0)=0$. The one-sided derivative there: $\frac{f(x)-f(0)}{x}=\frac{|x|^{3/2}}{x\sqrt{1-x}}\to0$ as $x\to0^-$, i.e. the graph reaches $(0,0)$ horizontally (tangent to the $x$-axis).
+\end{itemize}
+
+\textbf{5. Sketch.} \emph{Left branch} ($x\le0$): the graph decreases from $+\infty$, close to and above the asymptote $y=-x-\frac12$ as $x\to-\infty$, down to the point $(0,0)$, which it reaches tangent to the $x$-axis, and stops there. \emph{Right branch} ($x>1$): the graph decreases from $+\infty$ (hugging the vertical asymptote $x=1$) to the minimum $\left(\frac32,\frac{3\sqrt3}{2}\right)$, and then increases and approaches (from above) the asymptote $y=x+\frac12$. On the interval $(0,1]$ there is no graph.
+\end{solution}

@@ -1,0 +1,20 @@
+% English translation of questions/5779/semA-moedA/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Does the following improper integral $\displaystyle\int_0^1\frac{\ln x}{\sqrt x}\,dx$ converge? If so, compute the integral.
+\end{question}
+
+\begin{hint}
+The problematic point is $x=0$. Compute $\int_\eps^1$ by integration by parts ($u=\ln x$, $dv=x^{-1/2}dx$) and take the limit $\eps\to0^+$.
+\end{hint}
+
+\begin{solution}
+The function $\frac{\ln x}{\sqrt x}$ is continuous on $(0,1]$ and unbounded near $0$ (it tends to $-\infty$), so this is an improper integral of the second kind, defined as $\lim_{\eps\to0^+}\int_\eps^1\frac{\ln x}{\sqrt x}\,dx$.
+
+By integration by parts, $u=\ln x$, $dv=x^{-1/2}dx$, $du=\frac{dx}x$, $v=2\sqrt x$:
+\[ \int_\eps^1\frac{\ln x}{\sqrt x}\,dx=\Big[2\sqrt x\ln x\Big]_\eps^1-\int_\eps^1\frac{2\sqrt x}{x}\,dx=-2\sqrt\eps\ln\eps-\Big[4\sqrt x\Big]_\eps^1=-2\sqrt\eps\ln\eps-4+4\sqrt\eps. \]
+Now $\lim_{\eps\to0^+}\sqrt\eps\ln\eps=\lim_{\eps\to0^+}\frac{\ln\eps}{\eps^{-1/2}}$, and by L'Hôpital's rule (form $\frac{-\infty}{\infty}$):
+\[ \lim_{\eps\to0^+}\frac{1/\eps}{-\frac12\eps^{-3/2}}=\lim_{\eps\to0^+}\left(-2\sqrt\eps\right)=0. \]
+Also $4\sqrt\eps\to0$. Hence the limit exists and is finite: the integral \textbf{converges}, and
+\[ \int_0^1\frac{\ln x}{\sqrt x}\,dx=-4. \]
+\end{solution}

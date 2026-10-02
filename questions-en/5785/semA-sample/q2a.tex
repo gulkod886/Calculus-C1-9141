@@ -1,0 +1,28 @@
+% English translation of questions/5785/semA-sample/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Find all asymptotes of the function
+\[ f(x) = \frac{2x^2 - 3x + lan(x)}{x} \]
+Justify your answer.
+\end{question}
+
+\begin{hint}
+$lan(x)$ is presumably $\ln(x)$. Determine the domain, and check for a vertical asymptote at $x = 0^+$ and an oblique asymptote $y = ax + b$ as $x \to +\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{Remark:} the exam paper has $lan(x)$, which is presumably a typo for $\ln(x)$. We solve for
+\[ f(x) = \frac{2x^2 - 3x + \ln x}{x} = 2x - 3 + \frac{\ln x}{x}. \]
+\textbf{Domain:} $x > 0$ (because of $\ln x$; in any case $x \ne 0$). $f$ is continuous on $(0, \infty)$.
+
+\textbf{Vertical asymptote.} The only suspicious point is the endpoint of the domain, $x = 0$. As $x \to 0^+$: $\ln x \to -\infty$ and $\frac1x \to +\infty$, hence $\frac{\ln x}{x} = \ln x\cdot\frac1x \to -\infty$, while $2x - 3 \to -3$. Therefore
+\[ \lim_{x\to0^+} f(x) = -\infty, \]
+and $x = 0$ is a vertical asymptote (from the right). At every other point $f$ is continuous, so there is no vertical asymptote there.
+
+\textbf{Oblique asymptote.} The domain is unbounded only at $+\infty$. We compute
+\[ a = \lim_{x\to\infty}\frac{f(x)}{x} = \lim_{x\to\infty}\left( 2 - \frac3x + \frac{\ln x}{x^2} \right) = 2, \]
+\[ b = \lim_{x\to\infty}\bigl(f(x) - 2x\bigr) = \lim_{x\to\infty}\left( -3 + \frac{\ln x}{x} \right) = -3, \]
+where we used $\lim_{x\to\infty}\frac{\ln x}{x} = 0$ (by L'Hôpital: $\lim \frac{1/x}{1} = 0$), and hence also $\frac{\ln x}{x^2} \to 0$. Therefore $y = 2x - 3$ is an oblique asymptote at $+\infty$, and there is no horizontal asymptote.
+
+\textbf{Answer:} vertical asymptote $x = 0$, and oblique asymptote $y = 2x - 3$ as $x \to +\infty$.
+\end{solution}

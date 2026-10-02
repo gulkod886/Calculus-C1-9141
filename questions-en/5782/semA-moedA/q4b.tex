@@ -1,0 +1,26 @@
+% English translation of questions/5782/semA-moedA/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Find the general solution of the differential equation
+\[ (x^2+4)y'+2xy^2=0 \]
+\end{question}
+
+\begin{hint}
+This is a separable equation: move all the $y$ terms to one side and all the $x$ terms to the other. Do not forget the solution $y\equiv0$.
+\end{hint}
+
+\begin{solution}
+The equation is equivalent to
+\[ y'=-\frac{2x}{x^2+4}\,y^2 \]
+(since $x^2+4>0$), and this is a separable equation.
+
+\textbf{Constant solution:} $y\equiv0$ satisfies the equation.
+
+\textbf{Solutions with $y\neq0$:} divide by $y^2$:
+\[ \frac{y'}{y^2}=-\frac{2x}{x^2+4}\ \Longrightarrow\ \int\frac{dy}{y^2}=-\int\frac{2x}{x^2+4}\,dx \ \Longrightarrow\ -\frac1y=-\ln(x^2+4)+C. \]
+(We used $\int\frac{2x}{x^2+4}dx=\ln(x^2+4)$, since the numerator is the derivative of the denominator.) Hence
+\[ \boxed{y=\frac{1}{\ln(x^2+4)+C}},\quad C\in\R, \]
+on every interval on which the denominator does not vanish, and in addition the solution $\boxed{y\equiv0}$.
+
+Check: for $y=\frac1{\ln(x^2+4)+C}$ we have $y'=-\frac{2x}{x^2+4}\cdot y^2$, and hence $(x^2+4)y'+2xy^2=0$.
+\end{solution}

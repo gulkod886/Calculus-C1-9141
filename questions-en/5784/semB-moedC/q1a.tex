@@ -1,0 +1,17 @@
+% English translation of questions/5784/semB-moedC/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \lim_{x\longrightarrow\infty}\left(\frac{x+3}{x-4}\right)^x \]
+\end{question}
+
+\begin{hint}
+Write $\frac{x+3}{x-4}=1+\frac{7}{x-4}$ and use the limit $\lim_{t\to\infty}\left(1+\frac1t\right)^t=e$.
+\end{hint}
+
+\begin{solution}
+For every $x>4$: $\frac{x+3}{x-4}=1+\frac{7}{x-4}$. Set $t=\frac{x-4}{7}\to\infty$; then $x=7t+4$ and
+\[ \left(\frac{x+3}{x-4}\right)^x=\left(1+\frac1t\right)^{7t+4}=\left[\left(1+\frac1t\right)^{t}\right]^7\cdot\left(1+\frac1t\right)^4\xrightarrow[t\to\infty]{}e^7\cdot1. \]
+(Alternatively: $x\ln\frac{x+3}{x-4}=\frac{\ln(x+3)-\ln(x-4)}{1/x}$, and by L'Hôpital's rule the limit is $\lim\frac{\frac1{x+3}-\frac1{x-4}}{-1/x^2}=\lim\frac{7x^2}{(x+3)(x-4)}=7$.)
+The answer: $\boxed{e^7}$.
+\end{solution}

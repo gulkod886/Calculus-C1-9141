@@ -1,0 +1,32 @@
+% English translation of questions/5779/semB-moedA/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\begin{enumerate}
+  \item[a.] (8 pts) $\displaystyle\int\frac{(x+1)^2}{x(x+2)^2}\,dx$
+  \item[b.] (7 pts) $\displaystyle\int_{-\pi/4}^{\pi/4}\left(\frac{1}{\cos^2x\cdot(2+\tan x)^2}+x\cos^3x\right)dx$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+In part (a) decompose into partial fractions of the form $\frac{A}{x}+\frac{B}{x+2}+\frac{C}{(x+2)^2}$.
+\end{hint}
+
+\begin{hint}
+In part (b), the integral of an odd function over a symmetric interval is $0$; in the second part substitute $u=\tan x$.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item[a.] The degree of the numerator (2) is less than the degree of the denominator (3), so we decompose directly into partial fractions:
+  \[ \frac{(x+1)^2}{x(x+2)^2}=\frac{A}{x}+\frac{B}{x+2}+\frac{C}{(x+2)^2}
+  \;\Longrightarrow\; (x+1)^2=A(x+2)^2+Bx(x+2)+Cx. \]
+  Substituting $x=0$: $1=4A$, i.e. $A=\frac14$. Substituting $x=-2$: $1=-2C$, i.e. $C=-\frac12$. Comparing the coefficients of $x^2$: $1=A+B$, hence $B=\frac34$. Therefore
+  \[ \int\frac{(x+1)^2}{x(x+2)^2}\,dx=\frac14\ln|x|+\frac34\ln|x+2|+\frac{1}{2(x+2)}+C. \]
+  \item[b.] Split into two integrals. The function $x\cos^3x$ is odd (the product of the odd function $x$ and the even function $\cos^3x$) and continuous, so its integral over the symmetric interval $[-\frac\pi4,\frac\pi4]$ equals $0$.
+
+  In the first integral substitute $u=\tan x$, $du=\frac{dx}{\cos^2x}$; as $x$ runs from $-\frac\pi4$ to $\frac\pi4$, $u$ runs from $-1$ to $1$ (and on this interval $2+\tan x\ge1>0$):
+  \[ \int_{-\pi/4}^{\pi/4}\frac{dx}{\cos^2x\,(2+\tan x)^2}=\int_{-1}^{1}\frac{du}{(2+u)^2}=\left[-\frac{1}{2+u}\right]_{-1}^{1}=-\frac13+1=\frac23. \]
+  \textbf{Answer:} $\frac23$.
+\end{enumerate}
+\end{solution}

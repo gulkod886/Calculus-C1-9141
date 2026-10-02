@@ -1,0 +1,28 @@
+% English translation of questions/5785/quiz-sample/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Prove that the following equation has a real root and find an interval of length at most 1 that contains the root:
+\[
+x^2+\ln(x)=0
+\]
+\end{question}
+
+\begin{hint}
+Define $f(x)=x^2+\ln x$ on $(0,\infty)$ and look for points where $\ln$ is easy to compute, such as $x=1$ and $x=\frac1e$.
+\end{hint}
+
+\begin{solution}
+Define $f(x)=x^2+\ln x$ on $(0,\infty)$. $f$ is continuous there as the sum of a polynomial and the logarithm function, which is continuous on its domain.
+
+We compute:
+\[
+f\!\left(\tfrac1e\right)=\frac1{e^2}+\ln\frac1e=\frac{1}{e^2}-1<0,\qquad f(1)=1^2+\ln1=1>0 ,
+\]
+since $e^2>1$.
+
+$f$ is continuous on the closed interval $\left[\frac1e,1\right]\subset(0,\infty)$ and changes sign at its endpoints. By the Intermediate Value Theorem (Bolzano) there exists $c\in\left(\frac1e,1\right)$ with $f(c)=0$, i.e. a real root of the equation.
+
+\textbf{The required interval:} $\left[\frac1e,1\right]$, whose length is $1-\frac1e<1$.
+
+(Remark: the root is unique, since $f$ is strictly increasing as the sum of $x^2$ and $\ln x$, both strictly increasing on $(0,\infty)$. Numerically $c\approx0.653$. One can also choose an interval that does not require $e$, for example $\left[\frac12,1\right]$: $f(\frac12)=\frac14-\ln2<0$.)
+\end{solution}

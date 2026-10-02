@@ -1,0 +1,22 @@
+% English translation of questions/5777/semB-moedB/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Does the improper integral
+\[ \int_2^\infty\frac{x+7}{\sqrt{x^5-3x}}\,dx \]
+converge?
+\end{question}
+
+\begin{hint}
+For large $x$ the integrand behaves like $\frac{x}{x^{5/2}}=\frac{1}{x^{3/2}}$. Use the limit comparison test.
+\end{hint}
+
+\begin{solution}
+\textbf{The integral converges.}
+For $x\ge2$: $x^5-3x=x(x^4-3)\ge2\cdot13>0$, hence the integrand is defined, continuous and positive on $[2,\infty)$, and the only problem is at the endpoint $\infty$.
+
+We compare with $g(x)=\frac{1}{x^{3/2}}>0$:
+\[ \lim_{x\to\infty}\frac{\frac{x+7}{\sqrt{x^5-3x}}}{x^{-3/2}}=\lim_{x\to\infty}\frac{(x+7)x^{3/2}}{\sqrt{x^5-3x}}=\lim_{x\to\infty}\frac{x^{5/2}\left(1+\frac7x\right)}{x^{5/2}\sqrt{1-\frac{3}{x^4}}}=1\in(0,\infty). \]
+By the limit comparison test, the two integrals $\int_2^\infty\frac{x+7}{\sqrt{x^5-3x}}dx$ and $\int_2^\infty\frac{dx}{x^{3/2}}$ either both converge or both diverge. The integral $\int_2^\infty\frac{dx}{x^p}$ converges for $p>1$, and here $p=\frac32$:
+\[ \int_2^R x^{-3/2}dx=\left[-2x^{-1/2}\right]_2^R=\frac{2}{\sqrt2}-\frac{2}{\sqrt R}\xrightarrow[R\to\infty]{}\sqrt2. \]
+Therefore the given integral \textbf{converges}.
+\end{solution}

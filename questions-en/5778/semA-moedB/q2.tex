@@ -1,0 +1,33 @@
+% English translation of questions/5778/semA-moedB/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts)
+Find the points of discontinuity of the function
+\[ f(x)=\frac{x\ln|x|}{x^2-1} \]
+and determine their types.
+\end{question}
+
+\begin{hint}
+At the points $x=\pm1$ the numerator also vanishes — use the limit $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$ or L'Hôpital's rule. At $x=0$ use the fact that $x\ln|x|\to0$.
+\end{hint}
+
+\begin{solution}
+\textbf{The domain:} $\ln|x|$ is defined for $x\neq0$, and the denominator vanishes for $x=\pm1$. Hence $f$ is defined for $x\notin\{0,1,-1\}$, and there it is continuous as a quotient of continuous functions with a nonzero denominator. The points of discontinuity are $x=0,\,1,\,-1$.
+
+\textbf{$x=0$:} It is known that $\lim_{x\to0}x\ln|x|=0$ (for example by L'Hôpital: $\lim_{x\to0^+}\frac{\ln x}{1/x}=\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}(-x)=0$, and from the left it is the same since $x\ln|x|$ is odd). The denominator tends to $-1$. Hence
+\[ \lim_{x\to0}f(x)=\frac{0}{-1}=0. \]
+The limit exists and is finite, but $f$ is not defined at $0$: a \textbf{removable discontinuity}.
+
+\textbf{$x=1$:} In a neighborhood of $1$, $|x|=x$, and the expression is of the form $\frac00$. Write
+\[ f(x)=\frac{x}{x+1}\cdot\frac{\ln x}{x-1}. \]
+Substitute $t=x-1\to0$: $\frac{\ln x}{x-1}=\frac{\ln(1+t)}{t}\to1$ (a famous limit). Hence
+\[ \lim_{x\to1}f(x)=\frac{1}{2}\cdot1=\frac12. \]
+A \textbf{removable discontinuity}.
+
+\textbf{$x=-1$:} Note that $f(-x)=\frac{-x\ln|x|}{x^2-1}=-f(x)$, i.e. $f$ is odd. Hence
+\[ \lim_{x\to-1}f(x)=-\lim_{x\to1}f(x)=-\frac12. \]
+(Or directly: in a neighborhood of $-1$, $f(x)=\frac{x}{x-1}\cdot\frac{\ln(-x)}{x+1}$, and with $t=-x-1\to0$: $\frac{\ln(-x)}{x+1}=\frac{\ln(1+t)}{-t}\to-1$, and $\frac{x}{x-1}\to\frac12$.)
+A \textbf{removable discontinuity}.
+
+\textbf{Summary:} the three points of discontinuity $x=0,1,-1$ are all removable; one can define $f(0)=0$, $f(1)=\frac12$, $f(-1)=-\frac12$ and obtain a function continuous on all of $\R$.
+\end{solution}

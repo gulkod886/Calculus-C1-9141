@@ -1,0 +1,19 @@
+% English translation of questions/5783/semA-moedA/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the intervals of convexity and the inflection points of the function $f(x)=\ln(1+4x^2)$.
+\end{question}
+
+\begin{solution}
+Domain: $1+4x^2>0$ for every $x$, hence $D=\R$. Differentiate:
+\[ f'(x)=\frac{8x}{1+4x^2},\qquad
+f''(x)=\frac{8(1+4x^2)-8x\cdot 8x}{(1+4x^2)^2}=\frac{8-32x^2}{(1+4x^2)^2}=\frac{8(1-2x)(1+2x)}{(1+4x^2)^2}. \]
+The denominator is always positive, hence the sign of $f''$ is the sign of $1-4x^2$:
+\begin{itemize}
+  \item $f''(x)>0$ for $-\frac12<x<\frac12$: the function is \textbf{convex} (concave up, $\cup$) on the interval $\left(-\frac12,\frac12\right)$.
+  \item $f''(x)<0$ for $|x|>\frac12$: the function is \textbf{concave} ($\cap$) on $\left(-\infty,-\frac12\right)$ and $\left(\frac12,\infty\right)$.
+\end{itemize}
+At $x=\pm\frac12$ the second derivative changes sign and the function is continuous (and differentiable) there, hence these are inflection points. $f(\pm\tfrac12)=\ln(1+1)=\ln 2$.
+
+\textbf{Answer:} convex on $\left(-\frac12,\frac12\right)$, concave on $\left(-\infty,-\frac12\right)\cup\left(\frac12,\infty\right)$; inflection points $\left(-\frac12,\ln 2\right)$ and $\left(\frac12,\ln 2\right)$.
+\end{solution}

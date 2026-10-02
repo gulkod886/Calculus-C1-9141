@@ -1,0 +1,16 @@
+% English translation of questions/5782/semA-moedA/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Compute the finite area bounded between the function $f(x)=x^2$ and the line $y=-x+2$.
+\end{question}
+
+\begin{hint}
+Find the intersection points, and determine which of the two functions is on top.
+\end{hint}
+
+\begin{solution}
+\textbf{Intersection points:} $x^2=-x+2\iff x^2+x-2=0\iff (x+2)(x-1)=0$, i.e. $x=-2$ and $x=1$.
+On the interval $(-2,1)$ we have $-x+2-x^2=-(x+2)(x-1)>0$, hence the line is above the parabola. The area:
+\[ S=\int_{-2}^{1}\left(-x+2-x^2\right)dx=\left[-\frac{x^2}{2}+2x-\frac{x^3}{3}\right]_{-2}^{1}
+=\left(-\frac12+2-\frac13\right)-\left(-2-4+\frac83\right)=\frac76+\frac{10}{3}=\boxed{\frac92}. \]
+\end{solution}

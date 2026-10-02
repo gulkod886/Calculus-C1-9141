@@ -1,0 +1,33 @@
+% English translation of questions/5786/quiz/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let
+\[
+f(x)=\sqrt[3]{x},\qquad g(x)=\cos(x)-\sin(x)
+\]
+Which of the following statements is true?
+\begin{enumerate}
+  \item The function $f\circ g$ is even.
+  \item The function $f\circ g$ is odd.
+  \item The function $f\circ g$ is monotone.
+  \item The function $f\circ g$ is periodic.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: (d)}.
+
+$(f\circ g)(x)=f(g(x))=\sqrt[3]{\cos x-\sin x}$, defined for every $x\in\R$ (the cube root is defined for every real number).
+
+\textbf{(d) is true:} $\sin$ and $\cos$ are periodic with period $2\pi$, hence for every $x$:
+\[
+(f\circ g)(x+2\pi)=\sqrt[3]{\cos(x+2\pi)-\sin(x+2\pi)}=\sqrt[3]{\cos x-\sin x}=(f\circ g)(x).
+\]
+
+\textbf{Why the others are false:} denote $h=f\circ g$.
+\begin{itemize}
+  \item (a) --- $h(-x)=\sqrt[3]{\cos x+\sin x}$. For example, $h\!\left(\frac\pi4\right)=\sqrt[3]{0}=0$ but $h\!\left(-\frac\pi4\right)=\sqrt[3]{\sqrt2}\neq0$, so $h$ is not even.
+  \item (b) --- an odd function defined at 0 satisfies $h(0)=-h(0)$, i.e. $h(0)=0$; but $h(0)=\sqrt[3]{1}=1\neq0$.
+  \item (c) --- a non-constant periodic function is not monotone: for example, $h(0)=1$, $h\!\left(\frac\pi4\right)=0$, $h(2\pi)=1$, i.e. $h(0)>h(\frac\pi4)<h(2\pi)$ --- the function decreases and then increases.
+\end{itemize}
+\end{solution}

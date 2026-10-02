@@ -1,0 +1,27 @@
+% English translation of questions/5779/semB-moedB/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\begin{enumerate}
+  \item[a.] (7 pts) $\displaystyle\int\frac{x^2-8}{x^3+4x^2}\,dx$
+  \item[b.] (8 pts) $\displaystyle\int_0^1\ln(1+\sqrt x)\,dx$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+In part (a) factor $x^3+4x^2=x^2(x+4)$ and decompose into partial fractions. In part (b) substitute $t=\sqrt x$ and then integrate by parts.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item[a.] $x^3+4x^2=x^2(x+4)$, and the degree of the numerator is less than the degree of the denominator. We decompose:
+  \[ \frac{x^2-8}{x^2(x+4)}=\frac Ax+\frac B{x^2}+\frac C{x+4}\;\Longrightarrow\;x^2-8=Ax(x+4)+B(x+4)+Cx^2. \]
+  Substituting $x=0$: $-8=4B$, $B=-2$. Substituting $x=-4$: $8=16C$, $C=\frac12$. Coefficients of $x^2$: $1=A+C$, $A=\frac12$. Hence
+  \[ \int\frac{x^2-8}{x^3+4x^2}\,dx=\frac12\ln|x|+\frac2x+\frac12\ln|x+4|+C. \]
+  \item[b.] Substitute $x=t^2$, $dx=2t\,dt$, $t\in[0,1]$:
+  \[ \int_0^1\ln(1+\sqrt x)\,dx=\int_0^1 2t\ln(1+t)\,dt. \]
+  Integrating by parts ($u=\ln(1+t)$, $dv=2t\,dt$, $v=t^2$):
+  \[ =\Big[t^2\ln(1+t)\Big]_0^1-\int_0^1\frac{t^2}{1+t}\,dt=\ln2-\int_0^1\left(t-1+\frac1{1+t}\right)dt=\ln2-\left(\frac12-1+\ln2\right)=\frac12. \]
+  \textbf{Answer:} $\frac12$.
+\end{enumerate}
+\end{solution}

@@ -1,0 +1,21 @@
+% English translation of questions/5783/semB-moedA/q3b.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(5 pts) Find the values of the parameter $b$ for which the graph of the function $\displaystyle f(x)=\frac{1}{x^2+b}$ has no inflection points
+\end{question}
+
+\begin{hint}
+Compute $f''$ and split into the cases $b>0$, $b=0$, $b<0$. Remember that an inflection point must lie in the domain.
+\end{hint}
+
+\begin{solution}
+Differentiate: $f'(x)=-\frac{2x}{(x^2+b)^2}$, and
+\[ f''(x)=\frac{-2(x^2+b)^2+2x\cdot2(x^2+b)\cdot2x}{(x^2+b)^4}=\frac{6x^2-2b}{(x^2+b)^3}. \]
+\begin{itemize}
+  \item $b>0$: $f$ is defined on all of $\R$, the denominator is positive, and the numerator $6x^2-2b$ changes sign at $x=\pm\sqrt{b/3}$. Hence there are two inflection points.
+  \item $b=0$: $f=\frac1{x^2}$, $x\neq0$, and $f''=\frac{6}{x^4}>0$: there are no inflection points.
+  \item $b<0$: $f$ is defined for $x\neq\pm\sqrt{-b}$. The numerator $6x^2-2b=6x^2+2|b|>0$ always, hence $f''$ does not vanish. The sign of $f''$ changes only when passing through $x=\pm\sqrt{-b}$, which are not in the domain (vertical asymptotes), and hence are not inflection points. There are no inflection points.
+\end{itemize}
+\textbf{Answer:} the graph has no inflection points exactly for $\boxed{b\le 0}$.
+\end{solution}

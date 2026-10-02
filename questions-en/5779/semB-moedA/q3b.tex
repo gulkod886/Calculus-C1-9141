@@ -1,0 +1,20 @@
+% English translation of questions/5779/semB-moedA/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Write the Maclaurin polynomial of order 2 for the function $f(x)=\cos(2x)-\arctan(x+1)$.
+\end{question}
+
+\begin{hint}
+Expand each summand separately: for $\cos(2x)$ use the known expansion of $\cos t$, and for $\arctan(x+1)$ compute $g(0),g'(0),g''(0)$.
+\end{hint}
+
+\begin{solution}
+The Maclaurin polynomial of order 2: $P_2(x)=f(0)+f'(0)x+\frac{f''(0)}{2}x^2$. We compute separately for each summand.
+
+For $\cos(2x)$: by the expansion $\cos t=1-\frac{t^2}{2}+o(t^2)$ we get $\cos 2x=1-2x^2+o(x^2)$.
+
+For $g(x)=\arctan(x+1)$:
+\[ g(0)=\arctan1=\frac\pi4,\quad g'(x)=\frac{1}{1+(x+1)^2}\Rightarrow g'(0)=\frac12,\quad g''(x)=-\frac{2(x+1)}{\big(1+(x+1)^2\big)^2}\Rightarrow g''(0)=-\frac24=-\frac12. \]
+Hence $\arctan(x+1)=\frac\pi4+\frac x2-\frac{x^2}{4}+o(x^2)$. Subtracting:
+\[ P_2(x)=\left(1-\frac\pi4\right)-\frac12x-\frac74x^2. \]
+\end{solution}

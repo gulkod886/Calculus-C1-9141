@@ -1,0 +1,20 @@
+% English translation of questions/5785/semA-special/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the limit
+\[ \lim_{x\to\infty}\quad x\cdot\left(\sqrt{x^2 + 4} - \sqrt{x^2 - 4}\right) \]
+\end{question}
+
+\begin{hint}
+Multiply and divide by the conjugate $\sqrt{x^2+4} + \sqrt{x^2-4}$.
+\end{hint}
+
+\begin{solution}
+For $x \ge 2$, multiply and divide by the conjugate (which is positive):
+\[ x\left(\sqrt{x^2+4} - \sqrt{x^2-4}\right) = x\cdot\frac{(x^2 + 4) - (x^2 - 4)}{\sqrt{x^2+4} + \sqrt{x^2-4}} = \frac{8x}{\sqrt{x^2+4} + \sqrt{x^2-4}}. \]
+Divide the numerator and the denominator by $x$ (for $x>0$, $\sqrt{x^2 + 4} = x\sqrt{1 + 4/x^2}$):
+\[ = \frac{8}{\sqrt{1 + \frac4{x^2}} + \sqrt{1 - \frac4{x^2}}} \xrightarrow[x\to\infty]{} \frac{8}{1 + 1} = 4, \]
+by the arithmetic of limits and continuity of the square root.
+
+\textbf{Answer:} the limit equals $4$.
+\end{solution}

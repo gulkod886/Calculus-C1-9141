@@ -1,0 +1,21 @@
+% English translation of questions/5779/semB-moedB/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find all the asymptotes of the function: $f(x)=\dfrac{x\sqrt{x^2-1}}{2x^2-1}$.
+\end{question}
+
+\begin{hint}
+Pay attention to the domain $|x|\ge1$ and to the fact that $\sqrt{x^2}=|x|$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} we need $x^2-1\ge0$, i.e. $|x|\ge1$, and also $2x^2-1\ne0$, i.e. $x\ne\pm\frac1{\sqrt2}$ -- but these points are not in the domain anyway. Hence the domain is $(-\infty,-1]\cup[1,\infty)$.
+
+\textbf{Vertical asymptotes:} on the domain the denominator satisfies $2x^2-1\ge1>0$, so $f$ is continuous on its whole domain (also at the endpoints $x=\pm1$, where $f(\pm1)=0$). There is no point at which $f$ tends to infinity, hence there are no vertical asymptotes.
+
+\textbf{Horizontal asymptotes:} since $\sqrt{x^2-1}=|x|\sqrt{1-\frac1{x^2}}$,
+\[ f(x)=\frac{x|x|\sqrt{1-\frac1{x^2}}}{x^2\left(2-\frac1{x^2}\right)}=\frac{|x|}{x}\cdot\frac{\sqrt{1-\frac1{x^2}}}{2-\frac1{x^2}}. \]
+As $x\to+\infty$: $\frac{|x|}{x}=1$ and hence $f(x)\to\frac12$. As $x\to-\infty$: $\frac{|x|}{x}=-1$ and hence $f(x)\to-\frac12$. Since the limits are finite, there are no additional oblique asymptotes.
+
+\textbf{Answer:} $y=\frac12$ (at $+\infty$) and $y=-\frac12$ (at $-\infty$); there are no vertical asymptotes.
+\end{solution}

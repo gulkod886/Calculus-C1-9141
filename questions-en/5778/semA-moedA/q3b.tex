@@ -1,0 +1,25 @@
+% English translation of questions/5778/semA-moedA/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Prove that $0<x<\arcsin x$ for every $x\in(0,1]$.
+\end{question}
+
+\begin{hint}
+Consider the function $g(x)=\arcsin x-x$ and its derivative.
+\end{hint}
+
+\begin{solution}
+The inequality $0<x$ is clear for $x\in(0,1]$. It remains to prove $x<\arcsin x$.
+
+Define $g(x)=\arcsin x-x$ on the interval $[0,1]$. The function is continuous on $[0,1]$ and differentiable on $(0,1)$, with
+\[ g'(x)=\frac{1}{\sqrt{1-x^2}}-1>0 \quad\text{for every } x\in(0,1), \]
+since $0<\sqrt{1-x^2}<1$ there.
+
+Let $b\in(0,1]$. By Lagrange's theorem for $g$ on the interval $[0,b]$, there exists a point $c\in(0,b)$ such that
+\[ g(b)-g(0)=g'(c)\,(b-0). \]
+Since $g(0)=\arcsin0-0=0$, $g'(c)>0$ and $b>0$, we get $g(b)>0$, i.e. $\arcsin b>b$.
+
+Therefore $0<x<\arcsin x$ for every $x\in(0,1]$. $\blacksquare$
+
+(The official solution is phrased by contradiction: assume $\arcsin b\le b$; Lagrange's theorem gives $\frac{1}{\sqrt{1-c^2}}=\frac{\arcsin b}{b}\le1$, contradicting $\frac{1}{\sqrt{1-c^2}}>1$. This is the same proof.)
+\end{solution}

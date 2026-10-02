@@ -1,0 +1,33 @@
+% English translation of questions/5782/semA-special/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(17 pts) For arbitrary parameters $a,b\in\R$ define a function by
+\[ f(x)=\begin{cases} e^{\frac1x}, & \text{if } x<0,\\ ax+b-6, & \text{if } 0\le x\le 9,\\ \frac{x^2-8x-9}{3-\sqrt{x}}, & \text{if } x>9 \end{cases} \]
+For which values of the parameters $a,b$ is the function continuous on $\R$? Justify.
+\end{question}
+
+\begin{hint}
+On each of the open intervals, $f$ is a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=9$.
+\end{hint}
+
+\begin{hint}
+At $x=9$: $x^2-8x-9=(x-9)(x+1)$ and $x-9=(\sqrt x-3)(\sqrt x+3)$.
+\end{hint}
+
+\begin{solution}
+\textbf{Continuity inside the intervals.} On $(-\infty,0)$ the function $e^{1/x}$ is continuous (a composition of continuous functions). On $(0,9)$ $f$ is a polynomial. On $(9,\infty)$ $f$ is a quotient of continuous functions whose denominator $3-\sqrt x<0$ does not vanish. Hence $f$ is continuous at every $x\neq0,9$ for all $a,b$, and we only need to check $x=0$ and $x=9$.
+
+\textbf{The point $x=0$.} $f(0)=b-6$, and the limit from the right is $\lim_{x\to0^+}(ax+b-6)=b-6$. From the left: as $x\to0^-$ we have $\frac1x\to-\infty$, and hence
+\[ \lim_{x\to0^-}e^{1/x}=0. \]
+Continuity at $0$ is equivalent to $b-6=0$, i.e. $b=6$.
+
+\textbf{The point $x=9$.} $f(9)=9a+b-6$, and this is also the limit from the left. From the right, for $x>9$:
+\[ \frac{x^2-8x-9}{3-\sqrt x}=\frac{(x-9)(x+1)}{3-\sqrt x}=\frac{(\sqrt x-3)(\sqrt x+3)(x+1)}{-(\sqrt x-3)}=-(\sqrt x+3)(x+1), \]
+and hence
+\[ \lim_{x\to9^+}f(x)=-(3+3)(9+1)=-60. \]
+Continuity at $9$ is equivalent to $9a+b-6=-60$.
+
+\textbf{Solving the system.} From $b=6$ we get $9a=-60$, i.e. $a=-\frac{20}{3}$.
+
+\textbf{Answer:} $f$ is continuous on all of $\R$ if and only if $\boxed{a=-\tfrac{20}{3},\ b=6}$.
+\end{solution}

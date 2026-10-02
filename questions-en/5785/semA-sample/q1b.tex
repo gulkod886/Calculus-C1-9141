@@ -1,0 +1,23 @@
+% English translation of questions/5785/semA-sample/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the limit
+\[ \lim_{x\to\frac{\pi}{4}} (\tan x)^{\tan(2x)} \]
+\end{question}
+
+\begin{hint}
+This is a $1^\infty$ form. Write $(\tan x)^{\tan 2x} = e^{\tan(2x)\ln(\tan x)}$ and compute the limit of the exponent (for example, with the substitution $t = \tan x$ and L'Hôpital's rule).
+\end{hint}
+
+\begin{solution}
+In a punctured neighborhood of $\frac{\pi}{4}$ we have $\tan x > 0$, so the expression is defined and
+\[ (\tan x)^{\tan 2x} = e^{\tan(2x)\cdot\ln(\tan x)}. \]
+As $x \to \frac{\pi}{4}$: $\tan x \to 1$ and $|\tan 2x| \to \infty$ (a $1^\infty$ form). We compute the limit of the exponent. By the double-angle formula, $\tan 2x = \frac{2\tan x}{1 - \tan^2 x}$; substitute $t = \tan x$, so that $t \to 1$ as $x \to \frac{\pi}{4}$ ($\tan$ is continuous), and $t \ne 1$ in a punctured neighborhood:
+\[ \lim_{x\to\frac{\pi}{4}} \tan(2x)\ln(\tan x) = \lim_{t\to1} \frac{2t\ln t}{1 - t^2}. \]
+This is a $\frac00$ form; by L'Hôpital's rule:
+\[ \lim_{t\to1} \frac{2t\ln t}{1 - t^2} = \lim_{t\to1} \frac{2\ln t + 2}{-2t} = \frac{0 + 2}{-2} = -1. \]
+(Alternatively: $\frac{2t\ln t}{1 - t^2} = -\frac{2t}{1 + t}\cdot\frac{\ln t}{t - 1} \to -1\cdot 1$.)
+By continuity of the exponential function:
+\[ \boxed{\lim_{x\to\frac{\pi}{4}} (\tan x)^{\tan(2x)} = e^{-1} = \frac1e}. \]
+Note that the limit is two-sided: although $\tan 2x \to +\infty$ from the left and $\tan 2x \to -\infty$ from the right, the product $\tan(2x)\ln(\tan x)$ tends to $-1$ from both sides.
+\end{solution}

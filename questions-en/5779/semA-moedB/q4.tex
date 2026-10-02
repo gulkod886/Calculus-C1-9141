@@ -1,0 +1,40 @@
+% English translation of questions/5779/semA-moedB/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Investigate the function $f(x)=\dfrac{x^3}{x^2-4}$ and sketch its graph.
+
+\underline{You need to investigate}: domain, continuity, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.
+\end{question}
+
+\begin{hint}
+Note that the function is odd. Polynomial division gives $f(x)=x+\frac{4x}{x^2-4}$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain and continuity.} $x\ne\pm2$. On its domain $f$ is continuous (a rational function). $f(-x)=-f(x)$, i.e. $f$ is odd and the graph is symmetric with respect to the origin. Intersection with the axes: only $(0,0)$.
+
+\textbf{Asymptotes.} Vertical: at $x=\pm2$ the numerator is $\pm8\ne0$ and the denominator vanishes, hence:
+\[ \lim_{x\to2^\pm}f(x)=\pm\infty,\qquad \lim_{x\to-2^\pm}f(x)=\pm\infty \]
+(for example near $-2$: the numerator is $\approx-8$, and the denominator $x^2-4$ is negative as $x\to-2^+$ and positive as $x\to-2^-$). Hence $x=2$ and $x=-2$ are vertical asymptotes. Oblique: by polynomial division
+\[ f(x)=x+\frac{4x}{x^2-4},\qquad \frac{4x}{x^2-4}\xrightarrow[x\to\pm\infty]{}0, \]
+hence $y=x$ is an oblique asymptote in both directions.
+
+\textbf{Increase and decrease.}
+\[ f'(x)=\frac{3x^2(x^2-4)-x^3\cdot2x}{(x^2-4)^2}=\frac{x^2(x^2-12)}{(x^2-4)^2}. \]
+Suspicious points: $x=0$, $x=\pm2\sqrt3$. $f'>0$ for $|x|>2\sqrt3$ -- $f$ is increasing on $(-\infty,-2\sqrt3)$ and on $(2\sqrt3,\infty)$. $f'<0$ for $|x|<2\sqrt3$, $x\ne0,\pm2$ -- $f$ is decreasing on $(-2\sqrt3,-2)$, on $(-2,2)$ (including $x=0$, where $f'=0$ but the sign does not change) and on $(2,2\sqrt3)$.
+
+\textbf{Extrema.} $x=-2\sqrt3$: local maximum, $f(-2\sqrt3)=\frac{-24\sqrt3}{8}=-3\sqrt3$. $x=2\sqrt3$: local minimum, $f(2\sqrt3)=3\sqrt3$. At $x=0$ there is no extremum.
+
+\textbf{Convexity and concavity.}
+\[ f''(x)=\frac{8x(x^2+12)}{(x^2-4)^3}. \]
+Since $x^2+12>0$, the sign of $f''$ is the sign of $\frac{x}{(x^2-4)^3}$, i.e. the sign of $x(x^2-4)$:
+\begin{itemize}
+  \item $x<-2$: negative -- concave ($\cap$);
+  \item $-2<x<0$: positive -- convex ($\cup$);
+  \item $0<x<2$: negative -- concave ($\cap$);
+  \item $x>2$: positive -- convex ($\cup$).
+\end{itemize}
+Inflection point: $(0,0)$ (there $f''$ changes sign and $f$ is defined). At $x=\pm2$ $f$ is not defined.
+
+\textbf{Sketch.} On $(-\infty,-2)$: the graph increases below the asymptote $y=x$ up to the maximum $(-2\sqrt3,-3\sqrt3)\approx(-3.46,-5.2)$ and then decreases to $-\infty$ near $x=-2$. On $(-2,2)$: it decreases from $+\infty$ through the inflection point $(0,0)$ (with a horizontal tangent) to $-\infty$. On $(2,\infty)$: it decreases from $+\infty$ to the minimum $(2\sqrt3,3\sqrt3)\approx(3.46,5.2)$ and then increases and approaches the asymptote $y=x$ from above.
+\end{solution}

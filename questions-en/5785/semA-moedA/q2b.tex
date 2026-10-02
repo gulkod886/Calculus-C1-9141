@@ -1,0 +1,25 @@
+% English translation of questions/5785/semA-moedA/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the absolute minimum and maximum of the function
+\[ f(x) = e^x \cdot (x-1)^2 \]
+or explain why they do not exist. Justify.
+\end{question}
+
+\begin{hint}
+Note that $f(x) \ge 0$ for every $x$. What happens as $x \to \infty$?
+\end{hint}
+
+\begin{solution}
+$f$ is defined and differentiable on all of $\R$.
+\[ f'(x) = e^x(x-1)^2 + 2e^x(x-1) = e^x(x-1)(x+1). \]
+Critical points: $x = \pm 1$. $f' > 0$ on $(-\infty,-1)$, $f'<0$ on $(-1,1)$, $f'>0$ on $(1,\infty)$.
+Hence $x=-1$ is a local maximum ($f(-1) = 4/e$) and $x=1$ is a local minimum ($f(1)=0$).
+
+\textbf{Absolute minimum:} for every $x$ we have $e^x>0$ and $(x-1)^2 \ge 0$, so $f(x) \ge 0 = f(1)$. Hence the absolute minimum is $0$, attained at $x=1$.
+
+\textbf{Absolute maximum:} $\lim_{x\to\infty} e^x(x-1)^2 = \infty$ (a product of two factors tending to $\infty$), so $f$ is not bounded above and has no absolute maximum.
+(The local maximum $4/e$ at $x=-1$ is not absolute; for example $f(3) = 4e^3 > 4/e$.)
+
+\textbf{Answer:} absolute minimum $0$ at the point $x=1$; an absolute maximum does not exist since $f(x)\to\infty$ as $x\to\infty$.
+\end{solution}

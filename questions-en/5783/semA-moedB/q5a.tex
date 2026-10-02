@@ -1,0 +1,11 @@
+% English translation of questions/5783/semA-moedB/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the integral $\displaystyle\int\frac{x}{\sqrt{1+x^2}}\,dx$.
+\end{question}
+
+\begin{solution}
+Substitute $t=1+x^2$, $dt=2x\,dx$:
+\[ \int\frac{x}{\sqrt{1+x^2}}\,dx=\frac12\int t^{-1/2}\,dt=t^{1/2}+C=\sqrt{1+x^2}+C. \]
+Check: $\left(\sqrt{1+x^2}\right)'=\frac{2x}{2\sqrt{1+x^2}}=\frac{x}{\sqrt{1+x^2}}$.
+\end{solution}

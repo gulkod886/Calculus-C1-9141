@@ -1,0 +1,13 @@
+% English translation of questions/5784/semB-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \lim_{x\to 0} \frac{x^2+\sin(x)\cos(x)}{1-e^x} \]
+\end{question}
+
+\begin{solution}
+As $x\to0$ the numerator tends to $0+\sin0\cos0=0$ and the denominator to $1-e^0=0$, i.e. a limit of the form $\frac00$. The numerator and the denominator are differentiable, and the derivative of the denominator $-e^x\neq0$ in a neighborhood of $0$, so by L'Hôpital's rule:
+\[ \lim_{x\to0}\frac{x^2+\sin x\cos x}{1-e^x}=\lim_{x\to0}\frac{2x+\cos^2x-\sin^2x}{-e^x}=\frac{0+1-0}{-1}=-1, \]
+where we used the continuity at $0$ of the resulting expression. (Alternatively: $\sin x\cos x=\frac12\sin2x$, and dividing the numerator and denominator by $x$: $\frac{x+\frac{\sin 2x}{2x}}{\frac{1-e^x}{x}}\to\frac{0+1}{-1}$.)
+The answer: $\boxed{-1}$.
+\end{solution}

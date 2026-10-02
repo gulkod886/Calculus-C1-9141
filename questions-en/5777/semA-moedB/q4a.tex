@@ -1,0 +1,30 @@
+% English translation of questions/5777/semA-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(12 pts) Analyze the function $f(x)=x^2e^{-x}$ and sketch its graph.
+\underline{You need to find}: the domain, asymptotes; intervals of increase and decrease, extremum points, intervals of convexity and concavity.
+\end{question}
+
+\begin{solution}
+\textbf{Domain:} all of $\R$; the function is continuous and differentiable at every point, and $f(x)\ge0$ with equality only at $x=0$.
+
+\textbf{Asymptotes:} There are no vertical ones (continuous on $\R$).
+As $x\to+\infty$: $\lim_{x\to\infty}\frac{x^2}{e^x}=0$ (L'Hôpital twice), hence $y=0$ is a horizontal asymptote at $+\infty$.
+As $x\to-\infty$: $f(x)\to+\infty$ and $\frac{f(x)}{x}=xe^{-x}\to-\infty$, so there is no asymptote (horizontal or oblique) at $-\infty$.
+
+\textbf{Increase and decrease:}
+\[
+f'(x)=2xe^{-x}-x^2e^{-x}=x(2-x)e^{-x}.
+\]
+$f'<0$ on $(-\infty,0)$ and on $(2,\infty)$ (decreasing), and $f'>0$ on $(0,2)$ (increasing).
+
+\textbf{Extrema:} A (global) minimum at $(0,0)$; a local maximum at $\left(2,\frac4{e^2}\right)\approx(2,0.54)$ (not global, since $f\to\infty$ at $-\infty$).
+
+\textbf{Convexity:}
+\[
+f''(x)=\big((2-2x)-(2x-x^2)\big)e^{-x}=(x^2-4x+2)e^{-x},
+\]
+which vanishes at $x=2\pm\sqrt2$. Hence $f$ is convex ($\cup$) on $(-\infty,2-\sqrt2)$ and on $(2+\sqrt2,\infty)$, and concave ($\cap$) on $(2-\sqrt2,2+\sqrt2)$. Inflection points at $x=2\pm\sqrt2$ (approximately $x\approx0.59$ and $x\approx3.41$).
+
+\textbf{Sketch:} The graph decreases from $+\infty$ (at $-\infty$) to the minimum $(0,0)$, where it is tangent to the $x$-axis, rises to the maximum $(2,4e^{-2})$, and then decreases and tends to $0$ from above ($y=0$ is an asymptote at $+\infty$).
+\end{solution}

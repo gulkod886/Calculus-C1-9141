@@ -1,0 +1,39 @@
+% English translation of questions/5785/quiz-sample/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let
+\[
+f(x)=\begin{cases}
+3x-1, & \text{if } x<0,\\
+x^2, & \text{if } x>0
+\end{cases}
+\]
+Which of the following statements is true?
+\begin{enumerate}
+  \item The function is not monotone.
+  \item The function is strictly decreasing.
+  \item The function is strictly increasing.
+  \item The function is monotone but not strictly.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Check each piece separately, then compare some value to the left of 0 with some value to the right of 0.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c)}.
+
+(Note: as the function is written, it is not defined at $x=0$; the attached solution writes $x\le0$ in the first piece. The answer is the same in both cases.)
+
+Let $x_1<x_2$ be in the domain. We distinguish three cases:
+\begin{itemize}
+  \item $x_1<x_2<0$: $f(x_2)-f(x_1)=3(x_2-x_1)>0$.
+  \item $0<x_1<x_2$: $f(x_2)-f(x_1)=x_2^2-x_1^2=(x_2-x_1)(x_2+x_1)>0$, since both factors are positive.
+  \item $x_1<0<x_2$: $f(x_1)=3x_1-1<-1<0<x_2^2=f(x_2)$.
+\end{itemize}
+(If one defines $f(0)=3\cdot0-1=-1$, the cases $x_1<0=x_2$ and $x_1=0<x_2$ also satisfy $f(x_1)<f(x_2)$ in the same way.)
+In all cases $f(x_1)<f(x_2)$, and therefore $f$ is strictly increasing.
+
+\textbf{Why the others are wrong:} (a): we showed that $f$ is monotone. (b): for example $f(1)=1>f(-1)=-4$, so it is not decreasing. (d): ``monotone but not strictly'' means that there exist $x_1<x_2$ with $f(x_1)=f(x_2)$, and this does not happen since $f$ is strictly increasing.
+\end{solution}

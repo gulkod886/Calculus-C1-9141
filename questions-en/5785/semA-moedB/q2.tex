@@ -1,0 +1,39 @@
+% English translation of questions/5785/semA-moedB/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Define a function
+\[ f(x) = \frac{x^2}{e^x} \]
+\begin{enumerate}
+  \item (11 pts) Compute the local extremum points and the intervals of increase and decrease of the function. Justify.
+  \item (10 pts) Compute the inflection points and the intervals of convexity of the function. Justify.
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+$f(x) = x^2e^{-x}$ is defined and infinitely differentiable on all of $\R$.
+\begin{enumerate}
+  \item
+  \[ f'(x) = 2xe^{-x} - x^2e^{-x} = x(2 - x)e^{-x}. \]
+  Since $e^{-x} > 0$, the sign of $f'$ is the sign of $x(2-x)$:
+  \begin{itemize}
+    \item $x < 0$: $f' < 0$, $f$ is decreasing;
+    \item $0 < x < 2$: $f' > 0$, $f$ is increasing;
+    \item $x > 2$: $f' < 0$, $f$ is decreasing.
+  \end{itemize}
+  \textbf{Answer:} $f$ is decreasing on $(-\infty,0]$, increasing on $[0,2]$ and decreasing on $[2,\infty)$.
+  By the first derivative test (sign change of $f'$): $x = 0$ is a local minimum point, $f(0) = 0$; $x = 2$ is a local maximum point, $f(2) = \frac{4}{e^2}$.
+
+  \item
+  \[ f''(x) = (2 - 2x)e^{-x} - (2x - x^2)e^{-x} = (x^2 - 4x + 2)e^{-x}. \]
+  $f''(x) = 0 \iff x^2 - 4x + 2 = 0 \iff x = 2 \pm \sqrt{2}$. The sign of $f''$ is the sign of the parabola $x^2 - 4x + 2$ (which opens upward):
+  \begin{itemize}
+    \item $x < 2 - \sqrt2$ or $x > 2+\sqrt2$: $f'' > 0$, $f$ is convex (upward, $\cup$);
+    \item $2-\sqrt2 < x < 2 + \sqrt 2$: $f'' < 0$, $f$ is concave (downward, $\cap$).
+  \end{itemize}
+  At both points $x = 2\pm\sqrt2$, $f''$ changes sign, so they are inflection points.
+
+  \textbf{Answer:} $f$ is convex on $(-\infty, 2 - \sqrt2]$ and on $[2+\sqrt2, \infty)$, and concave on $[2-\sqrt2, 2+\sqrt2]$.
+  The inflection points: $x = 2 \pm \sqrt2$, with values $f(2\pm\sqrt2) = (6 \pm 4\sqrt2)\,e^{-(2\pm\sqrt2)}$
+  (i.e. approximately $(0.586,\ 0.191)$ and $(3.414,\ 0.384)$).
+\end{enumerate}
+\end{solution}

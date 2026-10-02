@@ -1,0 +1,21 @@
+% English translation of questions/5777/semA-moedA/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle \lim_{x\to 0}\frac{\sqrt[3]{8+3x}-2}{\sqrt[4]{16+5x}-2}$
+\end{question}
+
+\begin{solution}
+At the point $x=0$: $\sqrt[3]{8}-2=0$ and $\sqrt[4]{16}-2=0$, i.e., a limit of the form $\frac00$. Both functions are differentiable in a neighborhood of $0$:
+\[
+\left(\sqrt[3]{8+3x}\right)'=\frac13(8+3x)^{-2/3}\cdot3=(8+3x)^{-2/3},\qquad
+\left(\sqrt[4]{16+5x}\right)'=\frac54(16+5x)^{-3/4},
+\]
+and the derivative of the denominator is different from $0$ in a neighborhood of $0$. By L'Hôpital's rule:
+\[
+\lim_{x\to0}\frac{\sqrt[3]{8+3x}-2}{\sqrt[4]{16+5x}-2}
+=\lim_{x\to0}\frac{(8+3x)^{-2/3}}{\frac54(16+5x)^{-3/4}}
+=\frac{8^{-2/3}}{\frac54\cdot16^{-3/4}}=\frac{\frac14}{\frac54\cdot\frac18}=\frac{\frac14}{\frac{5}{32}}=\frac85.
+\]
+\textbf{Answer:} $\frac85$.
+\end{solution}

@@ -1,0 +1,42 @@
+% English translation of questions/5777/semA-moedB/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Use Taylor's formula to compute $\sin 167^\circ$ with an error not greater than $10^{-5}$. Explain how you estimated the error.
+\end{question}
+
+\begin{hint}
+$\sin167^\circ=\sin(180^\circ-13^\circ)=\sin13^\circ$. Convert to radians and expand $\sin x$ around $0$.
+\end{hint}
+
+\begin{hint}
+In the Maclaurin polynomial of $\sin x$ the coefficient of $x^4$ is $0$, hence $P_3=P_4$ and the remainder can be estimated using $R_4$.
+\end{hint}
+
+\begin{solution}
+\textbf{Reduction.} $\sin167^\circ=\sin(180^\circ-13^\circ)=\sin13^\circ=\sin x_0$, where
+\[
+x_0=\frac{13\pi}{180}\approx0.226893 \quad\text{(radians)}.
+\]
+
+\textbf{Maclaurin polynomial.} For $f(x)=\sin x$: $f(0)=0$, $f'(0)=1$, $f''(0)=0$, $f'''(0)=-1$, $f^{(4)}(0)=0$, hence
+\[
+P_4(x)=P_3(x)=x-\frac{x^3}{6}.
+\]
+
+\textbf{Error estimate.} By Taylor's theorem with the Lagrange remainder of order $4$, there exists $c$ between $0$ and $x_0$ such that
+\[
+\sin x_0-P_4(x_0)=R_4(x_0)=\frac{f^{(5)}(c)}{5!}x_0^5=\frac{\cos c}{120}x_0^5 .
+\]
+Since $|\cos c|\le1$ and $0<x_0<0.23$:
+\[
+|R_4(x_0)|\le\frac{x_0^5}{120}<\frac{0.23^5}{120}\approx\frac{6.44\cdot10^{-4}}{120}\approx5.4\cdot10^{-6}<10^{-5}.
+\]
+(Even with the cruder estimate $x_0<0.25$ we get $\frac{0.25^5}{120}\approx8.1\cdot10^{-6}<10^{-5}$.)
+
+\textbf{Computation:}
+\[
+\sin167^\circ\approx x_0-\frac{x_0^3}{6}\approx0.226893-\frac{0.011680}{6}\approx0.226893-0.001947=0.224946.
+\]
+
+\textbf{Answer:} $\sin167^\circ\approx\frac{13\pi}{180}-\frac16\left(\frac{13\pi}{180}\right)^3\approx0.22495$, with an error smaller than $10^{-5}$ (the exact value is $0.2249511\ldots$).
+\end{solution}

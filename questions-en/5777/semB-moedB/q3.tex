@@ -1,0 +1,22 @@
+% English translation of questions/5777/semB-moedB/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\[ \int e^{\sqrt[3]{x}}\,dx \]
+\end{question}
+
+\begin{hint}
+Substitute $t=\sqrt[3]x$, i.e., $x=t^3$, and then integrate by parts twice.
+\end{hint}
+
+\begin{solution}
+Substitute $t=\sqrt[3]x$, i.e., $x=t^3$ and $dx=3t^2\,dt$ (the substitution is invertible and differentiable on all of $\R$):
+\[ \int e^{\sqrt[3]x}dx=3\int t^2e^t\,dt. \]
+Integration by parts ($u=t^2$, $v'=e^t$):
+\[ \int t^2e^tdt=t^2e^t-2\int te^tdt, \]
+and again by parts ($u=t$, $v'=e^t$): $\int te^tdt=te^t-e^t+C$. Hence
+\[ \int t^2e^tdt=t^2e^t-2te^t+2e^t+C=e^t(t^2-2t+2)+C. \]
+Return to $x$:
+\[ \boxed{\int e^{\sqrt[3]x}dx=3e^{\sqrt[3]x}\left(\sqrt[3]{x^2}-2\sqrt[3]x+2\right)+C.} \]
+\textbf{Check:} $\frac{d}{dt}\left[3e^t(t^2-2t+2)\right]=3e^t(t^2-2t+2+2t-2)=3t^2e^t$, which is exactly the integrand after the substitution.
+\end{solution}

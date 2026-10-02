@@ -1,0 +1,31 @@
+% English translation of questions/5780/semA-moedC/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+A curve is given in polar form: $r=a(1+\cos\varphi)$, where $a$ is a real positive parameter, $0\le\varphi\le2\pi$.
+Compute the \textbf{length} of the curve. \textbf{Compute the area} bounded by the curve
+\end{question}
+
+\begin{hint}
+Length of a polar curve: $L=\int_\alpha^\beta\sqrt{r^2+(r')^2}\,d\varphi$. Area: $S=\frac12\int_\alpha^\beta r^2\,d\varphi$.
+\end{hint}
+
+\begin{hint}
+Use the identity $1+\cos\varphi=2\cos^2\frac{\varphi}{2}$, and pay attention to the sign of $\cos\frac\varphi2$ on the interval.
+\end{hint}
+
+\begin{solution}
+The curve (a cardioid) is $r(\varphi)=a(1+\cos\varphi)\ge0$, and $r'(\varphi)=-a\sin\varphi$.
+
+\textbf{Length:} by the formula for arc length in polar coordinates,
+\[ r^2+(r')^2=a^2\big(1+2\cos\varphi+\cos^2\varphi+\sin^2\varphi\big)=2a^2(1+\cos\varphi)=4a^2\cos^2\frac{\varphi}{2}. \]
+Hence
+\[ L=\int_0^{2\pi}\sqrt{r^2+(r')^2}\,d\varphi=\int_0^{2\pi}2a\Big|\cos\frac{\varphi}{2}\Big|\,d\varphi . \]
+For $0\le\varphi\le\pi$, $\cos\frac\varphi2\ge0$, and for $\pi\le\varphi\le2\pi$, $\cos\frac\varphi2\le0$. By symmetry (or directly):
+\[ L=2\int_0^{\pi}2a\cos\frac{\varphi}{2}\,d\varphi=4a\Big[2\sin\frac\varphi2\Big]_0^{\pi}=8a . \]
+That is, $\boxed{L=8a}$.
+
+\textbf{Area:} by the formula for area in polar coordinates,
+\[ S=\frac12\int_0^{2\pi}a^2(1+\cos\varphi)^2d\varphi=\frac{a^2}{2}\int_0^{2\pi}\Big(1+2\cos\varphi+\frac{1+\cos2\varphi}{2}\Big)d\varphi
+=\frac{a^2}{2}\Big[\frac32\varphi+2\sin\varphi+\frac{\sin2\varphi}{4}\Big]_0^{2\pi}=\frac{a^2}{2}\cdot3\pi . \]
+That is, $\boxed{S=\frac{3\pi a^2}{2}}$.
+\end{solution}

@@ -1,0 +1,33 @@
+% English translation of questions/5778/semA-moedC/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts)
+Find the points of discontinuity of the function
+\[ f(x)=\frac{x^2-x}{e^{x^3-x}-1} \]
+and determine their types.
+\end{question}
+
+\begin{hint}
+The denominator vanishes when $x^3-x=0$. Use the limit $\lim_{t\to0}\frac{e^t-1}{t}=1$ with $t=x^3-x$.
+\end{hint}
+
+\begin{solution}
+\textbf{The domain:} $e^{x^3-x}-1=0\iff x^3-x=0\iff x(x-1)(x+1)=0$. Hence $f$ is defined and continuous (a quotient of continuous functions) for every $x\notin\{0,1,-1\}$, and these are the points of discontinuity.
+
+Denote $t=t(x)=x^3-x$. For $x\notin\{0,1,-1\}$:
+\[ f(x)=\frac{x^2-x}{x^3-x}\cdot\frac{x^3-x}{e^{x^3-x}-1}=\frac{x(x-1)}{x(x-1)(x+1)}\cdot\frac{t}{e^t-1}=\frac{1}{x+1}\cdot\frac{t}{e^t-1}. \]
+As $x\to0$ or $x\to\pm1$, $t\to0$ and $t\neq0$, hence by the famous limit and the theorem on the limit of a composition, $\frac{t}{e^t-1}\to1$.
+
+\textbf{$x=0$:} $\lim_{x\to0}f(x)=\frac{1}{0+1}\cdot1=1$. The limit exists and is finite — a \textbf{removable discontinuity}.
+
+\textbf{$x=1$:} $\lim_{x\to1}f(x)=\frac{1}{2}\cdot1=\frac12$ — a \textbf{removable discontinuity}.
+
+\textbf{$x=-1$:} Here the numerator tends to $(-1)^2-(-1)=2\neq0$ and the denominator tends to $0$. We check signs: $x^3-x=x(x-1)(x+1)$, and in a neighborhood of $-1$, $x(x-1)\approx2>0$. Hence
+\begin{itemize}
+  \item for $x\to-1^+$: $x+1>0$, $t\to0^+$, $e^t-1\to0^+$, hence $f(x)\to+\infty$;
+  \item for $x\to-1^-$: $x+1<0$, $t\to0^-$, $e^t-1\to0^-$, hence $f(x)\to-\infty$.
+\end{itemize}
+The one-sided limits are infinite — a \textbf{discontinuity of the second kind}.
+
+\textbf{Summary:} $x=0$ and $x=1$ — removable discontinuities (with limits $1$ and $\frac12$ respectively); $x=-1$ — a discontinuity of the second kind.
+\end{solution}

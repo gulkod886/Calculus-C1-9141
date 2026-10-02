@@ -1,0 +1,21 @@
+% English translation of questions/5778/semA-moedB/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Prove that the polynomial $x^3-4x^2+7x+13$ has exactly one real root.
+\end{question}
+
+\begin{hint}
+Existence — the Intermediate Value Theorem. Uniqueness — show that the derivative is always positive.
+\end{hint}
+
+\begin{solution}
+Let $p(x)=x^3-4x^2+7x+13$.
+
+\textbf{Existence:} $p$ is continuous (a polynomial). $p(-2)=-8-16-14+13=-25<0$ and $p(0)=13>0$. By the Intermediate Value Theorem there exists $c\in(-2,0)$ with $p(c)=0$.
+
+\textbf{Uniqueness:} $p'(x)=3x^2-8x+7$. The discriminant is $64-84=-20<0$ and the leading coefficient is positive, hence $p'(x)>0$ for every $x\in\R$. Therefore $p$ is strictly increasing on $\R$ (a corollary of Lagrange's theorem), and hence it cannot take the value $0$ twice.
+
+(Alternatively: if there were two roots $a<b$, then by Rolle's theorem there would be $c\in(a,b)$ with $p'(c)=0$, a contradiction.)
+
+Therefore the polynomial has exactly one real root (lying in the interval $(-2,0)$; approximately $c\approx-1.054$). $\blacksquare$
+\end{solution}

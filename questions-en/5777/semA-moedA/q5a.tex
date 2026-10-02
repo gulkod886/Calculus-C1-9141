@@ -1,0 +1,23 @@
+% English translation of questions/5777/semA-moedA/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the area bounded by the lines $y=4x,\ \ y=x,\ \ y=1/x$ in the region $x\ge0,\ y\ge0$ and draw the corresponding sketch.
+\end{question}
+
+\begin{hint}
+Find the intersection points of the lines, and split the integral into two intervals according to the upper curve.
+\end{hint}
+
+\begin{solution}
+\textbf{Intersection points} (in the first quadrant): $4x=x\Rightarrow x=0$ (the origin); $4x=\frac1x\Rightarrow x=\frac12$ (the point $(\frac12,2)$); $x=\frac1x\Rightarrow x=1$ (the point $(1,1)$).
+
+\textbf{Sketch:} The region is a ``curvilinear triangle'' with vertices $(0,0)$, $(\frac12,2)$, $(1,1)$: the lower boundary is the line $y=x$, and the upper boundary is the line $y=4x$ for $0\le x\le\frac12$ and the hyperbola $y=\frac1x$ for $\frac12\le x\le1$.
+
+\textbf{Area:}
+\[
+S=\int_0^{1/2}(4x-x)\,dx+\int_{1/2}^1\left(\frac1x-x\right)dx
+=\left[\frac{3x^2}{2}\right]_0^{1/2}+\left[\ln x-\frac{x^2}{2}\right]_{1/2}^1
+=\frac38+\left(-\frac12-\ln\frac12+\frac18\right)=\frac38+\ln2-\frac38=\ln 2.
+\]
+\textbf{Answer:} $S=\ln2$.
+\end{solution}

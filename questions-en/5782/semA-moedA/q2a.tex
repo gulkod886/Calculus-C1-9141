@@ -1,0 +1,25 @@
+% English translation of questions/5782/semA-moedA/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Find all the asymptotes of the function
+\[ f(x)=\frac{2x^2-3x+1}{x} \]
+\end{question}
+
+\begin{hint}
+Divide the numerator by $x$: $f(x)=2x-3+\frac1x$.
+\end{hint}
+
+\begin{solution}
+Domain: $x\neq0$. For every $x\neq 0$:
+\[ f(x)=2x-3+\frac{1}{x}. \]
+\textbf{Vertical asymptote:} the numerator at $x=0$ equals $1\neq0$, and hence
+\[ \lim_{x\to0^+}f(x)=+\infty,\qquad \lim_{x\to0^-}f(x)=-\infty, \]
+i.e. $x=0$ is a vertical asymptote. This is the only point outside the domain, and $f$ is continuous at every other point, so there are no other vertical asymptotes.
+
+\textbf{Oblique/horizontal asymptote:} we compute
+\[ m=\lim_{x\to\pm\infty}\frac{f(x)}{x}=\lim_{x\to\pm\infty}\left(2-\frac3x+\frac1{x^2}\right)=2, \]
+\[ n=\lim_{x\to\pm\infty}\big(f(x)-2x\big)=\lim_{x\to\pm\infty}\left(-3+\frac1x\right)=-3. \]
+Hence $y=2x-3$ is an oblique asymptote both at $+\infty$ and at $-\infty$. Since $f(x)\to\pm\infty$ as $x\to\pm\infty$, there is no horizontal asymptote.
+
+\textbf{Answer:} $x=0$ (vertical) and $y=2x-3$ (oblique in both directions).
+\end{solution}

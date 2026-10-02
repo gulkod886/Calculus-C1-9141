@@ -1,0 +1,40 @@
+% English translation of questions/5785/quiz/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Check the continuity of the following function at the point 2:
+\[
+f(x)=\begin{cases}
+\frac{1}{1+4^{\frac{1}{x-2}}}, & \text{if } x\neq 2,\\
+0, & \text{if } x=2
+\end{cases}
+\]
+Which of the following statements is true?
+\begin{enumerate}
+  \item The function is continuous at 2.
+  \item The function has a removable discontinuity at 2.
+  \item The function has a jump discontinuity at 2.
+  \item The function has an essential discontinuity at 2.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Compute the one-sided limits separately: where does $\frac{1}{x-2}$ tend as $x\to2^+$ and as $x\to2^-$?
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c)}.
+
+We compute the one-sided limits at 2.
+
+\textbf{From the right:} as $x\to2^+$, $x-2\to0^+$ and therefore $\frac1{x-2}\to+\infty$. Since $4>1$, $\lim_{t\to+\infty}4^t=\infty$, so $1+4^{\frac{1}{x-2}}\to\infty$ and
+\[
+\lim_{x\to2^+}f(x)=0 .
+\]
+\textbf{From the left:} as $x\to2^-$, $\frac1{x-2}\to-\infty$ and $\lim_{t\to-\infty}4^t=0$, therefore
+\[
+\lim_{x\to2^-}f(x)=\frac{1}{1+0}=1 .
+\]
+Both one-sided limits exist (and are finite) but are different, so the limit $\lim_{x\to2}f(x)$ does not exist, and this is exactly a jump discontinuity (of the first kind, not removable).
+
+\textbf{Why the others are wrong:} (a): the limit at 2 does not exist, so $f$ is not continuous at 2 (the fact that $f(2)=0$ equals the right limit gives only continuity from the right). (b): a removable discontinuity requires the two-sided limit to exist. (d): an essential discontinuity (of the second kind) means that at least one of the one-sided limits does not exist as a finite limit, and here both exist.
+\end{solution}

@@ -1,0 +1,29 @@
+% English translation of questions/5777/semB-moedB/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Find a rational number $x=\frac ab$ such that $|\cos(1)-x|<\frac{1}{1000}$.
+\end{question}
+
+\begin{hint}
+Use the Maclaurin polynomial of $\cos$ and Lagrange's remainder formula, $|R_n(1)|\le\frac{1}{(n+1)!}$. Choose $n$ such that $(n+1)!>1000$.
+\end{hint}
+
+\begin{hint}
+Note: in the expansion of $\cos$ the coefficient of $x^{2k+1}$ is zero, hence $P_{2k}=P_{2k+1}$ and the remainder of order $2k+1$ can be used.
+\end{hint}
+
+\begin{solution}
+The Maclaurin polynomial of $\cos x$ has rational coefficients, so its value at $x=1$ is rational. It remains to choose an order for which the remainder is smaller than $\frac1{1000}$.
+
+By Taylor's theorem with the Lagrange remainder, for every $n$ there exists $c$ between $0$ and $1$ such that
+\[ \cos1=P_n(1)+R_n(1),\qquad R_n(1)=\frac{\cos^{(n+1)}(c)}{(n+1)!}\cdot1^{n+1}. \]
+Every derivative of $\cos$ is $\pm\sin$ or $\pm\cos$, hence $|\cos^{(n+1)}(c)|\le1$ and $|R_n(1)|\le\frac1{(n+1)!}$.
+
+Choose $n=7$: $|R_7(1)|\le\frac1{8!}=\frac1{40320}<\frac1{1000}$. Since the coefficient of $x^7$ in the expansion of $\cos$ is $0$:
+\[ P_7(1)=P_6(1)=1-\frac1{2!}+\frac1{4!}-\frac1{6!}=1-\frac12+\frac1{24}-\frac1{720}=\frac{720-360+30-1}{720}=\frac{389}{720}. \]
+Hence
+\[ \left|\cos1-\frac{389}{720}\right|\le\frac1{40320}<\frac1{1000}, \]
+and the rational number $\boxed{x=\frac{389}{720}}$ satisfies the requirement. (Numerically $\cos1\approx0.5403023$, $\frac{389}{720}\approx0.5402778$.)
+
+\textbf{Remark:} The previous approximation $1-\frac12+\frac1{24}=\frac{13}{24}$ is \emph{not} sufficient: the bound given by Lagrange is $\frac1{6!}=\frac1{720}>\frac1{1000}$, and indeed $|\cos1-\frac{13}{24}|\approx0.00136>\frac1{1000}$.
+\end{solution}

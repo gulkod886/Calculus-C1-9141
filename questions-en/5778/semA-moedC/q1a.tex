@@ -1,0 +1,19 @@
+% English translation of questions/5778/semA-moedC/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit:
+the limit of the sequence $\displaystyle\lim_{n\to\infty}\left(\frac{(n+4)!\cdot n}{(n+5)!-(n+2)!}\right)$.
+\end{question}
+
+\begin{hint}
+Factor out $(n+2)!$ as a common factor in the numerator and the denominator.
+\end{hint}
+
+\begin{solution}
+We use $(n+4)!=(n+2)!\,(n+3)(n+4)$ and $(n+5)!=(n+2)!\,(n+3)(n+4)(n+5)$. Cancel $(n+2)!\neq0$:
+\[ \frac{(n+4)!\cdot n}{(n+5)!-(n+2)!}=\frac{n(n+3)(n+4)}{(n+3)(n+4)(n+5)-1}. \]
+The numerator and the denominator are polynomials of degree $3$ with leading coefficient $1$. Divide by $n^3$:
+\[ =\frac{\left(1+\frac3n\right)\left(1+\frac4n\right)}{\left(1+\frac3n\right)\left(1+\frac4n\right)\left(1+\frac5n\right)-\frac1{n^3}}\xrightarrow[n\to\infty]{}\frac{1}{1-0}=1 \]
+by the arithmetic of limits.
+\[ \boxed{\lim_{n\to\infty}\frac{(n+4)!\cdot n}{(n+5)!-(n+2)!}=1} \]
+\end{solution}

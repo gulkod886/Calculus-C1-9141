@@ -1,0 +1,13 @@
+% English translation of questions/5783/semA-moedC/q1b.tex (metadata is taken from the Hebrew file).
+% note on source: in the original, a stray ".1" appears to the right of the cases in part (b); omitted here.
+
+\begin{question}
+Classify the points of discontinuity of the function
+\[ f(x)=\begin{cases} \dfrac{\sin(2x)}{x}, & x\neq 0\\[2mm] 1, & x=0 \end{cases} \]
+\end{question}
+
+\begin{solution}
+For every $x\neq 0$ the function is a quotient of continuous functions ($\sin(2x)$ and $x$) whose denominator does not vanish, hence it is continuous. We check $x=0$: by the fundamental limit $\lim_{t\to0}\frac{\sin t}{t}=1$,
+\[ \lim_{x\to0}\frac{\sin(2x)}{x}=\lim_{x\to0}2\cdot\frac{\sin(2x)}{2x}=2. \]
+The limit exists and is finite, but $f(0)=1\neq 2$. Hence $x=0$ is a \textbf{removable discontinuity} (it can be fixed by redefining $f(0)=2$), and it is the only point of discontinuity.
+\end{solution}

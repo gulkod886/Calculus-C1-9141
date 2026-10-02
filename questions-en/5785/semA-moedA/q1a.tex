@@ -1,0 +1,28 @@
+% English translation of questions/5785/semA-moedA/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Define a function by
+\[ f(x) = \begin{cases} ax^2 + b, & \text{if } x \le 0 \\ \dfrac{\ln(e^x - 1)}{2\ln x}, & \text{if } x > 0 \end{cases} \]
+For which values of the parameters $a, b$ is the function continuous at the point $x=0$? Justify.
+\end{question}
+
+\begin{hint}
+Write $e^x - 1 = x \cdot \frac{e^x - 1}{x}$ and use the known limit $\lim_{x\to 0}\frac{e^x-1}{x} = 1$.
+\end{hint}
+
+\begin{solution}
+For all $a,b$ we have $f(0) = a\cdot 0 + b = b$, and to the left of $0$ the function is the polynomial $ax^2+b$, so
+$\lim_{x\to 0^-} f(x) = b = f(0)$. Hence $f$ is continuous at $0$ if and only if $\lim_{x\to 0^+} f(x) = b$.
+
+We compute the right limit. For $x>0$ we have $e^x - 1 > 0$, and therefore
+\[ \ln(e^x - 1) = \ln\left( x \cdot \frac{e^x-1}{x} \right) = \ln x + \ln\frac{e^x - 1}{x}. \]
+Hence
+\[ f(x) = \frac{\ln x + \ln\frac{e^x-1}{x}}{2\ln x} = \frac12 + \frac{\ln\frac{e^x-1}{x}}{2\ln x}. \]
+Since $\lim_{x\to 0}\frac{e^x - 1}{x} = 1$ (this is the derivative of $e^x$ at $0$) and $\ln$ is continuous at $1$, the numerator of the second fraction tends to $\ln 1 = 0$,
+while $2\ln x \to -\infty$. Hence the second fraction tends to $0$ and we get
+\[ \lim_{x\to 0^+} f(x) = \frac12. \]
+(One can also use L'Hôpital's rule in the case $\frac{\infty}{\infty}$:
+$\lim_{x\to0^+}\frac{\ln(e^x-1)}{2\ln x} = \lim_{x\to0^+}\frac{e^x/(e^x-1)}{2/x} = \lim_{x\to 0^+}\frac{e^x}{2}\cdot\frac{x}{e^x-1} = \frac12$.)
+
+\textbf{Answer:} $f$ is continuous at $x=0$ if and only if $b = \frac12$, with $a$ arbitrary ($a \in \R$).
+\end{solution}

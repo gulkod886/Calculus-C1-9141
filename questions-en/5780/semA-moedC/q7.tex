@@ -1,0 +1,19 @@
+% English translation of questions/5780/semA-moedC/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Find the smallest value on the domain of the function: $f(x)=x^4+4x$
+\begin{enumerate}
+  \item $-4$
+  \item $1$
+  \item $-3$
+  \item $-5$
+  \item $-2$
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: c ($-3$).}
+
+$f$ is a polynomial, defined and differentiable on all of $\R$. $f'(x)=4x^3+4=4(x+1)(x^2-x+1)$, and the factor $x^2-x+1$ is always positive (negative discriminant). Hence $f'<0$ for $x<-1$ and $f'>0$ for $x>-1$: $f$ is decreasing on $(-\infty,-1]$ and increasing on $[-1,\infty)$. Therefore $x=-1$ is an absolute minimum point, and the smallest value is
+\[ f(-1)=1-4=-3 . \]
+\end{solution}

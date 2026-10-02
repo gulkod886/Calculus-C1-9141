@@ -1,0 +1,16 @@
+% English translation of questions/5776/semB-moedC/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Sketch the region enclosed between the curves $x+y=0$ and $y=2x-x^2$ and find its area.
+\end{question}
+
+\begin{hint}
+Find the intersection points of the line $y=-x$ with the parabola, and determine which curve lies above the other.
+\end{hint}
+
+\begin{solution}
+The curve $x+y=0$ is the line $y=-x$, and the curve $y=2x-x^2$ is a downward-opening parabola with vertex $(1,1)$ that crosses the $x$-axis at $0$ and at $2$.
+\textbf{Intersection points:} $-x=2x-x^2\iff x^2-3x=0\iff x=0$ or $x=3$, i.e., the points $(0,0)$ and $(3,-3)$.
+On the interval $(0,3)$: $(2x-x^2)-(-x)=3x-x^2=x(3-x)>0$, i.e., the parabola is above the line. The region lies between the line (below) and the arc of the parabola (above) for $0\le x\le3$. The area:
+\[ S=\int_0^3\big[(2x-x^2)-(-x)\big]dx=\int_0^3(3x-x^2)\,dx=\left[\frac{3x^2}{2}-\frac{x^3}{3}\right]_0^3=\frac{27}{2}-9=\boxed{\frac92}. \]
+\end{solution}

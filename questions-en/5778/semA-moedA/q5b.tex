@@ -1,0 +1,17 @@
+% English translation of questions/5778/semA-moedA/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+{(10 pts)} Does the improper integral $\displaystyle\int_0^\infty\frac{x}{e^{x^2}}\,dx$ converge? If so, compute the value of the integral. If not, explain why.
+\end{question}
+
+\begin{hint}
+Substitute $u=x^2$.
+\end{hint}
+
+\begin{solution}
+By definition, $\int_0^\infty\frac{x}{e^{x^2}}\,dx=\lim_{b\to\infty}\int_0^b xe^{-x^2}\,dx$, if the limit exists. Substitute $u=x^2$, $du=2x\,dx$ (as $x$ runs from $0$ to $b$, $u$ runs from $0$ to $b^2$):
+\[ \int_0^b xe^{-x^2}\,dx=\frac12\int_0^{b^2}e^{-u}\,du=\frac12\left[-e^{-u}\right]_0^{b^2}=\frac12\left(1-e^{-b^2}\right). \]
+As $b\to\infty$, $e^{-b^2}\to0$, hence the limit exists and is finite:
+\[ \boxed{\int_0^\infty\frac{x}{e^{x^2}}\,dx=\frac12} \]
+that is, the integral converges and its value is $\frac12$.
+\end{solution}

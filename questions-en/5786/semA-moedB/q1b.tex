@@ -1,0 +1,22 @@
+% English translation of questions/5786/semA-moedB/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit
+\[ \lim_{x\to\infty} \left( \frac{x^3 + 1}{x^3 - 2} \right)^{x^3 + 3} \]
+\end{question}
+
+\begin{hint}
+This is an expression of the form $1^\infty$. Write $\frac{x^3 + 1}{x^3 - 2} = 1 + \frac{3}{x^3 - 2}$ and use the limit $\left(1 + \frac{1}{u}\right)^u \to e$.
+\end{hint}
+
+\begin{solution}
+As $x \to \infty$ the base tends to $1$ and the exponent to $\infty$ (a $1^\infty$ expression). Write
+\[ \frac{x^3 + 1}{x^3 - 2} = \frac{(x^3 - 2) + 3}{x^3 - 2} = 1 + \frac{3}{x^3 - 2}, \qquad x^3 + 3 = (x^3 - 2) + 5, \]
+and hence (for large $x$, so that $x^3 - 2 > 0$)
+\[ \left( \frac{x^3 + 1}{x^3 - 2} \right)^{x^3 + 3} = \left( 1 + \frac{3}{x^3 - 2} \right)^{x^3 - 2} \cdot \left( 1 + \frac{3}{x^3 - 2} \right)^{5}. \]
+Set $u = \frac{x^3 - 2}{3} \to \infty$. Then the first factor equals $\left[\left(1 + \frac{1}{u}\right)^{u}\right]^3 \to e^3$, by the basic limit $\lim_{u\to\infty}\left(1 + \frac1u\right)^u = e$ and continuity of $t \mapsto t^3$.
+The second factor tends to $1^5 = 1$, since $\frac{3}{x^3 - 2} \to 0$.
+By the arithmetic of limits:
+\[ \boxed{\lim_{x\to\infty} \left( \frac{x^3 + 1}{x^3 - 2} \right)^{x^3 + 3} = e^3 \cdot 1 = e^3}. \]
+(Alternative method: the $\ln$ of the expression is $(x^3 + 3)\ln\left(1 + \frac{3}{x^3 - 2}\right)$, and since $\ln(1 + t) \sim t$ as $t \to 0$, it tends to $\lim \frac{3(x^3 + 3)}{x^3 - 2} = 3$.)
+\end{solution}

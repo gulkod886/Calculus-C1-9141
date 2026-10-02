@@ -1,0 +1,45 @@
+% English translation of questions/5785/quiz-sample/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $a,b\in\R$. Define a function by
+\[
+f(x)=\begin{cases}
+\frac{\sin(8x)}{x}, & \text{if } x<0,\\
+ax+b, & \text{if } 0\le x\le 4,\\
+\frac{x^2-3x-4}{2-\sqrt{x}}, & \text{if } x>4
+\end{cases}
+\]
+For which values of $a,b$ is the function continuous on $\R$ ? Justify.
+\end{question}
+
+\begin{hint}
+At every point $x\neq0,4$ the function is continuous regardless of $a,b$. Check only the junction points $x=0$ and $x=4$.
+\end{hint}
+
+\begin{hint}
+At $x=4$: $x^2-3x-4=(x-4)(x+1)$; multiply and divide by $2+\sqrt x$.
+\end{hint}
+
+\begin{solution}
+\textbf{Points that are not junction points.} At every point $x<0$ the function is a quotient of continuous functions with a nonzero denominator; at every point $0<x<4$ it is a polynomial; and at every point $x>4$ it is a quotient of continuous functions with denominator $2-\sqrt x\neq0$ (since $\sqrt x>2$). Since at each of these points $f$ coincides with the formula on a whole neighborhood, $f$ is continuous there for all $a,b$. It remains to check $x=0$ and $x=4$.
+
+\textbf{The point $x=0$.} $f(0)=b$. From the left, by $\lim_{y\to0}\frac{\sin y}{y}=1$ with $y=8x$:
+\[
+\lim_{x\to0^-}\frac{\sin(8x)}{x}=8\lim_{x\to0^-}\frac{\sin(8x)}{8x}=8\lim_{y\to0^-}\frac{\sin y}{y}=8\cdot1=8 .
+\]
+From the right: $\lim_{x\to0^+}(ax+b)=b=f(0)$ (continuity of a polynomial). Hence $f$ is continuous at 0 if and only if $\boxed{b=8}$.
+
+\textbf{The point $x=4$.} $f(4)=4a+b=4a+8$, and from the left $\lim_{x\to4^-}(ax+8)=4a+8=f(4)$. From the right, a limit of the form $\frac00$. Multiply by the conjugate:
+\[
+\frac{x^2-3x-4}{2-\sqrt x}\cdot\frac{2+\sqrt x}{2+\sqrt x}=\frac{(x-4)(x+1)(2+\sqrt x)}{4-x}=-(x+1)(2+\sqrt x)\qquad(x\neq4),
+\]
+and therefore, by continuity of the last expression at 4,
+\[
+\lim_{x\to4^+}f(x)=-(4+1)(2+\sqrt4)=-5\cdot4=-20 .
+\]
+$f$ is continuous at 4 if and only if $4a+8=-20$, i.e. $\boxed{a=-7}$.
+
+\textbf{Answer:} $f$ is continuous on $\R$ if and only if $a=-7,\ b=8$.
+
+(Remark: in the attached handwritten solution the ``$-$'' sign was omitted in the line $-\lim(x+1)(2+\sqrt x)=5\cdot4=20$, but the next line correctly reads $4a+8=-20$ and the answer $a=-7$ is correct.)
+\end{solution}

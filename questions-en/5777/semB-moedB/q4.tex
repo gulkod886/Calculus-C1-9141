@@ -1,0 +1,18 @@
+% English translation of questions/5777/semB-moedB/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\[ \int\frac{x^2}{\sqrt{4-x^2}}\,dx \]
+\end{question}
+
+\begin{hint}
+Trigonometric substitution: $x=2\sin t$ with $t\in(-\frac\pi2,\frac\pi2)$.
+\end{hint}
+
+\begin{solution}
+The integrand is defined for $-2<x<2$. Substitute $x=2\sin t$, $t\in(-\frac\pi2,\frac\pi2)$ (an invertible substitution: $t=\arcsin\frac x2$), $dx=2\cos t\,dt$. On this interval $\cos t>0$, hence $\sqrt{4-x^2}=\sqrt{4\cos^2t}=2\cos t$. Therefore
+\[ \int\frac{x^2}{\sqrt{4-x^2}}dx=\int\frac{4\sin^2t}{2\cos t}\cdot2\cos t\,dt=4\int\sin^2t\,dt=2\int(1-\cos2t)\,dt=2t-\sin2t+C. \]
+Back to $x$: $t=\arcsin\frac x2$, and $\sin2t=2\sin t\cos t=2\cdot\frac x2\cdot\frac{\sqrt{4-x^2}}{2}=\frac{x\sqrt{4-x^2}}{2}$. Hence
+\[ \boxed{\int\frac{x^2}{\sqrt{4-x^2}}dx=2\arcsin\frac x2-\frac{x\sqrt{4-x^2}}{2}+C.} \]
+(Check: differentiating the result gives $\frac{2}{\sqrt{4-x^2}}-\frac{\sqrt{4-x^2}}{2}+\frac{x^2}{2\sqrt{4-x^2}}=\frac{4-(4-x^2)+x^2}{2\sqrt{4-x^2}}=\frac{x^2}{\sqrt{4-x^2}}$.)
+\end{solution}

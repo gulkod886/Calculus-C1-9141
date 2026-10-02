@@ -1,0 +1,16 @@
+% English translation of questions/5783/semA-moedA/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Prove that for every $x,y$ we have $|\arctan x-\arctan y|\le|x-y|$.
+\end{question}
+
+\begin{hint}
+Apply Lagrange's theorem to $\arctan$ on the interval between $x$ and $y$.
+\end{hint}
+
+\begin{solution}
+If $x=y$ both sides equal $0$ and there is nothing to prove. Assume $x\neq y$, and without loss of generality $x<y$. The function $g(t)=\arctan t$ is continuous on $[x,y]$ and differentiable on $(x,y)$, hence by \textbf{Lagrange's theorem} there exists $c\in(x,y)$ such that
+\[ \arctan y-\arctan x=g'(c)(y-x)=\frac{1}{1+c^2}(y-x). \]
+Since $1+c^2\ge 1$, we have $0<\frac{1}{1+c^2}\le 1$, and hence
+\[ |\arctan x-\arctan y|=\frac{1}{1+c^2}\,|x-y|\le|x-y|. \qquad\blacksquare \]
+\end{solution}

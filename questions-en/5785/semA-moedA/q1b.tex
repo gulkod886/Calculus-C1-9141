@@ -1,0 +1,22 @@
+% English translation of questions/5785/semA-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) How many real solutions does the following equation have?
+\[ x + \sqrt{x} = 17 \]
+Justify your answer carefully.
+\end{question}
+
+\begin{hint}
+Define $g(x) = x + \sqrt{x} - 17$ on $[0,\infty)$: existence of a solution follows from the Intermediate Value Theorem, and uniqueness from monotonicity.
+\end{hint}
+
+\begin{solution}
+Define $g(x) = x + \sqrt{x} - 17$. The equation is defined only for $x \ge 0$, and $g$ is continuous on $[0,\infty)$.
+
+\textbf{Existence:} $g(0) = -17 < 0$ and $g(17) = \sqrt{17} > 0$. By the Intermediate Value Theorem there exists $c \in (0,17)$ with $g(c) = 0$.
+
+\textbf{Uniqueness:} for $x > 0$ we have $g'(x) = 1 + \frac{1}{2\sqrt{x}} > 0$, and therefore (a corollary of Lagrange's theorem) $g$ is strictly increasing on $[0,\infty)$
+(in fact this is also clear directly: it is a sum of two strictly increasing functions). A strictly increasing function attains each value at most once, so there is at most one solution.
+
+\textbf{Answer:} the equation has \textbf{exactly one} real solution. (In fact, substituting $t = \sqrt{x}\ge 0$ gives $t^2 + t - 17 = 0$, i.e. $t = \frac{-1+\sqrt{69}}{2}$, and $x = \left(\frac{-1+\sqrt{69}}{2}\right)^2 \approx 13.35$.)
+\end{solution}

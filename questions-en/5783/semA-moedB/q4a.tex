@@ -1,0 +1,12 @@
+% English translation of questions/5783/semA-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the limit $\displaystyle\lim_{x\to0}\frac{x-\sin(x)}{x^3}$.
+\end{question}
+
+\begin{solution}
+An expression of the form $\frac00$. We apply \textbf{L'Hôpital's rule} (the conditions hold: differentiability near $0$, the derivative of the denominator is different from $0$ near $0$):
+\[ \lim_{x\to0}\frac{x-\sin x}{x^3}=\lim_{x\to0}\frac{1-\cos x}{3x^2}=\lim_{x\to0}\frac{\sin x}{6x}=\frac16, \]
+where in the second step we applied L'Hôpital's rule again (again $\frac00$), and in the last we used $\lim\frac{\sin x}{x}=1$.
+(Alternatively: $\sin x=x-\frac{x^3}{6}+o(x^3)$, and hence $\frac{x-\sin x}{x^3}=\frac16+o(1)$.) \textbf{Answer:} $\frac16$.
+\end{solution}

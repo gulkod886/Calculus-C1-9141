@@ -1,0 +1,20 @@
+% English translation of questions/5783/semA-moedB/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Solve the equation $e^x\,dx-y\,dy=0$ with the initial condition $y(0)=1$.
+\end{question}
+
+\begin{hint}
+This is a separable equation: move one term to the other side and integrate each side separately.
+\end{hint}
+
+\begin{solution}
+The equation is separable: $y\,dy=e^x\,dx$ (i.e. $y\,y'=e^x$). Integrate both sides:
+\[ \int y\,dy=\int e^x\,dx\ \Longrightarrow\ \frac{y^2}{2}=e^x+C. \]
+From the initial condition $y(0)=1$: $\frac12=1+C$, hence $C=-\frac12$, and
+\[ y^2=2e^x-1. \]
+Since $y(0)=1>0$ and a continuous solution cannot pass to negative values without passing through $0$, we choose the positive branch:
+\[ y(x)=\sqrt{2e^x-1}, \]
+which is defined when $2e^x-1>0$, i.e. $x>-\ln 2$.
+Check: $y'=\frac{e^x}{\sqrt{2e^x-1}}$, hence $y\,y'=e^x$ ✓, and $y(0)=\sqrt{1}=1$ ✓.
+\end{solution}

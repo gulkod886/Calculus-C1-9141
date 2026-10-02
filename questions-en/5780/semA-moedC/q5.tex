@@ -1,0 +1,30 @@
+% English translation of questions/5780/semA-moedC/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)$ be a function differentiable on an open interval $(a,b)$, and it is known that its derivative is positive, i.e. $f'(x)>0$. Which of the following must be true?
+\begin{enumerate}
+  \item $f(x)$ is a bounded function on the open interval $(a,b)$.
+  \item $f(x)$ is a function satisfying $f(x)>0$ on the open interval $(a,b)$.
+  \item $f(x)$ is a continuous function on the closed interval $[a,b]$.
+  \item $f(x)$ is a monotone increasing function on the open interval $(a,b)$.
+  \item $f(x)$ is a monotone increasing function on the closed interval $[a,b]$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+What does Lagrange's theorem say about $f(x_2)-f(x_1)$ when $a<x_1<x_2<b$?
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: d.}
+
+Let $a<x_1<x_2<b$. $f$ is differentiable and hence continuous on $[x_1,x_2]$ and differentiable on $(x_1,x_2)$, so by Lagrange's theorem there exists $c\in(x_1,x_2)$ such that
+\[ f(x_2)-f(x_1)=f'(c)(x_2-x_1)>0 . \]
+Hence $f$ is (strictly) increasing on $(a,b)$.
+
+Counterexamples to the other statements, for example on the interval $(0,1)$:
+\begin{itemize}
+  \item $f(x)=-\frac1x$: $f'(x)=\frac1{x^2}>0$, but $f$ is not bounded on $(0,1)$ ((a) fails), is not defined at $0$ and in particular is not continuous on $[0,1]$ ((c) fails), and is not monotone on the closed interval ((e) fails, $f$ is not even defined there).
+  \item $f(x)=x-5$: $f'=1>0$ but $f<0$ on all of $(0,1)$ ((b) fails).
+\end{itemize}
+\end{solution}

@@ -1,0 +1,21 @@
+% English translation of questions/5779/semA-moedB/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Let $f(x)=\ln x$. Write the Taylor polynomial of degree 3 of the function $f$ around the point $x_0=1$. Use this polynomial to compute an approximation of $\ln(1.1)$. Estimate the error of this approximation using Taylor's formula.
+\end{question}
+
+\begin{hint}
+The remainder in Lagrange form is $R_3(x)=\frac{f^{(4)}(c)}{4!}(x-1)^4$ with $c$ between $1$ and $x$.
+\end{hint}
+
+\begin{solution}
+\textbf{The polynomial.} $f(x)=\ln x$, $f'(x)=\frac1x$, $f''(x)=-\frac1{x^2}$, $f'''(x)=\frac2{x^3}$, $f^{(4)}(x)=-\frac6{x^4}$. At the point $1$: $f(1)=0$, $f'(1)=1$, $f''(1)=-1$, $f'''(1)=2$. Hence
+\[ P_3(x)=(x-1)-\frac{(x-1)^2}{2}+\frac{(x-1)^3}{3}. \]
+\textbf{The approximation.} For $x=1.1$, $x-1=0.1$:
+\[ \ln(1.1)\approx P_3(1.1)=0.1-\frac{0.01}{2}+\frac{0.001}{3}=0.1-0.005+0.000\overline{3}=0.095\overline{3}. \]
+\textbf{Error estimate.} By Taylor's formula with the Lagrange remainder, there exists $c\in(1,1.1)$ such that
+\[ R_3(1.1)=\frac{f^{(4)}(c)}{4!}(0.1)^4=-\frac{6}{24c^4}\cdot10^{-4}=-\frac{10^{-4}}{4c^4}. \]
+Since $c>1$, $c^4>1$ and hence
+\[ |R_3(1.1)|<\frac{10^{-4}}{4}=2.5\cdot10^{-5}. \]
+Moreover $R_3<0$, i.e. the approximation $0.09533$ is slightly larger than the true value. (For comparison, $\ln1.1=0.0953102\ldots$, and the actual error is about $2.3\cdot10^{-5}$.)
+\end{solution}

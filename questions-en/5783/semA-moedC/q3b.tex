@@ -1,0 +1,20 @@
+% English translation of questions/5783/semA-moedC/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Find the intervals of convexity and the inflection points of the function $f(x)=e^{-x^2+2x}$
+\end{question}
+
+\begin{solution}
+$f$ is defined and twice differentiable on all of $\R$. By the chain rule
+\[ f'(x)=(2-2x)e^{-x^2+2x}, \]
+\[ f''(x)=-2e^{-x^2+2x}+(2-2x)^2e^{-x^2+2x}=(4x^2-8x+2)e^{-x^2+2x}=2(2x^2-4x+1)e^{-x^2+2x}. \]
+Since $e^{-x^2+2x}>0$, the sign of $f''$ is the sign of $2x^2-4x+1$, whose zeros are
+\[ x_{1,2}=\frac{4\pm\sqrt{16-8}}{4}=1\pm\frac{\sqrt2}{2}. \]
+This is a parabola with a positive leading coefficient, hence:
+\begin{itemize}
+  \item $f''>0$ ($f$ is \textbf{convex}) for $x<1-\frac{\sqrt2}{2}$ and for $x>1+\frac{\sqrt2}{2}$;
+  \item $f''<0$ ($f$ is \textbf{concave}) for $1-\frac{\sqrt2}{2}<x<1+\frac{\sqrt2}{2}$.
+\end{itemize}
+At both points $x=1\pm\frac{\sqrt2}{2}$ the second derivative changes sign and the function is continuous, hence these are inflection points. Since $-x^2+2x=1-(x-1)^2=1-\frac12=\frac12$ at these points, the inflection points are
+\[ \boxed{\left(1-\tfrac{\sqrt2}{2},\ \sqrt e\right),\quad \left(1+\tfrac{\sqrt2}{2},\ \sqrt e\right)}. \]
+\end{solution}

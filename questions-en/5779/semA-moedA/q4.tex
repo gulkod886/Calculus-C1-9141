@@ -1,0 +1,37 @@
+% English translation of questions/5779/semA-moedA/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Investigate the function $y=(x+2)e^{1/x}$ and sketch its graph.
+
+\underline{You need to investigate}: domain, continuity, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.
+\end{question}
+
+\begin{hint}
+For the oblique asymptote: $m=\lim\frac{y}{x}$, $n=\lim(y-mx)$; when computing $n$ substitute $t=\frac1x$ and use $\lim_{t\to0}\frac{e^t-1}{t}=1$.
+\end{hint}
+
+\begin{hint}
+Check the one-sided limits at $x=0$ separately: as $x\to0^-$, $e^{1/x}\to0$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain and continuity.} $x\neq0$. On its domain the function is continuous (product and composition of continuous functions). Intersection with the $x$-axis: $x=-2$; $y>0$ for $x>-2$, $x\ne0$, and $y<0$ for $x<-2$.
+
+\textbf{Vertical asymptotes.} As $x\to0^+$: $\frac1x\to+\infty$, $e^{1/x}\to+\infty$ and $x+2\to2$, hence $y\to+\infty$: the line $x=0$ is a vertical asymptote (from the right). As $x\to0^-$: $e^{1/x}\to0$ and hence $y\to0$ -- there is no asymptote from the left (the graph ``enters'' the origin; at $x=0$ there is an essential discontinuity).
+
+\textbf{Oblique asymptotes.} $m=\lim_{x\to\pm\infty}\frac{(x+2)e^{1/x}}{x}=\lim\left(1+\frac2x\right)e^{1/x}=1$. Now
+\[ y-x=x\big(e^{1/x}-1\big)+2e^{1/x}=\frac{e^{1/x}-1}{1/x}+2e^{1/x}\xrightarrow[x\to\pm\infty]{}1+2=3, \]
+by $\lim_{t\to0}\frac{e^t-1}{t}=1$ with $t=\frac1x\to0$. Hence $y=x+3$ is an oblique asymptote in both directions.
+
+\textbf{Increase and decrease.}
+\[ y'=e^{1/x}+(x+2)e^{1/x}\cdot\left(-\frac1{x^2}\right)=e^{1/x}\,\frac{x^2-x-2}{x^2}=e^{1/x}\,\frac{(x-2)(x+1)}{x^2}. \]
+The sign of $y'$ is the sign of $(x-2)(x+1)$: $y'>0$ on $(-\infty,-1)$ and on $(2,\infty)$ -- the function is increasing; $y'<0$ on $(-1,0)$ and on $(0,2)$ -- the function is decreasing.
+
+\textbf{Extremum points.} At $x=-1$ the derivative changes sign from $+$ to $-$: a local maximum $y(-1)=e^{-1}=\frac1e$. At $x=2$ from $-$ to $+$: a local minimum $y(2)=4\sqrt e\approx6.59$.
+
+\textbf{Convexity and concavity.} A direct computation (differentiating $e^{1/x}(1-\frac1x-\frac2{x^2})$) gives
+\[ y''=e^{1/x}\left(-\frac1{x^2}\right)\left(1-\frac1x-\frac2{x^2}\right)+e^{1/x}\left(\frac1{x^2}+\frac4{x^3}\right)=e^{1/x}\,\frac{5x+2}{x^4}. \]
+The sign of $y''$ is the sign of $5x+2$: $y''<0$ (concave, $\cap$) on $(-\infty,-\frac25)$, and $y''>0$ (convex, $\cup$) on $(-\frac25,0)$ and on $(0,\infty)$. Inflection point: $x=-\frac25$, $y\left(-\frac25\right)=\frac85e^{-5/2}\approx0.131$.
+
+\textbf{Sketch.} From the expansion $y=x+3+\frac{5}{2x}+o\!\left(\frac1x\right)$ it follows that the graph lies below the asymptote as $x\to-\infty$ and above it as $x\to+\infty$. On the left: the graph approaches the line $y=x+3$ from below, increases and crosses the $x$-axis at $x=-2$, reaches the maximum $(-1,\frac1e)$, decreases through the inflection point $(-\frac25,\frac85e^{-5/2})$ and tends to $0$ as $x\to0^-$. To the right of $0$ the graph decreases from $+\infty$ (asymptote $x=0$) to the minimum $(2,4\sqrt e)$, and then increases and approaches the asymptote $y=x+3$ as $x\to+\infty$.
+\end{solution}

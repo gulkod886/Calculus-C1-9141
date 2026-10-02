@@ -1,0 +1,36 @@
+% English translation of questions/5782/semA-moedA/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(17 pts) Compute the integral
+\[ \int\frac{6x^2+13x+8}{x^3+2x^2+2x}dx \]
+\end{question}
+
+\begin{hint}
+Factor the denominator: $x^3+2x^2+2x=x(x^2+2x+2)$, and the quadratic factor has no real roots. Use partial fraction decomposition.
+\end{hint}
+
+\begin{hint}
+Split $\frac{2x+5}{x^2+2x+2}$ into $\frac{2x+2}{x^2+2x+2}+\frac{3}{(x+1)^2+1}$.
+\end{hint}
+
+\begin{solution}
+\textbf{Factoring the denominator.} $x^3+2x^2+2x=x(x^2+2x+2)$, and the discriminant of $x^2+2x+2$ is $4-8<0$, hence it is irreducible over $\R$. The degree of the numerator is less than the degree of the denominator, so we look for a partial fraction decomposition:
+\[ \frac{6x^2+13x+8}{x(x^2+2x+2)}=\frac{A}{x}+\frac{Bx+C}{x^2+2x+2}. \]
+Multiplying by the denominator: $6x^2+13x+8=A(x^2+2x+2)+(Bx+C)x$.
+\begin{itemize}
+  \item Substituting $x=0$: $8=2A$, hence $A=4$.
+  \item Then $6x^2+13x+8-4(x^2+2x+2)=2x^2+5x=Bx^2+Cx$, hence $B=2$, $C=5$.
+\end{itemize}
+\[ \frac{6x^2+13x+8}{x^3+2x^2+2x}=\frac4x+\frac{2x+5}{x^2+2x+2}=\frac4x+\frac{2x+2}{x^2+2x+2}+\frac{3}{(x+1)^2+1}. \]
+
+\textbf{Integration.}
+\begin{itemize}
+  \item $\int\frac4x\,dx=4\ln|x|$.
+  \item $\int\frac{2x+2}{x^2+2x+2}\,dx=\ln(x^2+2x+2)$ (the numerator is the derivative of the denominator, and the denominator is positive).
+  \item $\int\frac{3}{(x+1)^2+1}\,dx=3\arctan(x+1)$ (substitution $t=x+1$).
+\end{itemize}
+
+\textbf{Answer:}
+\[ \int\frac{6x^2+13x+8}{x^3+2x^2+2x}dx=\boxed{4\ln|x|+\ln(x^2+2x+2)+3\arctan(x+1)+C}. \]
+(Check: differentiating the result gives back the integrand.)
+\end{solution}

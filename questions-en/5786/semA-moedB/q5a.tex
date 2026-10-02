@@ -1,0 +1,23 @@
+% English translation of questions/5786/semA-moedB/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the area enclosed between the $x$-axis and the graph of the function
+\[ f(x) = xe^x \]
+on the interval $[-1, 1]$.
+\end{question}
+
+\begin{hint}
+Note that $f$ changes sign at $x = 0$: the area is $\int_{-1}^1 |f(x)|\,dx$. Find the antiderivative using integration by parts.
+\end{hint}
+
+\begin{solution}
+Since $e^x > 0$, the sign of $f(x) = xe^x$ is the sign of $x$: $f \le 0$ on $[-1, 0]$ and $f \ge 0$ on $[0, 1]$. Hence the area is
+\[ S = \int_{-1}^1 |f(x)|\,dx = -\int_{-1}^0 f(x)\,dx + \int_0^1 f(x)\,dx. \]
+\textbf{Antiderivative} by integration by parts, with $u = x$, $v' = e^x$ (i.e. $u' = 1$, $v = e^x$):
+\[ F(x) = \int xe^x\,dx = xe^x - \int e^x\,dx = xe^x - e^x + C = (x - 1)e^x + C. \]
+By the Newton--Leibniz formula:
+\[ S = -\bigl(F(0) - F(-1)\bigr) + \bigl(F(1) - F(0)\bigr) = F(1) - 2F(0) + F(-1). \]
+Here $F(1) = 0$, $F(0) = -1$, $F(-1) = -2e^{-1}$, and hence
+\[ S = 0 - 2\cdot(-1) - \frac{2}{e} = 2 - \frac{2}{e}. \]
+\textbf{Answer:} $\boxed{S = 2\left(1 - \frac1e\right)}$.
+\end{solution}

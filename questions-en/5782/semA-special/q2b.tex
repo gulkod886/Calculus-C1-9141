@@ -1,0 +1,22 @@
+% English translation of questions/5782/semA-special/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Prove that the function $f(x)=\frac15x^5+\frac23x^3+x+7$ has a unique real root.
+\end{question}
+
+\begin{hint}
+Existence follows from the Intermediate Value Theorem, and uniqueness from monotonicity: $f'(x)=x^4+2x^2+1$ (or from Rolle's theorem).
+\end{hint}
+
+\begin{solution}
+\textbf{Existence.} $f$ is a polynomial and hence continuous on all of $\R$. We have $f(0)=7>0$ and
+\[ f(-2)=-\frac{32}{5}-\frac{16}{3}-2+7=-\frac{101}{15}<0. \]
+By the \textbf{Intermediate Value Theorem} there exists $x_0\in(-2,0)$ with $f(x_0)=0$.
+
+\textbf{Uniqueness.}
+\[ f'(x)=x^4+2x^2+1=(x^2+1)^2>0\quad\text{for every } x, \]
+and hence $f$ is strictly increasing on $\R$, and in particular one-to-one --- it attains the value $0$ at most once.
+(Alternatively, by Rolle's theorem: if there were two roots $x_1<x_2$, there would exist $c\in(x_1,x_2)$ with $f'(c)=0$, contradicting $f'>0$.)
+
+Hence $f$ has a unique real root, and it lies in the interval $(-2,0)$.
+\end{solution}

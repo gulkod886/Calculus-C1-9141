@@ -1,0 +1,17 @@
+% English translation of questions/5784/semB-moedC/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \int\frac{x^3}{x^2+x-2}\,dx \]
+\end{question}
+
+\begin{hint}
+Polynomial long division and partial fractions, $x^2+x-2=(x+2)(x-1)$.
+\end{hint}
+
+\begin{solution}
+Polynomial long division:
+\[ x^3=(x-1)(x^2+x-2)+(3x-2), \]
+(check: $(x-1)(x^2+x-2)=x^3-3x+2$, and the remainder is $x^3-(x^3-3x+2)=3x-2$.) Partial fractions: $\frac{3x-2}{(x+2)(x-1)}=\frac{A}{x+2}+\frac{B}{x-1}$, i.e. $3x-2=A(x-1)+B(x+2)$. For $x=1$: $1=3B$, $B=\frac13$. For $x=-2$: $-8=-3A$, $A=\frac83$. Hence
+\[ \int\frac{x^3}{x^2+x-2}dx=\int\left(x-1+\frac{8/3}{x+2}+\frac{1/3}{x-1}\right)dx=\boxed{\frac{x^2}{2}-x+\frac83\ln|x+2|+\frac13\ln|x-1|+C}. \]
+\end{solution}

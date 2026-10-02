@@ -1,0 +1,30 @@
+% English translation of questions/5786/semA-moedA/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the absolute minimum and maximum of the function
+\[ f(x) = \frac{\sqrt{x}}{e^x} \]
+on its domain, or explain why they do not exist.
+\end{question}
+
+\begin{hint}
+Find the critical points, determine the intervals of increase and decrease, and check the behavior of $f$ at the ends of the domain ($x = 0$ and $x \to \infty$).
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $x \ge 0$ (because of $\sqrt{x}$). $f$ is continuous on $[0,\infty)$, $f(x) \ge 0$ for every $x$, and $f(0) = 0$.
+
+\textbf{Derivative} (for $x > 0$):
+\[ f'(x) = \frac{\frac{1}{2\sqrt{x}}\, e^x - \sqrt{x}\, e^x}{e^{2x}} = \frac{e^x(1 - 2x)}{2\sqrt{x}\, e^{2x}} = \frac{1 - 2x}{2\sqrt{x}\, e^x}. \]
+The denominator is positive, hence $f'(x) = 0 \iff x = \frac12$, $f' > 0$ on $(0, \frac12)$ and $f' < 0$ on $(\frac12, \infty)$.
+That is, $f$ is strictly increasing on $[0, \frac12]$ and strictly decreasing on $[\frac12, \infty)$ (including the endpoint, since $f$ is continuous there).
+
+\textbf{Absolute maximum:} by monotonicity, $f(x) \le f(\frac12)$ for every $x \ge 0$, hence
+\[ \max f = f\left(\tfrac12\right) = \frac{\sqrt{1/2}}{e^{1/2}} = \frac{1}{\sqrt{2e}}, \]
+attained at $x = \frac12$.
+
+\textbf{Absolute minimum:} $f(x) \ge 0 = f(0)$ for every $x$ in the domain (non-negative numerator and positive denominator), hence
+\[ \min f = f(0) = 0, \]
+attained at $x = 0$. (Note: although $\lim_{x\to\infty} f(x) = 0$, the value $0$ is actually attained at $x = 0$, so the minimum exists.)
+
+\textbf{Answer:} absolute minimum $0$ at $x = 0$; absolute maximum $\frac{1}{\sqrt{2e}}$ at $x = \frac12$.
+\end{solution}

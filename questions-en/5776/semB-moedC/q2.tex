@@ -1,0 +1,18 @@
+% English translation of questions/5776/semB-moedC/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\textbf{Prove or disprove:} The following function is continuous at zero:
+\[ f(x)=\begin{cases} \frac{\sin(2x)}{\sqrt{x+4}-2}, & x\neq 0\\ 5, & x=0\end{cases}. \]
+\end{question}
+
+\begin{hint}
+Multiply the numerator and the denominator by the conjugate $\sqrt{x+4}+2$.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is false.} $f$ is continuous at $0$ if and only if $\lim_{x\to0}f(x)=f(0)=5$. We compute the limit (for $x\ne0$, $x\ge-4$) by multiplying by the conjugate:
+\[ \frac{\sin 2x}{\sqrt{x+4}-2}=\frac{\sin 2x\,(\sqrt{x+4}+2)}{(x+4)-4}=\frac{\sin2x}{x}\left(\sqrt{x+4}+2\right)=2\cdot\frac{\sin 2x}{2x}\cdot\left(\sqrt{x+4}+2\right). \]
+By the fundamental limit $\frac{\sin2x}{2x}\to1$, and by continuity of the square root $\sqrt{x+4}+2\to4$. By the arithmetic of limits
+\[ \lim_{x\to0}f(x)=2\cdot1\cdot4=8\neq5=f(0). \]
+Hence $f$ is \textbf{not continuous} at zero (it has a removable discontinuity; it would be continuous had we defined $f(0)=8$).
+\end{solution}

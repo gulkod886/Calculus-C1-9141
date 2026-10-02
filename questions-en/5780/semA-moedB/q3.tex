@@ -1,0 +1,31 @@
+% English translation of questions/5780/semA-moedB/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+What is the area enclosed between the curves $y=\frac{4}{x}$ and $y=5-x$?
+What is the volume obtained by revolving this area about the $x$-axis?
+\end{question}
+
+\begin{hint}
+First find the intersection points of the curves, and check which of them lies above the other between the intersection points.
+\end{hint}
+
+\begin{hint}
+Revolving about the $x$-axis gives a solid with a hole (the disk/washer method): $V=\pi\int_a^b\big(y_{\text{upper}}^2-y_{\text{lower}}^2\big)\,dx$.
+\end{hint}
+
+\begin{solution}
+\textbf{Intersection points:} $\frac4x=5-x \iff 4=5x-x^2 \iff x^2-5x+4=0 \iff (x-1)(x-4)=0$, i.e. $x=1$ and $x=4$ (the points $(1,4)$ and $(4,1)$).
+
+\textbf{Which is above which:} on the interval $(1,4)$, for example at $x=2$: $5-2=3>2=\frac42$. And in general, for $x>0$,
+$5-x-\frac4x=\frac{-(x^2-5x+4)}{x}=\frac{-(x-1)(x-4)}{x}>0$ when $1<x<4$. Hence the line lies above the hyperbola, and both functions are positive on the interval.
+
+\textbf{The area:} by the formula for the area between two graphs,
+\[ S=\int_1^4\Big(5-x-\frac4x\Big)dx=\Big[5x-\frac{x^2}{2}-4\ln x\Big]_1^4
+=\Big(20-8-4\ln4\Big)-\Big(5-\frac12\Big)=\frac{15}{2}-8\ln2 . \]
+That is, $\boxed{S=\frac{15}{2}-8\ln 2\approx 1.955}$.
+
+\textbf{The volume:} when revolving about the $x$-axis, every vertical cross-section at a point $x\in[1,4]$ is a washer with outer radius $5-x$ and inner radius $\frac4x$ (both radii are positive). Hence
+\[ V=\pi\int_1^4\Big((5-x)^2-\frac{16}{x^2}\Big)dx=\pi\Big[-\frac{(5-x)^3}{3}+\frac{16}{x}\Big]_1^4
+=\pi\Big[\Big(-\frac13+4\Big)-\Big(-\frac{64}{3}+16\Big)\Big]=\pi\Big(\frac{11}{3}+\frac{16}{3}\Big)=9\pi . \]
+That is, $\boxed{V=9\pi}$.
+\end{solution}

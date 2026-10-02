@@ -1,0 +1,19 @@
+% English translation of questions/5779/semB-moedB/q1c.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(5 pts) For which values of $a$ does the curve $y=x^2+a\sin x$ have inflection points?
+\end{question}
+
+\begin{hint}
+Check when $y''$ changes sign.
+\end{hint}
+
+\begin{solution}
+$y'=2x+a\cos x$, $y''=2-a\sin x$. An inflection point is a point at which $y''$ changes sign.
+\begin{itemize}
+  \item If $|a|<2$: $|a\sin x|\le|a|<2$ and hence $y''>0$ for every $x$ -- there are no inflection points.
+  \item If $a=2$: $y''=2(1-\sin x)\ge0$, and it vanishes only at isolated points; the sign does not change -- no inflection. Similarly for $a=-2$: $y''=2(1+\sin x)\ge0$.
+  \item If $|a|>2$: the equation $\sin x=\frac2a$ with $0<\left|\frac2a\right|<1$ has solutions $x_0$, and at them $\cos x_0\ne0$. Hence $(y'')'(x_0)=-a\cos x_0\ne0$, i.e. $y''$ passes through $0$ in a strictly monotone way and changes sign at $x_0$ -- an inflection point.
+\end{itemize}
+\textbf{Answer:} $|a|>2$.
+\end{solution}

@@ -1,0 +1,17 @@
+% English translation of questions/5783/semA-moedC/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Use a linear approximation to estimate the expression $\log_2 10$.
+\end{question}
+
+\begin{hint}
+Choose a point close to $10$ at which $\log_2$ is known, for example $x_0=8$.
+\end{hint}
+
+\begin{solution}
+Define $f(x)=\log_2 x=\frac{\ln x}{\ln 2}$; then $f'(x)=\frac{1}{x\ln 2}$. The linear approximation around $x_0$ is
+\[ f(x)\approx f(x_0)+f'(x_0)(x-x_0). \]
+Take $x_0=8$ (where $\log_2 8=3$) and $x=10$:
+\[ \log_2 10\approx 3+\frac{1}{8\ln 2}\cdot 2=3+\frac{1}{4\ln 2}\approx 3+0.3607=\boxed{3.3607}. \]
+(The exact value is $\log_2 10\approx 3.3219$; the approximation is slightly larger than the true value, as expected, since $\log_2$ is concave and therefore the tangent line lies above the graph.)
+\end{solution}

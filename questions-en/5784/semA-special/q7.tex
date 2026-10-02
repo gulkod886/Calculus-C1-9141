@@ -1,0 +1,22 @@
+% English translation of questions/5784/semA-special/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the following improper integral, or show that it diverges:
+\[ \int_2^\infty x\cdot e^{-x}\,dx \]
+\end{question}
+
+\begin{hint}
+Integration by parts with $u=x$, $v'=e^{-x}$, and then a limit as the upper limit tends to infinity.
+\end{hint}
+
+\begin{solution}
+By definition, $\int_2^\infty xe^{-x}\,dx=\lim_{R\to\infty}\int_2^Rxe^{-x}\,dx$, if the limit exists.
+
+\textbf{Antiderivative:} integration by parts with $u=x$, $v'=e^{-x}$ ($u'=1$, $v=-e^{-x}$):
+\[ \int xe^{-x}\,dx=-xe^{-x}+\int e^{-x}\,dx=-xe^{-x}-e^{-x}+C=-(x+1)e^{-x}+C. \]
+Hence
+\[ \int_2^Rxe^{-x}\,dx=\Big[-(x+1)e^{-x}\Big]_2^R=3e^{-2}-\frac{R+1}{e^R}. \]
+\textbf{Passing to the limit:} $\lim_{R\to\infty}\frac{R+1}{e^R}$ is an $\frac\infty\infty$ case, and by L'Hôpital's rule $\lim_{R\to\infty}\frac{1}{e^R}=0$. Hence
+\[ \int_2^\infty xe^{-x}\,dx=\boxed{\frac{3}{e^2}}\approx0.406, \]
+and the integral converges.
+\end{solution}

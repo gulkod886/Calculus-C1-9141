@@ -1,0 +1,14 @@
+% English translation of questions/5778/semA-moedB/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+{(10 pts)} Compute the integral $\displaystyle\int(4-x^2)^{-3/2}\,dx$. \quad [\underline{Hint}: you may substitute $x=2\sin\theta$.]
+\end{question}
+
+\begin{solution}
+The integrand is defined for $|x|<2$. Substitute $x=2\sin\theta$ with $\theta\in\left(-\frac\pi2,\frac\pi2\right)$; then $dx=2\cos\theta\,d\theta$ and $\cos\theta>0$, hence
+\[ 4-x^2=4-4\sin^2\theta=4\cos^2\theta,\qquad (4-x^2)^{3/2}=8\cos^3\theta. \]
+\[ \int(4-x^2)^{-3/2}\,dx=\int\frac{2\cos\theta}{8\cos^3\theta}\,d\theta=\frac14\int\frac{d\theta}{\cos^2\theta}=\frac14\tan\theta+C. \]
+Back to the variable $x$: $\sin\theta=\frac x2$, $\cos\theta=\sqrt{1-\frac{x^2}{4}}=\frac{\sqrt{4-x^2}}{2}$, hence $\tan\theta=\frac{x}{\sqrt{4-x^2}}$.
+\[ \boxed{\int(4-x^2)^{-3/2}\,dx=\frac{x}{4\sqrt{4-x^2}}+C} \]
+Check: $\left(\frac{x}{4\sqrt{4-x^2}}\right)'=\frac14\cdot\frac{\sqrt{4-x^2}+\frac{x^2}{\sqrt{4-x^2}}}{4-x^2}=\frac14\cdot\frac{4}{(4-x^2)^{3/2}}=(4-x^2)^{-3/2}$.
+\end{solution}

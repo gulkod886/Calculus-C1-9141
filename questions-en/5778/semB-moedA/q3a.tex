@@ -1,0 +1,31 @@
+% English translation of questions/5778/semB-moedA/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute: $\displaystyle\int_{-1}^15x^4\big(\ln(x+2)+\sin x\big)dx$
+\end{question}
+
+\begin{hint}
+$5x^4\sin x$ is an odd function, hence its integral over $[-1,1]$ vanishes. For the other part, integrate by parts with $u=\ln(x+2)$, $dv=5x^4dx$.
+\end{hint}
+
+\begin{solution}
+\textbf{The part with the sine.} $g(x)=5x^4\sin x$ is odd ($g(-x)=-g(x)$) and continuous, hence $\int_{-1}^1 5x^4\sin x\,dx=0$.
+
+\textbf{The part with the logarithm.} Integration by parts with $u=\ln(x+2)$, $dv=5x^4dx$, $du=\frac{dx}{x+2}$, $v=x^5$:
+\[
+\int_{-1}^15x^4\ln(x+2)\,dx=\Big[x^5\ln(x+2)\Big]_{-1}^1-\int_{-1}^1\frac{x^5}{x+2}dx=\ln3-\int_{-1}^1\frac{x^5}{x+2}dx
+\]
+(since at $x=-1$: $(-1)^5\ln1=0$). Polynomial division:
+\[
+\frac{x^5}{x+2}=x^4-2x^3+4x^2-8x+16-\frac{32}{x+2}.
+\]
+On the symmetric interval $[-1,1]$ the integrals of the odd powers vanish, hence
+\[
+\int_{-1}^1\frac{x^5}{x+2}dx=\int_{-1}^1\left(x^4+4x^2+16\right)dx-32\int_{-1}^1\frac{dx}{x+2}
+=\frac25+\frac83+32-32\ln3=\frac{526}{15}-32\ln3.
+\]
+\textbf{Answer:}
+\[
+\int_{-1}^15x^4\big(\ln(x+2)+\sin x\big)dx=\ln3-\frac{526}{15}+32\ln3=33\ln3-\frac{526}{15}\approx1.1875.
+\]
+\end{solution}

@@ -1,0 +1,11 @@
+% English translation of questions/5783/semA-moedC/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the limit $\displaystyle\lim_{x\to0}\frac{e^{2x}-e^x}{x}$
+\end{question}
+
+\begin{solution}
+This is a limit of the form $\frac00$, and the numerator and denominator are differentiable, so by L'Hôpital's rule
+\[ \lim_{x\to0}\frac{e^{2x}-e^x}{x}=\lim_{x\to0}\frac{2e^{2x}-e^x}{1}=2-1=\boxed{1}. \]
+(Alternatively: $\frac{e^{2x}-e^x}{x}=2\cdot\frac{e^{2x}-1}{2x}-\frac{e^x-1}{x}\to 2-1=1$ by the fundamental limit $\lim_{t\to0}\frac{e^t-1}{t}=1$.)
+\end{solution}

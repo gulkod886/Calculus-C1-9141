@@ -1,0 +1,26 @@
+% English translation of questions/5784/semA-special/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Prove that the following equation has a unique positive real solution:
+\[ 2x^3+\arctan x+\sqrt{x}=7 \]
+\end{question}
+
+\begin{hint}
+Existence: the Intermediate Value Theorem for $g(x)=2x^3+\arctan x+\sqrt x-7$ on a suitable interval. Uniqueness: show that $g$ is strictly increasing.
+\end{hint}
+
+\begin{solution}
+Define $g(x)=2x^3+\arctan x+\sqrt x-7$ on $[0,\infty)$. $g$ is continuous there as a sum of continuous functions, and differentiable on $(0,\infty)$.
+
+\textbf{Existence.} $g(0)=-7<0$, and
+\[ g(2)=16+\arctan2+\sqrt2-7=9+\arctan 2+\sqrt2>0. \]
+By the Intermediate Value Theorem there exists $x_0\in(0,2)$ with $g(x_0)=0$, i.e. a positive solution of the equation.
+
+\textbf{Uniqueness.} For every $x>0$:
+\[ g'(x)=6x^2+\frac1{1+x^2}+\frac1{2\sqrt x}>0. \]
+Hence $g$ is strictly increasing on $(0,\infty)$ (a corollary of Lagrange's theorem: if $0<x_1<x_2$ then $g(x_2)-g(x_1)=g'(c)(x_2-x_1)>0$). A strictly increasing function attains each value at most once, hence it has at most one zero in $(0,\infty)$.
+
+(Alternatively: if there were two positive solutions $x_1<x_2$, then by Rolle's theorem there would be $c\in(x_1,x_2)$ with $g'(c)=0$, contradicting $g'>0$.)
+
+\textbf{Conclusion:} the equation has a unique positive real solution (numerically $x_0\approx1.3486$).
+\end{solution}

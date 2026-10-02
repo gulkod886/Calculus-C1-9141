@@ -1,0 +1,22 @@
+% English translation of questions/5779/semA-special/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Write the Maclaurin polynomial of degree 6 for the function $y=\sin\left(\sin(x^2)\right)$.
+\end{question}
+
+\begin{hint}
+Substitute $u=\sin(x^2)=x^2-\frac{x^6}{6}+o(x^6)$ into the expansion $\sin u = u-\frac{u^3}{6}+o(u^3)$.
+\end{hint}
+
+\begin{solution}
+We use the known Maclaurin expansions $\sin t = t - \frac{t^3}{6} + o(t^4)$ (as $t\to0$).
+
+First, with $t=x^2$: $\sin(x^2) = x^2 - \frac{x^6}{6} + o(x^8)$.
+
+Denote $u=\sin(x^2)$; then $u\to 0$ as $x\to0$ and $u = O(x^2)$. By the expansion $\sin u = u - \frac{u^3}{6} + o(u^4)$, and since $o(u^4)=o(x^8)$:
+\[ u^3 = \left(x^2-\tfrac{x^6}{6}+o(x^8)\right)^3 = x^6 + o(x^6), \]
+hence
+\[ \sin(\sin(x^2)) = x^2 - \frac{x^6}{6} - \frac{x^6}{6} + o(x^6) = x^2 - \frac{x^6}{3} + o(x^6). \]
+By the uniqueness of the Taylor polynomial (a polynomial of degree $\le 6$ satisfying $f(x)-P(x)=o(x^6)$ is the Taylor polynomial), the Maclaurin polynomial of degree 6 is
+\[ P_6(x) = x^2 - \frac{x^6}{3}. \]
+\end{solution}

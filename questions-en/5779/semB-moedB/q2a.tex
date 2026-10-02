@@ -1,0 +1,19 @@
+% English translation of questions/5779/semB-moedB/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Prove that the equation $\dfrac{1}{x+1}+\dfrac1x+\dfrac{1}{x-1}=1$ has at least two solutions.
+\end{question}
+
+\begin{hint}
+Define $g(x)=\frac{1}{x+1}+\frac1x+\frac1{x-1}-1$ and examine the one-sided limits of $g$ at the endpoints of the intervals $(-1,0)$ and $(0,1)$. Use the Intermediate Value Theorem.
+\end{hint}
+
+\begin{solution}
+Define $g(x)=\frac{1}{x+1}+\frac1x+\frac1{x-1}-1$, which is continuous on every interval not containing $-1,0,1$.
+
+\textbf{The interval $(-1,0)$:} as $x\to-1^+$, the term $\frac1{x+1}\to+\infty$ while the other terms are bounded, hence $g(x)\to+\infty$. As $x\to0^-$, $\frac1x\to-\infty$ and hence $g(x)\to-\infty$. Therefore there exist points $-1<p<q<0$ with $g(p)>0$ and $g(q)<0$. $g$ is continuous on $[p,q]$, so by the Intermediate Value Theorem there exists $x_1\in(p,q)$ with $g(x_1)=0$.
+
+\textbf{The interval $(0,1)$:} as $x\to0^+$, $\frac1x\to+\infty$ and hence $g\to+\infty$; as $x\to1^-$, $\frac1{x-1}\to-\infty$ and hence $g\to-\infty$. In the same way, by the Intermediate Value Theorem there exists $x_2\in(0,1)$ with $g(x_2)=0$.
+
+The intervals are disjoint, hence $x_1\ne x_2$ and the equation has at least two solutions. (In the same way there is a third solution in $(1,\infty)$: $g\to+\infty$ as $x\to1^+$ and $g\to-1$ as $x\to\infty$.)
+\end{solution}

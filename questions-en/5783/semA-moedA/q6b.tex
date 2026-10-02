@@ -1,0 +1,26 @@
+% English translation of questions/5783/semA-moedA/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the improper integral $\displaystyle\int_0^{\infty}e^{-2x}\sin x\,dx$ or show that it does not converge.
+\end{question}
+
+\begin{hint}
+Compute the integral up to $R$ using integration by parts twice (the integral ``repeats itself''), and then let $R\to\infty$.
+\end{hint}
+
+\begin{solution}
+\textbf{Convergence:} $|e^{-2x}\sin x|\le e^{-2x}$ and $\int_0^\infty e^{-2x}dx=\frac12$ converges, hence by the \textbf{comparison test} the integral converges (absolutely).
+
+\textbf{Computation:} let $I(R)=\int_0^R e^{-2x}\sin x\,dx$, and find an antiderivative $J=\int e^{-2x}\sin x\,dx$ by integrating by parts twice ($u=e^{-2x}$):
+\begin{align*}
+J&=-e^{-2x}\cos x-\int 2e^{-2x}\cos x\,dx
+ =-e^{-2x}\cos x-2\left(e^{-2x}\sin x+\int 2e^{-2x}\sin x\,dx\right)\\
+ &=-e^{-2x}\cos x-2e^{-2x}\sin x-4J.
+\end{align*}
+Hence $5J=-e^{-2x}(\cos x+2\sin x)$, i.e.
+\[ \int e^{-2x}\sin x\,dx=-\frac{e^{-2x}(\cos x+2\sin x)}{5}+C. \]
+Therefore
+\[ I(R)=\frac{1}{5}-\frac{e^{-2R}(\cos R+2\sin R)}{5}. \]
+As $R\to\infty$: $|\cos R+2\sin R|\le 3$ and $e^{-2R}\to 0$, hence (bounded times tending to zero) the second term tends to $0$. Hence
+\[ \int_0^\infty e^{-2x}\sin x\,dx=\frac15. \]
+\end{solution}

@@ -1,0 +1,20 @@
+% English translation of questions/5785/semA-moedA/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the general solution of the differential equation
+\[ y' = e^{x+y} \]
+\end{question}
+
+\begin{hint}
+$e^{x+y} = e^x e^y$, so this is a separable equation.
+\end{hint}
+
+\begin{solution}
+$y' = e^x e^y$. Since $e^y > 0$ always, there are no constant solutions (for $y\equiv c$ we would get $0 = e^{x+c}$, a contradiction), and we may divide by $e^y$:
+\[ e^{-y}\,y' = e^x \quad\Longrightarrow\quad \int e^{-y}\,dy = \int e^x\,dx \quad\Longrightarrow\quad -e^{-y} = e^x + c. \]
+Set $C = -c$: $e^{-y} = C - e^x$. The left-hand side is positive, so the solution is defined only for $x$ satisfying $e^x < C$ (in particular $C > 0$ is required), and there
+\[ y = -\ln\left(C - e^x\right), \qquad C > 0,\ x < \ln C. \]
+\textbf{Check:} $y' = \frac{e^x}{C - e^x}$, and on the other hand $e^{x+y} = e^x\cdot\frac{1}{C - e^x}$. Equal.
+
+\textbf{Answer:} the general solution is $y(x) = -\ln(C - e^x)$ (equivalently: $e^{-y} + e^x = C$), with a constant $C>0$, on the interval $x < \ln C$.
+\end{solution}

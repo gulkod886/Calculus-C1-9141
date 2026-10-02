@@ -1,0 +1,25 @@
+% English translation of questions/5786/semA-moedB/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Determine whether the following improper integral converges or diverges:
+\[ \int_1^\infty \frac{\cos x}{x^2 - \ln x} \]
+Remark: you may assume that the denominator is positive on the domain of integration.
+\end{question}
+
+\begin{hint}
+The integrand does not have a constant sign. Check absolute convergence: bound $|f(x)| \le \frac{1}{x^2 - \ln x}$ and compare (using the limit comparison test) with $\frac{1}{x^2}$.
+\end{hint}
+
+\begin{solution}
+Denote $f(x) = \frac{\cos x}{x^2 - \ln x}$. The denominator is positive on $[1, \infty)$ (as we may assume; in fact $\ln x \le x - 1 < x \le x^2$ for $x \ge 1$), so $f$ is continuous there and the integral is improper only because of the infinite limit. $f$ changes sign infinitely many times, so we check \textbf{absolute convergence}.
+
+\textbf{Bound:} for every $x \ge 1$,
+\[ 0 \le |f(x)| = \frac{|\cos x|}{x^2 - \ln x} \le \frac{1}{x^2 - \ln x} =: h(x). \]
+
+\textbf{Convergence of $\int_1^\infty h$:} compare with $g(x) = \frac{1}{x^2}$. Both functions are positive, and
+\[ \lim_{x\to\infty} \frac{g(x)}{h(x)} = \lim_{x\to\infty} \frac{x^2 - \ln x}{x^2} = \lim_{x\to\infty} \left( 1 - \frac{\ln x}{x^2} \right) = 1, \]
+since $\frac{\ln x}{x^2} \to 0$ (L'Hôpital: $\frac{1/x}{2x} \to 0$). The limit is finite and positive, so by the limit comparison test $\int_1^\infty h$ and $\int_1^\infty g$ either both converge or both diverge. Since $\int_1^\infty \frac{dx}{x^\alpha}$ converges for $\alpha > 1$, and in particular $\int_1^\infty \frac{dx}{x^2} = 1$, $\int_1^\infty h$ also converges.
+
+\textbf{Conclusion:} by the comparison test (since $0 \le |f| \le h$), $\int_1^\infty |f|$ converges. An absolutely convergent improper integral converges, and hence
+\[ \int_1^\infty \frac{\cos x}{x^2 - \ln x}\,dx \ \text{converges (even absolutely).} \]
+\end{solution}

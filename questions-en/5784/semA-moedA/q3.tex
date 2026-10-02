@@ -1,0 +1,28 @@
+% English translation of questions/5784/semA-moedA/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(14 pts) Find the intervals of increase and decrease and the absolute extrema of the function
+\[ f(x)=\sqrt{2x-x^2} \]
+on its domain.
+\end{question}
+
+\begin{solution}
+\textbf{Domain.} We must require $2x-x^2=x(2-x)\ge0$, i.e. $0\le x\le 2$. The domain is the closed interval $[0,2]$.
+
+\textbf{Derivative.} On the open interval $(0,2)$ the expression under the root is positive, so by the chain rule
+\[ f'(x)=\frac{2-2x}{2\sqrt{2x-x^2}}=\frac{1-x}{\sqrt{2x-x^2}},\qquad 0<x<2. \]
+(At the points $x=0,2$ the function is not differentiable -- the one-sided derivative is infinite -- but they are endpoints.)
+
+\textbf{Sign of the derivative.} The denominator is positive, so the sign of $f'$ is the sign of $1-x$:
+\begin{itemize}
+  \item For $0<x<1$: $f'(x)>0$, hence $f$ is strictly increasing on $[0,1]$.
+  \item For $1<x<2$: $f'(x)<0$, hence $f$ is strictly decreasing on $[1,2]$.
+\end{itemize}
+(Passing to the closed intervals is justified since $f$ is continuous on them -- a consequence of Lagrange's theorem.)
+
+\textbf{Absolute extrema.} $f$ is continuous on the closed interval $[0,2]$, so by Weierstrass's theorem it attains a maximum and a minimum there. The candidate points are the critical point $x=1$ and the endpoints:
+\[ f(0)=0,\qquad f(1)=\sqrt{2-1}=1,\qquad f(2)=0. \]
+Hence
+\[ \boxed{\max_{[0,2]}f=f(1)=1,\qquad \min_{[0,2]}f=f(0)=f(2)=0.} \]
+(Indeed $f\ge0$ always, being a square root, so the minimum $0$ is also clear directly. In addition, $y=\sqrt{2x-x^2}$ is equivalent to $(x-1)^2+y^2=1,\ y\ge0$ -- the upper half of the circle with center $(1,0)$ and radius $1$, which confirms the results.)
+\end{solution}

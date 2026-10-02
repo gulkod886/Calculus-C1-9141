@@ -1,0 +1,22 @@
+% English translation of questions/5783/semB-moedA/q4a.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(20 pts) Compute the following limits
+\[ (1)\ \lim_{x\to0}\frac{\ln(1+2x)}{\sin2x-\sin6x}\qquad\qquad (2)\ \lim_{x\to0}\left(\sqrt{1+2x}\right)^{\frac{1}{(-x)}} \]
+\end{question}
+
+\begin{hint}
+In limit (2), write the expression in the form $e^{g(x)}$ and compute the limit of the exponent.
+\end{hint}
+
+\begin{solution}
+\textbf{(1)} A limit of the form $\frac00$; by L'Hôpital's rule:
+\[ \lim_{x\to0}\frac{\ln(1+2x)}{\sin2x-\sin6x}=\lim_{x\to0}\frac{\frac{2}{1+2x}}{2\cos2x-6\cos6x}=\frac{2}{2-6}=\boxed{-\frac12}. \]
+(Alternatively, using $\ln(1+2x)\sim2x$, $\sin2x\sim2x$, $\sin6x\sim6x$: $\frac{2x}{2x-6x}=-\frac12$.)
+
+\textbf{(2)} For $x$ close to $0$ ($x>-\frac12$, $x\neq0$) the base is positive, and
+\[ \left(\sqrt{1+2x}\right)^{-1/x}=e^{-\frac{\ln(1+2x)}{2x}}. \]
+By the fundamental limit (or L'Hôpital's rule) $\lim_{x\to0}\frac{\ln(1+2x)}{2x}=1$. By continuity of the exponential function,
+\[ \lim_{x\to0}\left(\sqrt{1+2x}\right)^{\frac{1}{-x}}=e^{-1}=\boxed{\frac1e}. \]
+\end{solution}

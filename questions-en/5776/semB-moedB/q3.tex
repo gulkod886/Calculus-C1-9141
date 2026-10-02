@@ -1,0 +1,20 @@
+% English translation of questions/5776/semB-moedB/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\textbf{Prove or disprove:} The integral $\int_2^\infty \frac{dx}{x\ln(x)}dx$ converges.
+\end{question}
+
+\begin{hint}
+Find an antiderivative using the substitution $t=\ln x$.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is false} -- the integral diverges.
+
+The function $\frac{1}{x\ln x}$ is continuous and positive on $[2,\infty)$, so the improper integral is defined as $\lim_{R\to\infty}\int_2^R\frac{dx}{x\ln x}$.
+With the substitution $t=\ln x$, $dt=\frac{dx}{x}$:
+\[ \int\frac{dx}{x\ln x}=\int\frac{dt}{t}=\ln|t|+C=\ln(\ln x)+C \qquad (x>1). \]
+By the Fundamental Theorem (the Newton--Leibniz formula):
+\[ \int_2^R\frac{dx}{x\ln x}=\ln(\ln R)-\ln(\ln 2)\xrightarrow[R\to\infty]{}\infty, \]
+since $\ln R\to\infty$ and hence also $\ln(\ln R)\to\infty$. The limit is not finite, so the integral \textbf{diverges}.
+\end{solution}

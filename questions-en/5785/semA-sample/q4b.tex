@@ -1,0 +1,27 @@
+% English translation of questions/5785/semA-sample/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the general solution of the differential equation
+\[ (x^2 + 4)y' + 2xy^2 = 0 \]
+\end{question}
+
+\begin{hint}
+The equation is separable: $\frac{dy}{y^2} = -\frac{2x}{x^2 + 4}\,dx$. Do not forget the solution $y \equiv 0$.
+\end{hint}
+
+\begin{solution}
+Write the equation in the form ($x^2 + 4 > 0$ for every $x$):
+\[ \frac{dy}{dx} = -\frac{2x}{x^2 + 4}\, y^2, \]
+which is a separable equation.
+
+\textbf{The constant solution:} $y \equiv 0$ satisfies the equation, so it is a solution.
+
+\textbf{For $y \ne 0$:}
+\[ \int \frac{dy}{y^2} = -\int \frac{2x}{x^2 + 4}\,dx. \]
+The left-hand side is $-\frac1y$. On the right-hand side, with the substitution $t = x^2 + 4$, $dt = 2x\,dx$: $\int \frac{2x}{x^2 + 4}\,dx = \ln(x^2 + 4) + C$. Hence
+\[ -\frac{1}{y} = -\ln(x^2 + 4) + C \quad\Longrightarrow\quad y = \frac{1}{\ln(x^2 + 4) - C}. \]
+
+\textbf{Answer:} the general solution is
+\[ \boxed{y = \frac{1}{\ln(x^2 + 4) + C}}, \quad C \in \R \]
+(we renamed the constant; on every interval on which the denominator does not vanish), together with the solution $y \equiv 0$.
+\end{solution}

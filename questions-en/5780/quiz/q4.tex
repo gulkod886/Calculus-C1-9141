@@ -1,0 +1,34 @@
+% English translation of questions/5780/quiz/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The derivative $y'(0)$ of the implicit function $y(x)$ defined by the equation
+$\cos\left(\frac{\pi}{2}+x+y\right)-y=0$ in a neighborhood of the point $(0,0)$ is equal to
+\begin{enumerate}
+  \item $\pi/2$
+  \item $-\frac12$
+  \item $1+\pi/2$
+  \item $\frac12$
+  \item $0$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Differentiate both sides of the equation with respect to $x$, where $y=y(x)$ (chain rule), and then substitute $x=0,\ y=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (b)} $-\frac12$.
+
+First, the point $(0,0)$ satisfies the equation: $\cos\frac{\pi}{2}-0=0$.
+Differentiate both sides of the equation $\cos\left(\frac{\pi}{2}+x+y(x)\right)-y(x)=0$ with respect to $x$, using the chain rule:
+\[
+-\sin\left(\frac{\pi}{2}+x+y\right)\cdot\left(1+y'\right)-y'=0 .
+\]
+Substitute $x=0$, $y(0)=0$: $\sin\frac{\pi}{2}=1$, hence
+\[
+-(1+y'(0))-y'(0)=0\quad\Longrightarrow\quad -1-2y'(0)=0\quad\Longrightarrow\quad y'(0)=\boxed{-\frac12}.
+\]
+(Check: by the identity $\cos(\frac{\pi}{2}+\theta)=-\sin\theta$ the equation is $-\sin(x+y)=y$; differentiating gives $-\cos(x+y)(1+y')=y'$, and at the point $(0,0)$ again $y'(0)=-\frac12$.)
+
+\textbf{Why the others are wrong:} (d) results from a sign error in the derivative of $\cos$. (e) results from forgetting to differentiate the $y$ inside the cosine or the term $-y$. (a) and (c) result from confusing the value of the angle $\frac{\pi}{2}$ with the derivative; the derivative is a single value which we computed, $-\frac12$.
+\end{solution}

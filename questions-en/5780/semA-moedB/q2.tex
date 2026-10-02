@@ -1,0 +1,39 @@
+% English translation of questions/5780/semA-moedB/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the limit
+\[ \lim_{x\to 0}\left(\frac{\sqrt{x+9}-3}{\sqrt{(x+2)^2+5}-x-3}+(\cos(x))^{\frac{1}{\sin^2(2x)}}\right) \]
+\end{question}
+
+\begin{hint}
+Compute each term separately. In the first term multiply the numerator and the denominator by the conjugates (to get rid of the roots).
+\end{hint}
+
+\begin{hint}
+In the second term write $(\cos x)^{\frac{1}{\sin^2(2x)}}=e^{\frac{\ln\cos x}{\sin^2(2x)}}$, and compute the limit of the exponent.
+\end{hint}
+
+\begin{solution}
+We compute each term separately. If both have a finite limit, the limit of the sum equals the sum of the limits (arithmetic of limits).
+
+\textbf{The first term.} For $x=0$ we get $\frac{0}{0}$. We multiply by the conjugates. In the numerator:
+\[ \sqrt{x+9}-3=\frac{(x+9)-9}{\sqrt{x+9}+3}=\frac{x}{\sqrt{x+9}+3}. \]
+In the denominator, $(x+2)^2+5=x^2+4x+9$, hence
+\[ \sqrt{x^2+4x+9}-(x+3)=\frac{x^2+4x+9-(x+3)^2}{\sqrt{x^2+4x+9}+x+3}=\frac{-2x}{\sqrt{x^2+4x+9}+x+3}. \]
+Hence, for small $x\neq0$,
+\[ \frac{\sqrt{x+9}-3}{\sqrt{(x+2)^2+5}-x-3}=\frac{x}{\sqrt{x+9}+3}\cdot\frac{\sqrt{x^2+4x+9}+x+3}{-2x}
+=-\frac{\sqrt{x^2+4x+9}+x+3}{2(\sqrt{x+9}+3)}\xrightarrow[x\to0]{}-\frac{3+3}{2\cdot 6}=-\frac12 , \]
+where we used the continuity of the square root.
+
+\textbf{The second term.} Near $0$ we have $\cos x>0$, hence
+\[ (\cos x)^{\frac{1}{\sin^2(2x)}}=\exp\Big(\frac{\ln(\cos x)}{\sin^2(2x)}\Big). \]
+We compute the limit of the exponent using Taylor expansions about $0$:
+$\cos x=1-\frac{x^2}{2}+o(x^2)$, hence $\ln(\cos x)=\ln\big(1+(-\frac{x^2}{2}+o(x^2))\big)=-\frac{x^2}{2}+o(x^2)$.
+Also $\sin(2x)=2x+o(x)$, hence $\sin^2(2x)=4x^2+o(x^2)$. Therefore
+\[ \lim_{x\to0}\frac{\ln(\cos x)}{\sin^2(2x)}=\lim_{x\to0}\frac{-\frac{x^2}{2}+o(x^2)}{4x^2+o(x^2)}=-\frac18 . \]
+(This can also be obtained by L'Hôpital: $\frac{\ln\cos x}{\sin^2 2x}$ is of the form $\frac00$, and the ratio of the derivatives $\frac{-\tan x}{4\sin(2x)\cos(2x)}=\frac{-\tan x}{2\sin(4x)}\to -\frac{1}{8}$, since $\frac{\tan x}{x}\to1$ and $\frac{\sin 4x}{4x}\to 1$.)
+The exponential function is continuous, hence the second term tends to $e^{-1/8}$.
+
+\textbf{Answer:}
+\[ \lim_{x\to 0}\left(\frac{\sqrt{x+9}-3}{\sqrt{(x+2)^2+5}-x-3}+(\cos x)^{\frac{1}{\sin^2(2x)}}\right)=\boxed{e^{-1/8}-\frac12}\approx 0.3825 . \]
+\end{solution}

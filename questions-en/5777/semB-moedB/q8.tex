@@ -1,0 +1,21 @@
+% English translation of questions/5777/semB-moedB/q8.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Prove or disprove: if the function $|f(x)|$ is Riemann integrable on the interval $[a,b]$, then the function $f(x)$ is also integrable on this interval.
+\end{question}
+
+\begin{hint}
+Look for a function that takes only the values $1$ and $-1$ in a ``dense'' way, similar to the Dirichlet function.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is false.} (The converse is true: if $f$ is integrable then so is $|f|$.)
+
+A counterexample (for $a<b$):
+\[ f(x)=\begin{cases}1, & x\in\Q\\ -1, & x\notin\Q\end{cases}\qquad x\in[a,b]. \]
+Then $|f(x)|=1$ for every $x$, a constant function, hence integrable, and $\int_a^b|f|=b-a$.
+
+On the other hand, $f$ is not Riemann integrable: let $P$ be any partition of $[a,b]$. Every subinterval $[x_{i-1},x_i]$ (of positive length) contains both a rational number and an irrational number (density of $\Q$ and of $\R\setminus\Q$ in $\R$), hence $M_i=\sup f=1$ and $m_i=\inf f=-1$. Therefore
+\[ U(f,P)=\sum M_i\Delta x_i=b-a,\qquad L(f,P)=\sum m_i\Delta x_i=-(b-a), \]
+so that $U(f,P)-L(f,P)=2(b-a)$ for every partition, and it cannot be made smaller than an arbitrary $\eps$. By Riemann's criterion (or: the upper integral $b-a$ differs from the lower integral $-(b-a)$), $f$ is \textbf{not} integrable.
+\end{solution}

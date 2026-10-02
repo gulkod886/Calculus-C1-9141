@@ -1,0 +1,23 @@
+% English translation of questions/5777/semA-moedB/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle\lim_{x\to0}\left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}$
+\end{question}
+
+\begin{hint}
+Check separately where the base and the exponent tend. Is this an indeterminate form at all?
+\end{hint}
+
+\begin{solution}
+The expression is defined only for $x\ge0$ (because of $\sqrt x$), so this is a one-sided limit $x\to0^+$.
+This is \emph{not} an indeterminate form: the base $\frac{1+x}{2+x}\to\frac12>0$ and the exponent $\frac{1-\sqrt x}{1-x}\to1$. Write
+\[
+\left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}=\exp\left(\frac{1-\sqrt{x}}{1-x}\cdot\ln\frac{1+x}{2+x}\right).
+\]
+By the arithmetic of limits and the continuity of $\ln$, the exponent tends to $1\cdot\ln\frac12=\ln\frac12$, and by the continuity of the exponential function:
+\[
+\lim_{x\to0^+}\left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}=e^{\ln\frac12}=\frac12.
+\]
+\textbf{Answer:} $\frac12$.
+\end{solution}

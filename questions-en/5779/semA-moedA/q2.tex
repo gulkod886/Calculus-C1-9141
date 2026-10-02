@@ -1,0 +1,25 @@
+% English translation of questions/5779/semA-moedA/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) To compute $a=\sqrt[3]{29}$ approximately, one writes
+\[ a=3\cdot\sqrt[3]{29/27}=3\cdot\sqrt[3]{1+2/27} \]
+and uses the Maclaurin polynomial of degree 2 of the function $f(x)=3\cdot(1+x)^{1/3}$. Estimate the approximation error using Taylor's formula.
+\end{question}
+
+\begin{hint}
+The remainder in Lagrange form is $R_2(x)=\frac{f'''(c)}{3!}x^3$ for some $c$ between $0$ and $x$. Bound $|f'''(c)|$ for $c\in(0,\frac2{27})$.
+\end{hint}
+
+\begin{solution}
+\textbf{The Maclaurin polynomial.} Differentiate $f(x)=3(1+x)^{1/3}$:
+\[ f'(x)=(1+x)^{-2/3},\qquad f''(x)=-\frac23(1+x)^{-5/3},\qquad f'''(x)=\frac{10}{9}(1+x)^{-8/3}. \]
+Hence $f(0)=3$, $f'(0)=1$, $f''(0)=-\frac23$ and
+\[ P_2(x)=3+x-\frac13x^2. \]
+\textbf{The approximation.} For $x=\frac2{27}$:
+\[ a\approx P_2\!\left(\tfrac2{27}\right)=3+\frac2{27}-\frac13\cdot\frac{4}{729}=3+\frac{162}{2187}-\frac{4}{2187}=\frac{6719}{2187}\approx3.072245. \]
+\textbf{Error estimate.} By Taylor's formula with the Lagrange remainder, there exists $c\in(0,\frac2{27})$ such that
+\[ a-P_2\!\left(\tfrac2{27}\right)=R_2\!\left(\tfrac2{27}\right)=\frac{f'''(c)}{3!}\left(\frac2{27}\right)^3=\frac{10}{54}(1+c)^{-8/3}\cdot\frac{8}{19683}. \]
+Since $c>0$, we have $0<(1+c)^{-8/3}<1$, hence
+\[ 0<R_2<\frac{10}{54}\cdot\frac{8}{19683}=\frac{40}{531441}\approx7.53\cdot10^{-5}. \]
+That is, the error is less than $7.6\cdot10^{-5}$ (in particular less than $10^{-4}$), and the approximation is from below (the remainder is positive). For comparison, $\sqrt[3]{29}=3.0723168\ldots$, and the actual error is about $7.17\cdot10^{-5}$.
+\end{solution}

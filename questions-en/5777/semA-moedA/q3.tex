@@ -1,0 +1,44 @@
+% English translation of questions/5777/semA-moedA/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The function
+\[
+f(x)=\frac{2-(e^x+e^{-x})\cos(x)}{x^4}
+\]
+is defined for $x\neq0$. Is it possible to define $f(0)$ so that the function is continuous at the point $x=0$?
+\end{question}
+
+\begin{hint}
+One must check whether $\lim_{x\to0}f(x)$ exists and is finite.
+\end{hint}
+
+\begin{hint}
+Expand $e^x+e^{-x}$ and $\cos x$ into Maclaurin polynomials up to order $4$ and multiply.
+\end{hint}
+
+\begin{solution}
+It is possible to define $f(0)$ so that $f$ is continuous at $0$ if and only if the limit $\lim_{x\to0}f(x)$ exists and is finite, and then $f(0)$ must be defined to be the limit.
+
+\textbf{Maclaurin expansion.} By the Maclaurin expansions of $e^x$ and of $\cos x$:
+\[
+e^x+e^{-x}=2\left(1+\frac{x^2}{2}+\frac{x^4}{24}\right)+o(x^5)=2+x^2+\frac{x^4}{12}+o(x^5),
+\]
+\[
+\cos x=1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^5).
+\]
+Multiply and keep the terms up to order $4$:
+\[
+(e^x+e^{-x})\cos x=2+x^2+\frac{x^4}{12}-x^2-\frac{x^4}{2}+\frac{x^4}{12}+o(x^4)
+=2+\left(\frac{1}{12}-\frac12+\frac1{12}\right)x^4+o(x^4)=2-\frac{x^4}{3}+o(x^4).
+\]
+Hence
+\[
+2-(e^x+e^{-x})\cos x=\frac{x^4}{3}+o(x^4),
+\qquad\text{and therefore}\qquad
+f(x)=\frac13+\frac{o(x^4)}{x^4}\xrightarrow[x\to0]{}\frac13.
+\]
+
+(Alternative way: four applications of L'Hôpital's rule to $\frac{0}{0}$; the fourth derivative of the numerator at $0$ is $8$ and that of the denominator is $24$, hence the limit is $\frac{8}{24}=\frac13$.)
+
+\textbf{Answer:} Yes. The limit exists and equals $\frac13$, so if we define $f(0)=\frac13$ the function will be continuous at $x=0$.
+\end{solution}

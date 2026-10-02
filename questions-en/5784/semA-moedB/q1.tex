@@ -1,0 +1,23 @@
+% English translation of questions/5784/semA-moedB/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the following limit:
+\[ \lim_{x\to 1}\frac{(x^2+\ln x-1)\cdot\sin(x-1)}{(x-1)(e^x-e)} \]
+\end{question}
+
+\begin{hint}
+Split the expression into a product of $\frac{\sin(x-1)}{x-1}$ and $\frac{x^2+\ln x-1}{e^x-e}$, and compute each limit separately.
+\end{hint}
+
+\begin{solution}
+As $x\to1$ the numerator and the denominator both tend to $0$. Write the expression as a product (for $x$ close to $1$, $x\neq1$, $x>0$):
+\[ \frac{(x^2+\ln x-1)\sin(x-1)}{(x-1)(e^x-e)}=\frac{\sin(x-1)}{x-1}\cdot\frac{x^2+\ln x-1}{e^x-e}. \]
+\textbf{The first factor:} substitute $t=x-1\to0$; from the fundamental limit $\lim_{t\to0}\frac{\sin t}{t}=1$ we get $\lim_{x\to1}\frac{\sin(x-1)}{x-1}=1$.
+
+\textbf{The second factor:} the numerator $x^2+\ln x-1\to 1+0-1=0$ and the denominator $e^x-e\to0$, i.e. this is a $\frac00$ case. Both functions are differentiable in a neighborhood of $1$ and the derivative of the denominator $e^x\neq0$, hence by L'Hôpital's rule
+\[ \lim_{x\to1}\frac{x^2+\ln x-1}{e^x-e}=\lim_{x\to1}\frac{2x+\frac1x}{e^x}=\frac{2+1}{e}=\frac3e, \]
+provided that the limit on the right exists -- and it indeed exists (the function $\frac{2x+1/x}{e^x}$ is continuous at $1$).
+
+\textbf{Summary:} by the arithmetic of limits (product of two finite limits),
+\[ \lim_{x\to 1}\frac{(x^2+\ln x-1)\sin(x-1)}{(x-1)(e^x-e)}=1\cdot\frac3e=\boxed{\frac3e}. \]
+\end{solution}

@@ -1,0 +1,44 @@
+% English translation of questions/5786/quiz/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Check the continuity of the following function at the point 3:
+\[
+f(x)=\begin{cases}
+\frac{\sqrt{x+7}-\sqrt{10}}{\sqrt{x+4}-\sqrt{7}}, & \text{if } x>3,\\
+\sqrt{x^2+1}, & \text{if } x\le 3
+\end{cases}
+\]
+Which of the following statements is true?
+\begin{enumerate}
+  \item The function is continuous at 3.
+  \item The function has a removable discontinuity at 3.
+  \item The function has a jump discontinuity at 3.
+  \item The function has an essential discontinuity at 3.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+For the right limit, multiply the numerator and the denominator by the conjugates of both expressions: $\sqrt{x+7}+\sqrt{10}$ and $\sqrt{x+4}+\sqrt7$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c)}.
+
+\textbf{From the left:} $\sqrt{x^2+1}$ is continuous (a composition of a polynomial and a square root), hence
+\[
+\lim_{x\to3^-}f(x)=\sqrt{3^2+1}=\sqrt{10}=f(3).
+\]
+\textbf{From the right:} a limit of the form $\frac00$. Multiply by the conjugates:
+\[
+\frac{\sqrt{x+7}-\sqrt{10}}{\sqrt{x+4}-\sqrt7}\cdot\frac{\sqrt{x+4}+\sqrt7}{\sqrt{x+4}+\sqrt7}\cdot\frac{\sqrt{x+7}+\sqrt{10}}{\sqrt{x+7}+\sqrt{10}}
+=\frac{\bigl((x+7)-10\bigr)\left(\sqrt{x+4}+\sqrt7\right)}{\bigl((x+4)-7\bigr)\left(\sqrt{x+7}+\sqrt{10}\right)}
+=\frac{\sqrt{x+4}+\sqrt7}{\sqrt{x+7}+\sqrt{10}},
+\]
+where we cancelled $x-3\neq0$. The last expression is continuous at 3, hence
+\[
+\lim_{x\to3^+}f(x)=\frac{\sqrt7+\sqrt7}{\sqrt{10}+\sqrt{10}}=\frac{2\sqrt7}{2\sqrt{10}}=\frac{\sqrt7}{\sqrt{10}} .
+\]
+Both one-sided limits exist and are finite, but $\frac{\sqrt7}{\sqrt{10}}\neq\sqrt{10}$. Hence the limit at 3 does not exist, and there is a jump discontinuity at 3.
+
+\textbf{Why the others are false:} (a) --- the limit at 3 does not exist, so the function is not continuous there (it is only left-continuous). (b) --- a removable discontinuity requires the two-sided limit to exist. (d) --- an essential discontinuity requires at least one of the one-sided limits not to exist as a finite limit, and here both exist.
+\end{solution}

@@ -6,8 +6,16 @@ skipped unless --with-examples is given), parses the metadata header and the
 question / hint / solution environments, converts the text-mode LaTeX to HTML
 (math is left as-is for MathJax), and writes:
 
-  site/data/questions.js   - data for the website (window.BANK = {...})
-  tex/bank.tex             - a single document with every question, for XeLaTeX
+  site/data/questions.js     - data for the website (window.BANK = {...})
+  tex/bank.tex               - a single document with every question, for XeLaTeX
+
+English version: questions-en/ mirrors questions/ (same relative paths) and holds
+only the translated question / hint / solution environments; metadata comes from
+the Hebrew file (an English file may override `note`). Questions with a
+translation are written to
+
+  site/en/data/questions.js  - data for the English website
+  tex/bank-en.tex            - English PDF
 
 Uses the Python standard library only.
 """
@@ -16,13 +24,18 @@ import html
 import json
 import re
 import sys
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 QUESTIONS_DIR = ROOT / "questions"
+QUESTIONS_EN_DIR = ROOT / "questions-en"
 CATEGORIES_FILE = ROOT / "categories.json"
 OUT_JS = ROOT / "site" / "data" / "questions.js"
 OUT_TEX = ROOT / "tex" / "bank.tex"
+OUT_JS_EN = ROOT / "site" / "en" / "data" / "questions.js"
+OUT_TEX_EN = ROOT / "tex" / "bank-en.tex"
+DIST_DIR = ROOT / "dist"
 
 REQUIRED_META = ("year", "number", "categories")
 EXAM_TYPES = ("מבחן", "בוחן")
@@ -30,6 +43,13 @@ GEMATRIA = dict(zip("אבגדהוזחטיכלמנסעפצקרשת",
                     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400]))
 MATH_ENVS = ("equation", "equation*", "align", "align*", "gather", "gather*",
              "multline", "multline*", "cases", "array", "pmatrix", "bmatrix")
+
+
+# Hebrew metadata values -> English display values.
+HEB_LETTER_EN = dict(zip("אבגדהוזח", "abcdefgh"))
+EN_TYPE = {"מבחן": "Exam", "בוחן": "Quiz"}
+EN_MOED = {"א": "A", "ב": "B", "ג": "C", "מיוחד": "Special", "לדוגמה": "Sample"}
+EN_LETTER = {"א": "A", "ב": "B", "ג": "C"}
 
 
 class BuildError(Exception):
@@ -131,6 +151,7 @@ def latex_to_html(src):
                      ("dots", "…"), ("checkmark", "✓")):
         s = re.sub(r"\\" + cmd + r"\b\s?", rep, s)
     s = s.replace("``", "“").replace("''", "”")
+    s = s.replace("---", "—").replace("--", "–")
     s = re.sub(r"\\([%&#_{}$])", r"\1", s)
 
     # 5. Paragraphs.
@@ -172,7 +193,7 @@ def load_question(path, known_categories):
     hints = env_bodies(raw, "hint")
 
     rel = path.relative_to(ROOT).as_posix()
-    return {
+    q = {
         "id": path.relative_to(QUESTIONS_DIR).with_suffix("").as_posix(),
         "file": rel,
         "year": meta["year"],
@@ -192,6 +213,105 @@ def load_question(path, known_categories):
         "solution": latex_to_html(solutions[0]),
         "_tex": {"question": questions[0], "hints": hints, "solution": solutions[0]},
     }
+    q["src"] = source_label(q)
+    return q
+
+
+def load_english(q):
+    """The English counterpart of a loaded Hebrew question, or None if not translated yet."""
+    path = QUESTIONS_EN_DIR / (q["id"] + ".tex")
+    if not path.exists():
+        return None
+    raw = path.read_text(encoding="utf-8")
+    meta = {}
+    for line in raw.splitlines():
+        m = re.match(r"^\s*%\s*([a-z_]+)\s*:\s*(.*?)\s*$", line)
+        if m:
+            meta[m.group(1)] = m.group(2)
+    questions = env_bodies(raw, "question")
+    solutions = env_bodies(raw, "solution")
+    hints = env_bodies(raw, "hint")
+    if len(questions) != 1 or len(solutions) != 1:
+        raise BuildError(f"{path}: expected exactly one question and one solution environment")
+    if len(hints) != len(q["_tex"]["hints"]):
+        raise BuildError(f"{path}: {len(hints)} hints, the Hebrew file has {len(q['_tex']['hints'])}")
+    body = "\n".join([questions[0], solutions[0]] + hints)
+    if re.search(r"[\u0590-\u05FF]", strip_comments(body)):
+        raise BuildError(f"{path}: contains Hebrew characters")
+    if q["note"] and not meta.get("note"):
+        raise BuildError(f"{path}: the Hebrew file has a note; add '% note: <English>'")
+    number = "".join(HEB_LETTER_EN.get(ch, ch) for ch in q["number"])
+    e = dict(q)
+    e.update({
+        "file": path.relative_to(ROOT).as_posix(),
+        "year": english_year(q["yearValue"]),
+        "type": EN_TYPE[q["type"]],
+        "semester": EN_LETTER.get(q["semester"], q["semester"]),
+        "moed": EN_MOED.get(q["moed"], q["moed"]),
+        "note": meta.get("note", ""),
+        "part": EN_LETTER.get(q["part"], q["part"]),
+        "number": number,
+        "question": latex_to_html(questions[0]),
+        "hints": [latex_to_html(h) for h in hints],
+        "solution": latex_to_html(solutions[0]),
+        "_tex": {"question": questions[0], "hints": hints, "solution": solutions[0]},
+    })
+    e["src"] = source_label_en(e)
+    e["exam"] = exam_label_en(e)
+    return e
+
+
+def english_year(year_value):
+    """Hebrew year 5785 -> academic year '2024/25' (semester A starts in the autumn)."""
+    start = year_value - 3761
+    return f"{start}/{(start + 1) % 100:02d}"
+
+
+def source_label(q):
+    """"מועד א' תשפ"ה סמסטר א'" - shown next to the question number."""
+    if q["type"] == "בוחן":
+        what = "בוחן לדוגמה" if q["moed"] == "לדוגמה" else "בוחן"
+    elif q["moed"] == "לדוגמה":
+        what = "מבחן לדוגמה"
+    elif q["moed"] == "מיוחד":
+        what = "מועד מיוחד"
+    else:
+        what = f"מועד {q['moed']}'"
+    s = f"{what} {q['year']}"
+    if q["semester"]:
+        s += f" סמסטר {q['semester']}'"
+    if q["note"]:
+        s += f" ({q['note']})"
+    return s
+
+
+def english_what(e):
+    if e["type"] == "Quiz":
+        return "Sample quiz" if e["moed"] == "Sample" else "Quiz"
+    if e["moed"] == "Sample":
+        return "Sample exam"
+    if e["moed"] == "Special":
+        return "Special Moed"
+    return f"Moed {e['moed']}"
+
+
+def source_label_en(e):
+    s = f"{english_what(e)}, {e['year']}"
+    if e["semester"]:
+        s += f", Semester {e['semester']}"
+    if e["note"]:
+        s += f" ({e['note']})"
+    return s
+
+
+def exam_label_en(e):
+    s = e["year"]
+    if e["semester"]:
+        s += f" Semester {e['semester']}"
+    s += " " + english_what(e)
+    if e["note"]:
+        s += f" ({e['note']})"
+    return s
 
 
 def sort_key(q):
@@ -218,33 +338,40 @@ def exam_label(q):
     return " ".join(parts)
 
 
-def write_tex(questions):
+def write_tex(questions, en=False):
     parts = [
         "% Generated by scripts/build.py - do not edit.",
         r"\documentclass[11pt]{article}",
-        r"\input{preamble}",
+        r"\input{preamble-en}" if en else r"\input{preamble}",
         r"\begin{document}",
-        r"\title{מאגר שאלות בחינה}\date{}\maketitle",
+        r"\title{Exam Question Bank}\date{}\maketitle" if en else r"\title{מאגר שאלות בחינה}\date{}\maketitle",
     ]
     current = None
     for q in questions:
-        exam = exam_label(q)
+        exam = q["exam"]
         if exam != current:
             current = exam
             parts.append(rf"\section*{{{exam}}}")
-        part = f"חלק {q['part']}', " if q["part"] else ""
-        parts.append(rf"\subsection*{{{part}שאלה {q['number']}}}")
+        if en:
+            part = f"Part {q['part']}, " if q["part"] else ""
+            parts.append(rf"\subsection*{{{part}Question {q['number']}}}")
+        else:
+            part = f"חלק {q['part']}', " if q["part"] else ""
+            parts.append(rf"\subsection*{{{part}שאלה {q['number']}}}")
         parts.append(r"\begin{question}" + "\n" + q["_tex"]["question"] + "\n" + r"\end{question}")
         for h in q["_tex"]["hints"]:
             parts.append(r"\begin{hint}" + "\n" + h + "\n" + r"\end{hint}")
         parts.append(r"\begin{solution}" + "\n" + q["_tex"]["solution"] + "\n" + r"\end{solution}")
     parts.append(r"\end{document}")
-    OUT_TEX.write_text("\n\n".join(parts) + "\n", encoding="utf-8")
+    (OUT_TEX_EN if en else OUT_TEX).write_text("\n\n".join(parts) + "\n", encoding="utf-8")
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--with-examples", action="store_true", help="include folders starting with '_'")
+    ap.add_argument("--zip", action="store_true",
+                    help="also write dist/question-bank-he.zip and dist/question-bank-en.zip: "
+                         "one self-contained site per language, e.g. for a Moodle File resource")
     args = ap.parse_args()
 
     categories = json.loads(CATEGORIES_FILE.read_text(encoding="utf-8"))
@@ -268,18 +395,65 @@ def main():
     questions.sort(key=sort_key)
     for q in questions:
         q["exam"] = exam_label(q)
-    write_tex(questions)
 
+    english = []
     for q in questions:
-        del q["_tex"]
-    OUT_JS.parent.mkdir(parents=True, exist_ok=True)
-    payload = json.dumps({"categories": categories, "questions": questions},
-                         ensure_ascii=False, indent=1)
-    OUT_JS.write_text("// Generated by scripts/build.py - do not edit.\nwindow.BANK = " + payload + ";\n",
-                      encoding="utf-8")
-    exams = {exam_label(q) for q in questions}
+        try:
+            e = load_english(q)
+        except BuildError as err:
+            errors.append(str(err))
+            continue
+        if e:
+            english.append(e)
+    known_ids = {q["id"] for q in questions}
+    for f in sorted(QUESTIONS_EN_DIR.rglob("*.tex")) if QUESTIONS_EN_DIR.exists() else []:
+        if f.relative_to(QUESTIONS_EN_DIR).with_suffix("").as_posix() not in known_ids:
+            errors.append(f"{f}: no matching Hebrew question in questions/")
+    if errors:
+        print("\n".join(errors), file=sys.stderr)
+        sys.exit(1)
+
+    write_tex(questions)
+    write_tex(english, en=True)
+    categories_en = [{"id": c["id"], "name": c["name_en"]} for c in categories]
+    write_js(OUT_JS, categories, questions)
+    write_js(OUT_JS_EN, categories_en, english)
+
+    if args.zip:
+        for lang in ("he", "en"):
+            out = write_zip(lang)
+            print(f"Wrote {out.relative_to(ROOT)}")
+
+    exams = {q["exam"] for q in questions}
     print(f"Built {len(questions)} questions from {len(exams)} exams -> "
           f"{OUT_JS.relative_to(ROOT)}, {OUT_TEX.relative_to(ROOT)}")
+    print(f"English: {len(english)}/{len(questions)} questions translated -> "
+          f"{OUT_JS_EN.relative_to(ROOT)}, {OUT_TEX_EN.relative_to(ROOT)}")
+
+
+def write_zip(lang):
+    """One language as a stand-alone site (index.html at the top, no link to the other language)."""
+    site = ROOT / "site"
+    page_dir = site / "en" if lang == "en" else site
+    page = (page_dir / "index.html").read_text(encoding="utf-8")
+    page = re.sub(r'<a class="lang"[^>]*>[^<]*</a>', "", page)
+    page = page.replace('href="../', 'href="').replace('src="../', 'src="')
+    DIST_DIR.mkdir(exist_ok=True)
+    out = DIST_DIR / f"question-bank-{lang}.zip"
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("index.html", page)
+        z.write(site / "app.js", "app.js")
+        z.write(site / "style.css", "style.css")
+        z.write(page_dir / "data" / "questions.js", "data/questions.js")
+    return out
+
+
+def write_js(path, categories, questions):
+    data = [{k: v for k, v in q.items() if k != "_tex"} for q in questions]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = json.dumps({"categories": categories, "questions": data}, ensure_ascii=False, indent=1)
+    path.write_text("// Generated by scripts/build.py - do not edit.\nwindow.BANK = " + payload + ";\n",
+                    encoding="utf-8")
 
 
 if __name__ == "__main__":

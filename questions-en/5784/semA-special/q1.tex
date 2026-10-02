@@ -1,0 +1,17 @@
+% English translation of questions/5784/semA-special/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the following limit:
+\[ \lim_{x\to0^+}\frac{\ln(e^x-1)}{3\cdot\ln x} \]
+\end{question}
+
+\begin{hint}
+This is an $\frac{\infty}{\infty}$ case; use L'Hôpital's rule.
+\end{hint}
+
+\begin{solution}
+As $x\to0^+$: $e^x-1\to0^+$, hence $\ln(e^x-1)\to-\infty$, and also $3\ln x\to-\infty$. This is an $\frac{\infty}{\infty}$ case. The numerator and the denominator are differentiable on $(0,\infty)$ and the derivative of the denominator $\frac3x\neq0$, so by L'Hôpital's rule (provided that the limit on the right exists):
+\[ \lim_{x\to0^+}\frac{\ln(e^x-1)}{3\ln x}=\lim_{x\to0^+}\frac{\frac{e^x}{e^x-1}}{\frac3x}=\lim_{x\to0^+}\frac{e^x}{3}\cdot\frac{x}{e^x-1}. \]
+We have $e^x\to1$, and from the fundamental limit $\lim_{x\to0}\frac{e^x-1}{x}=1$ we get $\frac{x}{e^x-1}\to1$. By the arithmetic of limits the limit on the right exists and equals $\frac13\cdot1=\frac13$, and therefore
+\[ \lim_{x\to0^+}\frac{\ln(e^x-1)}{3\ln x}=\boxed{\frac13}. \]
+\end{solution}

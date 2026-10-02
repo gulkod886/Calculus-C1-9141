@@ -1,0 +1,17 @@
+% English translation of questions/5778/semA-moedC/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\sqrt{\arcsin x}$ and the $x$-axis, for $0\le x\le1$.
+\end{question}
+
+\begin{hint}
+We need to compute $\int\arcsin x\,dx$ — use integration by parts with $u=\arcsin x$, $v'=1$.
+\end{hint}
+
+\begin{solution}
+$V=\pi\int_0^1f^2(x)\,dx=\pi\int_0^1\arcsin x\,dx$. We integrate by parts, with $u=\arcsin x$, $v'=1$, $u'=\frac{1}{\sqrt{1-x^2}}$, $v=x$:
+\[ \int\arcsin x\,dx=x\arcsin x-\int\frac{x}{\sqrt{1-x^2}}\,dx=x\arcsin x+\sqrt{1-x^2}+C \]
+(the last integral — by the substitution $t=1-x^2$, $dt=-2x\,dx$: $\int\frac{x\,dx}{\sqrt{1-x^2}}=-\frac12\int t^{-1/2}dt=-\sqrt{1-x^2}$.) The function $x\arcsin x+\sqrt{1-x^2}$ is continuous on $[0,1]$ (the integrand $\arcsin x$ is continuous on the closed interval), hence by the Fundamental Theorem
+\[ \int_0^1\arcsin x\,dx=\left[x\arcsin x+\sqrt{1-x^2}\right]_0^1=\left(\frac\pi2+0\right)-(0+1)=\frac\pi2-1. \]
+\[ \boxed{V=\pi\left(\frac\pi2-1\right)=\frac{\pi^2}{2}-\pi} \]
+\end{solution}

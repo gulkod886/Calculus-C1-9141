@@ -1,0 +1,25 @@
+% English translation of questions/5783/semA-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) For which values of the parameter $a$ does the following function have a limit at $x=0$?
+\[ f(x)=\begin{cases} \dfrac{\sin(2x)}{x}, & x<0 \\[2mm] \dfrac{x+3}{4x+a}, & x\ge 0 \end{cases} \]
+\end{question}
+
+\begin{hint}
+Compute the one-sided limits separately and require them to be equal. Pay attention to the case $a=0$.
+\end{hint}
+
+\begin{solution}
+The function has a limit at $x=0$ if and only if both one-sided limits exist (are finite) and are equal.
+
+\textbf{Limit from the left:} by the fundamental limit $\lim_{t\to 0}\frac{\sin t}{t}=1$,
+\[ \lim_{x\to 0^-}\frac{\sin(2x)}{x}=\lim_{x\to 0^-}2\cdot\frac{\sin(2x)}{2x}=2. \]
+
+\textbf{Limit from the right:} if $a\neq 0$, the numerator and the denominator are continuous at $0$ and the denominator is different from $0$ there, hence
+\[ \lim_{x\to 0^+}\frac{x+3}{4x+a}=\frac{3}{a}. \]
+If $a=0$, then $\frac{x+3}{4x}\to +\infty$ as $x\to 0^+$ (the numerator tends to $3$ and the denominator to $0^+$), and the limit from the right is not finite, so there is no limit.
+
+Hence for $a\ne 0$ we need $\frac{3}{a}=2$, i.e. $a=\frac32$. (In this case the denominator $4x+\frac32>0$ for every $x\ge 0$, so the function is well defined in a right neighborhood of $0$.)
+
+\textbf{Answer:} the function has a limit at $x=0$ only for $a=\frac{3}{2}$, and the value of the limit is $2$.
+\end{solution}

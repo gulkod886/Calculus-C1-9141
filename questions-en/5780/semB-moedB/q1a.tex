@@ -1,0 +1,17 @@
+% English translation of questions/5780/semB-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the derivative of the function $f(x)=\sin(2x+1)$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).
+\end{question}
+
+\begin{hint}
+Use the identity $\sin\alpha-\sin\beta=2\sin\frac{\alpha-\beta}{2}\cos\frac{\alpha+\beta}{2}$ and the limit $\lim_{t\to0}\frac{\sin t}{t}=1$.
+\end{hint}
+
+\begin{solution}
+By definition, $f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$. By the sum-to-product identity,
+\[ \sin(2x+2h+1)-\sin(2x+1)=2\sin(h)\cos(2x+1+h). \]
+Hence
+\[ f'(x)=\lim_{h\to0}\frac{2\sin h\cos(2x+1+h)}{h}=2\lim_{h\to0}\frac{\sin h}{h}\cdot\lim_{h\to0}\cos(2x+1+h)=2\cdot1\cdot\cos(2x+1), \]
+where we used the basic limit $\frac{\sin h}{h}\to1$ and the continuity of $\cos$. That is, $\boxed{f'(x)=2\cos(2x+1)}$.
+\end{solution}

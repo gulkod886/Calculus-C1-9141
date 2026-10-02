@@ -1,0 +1,18 @@
+% English translation of questions/5784/semB-moedC/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Write the Maclaurin polynomial of order 3 of $f(x)=\sin(\cos(x))$
+\end{question}
+
+\begin{hint}
+$f$ is even, so the coefficients of $x$ and of $x^3$ vanish; it remains to compute $f(0)$ and $f''(0)$.
+\end{hint}
+
+\begin{solution}
+We compute derivatives by the chain rule:
+\[ f'(x)=\cos(\cos x)\cdot(-\sin x)=-\sin x\cos(\cos x), \]
+\[ f''(x)=-\cos x\cos(\cos x)-\sin x\cdot\sin(\cos x)\cdot\sin x=-\cos x\cos(\cos x)-\sin^2x\,\sin(\cos x). \]
+At the point $0$: $f(0)=\sin1$, $f'(0)=0$, $f''(0)=-\cos1$. Since $f(-x)=\sin(\cos(-x))=f(x)$, the function is even, so all its derivatives of odd order vanish at $0$ (the derivative of an even function is odd), and in particular $f'''(0)=0$. Hence
+\[ P_3(x)=f(0)+f'(0)x+\frac{f''(0)}{2}x^2+\frac{f'''(0)}{6}x^3=\boxed{\sin1-\frac{\cos1}{2}x^2}. \]
+(Approximately: $0.8415-0.2702x^2$.)
+\end{solution}

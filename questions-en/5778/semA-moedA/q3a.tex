@@ -1,0 +1,31 @@
+% English translation of questions/5778/semA-moedA/q3a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the limit:
+\[ \lim_{x\to0}\left(\frac{\sqrt{1-2x+x^3}-\sqrt[3]{1-3x+x^2}}{x^2}\right) \]
+\underline{Hint}: you may use Maclaurin formulas.
+\end{question}
+
+\begin{hint}
+Expand each root using $(1+t)^p=1+pt+\frac{p(p-1)}{2}t^2+o(t^2)$ up to order $x^2$.
+\end{hint}
+
+\begin{solution}
+We use the Maclaurin expansion $(1+t)^p=1+pt+\frac{p(p-1)}{2!}t^2+o(t^2)$ as $t\to0$.
+
+For the first root, $t=x^3-2x\to0$ and $p=\frac12$:
+\begin{align*}
+\sqrt{1-2x+x^3}&=1+\frac12(x^3-2x)-\frac18(x^3-2x)^2+o(x^2)\\
+&=1-x+\frac{x^3}{2}-\frac18\left(4x^2-4x^4+x^6\right)+o(x^2)=1-x-\frac{x^2}{2}+o(x^2).
+\end{align*}
+(We used the fact that $t=O(x)$, hence $o(t^2)=o(x^2)$, and that the powers $x^3,x^4,x^6$ are $o(x^2)$.)
+
+For the second root, $t=-3x+x^2$ and $p=\frac13$, $\frac{p(p-1)}{2}=\frac{\frac13\cdot(-\frac23)}{2}=-\frac19$:
+\begin{align*}
+\sqrt[3]{1-3x+x^2}&=1+\frac13(-3x+x^2)-\frac19(-3x+x^2)^2+o(x^2)\\
+&=1-x+\frac{x^2}{3}-\frac19\left(9x^2-6x^3+x^4\right)+o(x^2)=1-x-\frac{2x^2}{3}+o(x^2).
+\end{align*}
+Hence
+\[ \frac{\sqrt{1-2x+x^3}-\sqrt[3]{1-3x+x^2}}{x^2}=\frac{\left(-\frac12+\frac23\right)x^2+o(x^2)}{x^2}=\frac16+\frac{o(x^2)}{x^2}\xrightarrow[x\to0]{}\frac16. \]
+\[ \boxed{\lim_{x\to0}\frac{\sqrt{1-2x+x^3}-\sqrt[3]{1-3x+x^2}}{x^2}=\frac16} \]
+\end{solution}

@@ -1,0 +1,19 @@
+% English translation of questions/5778/semA-moedC/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit:
+the limit of the function $\displaystyle\lim_{x\to0}\tan x\ln(x^2)$.
+\end{question}
+
+\begin{hint}
+Write $\tan x\ln(x^2)=\frac{\tan x}{x}\cdot 2x\ln|x|$.
+\end{hint}
+
+\begin{solution}
+For $0<|x|<\frac\pi2$: $\ln(x^2)=2\ln|x|$, hence
+\[ \tan x\ln(x^2)=\frac{\tan x}{x}\cdot 2x\ln|x|. \]
+It is known that $\lim_{x\to0}\frac{\tan x}{x}=1$ (a famous limit). Also $\lim_{x\to0}x\ln|x|=0$: for $x\to0^+$ by L'Hôpital ($\frac\infty\infty$)
+\[ \lim_{x\to0^+}\frac{\ln x}{1/x}=\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}(-x)=0, \]
+and for $x\to0^-$ it follows from the fact that $x\ln|x|$ is odd. Hence
+\[ \boxed{\lim_{x\to0}\tan x\ln(x^2)=1\cdot2\cdot0=0} \]
+\end{solution}

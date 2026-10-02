@@ -1,0 +1,19 @@
+% English translation of questions/5778/semA-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit:
+the limit of the sequence $\displaystyle\lim_{n\to\infty}\left(\sqrt{(n^2+2)(n^2-4)}-\sqrt{n^4-7}\right)$.
+\end{question}
+
+\begin{hint}
+Multiply and divide by the conjugate $\sqrt{(n^2+2)(n^2-4)}+\sqrt{n^4-7}$.
+\end{hint}
+
+\begin{solution}
+For every $n\ge2$ both roots are defined. Multiply and divide by the conjugate:
+\[ \sqrt{(n^2+2)(n^2-4)}-\sqrt{n^4-7}=\frac{(n^2+2)(n^2-4)-(n^4-7)}{\sqrt{(n^2+2)(n^2-4)}+\sqrt{n^4-7}}. \]
+In the numerator: $(n^2+2)(n^2-4)=n^4-2n^2-8$, hence the numerator is $n^4-2n^2-8-n^4+7=-2n^2-1$. Divide the numerator and the denominator by $n^2$:
+\[ \frac{-2n^2-1}{\sqrt{(n^2+2)(n^2-4)}+\sqrt{n^4-7}}=\frac{-2-\frac1{n^2}}{\sqrt{\left(1+\frac2{n^2}\right)\left(1-\frac4{n^2}\right)}+\sqrt{1-\frac7{n^4}}}. \]
+By the arithmetic of limits and the continuity of the square root, the numerator tends to $-2$ and the denominator to $1+1=2$. Hence
+\[ \boxed{\lim_{n\to\infty}\left(\sqrt{(n^2+2)(n^2-4)}-\sqrt{n^4-7}\right)=-1} \]
+\end{solution}

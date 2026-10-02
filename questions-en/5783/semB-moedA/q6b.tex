@@ -1,0 +1,16 @@
+% English translation of questions/5783/semB-moedA/q6b.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(5 pts) Is it true that the equation $e^x-\sin x=0$ has no real solutions? Justify
+\end{question}
+
+\begin{hint}
+Check what happens for $x<0$: $e^x$ is very small, and $\sin x$ reaches $1$. Try the Intermediate Value Theorem on a suitable interval.
+\end{hint}
+
+\begin{solution}
+\textbf{No} -- the equation has real solutions. Define $g(x)=e^x-\sin x$, continuous on $\R$.
+\[ g(-\pi)=e^{-\pi}-0>0,\qquad g\left(-\tfrac{3\pi}{2}\right)=e^{-3\pi/2}-\sin\left(-\tfrac{3\pi}{2}\right)=e^{-3\pi/2}-1<0, \]
+since $e^{-3\pi/2}<1$. By the \textbf{Intermediate Value Theorem} there exists $c\in\left(-\frac{3\pi}2,-\pi\right)$ with $g(c)=0$, i.e. $e^c=\sin c$ (numerically $c\approx-3.183$). In the same way, every interval $\left(-\frac{3\pi}{2}-2\pi k,\,-\pi-2\pi k\right)$ contains a solution, so there are infinitely many solutions (all of them negative: for $x\ge0$, $e^x\ge1\ge\sin x$ with equality impossible simultaneously, hence there are no non-negative solutions).
+\end{solution}

@@ -1,0 +1,15 @@
+% English translation of questions/5779/semB-moedA/q1c.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(5 pts) What is the slope of the tangent to the curve $y=\int_0^{x+1}e^{-2t^2}\,dt$ at its point with $x=0$.
+\end{question}
+
+\begin{hint}
+Use the Fundamental Theorem of Calculus together with the chain rule.
+\end{hint}
+
+\begin{solution}
+Denote $F(u)=\int_0^u e^{-2t^2}\,dt$. The function $e^{-2t^2}$ is continuous, so by the Fundamental Theorem $F'(u)=e^{-2u^2}$. Hence $y(x)=F(x+1)$ and by the chain rule
+\[ y'(x)=F'(x+1)\cdot 1=e^{-2(x+1)^2}. \]
+The slope of the tangent at the point $x=0$ is $y'(0)=e^{-2}=\dfrac{1}{e^2}$.
+\end{solution}

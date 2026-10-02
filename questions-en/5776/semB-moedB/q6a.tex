@@ -1,0 +1,40 @@
+% English translation of questions/5776/semB-moedB/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Find the domain, the intersection points with the axes, the intervals of increase and decrease, the extremum points, the asymptotes, and the intervals of convexity and concavity of the following function:
+\[ f(x)=(x+2)e^{\frac1x}. \]
+\end{question}
+
+\begin{hint}
+For the oblique asymptote compute $\lim\frac{f(x)}{x}$ and then $\lim (f(x)-x)$; use the substitution $t=\frac1x$ and the limit $\frac{e^t-1}{t}\to1$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain:} $x\neq0$.
+
+\textbf{Intersection with the axes:} There is no intersection with the $y$-axis (since $0$ is not in the domain). $f(x)=0\iff x+2=0$ (since $e^{1/x}>0$), so the intersection point with the $x$-axis is $(-2,0)$. In addition, $f<0$ for $x<-2$ and $f>0$ for $x>-2,\ x\ne0$.
+
+\textbf{First derivative:}
+\[ f'(x)=e^{1/x}+(x+2)e^{1/x}\cdot\left(-\frac1{x^2}\right)=e^{1/x}\,\frac{x^2-x-2}{x^2}=\frac{(x-2)(x+1)}{x^2}e^{1/x}. \]
+The sign is determined by $(x-2)(x+1)$:
+\begin{itemize}
+  \item $f'>0$ on $(-\infty,-1)$ and on $(2,\infty)$ -- \textbf{increasing};
+  \item $f'<0$ on $(-1,0)$ and on $(0,2)$ -- \textbf{decreasing}.
+\end{itemize}
+\textbf{Extrema:} At $x=-1$ the derivative changes sign from $+$ to $-$: a local maximum $f(-1)=e^{-1}=\frac1e$. At $x=2$ from $-$ to $+$: a local minimum $f(2)=4e^{1/2}=4\sqrt e$.
+
+\textbf{Vertical asymptotes:} As $x\to0^+$, $\frac1x\to+\infty$, hence $e^{1/x}\to\infty$ and $f(x)\to 2\cdot\infty=+\infty$: $x=0$ is a vertical asymptote (from the right). As $x\to0^-$, $\frac1x\to-\infty$, $e^{1/x}\to0$ and $f(x)\to 0$ (no asymptote from the left; the graph has a ``hole'' at the origin).
+
+\textbf{Oblique asymptotes:} $\frac{f(x)}{x}=\left(1+\frac2x\right)e^{1/x}\to1$ as $x\to\pm\infty$. Also
+\[ f(x)-x=x\left(e^{1/x}-1\right)+2e^{1/x}=\frac{e^{t}-1}{t}+2e^{t}\Big|_{t=1/x}\;\xrightarrow[t\to0]{}\;1+2=3. \]
+Hence $y=x+3$ is an oblique asymptote both at $+\infty$ and at $-\infty$. (There is no horizontal asymptote.)
+
+\textbf{Second derivative:} Differentiate $f'(x)=\left(1-\frac1x-\frac2{x^2}\right)e^{1/x}$:
+\[ f''(x)=\left(\frac1{x^2}+\frac4{x^3}\right)e^{1/x}-\frac1{x^2}\left(1-\frac1x-\frac2{x^2}\right)e^{1/x}=\frac{5x+2}{x^4}e^{1/x}. \]
+The sign is determined by $5x+2$:
+\begin{itemize}
+  \item $f''<0$ on $(-\infty,-\frac25)$ -- \textbf{concave} ($\cap$);
+  \item $f''>0$ on $(-\frac25,0)$ and on $(0,\infty)$ -- \textbf{convex} ($\cup$).
+\end{itemize}
+Inflection point: $x=-\frac25$, $f(-\frac25)=\frac85e^{-5/2}$.
+\end{solution}

@@ -1,0 +1,20 @@
+% English translation of questions/5776/semB-moedC/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\textbf{Prove or disprove:} The following equation has a solution in $[0,\pi]$:
+\[ \ln(x+1)-\sin(x)=1 \]
+\end{question}
+
+\begin{hint}
+Define $g(x)=\ln(x+1)-\sin(x)-1$ and check its sign at the endpoints of the interval.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is true.} Define $g(x)=\ln(x+1)-\sin x-1$. The function $g$ is continuous on $[0,\pi]$ as a sum of continuous functions ($\ln(x+1)$ is continuous for $x>-1$).
+
+At the endpoints:
+\[ g(0)=\ln1-\sin0-1=-1<0,\qquad g(\pi)=\ln(\pi+1)-\sin\pi-1=\ln(\pi+1)-1>0, \]
+where the last inequality follows from $\pi+1>e$ (since $\pi+1>4>e$), and hence $\ln(\pi+1)>\ln e=1$. (Numerically $\ln(\pi+1)\approx1.421$.)
+
+By the Intermediate Value Theorem (Bolzano's theorem) there exists $c\in(0,\pi)$ for which $g(c)=0$, i.e., $\ln(c+1)-\sin c=1$. Hence the equation has a solution in the interval.
+\end{solution}

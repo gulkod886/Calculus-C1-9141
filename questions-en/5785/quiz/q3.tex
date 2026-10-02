@@ -1,0 +1,29 @@
+% English translation of questions/5785/quiz/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the inverse function of the function $f(x)=\ln(1+\sqrt{x})$ and write down the domain of the inverse function.
+\end{question}
+
+\begin{hint}
+The domain of the inverse function is the image of $f$. Find the image, then solve the equation $y=\ln(1+\sqrt x)$ for $x$.
+\end{hint}
+
+\begin{solution}
+\textbf{The domain and image of $f$.} $\sqrt x$ is defined for $x\ge0$, and then $1+\sqrt x\ge1>0$, so $\ln(1+\sqrt x)$ is defined. Hence $D_f=[0,\infty)$.
+
+$f$ is strictly increasing: $\sqrt x$ is strictly increasing on $[0,\infty)$ and $\ln$ is strictly increasing, and a composition of strictly increasing functions is strictly increasing. In particular $f$ is one-to-one and therefore invertible on its image.
+
+The image: $f(0)=\ln 1=0$, so $f(x)\ge0$ for every $x\ge0$. For every $y\ge0$ we will find below an $x\ge0$ with $f(x)=y$, and therefore $\operatorname{Im}f=[0,\infty)$.
+
+\textbf{Computing the inverse.} Let $y\ge0$. Solve $y=\ln(1+\sqrt x)$:
+\[
+e^y=1+\sqrt x\iff \sqrt x=e^y-1 .
+\]
+Since $y\ge0$ we have $e^y-1\ge0$, so there is a unique solution $x=(e^y-1)^2\ge0$. (For $y<0$ we would get $\sqrt x<0$, so there is no solution, as expected since $y$ is not in the image.)
+
+Hence
+\[
+\boxed{f^{-1}(x)=\left(e^x-1\right)^2,\qquad D_{f^{-1}}=[0,\infty).}
+\]
+\textbf{Check:} for $x\ge0$: $f(f^{-1}(x))=\ln\left(1+\sqrt{(e^x-1)^2}\right)=\ln\left(1+|e^x-1|\right)=\ln(e^x)=x$, since $e^x-1\ge0$. Note that restricting the domain to $[0,\infty)$ is necessary: the formula $(e^x-1)^2$ is defined for every $x$, but for $x<0$ it is not the inverse of $f$.
+\end{solution}

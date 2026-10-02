@@ -3,9 +3,10 @@
 ## Layout
 - `exams/` — original files as uploaded: `exams/מבחנים/<year>/...` (final exams) and `exams/בחנים/...` (midterm quizzes). Some include solutions, some are handwritten solution scans.
 - `questions/<numeric year>/<slug>/q<N>.tex` — one file per question. Numeric year: תשפ"ה = 5785. Slug: `semA-moedA`, `semA-moedB`, `semA-moedC`, `semA-special` (מועד מיוחד), `semA-sample` (מבחן לדוגמה), `semB-moedA`, `quiz` (בוחן), `quiz-sample`; add `-<name>` for a lecturer-specific version (e.g. `semA-moedA-hodisman`). Folders starting with `_` are examples and are not built.
-- `categories.json` — category list (id + Hebrew name). Add a category here before using it.
-- `scripts/build.py` — builds `site/data/questions.js` (site) and `tex/bank.tex` (full PDF). Run after every change; it fails on missing metadata or an unknown category.
-- `site/` — static site (RTL, MathJax). Opens directly as `site/index.html`, no server needed.
+- `questions-en/<same path>.tex` — English translation of each question: only the `question`/`hint`/`solution` environments (metadata comes from the Hebrew file; `% note:` must be given in English if the Hebrew file has a note). Same number of hints, math identical to the Hebrew file, no Hebrew characters outside comments.
+- `categories.json` — category list (id + Hebrew `name` + English `name_en`). Add a category here before using it.
+- `scripts/build.py` — builds `site/data/questions.js` + `tex/bank.tex` (Hebrew) and `site/en/data/questions.js` + `tex/bank-en.tex` (English). Run after every change; it fails on missing metadata, an unknown category, or a malformed English file.
+- `site/` — static site (RTL, MathJax). Opens directly as `site/index.html`, no server needed. `site/en/index.html` is the English version (LTR); it shares `site/app.js` and `site/style.css` (UI strings in `app.js` are chosen by `<html lang>`).
 
 ## Question file format
 ```tex
@@ -35,7 +36,8 @@ Supported text-mode LaTeX: `$..$`, `\[..\]`, `align*` and similar, `enumerate`/`
 4. Write a full, detailed solution in Hebrew at the level of the course: every step justified, theorems named, the final answer stated clearly. If the exam has an official solution, use it but expand it.
 5. Add 1–3 hints for questions where a hint helps (the key idea, not the solution). Short computational questions can go without hints.
 6. Check the math (substitute numbers, verify limits/derivatives numerically with python when possible).
-7. Run `python3 scripts/build.py` and fix any errors.
+7. Write the English translation in `questions-en/` (same relative path). Sub-part references become "part (a)", `\item[(א)]` → `\item[(a)]`, `(10 נק')` → `(10 pts)`, Hebrew year → `2024/25`.
+8. Run `python3 scripts/build.py` and fix any errors. Its last line reports how many questions have an English translation; keep it at 100%.
 
 ## Known source quirks (decided once, keep consistent)
 - The header wins over the filename. Files named "מועד ג" whose header says "מועד מיוחד" → `moed: מיוחד` / `semA-special`; files named "מועד מיוחד" whose header says "מועד ג" → `moed: ג` / `semA-moedC`.
@@ -46,4 +48,4 @@ Supported text-mode LaTeX: `$..$`, `\[..\]`, `align*` and similar, `enumerate`/`
 - Typos in the exams are kept verbatim in the question and pointed out in the solution.
 
 ## QA
-After a batch of changes, render every question/hint/solution in a headless browser and look for `mjx-merror` elements and raw `\command` text outside math. Also check that `cases`/`align` blocks still have their `\\` row separators (shell heredocs can collapse them).
+After a batch of changes, render every question/hint/solution in a headless browser (both `site/index.html` and `site/en/index.html`) and look for `mjx-merror` elements and raw `\command` text outside math. Also check that `cases`/`align` blocks still have their `\\` row separators (shell heredocs can collapse them).

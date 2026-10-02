@@ -1,0 +1,23 @@
+% English translation of questions/5776/semB-moedC/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit: $\lim_{x\to0}\frac{\cos(\sin(x))-\cos(x)}{x^4}$.
+\end{question}
+
+\begin{hint}
+Expand $\cos t$ and $\sin x$ by Maclaurin up to order $4$ (note that $\sin^2x=x^2-\frac{x^4}{3}+o(x^4)$).
+\end{hint}
+
+\begin{solution}
+We use the Maclaurin expansions
+$\sin x=x-\frac{x^3}{6}+o(x^4)$ and $\cos t=1-\frac{t^2}{2}+\frac{t^4}{24}+o(t^4)$.
+We compute:
+\[ \sin^2x=\left(x-\frac{x^3}{6}+o(x^4)\right)^2=x^2-\frac{x^4}{3}+o(x^4),\qquad \sin^4x=x^4+o(x^4). \]
+Since $\sin x\to0$ and $|\sin x|\le|x|$, we may substitute $t=\sin x$ (the remainder $o(\sin^4x)$ is $o(x^4)$):
+\[ \cos(\sin x)=1-\frac{\sin^2x}{2}+\frac{\sin^4x}{24}+o(x^4)=1-\frac{x^2}{2}+\frac{x^4}{6}+\frac{x^4}{24}+o(x^4)=1-\frac{x^2}{2}+\frac{5x^4}{24}+o(x^4). \]
+Also $\cos x=1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^4)$. Hence
+\[ \cos(\sin x)-\cos x=\frac{4x^4}{24}+o(x^4)=\frac{x^4}{6}+o(x^4), \]
+and therefore
+\[ \lim_{x\to0}\frac{\cos(\sin x)-\cos x}{x^4}=\boxed{\frac16}. \]
+(Another way: $\cos A-\cos B=-2\sin\frac{A+B}{2}\sin\frac{A-B}{2}$ with $A=\sin x$, $B=x$; then $\frac{A+B}{2}\sim x$ and $\frac{A-B}{2}=\frac{\sin x-x}{2}\sim-\frac{x^3}{12}$, and we get $-2\cdot x\cdot(-\frac{x^3}{12})=\frac{x^4}{6}$.)
+\end{solution}

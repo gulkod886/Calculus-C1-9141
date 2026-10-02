@@ -1,0 +1,26 @@
+% English translation of questions/5784/semA-moedA/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(14 pts) Compute the following limit:
+\[ \lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4} \]
+\end{question}
+
+\begin{hint}
+This is a limit of the form $1^\infty$. Write the base in the form $1+\frac{1}{x^2+x+1}$ and use the limit $\lim_{t\to\infty}\left(1+\frac1t\right)^t=e$.
+\end{hint}
+
+\begin{solution}
+As $x\to\infty$ the base tends to $1$ and the exponent tends to $\infty$, i.e. this is an indeterminate form $1^\infty$.
+Write the base in the form
+\[ \frac{x^2+x+2}{x^2+x+1} = 1+\frac{1}{x^2+x+1}. \]
+Denote $t=x^2+x+1$; as $x\to\infty$ also $t\to\infty$. Then
+\[ \left(1+\frac{1}{x^2+x+1}\right)^{2x^2+4} = \left[\left(1+\frac1t\right)^{t}\right]^{\frac{2x^2+4}{x^2+x+1}}. \]
+The expression in square brackets tends to $e$ (the famous limit $\lim_{t\to\infty}(1+\frac1t)^t=e$), and the exponent satisfies
+\[ \lim_{x\to\infty}\frac{2x^2+4}{x^2+x+1} = \lim_{x\to\infty}\frac{2+\frac{4}{x^2}}{1+\frac1x+\frac1{x^2}} = 2. \]
+By continuity of the function $(u,v)\mapsto u^v=e^{v\ln u}$ for $u>0$ (or: via $e^{v\ln u}$ and the continuity of $\ln$ and $\exp$) we get
+\[ \lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4} = e^{2}. \]
+
+\textbf{Another method:} write the expression as $e^{(2x^2+4)\ln\left(1+\frac{1}{x^2+x+1}\right)}$. Since $\ln(1+s)\sim s$ as $s\to0$,
+\[ (2x^2+4)\ln\left(1+\frac{1}{x^2+x+1}\right) \sim \frac{2x^2+4}{x^2+x+1}\xrightarrow[x\to\infty]{}2, \]
+and again, by continuity of the exponential, the limit is $\boxed{e^2}$.
+\end{solution}

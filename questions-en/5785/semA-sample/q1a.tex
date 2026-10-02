@@ -1,0 +1,23 @@
+% English translation of questions/5785/semA-sample/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Define a function by
+\[ f(x) = \begin{cases} x^3 \sin(\frac{5}{x}), & \text{if } x \ne 0, \\ 0, & \text{if } x = 0 \end{cases} \]
+Is the function continuous and differentiable at the point $x = 0$? Justify your answer.
+\end{question}
+
+\begin{hint}
+Use the fact that $\sin$ is bounded: ``a null function times a bounded function'' tends to zero. For differentiability, compute the limit of the difference quotient by definition.
+\end{hint}
+
+\begin{solution}
+\textbf{Continuity.} For every $x \ne 0$ we have $\left|\sin\frac{5}{x}\right| \le 1$, and hence
+\[ 0 \le |f(x)| = |x|^3\left|\sin\tfrac{5}{x}\right| \le |x|^3 \xrightarrow[x\to0]{} 0. \]
+By the Squeeze theorem, $\lim_{x\to0} f(x) = 0 = f(0)$, so $f$ is continuous at $x = 0$.
+
+\textbf{Differentiability.} By the definition of the derivative:
+\[ \frac{f(x) - f(0)}{x - 0} = \frac{x^3\sin\frac5x}{x} = x^2\sin\frac5x, \qquad 0 \le \left| x^2 \sin\tfrac5x \right| \le x^2 \xrightarrow[x\to0]{} 0. \]
+Again by the Squeeze theorem (null times bounded), the limit exists and equals $0$. Hence $f$ is differentiable at $x = 0$ and $f'(0) = 0$.
+
+\textbf{Answer:} $f$ is continuous and differentiable at $x = 0$, and $f'(0) = 0$. (Differentiability implies continuity, so continuity also follows from differentiability.)
+\end{solution}

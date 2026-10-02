@@ -1,0 +1,20 @@
+% English translation of questions/5782/semA-special/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(9 pts) Determine the convergence of the improper integral
+\[ \int_1^\infty\frac{e^x}{e^{2x}+1}dx \]
+\end{question}
+
+\begin{hint}
+The antiderivative is $\arctan(e^x)$ (substitution $t=e^x$).
+\end{hint}
+
+\begin{solution}
+Substitute $t=e^x$, $dt=e^xdx$: $\int\frac{e^x}{e^{2x}+1}dx=\int\frac{dt}{t^2+1}=\arctan(e^x)+C$. Hence
+\[ \int_1^R\frac{e^x}{e^{2x}+1}dx=\arctan(e^R)-\arctan(e). \]
+As $R\to\infty$: $e^R\to\infty$ and $\lim_{t\to\infty}\arctan t=\frac\pi2$, and hence
+\[ \int_1^\infty\frac{e^x}{e^{2x}+1}dx=\lim_{R\to\infty}\left(\arctan(e^R)-\arctan e\right)=\boxed{\frac\pi2-\arctan e}\approx0.3466. \]
+The integral \textbf{converges}.
+
+(Alternatively, without computation: $0<\frac{e^x}{e^{2x}+1}<\frac{e^x}{e^{2x}}=e^{-x}$, and $\int_1^\infty e^{-x}dx=e^{-1}$ converges, hence by the comparison test the integral converges.)
+\end{solution}

@@ -1,0 +1,18 @@
+% English translation of questions/5776/semB-moedB/q4a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limit: $\lim_{x\to 0}\frac{1-\cos(x^2)}{x^2\sin^2(x)}$.
+\end{question}
+
+\begin{hint}
+Use the Taylor expansion of $\cos t$ around $0$ with $t=x^2$, and the fundamental limit $\frac{\sin x}{x}\to1$.
+\end{hint}
+
+\begin{solution}
+Write
+\[ \frac{1-\cos(x^2)}{x^2\sin^2 x}=\frac{1-\cos(x^2)}{x^4}\cdot\left(\frac{x}{\sin x}\right)^2. \]
+By the Maclaurin expansion $\cos t=1-\frac{t^2}{2}+o(t^2)$, and with $t=x^2$: $1-\cos(x^2)=\frac{x^4}{2}+o(x^4)$, hence $\frac{1-\cos(x^2)}{x^4}\to\frac12$.
+(Alternatively: $1-\cos(x^2)=2\sin^2(\frac{x^2}{2})$, hence $\frac{1-\cos(x^2)}{x^4}=\frac12\left(\frac{\sin(x^2/2)}{x^2/2}\right)^2\to\frac12$.)
+Also $\frac{x}{\sin x}\to 1$ by the fundamental limit. By the arithmetic of limits:
+\[ \lim_{x\to0}\frac{1-\cos(x^2)}{x^2\sin^2 x}=\frac12\cdot 1=\boxed{\frac12}. \]
+\end{solution}

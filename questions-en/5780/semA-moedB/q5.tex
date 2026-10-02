@@ -1,0 +1,31 @@
+% English translation of questions/5780/semA-moedB/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The given graph is a graph in polar coordinates of the function:
+
+(In the figure: two equal closed loops, circle-shaped, one above the $x$-axis and one below it, touching each other at the origin; the loops are symmetric about the $y$-axis and stretched along it.)
+\begin{enumerate}
+  \item $r(\phi)=\sin^2\phi$
+  \item $r(\phi)=1+\cos\phi$
+  \item $r(\phi)=1-\cos\phi$
+  \item $r(\phi)=\cos^2\phi$
+  \item $r(\phi)=\cos\phi$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+For each function, check at which angles $r=0$ (there the curve passes through the origin) and at which angles $r$ is maximal (the points farthest from the origin).
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: a.}
+
+In the graph the curve passes through the origin in the direction of the $x$-axis (where the two loops touch), and the points farthest from the origin lie on the $y$-axis, above and below, at the same distance. Also, there are two loops.
+
+\begin{itemize}
+  \item $r=\sin^2\phi$: we have $r\ge0$ for every $\phi$, $r=0$ exactly for $\phi=0,\pi$ (the direction of the $x$-axis), and $r=1$ is maximal for $\phi=\frac{\pi}{2},\frac{3\pi}{2}$, i.e. at the points $(0,1)$ and $(0,-1)$. As $\phi$ goes from $0$ to $\pi$ a loop is formed in the upper half, and as $\phi$ goes from $\pi$ to $2\pi$ a loop is formed in the lower half. This is exactly the given graph.
+  \item $r=1\pm\cos\phi$: cardioids --- only one loop (with a ``dent'' at the origin), symmetric about the $x$-axis. Does not fit.
+  \item $r=\cos^2\phi$: two loops, but along the $x$-axis (maximum at $\phi=0,\pi$). Does not fit.
+  \item $r=\cos\phi$: a single circle, $x^2+y^2=x$, centered at $(\frac12,0)$. Does not fit.
+\end{itemize}
+\end{solution}

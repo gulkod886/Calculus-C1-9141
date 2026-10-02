@@ -1,0 +1,25 @@
+% English translation of questions/5778/semB-moedA/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) For which values of the parameter $a$ does the equation $x^4-a\cdot x^3+27=0$ have no real roots?
+\end{question}
+
+\begin{hint}
+$x=0$ is not a root. Isolate the parameter: $a=\frac{x^4+27}{x^3}=x+\frac{27}{x^3}$, and find the range of the function $g(x)=x+\frac{27}{x^3}$.
+\end{hint}
+
+\begin{solution}
+$x=0$ is not a root (we get $27\neq0$). For $x\neq0$:
+\[
+x^4-ax^3+27=0\iff a=\frac{x^4+27}{x^3}=x+\frac{27}{x^3}=:g(x).
+\]
+Hence the equation has a real root if and only if $a$ belongs to the image of $g$ on $\R\setminus\{0\}$. We find the image.
+
+\textbf{For $x>0$:} $g'(x)=1-\frac{81}{x^4}$, which vanishes at $x=3$; $g'<0$ on $(0,3)$ and $g'>0$ on $(3,\infty)$. Hence $x=3$ is an absolute minimum on $(0,\infty)$, with $g(3)=3+1=4$. In addition, $g(x)\to+\infty$ as $x\to0^+$ and as $x\to+\infty$. Since $g$ is continuous, by the Intermediate Value Theorem the image of $(0,\infty)$ is $[4,\infty)$.
+
+\textbf{For $x<0$:} $g$ is an odd function ($g(-x)=-g(x)$), hence the image of $(-\infty,0)$ is $(-\infty,-4]$.
+
+Hence the image of $g$ is $(-\infty,-4]\cup[4,\infty)$, and the equation has a real root if and only if $|a|\ge4$. (Check: for $a=4$, $x=3$: $81-108+27=0$.)
+
+\textbf{Answer:} there are no real roots if and only if $-4<a<4$.
+\end{solution}

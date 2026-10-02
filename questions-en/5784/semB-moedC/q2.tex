@@ -1,0 +1,27 @@
+% English translation of questions/5784/semB-moedC/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+For every $a,b\in\R$ define the following function:
+\[ f(x)=\begin{cases} ax^2+bx+1 & x<0\\ b-2 & x=0\\ bx^2+ax+1 & 0<x\end{cases} \]
+\begin{enumerate}
+  \item For which $a,b\in\R$ is the function $f(x)$ continuous at the point $x=0$?
+  \item Do there exist $a,b\in\R$ for which the function $f(x)$ is differentiable at the point $x=0$?
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Differentiability implies continuity, so the condition from part (a) must hold. Compute the one-sided derivatives by the definition.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item Polynomials are continuous, so
+  \[ \lim_{x\to0^-}f(x)=a\cdot0+b\cdot0+1=1,\qquad \lim_{x\to0^+}f(x)=1. \]
+  The limit at $0$ exists and equals $1$ for all $a,b$, and $f$ is continuous at $0$ if and only if $f(0)=b-2=1$.
+  \textbf{Answer:} $b=3$ and any $a\in\R$.
+  \item If $f$ is differentiable at $0$ then it is continuous there, so $b=3$ and $f(0)=1$. We compute the one-sided derivatives by the definition:
+  \[ f'_-(0)=\lim_{h\to0^-}\frac{ah^2+bh+1-1}{h}=\lim_{h\to0^-}(ah+b)=b, \qquad f'_+(0)=\lim_{h\to0^+}\frac{bh^2+ah+1-1}{h}=\lim_{h\to0^+}(bh+a)=a. \]
+  $f$ is differentiable at $0$ if and only if $f'_-(0)=f'_+(0)$, i.e. $a=b$. Together with $b=3$:
+  \textbf{Answer:} yes, exactly for $a=b=3$, and then $f'(0)=3$.
+\end{enumerate}
+\end{solution}

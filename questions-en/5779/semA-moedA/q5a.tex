@@ -1,0 +1,22 @@
+% English translation of questions/5779/semA-moedA/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following integral:
+$\displaystyle\int e^{2x}\sin(3x)\,dx$
+\end{question}
+
+\begin{hint}
+Integrate by parts twice; you will get an equation in which the desired integral appears on both sides.
+\end{hint}
+
+\begin{solution}
+Denote $I=\int e^{2x}\sin3x\,dx$. Integration by parts with $u=\sin3x$, $dv=e^{2x}dx$ ($v=\frac12e^{2x}$):
+\[ I=\frac12e^{2x}\sin3x-\frac32\int e^{2x}\cos3x\,dx. \]
+Again by parts, $u=\cos3x$, $dv=e^{2x}dx$:
+\[ \int e^{2x}\cos3x\,dx=\frac12e^{2x}\cos3x+\frac32\int e^{2x}\sin3x\,dx=\frac12e^{2x}\cos3x+\frac32I. \]
+Hence
+\[ I=\frac12e^{2x}\sin3x-\frac34e^{2x}\cos3x-\frac94I\;\Longrightarrow\;\frac{13}{4}I=\frac{e^{2x}}{4}\big(2\sin3x-3\cos3x\big), \]
+and finally
+\[ \int e^{2x}\sin3x\,dx=\frac{e^{2x}\big(2\sin3x-3\cos3x\big)}{13}+C. \]
+(Check: differentiating the result gives $\frac{e^{2x}}{13}\big(4\sin3x-6\cos3x+6\cos3x+9\sin3x\big)=e^{2x}\sin3x$.)
+\end{solution}

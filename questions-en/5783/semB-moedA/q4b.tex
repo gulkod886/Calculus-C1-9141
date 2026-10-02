@@ -1,0 +1,19 @@
+% English translation of questions/5783/semB-moedA/q4b.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(5 pts) For which values of $a$ is the function $f(x)=\min\left(x^2+x,a\right)$ differentiable for every real $x$? Justify your answer.
+\end{question}
+
+\begin{hint}
+Compare $a$ with the minimum value of $x^2+x$. If the line $y=a$ intersects the parabola, what happens to the one-sided derivatives at the intersection point?
+\end{hint}
+
+\begin{solution}
+The parabola $p(x)=x^2+x=\left(x+\frac12\right)^2-\frac14$ attains its minimum value $-\frac14$ at $x=-\frac12$.
+\begin{itemize}
+  \item If $a\le-\frac14$: $p(x)\ge-\frac14\ge a$ for every $x$, hence $f(x)\equiv a$ is constant, and differentiable on all of $\R$.
+  \item If $a>-\frac14$: the equation $x^2+x=a$ has two roots $x_1<x_2$, $x_{1,2}=\frac{-1\mp\sqrt{1+4a}}{2}$. Then $f(x)=x^2+x$ on $[x_1,x_2]$ and $f(x)=a$ outside it. At the point $x_1$ (where $f$ is continuous) the left derivative is $0$ (a constant function), and the right derivative is $p'(x_1)=2x_1+1=-\sqrt{1+4a}\neq0$. The one-sided derivatives are different, hence $f$ is not differentiable at $x_1$ (and similarly at $x_2$, where the left derivative is $\sqrt{1+4a}$ and the right derivative is $0$).
+\end{itemize}
+\textbf{Answer:} $f$ is differentiable for every real $x$ if and only if $\boxed{a\le-\frac14}$.
+\end{solution}

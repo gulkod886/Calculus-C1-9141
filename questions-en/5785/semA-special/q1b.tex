@@ -1,0 +1,20 @@
+% English translation of questions/5785/semA-special/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Define a function by
+\[ f(x) = \begin{cases} x^3\cdot\cos(\frac1x), & \text{if } x \neq 0 \\ 0, & \text{if } x = 0 \end{cases} \]
+Is the function differentiable at $x = 0$? \\
+If so, compute its derivative at this point. If not, justify.
+\end{question}
+
+\begin{hint}
+Use the definition of the derivative and the fact that $|\cos(\frac1x)| \le 1$.
+\end{hint}
+
+\begin{solution}
+By the definition of the derivative, for $h \neq 0$:
+\[ \frac{f(h) - f(0)}{h} = \frac{h^3\cos(\frac1h)}{h} = h^2\cos\left(\tfrac1h\right). \]
+Since $|\cos(\frac1h)| \le 1$, we have $0 \le \left|h^2\cos(\frac1h)\right| \le h^2 \to 0$, and hence by the Squeeze theorem (a bounded sequence/function times one tending to zero)
+\[ \lim_{h\to 0}\frac{f(h) - f(0)}{h} = 0. \]
+\textbf{Answer:} yes, $f$ is differentiable at $x=0$ and $f'(0) = 0$.
+\end{solution}

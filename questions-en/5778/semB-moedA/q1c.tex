@@ -1,0 +1,19 @@
+% English translation of questions/5778/semB-moedA/q1c.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(5 pts) For which values of $a$ does the graph of the function $f(x)=x^4-ax^2$ have no inflection points?
+\end{question}
+
+\begin{hint}
+An inflection point is a point where $f''$ changes sign. Compute $f''$ and check for which values of $a$ it changes sign.
+\end{hint}
+
+\begin{solution}
+$f''(x)=12x^2-2a$. An inflection point is a point where $f''$ changes sign.
+\begin{itemize}
+  \item If $a>0$: $f''(x)=0\iff x=\pm\sqrt{a/6}$, and $f''$ (a parabola) changes sign at each of these points, hence there are two inflection points.
+  \item If $a=0$: $f''(x)=12x^2\ge0$, vanishing only at $x=0$ without changing sign — there are no inflection points ($f=x^4$ is convex).
+  \item If $a<0$: $f''(x)=12x^2-2a>0$ for every $x$ — there are no inflection points.
+\end{itemize}
+\textbf{Answer:} $a\le0$.
+\end{solution}

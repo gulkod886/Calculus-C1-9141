@@ -1,0 +1,29 @@
+% English translation of questions/5779/semA-special/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts) Compute the following integral $\displaystyle\int_0^{\pi/4} x\tan^2 x\,dx$.
+\end{question}
+
+\begin{hint}
+Use the identity $\tan^2 x = \frac{1}{\cos^2 x}-1$ and split into two integrals.
+\end{hint}
+
+\begin{hint}
+Compute $\int x\cdot\frac{1}{\cos^2 x}\,dx$ by integration by parts, with $u=x$ and $v'=\frac{1}{\cos^2x}$.
+\end{hint}
+
+\begin{solution}
+By the identity $1+\tan^2 x = \frac{1}{\cos^2 x}$:
+\[ \int_0^{\pi/4} x\tan^2 x\,dx = \int_0^{\pi/4} \frac{x}{\cos^2 x}\,dx - \int_0^{\pi/4} x\,dx. \]
+(The functions are continuous on the interval $[0,\pi/4]$, so all the integrals exist.)
+
+\textbf{The first integral} -- integration by parts with $u=x$, $v'=\frac{1}{\cos^2x}$, i.e. $u'=1$, $v=\tan x$:
+\[ \int_0^{\pi/4}\frac{x}{\cos^2x}\,dx = \Big[x\tan x\Big]_0^{\pi/4} - \int_0^{\pi/4}\tan x\,dx. \]
+We have $\int \tan x\,dx = \int\frac{\sin x}{\cos x}dx = -\ln|\cos x|+C$ (substitution $t=\cos x$), hence
+\[ \int_0^{\pi/4}\frac{x}{\cos^2x}\,dx = \frac{\pi}{4}\cdot 1 - 0 + \Big[\ln\cos x\Big]_0^{\pi/4} = \frac{\pi}{4} + \ln\frac{\sqrt2}{2} - \ln 1 = \frac{\pi}{4} - \frac{\ln 2}{2}. \]
+
+\textbf{The second integral:} $\displaystyle\int_0^{\pi/4}x\,dx = \frac{x^2}{2}\Big|_0^{\pi/4} = \frac{\pi^2}{32}$.
+
+In summary:
+\[ \int_0^{\pi/4} x\tan^2 x\,dx = \frac{\pi}{4} - \frac{\ln 2}{2} - \frac{\pi^2}{32} \approx 0.1304. \]
+\end{solution}

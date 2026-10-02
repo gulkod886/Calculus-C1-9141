@@ -1,0 +1,18 @@
+% English translation of questions/5784/semB-moedA/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \lim_{x\to\infty} x\left(\ln(x+1)-\ln(x)\right) \]
+\end{question}
+
+\begin{hint}
+Write $\ln(x+1)-\ln x=\ln\left(1+\frac1x\right)$ and substitute $t=\frac1x$.
+\end{hint}
+
+\begin{solution}
+By the laws of logarithms, $\ln(x+1)-\ln(x)=\ln\frac{x+1}{x}=\ln\left(1+\frac1x\right)$. Substitute $t=\frac1x$; as $x\to\infty$ we have $t\to0^+$, and therefore
+\[ \lim_{x\to\infty} x\ln\left(1+\frac1x\right)=\lim_{t\to0^+}\frac{\ln(1+t)}{t}. \]
+This is a limit of the form $\frac00$; by L'Hôpital's rule (or the fundamental limit $\frac{\ln(1+t)}{t}\to1$):
+\[ \lim_{t\to0^+}\frac{\ln(1+t)}{t}=\lim_{t\to0^+}\frac{1/(1+t)}{1}=1. \]
+The answer: $\boxed{1}$.
+\end{solution}

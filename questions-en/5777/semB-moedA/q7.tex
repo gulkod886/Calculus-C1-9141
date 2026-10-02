@@ -1,0 +1,24 @@
+% English translation of questions/5777/semB-moedA/q7.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Does the improper integral
+\[ \int_0^1\frac{\sin x}{x^2}\,dx \]
+converge?
+\end{question}
+
+\begin{hint}
+Near $0$ we have $\sin x\approx x$. Compare (limit comparison test) with $\frac1x$.
+\end{hint}
+
+\begin{solution}
+\textbf{The integral diverges.}
+The integrand is continuous on $(0,1]$, and the only problem is at the point $0$. On $(0,1]$ we have $\sin x>0$ (since $0<x\le1<\pi$), so the integrand is positive and the comparison tests may be used.
+
+Compare with $g(x)=\frac1x>0$:
+\[ \lim_{x\to0^+}\frac{\sin x/x^2}{1/x}=\lim_{x\to0^+}\frac{\sin x}{x}=1\in(0,\infty). \]
+By the limit comparison test, $\int_0^1\frac{\sin x}{x^2}dx$ and $\int_0^1\frac{dx}{x}$ either both converge or both diverge. But
+\[ \int_\eps^1\frac{dx}{x}=-\ln\eps\xrightarrow[\eps\to0^+]{}\infty, \]
+i.e., $\int_0^1\frac{dx}{x}$ diverges. Hence $\int_0^1\frac{\sin x}{x^2}dx$ also \textbf{diverges}.
+
+(Direct comparison: since $\frac{\sin x}{x}\to1$, there exists $\delta>0$ such that $\frac{\sin x}{x}>\frac12$ on $(0,\delta)$, and hence $\frac{\sin x}{x^2}>\frac{1}{2x}$ there.)
+\end{solution}

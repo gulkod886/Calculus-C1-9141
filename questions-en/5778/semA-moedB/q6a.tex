@@ -1,0 +1,16 @@
+% English translation of questions/5778/semA-moedB/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Does the improper integral $\displaystyle\int_1^\infty\frac{e^x}{e^{e^x}}\,dx$ converge? If so, compute the value of the integral. If not, explain why.
+\end{question}
+
+\begin{hint}
+Substitute $u=e^x$.
+\end{hint}
+
+\begin{solution}
+By definition $\int_1^\infty\frac{e^x}{e^{e^x}}dx=\lim_{b\to\infty}\int_1^b e^xe^{-e^x}dx$. Substitute $u=e^x$, $du=e^x\,dx$; as $x$ runs from $1$ to $b$, $u$ runs from $e$ to $e^b$:
+\[ \int_1^b e^xe^{-e^x}\,dx=\int_e^{e^b}e^{-u}\,du=\left[-e^{-u}\right]_e^{e^b}=e^{-e}-e^{-e^b}. \]
+As $b\to\infty$: $e^b\to\infty$, hence $e^{-e^b}\to0$. The limit exists and is finite, i.e. the integral converges:
+\[ \boxed{\int_1^\infty\frac{e^x}{e^{e^x}}\,dx=e^{-e}} \]
+\end{solution}

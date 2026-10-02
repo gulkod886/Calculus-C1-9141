@@ -1,0 +1,29 @@
+% English translation of questions/5780/semA-moedA/partB-q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)$ be continuous on the interval $[a,b]$. Which of the following must be true?
+\begin{enumerate}
+  \item[(a)] $f(x)$ is not differentiable on the interval $(a,b)$
+  \item[(b)] $f(x)$ satisfies the conditions of Lagrange's theorem on the interval $[a,b]$
+  \item[(c)] $f(x)$ satisfies the conditions of Rolle's theorem on the interval $[a,b]$
+  \item[(d)] $f(x)$ is differentiable on the interval $(a,b)$
+  \item[(e)] there exists $M$ such that $f(x)<M$ for every $x$ belonging to $[a,b]$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Which theorem guarantees something for every continuous function on a closed interval?
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (e).}
+
+By \textbf{Weierstrass's first theorem}, a function continuous on a closed interval $[a,b]$ is bounded there. Hence there exists $K$ such that $f(x)\le K$ for every $x\in[a,b]$, and then $M=K+1$ satisfies $f(x)<M$ for every $x\in[a,b]$.
+
+The other answers need not hold:
+\begin{itemize}
+  \item (a) is false: for example $f(x)=x$ is continuous and differentiable on $(a,b)$.
+  \item (b) and (d) are false: Lagrange's theorem also requires differentiability on $(a,b)$, and a continuous function need not be differentiable. For example, on the interval $[-1,1]$ the function $f(x)=|x|$ is continuous but not differentiable at $0$.
+  \item (c) is false: Rolle's theorem requires both differentiability and $f(a)=f(b)$; for example $f(x)=x$ is continuous but $f(a)\ne f(b)$.
+\end{itemize}
+\end{solution}

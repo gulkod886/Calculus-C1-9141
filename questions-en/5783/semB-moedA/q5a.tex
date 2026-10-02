@@ -1,0 +1,23 @@
+% English translation of questions/5783/semB-moedA/q5a.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(20 pts) Find the equation of the tangent line to the graph of the function-
+\[ \begin{cases} x=\ln\left(3t^2+e\cdot t-3\right)\\ y=t^3-3t\end{cases} \]
+at the point $M_0(1,-2)$.
+\end{question}
+
+\begin{hint}
+First find the value of the parameter $t_0$ corresponding to the point $M_0$ (both equations must hold simultaneously), and then use $\frac{dy}{dx}=\frac{y'(t)}{x'(t)}$.
+\end{hint}
+
+\begin{solution}
+\textbf{Finding the parameter:} from $y=-2$: $t^3-3t+2=0\iff(t-1)^2(t+2)=0$, i.e. $t=1$ or $t=-2$.
+From $x=1$: $3t^2+et-3=e$. For $t=1$: $3+e-3=e$ \checkmark. For $t=-2$: $12-2e-3=9-2e\neq e$ (since $e\neq3$). Hence $t_0=1$.
+
+\textbf{The derivative:} by the formula for the derivative of a parametrically given function,
+\[ x'(t)=\frac{6t+e}{3t^2+et-3},\qquad y'(t)=3t^2-3. \]
+At $t_0=1$: $x'(1)=\frac{6+e}{e}\neq 0$ and $y'(1)=0$, hence
+\[ \frac{dy}{dx}\Big|_{M_0}=\frac{y'(1)}{x'(1)}=0. \]
+\textbf{Equation of the tangent line:} $y-(-2)=0\cdot(x-1)$, i.e. $\boxed{y=-2}$ (a horizontal tangent).
+\end{solution}

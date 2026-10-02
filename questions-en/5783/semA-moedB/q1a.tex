@@ -1,0 +1,11 @@
+% English translation of questions/5783/semA-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the one-sided limits of the function $f(x)=2^{\frac{1}{x}}$ at the given point $x=0$. Determine whether it has a limit $\lim_{x\to 0}f(x)$.
+\end{question}
+
+\begin{solution}
+Let $t=\frac1x$. As $x\to 0^+$ we have $t\to+\infty$, and as $x\to 0^-$ we have $t\to-\infty$. Since $2>1$, $\lim_{t\to+\infty}2^t=+\infty$ and $\lim_{t\to-\infty}2^t=0$. Hence (limit of a composition)
+\[ \lim_{x\to0^+}2^{1/x}=+\infty,\qquad \lim_{x\to0^-}2^{1/x}=0. \]
+The one-sided limits are different (and the right one is not even finite), and hence \textbf{the limit $\lim_{x\to0}2^{1/x}$ does not exist}.
+\end{solution}

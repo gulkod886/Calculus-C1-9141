@@ -1,0 +1,22 @@
+% English translation of questions/5785/semA-moedB/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the general solution of the differential equation
+\[ (x^4 + 4)yy' = x^3 \]
+\end{question}
+
+\begin{hint}
+This is a separable equation: $y\,dy = \frac{x^3}{x^4 + 4}\,dx$.
+\end{hint}
+
+\begin{solution}
+$x^4 + 4 > 0$ for every $x$, so we can divide: $y y' = \frac{x^3}{x^4 + 4}$. This is a separable equation. Integrate both sides with respect to $x$:
+\[ \int y\,dy = \int\frac{x^3}{x^4 + 4}\,dx \quad\Longrightarrow\quad \frac{y^2}{2} = \frac14\ln(x^4 + 4) + c, \]
+where on the right-hand side we substituted $u = x^4 + 4$, $du = 4x^3dx$. Multiplying by $2$ and setting $C = 2c$:
+\[ y^2 = \frac12\ln(x^4 + 4) + C. \]
+(Note that $y\equiv0$ is not a solution, since then we would get $0 = x^3$, which does not hold for every $x$. Also, no division by $y$ was needed: we only used the fact that $yy' = \left(\frac{y^2}{2}\right)'$.)
+
+\textbf{Answer:} the general solution is given implicitly by $y^2 = \frac12\ln(x^4+4) + C$, or explicitly
+\[ y = \pm\sqrt{\tfrac12\ln(x^4 + 4) + C}, \]
+on the interval where the expression under the root is positive. \textbf{Check:} differentiating $y^2 = \frac12\ln(x^4+4)+C$ gives $2yy' = \frac{2x^3}{x^4+4}$, i.e. $(x^4+4)yy' = x^3$.
+\end{solution}

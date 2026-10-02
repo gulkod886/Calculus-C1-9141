@@ -1,0 +1,22 @@
+% English translation of questions/5785/semA-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+For a real number $a$ define a function by
+\[ f(x) = \begin{cases} \dfrac{\sqrt{x+4} - 2}{x^2 + 2x}, & \text{if } x < 0 \\ a\cdot|x - 1|, & \text{if } x \ge 0 \end{cases} \]
+(11 pts) For which value of $a$ is the function continuous at the point $x = 0$? Justify.
+\end{question}
+
+\begin{hint}
+Multiply the numerator and denominator by the conjugate $\sqrt{x+4} + 2$.
+\end{hint}
+
+\begin{solution}
+$f(0) = a\cdot|0 - 1| = a$, and to the right of $0$ (in a right neighborhood) $f(x) = a|x-1|$ is continuous, so $\lim_{x\to0^+}f(x) = a = f(0)$.
+Hence $f$ is continuous at $0$ if and only if $\lim_{x\to 0^-} f(x) = a$.
+
+For $-2 < x < 0$ we multiply by the conjugate:
+\[ \frac{\sqrt{x+4} - 2}{x^2 + 2x} = \frac{(x + 4) - 4}{x(x+2)\left(\sqrt{x+4} + 2\right)} = \frac{1}{(x+2)\left(\sqrt{x+4}+2\right)}. \]
+The last expression is continuous at $x=0$, and therefore
+\[ \lim_{x\to 0^-} f(x) = \frac{1}{2\cdot(2 + 2)} = \frac18. \]
+\textbf{Answer:} $f$ is continuous at $0$ if and only if $a = \frac18$.
+\end{solution}

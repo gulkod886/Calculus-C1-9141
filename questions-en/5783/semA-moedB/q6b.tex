@@ -1,0 +1,18 @@
+% English translation of questions/5783/semA-moedB/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Determine the convergence of the integral $\displaystyle\int_1^{\infty}\frac{\sqrt{x^5}\,dx}{2x^2+3x+40}$.
+\end{question}
+
+\begin{hint}
+Check how the function behaves as $x\to\infty$ and compare with a suitable $x^{p}$ (the limit comparison test).
+\end{hint}
+
+\begin{solution}
+The function $g(x)=\frac{x^{5/2}}{2x^2+3x+40}$ is continuous and positive on $[1,\infty)$. Compare with $h(x)=x^{1/2}$:
+\[ \lim_{x\to\infty}\frac{g(x)}{h(x)}=\lim_{x\to\infty}\frac{x^2}{2x^2+3x+40}=\frac12\in(0,\infty). \]
+By the \textbf{limit comparison test}, $\int_1^\infty g$ and $\int_1^\infty x^{1/2}dx$ converge or diverge together. $\int_1^\infty x^{p}dx$ converges only for $p<-1$, and here $p=\frac12$, hence $\int_1^\infty x^{1/2}dx=\infty$.
+(One can also note that even $g(x)\to\infty$, so the integral certainly diverges.)
+
+\textbf{Answer:} the integral \textbf{diverges} (equals $+\infty$).
+\end{solution}

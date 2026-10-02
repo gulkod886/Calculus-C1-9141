@@ -1,0 +1,29 @@
+% English translation of questions/5784/semA-special/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Define a function by
+\[ f(x)=\begin{cases}2^{\frac{\sin x}{x}}, & \text{if } x<0,\\ ax+b, & \text{if } 0\le x\le 1,\\ \frac{x^2+x-2}{\sqrt{x}-1}, & \text{if } x>1\end{cases} \]
+For which values of the parameters $a,b$ is the function continuous on all of $\R$? Justify.
+\end{question}
+
+\begin{hint}
+Inside each interval the function is continuous; it remains to require continuity at the junction points $x=0$ and $x=1$.
+\end{hint}
+
+\begin{hint}
+For $x>1$: $x^2+x-2=(x-1)(x+2)$ and $x-1=(\sqrt x-1)(\sqrt x+1)$.
+\end{hint}
+
+\begin{solution}
+\textbf{Inside the intervals.} On $(-\infty,0)$ the function $\frac{\sin x}{x}$ is continuous (a quotient of continuous functions, denominator different from $0$), and $2^t$ is continuous, hence the composition is continuous. On $(0,1)$ it is a linear function, continuous. On $(1,\infty)$ it is a quotient of continuous functions whose denominator is $\sqrt x-1>0$, hence continuous. Therefore, for all $a,b$ the function is continuous at every point except possibly $x=0$ and $x=1$.
+
+\textbf{Continuity at $x=0$.} $f(0)=b$, and from the right $\lim_{x\to0^+}(ax+b)=b$. From the left, since $\lim_{x\to0}\frac{\sin x}{x}=1$ and $2^t$ is continuous at $t=1$, by the theorem on the limit of a composite function
+\[ \lim_{x\to0^-}2^{\frac{\sin x}{x}}=2^1=2. \]
+Hence $f$ is continuous at $0$ if and only if $b=2$.
+
+\textbf{Continuity at $x=1$.} $f(1)=a+b$ and $\lim_{x\to1^-}f(x)=a+b$. From the right, for $x>1$:
+\[ \frac{x^2+x-2}{\sqrt x-1}=\frac{(x-1)(x+2)}{\sqrt x-1}=\frac{(\sqrt x-1)(\sqrt x+1)(x+2)}{\sqrt x-1}=(\sqrt x+1)(x+2), \]
+and therefore $\lim_{x\to1^+}f(x)=(1+1)(1+2)=6$. Hence $f$ is continuous at $1$ if and only if $a+b=6$.
+
+\textbf{Answer:} $f$ is continuous on all of $\R$ if and only if $\boxed{b=2,\ a=4}$.
+\end{solution}

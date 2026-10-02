@@ -1,0 +1,18 @@
+% English translation of questions/5785/semA-moedB/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following improper integral, or show that it does not converge:
+\[ \int_1^\infty \frac{\ln x}{x}\,dx \]
+\end{question}
+
+\begin{hint}
+Find an antiderivative using the substitution $u = \ln x$.
+\end{hint}
+
+\begin{solution}
+By definition, $\int_1^\infty\frac{\ln x}{x}dx = \lim_{R\to\infty}\int_1^R\frac{\ln x}{x}dx$. With the substitution $u = \ln x$, $du = \frac{dx}{x}$:
+\[ \int_1^R\frac{\ln x}{x}\,dx = \int_0^{\ln R}u\,du = \frac{(\ln R)^2}{2} \xrightarrow[R\to\infty]{} \infty. \]
+(Alternatively, by the comparison test: for $x \ge e$ we have $\frac{\ln x}{x} \ge \frac1x \ge 0$, and $\int_e^\infty\frac{dx}x$ diverges.)
+
+\textbf{Answer:} the integral does not converge (it diverges to $\infty$).
+\end{solution}

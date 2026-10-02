@@ -1,0 +1,17 @@
+% English translation of questions/5784/semB-moedB/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute
+\[ \int\frac{2x^3+7x^2-5x-19}{x^2+x-6}\,dx \]
+\end{question}
+
+\begin{hint}
+Polynomial long division, then partial fractions, $x^2+x-6=(x+3)(x-2)$.
+\end{hint}
+
+\begin{solution}
+Polynomial long division:
+\[ 2x^3+7x^2-5x-19=(2x+5)(x^2+x-6)+(2x+11), \]
+(check: $(2x+5)(x^2+x-6)=2x^3+7x^2-7x-30$, and the remainder is $(-5x-19)-(-7x-30)=2x+11$.) Partial fractions: $\frac{2x+11}{(x+3)(x-2)}=\frac{A}{x+3}+\frac{B}{x-2}$, i.e. $2x+11=A(x-2)+B(x+3)$. For $x=2$: $15=5B$, $B=3$. For $x=-3$: $5=-5A$, $A=-1$. Hence
+\[ \int\frac{2x^3+7x^2-5x-19}{x^2+x-6}dx=\int\left(2x+5-\frac1{x+3}+\frac3{x-2}\right)dx=\boxed{x^2+5x-\ln|x+3|+3\ln|x-2|+C}. \]
+\end{solution}

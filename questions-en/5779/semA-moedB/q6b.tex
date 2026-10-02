@@ -1,0 +1,19 @@
+% English translation of questions/5779/semA-moedB/q6b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) A curve is given in polar coordinates by $r=1+\cos\varphi$ $(0\le\varphi\le2\pi)$. Compute the length of the curve.
+\end{question}
+
+\begin{hint}
+The length of a polar curve is $L=\int_\alpha^\beta\sqrt{r^2+(r')^2}\,d\varphi$; use $1+\cos\varphi=2\cos^2\frac\varphi2$.
+\end{hint}
+
+\begin{solution}
+The curve (a cardioid) is $x=r\cos\varphi$, $y=r\sin\varphi$, and the arc length formula in polar coordinates is
+\[ L=\int_0^{2\pi}\sqrt{r^2+\left(\frac{dr}{d\varphi}\right)^2}\,d\varphi. \]
+Here $r'=-\sin\varphi$ and hence
+\[ r^2+r'^2=(1+\cos\varphi)^2+\sin^2\varphi=2+2\cos\varphi=4\cos^2\frac\varphi2. \]
+Therefore $\sqrt{r^2+r'^2}=2\left|\cos\frac\varphi2\right|$. For $\varphi\in[0,2\pi]$, $\frac\varphi2\in[0,\pi]$; the $\cos$ is non-negative on $[0,\pi]$ (in terms of $\varphi$) and non-positive on $[\pi,2\pi]$. By symmetry:
+\[ L=2\int_0^{\pi}2\cos\frac\varphi2\,d\varphi=4\left[2\sin\frac\varphi2\right]_0^\pi=8. \]
+\textbf{Answer:} the length of the curve is $8$.
+\end{solution}

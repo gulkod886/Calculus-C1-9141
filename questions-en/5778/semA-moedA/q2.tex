@@ -1,0 +1,43 @@
+% English translation of questions/5778/semA-moedA/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(20 pts)
+Find the points of discontinuity of the function
+\[ f(x)=\frac{e^{\left(\frac1x-\frac{1}{x+1}\right)}}{e^{\frac1x}-2} \]
+and determine their types.
+\end{question}
+
+\begin{hint}
+The function is undefined at three points: where $x=0$, $x=-1$, and where $e^{1/x}=2$.
+\end{hint}
+
+\begin{hint}
+For $x\to0^+$, divide the numerator and the denominator by $e^{1/x}$.
+\end{hint}
+
+\begin{solution}
+\textbf{The domain.} The expression is defined when $x\neq0$, $x\neq-1$ and $e^{1/x}\neq 2$, i.e. $\frac1x\neq\ln2$, i.e. $x\neq\frac1{\ln2}$. At every other point $f$ is a composition and quotient of continuous elementary functions (with a nonzero denominator), hence continuous. The points of discontinuity are therefore $x=0,\ x=-1,\ x=\frac{1}{\ln2}$. We check each of them.
+
+\textbf{1. $x=\frac1{\ln2}$.} The numerator is continuous at this point and its value is
+$e^{\ln2-\frac{1}{\frac1{\ln2}+1}}>0$ (an exponential is always positive). The denominator $e^{1/x}-2$ tends to $0$. As $x\to\left(\frac1{\ln2}\right)^+$ we have $\frac1x<\ln2$, hence $e^{1/x}-2\to0^-$, and
+\[ \lim_{x\to(1/\ln2)^+}f(x)=-\infty, \qquad \lim_{x\to(1/\ln2)^-}f(x)=+\infty \]
+(from the left $\frac1x>\ln2$ and the denominator tends to $0^+$). The one-sided limits are not finite, hence this is a \textbf{discontinuity of the second kind}.
+
+\textbf{2. $x=-1$.} As $x\to-1$, the denominator is continuous and tends to $e^{-1}-2<0$ (a nonzero negative number). We check the numerator:
+\begin{itemize}
+  \item As $x\to-1^+$: $x+1\to0^+$, hence $\frac1x-\frac1{x+1}\to-1-\infty=-\infty$, and therefore $e^{\left(\frac1x-\frac1{x+1}\right)}\to0$. Hence $\lim_{x\to-1^+}f(x)=\frac{0}{e^{-1}-2}=0$.
+  \item As $x\to-1^-$: $x+1\to0^-$, hence $\frac1x-\frac1{x+1}\to+\infty$ and the numerator tends to $+\infty$. Since the denominator tends to a negative number, $\lim_{x\to-1^-}f(x)=-\infty$.
+\end{itemize}
+One of the one-sided limits is infinite, hence this is a \textbf{discontinuity of the second kind}.
+
+\textbf{3. $x=0$.}
+\begin{itemize}
+  \item As $x\to0^+$: $\frac1x\to+\infty$, hence both the numerator and the denominator tend to $\infty$. Divide the numerator and the denominator by $e^{1/x}$:
+  \[ f(x)=\frac{e^{\frac1x}\cdot e^{-\frac1{x+1}}}{e^{\frac1x}\left(1-2e^{-\frac1x}\right)}=\frac{e^{-\frac{1}{x+1}}}{1-2e^{-\frac1x}}\xrightarrow[x\to0^+]{}\frac{e^{-1}}{1-0}=\frac1e, \]
+  since $e^{-1/x}\to0$ when $\frac1x\to+\infty$. (In the official solution the limit is computed with L'Hôpital's rule and gives the same value.)
+  \item As $x\to0^-$: $\frac1x\to-\infty$, hence $e^{1/x}\to0$ and the denominator tends to $-2$; also $\frac1x-\frac1{x+1}\to-\infty-1=-\infty$, hence the numerator tends to $0$. Therefore $\lim_{x\to0^-}f(x)=\frac{0}{-2}=0$.
+\end{itemize}
+Both one-sided limits exist and are finite but different ($\frac1e\neq0$), hence this is a \textbf{discontinuity of the first kind (jump)}.
+
+\textbf{Summary:} $x=0$ — discontinuity of the first kind (jump); $x=-1$ and $x=\frac1{\ln2}$ — discontinuities of the second kind.
+\end{solution}

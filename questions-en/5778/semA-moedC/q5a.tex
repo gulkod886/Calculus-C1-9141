@@ -1,0 +1,29 @@
+% English translation of questions/5778/semA-moedC/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+{(10 pts)} Compute the integral $\displaystyle\int\frac{x^4+4x^3+4x^2+8x+1}{(x-1)(x+2)^2}\,dx$.
+\end{question}
+
+\begin{hint}
+The degree of the numerator is greater than the degree of the denominator — first perform polynomial division, and then decompose into partial fractions of the form $\frac{A}{x-1}+\frac{B}{x+2}+\frac{C}{(x+2)^2}$.
+\end{hint}
+
+\begin{solution}
+The denominator: $(x-1)(x+2)^2=(x-1)(x^2+4x+4)=x^3+3x^2-4$. The degree of the numerator ($4$) is greater than the degree of the denominator ($3$), so we perform polynomial division:
+\[ (x+1)(x^3+3x^2-4)=x^4+4x^3+3x^2-4x-4, \]
+hence
+\[ x^4+4x^3+4x^2+8x+1=(x+1)(x^3+3x^2-4)+(x^2+12x+5). \]
+That is,
+\[ \frac{x^4+4x^3+4x^2+8x+1}{(x-1)(x+2)^2}=x+1+\frac{x^2+12x+5}{(x-1)(x+2)^2}. \]
+Partial fraction decomposition:
+\[ \frac{x^2+12x+5}{(x-1)(x+2)^2}=\frac{A}{x-1}+\frac{B}{x+2}+\frac{C}{(x+2)^2}, \]
+\[ x^2+12x+5=A(x+2)^2+B(x-1)(x+2)+C(x-1). \]
+\begin{itemize}
+  \item $x=1$: $18=9A$, i.e. $A=2$.
+  \item $x=-2$: $4-24+5=-15=-3C$, i.e. $C=5$.
+  \item Comparing the coefficients of $x^2$: $1=A+B$, i.e. $B=-1$.
+\end{itemize}
+(Check, constant term: $4A-2B-C=8+2-5=5$, as required.) Hence
+\[ \int\frac{x^4+4x^3+4x^2+8x+1}{(x-1)(x+2)^2}\,dx=\int\left(x+1+\frac{2}{x-1}-\frac{1}{x+2}+\frac{5}{(x+2)^2}\right)dx \]
+\[ \boxed{=\frac{x^2}{2}+x+2\ln|x-1|-\ln|x+2|-\frac{5}{x+2}+C} \]
+\end{solution}

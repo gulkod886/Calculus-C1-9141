@@ -1,0 +1,38 @@
+% English translation of questions/5776/semB-moedB/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\begin{enumerate}
+  \item (15 pts) Compute the following indefinite integral:
+  \[ \int\frac{xdx}{(x-1)(x^2+2x+2)}. \]
+  \item (5 pts) Compute the area enclosed under the graph of the function $f(x)=\frac{x}{(x-1)(x^2+2x+2)}$ on the interval $[-1,0]$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Decompose into partial fractions: $\frac{A}{x-1}+\frac{Bx+C}{x^2+2x+2}$. For the quadratic factor, complete the square: $x^2+2x+2=(x+1)^2+1$.
+\end{hint}
+
+\begin{hint}
+In part (b), check the sign of the function on the interval before computing the area.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item The factor $x^2+2x+2=(x+1)^2+1$ has no real roots (the discriminant is $4-8<0$), so we decompose:
+  \[ \frac{x}{(x-1)(x^2+2x+2)}=\frac{A}{x-1}+\frac{Bx+C}{x^2+2x+2}
+     \iff x=A(x^2+2x+2)+(Bx+C)(x-1). \]
+  Substituting $x=1$: $1=5A$, i.e., $A=\frac15$. Comparing the coefficients of $x^2$: $0=A+B$, hence $B=-\frac15$. Comparing the constant terms: $0=2A-C$, hence $C=\frac25$. That is,
+  \[ \frac{x}{(x-1)(x^2+2x+2)}=\frac{1}{5}\cdot\frac{1}{x-1}-\frac15\cdot\frac{x-2}{x^2+2x+2}. \]
+  Write $x-2=\frac12(2x+2)-3$:
+  \[ \frac{x-2}{x^2+2x+2}=\frac12\cdot\frac{2x+2}{x^2+2x+2}-\frac{3}{(x+1)^2+1}. \]
+  Hence (using $\int\frac{u'}{u}=\ln|u|$ and $\int\frac{dt}{t^2+1}=\arctan t$):
+  \[ \boxed{\int\frac{x\,dx}{(x-1)(x^2+2x+2)}=\frac15\ln|x-1|-\frac1{10}\ln(x^2+2x+2)+\frac35\arctan(x+1)+C.} \]
+  (Check: differentiating the expression gives back the integrand.)
+
+  \item On the interval $[-1,0]$: $x\le 0$, $x-1<0$, $x^2+2x+2>0$, hence $f(x)\ge0$ (equal to zero only at $x=0$). The function is continuous on the interval, so the area is $\int_{-1}^0 f(x)\,dx$. Denote by $F$ the antiderivative from part (a) and use the Newton--Leibniz formula:
+  \[ F(0)=\frac15\ln1-\frac1{10}\ln2+\frac35\cdot\frac\pi4=-\frac{\ln2}{10}+\frac{3\pi}{20},\qquad
+     F(-1)=\frac15\ln2-\frac1{10}\ln1+\frac35\arctan0=\frac{\ln 2}{5}. \]
+  Therefore
+  \[ S=F(0)-F(-1)=\boxed{\frac{3\pi}{20}-\frac{3\ln2}{10}}\approx 0.2633. \]
+\end{enumerate}
+\end{solution}

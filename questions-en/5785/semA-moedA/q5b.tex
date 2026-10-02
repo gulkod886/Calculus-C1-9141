@@ -1,0 +1,20 @@
+% English translation of questions/5785/semA-moedA/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(11 pts) Compute the following improper integral, or show that it does not converge:
+\[ \int_1^\infty \frac{1}{(1+x)\cdot\sqrt{x}}\,dx \]
+\end{question}
+
+\begin{hint}
+Substitute $t = \sqrt{x}$.
+\end{hint}
+
+\begin{solution}
+By definition, $\int_1^\infty g = \lim_{R\to\infty}\int_1^R g$. We compute the integral over $[1,R]$ with the substitution $t = \sqrt{x}$, i.e. $x = t^2$, $dx = 2t\,dt$; as $x$ goes from $1$ to $R$, $t$ goes from $1$ to $\sqrt R$:
+\[ \int_1^R \frac{dx}{(1+x)\sqrt{x}} = \int_1^{\sqrt R}\frac{2t\,dt}{(1+t^2)\,t} = 2\int_1^{\sqrt R}\frac{dt}{1+t^2} = 2\left(\arctan\sqrt R - \arctan 1\right). \]
+As $R \to \infty$ also $\sqrt R \to \infty$, and $\arctan\sqrt R \to \frac\pi2$. Hence
+\[ \int_1^\infty \frac{dx}{(1+x)\sqrt{x}} = 2\left(\frac\pi2 - \frac\pi4\right) = \frac{\pi}{2}. \]
+(Convergence can also be seen in advance by the comparison test: $0 < \frac{1}{(1+x)\sqrt x} < \frac{1}{x^{3/2}}$, and $\int_1^\infty x^{-3/2}dx$ converges.)
+
+\textbf{Answer:} the integral converges and its value is $\frac{\pi}{2}$.
+\end{solution}

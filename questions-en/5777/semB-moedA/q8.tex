@@ -1,0 +1,22 @@
+% English translation of questions/5777/semB-moedA/q8.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Let $f(x),g(x)$ be functions defined and continuous on the ray $[0,+\infty)$. It is given that the improper integral $\int_0^\infty(f(x)+g(x))\,dx$ converges.
+Prove or disprove:
+The improper integral $\int_0^\infty(f(x)-g(x))\,dx$ converges.
+\end{question}
+
+\begin{hint}
+Try functions whose sum is zero.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is false.} Counterexample: $f(x)=1$, $g(x)=-1$ (both continuous on $[0,\infty)$).
+\begin{itemize}
+  \item $f+g\equiv0$, hence $\int_0^\infty(f+g)\,dx=\lim_{R\to\infty}\int_0^R0\,dx=0$ -- converges.
+  \item $f-g\equiv2$, hence $\int_0^R(f-g)\,dx=2R\xrightarrow[R\to\infty]{}\infty$ -- diverges.
+\end{itemize}
+Hence convergence of $\int_0^\infty(f+g)$ does not imply convergence of $\int_0^\infty(f-g)$.
+
+(Remark: if \emph{both} integrals $\int_0^\infty f$ and $\int_0^\infty g$ converged, then by linearity $\int_0^\infty(f-g)$ would converge too. Here only the convergence of the sum is given.)
+\end{solution}

@@ -1,0 +1,26 @@
+% English translation of questions/5776/semB-moedC/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\textbf{Prove or disprove:} The integral $\int_0^1\ln^2(x)dx$ converges.
+\end{question}
+
+\begin{hint}
+Find an antiderivative using integration by parts (twice), and compute the limit $\lim_{x\to0^+}x\ln^k x$ using L'Hôpital's rule.
+\end{hint}
+
+\begin{solution}
+\textbf{The statement is true}, and the value of the integral is $2$.
+
+The function $\ln^2x$ is continuous on $(0,1]$ and unbounded near $0$, so this is an improper integral: $\int_0^1\ln^2x\,dx=\lim_{\eps\to0^+}\int_\eps^1\ln^2x\,dx$.
+
+\textbf{Antiderivative} -- integration by parts with $u=\ln^2x,\ v'=1$:
+\[ \int\ln^2x\,dx=x\ln^2x-\int x\cdot\frac{2\ln x}{x}dx=x\ln^2x-2\int\ln x\,dx=x\ln^2x-2(x\ln x-x)+C. \]
+Hence
+\[ \int_\eps^1\ln^2x\,dx=\big[x\ln^2x-2x\ln x+2x\big]_\eps^1=2-\left(\eps\ln^2\eps-2\eps\ln\eps+2\eps\right). \]
+\textbf{The limits:} By L'Hôpital's rule ($\frac{\infty}{\infty}$):
+\[ \lim_{\eps\to0^+}\eps\ln\eps=\lim\frac{\ln\eps}{1/\eps}=\lim\frac{1/\eps}{-1/\eps^2}=\lim(-\eps)=0, \]
+\[ \lim_{\eps\to0^+}\eps\ln^2\eps=\lim\frac{\ln^2\eps}{1/\eps}=\lim\frac{2\ln\eps/\eps}{-1/\eps^2}=\lim(-2\eps\ln\eps)=0. \]
+Hence $\int_0^1\ln^2x\,dx=2-0=2$: the integral \textbf{converges}.
+
+(Another way: $\ln^2x\le\frac{C}{\sqrt x}$ near $0$ since $\sqrt x\ln^2x\to0$, and $\int_0^1\frac{dx}{\sqrt x}$ converges, so by the comparison test the integral converges.)
+\end{solution}

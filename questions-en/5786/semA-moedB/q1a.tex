@@ -1,0 +1,25 @@
+% English translation of questions/5786/semA-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the image of the function
+\[ f(x) = x^3 - 12x + 8 \]
+on the interval $[-3, 5]$. That is, compute the set
+\[ \{ f(x) : -3 \le x \le 5 \} \]
+Justify your answer carefully.
+\end{question}
+
+\begin{hint}
+A continuous function on a closed interval attains a minimum and a maximum (Weierstrass) and every value between them (Intermediate Value Theorem). It remains to find the minimum and the maximum.
+\end{hint}
+
+\begin{solution}
+$f$ is a polynomial, hence continuous on the closed interval $[-3, 5]$. By Weierstrass's second theorem, $f$ attains on the interval a minimum $c$ and a maximum $d$, and by the Intermediate Value Theorem it attains every value between $c$ and $d$. Hence the image is exactly the closed interval $[c, d]$, and it remains to compute $c$ and $d$.
+
+The absolute extremum points of a differentiable function on a closed interval are at interior critical points or at the endpoints.
+\[ f'(x) = 3x^2 - 12 = 3(x^2 - 4) = 0 \iff x = \pm 2, \]
+and both points lie inside the interval. We compute the values of $f$ at the candidate points:
+\[ f(-3) = -27 + 36 + 8 = 17,\quad f(-2) = -8 + 24 + 8 = 24,\quad f(2) = 8 - 24 + 8 = -8,\quad f(5) = 125 - 60 + 8 = 73. \]
+Hence the minimum is $c = -8$ (at $x = 2$) and the maximum is $d = 73$ (at $x = 5$).
+
+\textbf{Answer:} $\{ f(x) : -3 \le x \le 5 \} = [-8, 73]$.
+\end{solution}

@@ -1,0 +1,27 @@
+% English translation of questions/5784/semA-special/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the volume of the solid of revolution around the $x$-axis of the function
+\[ f(x)=\frac{1}{\sqrt{x}(x-1)} \]
+on the interval $[4,9]$.
+\end{question}
+
+\begin{hint}
+Volume of a solid of revolution: $V=\pi\int_a^b f^2(x)\,dx$. Here $f^2(x)=\frac1{x(x-1)^2}$ -- use partial fractions.
+\end{hint}
+
+\begin{solution}
+$f$ is continuous on $[4,9]$, and the volume of the solid of revolution around the $x$-axis is
+\[ V=\pi\int_4^9f^2(x)\,dx=\pi\int_4^9\frac{dx}{x(x-1)^2}. \]
+\textbf{Partial fractions:}
+\[ \frac1{x(x-1)^2}=\frac Ax+\frac B{x-1}+\frac C{(x-1)^2}\ \Longrightarrow\ 1=A(x-1)^2+Bx(x-1)+Cx. \]
+Substituting $x=0$ gives $A=1$; substituting $x=1$ gives $C=1$; comparing the coefficient of $x^2$: $A+B=0$, hence $B=-1$:
+\[ \frac1{x(x-1)^2}=\frac1x-\frac1{x-1}+\frac1{(x-1)^2}. \]
+\textbf{Integration:} an antiderivative (for $x>1$) is $F(x)=\ln x-\ln(x-1)-\frac1{x-1}$, and by the Fundamental Theorem
+\begin{align*}
+\int_4^9\frac{dx}{x(x-1)^2}&=\left[\ln\frac{x}{x-1}-\frac1{x-1}\right]_4^9=\left(\ln\frac98-\frac18\right)-\left(\ln\frac43-\frac13\right)\\
+&=\ln\left(\frac98\cdot\frac34\right)+\frac13-\frac18=\ln\frac{27}{32}+\frac5{24}.
+\end{align*}
+\textbf{Answer:}
+\[ V=\pi\left(\frac5{24}+\ln\frac{27}{32}\right)=\pi\left(\frac5{24}-\ln\frac{32}{27}\right)\approx0.1207. \]
+\end{solution}

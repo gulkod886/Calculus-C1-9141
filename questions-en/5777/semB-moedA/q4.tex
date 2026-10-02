@@ -1,0 +1,30 @@
+% English translation of questions/5777/semB-moedA/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Compute:
+\[ \int\frac{x^4+1}{x^3-x^2-x+1}\,dx \]
+\end{question}
+
+\begin{hint}
+The degree of the numerator is greater than the degree of the denominator: first perform polynomial division. Factor the denominator: $x^3-x^2-x+1=(x-1)^2(x+1)$.
+\end{hint}
+
+\begin{hint}
+The double root $x=1$ contributes two partial fractions: $\frac{B}{x-1}+\frac{C}{(x-1)^2}$.
+\end{hint}
+
+\begin{solution}
+\textbf{Factoring the denominator:} $x^3-x^2-x+1=x^2(x-1)-(x-1)=(x-1)(x^2-1)=(x-1)^2(x+1)$.
+
+\textbf{Polynomial division:} The quotient is $x+1$; indeed $(x+1)(x^3-x^2-x+1)=x^4-2x^2+1$, and therefore
+\[ x^4+1=(x+1)(x^3-x^2-x+1)+2x^2,\qquad \frac{x^4+1}{x^3-x^2-x+1}=x+1+\frac{2x^2}{(x-1)^2(x+1)}. \]
+
+\textbf{Partial fractions:}
+\[ \frac{2x^2}{(x-1)^2(x+1)}=\frac{A}{x+1}+\frac{B}{x-1}+\frac{C}{(x-1)^2}\iff 2x^2=A(x-1)^2+B(x-1)(x+1)+C(x+1). \]
+Substituting $x=-1$: $2=4A$, i.e., $A=\frac12$. Substituting $x=1$: $2=2C$, i.e., $C=1$. Comparing the coefficients of $x^2$: $2=A+B$, hence $B=\frac32$.
+
+\textbf{Integration:}
+\[ \int\frac{x^4+1}{x^3-x^2-x+1}dx=\int\left(x+1+\frac{1/2}{x+1}+\frac{3/2}{x-1}+\frac{1}{(x-1)^2}\right)dx, \]
+\[ \boxed{=\frac{x^2}{2}+x+\frac12\ln|x+1|+\frac32\ln|x-1|-\frac{1}{x-1}+C.} \]
+(Check: differentiating the result gives back the integrand.)
+\end{solution}

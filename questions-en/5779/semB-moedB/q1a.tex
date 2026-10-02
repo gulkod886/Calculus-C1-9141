@@ -1,0 +1,19 @@
+% English translation of questions/5779/semB-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the derivative of the function $f(x)=\sin(3x+4)$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).
+\end{question}
+
+\begin{hint}
+Use the identity $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$ and the limit $\lim_{t\to0}\frac{\sin t}{t}=1$.
+\end{hint}
+
+\begin{solution}
+By the definition and using the identity $\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$:
+\begin{align*}
+f'(x)&=\lim_{h\to0}\frac{\sin(3x+3h+4)-\sin(3x+4)}{h}
+=\lim_{h\to0}\frac{2\cos\!\left(3x+4+\frac{3h}{2}\right)\sin\frac{3h}{2}}{h}\\
+&=\lim_{h\to0}3\cos\!\left(3x+4+\tfrac{3h}{2}\right)\cdot\frac{\sin\frac{3h}{2}}{\frac{3h}{2}}=3\cos(3x+4)\cdot1,
+\end{align*}
+where we used the continuity of $\cos$ and the fundamental limit $\lim_{t\to0}\frac{\sin t}{t}=1$. Hence $f'(x)=3\cos(3x+4)$.
+\end{solution}

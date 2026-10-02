@@ -1,0 +1,29 @@
+% English translation of questions/5780/semA-moedA/partB-q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)$ be differentiable on the interval $(a,b)$. Which of the following must be true?
+\begin{enumerate}
+  \item[(a)] $f'(x)$ is continuous on $(a,b)$
+  \item[(b)] $f(x)$ is monotone on $(a,b)$
+  \item[(c)] $f(x)+\sin(x)$ is continuous on $(a,b)$
+  \item[(d)] $f(x)$ is monotone increasing on $(a,b)$
+  \item[(e)] there exists $c\in(a,b)$ such that $f'(c)=0$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+What does differentiability at a point imply?
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (c).}
+
+A function differentiable at a point is continuous there, hence $f$ is continuous on $(a,b)$. Also $\sin x$ is continuous, and a sum of continuous functions is continuous; hence $f(x)+\sin(x)$ is continuous on $(a,b)$.
+
+The other answers need not hold:
+\begin{itemize}
+  \item (a) is false: the derivative of a differentiable function need not be continuous. The classical example: $f(x)=x^2\sin\frac1x$ for $x\neq0$ and $f(0)=0$, on the interval $(-1,1)$. It is differentiable at every point ($f'(0)=\lim_{h\to0}h\sin\frac1h=0$), but $f'(x)=2x\sin\frac1x-\cos\frac1x$ for $x\ne0$, and $f'$ has no limit at $0$.
+  \item (b), (d) are false: for example $f(x)=x^2$ on the interval $(-1,1)$ is differentiable but not monotone.
+  \item (e) is false: for example $f(x)=x$ is differentiable and $f'(x)=1\ne0$ for every $x$. (Rolle's theorem also requires continuity on a closed interval and $f(a)=f(b)$.)
+\end{itemize}
+\end{solution}

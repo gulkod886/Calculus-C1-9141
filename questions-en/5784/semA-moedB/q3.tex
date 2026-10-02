@@ -1,0 +1,25 @@
+% English translation of questions/5784/semA-moedB/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Find the intervals where the function is concave up and concave down (convexity and concavity), and the inflection points of the function
+\[ f(x)=\ln\left(\frac{e^x}{1+e^x}\right) \]
+on its domain.
+\end{question}
+
+\begin{hint}
+Simplify first: $\ln\frac{e^x}{1+e^x}=x-\ln(1+e^x)$.
+\end{hint}
+
+\begin{solution}
+\textbf{Domain.} For every real $x$, $\frac{e^x}{1+e^x}>0$, hence $f$ is defined on all of $\R$. By the laws of logarithms
+\[ f(x)=\ln e^x-\ln(1+e^x)=x-\ln(1+e^x). \]
+
+\textbf{First derivative.}
+\[ f'(x)=1-\frac{e^x}{1+e^x}=\frac{1}{1+e^x}. \]
+
+\textbf{Second derivative.} By the chain rule,
+\[ f''(x)=-\frac{e^x}{(1+e^x)^2}. \]
+For every $x\in\R$ we have $e^x>0$ and $(1+e^x)^2>0$, hence $f''(x)<0$ for every $x$.
+
+\textbf{Conclusion.} Since $f''<0$ on all of $\R$, the function is concave down (concave, $\cap$) on the whole line $(-\infty,\infty)$, and there is no interval on which it is concave up. An inflection point is a point where the direction of convexity changes; since $f''$ does not change sign (and does not even vanish), \textbf{the function has no inflection points}.
+\end{solution}

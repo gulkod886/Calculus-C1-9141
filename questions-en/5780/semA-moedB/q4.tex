@@ -1,0 +1,30 @@
+% English translation of questions/5780/semA-moedB/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)$ be a function such that $f(x)+\sin(x)$ is differentiable on the open interval $(a,b)$. Which of the following must be true?
+\begin{enumerate}
+  \item $f(x)+\cos(x)$ is differentiable on the open interval $(a,b)$.
+  \item $f(x)+\sin(x)$ is continuous on the closed interval $[a,b]$.
+  \item $f(x)$ is continuous on the closed interval $[a,b]$.
+  \item $f(x)$ is bounded on the open interval $(a,b)$.
+  \item $f(x)+\sin(x)$ is bounded on the open interval $(a,b)$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Write $f+\cos$ as the sum of $f+\sin$ and a known differentiable function.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: a.}
+
+Denote $g(x)=f(x)+\sin x$, differentiable on $(a,b)$. Then
+\[ f(x)+\cos x=g(x)-\sin x+\cos x , \]
+and this is a sum of functions differentiable on $(a,b)$ ($\sin$ and $\cos$ are differentiable on all of $\R$), hence it is differentiable on $(a,b)$. That is, (a) is always true.
+
+The other statements need not hold. Counterexample: $f(x)=\frac{1}{x-a}-\sin x$ on $(a,b)$. Then $f(x)+\sin x=\frac{1}{x-a}$ is differentiable on $(a,b)$, but:
+\begin{itemize}
+  \item $f+\sin$ and $f$ are not defined (and certainly not continuous) at $x=a$ --- (b) and (c) fail. (Even if we assign them some value at $a$, they are unbounded near $a$ and hence not continuous there.)
+  \item $\frac{1}{x-a}\to+\infty$ as $x\to a^+$, hence $f+\sin$ is unbounded on $(a,b)$ --- (e) fails; and also $f=\frac{1}{x-a}-\sin x$ is unbounded (since $\sin$ is bounded) --- (d) fails.
+\end{itemize}
+\end{solution}

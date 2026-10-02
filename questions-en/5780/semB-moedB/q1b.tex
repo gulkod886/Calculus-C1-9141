@@ -1,0 +1,29 @@
+% English translation of questions/5780/semB-moedB/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the following limits:
+\begin{enumerate}
+  \item (5 pts) $\displaystyle\lim_{x\to\infty}\frac{x+2\sin x}{3x-\cos x}$,
+  \item (5 pts) $\displaystyle\lim_{x\to+\infty}\left(\sqrt{x+\sqrt{x}}-\sqrt{x-\sqrt{x}}\right)$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+In the first limit divide the numerator and the denominator by $x$ and use the fact that $\sin x,\cos x$ are bounded.
+\end{hint}
+
+\begin{hint}
+In the second limit multiply and divide by the conjugate.
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item Divide the numerator and the denominator by $x$ (for $x>0$):
+  \[ \frac{x+2\sin x}{3x-\cos x}=\frac{1+2\frac{\sin x}{x}}{3-\frac{\cos x}{x}} . \]
+  Since $|\sin x|,|\cos x|\le1$ and $\frac1x\to0$, by ``bounded times tending to zero'' $\frac{\sin x}{x}\to0$ and $\frac{\cos x}{x}\to0$. Hence the limit is $\boxed{\frac13}$.
+  \item Multiply and divide by the conjugate (for $x>1$ both roots are defined):
+  \[ \sqrt{x+\sqrt x}-\sqrt{x-\sqrt x}=\frac{(x+\sqrt x)-(x-\sqrt x)}{\sqrt{x+\sqrt x}+\sqrt{x-\sqrt x}}=\frac{2\sqrt x}{\sqrt{x+\sqrt x}+\sqrt{x-\sqrt x}}
+  =\frac{2}{\sqrt{1+\frac{1}{\sqrt x}}+\sqrt{1-\frac{1}{\sqrt x}}} , \]
+  where we divided the numerator and the denominator by $\sqrt x$. As $x\to+\infty$, $\frac{1}{\sqrt x}\to0$, hence (by continuity of the square root) the limit is $\frac{2}{1+1}=\boxed{1}$.
+\end{enumerate}
+\end{solution}

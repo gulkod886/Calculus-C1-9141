@@ -1,0 +1,16 @@
+% English translation of questions/5777/semA-moedA/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle \lim_{x\to 0}\frac{e^x-1}{\sqrt{1+x}-1}$
+\end{question}
+
+\begin{solution}
+As $x\to0$ the numerator and the denominator tend to $0$ (both functions are continuous at $0$ and vanish there), i.e., a limit of the form $\frac00$. The numerator and the denominator are differentiable in a neighborhood of $0$, and the derivative of the denominator $\frac{1}{2\sqrt{1+x}}\neq0$ there. By L'Hôpital's rule:
+\[
+\lim_{x\to0}\frac{e^x-1}{\sqrt{1+x}-1}=\lim_{x\to0}\frac{e^x}{\frac{1}{2\sqrt{1+x}}}=\lim_{x\to0}2\sqrt{1+x}\,e^x=2.
+\]
+(Alternative way: multiply by the conjugate: $\frac{e^x-1}{\sqrt{1+x}-1}=\frac{e^x-1}{x}\cdot(\sqrt{1+x}+1)\to 1\cdot2=2$, by the fundamental limit $\lim_{x\to0}\frac{e^x-1}{x}=1$.)
+
+\textbf{Answer:} $2$.
+\end{solution}

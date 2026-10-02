@@ -1,0 +1,36 @@
+% English translation of questions/5784/semA-moedA/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(14 pts) Compute the antiderivative of
+\[ f(x)=\frac{4x^2+9x+10}{x^3+2x^2+5x} \]
+\end{question}
+
+\begin{hint}
+Factor the denominator: $x^3+2x^2+5x=x(x^2+2x+5)$, where the quadratic factor has no real roots. Decompose into partial fractions of the form $\frac{A}{x}+\frac{Bx+C}{x^2+2x+5}$.
+\end{hint}
+
+\begin{hint}
+In the integral of $\frac{Bx+C}{x^2+2x+5}$, split into a numerator that is the derivative of the denominator plus a constant, and complete the square: $x^2+2x+5=(x+1)^2+4$.
+\end{hint}
+
+\begin{solution}
+\textbf{Factoring the denominator.} $x^3+2x^2+5x=x(x^2+2x+5)$, and the discriminant of $x^2+2x+5$ is $4-20<0$, so the quadratic factor is irreducible. The degree of the numerator is less than the degree of the denominator, so we can decompose directly into partial fractions:
+\[ \frac{4x^2+9x+10}{x(x^2+2x+5)}=\frac{A}{x}+\frac{Bx+C}{x^2+2x+5}. \]
+Multiplying by the denominator: $4x^2+9x+10=A(x^2+2x+5)+(Bx+C)x$.
+\begin{itemize}
+  \item Substituting $x=0$: $10=5A$, i.e. $A=2$.
+  \item Comparing the coefficients of $x^2$: $4=A+B$, i.e. $B=2$.
+  \item Comparing the coefficients of $x$: $9=2A+C$, i.e. $C=5$.
+\end{itemize}
+Hence
+\[ f(x)=\frac{2}{x}+\frac{2x+5}{x^2+2x+5}. \]
+
+\textbf{Integration.} $\int\frac{2}{x}\,dx=2\ln|x|$. In the second fraction we split $2x+5=(2x+2)+3$, where $2x+2$ is the derivative of the denominator:
+\[ \int\frac{2x+5}{x^2+2x+5}\,dx=\int\frac{2x+2}{x^2+2x+5}\,dx+3\int\frac{dx}{(x+1)^2+4}. \]
+The first integral equals $\ln(x^2+2x+5)$ (substitution $u=x^2+2x+5$; no absolute value since the expression is positive). In the second we substitute $x+1=2t$:
+\[ 3\int\frac{dx}{(x+1)^2+4}=\frac32\arctan\frac{x+1}{2}. \]
+
+\textbf{Answer.}
+\[ \boxed{\int f(x)\,dx = 2\ln|x|+\ln(x^2+2x+5)+\frac32\arctan\frac{x+1}{2}+C} \]
+(on each of the intervals $x>0$ and $x<0$ separately; one can check by differentiation that $f$ is obtained.)
+\end{solution}

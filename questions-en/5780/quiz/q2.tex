@@ -1,0 +1,39 @@
+% English translation of questions/5780/quiz/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The limit $\displaystyle\lim_{x\to\infty}\left(\frac{x^2-1}{x^2+3x}\right)^{\frac{x}{3}}$ is equal to
+\begin{enumerate}
+  \item $e^3$
+  \item $e$
+  \item $e^{\frac13}$
+  \item $e^{-1}$
+  \item $\infty$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+This is a limit of the form $1^\infty$. Write the base as $1+t(x)$ with $t(x)\to 0$ and use $\lim_{y\to\infty}\left(1+\frac1y\right)^y=e$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (d)} $e^{-1}$.
+
+The base tends to 1 (dividing by $x^2$: $\frac{1-1/x^2}{1+3/x}\to 1$) and the exponent tends to $\infty$, i.e. this is a limit of the form $1^\infty$. We write
+\[
+\frac{x^2-1}{x^2+3x}=1+\frac{x^2-1-x^2-3x}{x^2+3x}=1+t(x),\qquad t(x)=\frac{-3x-1}{x^2+3x}\xrightarrow[x\to\infty]{}0 .
+\]
+For large $x$, $t(x)\neq 0$, hence
+\[
+\left(1+t(x)\right)^{\frac x3}=\Bigl[\left(1+t(x)\right)^{\frac{1}{t(x)}}\Bigr]^{t(x)\cdot\frac{x}{3}} .
+\]
+By the basic limit $\lim_{s\to 0}(1+s)^{1/s}=e$ (substituting $s=t(x)\to 0$) the inner base tends to $e$. The exponent:
+\[
+t(x)\cdot\frac x3=\frac{-3x-1}{x^2+3x}\cdot\frac{x}{3}=\frac{-3x^2-x}{3x^2+9x}=\frac{-3-\frac1x}{3+\frac9x}\xrightarrow[x\to\infty]{}-1 .
+\]
+Since $u^v=e^{v\ln u}$ and the functions $\ln$ and $\exp$ are continuous, if $u\to e$ and $v\to -1$ then $u^v\to e^{-1}$. Hence
+\[
+\lim_{x\to\infty}\left(\frac{x^2-1}{x^2+3x}\right)^{\frac{x}{3}}=\boxed{e^{-1}} .
+\]
+
+\textbf{Why the others are wrong:} (a), (b), (c) result from an error in the sign or in the coefficient of the exponent (for example, ignoring the fact that $t(x)$ is negative). (e) is wrong: the base is less than 1 for large $x$ (the numerator is smaller than the denominator), hence the power is even bounded by 1 and cannot tend to $\infty$.
+\end{solution}

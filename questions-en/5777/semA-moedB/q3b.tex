@@ -1,0 +1,26 @@
+% English translation of questions/5777/semA-moedB/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(12 pts) Does the equation $\cos(x)-x=0$ have a solution in the interval $(-1,1)$, and is it unique? State precisely every theorem you rely on.
+\end{question}
+
+\begin{hint}
+Define $g(x)=\cos x-x$ and check the signs of $g(\pm1)$. For uniqueness, check the sign of $g'$.
+\end{hint}
+
+\begin{solution}
+Define $g(x)=\cos x-x$. This is a continuous and differentiable function on all of $\R$.
+
+\textbf{Existence.} \emph{The Intermediate Value Theorem (Bolzano):} If $g$ is continuous on a closed interval $[a,b]$ and $g(a),g(b)$ have opposite signs, then there exists $x_0\in(a,b)$ with $g(x_0)=0$.
+Here $g$ is continuous on $[-1,1]$, and
+\[
+g(-1)=\cos1+1>0,\qquad g(1)=\cos1-1<0
+\]
+(since $0<\cos1<1$). Hence there exists $x_0\in(-1,1)$ with $\cos x_0-x_0=0$.
+
+\textbf{Uniqueness.} $g'(x)=-\sin x-1$. We have $g'(x)\le0$ for every $x$, with equality $g'(x)=0$ only when $\sin x=-1$, i.e., $x=-\frac\pi2+2\pi k$; none of these points lies in the interval $(-1,1)$ (since $\frac\pi2>1$). Hence $g'(x)<0$ for every $x\in(-1,1)$.
+By a corollary of Lagrange's theorem (\emph{if $g'<0$ on an interval then $g$ is strictly decreasing on it}), $g$ is strictly decreasing on $(-1,1)$ and therefore one-to-one there, so it has at most one zero.
+(Equivalently: if there were two roots $x_1<x_2$, then by \emph{Rolle's theorem} -- $g$ is continuous on $[x_1,x_2]$, differentiable on $(x_1,x_2)$ and $g(x_1)=g(x_2)$ -- there would exist $\xi\in(x_1,x_2)$ with $g'(\xi)=0$, a contradiction.)
+
+\textbf{Answer:} Yes, the equation has a solution in the interval $(-1,1)$, and it is unique.
+\end{solution}

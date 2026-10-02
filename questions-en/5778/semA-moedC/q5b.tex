@@ -1,0 +1,17 @@
+% English translation of questions/5778/semA-moedC/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+{(10 pts)} Compute the length of the curve $f(x)=x^{3/2}$ between $x=0$ and $x=9$.
+\end{question}
+
+\begin{hint}
+Arc length: $L=\int_a^b\sqrt{1+(f'(x))^2}\,dx$.
+\end{hint}
+
+\begin{solution}
+$f'(x)=\frac32x^{1/2}$, hence $1+(f'(x))^2=1+\frac94x$. The arc length:
+\[ L=\int_0^9\sqrt{1+\frac94x}\,dx. \]
+Substitute $u=1+\frac94x$, $du=\frac94dx$; as $x$ runs from $0$ to $9$, $u$ runs from $1$ to $1+\frac{81}{4}=\frac{85}{4}$:
+\[ L=\frac49\int_1^{85/4}u^{1/2}\,du=\frac49\cdot\frac23\left[u^{3/2}\right]_1^{85/4}=\frac{8}{27}\left(\left(\frac{85}{4}\right)^{3/2}-1\right)=\frac{8}{27}\left(\frac{85\sqrt{85}}{8}-1\right). \]
+\[ \boxed{L=\frac{85\sqrt{85}-8}{27}\approx28.73} \]
+\end{solution}

@@ -1,0 +1,27 @@
+% English translation of questions/5779/semB-moedA/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find all the asymptotes of the function: $f(x)=\dfrac{x^2+x-6}{|x|-2}$.
+\end{question}
+
+\begin{hint}
+Factor the numerator $x^2+x-6=(x+3)(x-2)$ and treat the cases $x>0$ and $x<0$ separately.
+\end{hint}
+
+\begin{solution}
+Domain: $|x|\neq2$, i.e. $x\neq\pm2$. Factor $x^2+x-6=(x+3)(x-2)$.
+
+\textbf{For $x\ge0$, $x\ne 2$:} $|x|-2=x-2$ and hence $f(x)=\dfrac{(x+3)(x-2)}{x-2}=x+3$.
+
+\textbf{For $x<0$, $x\ne-2$:} $|x|-2=-x-2=-(x+2)$ and hence
+\[ f(x)=-\frac{(x+3)(x-2)}{x+2}=-\frac{x^2+x-6}{x+2}=-x+1+\frac{4}{x+2}, \]
+(polynomial division: $x^2+x-6=(x+2)(x-1)-4$).
+
+\textbf{Vertical asymptotes:} at $x=2$: $\lim_{x\to2}f(x)=\lim_{x\to2}(x+3)=5$ is finite, so this is a removable discontinuity and there is no asymptote there. At $x=-2$: $\lim_{x\to-2^\pm}\left(-x+1+\frac{4}{x+2}\right)=\pm\infty$, hence $x=-2$ is a vertical asymptote.
+
+\textbf{Oblique/horizontal asymptotes:} as $x\to+\infty$ we have exactly $f(x)=x+3$, hence $y=x+3$ is an oblique asymptote at $+\infty$. As $x\to-\infty$:
+\[ f(x)-(-x+1)=\frac{4}{x+2}\xrightarrow[x\to-\infty]{}0, \]
+hence $y=-x+1$ is an oblique asymptote at $-\infty$. (There are no horizontal asymptotes.)
+
+\textbf{Answer:} $x=-2$ (vertical), $y=x+3$ (at $+\infty$), $y=-x+1$ (at $-\infty$).
+\end{solution}

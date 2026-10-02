@@ -1,0 +1,21 @@
+% English translation of questions/5779/semA-moedA/q3b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Explain why the function $f(x)=\cos\left(\dfrac{x+1}{x-1}\right)$ has no limit as $x$ tends to $1$.
+\end{question}
+
+\begin{hint}
+Use Heine's definition of the limit: find two sequences tending to $1$ along which the values of the function tend to different limits.
+\end{hint}
+
+\begin{solution}
+We use Heine's definition. If $L=\lim_{x\to1}f(x)$ existed, then for every sequence $x_n\to1$, $x_n\ne1$, we would have $f(x_n)\to L$.
+
+Note that if $\frac{x+1}{x-1}=y$ then $x=\frac{y+1}{y-1}$. Choose
+\[ x_n=\frac{2\pi n+1}{2\pi n-1},\qquad z_n=\frac{(2n+1)\pi+1}{(2n+1)\pi-1}. \]
+Both sequences tend to $1$ (divide the numerator and denominator by $n$) and are different from $1$. We have $\frac{x_n+1}{x_n-1}=2\pi n$ and $\frac{z_n+1}{z_n-1}=(2n+1)\pi$, hence
+\[ f(x_n)=\cos(2\pi n)=1\to1,\qquad f(z_n)=\cos\big((2n+1)\pi\big)=-1\to-1. \]
+We obtained two sequences tending to $1$ along which the values of the function converge to different limits, contradicting the uniqueness of the limit. Hence $f$ has no limit at $1$.
+
+(Intuitively: as $x\to1^\pm$ the expression $\frac{x+1}{x-1}\to\pm\infty$, and the cosine oscillates between $-1$ and $1$ infinitely many times.)
+\end{solution}

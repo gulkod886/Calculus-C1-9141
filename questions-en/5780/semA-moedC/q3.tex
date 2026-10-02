@@ -1,0 +1,27 @@
+% English translation of questions/5780/semA-moedC/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the following limit:
+\[ \lim_{x\to0^+}\left((x^2+x+1))^{\frac{1}{x^2}}+x\cdot\ln x\right) \]
+\end{question}
+
+\begin{hint}
+Compute each term separately. In the first term write $(x^2+x+1)^{1/x^2}=e^{\frac{\ln(1+x+x^2)}{x^2}}$.
+\end{hint}
+
+\begin{solution}
+(The original wording contains a superfluous parenthesis; the first term is $(x^2+x+1)^{1/x^2}$.)
+
+\textbf{The second term:} $x\ln x=\frac{\ln x}{1/x}$, of the form $\frac{-\infty}{\infty}$. By L'Hôpital's rule:
+\[ \lim_{x\to0^+}\frac{\ln x}{1/x}=\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}(-x)=0 . \]
+
+\textbf{The first term:} for $x>0$, $x^2+x+1>1$, hence
+\[ (x^2+x+1)^{\frac{1}{x^2}}=\exp\Big(\frac{\ln(1+x+x^2)}{x^2}\Big). \]
+The exponent: $\frac{\ln(1+x+x^2)}{x^2}=\frac{\ln(1+x+x^2)}{x+x^2}\cdot\frac{x+x^2}{x^2}=\frac{\ln(1+t)}{t}\Big|_{t=x+x^2}\cdot\Big(\frac1x+1\Big)$.
+As $x\to0^+$: $t=x+x^2\to0^+$ and hence $\frac{\ln(1+t)}{t}\to1$, whereas $\frac1x+1\to+\infty$. Hence the exponent tends to $+\infty$, and therefore
+\[ \lim_{x\to0^+}(x^2+x+1)^{\frac{1}{x^2}}=+\infty . \]
+(Intuitively: this is a limit of the form $1^\infty$, but the base approaches $1$ ``slowly'' --- like $1+x$ --- while the exponent grows like $\frac{1}{x^2}$, hence $\big(1+x\big)^{1/x^2}\approx e^{1/x}\to\infty$.)
+
+\textbf{Summary:} the sum of a function tending to $+\infty$ and a function tending to a finite limit ($0$) tends to $+\infty$. Hence
+\[ \lim_{x\to0^+}\left((x^2+x+1)^{\frac{1}{x^2}}+x\ln x\right)=\boxed{+\infty} . \]
+\end{solution}

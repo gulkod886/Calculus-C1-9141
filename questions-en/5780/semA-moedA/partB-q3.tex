@@ -1,0 +1,26 @@
+% English translation of questions/5780/semA-moedA/partB-q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+The derivative $y'(0)$ of the implicit function $y(x)$ defined by the equation $\cos\left(\frac{\pi}{2}+x+y\right)-y=0$ in a neighborhood of the point $(0,0)$ is equal to
+\begin{enumerate}
+  \item[(a)] $\frac12$
+  \item[(b)] $0$
+  \item[(c)] $\frac{\pi}{2}$
+  \item[(d)] $1+\frac{\pi}{2}$
+  \item[(e)] $-\frac12$
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Differentiate both sides of the equation with respect to $x$, where $y=y(x)$ (chain rule), and substitute $x=0$, $y=0$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (e).}
+
+First, the point $(0,0)$ satisfies the equation: $\cos\frac{\pi}{2}-0=0$. Differentiate both sides of the equation with respect to $x$, where $y=y(x)$, using the chain rule:
+\[ -\sin\left(\frac{\pi}{2}+x+y\right)\cdot\left(1+y'\right) - y' = 0. \]
+Substitute $x=0$, $y(0)=0$; then $\sin\frac{\pi}{2}=1$:
+\[ -(1+y'(0)) - y'(0) = 0 \quad\Longrightarrow\quad -1-2y'(0)=0 \quad\Longrightarrow\quad y'(0) = -\frac12. \]
+(Alternatively: $\cos\left(\frac\pi2+t\right)=-\sin t$, hence the equation is $\sin(x+y)+y=0$; differentiating gives $\cos(x+y)(1+y')+y'=0$, and at $(0,0)$: $1+2y'=0$.)
+\end{solution}

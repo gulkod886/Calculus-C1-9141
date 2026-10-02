@@ -1,0 +1,17 @@
+% English translation of questions/5783/semB-moedA/q2d.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(Mandatory question)
+Solve the following integral:
+$\displaystyle\int_2^5\frac{2x-1}{\sqrt{x^2-x}}\,dx$
+\end{question}
+
+\begin{hint}
+The numerator is exactly the derivative of the expression under the square root.
+\end{hint}
+
+\begin{solution}
+On $[2,5]$ we have $x^2-x>0$, so the integrand is continuous. Substitute $u=x^2-x$, $du=(2x-1)dx$; the limits are $u(2)=2$, $u(5)=20$:
+\[ \int_2^5\frac{2x-1}{\sqrt{x^2-x}}dx=\int_2^{20}u^{-1/2}du=2\sqrt u\Big|_2^{20}=2\sqrt{20}-2\sqrt2=\boxed{4\sqrt5-2\sqrt2}\approx 6.116. \]
+\end{solution}

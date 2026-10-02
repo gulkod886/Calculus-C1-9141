@@ -1,0 +1,21 @@
+% English translation of questions/5779/semA-moedA/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle\lim_{x\to0}\big(\cos x\big)^{\frac{1}{\sin^2 2x}}$
+\end{question}
+
+\begin{hint}
+Write $(\cos x)^{1/\sin^22x}=e^{\frac{\ln\cos x}{\sin^22x}}$ and compute the limit of the exponent.
+\end{hint}
+
+\begin{solution}
+This is a limit of the form $1^\infty$. In a small punctured neighborhood of $0$ we have $\cos x>0$ and $\sin2x\neq0$, hence
+\[ (\cos x)^{\frac1{\sin^22x}}=e^{\frac{\ln\cos x}{\sin^22x}}. \]
+We compute the limit of the exponent. Write
+\[ \frac{\ln\cos x}{\sin^22x}=\frac{\ln\cos x}{x^2}\cdot\frac{(2x)^2}{\sin^22x}\cdot\frac14. \]
+The middle factor tends to $1$ by $\lim_{t\to0}\frac{\sin t}{t}=1$. For the first factor (form $\frac00$) we use L'Hôpital's rule:
+\[ \lim_{x\to0}\frac{\ln\cos x}{x^2}=\lim_{x\to0}\frac{-\tan x}{2x}=-\frac12. \]
+Hence the limit of the exponent is $-\frac12\cdot1\cdot\frac14=-\frac18$, and by the continuity of the exponential function
+\[ \lim_{x\to0}(\cos x)^{\frac1{\sin^22x}}=e^{-1/8}. \]
+\end{solution}

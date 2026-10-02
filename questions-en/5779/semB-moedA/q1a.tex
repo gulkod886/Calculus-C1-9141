@@ -1,0 +1,21 @@
+% English translation of questions/5779/semB-moedA/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the derivative of the function $f(x)=\sqrt{5x+3}$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).
+\end{question}
+
+\begin{hint}
+Multiply the numerator and denominator by the conjugate $\sqrt{5(x+h)+3}+\sqrt{5x+3}$.
+\end{hint}
+
+\begin{solution}
+The function is defined for $x\ge -\tfrac35$, and we compute the derivative at a point $x>-\tfrac35$. By the definition, multiplying by the conjugate:
+\begin{align*}
+f'(x)&=\lim_{h\to0}\frac{\sqrt{5(x+h)+3}-\sqrt{5x+3}}{h}
+=\lim_{h\to0}\frac{\big(5(x+h)+3\big)-(5x+3)}{h\left(\sqrt{5x+5h+3}+\sqrt{5x+3}\right)}\\
+&=\lim_{h\to0}\frac{5}{\sqrt{5x+5h+3}+\sqrt{5x+3}}=\frac{5}{2\sqrt{5x+3}},
+\end{align*}
+where in the last step we used the continuity of the square root function ($\sqrt{5x+5h+3}\to\sqrt{5x+3}>0$). Hence
+\[ f'(x)=\frac{5}{2\sqrt{5x+3}},\qquad x>-\tfrac35. \]
+(At the point $x=-\tfrac35$ the quotient $\frac{\sqrt{5h}}{h}\to+\infty$, so the function is not differentiable there.)
+\end{solution}

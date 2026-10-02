@@ -1,0 +1,18 @@
+% English translation of questions/5779/semA-moedB/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle\lim_{x\to0}\frac{\cos x-\sqrt{1-2x^2}}{\sin^2x}$
+\end{question}
+
+\begin{hint}
+Use the Maclaurin expansions $\cos x=1-\frac{x^2}2+o(x^2)$, $\sqrt{1+t}=1+\frac t2+o(t)$, and $\sin^2x\sim x^2$.
+\end{hint}
+
+\begin{solution}
+By the Maclaurin expansions:
+\[ \cos x=1-\frac{x^2}{2}+o(x^2),\qquad \sqrt{1-2x^2}=1+\frac12(-2x^2)+o(x^2)=1-x^2+o(x^2). \]
+Hence the numerator is $\cos x-\sqrt{1-2x^2}=\frac{x^2}{2}+o(x^2)$. Also $\frac{\sin^2x}{x^2}\to1$. Therefore
+\[ \lim_{x\to0}\frac{\cos x-\sqrt{1-2x^2}}{\sin^2x}=\lim_{x\to0}\frac{\frac12+\frac{o(x^2)}{x^2}}{\frac{\sin^2x}{x^2}}=\frac12. \]
+(One can also use L'Hôpital's rule: after replacing $\sin^2x$ by $x^2$, $\lim\frac{-\sin x+\frac{2x}{\sqrt{1-2x^2}}}{2x}=\frac{-1+2}{2}=\frac12$.)
+\end{solution}

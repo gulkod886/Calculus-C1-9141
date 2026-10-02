@@ -1,0 +1,28 @@
+% English translation of questions/5786/semA-moedA/q1a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) How many real solutions does the following equation have?
+\[ x^4 + 2x^2 = 1 \]
+Justify your answer carefully.
+\end{question}
+
+\begin{hint}
+Substitute $t = x^2$ to get a quadratic equation in $t$; remember that $t = x^2$ must be non-negative.
+\end{hint}
+
+\begin{solution}
+\textbf{Method 1 (substitution).} Move everything to one side: $x^4 + 2x^2 - 1 = 0$. Substitute $t = x^2 \ge 0$ to get
+\[ t^2 + 2t - 1 = 0 \quad\Longrightarrow\quad t_{1,2} = \frac{-2 \pm \sqrt{4 + 4}}{2} = -1 \pm \sqrt{2}. \]
+The solution $t = -1 - \sqrt{2} < 0$ is rejected, since $x^2 \ge 0$ for every real $x$, so it gives no real solution.
+The solution $t = -1 + \sqrt{2} > 0$ (since $\sqrt 2 > 1$) gives
+\[ x^2 = \sqrt{2} - 1 \quad\Longrightarrow\quad x_{1,2} = \pm\sqrt{\sqrt{2} - 1}, \]
+two distinct real numbers.
+
+\textbf{Method 2 (function analysis).} Define $f(x) = x^4 + 2x^2 - 1$, a function that is continuous and differentiable on all of $\R$. We have
+\[ f'(x) = 4x^3 + 4x = 4x(x^2 + 1), \]
+and since $x^2 + 1 > 0$, the sign of $f'$ is the sign of $x$: $f' < 0$ on $(-\infty, 0)$ and $f' > 0$ on $(0, \infty)$.
+Hence $f$ is strictly decreasing on $(-\infty, 0]$ and strictly increasing on $[0, \infty)$, so it has at most one zero in each of these intervals.
+Now $f(0) = -1 < 0$ and $f(1) = f(-1) = 2 > 0$. By the Intermediate Value Theorem, $f$ has a zero in $(-1, 0)$ and a zero in $(0, 1)$, and by monotonicity these are its only zeros.
+
+\textbf{Answer:} the equation has exactly \textbf{two} real solutions, $x = \pm\sqrt{\sqrt 2 - 1}$.
+\end{solution}

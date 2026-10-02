@@ -1,0 +1,34 @@
+% English translation of questions/5776/semB-moedC/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+\begin{enumerate}
+  \item (15 pts) Compute the following indefinite integral:
+  \[ \int\frac{dx}{\cos^3(x)}. \]
+  \item (5 pts) Compute the area enclosed under the graph of the function $f(x)=\frac{1}{\cos^3(x)}$ on the interval $[0,1]$.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+Write $\frac{1}{\cos^3x}=\frac{1}{\cos x}\cdot\frac1{\cos^2x}$ and integrate by parts with $v'=\frac1{\cos^2x}$, $v=\tan x$.
+\end{hint}
+
+\begin{hint}
+You will also need $\int\frac{dx}{\cos x}=\ln\left|\frac1{\cos x}+\tan x\right|+C$ (or: multiply by $\cos x$ and substitute $t=\sin x$).
+\end{hint}
+
+\begin{solution}
+\begin{enumerate}
+  \item Denote $I=\int\frac{dx}{\cos^3x}$ and integrate by parts with $u=\frac1{\cos x}$, $v'=\frac1{\cos^2x}$; then $u'=\frac{\sin x}{\cos^2x}$, $v=\tan x$:
+  \[ I=\frac{\tan x}{\cos x}-\int\frac{\sin x}{\cos^2x}\cdot\frac{\sin x}{\cos x}dx=\frac{\tan x}{\cos x}-\int\frac{1-\cos^2x}{\cos^3x}dx=\frac{\tan x}{\cos x}-I+\int\frac{dx}{\cos x}. \]
+  We compute $\int\frac{dx}{\cos x}=\int\frac{\cos x\,dx}{1-\sin^2x}$; with the substitution $t=\sin x$:
+  \[ \int\frac{dt}{1-t^2}=\frac12\ln\left|\frac{1+t}{1-t}\right|+C=\frac12\ln\left|\frac{1+\sin x}{1-\sin x}\right|+C=\ln\left|\frac{1+\sin x}{\cos x}\right|+C, \]
+  (since $\frac{1+\sin x}{1-\sin x}=\frac{(1+\sin x)^2}{\cos^2x}$). Hence $2I=\frac{\sin x}{\cos^2x}+\ln\left|\frac{1+\sin x}{\cos x}\right|+C$, i.e.,
+  \[ \boxed{\int\frac{dx}{\cos^3x}=\frac{\sin x}{2\cos^2x}+\frac12\ln\left|\frac{1}{\cos x}+\tan x\right|+C.} \]
+  (Check: differentiating the result gives back $\frac1{\cos^3x}$.)
+
+  \item On $[0,1]$ we have $0\le x\le1<\frac\pi2$, hence $\cos x>0$ and $f(x)>0$ is continuous. The area is
+  \[ S=\int_0^1\frac{dx}{\cos^3x}=\left[\frac{\sin x}{2\cos^2x}+\frac12\ln\left(\frac{1+\sin x}{\cos x}\right)\right]_0^1
+      =\boxed{\frac{\sin1}{2\cos^21}+\frac12\ln\left(\frac{1+\sin1}{\cos1}\right)}\approx2.054, \]
+  since at the point $0$ the expression equals $0+\frac12\ln1=0$.
+\end{enumerate}
+\end{solution}

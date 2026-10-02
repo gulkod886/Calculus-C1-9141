@@ -1,0 +1,31 @@
+% English translation of questions/5782/semA-moedA/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(17 pts) Estimate $\sqrt[4]{18}$ using a linear approximation (a Taylor polynomial of degree one) and give a bound for the error.
+\end{question}
+
+\begin{hint}
+Expand $f(x)=\sqrt[4]{x}$ around a point close to $18$ at which the fourth root is known.
+\end{hint}
+
+\begin{hint}
+Bound the error using the Lagrange remainder: $R_1(x)=\frac{f''(c)}{2}(x-a)^2$ for some $c$ between $a$ and $x$.
+\end{hint}
+
+\begin{solution}
+Take $f(x)=x^{1/4}$ and expand around $a=16$ (since $\sqrt[4]{16}=2$).
+\[ f'(x)=\tfrac14x^{-3/4},\qquad f''(x)=-\tfrac{3}{16}x^{-7/4}. \]
+Hence $f(16)=2$, $f'(16)=\frac14\cdot16^{-3/4}=\frac14\cdot\frac18=\frac1{32}$, and the first-order Taylor polynomial is
+\[ P_1(x)=2+\frac{1}{32}(x-16). \]
+The approximation:
+\[ \sqrt[4]{18}\approx P_1(18)=2+\frac{2}{32}=\frac{33}{16}=2.0625. \]
+
+\textbf{Error bound.} By Taylor's theorem with the Lagrange remainder ($f$ is twice differentiable on $(0,\infty)$), there exists $c\in(16,18)$ such that
+\[ R_1(18)=f(18)-P_1(18)=\frac{f''(c)}{2!}(18-16)^2=-\frac{3}{16}c^{-7/4}\cdot\frac{4}{2}=-\frac{3}{8}c^{-7/4}. \]
+The function $c^{-7/4}$ is decreasing, and hence for $c>16$:
+\[ |R_1(18)|=\frac38c^{-7/4}<\frac38\cdot16^{-7/4}=\frac38\cdot\frac{1}{2^7}=\frac{3}{1024}\approx0.0029. \]
+
+\textbf{Answer:} $\sqrt[4]{18}\approx2.0625$ with an error less than $\frac{3}{1024}\approx 0.003$. Moreover, since $R_1<0$, the approximation is larger than the true value:
+$2.0625-\frac{3}{1024}<\sqrt[4]{18}<2.0625$.
+(Check: $\sqrt[4]{18}\approx2.05977$.)
+\end{solution}

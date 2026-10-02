@@ -1,0 +1,29 @@
+% English translation of questions/5777/semA-moedB/q5b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the improper integral $\displaystyle\int_1^\infty\frac{\arctan(x)}{x^2}\,dx$.
+\end{question}
+
+\begin{hint}
+Integrate by parts with $u=\arctan x$, $dv=\frac{dx}{x^2}$, and decompose $\frac{1}{x(1+x^2)}=\frac1x-\frac{x}{1+x^2}$.
+\end{hint}
+
+\begin{solution}
+\textbf{Antiderivative.} Integration by parts with $u=\arctan x$, $dv=\frac{dx}{x^2}$, $du=\frac{dx}{1+x^2}$, $v=-\frac1x$:
+\[
+\int\frac{\arctan x}{x^2}dx=-\frac{\arctan x}{x}+\int\frac{dx}{x(1+x^2)}.
+\]
+Partial fraction decomposition: $\frac{1}{x(1+x^2)}=\frac1x-\frac{x}{1+x^2}$, hence for $x>0$
+\[
+\int\frac{dx}{x(1+x^2)}=\ln x-\frac12\ln(1+x^2)=\ln\frac{x}{\sqrt{1+x^2}}.
+\]
+\textbf{The improper integral.} By definition, $\int_1^\infty=\lim_{R\to\infty}\int_1^R$:
+\[
+\int_1^R\frac{\arctan x}{x^2}dx=\left[-\frac{\arctan x}{x}+\ln\frac{x}{\sqrt{1+x^2}}\right]_1^R
+=-\frac{\arctan R}{R}+\ln\frac{R}{\sqrt{1+R^2}}+\frac\pi4-\ln\frac1{\sqrt2}.
+\]
+As $R\to\infty$: $\frac{\arctan R}{R}\to0$ (bounded numerator, denominator tending to infinity), and $\frac{R}{\sqrt{1+R^2}}\to1$, hence $\ln\frac{R}{\sqrt{1+R^2}}\to0$ (continuity of $\ln$). Therefore
+\[
+\int_1^\infty\frac{\arctan x}{x^2}dx=\frac\pi4+\frac12\ln2\approx1.132.
+\]
+\end{solution}

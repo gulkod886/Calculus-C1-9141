@@ -1,0 +1,36 @@
+% English translation of questions/5784/semA-moedB/q2.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Define a function by
+\[ f(x)=\begin{cases}\frac{\ln(1+x^2)}{\sin^2 x}, & \text{if } x<0,\\ 0, & \text{if } 0\le x\le 1,\\ \frac{x}{x^2-1}, & \text{if } x>1\end{cases} \]
+Find all the points of discontinuity of the function, and classify them as removable, jump or essential discontinuities. Justify.
+\end{question}
+
+\begin{hint}
+Inside each of the intervals the function is a composition/quotient of elementary functions. Check where a denominator vanishes, and separately the junction points $x=0$ and $x=1$.
+\end{hint}
+
+\begin{hint}
+Near $0$: $\ln(1+x^2)\approx x^2$ and $\sin^2x\approx x^2$.
+\end{hint}
+
+\begin{solution}
+\textbf{Inside the open intervals.}
+\begin{itemize}
+  \item On the interval $(0,1)$ the function is constant and hence continuous.
+  \item On the interval $(1,\infty)$: $f(x)=\frac{x}{x^2-1}$ is a quotient of polynomials whose denominator does not vanish there ($x^2-1>0$), hence it is continuous.
+  \item On the interval $(-\infty,0)$: $f(x)=\frac{\ln(1+x^2)}{\sin^2x}$ is a quotient of continuous functions, hence continuous at every point where $\sin x\neq0$. The denominator vanishes at the points $x=-k\pi$, $k=1,2,3,\dots$, and there the function is not defined. At these points the numerator tends to $\ln(1+k^2\pi^2)>0$ and the denominator tends to $0^+$ (since $\sin^2x>0$ in a punctured neighborhood), and therefore
+  \[ \lim_{x\to-k\pi^\pm}f(x)=+\infty. \]
+  The one-sided limits are not finite, hence $x=-k\pi$ ($k\in\N$) are \textbf{essential} discontinuities (of the second kind).
+\end{itemize}
+
+\textbf{The point $x=0$.} $f(0)=0$, and on the right $f\equiv0$, hence $\lim_{x\to0^+}f(x)=0$. From the left:
+\[ \lim_{x\to0^-}\frac{\ln(1+x^2)}{\sin^2x}=\lim_{x\to0^-}\frac{\ln(1+x^2)}{x^2}\cdot\left(\frac{x}{\sin x}\right)^2=1\cdot1^2=1, \]
+where we used the fundamental limit $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$ (with $t=x^2\to0$) and $\lim_{x\to0}\frac{\sin x}{x}=1$. The two one-sided limits are finite and different ($1\neq0$), hence at $x=0$ there is a \textbf{jump} discontinuity.
+
+\textbf{The point $x=1$.} $f(1)=0$ and $\lim_{x\to1^-}f(x)=0$. From the right, the numerator tends to $1$ and the denominator $x^2-1\to0^+$, hence
+\[ \lim_{x\to1^+}\frac{x}{x^2-1}=+\infty. \]
+The right-hand limit is not finite, hence at $x=1$ there is an \textbf{essential} discontinuity.
+
+\textbf{Answer:} at $x=0$ -- a jump discontinuity; at $x=1$ -- an essential discontinuity; at the points $x=-k\pi$, $k=1,2,\dots$ (where $f$ is not defined) -- essential discontinuities (the limit there is $+\infty$). At all other points $f$ is continuous.
+\end{solution}

@@ -1,0 +1,26 @@
+% English translation of questions/5782/semA-special/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(17 pts) Compute the integral
+\[ \int\frac{5x^2+2x+2}{x^3-1}dx \]
+\end{question}
+
+\begin{hint}
+$x^3-1=(x-1)(x^2+x+1)$, and the quadratic factor is irreducible. Decompose into partial fractions.
+\end{hint}
+
+\begin{solution}
+\textbf{Partial fraction decomposition.} $x^3-1=(x-1)(x^2+x+1)$, and the factor $x^2+x+1$ has discriminant $1-4<0$, hence it is irreducible. The degree of the numerator is less than the degree of the denominator:
+\[ \frac{5x^2+2x+2}{(x-1)(x^2+x+1)}=\frac{A}{x-1}+\frac{Bx+C}{x^2+x+1}, \]
+\[ 5x^2+2x+2=A(x^2+x+1)+(Bx+C)(x-1). \]
+\begin{itemize}
+  \item Substituting $x=1$: $9=3A$, hence $A=3$.
+  \item Then $5x^2+2x+2-3(x^2+x+1)=2x^2-x-1=(x-1)(2x+1)$, hence $Bx+C=2x+1$, i.e. $B=2$, $C=1$.
+\end{itemize}
+\[ \frac{5x^2+2x+2}{x^3-1}=\frac{3}{x-1}+\frac{2x+1}{x^2+x+1}. \]
+
+\textbf{Integration.} $\int\frac{3}{x-1}dx=3\ln|x-1|$, and the numerator $2x+1$ is exactly the derivative of the denominator $x^2+x+1>0$, hence $\int\frac{2x+1}{x^2+x+1}dx=\ln(x^2+x+1)$.
+
+\textbf{Answer:}
+\[ \int\frac{5x^2+2x+2}{x^3-1}dx=\boxed{3\ln|x-1|+\ln(x^2+x+1)+C}. \]
+\end{solution}

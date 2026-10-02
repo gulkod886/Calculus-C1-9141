@@ -1,0 +1,32 @@
+% English translation of questions/5784/semA-moedA/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(14 pts) Estimate $\sqrt[3]{30}$ using a linear approximation, and give a bound for the error.
+\end{question}
+
+\begin{hint}
+Use $f(x)=\sqrt[3]{x}$ around the point $x_0=27$, where the root is known.
+\end{hint}
+
+\begin{hint}
+For the error bound, use the Lagrange remainder of the Taylor polynomial of order 1: $R_1(x)=\frac{f''(c)}{2}(x-x_0)^2$.
+\end{hint}
+
+\begin{solution}
+Choose $f(x)=\sqrt[3]{x}=x^{1/3}$ and $x_0=27$ (a point close to $30$ where $f(27)=3$).
+
+\textbf{The linear approximation.} $f'(x)=\frac13x^{-2/3}$, hence $f'(27)=\frac{1}{3\cdot 9}=\frac1{27}$. The linear approximation (Taylor polynomial of order 1):
+\[ f(x)\approx f(27)+f'(27)(x-27)=3+\frac{x-27}{27}, \]
+and in particular
+\[ \sqrt[3]{30}\approx 3+\frac{3}{27}=3+\frac19=\frac{28}{9}\approx 3.1111. \]
+
+\textbf{Error bound.} By Taylor's theorem with the Lagrange remainder, there exists $c\in(27,30)$ such that
+\[ \sqrt[3]{30}-\frac{28}{9} = R_1(30) = \frac{f''(c)}{2!}(30-27)^2. \]
+$f''(x)=-\frac29x^{-5/3}$, and therefore
+\[ |R_1(30)| = \frac{2}{9}c^{-5/3}\cdot\frac{9}{2} = \frac{1}{c^{5/3}} < \frac{1}{27^{5/3}}=\frac{1}{3^5}=\frac1{243}\approx 0.0041, \]
+since $c>27$ and the function $c^{-5/3}$ is decreasing.
+
+In addition, $f''<0$ and therefore $R_1<0$: the approximation is an overestimate. To summarize
+\[ \boxed{\sqrt[3]{30}\approx\frac{28}{9}\approx3.111,\qquad 0<\frac{28}{9}-\sqrt[3]{30}<\frac{1}{243}\approx0.0041.} \]
+(For verification: $\sqrt[3]{30}\approx3.1072$, and the actual error is about $0.0039$.)
+\end{solution}

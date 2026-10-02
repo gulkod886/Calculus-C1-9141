@@ -1,0 +1,22 @@
+% English translation of questions/5777/semA-moedB/q5a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Compute the integral $\displaystyle\int\frac{x^3}{\sqrt{1-x^2}}\,dx$.
+\end{question}
+
+\begin{hint}
+Substitute $u=1-x^2$ (and then $x^2=1-u$).
+\end{hint}
+
+\begin{solution}
+Substitute $u=1-x^2$, $du=-2x\,dx$, and $x^2=1-u$ (for $|x|<1$):
+\[
+\int\frac{x^3}{\sqrt{1-x^2}}dx=\int\frac{x^2\cdot x\,dx}{\sqrt{1-x^2}}=-\frac12\int\frac{1-u}{\sqrt u}\,du=-\frac12\int\left(u^{-1/2}-u^{1/2}\right)du
+=-\sqrt u+\frac13u^{3/2}+C.
+\]
+\textbf{Answer:}
+\[
+\int\frac{x^3}{\sqrt{1-x^2}}dx=-\sqrt{1-x^2}+\frac13(1-x^2)^{3/2}+C=-\frac13(x^2+2)\sqrt{1-x^2}+C.
+\]
+(Check: differentiating $-\frac13(x^2+2)\sqrt{1-x^2}$ gives $-\frac23x\sqrt{1-x^2}+\frac{x(x^2+2)}{3\sqrt{1-x^2}}=\frac{-2x(1-x^2)+x^3+2x}{3\sqrt{1-x^2}}=\frac{x^3}{\sqrt{1-x^2}}$.)
+\end{solution}

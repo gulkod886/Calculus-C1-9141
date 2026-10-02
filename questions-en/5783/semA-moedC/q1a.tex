@@ -1,0 +1,22 @@
+% English translation of questions/5783/semA-moedC/q1a.tex (metadata is taken from the Hebrew file).
+% Note on source: in the original, a stray ".1" appears to the right of the cases in part (b); omitted here.
+
+\begin{question}
+Check whether an inverse function exists for the function $f(x)=|x|+2x$ on its domain. If it exists, find it.
+\end{question}
+
+\begin{hint}
+Open the absolute value: write $f$ separately for $x\ge 0$ and for $x<0$, and check that it is one-to-one and onto.
+\end{hint}
+
+\begin{solution}
+The function is defined on all of $\R$. Open the absolute value:
+\[ f(x)=\begin{cases} 3x, & x\ge 0\\ x, & x<0. \end{cases} \]
+\textbf{One-to-one:} on each of the two domains $f$ is strictly increasing (slope $3$ and slope $1$), and in addition $f(x)\ge 0$ for $x\ge0$ and $f(x)<0$ for $x<0$, so values from the two domains cannot coincide. Hence $f$ is strictly increasing on all of $\R$, and in particular one-to-one.
+
+\textbf{Onto:} the image of $[0,\infty)$ under $3x$ is $[0,\infty)$, and the image of $(-\infty,0)$ under $x$ is $(-\infty,0)$. Hence the image is all of $\R$.
+
+It follows that $f:\R\to\R$ is invertible. We find the inverse: if $y\ge 0$ then $y=3x$ with $x\ge 0$, i.e. $x=y/3$; if $y<0$ then $y=x$. Hence
+\[ \boxed{f^{-1}(y)=\begin{cases} \dfrac{y}{3}, & y\ge 0\\[2mm] y, & y<0. \end{cases}} \]
+(Check: $f^{-1}(f(x))=x$ on both domains.)
+\end{solution}

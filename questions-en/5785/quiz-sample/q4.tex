@@ -1,0 +1,31 @@
+% English translation of questions/5785/quiz-sample/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let $f(x)$ be an even function. Which of the following statements is true?
+\begin{enumerate}
+  \item The function $g(x)=x^2f(x)-\frac{1}{|x|+1}$ is an even function.
+  \item The function $g(x)=x^3f(x)-x|x|$ is an even function.
+  \item The function $g(x)=x^3f(x)+1$ is an even function.
+  \item The function $g(x)=\frac{f(x)}{x^2+x}$ is an odd function.
+\end{enumerate}
+\end{question}
+
+\begin{hint}
+A product of an even function and an even function is even; a product of an odd function and an even function is odd. To disprove, one example suffices, e.g. $f\equiv1$.
+\end{hint}
+
+\begin{solution}
+\textbf{The correct answer: (a)}.
+
+\textbf{(a) is true:} the domain of $g$ is the domain of $f$, which is symmetric (since $f$ is even). For every $x$ in the domain, since $f(-x)=f(x)$, $(-x)^2=x^2$ and $|-x|=|x|$:
+\[
+g(-x)=(-x)^2f(-x)-\frac{1}{|-x|+1}=x^2f(x)-\frac{1}{|x|+1}=g(x).
+\]
+
+\textbf{Why the others are wrong} (the statements must hold for every even $f$, so a single counterexample suffices; take $f(x)\equiv1$, which is even):
+\begin{itemize}
+  \item (b): $g(x)=x^3-x|x|$: $g(2)=8-4=4$ whereas $g(-2)=-8+4=-4\neq g(2)$. (In general this $g$ is odd, as the difference of two odd functions.)
+  \item (c): $g(x)=x^3+1$: $g(1)=2$ whereas $g(-1)=0$.
+  \item (d): $g(x)=\frac{1}{x^2+x}=\frac{1}{x(x+1)}$ is defined at $x=1$ but not at $x=-1$, so the domain is not symmetric and $g$ is not odd. (Even without the domain argument: $g(2)=\frac16$ and $g(-2)=\frac{1}{4-2}=\frac12\neq-\frac16=-g(2)$.)
+\end{itemize}
+\end{solution}

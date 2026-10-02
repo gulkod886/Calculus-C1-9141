@@ -1,0 +1,26 @@
+% English translation of questions/5786/semA-moedA/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the general solution of the differential equation
+\[ y' = y^2 x \sin x \]
+\end{question}
+
+\begin{hint}
+This is a separable equation: move $y^2$ to the side of $dy$, and compute $\int x\sin x\,dx$ by integration by parts. Do not forget the solution $y \equiv 0$.
+\end{hint}
+
+\begin{solution}
+This is a separable equation: $\frac{dy}{dx} = y^2 \cdot x\sin x$.
+
+\textbf{The constant solution:} $y \equiv 0$ satisfies $y' = 0 = 0^2 \cdot x\sin x$, so it is a solution.
+
+\textbf{For $y \ne 0$:} separate the variables and integrate:
+\[ \int \frac{dy}{y^2} = \int x\sin x\,dx. \]
+On the left-hand side, $\int y^{-2}\,dy = -\frac{1}{y}$. On the right-hand side, integrate by parts with $u = x$, $dv = \sin x\,dx$ (i.e. $du = dx$, $v = -\cos x$):
+\[ \int x\sin x\,dx = -x\cos x + \int \cos x\,dx = -x\cos x + \sin x + C. \]
+Hence
+\[ -\frac{1}{y} = -x\cos x + \sin x + C \quad\Longrightarrow\quad \boxed{y = \frac{1}{x\cos x - \sin x - C}}, \]
+where $C$ is an arbitrary real constant (on every interval on which the denominator does not vanish).
+
+\textbf{Answer:} the general solution is $y = \dfrac{1}{x\cos x - \sin x + C}$ ($C \in \R$, we renamed the constant), together with the solution $y \equiv 0$.
+\end{solution}

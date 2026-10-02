@@ -1,0 +1,21 @@
+% English translation of questions/5783/semB-moedA/q2b.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(Mandatory question)
+Solve the following integral:
+$\displaystyle\int\sin^2 4x\cos^2 x\,dx$
+\end{question}
+
+\begin{hint}
+Use the power-reduction formulas $\sin^2\alpha=\frac{1-\cos2\alpha}{2}$, $\cos^2\alpha=\frac{1+\cos2\alpha}{2}$.
+\end{hint}
+
+\begin{solution}
+By the power-reduction formulas:
+\[ \sin^2 4x\cos^2x=\frac{1-\cos8x}{2}\cdot\frac{1+\cos2x}{2}=\frac14\left(1+\cos2x-\cos8x-\cos8x\cos2x\right). \]
+By the product-to-sum formula $\cos8x\cos2x=\frac12(\cos10x+\cos6x)$, and therefore
+\[ \sin^2 4x\cos^2x=\frac14+\frac14\cos2x-\frac14\cos8x-\frac18\cos10x-\frac18\cos6x. \]
+Integrate term by term:
+\[ \boxed{\int\sin^2 4x\cos^2x\,dx=\frac{x}{4}+\frac{\sin2x}{8}-\frac{\sin8x}{32}-\frac{\sin6x}{48}-\frac{\sin10x}{80}+C}. \]
+\end{solution}

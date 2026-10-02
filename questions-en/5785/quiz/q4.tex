@@ -1,0 +1,27 @@
+% English translation of questions/5785/quiz/q4.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Let
+\[
+f(x)=e^x,\qquad g(x)=\cos(2x)
+\]
+Which of the following statements is true?
+\begin{enumerate}
+  \item The function $f\circ g$ is periodic.
+  \item The function $f\circ g$ is even.
+  \item The function $f\circ g$ is bounded on $\R$.
+  \item All the answers are correct
+\end{enumerate}
+\end{question}
+
+\begin{solution}
+\textbf{The correct answer: (d)}.
+
+$(f\circ g)(x)=f(g(x))=e^{\cos 2x}$, defined for every $x\in\R$. We check each statement:
+\begin{itemize}
+  \item \textbf{(a) is true:} $\cos$ is periodic with period $2\pi$, so $\cos(2(x+\pi))=\cos(2x+2\pi)=\cos 2x$, and hence $(f\circ g)(x+\pi)=e^{\cos 2x}=(f\circ g)(x)$ for every $x$. That is, $f\circ g$ is periodic (with period $\pi$).
+  \item \textbf{(b) is true:} $\cos$ is even, so $(f\circ g)(-x)=e^{\cos(-2x)}=e^{\cos 2x}=(f\circ g)(x)$ for every $x$.
+  \item \textbf{(c) is true:} $-1\le\cos 2x\le 1$ and $e^t$ is strictly increasing, so $e^{-1}\le e^{\cos 2x}\le e$ for every $x\in\R$.
+\end{itemize}
+Since all three statements are true, the answer is (d). (Each of (a), (b), (c) alone is not the complete answer, since the others are true as well.)
+\end{solution}

@@ -1,0 +1,20 @@
+% English translation of questions/5779/semA-moedB/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the following limit:
+$\displaystyle\lim_{x\to0}\left(\frac{1-4x^2}{1-3x^2}\right)^{\frac{2}{x^2}}$
+
+Hint: $f^g=e^{g\ln f}$.
+\end{question}
+
+\begin{hint}
+After passing to the form $e^{g\ln f}$, write $\ln\frac{1-4x^2}{1-3x^2}=\ln(1-4x^2)-\ln(1-3x^2)$ and use the fundamental limit $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$.
+\end{hint}
+
+\begin{solution}
+This is a limit of the form $1^\infty$. In a neighborhood of $0$ the base is positive, and by the hint
+\[ \left(\frac{1-4x^2}{1-3x^2}\right)^{\frac2{x^2}}=\exp\!\left(\frac{2}{x^2}\ln\frac{1-4x^2}{1-3x^2}\right)=\exp\!\left(2\cdot\frac{\ln(1-4x^2)-\ln(1-3x^2)}{x^2}\right). \]
+By the fundamental limit $\lim_{t\to0}\frac{\ln(1+t)}{t}=1$:
+\[ \frac{\ln(1-4x^2)}{x^2}=-4\cdot\frac{\ln(1-4x^2)}{-4x^2}\to-4,\qquad \frac{\ln(1-3x^2)}{x^2}\to-3. \]
+Hence the exponent tends to $2(-4+3)=-2$, and by the continuity of the exponential the limit is $e^{-2}$.
+\end{solution}

@@ -1,0 +1,17 @@
+% English translation of questions/5779/semB-moedA/q2a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(15 pts) Prove that the equation $x^2-\ln x=0$ has no real solutions.
+\end{question}
+
+\begin{hint}
+Find the minimum value of $g(x)=x^2-\ln x$ on the domain $x>0$ and show that it is positive.
+\end{hint}
+
+\begin{solution}
+Define $g(x)=x^2-\ln x$, which is defined and differentiable on the domain $x>0$ (so the equation has no solutions with $x\le0$). Differentiate:
+\[ g'(x)=2x-\frac1x=\frac{2x^2-1}{x}. \]
+For $x>0$: $g'(x)<0$ when $0<x<\frac{1}{\sqrt2}$ and $g'(x)>0$ when $x>\frac1{\sqrt2}$. Hence $g$ is strictly decreasing on $(0,\frac1{\sqrt2}]$ and strictly increasing on $[\frac1{\sqrt2},\infty)$, and $x=\frac1{\sqrt2}$ is a point of absolute minimum of $g$ on the domain:
+\[ g\!\left(\tfrac1{\sqrt2}\right)=\frac12-\ln\frac1{\sqrt2}=\frac12+\frac{\ln2}{2}>0. \]
+Hence $g(x)\ge\frac{1+\ln 2}{2}>0$ for every $x>0$, and in particular $g(x)\ne0$: the equation has no real solutions.
+\end{solution}

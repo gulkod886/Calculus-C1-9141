@@ -1,0 +1,29 @@
+% English translation of questions/5782/semA-special/q3.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(17 pts) Estimate $\arctan(0.2)$ using a linear approximation (a first-order Taylor polynomial) and give a bound for the error.
+
+You must justify your answer carefully.
+\end{question}
+
+\begin{hint}
+Expand $f(x)=\arctan x$ around $a=0$ and bound the error using the Lagrange remainder $R_1=\frac{f''(c)}{2}x^2$.
+\end{hint}
+
+\begin{solution}
+Expand $f(x)=\arctan x$ around $a=0$:
+\[ f'(x)=\frac{1}{1+x^2},\qquad f''(x)=-\frac{2x}{(1+x^2)^2}. \]
+$f(0)=0$, $f'(0)=1$, hence $P_1(x)=x$ and the approximation is
+\[ \arctan(0.2)\approx P_1(0.2)=\boxed{0.2}. \]
+
+\textbf{Error bound.} By Taylor's theorem with the Lagrange remainder, there exists $c\in(0,0.2)$ such that
+\[ R_1(0.2)=\frac{f''(c)}{2}(0.2)^2=-\frac{c}{(1+c^2)^2}\cdot0.04. \]
+For $0<c<0.2$ we have $(1+c^2)^2>1$, hence $\frac{c}{(1+c^2)^2}<c<0.2$, and therefore
+\[ |R_1(0.2)|<0.2\cdot0.04=0.008. \]
+
+\textbf{Answer:} $\arctan(0.2)\approx0.2$ with an error less than $0.008$. Moreover $R_1<0$, and hence $0.192<\arctan(0.2)<0.2$.
+
+\textbf{Remark (a better bound).} Since $f''(0)=0$, we have $P_2=P_1$, so we can use the second-order remainder: $R_2(0.2)=\frac{f'''(c)}{6}(0.2)^3$ with $f'''(x)=\frac{6x^2-2}{(1+x^2)^3}$. For $0<c<0.2$ we have $|6c^2-2|\le 2$ and $(1+c^2)^3>1$, hence $|f'''(c)|<2$ and
+\[ |R_2(0.2)|<\frac{2}{6}\cdot0.008=\frac{0.008}{3}\approx0.0027. \]
+(Check: $\arctan(0.2)\approx0.19740$, and the actual error is $\approx0.0026$.)
+\end{solution}

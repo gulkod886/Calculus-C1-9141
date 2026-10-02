@@ -1,0 +1,17 @@
+% English translation of questions/5783/semA-moedB/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Use a linear approximation to estimate the expression $\arcsin(0.54)$.
+\end{question}
+
+\begin{hint}
+Use the point $0.5$, at which $\arcsin$ is known.
+\end{hint}
+
+\begin{solution}
+Define $f(x)=\arcsin x$ and the base point $x_0=0.5$: $f(0.5)=\frac{\pi}{6}$, and
+\[ f'(x)=\frac{1}{\sqrt{1-x^2}},\qquad f'(0.5)=\frac{1}{\sqrt{3/4}}=\frac{2}{\sqrt3}. \]
+Linear approximation: $f(x)\approx f(x_0)+f'(x_0)(x-x_0)$, with $x-x_0=0.04$:
+\[ \arcsin(0.54)\approx\frac{\pi}{6}+\frac{2}{\sqrt3}\cdot0.04=\frac{\pi}{6}+\frac{0.08}{\sqrt3}\approx 0.5236+0.0462=0.5698. \]
+(The true value is $0.5704\ldots$.)
+\end{solution}

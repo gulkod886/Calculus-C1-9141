@@ -1,0 +1,45 @@
+% English translation of questions/5777/semA-moedB/q6.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the volume of the solid of revolution obtained by rotating the region $D$ around the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\dfrac{x}{x^2+6x+8}$ and the $x$-axis, for $0\le x\le2$.
+\end{question}
+
+\begin{hint}
+The volume is $V=\pi\int_0^2f^2(x)\,dx$. First decompose $f$ into partial fractions: $x^2+6x+8=(x+2)(x+4)$.
+\end{hint}
+
+\begin{solution}
+\textbf{The volume formula.} By the formula for the volume of a solid of revolution around the $x$-axis:
+\[
+V=\pi\int_0^2 f^2(x)\,dx=\pi\int_0^2\frac{x^2}{(x^2+6x+8)^2}\,dx.
+\]
+
+\textbf{Partial fractions.} $x^2+6x+8=(x+2)(x+4)$, and
+\[
+\frac{x}{(x+2)(x+4)}=\frac{A}{x+2}+\frac{B}{x+4},\qquad A=\frac{-2}{-2+4}=-1,\quad B=\frac{-4}{-4+2}=2.
+\]
+Hence $f(x)=\frac{2}{x+4}-\frac{1}{x+2}$, and
+\[
+f^2(x)=\frac{4}{(x+4)^2}+\frac{1}{(x+2)^2}-\frac{4}{(x+2)(x+4)},\qquad
+\frac{4}{(x+2)(x+4)}=\frac{2}{x+2}-\frac{2}{x+4}.
+\]
+
+\textbf{Integration:}
+\[
+\int_0^2\frac{4\,dx}{(x+4)^2}=\left[-\frac4{x+4}\right]_0^2=-\frac46+1=\frac13,\qquad
+\int_0^2\frac{dx}{(x+2)^2}=\left[-\frac1{x+2}\right]_0^2=-\frac14+\frac12=\frac14,
+\]
+\[
+\int_0^2\left(\frac{2}{x+2}-\frac{2}{x+4}\right)dx=\Big[2\ln(x+2)-2\ln(x+4)\Big]_0^2=2\ln\frac46-2\ln\frac24=2\ln\frac43.
+\]
+Hence
+\[
+\int_0^2f^2(x)\,dx=\frac13+\frac14-2\ln\frac43=\frac7{12}-2\ln\frac43.
+\]
+
+\textbf{Answer:}
+\[
+V=\pi\left(\frac{7}{12}-2\ln\frac43\right)\approx0.0250.
+\]
+(The volume is very small, which is reasonable: $0\le f(x)\le f(2)=\frac1{12}$ on the interval.)
+\end{solution}

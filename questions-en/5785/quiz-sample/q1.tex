@@ -1,0 +1,38 @@
+% English translation of questions/5785/quiz-sample/q1.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the following limit:
+\[
+\lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4}
+\]
+\end{question}
+
+\begin{hint}
+This is a limit of the form $1^\infty$. Write the base in the form $1+\frac{1}{x^2+x+1}$.
+\end{hint}
+
+\begin{solution}
+The base tends to 1 and the exponent to $\infty$: a limit of the form $1^\infty$. Write the base as
+\[
+\frac{x^2+x+2}{x^2+x+1}=\frac{x^2+x+1+1}{x^2+x+1}=1+\frac{1}{x^2+x+1},
+\]
+and multiply and divide the exponent by $x^2+x+1$:
+\[
+\left(1+\frac{1}{x^2+x+1}\right)^{2x^2+4}
+=\left[\left(1+\frac{1}{x^2+x+1}\right)^{x^2+x+1}\right]^{\frac{2x^2+4}{x^2+x+1}} .
+\]
+\textbf{The inner base:} substitute $y=x^2+x+1$; as $x\to\infty$ also $y\to\infty$, and by the fundamental limit
+\[
+\lim_{y\to\infty}\left(1+\frac1y\right)^y=e
+\]
+(and the theorem on the limit of a composition) the inner base tends to $e$.
+
+\textbf{The exponent:} dividing by $x^2$ gives
+\[
+\lim_{x\to\infty}\frac{2x^2+4}{x^2+x+1}=\lim_{x\to\infty}\frac{2+\frac4{x^2}}{1+\frac1x+\frac1{x^2}}=2 .
+\]
+\textbf{Summary:} if $u(x)\to e>0$ and $v(x)\to2$ then $u^v=e^{v\ln u}\to e^{2\ln e}=e^2$, by continuity of $\ln$ and $\exp$ (limit of a quotient/product and continuity). Hence
+\[
+\lim_{x\to\infty}\left(\frac{x^2+x+2}{x^2+x+1}\right)^{2x^2+4}=\boxed{e^2}.
+\]
+\end{solution}

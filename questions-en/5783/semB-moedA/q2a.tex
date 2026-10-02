@@ -1,0 +1,19 @@
+% English translation of questions/5783/semB-moedA/q2a.tex (metadata is taken from the Hebrew file).
+% note: Dr. Peter Samovol
+
+\begin{question}
+(Mandatory question)
+Solve the following integral:
+$\displaystyle\int\frac{(x^2+1)\cdot dx}{x^3-x}$
+\end{question}
+
+\begin{hint}
+Decompose into partial fractions: $x^3-x=x(x-1)(x+1)$.
+\end{hint}
+
+\begin{solution}
+$x^3-x=x(x-1)(x+1)$, and the degree of the numerator is less than the degree of the denominator. Decompose:
+\[ \frac{x^2+1}{x(x-1)(x+1)}=\frac{A}{x}+\frac{B}{x-1}+\frac{C}{x+1}. \]
+By the cover-up method: $A=\frac{0+1}{(0-1)(0+1)}=-1$, $B=\frac{1+1}{1\cdot 2}=1$, $C=\frac{1+1}{(-1)(-2)}=1$. Hence
+\[ \int\frac{x^2+1}{x^3-x}dx=-\ln|x|+\ln|x-1|+\ln|x+1|+C=\boxed{\ln\left|\frac{x^2-1}{x}\right|+C}. \]
+\end{solution}

@@ -1,0 +1,24 @@
+% English translation of questions/5784/semA-moedB/q5.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Compute the antiderivative of
+\[ f(x)=\frac{5x^3+x^2+x-2}{x^4+x^2} \]
+\end{question}
+
+\begin{hint}
+Factor the denominator: $x^4+x^2=x^2(x^2+1)$, and use a partial fraction decomposition of the form $\frac Ax+\frac B{x^2}+\frac{Cx+D}{x^2+1}$.
+\end{hint}
+
+\begin{solution}
+The degree of the numerator ($3$) is less than the degree of the denominator ($4$), so there is no need for polynomial division. Factor the denominator: $x^4+x^2=x^2(x^2+1)$, where $x^2+1$ is irreducible over $\R$. We look for a partial fraction decomposition:
+\[ \frac{5x^3+x^2+x-2}{x^2(x^2+1)}=\frac Ax+\frac B{x^2}+\frac{Cx+D}{x^2+1}. \]
+Multiply by $x^2(x^2+1)$:
+\[ 5x^3+x^2+x-2=Ax(x^2+1)+B(x^2+1)+(Cx+D)x^2=(A+C)x^3+(B+D)x^2+Ax+B. \]
+Comparing coefficients: $B=-2$, $A=1$, $A+C=5\Rightarrow C=4$, $B+D=1\Rightarrow D=3$. Hence
+\[ f(x)=\frac1x-\frac2{x^2}+\frac{4x+3}{x^2+1}=\frac1x-\frac2{x^2}+2\cdot\frac{2x}{x^2+1}+\frac{3}{x^2+1}. \]
+Integrate term by term using the basic integrals $\int\frac{dx}x=\ln|x|$, $\int x^{-2}dx=-x^{-1}$, $\int\frac{2x}{x^2+1}dx=\ln(x^2+1)$ (substitution $t=x^2+1$) and $\int\frac{dx}{x^2+1}=\arctan x$:
+\[ \boxed{\int f(x)\,dx=\ln|x|+\frac2x+2\ln(x^2+1)+3\arctan x+C} \]
+(on each of the intervals $x>0$ and $x<0$ separately; the constant may be different on each interval).
+
+\textbf{Check:} differentiation gives $\frac1x-\frac2{x^2}+\frac{4x}{x^2+1}+\frac3{x^2+1}=f(x)$.
+\end{solution}

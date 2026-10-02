@@ -1,0 +1,19 @@
+% English translation of questions/5783/semA-moedC/q6a.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+Determine whether the integral $\displaystyle\int_0^\infty e^{-x^2}dx$ converges
+\end{question}
+
+\begin{hint}
+The integral cannot be computed in terms of elementary functions. Split at $x=1$ and compare $e^{-x^2}$ with a simpler function for $x\ge1$.
+\end{hint}
+
+\begin{solution}
+Split: $\int_0^\infty e^{-x^2}dx=\int_0^1 e^{-x^2}dx+\int_1^\infty e^{-x^2}dx$.
+The first integral is an ordinary definite integral of a continuous function on a closed interval, hence it exists and is finite.
+
+For $x\ge 1$ we have $x^2\ge x$, and therefore $0<e^{-x^2}\le e^{-x}$. The integral
+\[ \int_1^\infty e^{-x}dx=\lim_{R\to\infty}\left(e^{-1}-e^{-R}\right)=e^{-1} \]
+converges. By the \textbf{comparison test} for improper integrals of non-negative functions, $\int_1^\infty e^{-x^2}dx$ converges as well. Hence $\boxed{\int_0^\infty e^{-x^2}dx\ \text{converges}}$
+(and its value, as is well known, is $\frac{\sqrt\pi}{2}$, but this is not required).
+\end{solution}

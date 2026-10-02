@@ -1,0 +1,28 @@
+% English translation of questions/5785/semA-sample/q2b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Find the intervals of convexity and the inflection points of the function
+\[ f(x) = x^2 \cdot e^{-x} \]
+Justify your answer.
+\end{question}
+
+\begin{hint}
+$f''(x) = e^{-x}(x^2 - 4x + 2)$; check the sign of the quadratic factor.
+\end{hint}
+
+\begin{solution}
+$f(x) = x^2 e^{-x}$ is defined and infinitely differentiable on all of $\R$.
+\[ f'(x) = 2xe^{-x} - x^2e^{-x} = e^{-x}(2x - x^2), \]
+\[ f''(x) = -e^{-x}(2x - x^2) + e^{-x}(2 - 2x) = e^{-x}(x^2 - 4x + 2). \]
+Since $e^{-x} > 0$, the sign of $f''$ is the sign of $x^2 - 4x + 2$, whose roots are
+\[ x_{1,2} = \frac{4 \pm \sqrt{16 - 8}}{2} = 2 \pm \sqrt2. \]
+This is an upward-opening parabola, hence:
+\begin{itemize}
+  \item $f'' > 0$ on $(-\infty, 2 - \sqrt2)$ and on $(2 + \sqrt2, \infty)$: there $f$ is \textbf{convex};
+  \item $f'' < 0$ on $(2 - \sqrt2, 2 + \sqrt2)$: there $f$ is \textbf{concave}.
+\end{itemize}
+At the points $x = 2 \pm \sqrt2$ the function is differentiable and $f''$ changes sign, so these are inflection points. The values:
+\[ f(2 \pm \sqrt2) = (2 \pm \sqrt2)^2 e^{-(2 \pm \sqrt2)} = (6 \pm 4\sqrt2)\,e^{-2 \mp \sqrt2}. \]
+
+\textbf{Answer:} $f$ is convex on $(-\infty, 2 - \sqrt2)$ and on $(2 + \sqrt2, \infty)$, concave on $(2 - \sqrt2, 2 + \sqrt2)$, and the inflection points are $x = 2 - \sqrt2$ and $x = 2 + \sqrt2$.
+\end{solution}

@@ -1,0 +1,18 @@
+% English translation of questions/5776/semB-moedC/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Show that for every $0<a<b$ and every $p>1$:
+\[ pa^{p-1}(b-a)\le b^p-a^p\le pb^{p-1}(b-a) \]
+\end{question}
+
+\begin{hint}
+Apply Lagrange's theorem to $f(x)=x^p$ on the interval $[a,b]$, and use the monotonicity of $x^{p-1}$.
+\end{hint}
+
+\begin{solution}
+Let $f(x)=x^p$. It is continuous on $[a,b]$ and differentiable on $(a,b)$ (since $a>0$), with $f'(x)=px^{p-1}$. By Lagrange's theorem there exists $c\in(a,b)$ such that
+\[ b^p-a^p=f'(c)(b-a)=pc^{p-1}(b-a). \]
+Since $p>1$, the exponent $p-1>0$, so the function $x\mapsto x^{p-1}$ is strictly increasing on $(0,\infty)$. From $0<a<c<b$ it follows that $a^{p-1}<c^{p-1}<b^{p-1}$. Multiply by $p(b-a)>0$:
+\[ pa^{p-1}(b-a)<pc^{p-1}(b-a)=b^p-a^p<pb^{p-1}(b-a), \]
+and in particular the required inequality holds (even strictly).
+\end{solution}

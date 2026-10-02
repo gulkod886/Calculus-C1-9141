@@ -1,0 +1,12 @@
+% English translation of questions/5783/semA-moedB/q1b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(10 pts) Classify the points of discontinuity of the function
+\[ f(x)=\begin{cases}\dfrac{x^3-8}{x-2}, & x\neq 2\\[2mm] 1, & x=2\end{cases} \]
+\end{question}
+
+\begin{solution}
+For every $x\neq 2$ the function is a quotient of polynomials with a nonzero denominator, and hence it is continuous there. We check $x=2$. By the difference of cubes formula $x^3-8=(x-2)(x^2+2x+4)$, and hence for $x\neq2$:
+\[ f(x)=x^2+2x+4\ \Longrightarrow\ \lim_{x\to2}f(x)=4+4+4=12. \]
+The limit exists and is finite, but $f(2)=1\neq 12$. Hence $x=2$ is a \textbf{removable} discontinuity (of the first kind, removable): if we redefine $f(2)=12$, the function becomes continuous. This is the only point of discontinuity.
+\end{solution}

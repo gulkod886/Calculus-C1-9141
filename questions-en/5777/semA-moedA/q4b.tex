@@ -1,0 +1,31 @@
+% English translation of questions/5777/semA-moedA/q4b.tex (metadata is taken from the Hebrew file).
+
+\begin{question}
+(8 pts) Compute the length of the curve $y=\frac25x\sqrt[4]{x}-\frac23\sqrt[4]{x^3}$ between its intersection points with the $x$-axis.
+\end{question}
+
+\begin{hint}
+Write $y=\frac25x^{5/4}-\frac23x^{3/4}$ and check that $1+(y')^2$ is a perfect square.
+\end{hint}
+
+\begin{solution}
+Write $y=\frac25x^{5/4}-\frac23x^{3/4}$, which is defined for $x\ge0$.
+
+\textbf{Intersection with the $x$-axis:} $y=x^{3/4}\left(\frac25x^{1/2}-\frac23\right)=0\iff x=0$ or $\sqrt{x}=\frac53$, i.e., $x=0$ and $x=\frac{25}{9}$.
+
+\textbf{Derivative:}
+\[
+y'=\frac25\cdot\frac54x^{1/4}-\frac23\cdot\frac34x^{-1/4}=\frac12\left(x^{1/4}-x^{-1/4}\right),
+\]
+\[
+1+(y')^2=1+\frac14\left(x^{1/2}-2+x^{-1/2}\right)=\frac14\left(x^{1/2}+2+x^{-1/2}\right)=\left(\frac{x^{1/4}+x^{-1/4}}{2}\right)^2.
+\]
+\textbf{Length of the curve} (by the formula $L=\int_a^b\sqrt{1+(y')^2}\,dx$; the integral is improper at $0$ but converges, since $x^{-1/4}$ is integrable there):
+\[
+L=\int_0^{25/9}\frac{x^{1/4}+x^{-1/4}}{2}\,dx=\frac12\left[\frac45x^{5/4}+\frac43x^{3/4}\right]_0^{25/9}.
+\]
+For $x=\frac{25}{9}$: $x^{1/4}=\sqrt{\frac53}$, $x^{5/4}=\frac{25}{9}\sqrt{\frac53}$, $x^{3/4}=\frac53\sqrt{\frac53}$. Hence
+\[
+L=\frac12\left(\frac{20}{9}+\frac{20}{9}\right)\sqrt{\frac53}=\frac{20}{9}\sqrt{\frac53}=\frac{20\sqrt{15}}{27}\approx2.869.
+\]
+\end{solution}
