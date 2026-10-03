@@ -175,7 +175,7 @@ window.BANK = {
     "func-limits",
     "taylor"
    ],
-   "question": "<p>(10 pts) Compute the following limit: $\\lim_{x\\to 0}\\frac{1-\\cos(x^2)}{x^2\\sin^2(x)}$.</p>",
+   "question": "<p>Compute the following limit: $\\lim_{x\\to 0}\\frac{1-\\cos(x^2)}{x^2\\sin^2(x)}$.</p>",
    "hints": [
     "<p>Use the Taylor expansion of $\\cos t$ around $0$ with $t=x^2$, and the fundamental limit $\\frac{\\sin x}{x}\\to1$.</p>"
    ],
@@ -200,7 +200,7 @@ window.BANK = {
    "categories": [
     "mvt"
    ],
-   "question": "<p>(10 pts) Show that:\n\\[ \\frac15\\le \\arctan(3)-\\arctan(1)\\le 1. \\]</p>",
+   "question": "<p>Show that:\n\\[ \\frac15\\le \\arctan(3)-\\arctan(1)\\le 1. \\]</p>",
    "hints": [
     "<p>Apply Lagrange's theorem to $\\arctan$ on the interval $[1,3]$ and bound the derivative.</p>"
    ],
@@ -252,7 +252,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(20 pts) Find the domain, the intersection points with the axes, the intervals of increase and decrease, the extremum points, the asymptotes, and the intervals of convexity and concavity of the following function:\n\\[ f(x)=(x+2)e^{\\frac1x}. \\]</p>",
+   "question": "<p>Find the domain, the intersection points with the axes, the intervals of increase and decrease, the extremum points, the asymptotes, and the intervals of convexity and concavity of the following function:\n\\[ f(x)=(x+2)e^{\\frac1x}. \\]</p>",
    "hints": [
     "<p>For the oblique asymptote compute $\\lim\\frac{f(x)}{x}$ and then $\\lim (f(x)-x)$; use the substitution $t=\\frac1x$ and the limit $\\frac{e^t-1}{t}\\to1$.</p>"
    ],
@@ -277,7 +277,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid of revolution obtained by rotating the graph of the function:\n\\[ f(x)=\\sin^2(x) \\]\naround the $x$-axis on the interval $[0,\\frac\\pi2]$.</p>",
+   "question": "<p>Compute the volume of the solid of revolution obtained by rotating the graph of the function:\n\\[ f(x)=\\sin^2(x) \\]\naround the $x$-axis on the interval $[0,\\frac\\pi2]$.</p>",
    "hints": [
     "<p>The volume of the solid of revolution is $\\pi\\int_a^b f^2(x)\\,dx$; to reduce the power, use $\\sin^2x=\\frac{1-\\cos2x}{2}$.</p>"
    ],
@@ -382,7 +382,7 @@ window.BANK = {
     "func-limits",
     "taylor"
    ],
-   "question": "<p>(10 pts) Compute the following limit: $\\lim_{x\\to0}\\frac{\\cos(\\sin(x))-\\cos(x)}{x^4}$.</p>",
+   "question": "<p>Compute the following limit: $\\lim_{x\\to0}\\frac{\\cos(\\sin(x))-\\cos(x)}{x^4}$.</p>",
    "hints": [
     "<p>Expand $\\cos t$ and $\\sin x$ by Maclaurin up to order $4$ (note that $\\sin^2x=x^2-\\frac{x^4}{3}+o(x^4)$).</p>"
    ],
@@ -407,7 +407,7 @@ window.BANK = {
    "categories": [
     "mvt"
    ],
-   "question": "<p>(10 pts) Show that for every $0&lt;a&lt;b$ and every $p&gt;1$:\n\\[ pa^{p-1}(b-a)\\le b^p-a^p\\le pb^{p-1}(b-a) \\]</p>",
+   "question": "<p>Show that for every $0&lt;a&lt;b$ and every $p&gt;1$:\n\\[ pa^{p-1}(b-a)\\le b^p-a^p\\le pb^{p-1}(b-a) \\]</p>",
    "hints": [
     "<p>Apply Lagrange's theorem to $f(x)=x^p$ on the interval $[a,b]$, and use the monotonicity of $x^{p-1}$.</p>"
    ],
@@ -459,7 +459,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Sketch the region enclosed between the curves $x+y=0$ and $y=2x-x^2$ and find its area.</p>",
+   "question": "<p>Sketch the region enclosed between the curves $x+y=0$ and $y=2x-x^2$ and find its area.</p>",
    "hints": [
     "<p>Find the intersection points of the line $y=-x$ with the parabola, and determine which curve lies above the other.</p>"
    ],
@@ -484,7 +484,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(20 pts) Find the domain, the intersection points with the axes, the intervals of increase and decrease, the extremum points, the asymptotes, and the intervals of convexity/concavity of the following function:\n\\[ f(x)=\\frac{\\sin(x)}{2+\\cos(x)}. \\]\nSketch the graph of the function</p>",
+   "question": "<p>Find the domain, the intersection points with the axes, the intervals of increase and decrease, the extremum points, the asymptotes, and the intervals of convexity/concavity of the following function:\n\\[ f(x)=\\frac{\\sin(x)}{2+\\cos(x)}. \\]\nSketch the graph of the function</p>",
    "hints": [
     "<p>The function is periodic with period $2\\pi$ and odd, so it suffices to analyze it on $[0,2\\pi]$ (or $[-\\pi,\\pi]$). Note that $2+\\cos x\\ge1&gt;0$.</p>"
    ],
@@ -536,7 +536,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle \\lim_{x\\to 0}\\frac{e^x-1}{\\sqrt{1+x}-1}$</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle \\lim_{x\\to 0}\\frac{e^x-1}{\\sqrt{1+x}-1}$</p>",
    "hints": [],
    "solution": "<p>As $x\\to0$ the numerator and the denominator tend to $0$ (both functions are continuous at $0$ and vanish there), i.e., a limit of the form $\\frac00$. The numerator and the denominator are differentiable in a neighborhood of $0$, and the derivative of the denominator $\\frac{1}{2\\sqrt{1+x}}\\neq0$ there. By L'Hôpital's rule:\n\\[\n\\lim_{x\\to0}\\frac{e^x-1}{\\sqrt{1+x}-1}=\\lim_{x\\to0}\\frac{e^x}{\\frac{1}{2\\sqrt{1+x}}}=\\lim_{x\\to0}2\\sqrt{1+x}\\,e^x=2.\n\\]\n(Alternative way: multiply by the conjugate: $\\frac{e^x-1}{\\sqrt{1+x}-1}=\\frac{e^x-1}{x}\\cdot(\\sqrt{1+x}+1)\\to 1\\cdot2=2$, by the fundamental limit $\\lim_{x\\to0}\\frac{e^x-1}{x}=1$.)</p>\n<p><strong>Answer:</strong> $2$.</p>",
    "src": "Moed A, 2016/17, Semester A",
@@ -560,7 +560,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle \\lim_{x\\to 0}\\frac{\\sqrt[3]{8+3x}-2}{\\sqrt[4]{16+5x}-2}$</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle \\lim_{x\\to 0}\\frac{\\sqrt[3]{8+3x}-2}{\\sqrt[4]{16+5x}-2}$</p>",
    "hints": [],
    "solution": "<p>At the point $x=0$: $\\sqrt[3]{8}-2=0$ and $\\sqrt[4]{16}-2=0$, i.e., a limit of the form $\\frac00$. Both functions are differentiable in a neighborhood of $0$:\n\\[\n\\left(\\sqrt[3]{8+3x}\\right)'=\\frac13(8+3x)^{-2/3}\\cdot3=(8+3x)^{-2/3},\\qquad\n\\left(\\sqrt[4]{16+5x}\\right)'=\\frac54(16+5x)^{-3/4},\n\\]\nand the derivative of the denominator is different from $0$ in a neighborhood of $0$. By L'Hôpital's rule:\n\\[\n\\lim_{x\\to0}\\frac{\\sqrt[3]{8+3x}-2}{\\sqrt[4]{16+5x}-2}\n=\\lim_{x\\to0}\\frac{(8+3x)^{-2/3}}{\\frac54(16+5x)^{-3/4}}\n=\\frac{8^{-2/3}}{\\frac54\\cdot16^{-3/4}}=\\frac{\\frac14}{\\frac54\\cdot\\frac18}=\\frac{\\frac14}{\\frac{5}{32}}=\\frac85.\n\\]\n<strong>Answer:</strong> $\\frac85$.</p>",
    "src": "Moed A, 2016/17, Semester A",
@@ -611,7 +611,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(12 pts) Analyze the function $y=\\ln(e^x+e^{-2x})$ and sketch its graph.\n<u>You need to find</u>: the domain, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
+   "question": "<p>Analyze the function $y=\\ln(e^x+e^{-2x})$ and sketch its graph.\n<u>You need to find</u>: the domain, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
    "hints": [
     "<p>For the asymptotes: write $\\ln(e^x+e^{-2x})=x+\\ln(1+e^{-3x})=-2x+\\ln(1+e^{3x})$.</p>"
    ],
@@ -636,7 +636,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(8 pts) Compute the length of the curve $y=\\frac25x\\sqrt[4]{x}-\\frac23\\sqrt[4]{x^3}$ between its intersection points with the $x$-axis.</p>",
+   "question": "<p>Compute the length of the curve $y=\\frac25x\\sqrt[4]{x}-\\frac23\\sqrt[4]{x^3}$ between its intersection points with the $x$-axis.</p>",
    "hints": [
     "<p>Write $y=\\frac25x^{5/4}-\\frac23x^{3/4}$ and check that $1+(y')^2$ is a perfect square.</p>"
    ],
@@ -661,7 +661,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the area bounded by the lines $y=4x,\\ \\ y=x,\\ \\ y=1/x$ in the region $x\\ge0,\\ y\\ge0$ and draw the corresponding sketch.</p>",
+   "question": "<p>Compute the area bounded by the lines $y=4x,\\ \\ y=x,\\ \\ y=1/x$ in the region $x\\ge0,\\ y\\ge0$ and draw the corresponding sketch.</p>",
    "hints": [
     "<p>Find the intersection points of the lines, and split the integral into two intervals according to the upper curve.</p>"
    ],
@@ -687,7 +687,7 @@ window.BANK = {
     "polar-parametric",
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Sketch the curve $r=2\\cos\\varphi-1$ (given in polar coordinates) and compute the area of the region bounded by the curve.</p>",
+   "question": "<p>Sketch the curve $r=2\\cos\\varphi-1$ (given in polar coordinates) and compute the area of the region bounded by the curve.</p>",
    "hints": [
     "<p>Find for which angles $r\\ge0$, and use the formula $S=\\frac12\\int_\\alpha^\\beta r^2\\,d\\varphi$.</p>"
    ],
@@ -712,7 +712,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the following integral:\n$\\displaystyle\\int\\frac{dx}{x^2+x+1}$</p>",
+   "question": "<p>Compute the following integral:\n$\\displaystyle\\int\\frac{dx}{x^2+x+1}$</p>",
    "hints": [
     "<p>Complete the square: $x^2+x+1=\\left(x+\\frac12\\right)^2+\\frac34$.</p>"
    ],
@@ -738,7 +738,7 @@ window.BANK = {
     "improper-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the following integral:\n$\\displaystyle\\int_1^\\infty x^2e^{-2x}\\,dx$</p>",
+   "question": "<p>Compute the following integral:\n$\\displaystyle\\int_1^\\infty x^2e^{-2x}\\,dx$</p>",
    "hints": [
     "<p>Integrate by parts twice (differentiating $x^2$), and then compute the limit as the upper limit of integration tends to infinity.</p>"
    ],
@@ -790,7 +790,7 @@ window.BANK = {
     "func-limits",
     "taylor"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\frac{\\sqrt{\\cos x}-\\sqrt[3]{\\cos x}}{\\sin^2x}$</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\frac{\\sqrt{\\cos x}-\\sqrt[3]{\\cos x}}{\\sin^2x}$</p>",
    "hints": [
     "<p>Use $\\cos x=1-\\frac{x^2}{2}+o(x^2)$ and the approximation $(1+t)^\\alpha=1+\\alpha t+o(t)$.</p>"
    ],
@@ -815,7 +815,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\left(\\frac{1+x}{2+x}\\right)^{\\frac{1-\\sqrt{x}}{1-x}}$</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\left(\\frac{1+x}{2+x}\\right)^{\\frac{1-\\sqrt{x}}{1-x}}$</p>",
    "hints": [
     "<p>Check separately where the base and the exponent tend. Is this an indeterminate form at all?</p>"
    ],
@@ -840,7 +840,7 @@ window.BANK = {
    "categories": [
     "continuity"
    ],
-   "question": "<p>(8 pts) Is there a value $c$ such that\n\\[\nf(x)=\\begin{cases}\\dfrac1x, &amp; x\\ge1\\\\[1ex] 2x+c, &amp; x&lt;1\\end{cases}\n\\]\nis continuous at $x=1$?</p>",
+   "question": "<p>Is there a value $c$ such that\n\\[\nf(x)=\\begin{cases}\\dfrac1x, &amp; x\\ge1\\\\[1ex] 2x+c, &amp; x&lt;1\\end{cases}\n\\]\nis continuous at $x=1$?</p>",
    "hints": [],
    "solution": "<p>$f$ is continuous at $x=1$ if and only if $\\lim_{x\\to1^-}f(x)=\\lim_{x\\to1^+}f(x)=f(1)$.\n\\[\nf(1)=\\frac11=1,\\qquad \\lim_{x\\to1^+}\\frac1x=1,\\qquad \\lim_{x\\to1^-}(2x+c)=2+c.\n\\]\nHence we need $2+c=1$, i.e., $c=-1$.</p>\n<p><strong>Answer:</strong> Yes, for $c=-1$ (and only for it).</p>",
    "src": "Moed B, 2016/17, Semester A",
@@ -864,7 +864,7 @@ window.BANK = {
     "ivt",
     "mvt"
    ],
-   "question": "<p>(12 pts) Does the equation $\\cos(x)-x=0$ have a solution in the interval $(-1,1)$, and is it unique? State precisely every theorem you rely on.</p>",
+   "question": "<p>Does the equation $\\cos(x)-x=0$ have a solution in the interval $(-1,1)$, and is it unique? State precisely every theorem you rely on.</p>",
    "hints": [
     "<p>Define $g(x)=\\cos x-x$ and check the signs of $g(\\pm1)$. For uniqueness, check the sign of $g'$.</p>"
    ],
@@ -889,7 +889,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(12 pts) Analyze the function $f(x)=x^2e^{-x}$ and sketch its graph.\n<u>You need to find</u>: the domain, asymptotes; intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
+   "question": "<p>Analyze the function $f(x)=x^2e^{-x}$ and sketch its graph.\n<u>You need to find</u>: the domain, asymptotes; intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
    "hints": [],
    "solution": "<strong>Domain:</strong> all of $\\R$; the function is continuous and differentiable at every point, and $f(x)\\ge0$ with equality only at $x=0$.\n\n<strong>Asymptotes:</strong> There are no vertical ones (continuous on $\\R$).\nAs $x\\to+\\infty$: $\\lim_{x\\to\\infty}\\frac{x^2}{e^x}=0$ (L'Hôpital twice), hence $y=0$ is a horizontal asymptote at $+\\infty$.\nAs $x\\to-\\infty$: $f(x)\\to+\\infty$ and $\\frac{f(x)}{x}=xe^{-x}\\to-\\infty$, so there is no asymptote (horizontal or oblique) at $-\\infty$.\n\n<strong>Increase and decrease:</strong>\n\\[\nf'(x)=2xe^{-x}-x^2e^{-x}=x(2-x)e^{-x}.\n\\]\n$f'&lt;0$ on $(-\\infty,0)$ and on $(2,\\infty)$ (decreasing), and $f'&gt;0$ on $(0,2)$ (increasing).\n\n<strong>Extrema:</strong> A (global) minimum at $(0,0)$; a local maximum at $\\left(2,\\frac4{e^2}\\right)\\approx(2,0.54)$ (not global, since $f\\to\\infty$ at $-\\infty$).\n\n<strong>Convexity:</strong>\n\\[\nf''(x)=\\big((2-2x)-(2x-x^2)\\big)e^{-x}=(x^2-4x+2)e^{-x},\n\\]\nwhich vanishes at $x=2\\pm\\sqrt2$. Hence $f$ is convex ($\\cup$) on $(-\\infty,2-\\sqrt2)$ and on $(2+\\sqrt2,\\infty)$, and concave ($\\cap$) on $(2-\\sqrt2,2+\\sqrt2)$. Inflection points at $x=2\\pm\\sqrt2$ (approximately $x\\approx0.59$ and $x\\approx3.41$).\n\n<strong>Sketch:</strong> The graph decreases from $+\\infty$ (at $-\\infty$) to the minimum $(0,0)$, where it is tangent to the $x$-axis, rises to the maximum $(2,4e^{-2})$, and then decreases and tends to $0$ from above ($y=0$ is an asymptote at $+\\infty$).",
    "src": "Moed B, 2016/17, Semester A",
@@ -913,7 +913,7 @@ window.BANK = {
     "polar-parametric",
     "integral-applications"
    ],
-   "question": "<p>(8 pts) Draw the graph of the function $r=f(\\theta)=\\theta^2$ in polar coordinates for $0\\le\\theta\\le\\pi$ and compute the length of the curve.</p>",
+   "question": "<p>Draw the graph of the function $r=f(\\theta)=\\theta^2$ in polar coordinates for $0\\le\\theta\\le\\pi$ and compute the length of the curve.</p>",
    "hints": [
     "<p>Use the formula for the arc length of a curve in polar coordinates $L=\\int_\\alpha^\\beta\\sqrt{r^2+(r')^2}\\,d\\theta$.</p>"
    ],
@@ -938,7 +938,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the integral $\\displaystyle\\int\\frac{x^3}{\\sqrt{1-x^2}}\\,dx$.</p>",
+   "question": "<p>Compute the integral $\\displaystyle\\int\\frac{x^3}{\\sqrt{1-x^2}}\\,dx$.</p>",
    "hints": [
     "<p>Substitute $u=1-x^2$ (and then $x^2=1-u$).</p>"
    ],
@@ -964,7 +964,7 @@ window.BANK = {
     "improper-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the improper integral $\\displaystyle\\int_1^\\infty\\frac{\\arctan(x)}{x^2}\\,dx$.</p>",
+   "question": "<p>Compute the improper integral $\\displaystyle\\int_1^\\infty\\frac{\\arctan(x)}{x^2}\\,dx$.</p>",
    "hints": [
     "<p>Integrate by parts with $u=\\arctan x$, $dv=\\frac{dx}{x^2}$, and decompose $\\frac{1}{x(1+x^2)}=\\frac1x-\\frac{x}{1+x^2}$.</p>"
    ],
@@ -1016,7 +1016,7 @@ window.BANK = {
     "derivatives",
     "func-limits"
    ],
-   "question": "<p>(15 pts) Compute the derivative of the function $f(x)=\\ln(2x)$ at the point $x$ ($x&gt;0$), from the definition (without using known derivatives).</p>",
+   "question": "<p>Compute the derivative of the function $f(x)=\\ln(2x)$ at the point $x$ ($x&gt;0$), from the definition (without using known derivatives).</p>",
    "hints": [
     "<p>Use the laws of logarithms to write the difference quotient as $\\frac{\\ln(1+\\frac hx)}{h}$, and then the fundamental limit $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$.</p>"
    ],
@@ -1042,7 +1042,7 @@ window.BANK = {
     "ivt",
     "func-analysis"
    ],
-   "question": "<p>(15 pts) Does the function $f(x)=5-x-x^2-|x+3|$ have a maximum on the interval $[-10,10]$? If so, find it.</p>",
+   "question": "<p>Does the function $f(x)=5-x-x^2-|x+3|$ have a maximum on the interval $[-10,10]$? If so, find it.</p>",
    "hints": [
     "<p>$f$ is continuous on a closed interval – which theorem guarantees the existence of a maximum? To find it, open the absolute value and check each of the two ranges separately.</p>"
    ],
@@ -1067,7 +1067,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(15 pts) Compute:\n\\[ \\int x^3e^{-x^2}\\,dx \\]</p>",
+   "question": "<p>Compute:\n\\[ \\int x^3e^{-x^2}\\,dx \\]</p>",
    "hints": [
     "<p>Substitute $t=x^2$ (or $t=-x^2$) and then integrate by parts.</p>"
    ],
@@ -1092,7 +1092,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(15 pts) Compute:\n\\[ \\int\\frac{x^4+1}{x^3-x^2-x+1}\\,dx \\]</p>",
+   "question": "<p>Compute:\n\\[ \\int\\frac{x^4+1}{x^3-x^2-x+1}\\,dx \\]</p>",
    "hints": [
     "<p>The degree of the numerator is greater than the degree of the denominator: first perform polynomial division. Factor the denominator: $x^3-x^2-x+1=(x-1)^2(x+1)$.</p>",
     "<p>The double root $x=1$ contributes two partial fractions: $\\frac{B}{x-1}+\\frac{C}{(x-1)^2}$.</p>"
@@ -1119,7 +1119,7 @@ window.BANK = {
     "taylor",
     "derivatives"
    ],
-   "question": "<p>(10 pts) Define: $f(x)=\\ln(1+x^2)$. Compute $f^{(4)}(0)$.</p>",
+   "question": "<p>Define: $f(x)=\\ln(1+x^2)$. Compute $f^{(4)}(0)$.</p>",
    "hints": [
     "<p>Instead of differentiating four times, use the Maclaurin polynomial of $\\ln(1+t)$ with $t=x^2$, and compare coefficients: the coefficient of $x^4$ is $\\frac{f^{(4)}(0)}{4!}$.</p>"
    ],
@@ -1145,7 +1145,7 @@ window.BANK = {
     "functions",
     "derivatives"
    ],
-   "question": "<p>(10 pts) Let $f$ be a one-to-one differentiable function. Given: $f(1)=2$, $f(2)=4$, $f(3)=5$, $f(4)=6$, $f'(1)=0$, $f'(2)=2$, $f'(3)=0$, $f'(4)=3$.\nCompute: $\\left(f^{-1}\\right)'(4)$</p>",
+   "question": "<p>Let $f$ be a one-to-one differentiable function. Given: $f(1)=2$, $f(2)=4$, $f(3)=5$, $f(4)=6$, $f'(1)=0$, $f'(2)=2$, $f'(3)=0$, $f'(4)=3$.\nCompute: $\\left(f^{-1}\\right)'(4)$</p>",
    "hints": [
     "<p>By the theorem on the derivative of the inverse function, $(f^{-1})'(y)=\\frac{1}{f'(f^{-1}(y))}$. What is $f^{-1}(4)$?</p>"
    ],
@@ -1170,7 +1170,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Does the improper integral\n\\[ \\int_0^1\\frac{\\sin x}{x^2}\\,dx \\]\nconverge?</p>",
+   "question": "<p>Does the improper integral\n\\[ \\int_0^1\\frac{\\sin x}{x^2}\\,dx \\]\nconverge?</p>",
    "hints": [
     "<p>Near $0$ we have $\\sin x\\approx x$. Compare (limit comparison test) with $\\frac1x$.</p>"
    ],
@@ -1196,7 +1196,7 @@ window.BANK = {
     "improper-integrals",
     "true-false"
    ],
-   "question": "<p>(10 pts) Let $f(x),g(x)$ be functions defined and continuous on the ray $[0,+\\infty)$. It is given that the improper integral $\\int_0^\\infty(f(x)+g(x))\\,dx$ converges.\nProve or disprove:\nThe improper integral $\\int_0^\\infty(f(x)-g(x))\\,dx$ converges.</p>",
+   "question": "<p>Let $f(x),g(x)$ be functions defined and continuous on the ray $[0,+\\infty)$. It is given that the improper integral $\\int_0^\\infty(f(x)+g(x))\\,dx$ converges.\nProve or disprove:\nThe improper integral $\\int_0^\\infty(f(x)-g(x))\\,dx$ converges.</p>",
    "hints": [
     "<p>Try functions whose sum is zero.</p>"
    ],
@@ -1221,7 +1221,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(15 pts) Find a rational number $x=\\frac ab$ such that $|\\cos(1)-x|&lt;\\frac{1}{1000}$.</p>",
+   "question": "<p>Find a rational number $x=\\frac ab$ such that $|\\cos(1)-x|&lt;\\frac{1}{1000}$.</p>",
    "hints": [
     "<p>Use the Maclaurin polynomial of $\\cos$ and Lagrange's remainder formula, $|R_n(1)|\\le\\frac{1}{(n+1)!}$. Choose $n$ such that $(n+1)!&gt;1000$.</p>",
     "<p>Note: in the expansion of $\\cos$ the coefficient of $x^{2k+1}$ is zero, hence $P_{2k}=P_{2k+1}$ and the remainder of order $2k+1$ can be used.</p>"
@@ -1248,7 +1248,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(15 pts) For which value of the parameter $A$ is the function $f(x)$ continuous at the point $0$?\n\\[ f(x)=\\begin{cases}\\dfrac{1-\\cos^2(x)}{2x^2} &amp; x\\neq0\\\\ A &amp; x=0\\end{cases} \\]</p>",
+   "question": "<p>For which value of the parameter $A$ is the function $f(x)$ continuous at the point $0$?\n\\[ f(x)=\\begin{cases}\\dfrac{1-\\cos^2(x)}{2x^2} &amp; x\\neq0\\\\ A &amp; x=0\\end{cases} \\]</p>",
    "hints": [],
    "solution": "<p>$f$ is continuous at $0$ if and only if $\\lim_{x\\to0}f(x)=f(0)=A$. By the identity $1-\\cos^2x=\\sin^2x$:\n\\[ \\lim_{x\\to0}\\frac{1-\\cos^2x}{2x^2}=\\lim_{x\\to0}\\frac12\\left(\\frac{\\sin x}{x}\\right)^2=\\frac12\\cdot1^2=\\frac12, \\]\nby the fundamental limit $\\frac{\\sin x}{x}\\to1$ and the arithmetic of limits. Hence $f$ is continuous at $0$ if and only if $\\boxed{A=\\frac12}$.</p>",
    "src": "Moed B, 2016/17, Semester B",
@@ -1271,7 +1271,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(15 pts) Compute:\n\\[ \\int e^{\\sqrt[3]{x}}\\,dx \\]</p>",
+   "question": "<p>Compute:\n\\[ \\int e^{\\sqrt[3]{x}}\\,dx \\]</p>",
    "hints": [
     "<p>Substitute $t=\\sqrt[3]x$, i.e., $x=t^3$, and then integrate by parts twice.</p>"
    ],
@@ -1296,7 +1296,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(15 pts) Compute:\n\\[ \\int\\frac{x^2}{\\sqrt{4-x^2}}\\,dx \\]</p>",
+   "question": "<p>Compute:\n\\[ \\int\\frac{x^2}{\\sqrt{4-x^2}}\\,dx \\]</p>",
    "hints": [
     "<p>Trigonometric substitution: $x=2\\sin t$ with $t\\in(-\\frac\\pi2,\\frac\\pi2)$.</p>"
    ],
@@ -1321,7 +1321,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(10 pts) What is the maximal area of an isosceles triangle whose perimeter is 1?</p>",
+   "question": "<p>What is the maximal area of an isosceles triangle whose perimeter is 1?</p>",
    "hints": [
     "<p>Denote the length of a leg by $a$ and the base by $b=1-2a$. The height to the base is $\\sqrt{a^2-\\frac{b^2}{4}}$. What is the allowed range of $a$?</p>",
     "<p>It is more convenient to maximize the square of the area.</p>"
@@ -1348,7 +1348,7 @@ window.BANK = {
     "func-analysis",
     "derivatives"
    ],
-   "question": "<p>(10 pts) Find the absolute minimum and maximum of the function $f(x)=\\frac{\\sqrt{x^2-1}}{x^2}$.</p>",
+   "question": "<p>Find the absolute minimum and maximum of the function $f(x)=\\frac{\\sqrt{x^2-1}}{x^2}$.</p>",
    "hints": [
     "<p>First find the domain, and note that $f$ is even. Also examine the limit at $\\infty$ and the values of $f$ at the endpoints of the domain.</p>"
    ],
@@ -1373,7 +1373,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Does the improper integral\n\\[ \\int_2^\\infty\\frac{x+7}{\\sqrt{x^5-3x}}\\,dx \\]\nconverge?</p>",
+   "question": "<p>Does the improper integral\n\\[ \\int_2^\\infty\\frac{x+7}{\\sqrt{x^5-3x}}\\,dx \\]\nconverge?</p>",
    "hints": [
     "<p>For large $x$ the integrand behaves like $\\frac{x}{x^{5/2}}=\\frac{1}{x^{3/2}}$. Use the limit comparison test.</p>"
    ],
@@ -1399,7 +1399,7 @@ window.BANK = {
     "definite-integrals",
     "true-false"
    ],
-   "question": "<p>(10 pts) Prove or disprove: if the function $|f(x)|$ is Riemann integrable on the interval $[a,b]$, then the function $f(x)$ is also integrable on this interval.</p>",
+   "question": "<p>Prove or disprove: if the function $|f(x)|$ is Riemann integrable on the interval $[a,b]$, then the function $f(x)$ is also integrable on this interval.</p>",
    "hints": [
     "<p>Look for a function that takes only the values $1$ and $-1$ in a “dense” way, similar to the Dirichlet function.</p>"
    ],
@@ -1424,7 +1424,7 @@ window.BANK = {
    "categories": [
     "sequences"
    ],
-   "question": "<p>(10 pts) Compute the following limit:\nthe limit of the sequence $\\displaystyle \\lim_{n\\to\\infty}\\left(\\frac{n}{n+1}\\right)^{3n}$.</p>",
+   "question": "<p>Compute the following limit:\nthe limit of the sequence $\\displaystyle \\lim_{n\\to\\infty}\\left(\\frac{n}{n+1}\\right)^{3n}$.</p>",
    "hints": [
     "<p>Invert the fraction: $\\frac{n}{n+1}=\\frac{1}{1+\\frac1n}$, and use the famous limit $\\left(1+\\frac1n\\right)^n\\to e$.</p>"
    ],
@@ -1450,7 +1450,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Compute the following limit:\nthe limit of the function $\\displaystyle \\lim_{x\\to\\pi/2}(\\tan x)\\cdot\\arctan\\left(x-\\frac{\\pi}{2}\\right)$.</p>",
+   "question": "<p>Compute the following limit:\nthe limit of the function $\\displaystyle \\lim_{x\\to\\pi/2}(\\tan x)\\cdot\\arctan\\left(x-\\frac{\\pi}{2}\\right)$.</p>",
    "hints": [
     "<p>Write $\\tan x=\\frac{1}{\\cot x}$ and obtain an expression of the form $\\frac00$.</p>"
    ],
@@ -1476,7 +1476,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(20 pts)\nFind the points of discontinuity of the function\n\\[ f(x)=\\frac{e^{\\left(\\frac1x-\\frac{1}{x+1}\\right)}}{e^{\\frac1x}-2} \\]\nand determine their types.</p>",
+   "question": "<p>Find the points of discontinuity of the function\n\\[ f(x)=\\frac{e^{\\left(\\frac1x-\\frac{1}{x+1}\\right)}}{e^{\\frac1x}-2} \\]\nand determine their types.</p>",
    "hints": [
     "<p>The function is undefined at three points: where $x=0$, $x=-1$, and where $e^{1/x}=2$.</p>",
     "<p>For $x\\to0^+$, divide the numerator and the denominator by $e^{1/x}$.</p>"
@@ -1503,7 +1503,7 @@ window.BANK = {
     "taylor",
     "func-limits"
    ],
-   "question": "<p>(10 pts) Compute the limit:\n\\[ \\lim_{x\\to0}\\left(\\frac{\\sqrt{1-2x+x^3}-\\sqrt[3]{1-3x+x^2}}{x^2}\\right) \\]\n<u>Hint</u>: you may use Maclaurin formulas.</p>",
+   "question": "<p>Compute the limit:\n\\[ \\lim_{x\\to0}\\left(\\frac{\\sqrt{1-2x+x^3}-\\sqrt[3]{1-3x+x^2}}{x^2}\\right) \\]\n<u>Hint</u>: you may use Maclaurin formulas.</p>",
    "hints": [
     "<p>Expand each root using $(1+t)^p=1+pt+\\frac{p(p-1)}{2}t^2+o(t^2)$ up to order $x^2$.</p>"
    ],
@@ -1529,7 +1529,7 @@ window.BANK = {
     "mvt",
     "proofs"
    ],
-   "question": "<p>(10 pts) Prove that $0&lt;x&lt;\\arcsin x$ for every $x\\in(0,1]$.</p>",
+   "question": "<p>Prove that $0&lt;x&lt;\\arcsin x$ for every $x\\in(0,1]$.</p>",
    "hints": [
     "<p>Consider the function $g(x)=\\arcsin x-x$ and its derivative.</p>"
    ],
@@ -1556,7 +1556,7 @@ window.BANK = {
     "derivatives",
     "func-limits"
    ],
-   "question": "<p>(20 pts)\nInvestigate the function $f(x)=(x+2)e^{1/x}$ and sketch its graph.</p>",
+   "question": "<p>Investigate the function $f(x)=(x+2)e^{1/x}$ and sketch its graph.</p>",
    "hints": [
     "<p>For the oblique asymptote: $a=\\lim\\frac{f(x)}{x}$, and then $b=\\lim(f(x)-ax)$. Computing $b$ involves the limit $\\lim_{x\\to\\infty}x\\left(e^{1/x}-1\\right)$.</p>"
    ],
@@ -1581,7 +1581,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>{(10 pts)} Compute the integral $\\displaystyle\\int\\frac{3x-1}{x^2-x+1}\\,dx$.</p>",
+   "question": "<p>Compute the integral $\\displaystyle\\int\\frac{3x-1}{x^2-x+1}\\,dx$.</p>",
    "hints": [
     "<p>Write the numerator as a combination of the derivative of the denominator $2x-1$ and a constant, and complete the denominator to a square.</p>"
    ],
@@ -1606,7 +1606,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>{(10 pts)} Does the improper integral $\\displaystyle\\int_0^\\infty\\frac{x}{e^{x^2}}\\,dx$ converge? If so, compute the value of the integral. If not, explain why.</p>",
+   "question": "<p>Does the improper integral $\\displaystyle\\int_0^\\infty\\frac{x}{e^{x^2}}\\,dx$ converge? If so, compute the value of the integral. If not, explain why.</p>",
    "hints": [
     "<p>Substitute $u=x^2$.</p>"
    ],
@@ -1632,7 +1632,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\\tan x$ and the $x$-axis, for $0\\le x\\le\\frac\\pi4$.</p>",
+   "question": "<p>Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\\tan x$ and the $x$-axis, for $0\\le x\\le\\frac\\pi4$.</p>",
    "hints": [
     "<p>Use the identity $\\tan^2x=\\frac{1}{\\cos^2x}-1$.</p>"
    ],
@@ -1658,7 +1658,7 @@ window.BANK = {
     "integral-applications",
     "polar-parametric"
    ],
-   "question": "<p>(10 pts) Define $r=f(\\theta)=\\theta^2-1$ in polar coordinates. Compute the length of this curve between $\\theta=1$ and $\\theta=9$.</p>\n<p>(The exam includes a figure of the curve — a spiral — on a polar grid.)</p>",
+   "question": "<p>Define $r=f(\\theta)=\\theta^2-1$ in polar coordinates. Compute the length of this curve between $\\theta=1$ and $\\theta=9$.</p>\n<p>(The exam includes a figure of the curve — a spiral — on a polar grid.)</p>",
    "hints": [
     "<p>The arc length of a curve in polar coordinates is $\\int_\\alpha^\\beta\\sqrt{r^2+\\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta$. Check that the expression under the root is a perfect square.</p>"
    ],
@@ -1683,7 +1683,7 @@ window.BANK = {
    "categories": [
     "sequences"
    ],
-   "question": "<p>(10 pts) Compute the following limit:\nthe limit of the sequence $\\displaystyle\\lim_{n\\to\\infty}\\left(\\sqrt{(n^2+2)(n^2-4)}-\\sqrt{n^4-7}\\right)$.</p>",
+   "question": "<p>Compute the following limit:\nthe limit of the sequence $\\displaystyle\\lim_{n\\to\\infty}\\left(\\sqrt{(n^2+2)(n^2-4)}-\\sqrt{n^4-7}\\right)$.</p>",
    "hints": [
     "<p>Multiply and divide by the conjugate $\\sqrt{(n^2+2)(n^2-4)}+\\sqrt{n^4-7}$.</p>"
    ],
@@ -1709,7 +1709,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Compute the following limit:\nthe limit of the function $\\displaystyle\\lim_{x\\to1^-}\\frac{\\frac\\pi2-\\arcsin x}{\\sqrt[3]{1-x^2}}$.</p>",
+   "question": "<p>Compute the following limit:\nthe limit of the function $\\displaystyle\\lim_{x\\to1^-}\\frac{\\frac\\pi2-\\arcsin x}{\\sqrt[3]{1-x^2}}$.</p>",
    "hints": [
     "<p>This is an expression of the form $\\frac00$; apply L'Hôpital's rule and simplify the quotient of the derivatives.</p>"
    ],
@@ -1736,7 +1736,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(20 pts)\nFind the points of discontinuity of the function\n\\[ f(x)=\\frac{x\\ln|x|}{x^2-1} \\]\nand determine their types.</p>",
+   "question": "<p>Find the points of discontinuity of the function\n\\[ f(x)=\\frac{x\\ln|x|}{x^2-1} \\]\nand determine their types.</p>",
    "hints": [
     "<p>At the points $x=\\pm1$ the numerator also vanishes — use the limit $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$ or L'Hôpital's rule. At $x=0$ use the fact that $x\\ln|x|\\to0$.</p>"
    ],
@@ -1762,7 +1762,7 @@ window.BANK = {
     "taylor",
     "derivatives"
    ],
-   "question": "<p>(10 pts) Let $f(x)=x^2\\ln(1+x)$. Compute $f^{(11)}(0)$.</p>\n<p><u>Hint</u>: you may use Maclaurin formulas.</p>",
+   "question": "<p>Let $f(x)=x^2\\ln(1+x)$. Compute $f^{(11)}(0)$.</p>\n<p><u>Hint</u>: you may use Maclaurin formulas.</p>",
    "hints": [
     "<p>The coefficient of $x^{11}$ in the Maclaurin polynomial of $f$ equals $\\frac{f^{(11)}(0)}{11!}$. Which term in the expansion of $\\ln(1+x)$ contributes to $x^{11}$ after multiplying by $x^2$?</p>"
    ],
@@ -1788,7 +1788,7 @@ window.BANK = {
     "ivt",
     "mvt"
    ],
-   "question": "<p>(10 pts) Prove that the polynomial $x^3-4x^2+7x+13$ has exactly one real root.</p>",
+   "question": "<p>Prove that the polynomial $x^3-4x^2+7x+13$ has exactly one real root.</p>",
    "hints": [
     "<p>Existence — the Intermediate Value Theorem. Uniqueness — show that the derivative is always positive.</p>"
    ],
@@ -1814,7 +1814,7 @@ window.BANK = {
     "func-analysis",
     "derivatives"
    ],
-   "question": "<p>(20 pts)\nInvestigate the function $f(x)=x^2e^{-x^2}$ and sketch its graph.</p>",
+   "question": "<p>Investigate the function $f(x)=x^2e^{-x^2}$ and sketch its graph.</p>",
    "hints": [
     "<p>The function is even — it suffices to study it for $x\\ge0$.</p>"
    ],
@@ -1839,7 +1839,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>{(10 pts)} Compute the integral $\\displaystyle\\int(4-x^2)^{-3/2}\\,dx$. &emsp;[<u>Hint</u>: you may substitute $x=2\\sin\\theta$.]</p>",
+   "question": "<p>Compute the integral $\\displaystyle\\int(4-x^2)^{-3/2}\\,dx$. &emsp;[<u>Hint</u>: you may substitute $x=2\\sin\\theta$.]</p>",
    "hints": [],
    "solution": "<p>The integrand is defined for $|x|&lt;2$. Substitute $x=2\\sin\\theta$ with $\\theta\\in\\left(-\\frac\\pi2,\\frac\\pi2\\right)$; then $dx=2\\cos\\theta\\,d\\theta$ and $\\cos\\theta&gt;0$, hence\n\\[ 4-x^2=4-4\\sin^2\\theta=4\\cos^2\\theta,\\qquad (4-x^2)^{3/2}=8\\cos^3\\theta. \\]\n\\[ \\int(4-x^2)^{-3/2}\\,dx=\\int\\frac{2\\cos\\theta}{8\\cos^3\\theta}\\,d\\theta=\\frac14\\int\\frac{d\\theta}{\\cos^2\\theta}=\\frac14\\tan\\theta+C. \\]\nBack to the variable $x$: $\\sin\\theta=\\frac x2$, $\\cos\\theta=\\sqrt{1-\\frac{x^2}{4}}=\\frac{\\sqrt{4-x^2}}{2}$, hence $\\tan\\theta=\\frac{x}{\\sqrt{4-x^2}}$.\n\\[ \\boxed{\\int(4-x^2)^{-3/2}\\,dx=\\frac{x}{4\\sqrt{4-x^2}}+C} \\]\nCheck: $\\left(\\frac{x}{4\\sqrt{4-x^2}}\\right)'=\\frac14\\cdot\\frac{\\sqrt{4-x^2}+\\frac{x^2}{\\sqrt{4-x^2}}}{4-x^2}=\\frac14\\cdot\\frac{4}{(4-x^2)^{3/2}}=(4-x^2)^{-3/2}$.</p>",
    "src": "Moed B, 2017/18, Semester A",
@@ -1863,7 +1863,7 @@ window.BANK = {
     "polar-parametric",
     "integral-applications"
    ],
-   "question": "<p>{(10 pts)} Find the area enclosed inside the loop formed by the graph of the function $r=\\tan\\frac\\theta2$ in polar coordinates.</p>\n<p>(The exam includes a figure: the curve passes through the origin, forms a small loop above the origin, and its two branches extend upward and to the sides.)</p>",
+   "question": "<p>Find the area enclosed inside the loop formed by the graph of the function $r=\\tan\\frac\\theta2$ in polar coordinates.</p>\n<p>(The exam includes a figure: the curve passes through the origin, forms a small loop above the origin, and its two branches extend upward and to the sides.)</p>",
    "hints": [
     "<p>Find for which values of $\\theta$ the curve returns to the same point: compare the points obtained for $\\theta=\\frac\\pi2$ and $\\theta=-\\frac\\pi2$.</p>",
     "<p>Area in polar coordinates: $S=\\frac12\\int_\\alpha^\\beta r^2\\,d\\theta$, and use $\\tan^2u=\\frac1{\\cos^2u}-1$.</p>"
@@ -1889,7 +1889,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Does the improper integral $\\displaystyle\\int_1^\\infty\\frac{e^x}{e^{e^x}}\\,dx$ converge? If so, compute the value of the integral. If not, explain why.</p>",
+   "question": "<p>Does the improper integral $\\displaystyle\\int_1^\\infty\\frac{e^x}{e^{e^x}}\\,dx$ converge? If so, compute the value of the integral. If not, explain why.</p>",
    "hints": [
     "<p>Substitute $u=e^x$.</p>"
    ],
@@ -1915,7 +1915,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\\frac{\\arctan x}{\\sqrt{1+x^2}}$ and the $x$-axis, for $0\\le x\\le1$.</p>",
+   "question": "<p>Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\\frac{\\arctan x}{\\sqrt{1+x^2}}$ and the $x$-axis, for $0\\le x\\le1$.</p>",
    "hints": [
     "<p>Note that $\\frac{1}{1+x^2}$ is the derivative of $\\arctan x$, and substitute $u=\\arctan x$.</p>"
    ],
@@ -1940,7 +1940,7 @@ window.BANK = {
    "categories": [
     "sequences"
    ],
-   "question": "<p>(10 pts) Compute the following limit:\nthe limit of the sequence $\\displaystyle\\lim_{n\\to\\infty}\\left(\\frac{(n+4)!\\cdot n}{(n+5)!-(n+2)!}\\right)$.</p>",
+   "question": "<p>Compute the following limit:\nthe limit of the sequence $\\displaystyle\\lim_{n\\to\\infty}\\left(\\frac{(n+4)!\\cdot n}{(n+5)!-(n+2)!}\\right)$.</p>",
    "hints": [
     "<p>Factor out $(n+2)!$ as a common factor in the numerator and the denominator.</p>"
    ],
@@ -1966,7 +1966,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Compute the following limit:\nthe limit of the function $\\displaystyle\\lim_{x\\to0}\\tan x\\ln(x^2)$.</p>",
+   "question": "<p>Compute the following limit:\nthe limit of the function $\\displaystyle\\lim_{x\\to0}\\tan x\\ln(x^2)$.</p>",
    "hints": [
     "<p>Write $\\tan x\\ln(x^2)=\\frac{\\tan x}{x}\\cdot 2x\\ln|x|$.</p>"
    ],
@@ -1992,7 +1992,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(20 pts)\nFind the points of discontinuity of the function\n\\[ f(x)=\\frac{x^2-x}{e^{x^3-x}-1} \\]\nand determine their types.</p>",
+   "question": "<p>Find the points of discontinuity of the function\n\\[ f(x)=\\frac{x^2-x}{e^{x^3-x}-1} \\]\nand determine their types.</p>",
    "hints": [
     "<p>The denominator vanishes when $x^3-x=0$. Use the limit $\\lim_{t\\to0}\\frac{e^t-1}{t}=1$ with $t=x^3-x$.</p>"
    ],
@@ -2018,7 +2018,7 @@ window.BANK = {
     "taylor",
     "func-limits"
    ],
-   "question": "<p>(10 pts) Compute the limit:\n\\[ \\lim_{x\\to0}\\left(\\frac{1-\\cos(x^3)}{x^2\\ln(1+x^2)\\sin^2x}\\right) \\]\n<u>Hint</u>: you may use Maclaurin formulas.</p>",
+   "question": "<p>Compute the limit:\n\\[ \\lim_{x\\to0}\\left(\\frac{1-\\cos(x^3)}{x^2\\ln(1+x^2)\\sin^2x}\\right) \\]\n<u>Hint</u>: you may use Maclaurin formulas.</p>",
    "hints": [
     "<p>$1-\\cos u=\\frac{u^2}{2}+o(u^2)$, $\\ln(1+u)=u+o(u)$, $\\sin x=x+o(x)$. What is the order of magnitude of the numerator and of the denominator?</p>"
    ],
@@ -2044,7 +2044,7 @@ window.BANK = {
     "mvt",
     "proofs"
    ],
-   "question": "<p>(10 pts) Let $f$ be a function differentiable at every real number $x$, and assume that the equation $f'(x)=0$ has exactly $k$ solutions. Prove that the equation $f(x)=0$ has at most $k+1$ solutions.</p>",
+   "question": "<p>Let $f$ be a function differentiable at every real number $x$, and assume that the equation $f'(x)=0$ has exactly $k$ solutions. Prove that the equation $f(x)=0$ has at most $k+1$ solutions.</p>",
    "hints": [
     "<p>Between any two roots of $f$ there is a root of $f'$ (Rolle's theorem). Prove by contradiction.</p>"
    ],
@@ -2071,7 +2071,7 @@ window.BANK = {
     "derivatives",
     "func-limits"
    ],
-   "question": "<p>(20 pts)\nInvestigate the function $f(x)=\\sqrt{\\frac{x^3}{x-1}}$ and sketch its graph. In this question there is no need to compute $f''(x)$, and no need to deal with convexity, concavity and inflection points.</p>",
+   "question": "<p>Investigate the function $f(x)=\\sqrt{\\frac{x^3}{x-1}}$ and sketch its graph. In this question there is no need to compute $f''(x)$, and no need to deal with convexity, concavity and inflection points.</p>",
    "hints": [
     "<p>The domain: where $\\frac{x^3}{x-1}\\ge0$. Note that it consists of two separate parts.</p>",
     "<p>For the oblique asymptote note that $\\sqrt{x^2}=|x|$, hence the slopes at $+\\infty$ and at $-\\infty$ are different.</p>"
@@ -2097,7 +2097,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>{(10 pts)} Compute the integral $\\displaystyle\\int\\frac{x^4+4x^3+4x^2+8x+1}{(x-1)(x+2)^2}\\,dx$.</p>",
+   "question": "<p>Compute the integral $\\displaystyle\\int\\frac{x^4+4x^3+4x^2+8x+1}{(x-1)(x+2)^2}\\,dx$.</p>",
    "hints": [
     "<p>The degree of the numerator is greater than the degree of the denominator — first perform polynomial division, and then decompose into partial fractions of the form $\\frac{A}{x-1}+\\frac{B}{x+2}+\\frac{C}{(x+2)^2}$.</p>"
    ],
@@ -2123,7 +2123,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>{(10 pts)} Compute the length of the curve $f(x)=x^{3/2}$ between $x=0$ and $x=9$.</p>",
+   "question": "<p>Compute the length of the curve $f(x)=x^{3/2}$ between $x=0$ and $x=9$.</p>",
    "hints": [
     "<p>Arc length: $L=\\int_a^b\\sqrt{1+(f'(x))^2}\\,dx$.</p>"
    ],
@@ -2148,7 +2148,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Does the improper integral $\\displaystyle\\int_0^\\infty\\frac{1}{e^x+e^{-x}}\\,dx$ converge? If so, compute the value of the integral. If not, explain why.</p>",
+   "question": "<p>Does the improper integral $\\displaystyle\\int_0^\\infty\\frac{1}{e^x+e^{-x}}\\,dx$ converge? If so, compute the value of the integral. If not, explain why.</p>",
    "hints": [
     "<p>Multiply the numerator and the denominator by $e^x$ and substitute $u=e^x$.</p>"
    ],
@@ -2174,7 +2174,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\\sqrt{\\arcsin x}$ and the $x$-axis, for $0\\le x\\le1$.</p>",
+   "question": "<p>Compute the volume of the solid of revolution obtained by rotating the region $D$ about the $x$-axis, where $D$ is the region between the graph of the function $f(x)=\\sqrt{\\arcsin x}$ and the $x$-axis, for $0\\le x\\le1$.</p>",
    "hints": [
     "<p>We need to compute $\\int\\arcsin x\\,dx$ — use integration by parts with $u=\\arcsin x$, $v'=1$.</p>"
    ],
@@ -2199,7 +2199,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(10 pts) Compute the derivative of the function $f(x)=\\cos x$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
+   "question": "<p>Compute the derivative of the function $f(x)=\\cos x$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
    "hints": [
     "<p>Use the identity $\\cos\\alpha-\\cos\\beta=-2\\sin\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$ and the fundamental limit $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$.</p>"
    ],
@@ -2225,7 +2225,7 @@ window.BANK = {
     "func-analysis",
     "func-limits"
    ],
-   "question": "<p>(10 pts) Find all the asymptotes of the function $f(x)=\\frac{\\ln(2x)}{\\ln(x)}$.</p>",
+   "question": "<p>Find all the asymptotes of the function $f(x)=\\frac{\\ln(2x)}{\\ln(x)}$.</p>",
    "hints": [
     "<p>Write $\\ln(2x)=\\ln2+\\ln x$.</p>"
    ],
@@ -2251,7 +2251,7 @@ window.BANK = {
     "func-analysis",
     "derivatives"
    ],
-   "question": "<p>(5 pts) For which values of $a$ does the graph of the function $f(x)=x^4-ax^2$ have no inflection points?</p>",
+   "question": "<p>For which values of $a$ does the graph of the function $f(x)=x^4-ax^2$ have no inflection points?</p>",
    "hints": [
     "<p>An inflection point is a point where $f''$ changes sign. Compute $f''$ and check for which values of $a$ it changes sign.</p>"
    ],
@@ -2277,7 +2277,7 @@ window.BANK = {
     "func-analysis",
     "ivt"
    ],
-   "question": "<p>(15 pts) For which values of the parameter $a$ does the equation $x^4-a\\cdot x^3+27=0$ have no real roots?</p>",
+   "question": "<p>For which values of the parameter $a$ does the equation $x^4-a\\cdot x^3+27=0$ have no real roots?</p>",
    "hints": [
     "<p>$x=0$ is not a root. Isolate the parameter: $a=\\frac{x^4+27}{x^3}=x+\\frac{27}{x^3}$, and find the range of the function $g(x)=x+\\frac{27}{x^3}$.</p>"
    ],
@@ -2302,7 +2302,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid obtained by rotating about the $x$-axis the plane region bounded by the line $y=\\frac{x}{\\sqrt{x^2+1}}$ and the $x$-axis on the interval $[0,1]$. Draw the corresponding sketch.</p>",
+   "question": "<p>Compute the volume of the solid obtained by rotating about the $x$-axis the plane region bounded by the line $y=\\frac{x}{\\sqrt{x^2+1}}$ and the $x$-axis on the interval $[0,1]$. Draw the corresponding sketch.</p>",
    "hints": [],
    "solution": "<strong>Sketch:</strong> $y=\\frac{x}{\\sqrt{x^2+1}}$ increases from $0$ (at $x=0$) to $\\frac1{\\sqrt2}\\approx0.71$ (at $x=1$), and is non-negative on the interval. The region is the area between the graph and the $x$-axis for $0\\le x\\le1$, and rotating it about the $x$-axis gives a “goblet”-like solid.\n\n<strong>Volume:</strong> by the formula for the volume of a solid of revolution $V=\\pi\\int_a^by^2\\,dx$:\n\\[\nV=\\pi\\int_0^1\\frac{x^2}{x^2+1}dx=\\pi\\int_0^1\\left(1-\\frac{1}{x^2+1}\\right)dx=\\pi\\Big[x-\\arctan x\\Big]_0^1=\\pi\\left(1-\\frac\\pi4\\right).\n\\]\n<strong>Answer:</strong> $V=\\pi\\left(1-\\frac\\pi4\\right)\\approx0.674$.",
    "src": "Moed A, 2017/18, Semester B",
@@ -2325,7 +2325,7 @@ window.BANK = {
    "categories": [
     "definite-integrals"
    ],
-   "question": "<p>(15 pts) Compute: $\\displaystyle\\int_{-1}^15x^4\\big(\\ln(x+2)+\\sin x\\big)dx$</p>",
+   "question": "<p>Compute: $\\displaystyle\\int_{-1}^15x^4\\big(\\ln(x+2)+\\sin x\\big)dx$</p>",
    "hints": [
     "<p>$5x^4\\sin x$ is an odd function, hence its integral over $[-1,1]$ vanishes. For the other part, integrate by parts with $u=\\ln(x+2)$, $dv=5x^4dx$.</p>"
    ],
@@ -2351,7 +2351,7 @@ window.BANK = {
     "taylor",
     "derivatives"
    ],
-   "question": "<p>(10 pts) Write the Maclaurin polynomial of order 2 for the function $y(x)$ which is defined implicitly by the equation $y\\cdot\\sin x-x\\cdot\\cos x+y=2$.</p>",
+   "question": "<p>Write the Maclaurin polynomial of order 2 for the function $y(x)$ which is defined implicitly by the equation $y\\cdot\\sin x-x\\cdot\\cos x+y=2$.</p>",
    "hints": [
     "<p>Substitute $x=0$ to find $y(0)$, then differentiate the equation (implicit differentiation) twice and substitute $x=0$.</p>"
    ],
@@ -2376,7 +2376,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(5 pts) $\\displaystyle\\lim_{x\\to3}\\frac{\\sqrt{x^2-2x+6}-\\sqrt{x^2+2x-6}}{x^2-4x+3}$.</p>",
+   "question": "<p>$\\displaystyle\\lim_{x\\to3}\\frac{\\sqrt{x^2-2x+6}-\\sqrt{x^2+2x-6}}{x^2-4x+3}$.</p>",
    "hints": [
     "<p>Multiply by the conjugate of the numerator.</p>"
    ],
@@ -2402,7 +2402,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(10 pts) Is the function\n\\[\nf(x)=\\begin{cases}(1+\\sin2x)^{\\frac{2}{3x}}+\\arctan x\\cdot\\cos\\frac1x, &amp; x\\neq0\\\\ e^{4/3}, &amp; x=0\\end{cases}\n\\]\ncontinuous at the point $x=0$?</p>",
+   "question": "<p>Is the function\n\\[\nf(x)=\\begin{cases}(1+\\sin2x)^{\\frac{2}{3x}}+\\arctan x\\cdot\\cos\\frac1x, &amp; x\\neq0\\\\ e^{4/3}, &amp; x=0\\end{cases}\n\\]\ncontinuous at the point $x=0$?</p>",
    "hints": [
     "<p>Treat each summand separately: the first is of the form $1^\\infty$; the second is “tends to zero times bounded”.</p>"
    ],
@@ -2427,7 +2427,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Does the improper integral $\\displaystyle\\int_0^{+\\infty}\\frac{x\\cdot e^{-x}}{(x+1)^4}dx$ converge?</p>",
+   "question": "<p>Does the improper integral $\\displaystyle\\int_0^{+\\infty}\\frac{x\\cdot e^{-x}}{(x+1)^4}dx$ converge?</p>",
    "hints": [
     "<p>Compare with $e^{-x}$.</p>"
    ],
@@ -2452,7 +2452,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(10 pts) Compute the derivative of the function $f(x)=\\sin2x$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
+   "question": "<p>Compute the derivative of the function $f(x)=\\sin2x$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
    "hints": [
     "<p>Use the identity $\\sin\\alpha-\\sin\\beta=2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$.</p>"
    ],
@@ -2478,7 +2478,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(10 pts) Find all the points of discontinuity of the function and classify them\n\\[\nf(x)=\\frac{1}{25-5^{1/(x-2)}}.\n\\]</p>",
+   "question": "<p>Find all the points of discontinuity of the function and classify them\n\\[\nf(x)=\\frac{1}{25-5^{1/(x-2)}}.\n\\]</p>",
    "hints": [
     "<p>The suspicious points are $x=2$ (where $\\frac1{x-2}$ is undefined) and the point where the denominator vanishes. At $x=2$ compute the one-sided limits separately.</p>"
    ],
@@ -2504,7 +2504,7 @@ window.BANK = {
     "definite-integrals",
     "derivatives"
    ],
-   "question": "<p>(5 pts) What is the slope of the tangent to the curve $y=\\int_0^x\\frac{dt}{1+t^4}$ at its point with $x=1$.</p>",
+   "question": "<p>What is the slope of the tangent to the curve $y=\\int_0^x\\frac{dt}{1+t^4}$ at its point with $x=1$.</p>",
    "hints": [],
    "solution": "<p>The function $\\frac1{1+t^4}$ is continuous on $\\R$, so by <em>the Fundamental Theorem of Calculus</em> the function $y(x)=\\int_0^x\\frac{dt}{1+t^4}$ is differentiable and $y'(x)=\\frac1{1+x^4}$. The slope of the tangent at $x=1$:\n\\[\ny'(1)=\\frac1{1+1}=\\frac12.\n\\]</p>",
    "src": "Moed B, 2017/18, Semester B",
@@ -2528,7 +2528,7 @@ window.BANK = {
     "func-analysis",
     "proofs"
    ],
-   "question": "<p>(15 pts) Prove that for every $x&gt;0$ we have $3\\sqrt[3]{x^2}-2x\\le1$.</p>",
+   "question": "<p>Prove that for every $x&gt;0$ we have $3\\sqrt[3]{x^2}-2x\\le1$.</p>",
    "hints": [
     "<p>Find the maximum of $g(x)=3x^{2/3}-2x$ on the interval $(0,\\infty)$.</p>"
    ],
@@ -2554,7 +2554,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Compute the area enclosed between the curves $y=x\\cdot e^x$, $y=x-1$, $x=0$, $x=2$. Draw the corresponding sketch.</p>",
+   "question": "<p>Compute the area enclosed between the curves $y=x\\cdot e^x$, $y=x-1$, $x=0$, $x=2$. Draw the corresponding sketch.</p>",
    "hints": [
     "<p>Check which of the graphs lies above the other on the interval $[0,2]$. For the integral of $xe^x$ use integration by parts.</p>"
    ],
@@ -2579,7 +2579,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(15 pts) Compute:</p>\n<ol class=\"parts\">\n<li class=\"custom\" data-label=\"(a)\">\n(8 pts) $\\displaystyle\\int\\frac{x^3+2x^2-4}{x^3-2x^2}dx$\n</li>\n<li class=\"custom\" data-label=\"(b)\">\n(7 pts) $\\displaystyle\\int\\frac{x}{\\sqrt{x+1}}dx$\n</li>\n</ol>",
+   "question": "<p>Compute:</p>\n<ol class=\"parts\">\n<li class=\"custom\" data-label=\"(a)\">\n(8 pts) $\\displaystyle\\int\\frac{x^3+2x^2-4}{x^3-2x^2}dx$\n</li>\n<li class=\"custom\" data-label=\"(b)\">\n(7 pts) $\\displaystyle\\int\\frac{x}{\\sqrt{x+1}}dx$\n</li>\n</ol>",
    "hints": [
     "<p>In (a) perform polynomial division and then decompose into partial fractions: $x^3-2x^2=x^2(x-2)$. In (b) substitute $u=x+1$.</p>"
    ],
@@ -2604,7 +2604,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Write the Maclaurin polynomial of order 2 for the function $f(x)=\\cos(2x)-\\arctan(x+1)$.</p>",
+   "question": "<p>Write the Maclaurin polynomial of order 2 for the function $f(x)=\\cos(2x)-\\arctan(x+1)$.</p>",
    "hints": [],
    "solution": "<p>The Maclaurin polynomial of order 2: $P_2(x)=f(0)+f'(0)x+\\frac{f''(0)}{2}x^2$.\n\\[\nf(0)=\\cos0-\\arctan1=1-\\frac\\pi4.\n\\]\n\\[\nf'(x)=-2\\sin2x-\\frac{1}{1+(x+1)^2},\\qquad f'(0)=0-\\frac12=-\\frac12.\n\\]\n\\[\nf''(x)=-4\\cos2x+\\frac{2(x+1)}{\\big(1+(x+1)^2\\big)^2},\\qquad f''(0)=-4+\\frac{2}{4}=-\\frac72.\n\\]\n<strong>Answer:</strong>\n\\[\nP_2(x)=1-\\frac\\pi4-\\frac12x-\\frac74x^2.\n\\]</p>",
    "src": "Moed B, 2017/18, Semester B",
@@ -2628,7 +2628,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(15 pts) For which values of the parameters $a$ and $b$ will the function\n\\[\nf(x)=\\begin{cases}\\dfrac{\\tan(2x)-x}{x+\\sin(2x)}, &amp; -\\frac\\pi4&lt;x&lt;0\\\\[1ex] ax+b, &amp; 0\\le x\\le1\\\\[0.5ex] x^{1/(x-1)}, &amp; x&gt;1\\end{cases}\n\\]\nbe continuous on the domain $x&gt;-\\frac\\pi4$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[\nf(x)=\\begin{cases}\\dfrac{\\tan(2x)-x}{x+\\sin(2x)}, &amp; -\\frac\\pi4&lt;x&lt;0\\\\[1ex] ax+b, &amp; 0\\le x\\le1\\\\[0.5ex] x^{1/(x-1)}, &amp; x&gt;1\\end{cases}\n\\]\nbe continuous on the domain $x&gt;-\\frac\\pi4$?</p>",
    "hints": [
     "<p>The function is continuous inside each of the three intervals; only the junction points $x=0$ and $x=1$ need to be checked. At $x=0$ divide the numerator and denominator by $x$; at $x=1$ this is a limit of the form $1^\\infty$.</p>"
    ],
@@ -2653,7 +2653,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Compute $\\displaystyle\\int_1^{+\\infty}\\frac{\\ln x}{x^4}dx$.</p>",
+   "question": "<p>Compute $\\displaystyle\\int_1^{+\\infty}\\frac{\\ln x}{x^4}dx$.</p>",
    "hints": [
     "<p>Integration by parts with $u=\\ln x$, $dv=x^{-4}dx$.</p>"
    ],
@@ -2679,7 +2679,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\big(\\cos x\\big)^{\\frac{1}{\\sin^2 2x}}$</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\big(\\cos x\\big)^{\\frac{1}{\\sin^2 2x}}$</p>",
    "hints": [
     "<p>Write $(\\cos x)^{1/\\sin^22x}=e^{\\frac{\\ln\\cos x}{\\sin^22x}}$ and compute the limit of the exponent.</p>"
    ],
@@ -2704,7 +2704,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle\\lim_{x\\to\\infty}\\frac{\\sin\\left(\\frac{1}{\\sqrt x}\\right)}{\\sqrt{x+1}-\\sqrt x}$</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle\\lim_{x\\to\\infty}\\frac{\\sin\\left(\\frac{1}{\\sqrt x}\\right)}{\\sqrt{x+1}-\\sqrt x}$</p>",
    "hints": [
     "<p>Multiply by the conjugate $\\sqrt{x+1}+\\sqrt x$ and use $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$ with $t=\\frac1{\\sqrt x}$.</p>"
    ],
@@ -2729,7 +2729,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(20 pts) To compute $a=\\sqrt[3]{29}$ approximately, one writes\n\\[ a=3\\cdot\\sqrt[3]{29/27}=3\\cdot\\sqrt[3]{1+2/27} \\]\nand uses the Maclaurin polynomial of degree 2 of the function $f(x)=3\\cdot(1+x)^{1/3}$. Estimate the approximation error using Taylor's formula.</p>",
+   "question": "<p>To compute $a=\\sqrt[3]{29}$ approximately, one writes\n\\[ a=3\\cdot\\sqrt[3]{29/27}=3\\cdot\\sqrt[3]{1+2/27} \\]\nand uses the Maclaurin polynomial of degree 2 of the function $f(x)=3\\cdot(1+x)^{1/3}$. Estimate the approximation error using Taylor's formula.</p>",
    "hints": [
     "<p>The remainder in Lagrange form is $R_2(x)=\\frac{f'''(c)}{3!}x^3$ for some $c$ between $0$ and $x$. Bound $|f'''(c)|$ for $c\\in(0,\\frac2{27})$.</p>"
    ],
@@ -2755,7 +2755,7 @@ window.BANK = {
     "func-limits",
     "proofs"
    ],
-   "question": "<p>(10 pts) Let $f(x)$ be a function defined in a neighborhood of a point $x_0$. Complete the following definition:</p>\n<p><strong>A number $a$ is the limit of $f(x)$ as $x$ tends to $x_0$ if for every …</strong></p>",
+   "question": "<p>Let $f(x)$ be a function defined in a neighborhood of a point $x_0$. Complete the following definition:</p>\n<p><strong>A number $a$ is the limit of $f(x)$ as $x$ tends to $x_0$ if for every …</strong></p>",
    "hints": [],
    "solution": "<p>(Cauchy's definition, $\\eps$–$\\delta$) A number $a$ is the limit of $f(x)$ as $x$ tends to $x_0$ if for every $\\eps&gt;0$ there exists $\\delta&gt;0$ such that for every $x$ satisfying $0&lt;|x-x_0|&lt;\\delta$ we have $|f(x)-a|&lt;\\eps$.</p>\n<p>(An equivalent definition, according to Heine: for every sequence $x_n\\to x_0$ with $x_n\\neq x_0$ we have $f(x_n)\\to a$.)</p>",
    "src": "Moed A, 2018/19, Semester A",
@@ -2779,7 +2779,7 @@ window.BANK = {
     "func-limits",
     "sequences"
    ],
-   "question": "<p>(10 pts) Explain why the function $f(x)=\\cos\\left(\\dfrac{x+1}{x-1}\\right)$ has no limit as $x$ tends to $1$.</p>",
+   "question": "<p>Explain why the function $f(x)=\\cos\\left(\\dfrac{x+1}{x-1}\\right)$ has no limit as $x$ tends to $1$.</p>",
    "hints": [
     "<p>Use Heine's definition of the limit: find two sequences tending to $1$ along which the values of the function tend to different limits.</p>"
    ],
@@ -2804,7 +2804,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(20 pts) Investigate the function $y=(x+2)e^{1/x}$ and sketch its graph.</p>\n<p><u>You need to investigate</u>: domain, continuity, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
+   "question": "<p>Investigate the function $y=(x+2)e^{1/x}$ and sketch its graph.</p>\n<p><u>You need to investigate</u>: domain, continuity, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
    "hints": [
     "<p>For the oblique asymptote: $m=\\lim\\frac{y}{x}$, $n=\\lim(y-mx)$; when computing $n$ substitute $t=\\frac1x$ and use $\\lim_{t\\to0}\\frac{e^t-1}{t}=1$.</p>",
     "<p>Check the one-sided limits at $x=0$ separately: as $x\\to0^-$, $e^{1/x}\\to0$.</p>"
@@ -2830,7 +2830,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the following integral:\n$\\displaystyle\\int e^{2x}\\sin(3x)\\,dx$</p>",
+   "question": "<p>Compute the following integral:\n$\\displaystyle\\int e^{2x}\\sin(3x)\\,dx$</p>",
    "hints": [
     "<p>Integrate by parts twice; you will get an equation in which the desired integral appears on both sides.</p>"
    ],
@@ -2856,7 +2856,7 @@ window.BANK = {
     "definite-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the following integral:\n$\\displaystyle\\int_0^1\\frac{x^4}{x^2+2x+1}\\,dx$</p>",
+   "question": "<p>Compute the following integral:\n$\\displaystyle\\int_0^1\\frac{x^4}{x^2+2x+1}\\,dx$</p>",
    "hints": [
     "<p>$x^2+2x+1=(x+1)^2$; substitute $u=x+1$ (or perform polynomial division).</p>"
    ],
@@ -2881,7 +2881,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(20 pts) Does the following improper integral $\\displaystyle\\int_0^1\\frac{\\ln x}{\\sqrt x}\\,dx$ converge? If so, compute the integral.</p>",
+   "question": "<p>Does the following improper integral $\\displaystyle\\int_0^1\\frac{\\ln x}{\\sqrt x}\\,dx$ converge? If so, compute the integral.</p>",
    "hints": [
     "<p>The problematic point is $x=0$. Compute $\\int_\\eps^1$ by integration by parts ($u=\\ln x$, $dv=x^{-1/2}dx$) and take the limit $\\eps\\to0^+$.</p>"
    ],
@@ -2907,7 +2907,7 @@ window.BANK = {
     "func-limits",
     "taylor"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\frac{\\cos x-\\sqrt{1-2x^2}}{\\sin^2x}$</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\frac{\\cos x-\\sqrt{1-2x^2}}{\\sin^2x}$</p>",
    "hints": [
     "<p>Use the Maclaurin expansions $\\cos x=1-\\frac{x^2}2+o(x^2)$, $\\sqrt{1+t}=1+\\frac t2+o(t)$, and $\\sin^2x\\sim x^2$.</p>"
    ],
@@ -2932,7 +2932,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\left(\\frac{1-4x^2}{1-3x^2}\\right)^{\\frac{2}{x^2}}$</p>\n<p>Hint: $f^g=e^{g\\ln f}$.</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle\\lim_{x\\to0}\\left(\\frac{1-4x^2}{1-3x^2}\\right)^{\\frac{2}{x^2}}$</p>\n<p>Hint: $f^g=e^{g\\ln f}$.</p>",
    "hints": [
     "<p>After passing to the form $e^{g\\ln f}$, write $\\ln\\frac{1-4x^2}{1-3x^2}=\\ln(1-4x^2)-\\ln(1-3x^2)$ and use the fundamental limit $\\lim_{t\\to0}\\frac{\\ln(1+t)}{t}=1$.</p>"
    ],
@@ -2957,7 +2957,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(20 pts) Let $f(x)=\\ln x$. Write the Taylor polynomial of degree 3 of the function $f$ around the point $x_0=1$. Use this polynomial to compute an approximation of $\\ln(1.1)$. Estimate the error of this approximation using Taylor's formula.</p>",
+   "question": "<p>Let $f(x)=\\ln x$. Write the Taylor polynomial of degree 3 of the function $f$ around the point $x_0=1$. Use this polynomial to compute an approximation of $\\ln(1.1)$. Estimate the error of this approximation using Taylor's formula.</p>",
    "hints": [
     "<p>The remainder in Lagrange form is $R_3(x)=\\frac{f^{(4)}(c)}{4!}(x-1)^4$ with $c$ between $1$ and $x$.</p>"
    ],
@@ -2983,7 +2983,7 @@ window.BANK = {
     "derivatives",
     "taylor"
    ],
-   "question": "<p>(10 pts) Is the function\n\\[ f(x)=\\begin{cases}\\dfrac{1}{\\tan x}-\\dfrac1x &amp; x\\neq0\\\\[2mm] 0 &amp; x=0\\end{cases} \\]\ndifferentiable at the point $x=0$? Explain.</p>",
+   "question": "<p>Is the function\n\\[ f(x)=\\begin{cases}\\dfrac{1}{\\tan x}-\\dfrac1x &amp; x\\neq0\\\\[2mm] 0 &amp; x=0\\end{cases} \\]\ndifferentiable at the point $x=0$? Explain.</p>",
    "hints": [
     "<p>Compute the limit of the difference quotient $\\frac{f(h)-f(0)}{h}=\\frac{h-\\tan h}{h^2\\tan h}$, for example using the expansion $\\tan h=h+\\frac{h^3}{3}+o(h^3)$.</p>"
    ],
@@ -3010,7 +3010,7 @@ window.BANK = {
     "proofs",
     "true-false"
    ],
-   "question": "<p>(10 pts) Prove or disprove: if a function $f(x)$ is differentiable at a point $x_0$, then it is continuous at $x_0$.</p>",
+   "question": "<p>Prove or disprove: if a function $f(x)$ is differentiable at a point $x_0$, then it is continuous at $x_0$.</p>",
    "hints": [
     "<p>Write $f(x)-f(x_0)=\\frac{f(x)-f(x_0)}{x-x_0}\\cdot(x-x_0)$.</p>"
    ],
@@ -3035,7 +3035,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(20 pts) Investigate the function $f(x)=\\dfrac{x^3}{x^2-4}$ and sketch its graph.</p>\n<p><u>You need to investigate</u>: domain, continuity, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
+   "question": "<p>Investigate the function $f(x)=\\dfrac{x^3}{x^2-4}$ and sketch its graph.</p>\n<p><u>You need to investigate</u>: domain, continuity, asymptotes, intervals of increase and decrease, extremum points, intervals of convexity and concavity.</p>",
    "hints": [
     "<p>Note that the function is odd. Polynomial division gives $f(x)=x+\\frac{4x}{x^2-4}$.</p>"
    ],
@@ -3061,7 +3061,7 @@ window.BANK = {
     "antiderivatives",
     "definite-integrals"
    ],
-   "question": "<p>(20 pts) Compute the following integral:\n\\[ \\int_0^\\pi x^2\\sin(3x)\\,dx \\]</p>",
+   "question": "<p>Compute the following integral:\n\\[ \\int_0^\\pi x^2\\sin(3x)\\,dx \\]</p>",
    "hints": [
     "<p>Integrate by parts twice, each time differentiating the power of $x$.</p>"
    ],
@@ -3087,7 +3087,7 @@ window.BANK = {
     "ivt",
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Prove that the equation $e^{2x}-x-5=0$ has exactly two real solutions.</p>",
+   "question": "<p>Prove that the equation $e^{2x}-x-5=0$ has exactly two real solutions.</p>",
    "hints": [
     "<p>Check the monotonicity of $g(x)=e^{2x}-x-5$ using the derivative, and its value at the minimum point. Existence – by the Intermediate Value Theorem; uniqueness in each interval – by monotonicity.</p>"
    ],
@@ -3113,7 +3113,7 @@ window.BANK = {
     "integral-applications",
     "polar-parametric"
    ],
-   "question": "<p>(10 pts) A curve is given in polar coordinates by $r=1+\\cos\\varphi$ $(0\\le\\varphi\\le2\\pi)$. Compute the length of the curve.</p>",
+   "question": "<p>A curve is given in polar coordinates by $r=1+\\cos\\varphi$ $(0\\le\\varphi\\le2\\pi)$. Compute the length of the curve.</p>",
    "hints": [
     "<p>The length of a polar curve is $L=\\int_\\alpha^\\beta\\sqrt{r^2+(r')^2}\\,d\\varphi$; use $1+\\cos\\varphi=2\\cos^2\\frac\\varphi2$.</p>"
    ],
@@ -3138,7 +3138,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle \\lim_{x\\to\\infty}\\left(1+2x-4x^2+x^4\\right)^{1/\\ln(2x^2+1)}$.</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle \\lim_{x\\to\\infty}\\left(1+2x-4x^2+x^4\\right)^{1/\\ln(2x^2+1)}$.</p>",
    "hints": [
     "<p>Write the expression in the form $e^{\\ln(\\cdots)/\\ln(2x^2+1)}$ and factor the highest power out of each logarithm.</p>"
    ],
@@ -3163,7 +3163,7 @@ window.BANK = {
    "categories": [
     "sequences"
    ],
-   "question": "<p>(10 pts) Find the following limit:\n$\\displaystyle \\lim_{n\\to\\infty}\\left(\\sqrt{(n^2+1)(n^2-4)}-\\sqrt{n^4-9}\\right)$.</p>",
+   "question": "<p>Find the following limit:\n$\\displaystyle \\lim_{n\\to\\infty}\\left(\\sqrt{(n^2+1)(n^2-4)}-\\sqrt{n^4-9}\\right)$.</p>",
    "hints": [
     "<p>Multiply and divide by the conjugate $\\sqrt{(n^2+1)(n^2-4)}+\\sqrt{n^4-9}$.</p>"
    ],
@@ -3189,7 +3189,7 @@ window.BANK = {
     "definite-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(20 pts) Compute the following integral $\\displaystyle\\int_0^{\\pi/4} x\\tan^2 x\\,dx$.</p>",
+   "question": "<p>Compute the following integral $\\displaystyle\\int_0^{\\pi/4} x\\tan^2 x\\,dx$.</p>",
    "hints": [
     "<p>Use the identity $\\tan^2 x = \\frac{1}{\\cos^2 x}-1$ and split into two integrals.</p>",
     "<p>Compute $\\int x\\cdot\\frac{1}{\\cos^2 x}\\,dx$ by integration by parts, with $u=x$ and $v'=\\frac{1}{\\cos^2x}$.</p>"
@@ -3215,7 +3215,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Write the Maclaurin polynomial of degree 6 for the function $y=\\sin\\left(\\sin(x^2)\\right)$.</p>",
+   "question": "<p>Write the Maclaurin polynomial of degree 6 for the function $y=\\sin\\left(\\sin(x^2)\\right)$.</p>",
    "hints": [
     "<p>Substitute $u=\\sin(x^2)=x^2-\\frac{x^6}{6}+o(x^6)$ into the expansion $\\sin u = u-\\frac{u^3}{6}+o(u^3)$.</p>"
    ],
@@ -3241,7 +3241,7 @@ window.BANK = {
     "continuity",
     "lhopital"
    ],
-   "question": "<p>(10 pts) For which value of $a$ is the function\n\\[ f(x)=\\begin{cases} \\dfrac{1}{\\ln x}-\\dfrac{1}{x-1} &amp; x\\neq 1\\\\[2mm] a &amp; x=1\\end{cases} \\]\ncontinuous on its domain?</p>",
+   "question": "<p>For which value of $a$ is the function\n\\[ f(x)=\\begin{cases} \\dfrac{1}{\\ln x}-\\dfrac{1}{x-1} &amp; x\\neq 1\\\\[2mm] a &amp; x=1\\end{cases} \\]\ncontinuous on its domain?</p>",
    "hints": [
     "<p>You need to compute $\\lim_{x\\to1}\\left(\\frac{1}{\\ln x}-\\frac{1}{x-1}\\right)$: bring it to a common denominator and obtain the case $\\frac00$.</p>"
    ],
@@ -3267,7 +3267,7 @@ window.BANK = {
     "func-analysis",
     "derivatives"
    ],
-   "question": "<p>(20 pts) Investigate the function $f(x)=\\dfrac{e^{2x-1}}{x^2}$ and sketch its graph.\nYou need to find: domain, asymptotes, intervals of increase and decrease, extremum points, intersection points of the graph with the axes, intervals of convexity and concavity.</p>",
+   "question": "<p>Investigate the function $f(x)=\\dfrac{e^{2x-1}}{x^2}$ and sketch its graph.\nYou need to find: domain, asymptotes, intervals of increase and decrease, extremum points, intersection points of the graph with the axes, intervals of convexity and concavity.</p>",
    "hints": [
     "<p>$f'(x)=\\frac{2e^{2x-1}(x-1)}{x^3}$. Note that the sign of $x^3$ changes at $x=0$.</p>"
    ],
@@ -3293,7 +3293,7 @@ window.BANK = {
     "integral-applications",
     "polar-parametric"
    ],
-   "question": "<p>(20 pts) The equation of the curve in polar coordinates is: $r=2(1-\\sin\\varphi)$.\nSketch the curve and compute the area of the region bounded by the curve.</p>",
+   "question": "<p>The equation of the curve in polar coordinates is: $r=2(1-\\sin\\varphi)$.\nSketch the curve and compute the area of the region bounded by the curve.</p>",
    "hints": [
     "<p>Area of a region in polar coordinates: $S=\\frac12\\int_\\alpha^\\beta r^2(\\varphi)\\,d\\varphi$. Here $r\\ge0$ for every $\\varphi$, so the curve closes up as $\\varphi$ runs over $[0,2\\pi]$.</p>"
    ],
@@ -3319,7 +3319,7 @@ window.BANK = {
     "improper-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Does the following improper integral $\\displaystyle\\int_{-\\infty}^{-2}\\frac{dx}{x^2-2x}$ converge? If so, find it.</p>",
+   "question": "<p>Does the following improper integral $\\displaystyle\\int_{-\\infty}^{-2}\\frac{dx}{x^2-2x}$ converge? If so, find it.</p>",
    "hints": [
     "<p>Decompose into partial fractions: $\\frac{1}{x(x-2)}=\\frac12\\left(\\frac{1}{x-2}-\\frac1x\\right)$.</p>"
    ],
@@ -3345,7 +3345,7 @@ window.BANK = {
     "definite-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the following integral: $\\displaystyle\\int_{\\ln2}^{\\ln3}\\frac{dx}{e^x-e^{-x}}$.</p>",
+   "question": "<p>Compute the following integral: $\\displaystyle\\int_{\\ln2}^{\\ln3}\\frac{dx}{e^x-e^{-x}}$.</p>",
    "hints": [
     "<p>Multiply the numerator and denominator by $e^x$ and substitute $t=e^x$.</p>"
    ],
@@ -3370,7 +3370,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(10 pts) Compute the derivative of the function $f(x)=\\sqrt{5x+3}$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
+   "question": "<p>Compute the derivative of the function $f(x)=\\sqrt{5x+3}$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
    "hints": [
     "<p>Multiply the numerator and denominator by the conjugate $\\sqrt{5(x+h)+3}+\\sqrt{5x+3}$.</p>"
    ],
@@ -3396,7 +3396,7 @@ window.BANK = {
     "func-limits",
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Find all the asymptotes of the function: $f(x)=\\dfrac{x^2+x-6}{|x|-2}$.</p>",
+   "question": "<p>Find all the asymptotes of the function: $f(x)=\\dfrac{x^2+x-6}{|x|-2}$.</p>",
    "hints": [
     "<p>Factor the numerator $x^2+x-6=(x+3)(x-2)$ and treat the cases $x&gt;0$ and $x&lt;0$ separately.</p>"
    ],
@@ -3422,7 +3422,7 @@ window.BANK = {
     "definite-integrals",
     "derivatives"
    ],
-   "question": "<p>(5 pts) What is the slope of the tangent to the curve $y=\\int_0^{x+1}e^{-2t^2}\\,dt$ at its point with $x=0$.</p>",
+   "question": "<p>What is the slope of the tangent to the curve $y=\\int_0^{x+1}e^{-2t^2}\\,dt$ at its point with $x=0$.</p>",
    "hints": [
     "<p>Use the Fundamental Theorem of Calculus together with the chain rule.</p>"
    ],
@@ -3447,7 +3447,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(15 pts) Prove that the equation $x^2-\\ln x=0$ has no real solutions.</p>",
+   "question": "<p>Prove that the equation $x^2-\\ln x=0$ has no real solutions.</p>",
    "hints": [
     "<p>Find the minimum value of $g(x)=x^2-\\ln x$ on the domain $x&gt;0$ and show that it is positive.</p>"
    ],
@@ -3472,7 +3472,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the area enclosed between the curves $y=x\\cdot e^x$, $y=x-1$, $x=0$, $x=2$. Draw the corresponding sketch.</p>",
+   "question": "<p>Compute the area enclosed between the curves $y=x\\cdot e^x$, $y=x-1$, $x=0$, $x=2$. Draw the corresponding sketch.</p>",
    "hints": [
     "<p>Check which of the graphs lies above the other on the interval $[0,2]$, and compute $\\int xe^x\\,dx$ by integration by parts.</p>"
    ],
@@ -3498,7 +3498,7 @@ window.BANK = {
     "antiderivatives",
     "definite-integrals"
    ],
-   "question": "<p>(15 pts) Compute:</p>\n<ol class=\"parts\">\n<li class=\"custom\" data-label=\"a.\">\n(8 pts) $\\displaystyle\\int\\frac{(x+1)^2}{x(x+2)^2}\\,dx$\n</li>\n<li class=\"custom\" data-label=\"b.\">\n(7 pts) $\\displaystyle\\int_{-\\pi/4}^{\\pi/4}\\left(\\frac{1}{\\cos^2x\\cdot(2+\\tan x)^2}+x\\cos^3x\\right)dx$\n</li>\n</ol>",
+   "question": "<p>Compute:</p>\n<ol class=\"parts\">\n<li class=\"custom\" data-label=\"a.\">\n(8 pts) $\\displaystyle\\int\\frac{(x+1)^2}{x(x+2)^2}\\,dx$\n</li>\n<li class=\"custom\" data-label=\"b.\">\n(7 pts) $\\displaystyle\\int_{-\\pi/4}^{\\pi/4}\\left(\\frac{1}{\\cos^2x\\cdot(2+\\tan x)^2}+x\\cos^3x\\right)dx$\n</li>\n</ol>",
    "hints": [
     "<p>In part (a) decompose into partial fractions of the form $\\frac{A}{x}+\\frac{B}{x+2}+\\frac{C}{(x+2)^2}$.</p>",
     "<p>In part (b), the integral of an odd function over a symmetric interval is $0$; in the second part substitute $u=\\tan x$.</p>"
@@ -3524,7 +3524,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Write the Maclaurin polynomial of order 2 for the function $f(x)=\\cos(2x)-\\arctan(x+1)$.</p>",
+   "question": "<p>Write the Maclaurin polynomial of order 2 for the function $f(x)=\\cos(2x)-\\arctan(x+1)$.</p>",
    "hints": [
     "<p>Expand each summand separately: for $\\cos(2x)$ use the known expansion of $\\cos t$, and for $\\arctan(x+1)$ compute $g(0),g'(0),g''(0)$.</p>"
    ],
@@ -3551,7 +3551,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(15 pts) For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{1-\\cos x}{x\\ln(1+x)}, &amp; -1&lt;x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[1mm] x^{1/(x-1)}, &amp; x&gt;1\\end{cases} \\]\nbe continuous on the domain $x&gt;-1$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{1-\\cos x}{x\\ln(1+x)}, &amp; -1&lt;x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[1mm] x^{1/(x-1)}, &amp; x&gt;1\\end{cases} \\]\nbe continuous on the domain $x&gt;-1$?</p>",
    "hints": [
     "<p>On each of the open intervals the function is continuous as a composition of elementary functions; only $x=0$ and $x=1$ need to be checked.</p>",
     "<p>Compute the limit $\\lim_{x\\to1^+}x^{1/(x-1)}$ using $x^{1/(x-1)}=e^{\\frac{\\ln x}{x-1}}$.</p>"
@@ -3577,7 +3577,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Compute $\\displaystyle\\int_1^{+\\infty}\\frac{\\ln x}{x^4}\\,dx$.</p>",
+   "question": "<p>Compute $\\displaystyle\\int_1^{+\\infty}\\frac{\\ln x}{x^4}\\,dx$.</p>",
    "hints": [
     "<p>Integrate by parts with $u=\\ln x$, $dv=x^{-4}dx$ and then let the upper limit tend to infinity.</p>"
    ],
@@ -3602,7 +3602,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(10 pts) Compute the derivative of the function $f(x)=\\sin(3x+4)$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
+   "question": "<p>Compute the derivative of the function $f(x)=\\sin(3x+4)$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
    "hints": [
     "<p>Use the identity $\\sin\\alpha-\\sin\\beta=2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}$ and the limit $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$.</p>"
    ],
@@ -3628,7 +3628,7 @@ window.BANK = {
     "func-limits",
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Find all the asymptotes of the function: $f(x)=\\dfrac{x\\sqrt{x^2-1}}{2x^2-1}$.</p>",
+   "question": "<p>Find all the asymptotes of the function: $f(x)=\\dfrac{x\\sqrt{x^2-1}}{2x^2-1}$.</p>",
    "hints": [
     "<p>Pay attention to the domain $|x|\\ge1$ and to the fact that $\\sqrt{x^2}=|x|$.</p>"
    ],
@@ -3653,7 +3653,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(5 pts) For which values of $a$ does the curve $y=x^2+a\\sin x$ have inflection points?</p>",
+   "question": "<p>For which values of $a$ does the curve $y=x^2+a\\sin x$ have inflection points?</p>",
    "hints": [
     "<p>Check when $y''$ changes sign.</p>"
    ],
@@ -3678,7 +3678,7 @@ window.BANK = {
    "categories": [
     "ivt"
    ],
-   "question": "<p>(15 pts) Prove that the equation $\\dfrac{1}{x+1}+\\dfrac1x+\\dfrac{1}{x-1}=1$ has at least two solutions.</p>",
+   "question": "<p>Prove that the equation $\\dfrac{1}{x+1}+\\dfrac1x+\\dfrac{1}{x-1}=1$ has at least two solutions.</p>",
    "hints": [
     "<p>Define $g(x)=\\frac{1}{x+1}+\\frac1x+\\frac1{x-1}-1$ and examine the one-sided limits of $g$ at the endpoints of the intervals $(-1,0)$ and $(0,1)$. Use the Intermediate Value Theorem.</p>"
    ],
@@ -3703,7 +3703,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid obtained by revolving the plane region\n\\[ 0\\le x\\le2,\\quad 0\\le y\\le\\sqrt{\\frac{x}{x+2}} \\]\nabout the $x$-axis. Draw the corresponding sketch.</p>",
+   "question": "<p>Compute the volume of the solid obtained by revolving the plane region\n\\[ 0\\le x\\le2,\\quad 0\\le y\\le\\sqrt{\\frac{x}{x+2}} \\]\nabout the $x$-axis. Draw the corresponding sketch.</p>",
    "hints": [
     "<p>The volume of a solid of revolution about the $x$-axis is $V=\\pi\\int_a^b y^2\\,dx$.</p>"
    ],
@@ -3729,7 +3729,7 @@ window.BANK = {
     "antiderivatives",
     "definite-integrals"
    ],
-   "question": "<p>(15 pts) Compute:</p>\n<ol class=\"parts\">\n<li class=\"custom\" data-label=\"a.\">\n(7 pts) $\\displaystyle\\int\\frac{x^2-8}{x^3+4x^2}\\,dx$\n</li>\n<li class=\"custom\" data-label=\"b.\">\n(8 pts) $\\displaystyle\\int_0^1\\ln(1+\\sqrt x)\\,dx$\n</li>\n</ol>",
+   "question": "<p>Compute:</p>\n<ol class=\"parts\">\n<li class=\"custom\" data-label=\"a.\">\n(7 pts) $\\displaystyle\\int\\frac{x^2-8}{x^3+4x^2}\\,dx$\n</li>\n<li class=\"custom\" data-label=\"b.\">\n(8 pts) $\\displaystyle\\int_0^1\\ln(1+\\sqrt x)\\,dx$\n</li>\n</ol>",
    "hints": [
     "<p>In part (a) factor $x^3+4x^2=x^2(x+4)$ and decompose into partial fractions. In part (b) substitute $t=\\sqrt x$ and then integrate by parts.</p>"
    ],
@@ -3755,7 +3755,7 @@ window.BANK = {
     "taylor",
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Write the Taylor polynomial of order 2 for the function\n\\[ f(x)=\\int_0^x\\frac{1-t}{1+t^2}\\,dt \\]\nabout the point $x=1$.</p>",
+   "question": "<p>Write the Taylor polynomial of order 2 for the function\n\\[ f(x)=\\int_0^x\\frac{1-t}{1+t^2}\\,dt \\]\nabout the point $x=1$.</p>",
    "hints": [
     "<p>By the Fundamental Theorem, $f'(x)=\\frac{1-x}{1+x^2}$; compute $f(1)$ directly from the integral.</p>"
    ],
@@ -3782,7 +3782,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(15 pts) For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{\\sin(3x)}{\\ln(1-x)}, &amp; x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[1mm] \\big(\\cos(x-1)\\big)^{1/(x-1)}, &amp; x&gt;1\\end{cases} \\]\nbe continuous for every real $x$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{\\sin(3x)}{\\ln(1-x)}, &amp; x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[1mm] \\big(\\cos(x-1)\\big)^{1/(x-1)}, &amp; x&gt;1\\end{cases} \\]\nbe continuous for every real $x$?</p>",
    "hints": [
     "<p>Continuity needs to be checked only at the junction points $x=0$ and $x=1$. Write the right-hand limit at $1$ in the form $e^{\\frac{\\ln\\cos(x-1)}{x-1}}$.</p>"
    ],
@@ -3807,7 +3807,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Compute $\\displaystyle\\int_{0.25}^{+\\infty}\\frac{dx}{(4x+1)\\sqrt x}$.</p>",
+   "question": "<p>Compute $\\displaystyle\\int_{0.25}^{+\\infty}\\frac{dx}{(4x+1)\\sqrt x}$.</p>",
    "hints": [
     "<p>Substitute $t=\\sqrt x$.</p>"
    ],
@@ -4595,7 +4595,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(10 pts) Compute the derivative of the function $f(x)=\\sin(2x+1)$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
+   "question": "<p>Compute the derivative of the function $f(x)=\\sin(2x+1)$ at the point $x$ using the definition of the derivative (an answer based on the table of derivatives will not be accepted).</p>",
    "hints": [
     "<p>Use the identity $\\sin\\alpha-\\sin\\beta=2\\sin\\frac{\\alpha-\\beta}{2}\\cos\\frac{\\alpha+\\beta}{2}$ and the limit $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$.</p>"
    ],
@@ -4620,7 +4620,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Compute the following limits:</p>\n<ol class=\"parts\">\n<li>\n(5 pts) $\\displaystyle\\lim_{x\\to\\infty}\\frac{x+2\\sin x}{3x-\\cos x}$,\n</li>\n<li>\n(5 pts) $\\displaystyle\\lim_{x\\to+\\infty}\\left(\\sqrt{x+\\sqrt{x}}-\\sqrt{x-\\sqrt{x}}\\right)$\n</li>\n</ol>",
+   "question": "<p>Compute the following limits:</p>\n<ol class=\"parts\">\n<li>\n(5 pts) $\\displaystyle\\lim_{x\\to\\infty}\\frac{x+2\\sin x}{3x-\\cos x}$,\n</li>\n<li>\n(5 pts) $\\displaystyle\\lim_{x\\to+\\infty}\\left(\\sqrt{x+\\sqrt{x}}-\\sqrt{x-\\sqrt{x}}\\right)$\n</li>\n</ol>",
    "hints": [
     "<p>In the first limit divide the numerator and the denominator by $x$ and use the fact that $\\sin x,\\cos x$ are bounded.</p>",
     "<p>In the second limit multiply and divide by the conjugate.</p>"
@@ -4647,7 +4647,7 @@ window.BANK = {
     "func-analysis",
     "func-limits"
    ],
-   "question": "<p>(5 pts) For which values of the parameter $a$ does the graph of the function $f(x)=\\frac{x^2-9}{x+a}$ have no vertical asymptote?</p>",
+   "question": "<p>For which values of the parameter $a$ does the graph of the function $f(x)=\\frac{x^2-9}{x+a}$ have no vertical asymptote?</p>",
    "hints": [
     "<p>When is the root of the denominator also a root of the numerator?</p>"
    ],
@@ -4673,7 +4673,7 @@ window.BANK = {
     "func-analysis",
     "ivt"
    ],
-   "question": "<p>(15 pts) For which values of the parameter $a$ does the equation $(x-1)^2e^x-a=0$ have exactly one real solution?</p>",
+   "question": "<p>For which values of the parameter $a$ does the equation $(x-1)^2e^x-a=0$ have exactly one real solution?</p>",
    "hints": [
     "<p>Investigate the function $g(x)=(x-1)^2e^x$ (intervals of monotonicity, extrema, limits at $\\pm\\infty$), and count how many times the horizontal line $y=a$ intersects the graph.</p>"
    ],
@@ -4698,7 +4698,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Find the volume of the solid generated by revolving about the $x$-axis the region bounded by the lines $y=xe^{-x}$, $y=0$, $x=2$. Draw the corresponding sketch.</p>",
+   "question": "<p>Find the volume of the solid generated by revolving about the $x$-axis the region bounded by the lines $y=xe^{-x}$, $y=0$, $x=2$. Draw the corresponding sketch.</p>",
    "hints": [
     "<p>The limits of the integral are $x=0$ (where $xe^{-x}=0$) and $x=2$. The integral $\\int x^2e^{-2x}dx$ is computed by integrating by parts twice.</p>"
    ],
@@ -4724,7 +4724,7 @@ window.BANK = {
     "antiderivatives",
     "definite-integrals"
    ],
-   "question": "<p>(15 pts) Compute:</p>\n<ol class=\"parts\">\n<li>\n(7 pts) $\\displaystyle\\int\\frac{5x+2}{x^4+x^3+2x^2}\\,dx$\n</li>\n<li>\n(8 pts) $\\displaystyle\\int_0^1\\ln(1+\\sqrt{x})\\,dx$\n</li>\n</ol>",
+   "question": "<p>Compute:</p>\n<ol class=\"parts\">\n<li>\n(7 pts) $\\displaystyle\\int\\frac{5x+2}{x^4+x^3+2x^2}\\,dx$\n</li>\n<li>\n(8 pts) $\\displaystyle\\int_0^1\\ln(1+\\sqrt{x})\\,dx$\n</li>\n</ol>",
    "hints": [
     "<p>In the first integral, decompose into partial fractions: $x^4+x^3+2x^2=x^2(x^2+x+2)$, and the quadratic factor is irreducible.</p>",
     "<p>In the second integral, substitute $t=\\sqrt x$ and then integrate by parts.</p>"
@@ -4750,7 +4750,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Write the Maclaurin polynomial of order $n=3$ for the function:\n\\[ f(x)=\\sin(\\sin(x)) \\]</p>",
+   "question": "<p>Write the Maclaurin polynomial of order $n=3$ for the function:\n\\[ f(x)=\\sin(\\sin(x)) \\]</p>",
    "hints": [
     "<p>Compose the expansion of $\\sin$ with itself.</p>"
    ],
@@ -4776,7 +4776,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(10 pts) For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(3x)}{\\ln(1-x)}, &amp; x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[2mm] (\\cos(x-1))^{1/(x-1)}, &amp; 1&lt;x&lt;\\dfrac{\\pi}{2}+1\\end{cases} \\]\nbe continuous for every real $x$ less than $\\frac{\\pi}{2}+1$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(3x)}{\\ln(1-x)}, &amp; x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[2mm] (\\cos(x-1))^{1/(x-1)}, &amp; 1&lt;x&lt;\\dfrac{\\pi}{2}+1\\end{cases} \\]\nbe continuous for every real $x$ less than $\\frac{\\pi}{2}+1$?</p>",
    "hints": [
     "<p>Require the one-sided limits at the junction points $x=0$ and $x=1$ to equal the value of the function. For the limit at $x=1^+$ (of the form $1^\\infty$), pass to $e^{\\ln(\\cdot)}$.</p>"
    ],
@@ -4801,7 +4801,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(8 pts) Find the equation of the tangent line to the function $y(x)$, given implicitly by $e^{x\\cdot y}+y^3=9$, at the point $(0,2)$.</p>",
+   "question": "<p>Find the equation of the tangent line to the function $y(x)$, given implicitly by $e^{x\\cdot y}+y^3=9$, at the point $(0,2)$.</p>",
    "hints": [
     "<p>Differentiate both sides of the equation with respect to $x$, where $y=y(x)$, and substitute the point.</p>"
    ],
@@ -4826,7 +4826,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(7 pts) Compute $\\displaystyle\\int_{0.25}^{+\\infty}\\frac{dx}{(4x+1)\\sqrt{x}}$.</p>",
+   "question": "<p>Compute $\\displaystyle\\int_{0.25}^{+\\infty}\\frac{dx}{(4x+1)\\sqrt{x}}$.</p>",
    "hints": [
     "<p>Substitute $t=\\sqrt x$.</p>"
    ],
@@ -4852,7 +4852,7 @@ window.BANK = {
     "continuity",
     "derivatives"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases} x^3 \\sin(\\frac{5}{x}), &amp; \\text{if } x\\neq 0,\\\\ 0, &amp; \\text{if } x=0 \\end{cases} \\]</p>\n<ol class=\"parts\">\n<li>\n(6 pts) Is $f$ continuous at the point $x=0$ ? Justify.\n</li>\n<li>\n(6 pts) Is $f$ differentiable at the point $x=0$ ? Justify.\n</li>\n<li>\n(5 pts) Is the derivative $f'(x)$ continuous at the point $x=0$ ? Justify.\n</li>\n</ol>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases} x^3 \\sin(\\frac{5}{x}), &amp; x\\neq 0,\\\\ 0, &amp; x=0 \\end{cases} \\]</p>\n<ol class=\"parts\">\n<li>\n(6 pts) Is $f$ continuous at the point $x=0$ ? Justify.\n</li>\n<li>\n(6 pts) Is $f$ differentiable at the point $x=0$ ? Justify.\n</li>\n<li>\n(5 pts) Is the derivative $f'(x)$ continuous at the point $x=0$ ? Justify.\n</li>\n</ol>",
    "hints": [
     "<p>“Tends to zero times bounded”: $\\left|\\sin(\\frac{5}{x})\\right|\\le 1$ for every $x\\neq 0$.</p>",
     "<p>In part (b), compute the derivative at $0$ by definition (limit of the difference quotient). In part (c), compute $f'(x)$ for $x\\neq0$ using the differentiation rules and check the limit as $x\\to 0$.</p>"
@@ -4879,7 +4879,7 @@ window.BANK = {
     "func-analysis",
     "func-limits"
    ],
-   "question": "<p>(8 pts) Find all the asymptotes of the function\n\\[ f(x)=\\frac{2x^2-3x+1}{x} \\]</p>",
+   "question": "<p>Find all the asymptotes of the function\n\\[ f(x)=\\frac{2x^2-3x+1}{x} \\]</p>",
    "hints": [
     "<p>Divide the numerator by $x$: $f(x)=2x-3+\\frac1x$.</p>"
    ],
@@ -4904,7 +4904,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(9 pts) Find the intervals of convexity and the inflection points of the function\n\\[ f(x)=x^2\\cdot e^{-x} \\]</p>",
+   "question": "<p>Find the intervals of convexity and the inflection points of the function\n\\[ f(x)=x^2\\cdot e^{-x} \\]</p>",
    "hints": [
     "<p>Compute $f''$ and check its sign; note that $e^{-x}&gt;0$ always.</p>"
    ],
@@ -4929,7 +4929,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(17 pts) Estimate $\\sqrt[4]{18}$ using a linear approximation (a Taylor polynomial of degree one) and give a bound for the error.</p>",
+   "question": "<p>Estimate $\\sqrt[4]{18}$ using a linear approximation (a Taylor polynomial of degree one) and give a bound for the error.</p>",
    "hints": [
     "<p>Expand $f(x)=\\sqrt[4]{x}$ around a point close to $18$ at which the fourth root is known.</p>",
     "<p>Bound the error using the Lagrange remainder: $R_1(x)=\\frac{f''(c)}{2}(x-a)^2$ for some $c$ between $a$ and $x$.</p>"
@@ -4955,7 +4955,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(8 pts) Compute the antiderivative of\n\\[ f(x)=\\frac{e^x}{e^{2x}+1} \\]</p>",
+   "question": "<p>Compute the antiderivative of\n\\[ f(x)=\\frac{e^x}{e^{2x}+1} \\]</p>",
    "hints": [
     "<p>Substitute $t=e^x$.</p>"
    ],
@@ -4980,7 +4980,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(9 pts) Find the general solution of the differential equation\n\\[ (x^2+4)y'+2xy^2=0 \\]</p>",
+   "question": "<p>Find the general solution of the differential equation\n\\[ (x^2+4)y'+2xy^2=0 \\]</p>",
    "hints": [
     "<p>This is a separable equation: move all the $y$ terms to one side and all the $x$ terms to the other. Do not forget the solution $y\\equiv0$.</p>"
    ],
@@ -5005,7 +5005,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(17 pts) Compute the integral\n\\[ \\int\\frac{6x^2+13x+8}{x^3+2x^2+2x}dx \\]</p>",
+   "question": "<p>Compute the integral\n\\[ \\int\\frac{6x^2+13x+8}{x^3+2x^2+2x}dx \\]</p>",
    "hints": [
     "<p>Factor the denominator: $x^3+2x^2+2x=x(x^2+2x+2)$, and the quadratic factor has no real roots. Use partial fraction decomposition.</p>",
     "<p>Split $\\frac{2x+5}{x^2+2x+2}$ into $\\frac{2x+2}{x^2+2x+2}+\\frac{3}{(x+1)^2+1}$.</p>"
@@ -5031,7 +5031,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(8 pts) Compute the finite area bounded between the function $f(x)=x^2$ and the line $y=-x+2$.</p>",
+   "question": "<p>Compute the finite area bounded between the function $f(x)=x^2$ and the line $y=-x+2$.</p>",
    "hints": [
     "<p>Find the intersection points, and determine which of the two functions is on top.</p>"
    ],
@@ -5056,7 +5056,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(9 pts) Compute the improper integral $\\int_0^\\infty xe^{-x}dx$, or show that it does not converge.</p>",
+   "question": "<p>Compute the improper integral $\\int_0^\\infty xe^{-x}dx$, or show that it does not converge.</p>",
    "hints": [
     "<p>Compute $\\int_0^R xe^{-x}dx$ by integration by parts, and then let $R\\to\\infty$.</p>"
    ],
@@ -5082,7 +5082,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(17 pts) For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} \\sin(ax)\\sin(\\frac{1}{x}), &amp; \\text{if } x&lt;0,\\\\ b+3, &amp; \\text{if } x=0,\\\\ x\\ln(x), &amp; \\text{if } x&gt;0 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous at $0$? Justify.</p>",
+   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} \\sin(ax)\\sin(\\frac{1}{x}), &amp; x&lt;0,\\\\ b+3, &amp; x=0,\\\\ x\\ln(x), &amp; x&gt;0 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous at $0$? Justify.</p>",
    "hints": [
     "<p>Compute the one-sided limits at $0$ separately. From the left: “tends to zero times bounded”. From the right: write $x\\ln x=\\frac{\\ln x}{1/x}$ and use L'Hôpital's rule.</p>"
    ],
@@ -5107,7 +5107,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(8 pts) Find the local extremum points and the intervals of increase and decrease of the function\n\\[ f(x)=\\frac{2x}{x^2+1} \\]</p>",
+   "question": "<p>Find the local extremum points and the intervals of increase and decrease of the function\n\\[ f(x)=\\frac{2x}{x^2+1} \\]</p>",
    "hints": [
     "<p>Compute $f'$ by the quotient rule and check its sign; the denominator of $f'$ is always positive.</p>"
    ],
@@ -5132,7 +5132,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(9 pts) Compute the absolute minimum and maximum values of the following function on its domain:\n\\[ f(x)=\\frac{\\sqrt{x^2-1}}{x^2} \\]\nor explain why they do not exist.</p>",
+   "question": "<p>Compute the absolute minimum and maximum values of the following function on its domain:\n\\[ f(x)=\\frac{\\sqrt{x^2-1}}{x^2} \\]\nor explain why they do not exist.</p>",
    "hints": [
     "<p>First find the domain, and note that the function is even and non-negative. Also check the limit at infinity.</p>"
    ],
@@ -5157,7 +5157,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(17 pts) Approximate the value of $\\sqrt[4]{e}$ with a remainder less than $\\frac{1}{1000}$. You must justify your answer carefully.</p>",
+   "question": "<p>Approximate the value of $\\sqrt[4]{e}$ with a remainder less than $\\frac{1}{1000}$. You must justify your answer carefully.</p>",
    "hints": [
     "<p>$\\sqrt[4]{e}=e^{1/4}$. Use the Maclaurin polynomial of $e^x$ and the Lagrange remainder, and find the smallest order $n$ that guarantees an error less than $\\frac{1}{1000}$.</p>",
     "<p>To bound $e^c$ for $0&lt;c&lt;\\frac14$ you can use $e^c&lt;e&lt;3$.</p>"
@@ -5183,7 +5183,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(8 pts) Compute the antiderivative of\n\\[ f(x)=\\cos^2x\\sin^3x \\]</p>",
+   "question": "<p>Compute the antiderivative of\n\\[ f(x)=\\cos^2x\\sin^3x \\]</p>",
    "hints": [
     "<p>Write $\\sin^3x=(1-\\cos^2x)\\sin x$ and substitute $t=\\cos x$.</p>"
    ],
@@ -5208,7 +5208,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(9 pts) Solve the differential equation\n\\[ xe^y=(x^2+1)y' \\]</p>",
+   "question": "<p>Solve the differential equation\n\\[ xe^y=(x^2+1)y' \\]</p>",
    "hints": [
     "<p>This is a separable equation: $e^{-y}y'=\\frac{x}{x^2+1}$.</p>"
    ],
@@ -5233,7 +5233,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(17 pts) Compute the integral\n\\[ \\int\\frac{5x^3+4x^2+8x+12}{x^4+4x^2}dx \\]</p>",
+   "question": "<p>Compute the integral\n\\[ \\int\\frac{5x^3+4x^2+8x+12}{x^4+4x^2}dx \\]</p>",
    "hints": [
     "<p>$x^4+4x^2=x^2(x^2+4)$. The partial fraction decomposition is of the form $\\frac Ax+\\frac B{x^2}+\\frac{Cx+D}{x^2+4}$.</p>"
    ],
@@ -5258,7 +5258,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(8 pts) Compute the volume of the solid of revolution of the function $f(x)=\\sin x$ around the $x$-axis on the interval $[0,\\pi]$.</p>",
+   "question": "<p>Compute the volume of the solid of revolution of the function $f(x)=\\sin x$ around the $x$-axis on the interval $[0,\\pi]$.</p>",
    "hints": [
     "<p>Use the formula $V=\\pi\\int_a^b f^2(x)\\,dx$ and the identity $\\sin^2x=\\frac{1-\\cos2x}{2}$.</p>"
    ],
@@ -5283,7 +5283,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(9 pts) Determine the convergence of the improper integral\n\\[ \\int_1^\\infty\\frac{\\sin(\\frac1x)}{2+x\\sqrt{x}}dx \\]</p>",
+   "question": "<p>Determine the convergence of the improper integral\n\\[ \\int_1^\\infty\\frac{\\sin(\\frac1x)}{2+x\\sqrt{x}}dx \\]</p>",
    "hints": [
     "<p>The integrand is positive on the interval. Use the comparison test, with $0&lt;\\sin t\\le t$ for $0&lt;t\\le1$.</p>"
    ],
@@ -5309,7 +5309,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(17 pts) For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} e^{\\frac1x}, &amp; \\text{if } x&lt;0,\\\\ ax+b-6, &amp; \\text{if } 0\\le x\\le 9,\\\\ \\frac{x^2-8x-9}{3-\\sqrt{x}}, &amp; \\text{if } x&gt;9 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on $\\R$? Justify.</p>",
+   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} e^{\\frac1x}, &amp; x&lt;0,\\\\ ax+b-6, &amp; 0\\le x\\le 9,\\\\ \\frac{x^2-8x-9}{3-\\sqrt{x}}, &amp; x&gt;9 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on $\\R$? Justify.</p>",
    "hints": [
     "<p>On each of the open intervals, $f$ is a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=9$.</p>",
     "<p>At $x=9$: $x^2-8x-9=(x-9)(x+1)$ and $x-9=(\\sqrt x-3)(\\sqrt x+3)$.</p>"
@@ -5335,7 +5335,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(8 pts) Find all the local and absolute (global) extremum points on the whole line of the function\n\\[ f(x)=x^2\\cdot e^{-x} \\]</p>",
+   "question": "<p>Find all the local and absolute (global) extremum points on the whole line of the function\n\\[ f(x)=x^2\\cdot e^{-x} \\]</p>",
    "hints": [
     "<p>Check the limits at $\\pm\\infty$ to decide whether there is an absolute extremum.</p>"
    ],
@@ -5361,7 +5361,7 @@ window.BANK = {
     "ivt",
     "mvt"
    ],
-   "question": "<p>(9 pts) Prove that the function $f(x)=\\frac15x^5+\\frac23x^3+x+7$ has a unique real root.</p>",
+   "question": "<p>Prove that the function $f(x)=\\frac15x^5+\\frac23x^3+x+7$ has a unique real root.</p>",
    "hints": [
     "<p>Existence follows from the Intermediate Value Theorem, and uniqueness from monotonicity: $f'(x)=x^4+2x^2+1$ (or from Rolle's theorem).</p>"
    ],
@@ -5386,7 +5386,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(17 pts) Estimate $\\arctan(0.2)$ using a linear approximation (a first-order Taylor polynomial) and give a bound for the error.</p>\n<p>You must justify your answer carefully.</p>",
+   "question": "<p>Estimate $\\arctan(0.2)$ using a linear approximation (a first-order Taylor polynomial) and give a bound for the error.</p>\n<p>You must justify your answer carefully.</p>",
    "hints": [
     "<p>Expand $f(x)=\\arctan x$ around $a=0$ and bound the error using the Lagrange remainder $R_1=\\frac{f''(c)}{2}x^2$.</p>"
    ],
@@ -5411,7 +5411,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(8 pts) Compute the antiderivative of\n\\[ f(x)=\\cos(3x)\\cos(7x) \\]</p>",
+   "question": "<p>Compute the antiderivative of\n\\[ f(x)=\\cos(3x)\\cos(7x) \\]</p>",
    "hints": [
     "<p>Use the identity $\\cos\\alpha\\cos\\beta=\\frac12\\left[\\cos(\\alpha-\\beta)+\\cos(\\alpha+\\beta)\\right]$.</p>"
    ],
@@ -5436,7 +5436,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(9 pts) Solve the differential equation\n\\[ y'=e^{x-y} \\]</p>",
+   "question": "<p>Solve the differential equation\n\\[ y'=e^{x-y} \\]</p>",
    "hints": [
     "<p>$e^{x-y}=e^x\\cdot e^{-y}$, so this is a separable equation.</p>"
    ],
@@ -5461,7 +5461,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(17 pts) Compute the integral\n\\[ \\int\\frac{5x^2+2x+2}{x^3-1}dx \\]</p>",
+   "question": "<p>Compute the integral\n\\[ \\int\\frac{5x^2+2x+2}{x^3-1}dx \\]</p>",
    "hints": [
     "<p>$x^3-1=(x-1)(x^2+x+1)$, and the quadratic factor is irreducible. Decompose into partial fractions.</p>"
    ],
@@ -5486,7 +5486,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(8 pts) Compute the finite area bounded between the graph of the function $f(x)=x^3-x$ and the $x$-axis.</p>",
+   "question": "<p>Compute the finite area bounded between the graph of the function $f(x)=x^3-x$ and the $x$-axis.</p>",
    "hints": [
     "<p>Note that the function changes sign between its intersection points with the axis — the area of each part must be computed separately (or use oddness).</p>"
    ],
@@ -5511,7 +5511,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(9 pts) Determine the convergence of the improper integral\n\\[ \\int_1^\\infty\\frac{e^x}{e^{2x}+1}dx \\]</p>",
+   "question": "<p>Determine the convergence of the improper integral\n\\[ \\int_1^\\infty\\frac{e^x}{e^{2x}+1}dx \\]</p>",
    "hints": [
     "<p>The antiderivative is $\\arctan(e^x)$ (substitution $t=e^x$).</p>"
    ],
@@ -5536,7 +5536,7 @@ window.BANK = {
    "categories": [
     "functions"
    ],
-   "question": "<p>(10 pts) Check whether an inverse function exists for the function $f(x)=|x|+x$ on its domain. If it exists, find it.</p>",
+   "question": "<p>Check whether an inverse function exists for the function $f(x)=|x|+x$ on its domain. If it exists, find it.</p>",
    "hints": [
     "<p>Open the absolute value: what is the value of $f$ for $x&lt;0$? A function has an inverse only if it is one-to-one.</p>"
    ],
@@ -5561,7 +5561,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) For which values of the parameter $a$ does the following function have a limit at $x=0$?\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(2x)}{x}, &amp; x&lt;0 \\\\[2mm] \\dfrac{x+3}{4x+a}, &amp; x\\ge 0 \\end{cases} \\]</p>",
+   "question": "<p>For which values of the parameter $a$ does the following function have a limit at $x=0$?\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(2x)}{x}, &amp; x&lt;0 \\\\[2mm] \\dfrac{x+3}{4x+a}, &amp; x\\ge 0 \\end{cases} \\]</p>",
    "hints": [
     "<p>Compute the one-sided limits separately and require them to be equal. Pay attention to the case $a=0$.</p>"
    ],
@@ -5586,7 +5586,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Use a linear approximation to estimate the expression $\\sqrt[3]{28}$.</p>",
+   "question": "<p>Use a linear approximation to estimate the expression $\\sqrt[3]{28}$.</p>",
    "hints": [
     "<p>Choose a point close to $28$ at which the cube root is known.</p>"
    ],
@@ -5611,7 +5611,7 @@ window.BANK = {
    "categories": [
     "ivt"
    ],
-   "question": "<p>(10 pts) Let $f(x)$ be a function continuous on the whole line, and assume that $|f(x)|\\le 7$ for every $x$. Prove that the equation $2x+f(x)=3$ has at least one solution.</p>",
+   "question": "<p>Let $f(x)$ be a function continuous on the whole line, and assume that $|f(x)|\\le 7$ for every $x$. Prove that the equation $2x+f(x)=3$ has at least one solution.</p>",
    "hints": [
     "<p>Define $g(x)=2x+f(x)-3$ and find a point where $g$ is negative and a point where $g$ is positive, using the bound $|f(x)|\\le 7$.</p>"
    ],
@@ -5636,7 +5636,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Find the intervals of convexity and the inflection points of the function $f(x)=\\ln(1+4x^2)$.</p>",
+   "question": "<p>Find the intervals of convexity and the inflection points of the function $f(x)=\\ln(1+4x^2)$.</p>",
    "hints": [],
    "solution": "<p>Domain: $1+4x^2&gt;0$ for every $x$, hence $D=\\R$. Differentiate:\n\\[ f'(x)=\\frac{8x}{1+4x^2},\\qquad\nf''(x)=\\frac{8(1+4x^2)-8x\\cdot 8x}{(1+4x^2)^2}=\\frac{8-32x^2}{(1+4x^2)^2}=\\frac{8(1-2x)(1+2x)}{(1+4x^2)^2}. \\]\nThe denominator is always positive, hence the sign of $f''$ is the sign of $1-4x^2$:</p>\n<ul>\n<li>\n$f''(x)&gt;0$ for $-\\frac12&lt;x&lt;\\frac12$: the function is <strong>convex</strong> (concave up, $\\cup$) on the interval $\\left(-\\frac12,\\frac12\\right)$.\n</li>\n<li>\n$f''(x)&lt;0$ for $|x|&gt;\\frac12$: the function is <strong>concave</strong> ($\\cap$) on $\\left(-\\infty,-\\frac12\\right)$ and $\\left(\\frac12,\\infty\\right)$.\n</li>\n</ul>\n<p>At $x=\\pm\\frac12$ the second derivative changes sign and the function is continuous (and differentiable) there, hence these are inflection points. $f(\\pm\\tfrac12)=\\ln(1+1)=\\ln 2$.</p>\n<p><strong>Answer:</strong> convex on $\\left(-\\frac12,\\frac12\\right)$, concave on $\\left(-\\infty,-\\frac12\\right)\\cup\\left(\\frac12,\\infty\\right)$; inflection points $\\left(-\\frac12,\\ln 2\\right)$ and $\\left(\\frac12,\\ln 2\\right)$.</p>",
    "src": "Moed A, 2022/23, Semester A",
@@ -5659,7 +5659,7 @@ window.BANK = {
    "categories": [
     "mvt"
    ],
-   "question": "<p>(10 pts) Prove that for every $x,y$ we have $|\\arctan x-\\arctan y|\\le|x-y|$.</p>",
+   "question": "<p>Prove that for every $x,y$ we have $|\\arctan x-\\arctan y|\\le|x-y|$.</p>",
    "hints": [
     "<p>Apply Lagrange's theorem to $\\arctan$ on the interval between $x$ and $y$.</p>"
    ],
@@ -5684,7 +5684,7 @@ window.BANK = {
    "categories": [
     "lhopital"
    ],
-   "question": "<p>(10 pts) Compute the limit $\\displaystyle\\lim_{x\\to 1}\\frac{x^2+\\ln(x)-1}{e^x-e}$.</p>",
+   "question": "<p>Compute the limit $\\displaystyle\\lim_{x\\to 1}\\frac{x^2+\\ln(x)-1}{e^x-e}$.</p>",
    "hints": [],
    "solution": "<p>Substituting $x=1$: the numerator is $1+0-1=0$ and the denominator is $e-e=0$, i.e. an expression of the form $\\frac00$. The numerator and the denominator are differentiable near $1$, and the derivative of the denominator is $e^x\\neq 0$. By <strong>L'Hôpital's rule</strong>:\n\\[ \\lim_{x\\to1}\\frac{x^2+\\ln x-1}{e^x-e}=\\lim_{x\\to1}\\frac{2x+\\frac1x}{e^x}=\\frac{2+1}{e}=\\frac{3}{e}, \\]\nwhere the last limit is computed by substitution (continuity), and hence the original limit also exists and equals $\\frac{3}{e}$.</p>",
    "src": "Moed A, 2022/23, Semester A",
@@ -5707,7 +5707,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Compute $\\sin 0.1$ with an error not exceeding $0.001$.</p>",
+   "question": "<p>Compute $\\sin 0.1$ with an error not exceeding $0.001$.</p>",
    "hints": [
     "<p>Use the Maclaurin polynomial of $\\sin x$ and estimate the remainder in Lagrange form.</p>"
    ],
@@ -5732,7 +5732,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the integral $\\displaystyle\\int\\sqrt{2x+3}\\,dx$.</p>",
+   "question": "<p>Compute the integral $\\displaystyle\\int\\sqrt{2x+3}\\,dx$.</p>",
    "hints": [],
    "solution": "<p>Substitute $t=2x+3$; then $dt=2\\,dx$, i.e. $dx=\\frac{dt}{2}$:\n\\[ \\int\\sqrt{2x+3}\\,dx=\\frac12\\int t^{1/2}\\,dt=\\frac12\\cdot\\frac{t^{3/2}}{3/2}+C=\\frac13(2x+3)^{3/2}+C. \\]\nCheck: $\\left(\\frac13(2x+3)^{3/2}\\right)'=\\frac13\\cdot\\frac32(2x+3)^{1/2}\\cdot 2=\\sqrt{2x+3}$.</p>",
    "src": "Moed A, 2022/23, Semester A",
@@ -5755,7 +5755,7 @@ window.BANK = {
    "categories": [
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Compute the integral $\\displaystyle\\int_{-1}^{1}\\tan x\\,dx$.</p>",
+   "question": "<p>Compute the integral $\\displaystyle\\int_{-1}^{1}\\tan x\\,dx$.</p>",
    "hints": [
     "<p>Check whether the function $\\tan x$ is even or odd, and whether it is continuous on the interval $[-1,1]$.</p>"
    ],
@@ -5780,7 +5780,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the area bounded between the graphs of the functions $f(x)=\\sin^2x$ and $g(x)=\\frac14$ on the interval $[0,\\pi]$.</p>",
+   "question": "<p>Compute the area bounded between the graphs of the functions $f(x)=\\sin^2x$ and $g(x)=\\frac14$ on the interval $[0,\\pi]$.</p>",
    "hints": [
     "<p>Find the intersection points $\\sin^2x=\\frac14$ in the interval, and split the interval according to which function is larger. Use the identity $\\sin^2x=\\frac{1-\\cos 2x}{2}$.</p>"
    ],
@@ -5805,7 +5805,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Compute the improper integral $\\displaystyle\\int_0^{\\infty}e^{-2x}\\sin x\\,dx$ or show that it does not converge.</p>",
+   "question": "<p>Compute the improper integral $\\displaystyle\\int_0^{\\infty}e^{-2x}\\sin x\\,dx$ or show that it does not converge.</p>",
    "hints": [
     "<p>Compute the integral up to $R$ using integration by parts twice (the integral “repeats itself”), and then let $R\\to\\infty$.</p>"
    ],
@@ -5830,7 +5830,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Compute the one-sided limits of the function $f(x)=2^{\\frac{1}{x}}$ at the given point $x=0$. Determine whether it has a limit $\\lim_{x\\to 0}f(x)$.</p>",
+   "question": "<p>Compute the one-sided limits of the function $f(x)=2^{\\frac{1}{x}}$ at the given point $x=0$. Determine whether it has a limit $\\lim_{x\\to 0}f(x)$.</p>",
    "hints": [],
    "solution": "<p>Let $t=\\frac1x$. As $x\\to 0^+$ we have $t\\to+\\infty$, and as $x\\to 0^-$ we have $t\\to-\\infty$. Since $2&gt;1$, $\\lim_{t\\to+\\infty}2^t=+\\infty$ and $\\lim_{t\\to-\\infty}2^t=0$. Hence (limit of a composition)\n\\[ \\lim_{x\\to0^+}2^{1/x}=+\\infty,\\qquad \\lim_{x\\to0^-}2^{1/x}=0. \\]\nThe one-sided limits are different (and the right one is not even finite), and hence <strong>the limit $\\lim_{x\\to0}2^{1/x}$ does not exist</strong>.</p>",
    "src": "Moed B, 2022/23, Semester A",
@@ -5853,7 +5853,7 @@ window.BANK = {
    "categories": [
     "continuity"
    ],
-   "question": "<p>(10 pts) Classify the points of discontinuity of the function\n\\[ f(x)=\\begin{cases}\\dfrac{x^3-8}{x-2}, &amp; x\\neq 2\\\\[2mm] 1, &amp; x=2\\end{cases} \\]</p>",
+   "question": "<p>Classify the points of discontinuity of the function\n\\[ f(x)=\\begin{cases}\\dfrac{x^3-8}{x-2}, &amp; x\\neq 2\\\\[2mm] 1, &amp; x=2\\end{cases} \\]</p>",
    "hints": [],
    "solution": "<p>For every $x\\neq 2$ the function is a quotient of polynomials with a nonzero denominator, and hence it is continuous there. We check $x=2$. By the difference of cubes formula $x^3-8=(x-2)(x^2+2x+4)$, and hence for $x\\neq2$:\n\\[ f(x)=x^2+2x+4\\ \\Longrightarrow\\ \\lim_{x\\to2}f(x)=4+4+4=12. \\]\nThe limit exists and is finite, but $f(2)=1\\neq 12$. Hence $x=2$ is a <strong>removable</strong> discontinuity (of the first kind, removable): if we redefine $f(2)=12$, the function becomes continuous. This is the only point of discontinuity.</p>",
    "src": "Moed B, 2022/23, Semester A",
@@ -5876,7 +5876,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(10 pts) Compute the equation of the tangent line to the circle $x^2+y^2=25$ at the point $(3,4)$.</p>",
+   "question": "<p>Compute the equation of the tangent line to the circle $x^2+y^2=25$ at the point $(3,4)$.</p>",
    "hints": [
     "<p>Differentiate the equation implicitly.</p>"
    ],
@@ -5901,7 +5901,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Use a linear approximation to estimate the expression $\\arcsin(0.54)$.</p>",
+   "question": "<p>Use a linear approximation to estimate the expression $\\arcsin(0.54)$.</p>",
    "hints": [
     "<p>Use the point $0.5$, at which $\\arcsin$ is known.</p>"
    ],
@@ -5927,7 +5927,7 @@ window.BANK = {
     "func-analysis",
     "ivt"
    ],
-   "question": "<p>(10 pts) Compute the absolute extremum points of the function $f(x)=\\frac{x^2}{x-3}$ on the interval $[-2,2]$.</p>",
+   "question": "<p>Compute the absolute extremum points of the function $f(x)=\\frac{x^2}{x-3}$ on the interval $[-2,2]$.</p>",
    "hints": [],
    "solution": "<p>The point $x=3$ is not in the interval, hence $f$ is continuous on the closed interval $[-2,2]$, and by <strong>Weierstrass's theorem</strong> it attains a maximum and a minimum there. They are attained at interior critical points or at the endpoints.\n\\[ f'(x)=\\frac{2x(x-3)-x^2}{(x-3)^2}=\\frac{x^2-6x}{(x-3)^2}=\\frac{x(x-6)}{(x-3)^2}. \\]\n$f'(x)=0\\iff x=0$ or $x=6$; in the interval $(-2,2)$ only $x=0$. Compare the values:\n\\[ f(-2)=\\frac{4}{-5}=-\\frac45,\\qquad f(0)=0,\\qquad f(2)=\\frac{4}{-1}=-4. \\]\n<strong>Answer:</strong> absolute maximum $0$ at the point $x=0$; absolute minimum $-4$ at the point $x=2$.</p>",
    "src": "Moed B, 2022/23, Semester A",
@@ -5950,7 +5950,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(10 pts) For the equation $e^x=x+1$, prove that a solution exists or prove that no solution exists in the domain $x\\neq0$.</p>",
+   "question": "<p>For the equation $e^x=x+1$, prove that a solution exists or prove that no solution exists in the domain $x\\neq0$.</p>",
    "hints": [
     "<p>Study the function $g(x)=e^x-x-1$: find its minimum point.</p>"
    ],
@@ -5975,7 +5975,7 @@ window.BANK = {
    "categories": [
     "lhopital"
    ],
-   "question": "<p>(10 pts) Compute the limit $\\displaystyle\\lim_{x\\to0}\\frac{x-\\sin(x)}{x^3}$.</p>",
+   "question": "<p>Compute the limit $\\displaystyle\\lim_{x\\to0}\\frac{x-\\sin(x)}{x^3}$.</p>",
    "hints": [],
    "solution": "<p>An expression of the form $\\frac00$. We apply <strong>L'Hôpital's rule</strong> (the conditions hold: differentiability near $0$, the derivative of the denominator is different from $0$ near $0$):\n\\[ \\lim_{x\\to0}\\frac{x-\\sin x}{x^3}=\\lim_{x\\to0}\\frac{1-\\cos x}{3x^2}=\\lim_{x\\to0}\\frac{\\sin x}{6x}=\\frac16, \\]\nwhere in the second step we applied L'Hôpital's rule again (again $\\frac00$), and in the last we used $\\lim\\frac{\\sin x}{x}=1$.\n(Alternatively: $\\sin x=x-\\frac{x^3}{6}+o(x^3)$, and hence $\\frac{x-\\sin x}{x^3}=\\frac16+o(1)$.) <strong>Answer:</strong> $\\frac16$.</p>",
    "src": "Moed B, 2022/23, Semester A",
@@ -5998,7 +5998,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(10 pts) Use a second-order Taylor polynomial to estimate the expression $\\sqrt[4]{82}$, and estimate the error.</p>",
+   "question": "<p>Use a second-order Taylor polynomial to estimate the expression $\\sqrt[4]{82}$, and estimate the error.</p>",
    "hints": [
     "<p>Expand $f(x)=x^{1/4}$ around $x_0=81$ and use the Lagrange remainder.</p>"
    ],
@@ -6023,7 +6023,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(10 pts) Compute the integral $\\displaystyle\\int\\frac{x}{\\sqrt{1+x^2}}\\,dx$.</p>",
+   "question": "<p>Compute the integral $\\displaystyle\\int\\frac{x}{\\sqrt{1+x^2}}\\,dx$.</p>",
    "hints": [],
    "solution": "<p>Substitute $t=1+x^2$, $dt=2x\\,dx$:\n\\[ \\int\\frac{x}{\\sqrt{1+x^2}}\\,dx=\\frac12\\int t^{-1/2}\\,dt=t^{1/2}+C=\\sqrt{1+x^2}+C. \\]\nCheck: $\\left(\\sqrt{1+x^2}\\right)'=\\frac{2x}{2\\sqrt{1+x^2}}=\\frac{x}{\\sqrt{1+x^2}}$.</p>",
    "src": "Moed B, 2022/23, Semester A",
@@ -6046,7 +6046,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(10 pts) Solve the equation $e^x\\,dx-y\\,dy=0$ with the initial condition $y(0)=1$.</p>",
+   "question": "<p>Solve the equation $e^x\\,dx-y\\,dy=0$ with the initial condition $y(0)=1$.</p>",
    "hints": [
     "<p>This is a separable equation: move one term to the other side and integrate each side separately.</p>"
    ],
@@ -6071,7 +6071,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the finite area bounded between the graph of the function $f(x)=x^3+x^2-2x$ and the $x$-axis.</p>",
+   "question": "<p>Compute the finite area bounded between the graph of the function $f(x)=x^3+x^2-2x$ and the $x$-axis.</p>",
    "hints": [
     "<p>Factor the polynomial to find the intersection points with the $x$-axis and the sign on each interval.</p>"
    ],
@@ -6096,7 +6096,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Determine the convergence of the integral $\\displaystyle\\int_1^{\\infty}\\frac{\\sqrt{x^5}\\,dx}{2x^2+3x+40}$.</p>",
+   "question": "<p>Determine the convergence of the integral $\\displaystyle\\int_1^{\\infty}\\frac{\\sqrt{x^5}\\,dx}{2x^2+3x+40}$.</p>",
    "hints": [
     "<p>Check how the function behaves as $x\\to\\infty$ and compare with a suitable $x^{p}$ (the limit comparison test).</p>"
    ],
@@ -6535,7 +6535,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(20 pts) Compute the area of the region bounded by the lines $y=\\min\\left(e^x,3\\right),\\ x=4,\\ x=0,\\ y=0$</p>",
+   "question": "<p>Compute the area of the region bounded by the lines $y=\\min\\left(e^x,3\\right),\\ x=4,\\ x=0,\\ y=0$</p>",
    "hints": [
     "<p>Find where $e^x=3$ and split the integral at that point.</p>"
    ],
@@ -6560,7 +6560,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(5 pts) Find the values of the parameter $b$ for which the graph of the function $\\displaystyle f(x)=\\frac{1}{x^2+b}$ has no inflection points</p>",
+   "question": "<p>Find the values of the parameter $b$ for which the graph of the function $\\displaystyle f(x)=\\frac{1}{x^2+b}$ has no inflection points</p>",
    "hints": [
     "<p>Compute $f''$ and split into the cases $b&gt;0$, $b=0$, $b&lt;0$. Remember that an inflection point must lie in the domain.</p>"
    ],
@@ -6586,7 +6586,7 @@ window.BANK = {
     "lhopital",
     "func-limits"
    ],
-   "question": "<p>(20 pts) Compute the following limits\n\\[ (1)\\ \\lim_{x\\to0}\\frac{\\ln(1+2x)}{\\sin2x-\\sin6x}\\qquad\\qquad (2)\\ \\lim_{x\\to0}\\left(\\sqrt{1+2x}\\right)^{\\frac{1}{(-x)}} \\]</p>",
+   "question": "<p>Compute the following limits\n\\[ (1)\\ \\lim_{x\\to0}\\frac{\\ln(1+2x)}{\\sin2x-\\sin6x}\\qquad\\qquad (2)\\ \\lim_{x\\to0}\\left(\\sqrt{1+2x}\\right)^{\\frac{1}{(-x)}} \\]</p>",
    "hints": [
     "<p>In limit (2), write the expression in the form $e^{g(x)}$ and compute the limit of the exponent.</p>"
    ],
@@ -6611,7 +6611,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(5 pts) For which values of $a$ is the function $f(x)=\\min\\left(x^2+x,a\\right)$ differentiable for every real $x$? Justify your answer.</p>",
+   "question": "<p>For which values of $a$ is the function $f(x)=\\min\\left(x^2+x,a\\right)$ differentiable for every real $x$? Justify your answer.</p>",
    "hints": [
     "<p>Compare $a$ with the minimum value of $x^2+x$. If the line $y=a$ intersects the parabola, what happens to the one-sided derivatives at the intersection point?</p>"
    ],
@@ -6637,7 +6637,7 @@ window.BANK = {
     "derivatives",
     "polar-parametric"
    ],
-   "question": "<p>(20 pts) Find the equation of the tangent line to the graph of the function-\n\\[ \\begin{cases} x=\\ln\\left(3t^2+e\\cdot t-3\\right)\\\\ y=t^3-3t\\end{cases} \\]\nat the point $M_0(1,-2)$.</p>",
+   "question": "<p>Find the equation of the tangent line to the graph of the function-\n\\[ \\begin{cases} x=\\ln\\left(3t^2+e\\cdot t-3\\right)\\\\ y=t^3-3t\\end{cases} \\]\nat the point $M_0(1,-2)$.</p>",
    "hints": [
     "<p>First find the value of the parameter $t_0$ corresponding to the point $M_0$ (both equations must hold simultaneously), and then use $\\frac{dy}{dx}=\\frac{y'(t)}{x'(t)}$.</p>"
    ],
@@ -6662,7 +6662,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(5 pts) Give the definition of an antiderivative of a function $f(x)$. Include an example.</p>",
+   "question": "<p>Give the definition of an antiderivative of a function $f(x)$. Include an example.</p>",
    "hints": [],
    "solution": "<strong>Definition:</strong> let $f$ be defined on an interval $I$. A function $F$ is called an <strong>antiderivative</strong> of $f$ on $I$ if $F$ is differentiable on $I$ and $F'(x)=f(x)$ for every $x\\in I$.\n(If $F$ is an antiderivative of $f$ on an interval, then all antiderivatives are of the form $F+C$, $C$ a constant.)\n\n<strong>Example:</strong> $F(x)=\\frac{x^3}{3}$ is an antiderivative of $f(x)=x^2$ on $\\R$, since $\\left(\\frac{x^3}{3}\\right)'=x^2$; $\\frac{x^3}{3}+5$ is also an antiderivative of it. Another example: $-\\cos x$ is an antiderivative of $\\sin x$.",
    "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
@@ -6686,7 +6686,7 @@ window.BANK = {
     "taylor",
     "derivatives"
    ],
-   "question": "<p>(20 pts) Write the Maclaurin polynomial of order 2 of the function $y=f(x)$ defined implicitly by: $x^2+x+e^x+2y=0$.</p>",
+   "question": "<p>Write the Maclaurin polynomial of order 2 of the function $y=f(x)$ defined implicitly by: $x^2+x+e^x+2y=0$.</p>",
    "hints": [],
    "solution": "<p>We find $y(0)$, $y'(0)$, $y''(0)$ by implicit differentiation.</p>\n<ul>\n<li>\n$x=0$: $0+0+1+2y(0)=0\\Rightarrow y(0)=-\\frac12$.\n</li>\n<li>\nDifferentiating: $2x+1+e^x+2y'=0\\Rightarrow y'=-\\frac{2x+1+e^x}{2}$, hence $y'(0)=-\\frac{2}{2}=-1$.\n</li>\n<li>\nDifferentiating again: $2+e^x+2y''=0\\Rightarrow y''=-\\frac{2+e^x}{2}$, hence $y''(0)=-\\frac32$.\n</li>\n</ul>\n<p>The Maclaurin polynomial of order 2:\n\\[ P_2(x)=y(0)+y'(0)x+\\frac{y''(0)}{2}x^2=\\boxed{-\\frac12-x-\\frac34x^2}. \\]\n(Check: here one can also isolate $y=-\\frac12(x^2+x+e^x)$ and substitute $e^x=1+x+\\frac{x^2}{2}+\\dots$, which gives the same polynomial.)</p>",
    "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
@@ -6709,7 +6709,7 @@ window.BANK = {
    "categories": [
     "ivt"
    ],
-   "question": "<p>(5 pts) Is it true that the equation $e^x-\\sin x=0$ has no real solutions? Justify</p>",
+   "question": "<p>Is it true that the equation $e^x-\\sin x=0$ has no real solutions? Justify</p>",
    "hints": [
     "<p>Check what happens for $x&lt;0$: $e^x$ is very small, and $\\sin x$ reaches $1$. Try the Intermediate Value Theorem on a suitable interval.</p>"
    ],
@@ -6734,7 +6734,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(14 pts) Compute the following limit:\n\\[ \\lim_{x\\to\\infty}\\left(\\frac{x^2+x+2}{x^2+x+1}\\right)^{2x^2+4} \\]</p>",
+   "question": "<p>Compute the following limit:\n\\[ \\lim_{x\\to\\infty}\\left(\\frac{x^2+x+2}{x^2+x+1}\\right)^{2x^2+4} \\]</p>",
    "hints": [
     "<p>This is a limit of the form $1^\\infty$. Write the base in the form $1+\\frac{1}{x^2+x+1}$ and use the limit $\\lim_{t\\to\\infty}\\left(1+\\frac1t\\right)^t=e$.</p>"
    ],
@@ -6760,7 +6760,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(16 pts) Let $a,b\\in\\R$. Define a function by\n\\[ f(x)=\\begin{cases} \\frac{\\sin(8x)}{x}, &amp; \\text{if } x&lt;0,\\\\[2pt] ax+b, &amp; \\text{if } 0\\le x\\le 4,\\\\[2pt] \\frac{x^2-3x-4}{2-\\sqrt{x}}, &amp; \\text{if } x&gt;4 \\end{cases} \\]\nFor which values of $a,b$ is the function continuous on $\\R$? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[ f(x)=\\begin{cases} \\frac{\\sin(8x)}{x}, &amp; x&lt;0,\\\\[2pt] ax+b, &amp; 0\\le x\\le 4,\\\\[2pt] \\frac{x^2-3x-4}{2-\\sqrt{x}}, &amp; x&gt;4 \\end{cases} \\]\nFor which values of $a,b$ is the function continuous on $\\R$? Justify.</p>",
    "hints": [
     "<p>In each of the three open intervals the function is continuous as a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=4$.</p>",
     "<p>For the limit at $x=4$, factor the numerator $x^2-3x-4=(x-4)(x+1)$ and write $x-4=(\\sqrt x-2)(\\sqrt x+2)$.</p>"
@@ -6787,7 +6787,7 @@ window.BANK = {
     "func-analysis",
     "derivatives"
    ],
-   "question": "<p>(14 pts) Find the intervals of increase and decrease and the absolute extrema of the function\n\\[ f(x)=\\sqrt{2x-x^2} \\]\non its domain.</p>",
+   "question": "<p>Find the intervals of increase and decrease and the absolute extrema of the function\n\\[ f(x)=\\sqrt{2x-x^2} \\]\non its domain.</p>",
    "hints": [],
    "solution": "<strong>Domain.</strong> We must require $2x-x^2=x(2-x)\\ge0$, i.e. $0\\le x\\le 2$. The domain is the closed interval $[0,2]$.\n\n<strong>Derivative.</strong> On the open interval $(0,2)$ the expression under the root is positive, so by the chain rule\n\\[ f'(x)=\\frac{2-2x}{2\\sqrt{2x-x^2}}=\\frac{1-x}{\\sqrt{2x-x^2}},\\qquad 0&lt;x&lt;2. \\]\n(At the points $x=0,2$ the function is not differentiable – the one-sided derivative is infinite – but they are endpoints.)\n\n<strong>Sign of the derivative.</strong> The denominator is positive, so the sign of $f'$ is the sign of $1-x$:\n\n<ul>\n<li>\nFor $0&lt;x&lt;1$: $f'(x)&gt;0$, hence $f$ is strictly increasing on $[0,1]$.\n</li>\n<li>\nFor $1&lt;x&lt;2$: $f'(x)&lt;0$, hence $f$ is strictly decreasing on $[1,2]$.\n</li>\n</ul>\n<p>(Passing to the closed intervals is justified since $f$ is continuous on them – a consequence of Lagrange's theorem.)</p>\n<p><strong>Absolute extrema.</strong> $f$ is continuous on the closed interval $[0,2]$, so by Weierstrass's theorem it attains a maximum and a minimum there. The candidate points are the critical point $x=1$ and the endpoints:\n\\[ f(0)=0,\\qquad f(1)=\\sqrt{2-1}=1,\\qquad f(2)=0. \\]\nHence\n\\[ \\boxed{\\max_{[0,2]}f=f(1)=1,\\qquad \\min_{[0,2]}f=f(0)=f(2)=0.} \\]\n(Indeed $f\\ge0$ always, being a square root, so the minimum $0$ is also clear directly. In addition, $y=\\sqrt{2x-x^2}$ is equivalent to $(x-1)^2+y^2=1,\\ y\\ge0$ – the upper half of the circle with center $(1,0)$ and radius $1$, which confirms the results.)</p>",
    "src": "Moed A, 2023/24, Semester A",
@@ -6810,7 +6810,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(14 pts) Estimate $\\sqrt[3]{30}$ using a linear approximation, and give a bound for the error.</p>",
+   "question": "<p>Estimate $\\sqrt[3]{30}$ using a linear approximation, and give a bound for the error.</p>",
    "hints": [
     "<p>Use $f(x)=\\sqrt[3]{x}$ around the point $x_0=27$, where the root is known.</p>",
     "<p>For the error bound, use the Lagrange remainder of the Taylor polynomial of order 1: $R_1(x)=\\frac{f''(c)}{2}(x-x_0)^2$.</p>"
@@ -6836,7 +6836,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(14 pts) Compute the antiderivative of\n\\[ f(x)=\\frac{4x^2+9x+10}{x^3+2x^2+5x} \\]</p>",
+   "question": "<p>Compute the antiderivative of\n\\[ f(x)=\\frac{4x^2+9x+10}{x^3+2x^2+5x} \\]</p>",
    "hints": [
     "<p>Factor the denominator: $x^3+2x^2+5x=x(x^2+2x+5)$, where the quadratic factor has no real roots. Decompose into partial fractions of the form $\\frac{A}{x}+\\frac{Bx+C}{x^2+2x+5}$.</p>",
     "<p>In the integral of $\\frac{Bx+C}{x^2+2x+5}$, split into a numerator that is the derivative of the denominator plus a constant, and complete the square: $x^2+2x+5=(x+1)^2+4$.</p>"
@@ -6862,7 +6862,7 @@ window.BANK = {
    "categories": [
     "definite-integrals"
    ],
-   "question": "<p>(14 pts) Compute the definite integral\n\\[ \\int_0^{\\pi}x\\sin^2x\\,dx \\]</p>",
+   "question": "<p>Compute the definite integral\n\\[ \\int_0^{\\pi}x\\sin^2x\\,dx \\]</p>",
    "hints": [
     "<p>Use the identity $\\sin^2x=\\frac{1-\\cos 2x}{2}$ and then integration by parts for $\\int x\\cos2x\\,dx$.</p>"
    ],
@@ -6888,7 +6888,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>(14 pts) Compute the volume of the solid of revolution of the following function, around the $x$-axis, on the interval $[0,\\pi]$:\n\\[ f(x)=\\sqrt{\\sin x}\\cdot\\cos^2x \\]</p>",
+   "question": "<p>Compute the volume of the solid of revolution of the following function, around the $x$-axis, on the interval $[0,\\pi]$:\n\\[ f(x)=\\sqrt{\\sin x}\\cdot\\cos^2x \\]</p>",
    "hints": [
     "<p>The volume of a solid of revolution around the $x$-axis is $V=\\pi\\int_a^b f^2(x)\\,dx$. Here $f^2(x)=\\sin x\\cos^4x$, and the substitution $u=\\cos x$ is suitable.</p>"
    ],
@@ -6940,7 +6940,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}\\frac{\\ln(1+x^2)}{\\sin^2 x}, &amp; \\text{if } x&lt;0,\\\\ 0, &amp; \\text{if } 0\\le x\\le 1,\\\\ \\frac{x}{x^2-1}, &amp; \\text{if } x&gt;1\\end{cases} \\]\nFind all the points of discontinuity of the function, and classify them as removable, jump or essential discontinuities. Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}\\frac{\\ln(1+x^2)}{\\sin^2 x}, &amp; x&lt;0,\\\\ 0, &amp; 0\\le x\\le 1,\\\\ \\frac{x}{x^2-1}, &amp; x&gt;1\\end{cases} \\]\nFind all the points of discontinuity of the function, and classify them as removable, jump or essential discontinuities. Justify.</p>",
    "hints": [
     "<p>Inside each of the intervals the function is a composition/quotient of elementary functions. Check where a denominator vanishes, and separately the junction points $x=0$ and $x=1$.</p>",
     "<p>Near $0$: $\\ln(1+x^2)\\approx x^2$ and $\\sin^2x\\approx x^2$.</p>"
@@ -7120,7 +7120,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}2^{\\frac{\\sin x}{x}}, &amp; \\text{if } x&lt;0,\\\\ ax+b, &amp; \\text{if } 0\\le x\\le 1,\\\\ \\frac{x^2+x-2}{\\sqrt{x}-1}, &amp; \\text{if } x&gt;1\\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on all of $\\R$? Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}2^{\\frac{\\sin x}{x}}, &amp; x&lt;0,\\\\ ax+b, &amp; 0\\le x\\le 1,\\\\ \\frac{x^2+x-2}{\\sqrt{x}-1}, &amp; x&gt;1\\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on all of $\\R$? Justify.</p>",
    "hints": [
     "<p>Inside each interval the function is continuous; it remains to require continuity at the junction points $x=0$ and $x=1$.</p>",
     "<p>For $x&gt;1$: $x^2+x-2=(x-1)(x+2)$ and $x-1=(\\sqrt x-1)(\\sqrt x+1)$.</p>"
@@ -7906,7 +7906,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sin(8x)}{x}, &amp; \\text{if } x&lt;0,\\\\\nax+b, &amp; \\text{if } 0\\le x\\le 4,\\\\\n\\frac{x^2-3x-4}{2-\\sqrt{x}}, &amp; \\text{if } x&gt;4\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous on $\\R$ ? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sin(8x)}{x}, &amp; x&lt;0,\\\\\nax+b, &amp; 0\\le x\\le 4,\\\\\n\\frac{x^2-3x-4}{2-\\sqrt{x}}, &amp; x&gt;4\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous on $\\R$ ? Justify.</p>",
    "hints": [
     "<p>At every point $x\\neq0,4$ the function is continuous regardless of $a,b$. Check only the junction points $x=0$ and $x=4$.</p>",
     "<p>At $x=4$: $x^2-3x-4=(x-4)(x+1)$; multiply and divide by $2+\\sqrt x$.</p>"
@@ -7984,7 +7984,7 @@ window.BANK = {
     "functions",
     "multiple-choice"
    ],
-   "question": "<p>Let\n\\[\nf(x)=\\begin{cases}\n3x-1, &amp; \\text{if } x&lt;0,\\\\\nx^2, &amp; \\text{if } x&gt;0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is not monotone.\n</li>\n<li>\nThe function is strictly decreasing.\n</li>\n<li>\nThe function is strictly increasing.\n</li>\n<li>\nThe function is monotone but not strictly.\n</li>\n</ol>",
+   "question": "<p>Let\n\\[\nf(x)=\\begin{cases}\n3x-1, &amp; x&lt;0,\\\\\nx^2, &amp; x&gt;0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is not monotone.\n</li>\n<li>\nThe function is strictly decreasing.\n</li>\n<li>\nThe function is strictly increasing.\n</li>\n<li>\nThe function is monotone but not strictly.\n</li>\n</ol>",
    "hints": [
     "<p>Check each piece separately, then compare some value to the left of 0 with some value to the right of 0.</p>"
    ],
@@ -8035,7 +8035,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 0:\n\\[\nf(x)=\\begin{cases}\n\\sin(x)\\cos(\\frac{1}{x}), &amp; \\text{if } x&lt;0,\\\\\n\\frac{1}{1+x^2}, &amp; \\text{if } x\\ge 0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 0.\n</li>\n<li>\nThe function has a removable discontinuity at 0.\n</li>\n<li>\nThe function has a jump discontinuity at 0.\n</li>\n<li>\nThe function has an essential discontinuity at 0.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 0:\n\\[\nf(x)=\\begin{cases}\n\\sin(x)\\cos(\\frac{1}{x}), &amp; x&lt;0,\\\\\n\\frac{1}{1+x^2}, &amp; x\\ge 0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 0.\n</li>\n<li>\nThe function has a removable discontinuity at 0.\n</li>\n<li>\nThe function has a jump discontinuity at 0.\n</li>\n<li>\nThe function has an essential discontinuity at 0.\n</li>\n</ol>",
    "hints": [
     "<p>From the left: a function tending to 0 times a bounded function.</p>"
    ],
@@ -8086,7 +8086,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x\\sin(ax)}{1-\\cos x}, &amp; \\text{if } x&lt;0,\\\\\nb, &amp; \\text{if } x=0,\\\\\n\\frac{e^x-1}{xe^x}, &amp; \\text{if } x&gt;0\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $0$ ? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x\\sin(ax)}{1-\\cos x}, &amp; x&lt;0,\\\\\nb, &amp; x=0,\\\\\n\\frac{e^x-1}{xe^x}, &amp; x&gt;0\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $0$ ? Justify.</p>",
    "hints": [
     "<p>$f$ is continuous at 0 if and only if both one-sided limits at 0 exist and are equal to $f(0)=b$.</p>",
     "<p>Use the fundamental limits $\\frac{\\sin t}{t}\\to1$, $\\frac{1-\\cos x}{x^2}\\to\\frac12$, $\\frac{e^x-1}{x}\\to1$ (L'Hôpital's rule is not allowed in the quiz).</p>"
@@ -8214,7 +8214,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 2:\n\\[\nf(x)=\\begin{cases}\n\\frac{1}{1+4^{\\frac{1}{x-2}}}, &amp; \\text{if } x\\neq 2,\\\\\n0, &amp; \\text{if } x=2\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 2.\n</li>\n<li>\nThe function has a removable discontinuity at 2.\n</li>\n<li>\nThe function has a jump discontinuity at 2.\n</li>\n<li>\nThe function has an essential discontinuity at 2.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 2:\n\\[\nf(x)=\\begin{cases}\n\\frac{1}{1+4^{\\frac{1}{x-2}}}, &amp; x\\neq 2,\\\\\n0, &amp; x=2\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 2.\n</li>\n<li>\nThe function has a removable discontinuity at 2.\n</li>\n<li>\nThe function has a jump discontinuity at 2.\n</li>\n<li>\nThe function has an essential discontinuity at 2.\n</li>\n</ol>",
    "hints": [
     "<p>Compute the one-sided limits separately: where does $\\frac{1}{x-2}$ tend as $x\\to2^+$ and as $x\\to2^-$?</p>"
    ],
@@ -8240,7 +8240,7 @@ window.BANK = {
     "continuity",
     "derivatives"
    ],
-   "question": "<p>(11 pts) Define a function by\n\\[ f(x) = \\begin{cases} x^3 \\sin(\\frac{5}{x}), &amp; \\text{if } x \\ne 0, \\\\ 0, &amp; \\text{if } x = 0 \\end{cases} \\]\nIs the function continuous and differentiable at the point $x = 0$? Justify your answer.</p>",
+   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3 \\sin(\\frac{5}{x}), &amp; x \\ne 0, \\\\ 0, &amp; x = 0 \\end{cases} \\]\nIs the function continuous and differentiable at the point $x = 0$? Justify your answer.</p>",
    "hints": [
     "<p>Use the fact that $\\sin$ is bounded: “a null function times a bounded function” tends to zero. For differentiability, compute the limit of the difference quotient by definition.</p>"
    ],
@@ -8266,7 +8266,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Compute the limit\n\\[ \\lim_{x\\to\\frac{\\pi}{4}} (\\tan x)^{\\tan(2x)} \\]</p>",
+   "question": "<p>Compute the limit\n\\[ \\lim_{x\\to\\frac{\\pi}{4}} (\\tan x)^{\\tan(2x)} \\]</p>",
    "hints": [
     "<p>This is a $1^\\infty$ form. Write $(\\tan x)^{\\tan 2x} = e^{\\tan(2x)\\ln(\\tan x)}$ and compute the limit of the exponent (for example, with the substitution $t = \\tan x$ and L'Hôpital's rule).</p>"
    ],
@@ -8292,7 +8292,7 @@ window.BANK = {
     "func-analysis",
     "func-limits"
    ],
-   "question": "<p>(11 pts) Find all asymptotes of the function\n\\[ f(x) = \\frac{2x^2 - 3x + lan(x)}{x} \\]\nJustify your answer.</p>",
+   "question": "<p>Find all asymptotes of the function\n\\[ f(x) = \\frac{2x^2 - 3x + lan(x)}{x} \\]\nJustify your answer.</p>",
    "hints": [
     "<p>$lan(x)$ is presumably $\\ln(x)$. Determine the domain, and check for a vertical asymptote at $x = 0^+$ and an oblique asymptote $y = ax + b$ as $x \\to +\\infty$.</p>"
    ],
@@ -8317,7 +8317,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Find the intervals of convexity and the inflection points of the function\n\\[ f(x) = x^2 \\cdot e^{-x} \\]\nJustify your answer.</p>",
+   "question": "<p>Find the intervals of convexity and the inflection points of the function\n\\[ f(x) = x^2 \\cdot e^{-x} \\]\nJustify your answer.</p>",
    "hints": [
     "<p>$f''(x) = e^{-x}(x^2 - 4x + 2)$; check the sign of the quadratic factor.</p>"
    ],
@@ -8342,7 +8342,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(16 pts) Using a linear approximation (a first-degree Taylor polynomial), estimate $\\sqrt[4]{18}$ and give a bound on the error.</p>",
+   "question": "<p>Using a linear approximation (a first-degree Taylor polynomial), estimate $\\sqrt[4]{18}$ and give a bound on the error.</p>",
    "hints": [
     "<p>Expand $f(x) = \\sqrt[4]{x}$ around $a = 16$, since $\\sqrt[4]{16} = 2$, and bound the Lagrange remainder $R_1$.</p>"
    ],
@@ -8367,7 +8367,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(11 pts) Compute the integral\n\\[ \\int \\frac{6x^2 + 13x + 8}{x^3 + 2x^2 + 2x}\\,dx \\]</p>",
+   "question": "<p>Compute the integral\n\\[ \\int \\frac{6x^2 + 13x + 8}{x^3 + 2x^2 + 2x}\\,dx \\]</p>",
    "hints": [
     "<p>$x^3 + 2x^2 + 2x = x(x^2 + 2x + 2)$ and the quadratic factor is irreducible. Decompose into $\\frac{A}{x} + \\frac{Bx + C}{x^2 + 2x + 2}$.</p>"
    ],
@@ -8392,7 +8392,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(10 pts) Find the general solution of the differential equation\n\\[ (x^2 + 4)y' + 2xy^2 = 0 \\]</p>",
+   "question": "<p>Find the general solution of the differential equation\n\\[ (x^2 + 4)y' + 2xy^2 = 0 \\]</p>",
    "hints": [
     "<p>The equation is separable: $\\frac{dy}{y^2} = -\\frac{2x}{x^2 + 4}\\,dx$. Do not forget the solution $y \\equiv 0$.</p>"
    ],
@@ -8417,7 +8417,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid of revolution of the function $f(x) = \\sqrt{\\cos x} \\cdot \\sin^2 x$ on the interval $[0, \\frac{\\pi}{2}]$.</p>",
+   "question": "<p>Compute the volume of the solid of revolution of the function $f(x) = \\sqrt{\\cos x} \\cdot \\sin^2 x$ on the interval $[0, \\frac{\\pi}{2}]$.</p>",
    "hints": [
     "<p>For revolution about the $x$-axis: $V = \\pi\\int_0^{\\pi/2} f^2(x)\\,dx = \\pi\\int_0^{\\pi/2}\\cos x\\,\\sin^4 x\\,dx$; substitute $t = \\sin x$.</p>"
    ],
@@ -8443,7 +8443,7 @@ window.BANK = {
     "improper-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(11 pts) Compute the improper integral $\\int_0^\\infty xe^{-x}\\,dx$, or show that it does not converge.</p>",
+   "question": "<p>Compute the improper integral $\\int_0^\\infty xe^{-x}\\,dx$, or show that it does not converge.</p>",
    "hints": [
     "<p>Find an antiderivative using integration by parts, then compute the limit as the upper limit of integration tends to infinity.</p>"
    ],
@@ -8469,7 +8469,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>(11 pts) Define a function by\n\\[ f(x) = \\begin{cases} ax^2 + b, &amp; \\text{if } x \\le 0 \\\\ \\dfrac{\\ln(e^x - 1)}{2\\ln x}, &amp; \\text{if } x &gt; 0 \\end{cases} \\]\nFor which values of the parameters $a, b$ is the function continuous at the point $x=0$? Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} ax^2 + b, &amp; x \\le 0 \\\\ \\dfrac{\\ln(e^x - 1)}{2\\ln x}, &amp; x &gt; 0 \\end{cases} \\]\nFor which values of the parameters $a, b$ is the function continuous at the point $x=0$? Justify.</p>",
    "hints": [
     "<p>Write $e^x - 1 = x \\cdot \\frac{e^x - 1}{x}$ and use the known limit $\\lim_{x\\to 0}\\frac{e^x-1}{x} = 1$.</p>"
    ],
@@ -8495,7 +8495,7 @@ window.BANK = {
     "ivt",
     "func-analysis"
    ],
-   "question": "<p>(10 pts) How many real solutions does the following equation have?\n\\[ x + \\sqrt{x} = 17 \\]\nJustify your answer carefully.</p>",
+   "question": "<p>How many real solutions does the following equation have?\n\\[ x + \\sqrt{x} = 17 \\]\nJustify your answer carefully.</p>",
    "hints": [
     "<p>Define $g(x) = x + \\sqrt{x} - 17$ on $[0,\\infty)$: existence of a solution follows from the Intermediate Value Theorem, and uniqueness from monotonicity.</p>"
    ],
@@ -8521,7 +8521,7 @@ window.BANK = {
     "func-analysis",
     "func-limits"
    ],
-   "question": "<p>(11 pts) Find all the asymptotes of the function\n\\[ f(x) = \\frac{x^3 - 3x^2 + 3x + \\sqrt{x}}{x^2 + x - 2} \\]\nJustify.</p>",
+   "question": "<p>Find all the asymptotes of the function\n\\[ f(x) = \\frac{x^3 - 3x^2 + 3x + \\sqrt{x}}{x^2 + x - 2} \\]\nJustify.</p>",
    "hints": [
     "<p>Pay attention to the domain: because of $\\sqrt{x}$, the function is defined only for $x \\ge 0$. Which zeros of the denominator lie in the domain?</p>"
    ],
@@ -8546,7 +8546,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Find the absolute minimum and maximum of the function\n\\[ f(x) = e^x \\cdot (x-1)^2 \\]\nor explain why they do not exist. Justify.</p>",
+   "question": "<p>Find the absolute minimum and maximum of the function\n\\[ f(x) = e^x \\cdot (x-1)^2 \\]\nor explain why they do not exist. Justify.</p>",
    "hints": [
     "<p>Note that $f(x) \\ge 0$ for every $x$. What happens as $x \\to \\infty$?</p>"
    ],
@@ -8571,7 +8571,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(16 pts) Compute an approximation of $\\sqrt[3]{2}$ with an error smaller than $\\frac{1}{10}$. Justify.</p>",
+   "question": "<p>Compute an approximation of $\\sqrt[3]{2}$ with an error smaller than $\\frac{1}{10}$. Justify.</p>",
    "hints": [
     "<p>Use the Taylor polynomial of $f(x) = \\sqrt[3]{x}$ around $x_0 = 1$, and estimate the error using the Lagrange remainder.</p>",
     "<p>Check: is a linear approximation (order 1) enough to guarantee an error smaller than $\\frac1{10}$? If not, move to order 2.</p>"
@@ -8597,7 +8597,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(11 pts) Compute the integral\n\\[ \\int \\frac{2x^2 + 8}{x^3 - 4x^2 + 8x}\\,dx \\]</p>",
+   "question": "<p>Compute the integral\n\\[ \\int \\frac{2x^2 + 8}{x^3 - 4x^2 + 8x}\\,dx \\]</p>",
    "hints": [
     "<p>Factor the denominator: $x^3 - 4x^2 + 8x = x(x^2 - 4x + 8)$, where the quadratic factor has no real roots, and decompose into partial fractions.</p>"
    ],
@@ -8622,7 +8622,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(10 pts) Find the general solution of the differential equation\n\\[ y' = e^{x+y} \\]</p>",
+   "question": "<p>Find the general solution of the differential equation\n\\[ y' = e^{x+y} \\]</p>",
    "hints": [
     "<p>$e^{x+y} = e^x e^y$, so this is a separable equation.</p>"
    ],
@@ -8648,7 +8648,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Compute the area bounded between the function\n\\[ f(x) = \\sin^2 x \\cdot \\cos^3 x \\]\nand the $x$-axis on the interval $[0, \\frac{\\pi}{2}]$.</p>",
+   "question": "<p>Compute the area bounded between the function\n\\[ f(x) = \\sin^2 x \\cdot \\cos^3 x \\]\nand the $x$-axis on the interval $[0, \\frac{\\pi}{2}]$.</p>",
    "hints": [
     "<p>Write $\\cos^3 x = (1 - \\sin^2 x)\\cos x$ and substitute $t = \\sin x$.</p>"
    ],
@@ -8673,7 +8673,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(11 pts) Compute the following improper integral, or show that it does not converge:\n\\[ \\int_1^\\infty \\frac{1}{(1+x)\\cdot\\sqrt{x}}\\,dx \\]</p>",
+   "question": "<p>Compute the following improper integral, or show that it does not converge:\n\\[ \\int_1^\\infty \\frac{1}{(1+x)\\cdot\\sqrt{x}}\\,dx \\]</p>",
    "hints": [
     "<p>Substitute $t = \\sqrt{x}$.</p>"
    ],
@@ -8699,7 +8699,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x}, &amp; \\text{if } x &lt; 0 \\\\ a\\cdot|x - 1|, &amp; \\text{if } x \\ge 0 \\end{cases} \\]\n(11 pts) For which value of $a$ is the function continuous at the point $x = 0$? Justify.</p>",
+   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x}, &amp; x &lt; 0 \\\\ a\\cdot|x - 1|, &amp; x \\ge 0 \\end{cases} \\]\n(11 pts) For which value of $a$ is the function continuous at the point $x = 0$? Justify.</p>",
    "hints": [
     "<p>Multiply the numerator and denominator by the conjugate $\\sqrt{x+4} + 2$.</p>"
    ],
@@ -8724,7 +8724,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x}, &amp; \\text{if } x &lt; 0 \\\\ a\\cdot|x - 1|, &amp; \\text{if } x \\ge 0 \\end{cases} \\]\n(10 pts) For which value of $a$ is the function differentiable at the point $x = 1$? Justify.</p>",
+   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x}, &amp; x &lt; 0 \\\\ a\\cdot|x - 1|, &amp; x \\ge 0 \\end{cases} \\]\n(10 pts) For which value of $a$ is the function differentiable at the point $x = 1$? Justify.</p>",
    "hints": [
     "<p>Compute the one-sided derivatives of $a|x-1|$ at $x=1$.</p>"
    ],
@@ -8772,7 +8772,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(16 pts) Use a linear approximation to compute $\\ln(1.2)$, and estimate the error. Justify.</p>",
+   "question": "<p>Use a linear approximation to compute $\\ln(1.2)$, and estimate the error. Justify.</p>",
    "hints": [
     "<p>Use the Taylor polynomial of order 1 of $\\ln x$ around $x_0 = 1$, and estimate the error using the Lagrange remainder.</p>"
    ],
@@ -8798,7 +8798,7 @@ window.BANK = {
     "definite-integrals",
     "antiderivatives"
    ],
-   "question": "<p>(11 pts) Compute the integral\n\\[ \\int_0^{\\frac{\\sqrt2}{2}} \\frac{x^2}{\\sqrt{1 - x^2}}\\,dx \\]\nReminder: $\\sin(\\frac\\pi4) = \\cos(\\frac\\pi4) = \\frac{\\sqrt2}{2}$.</p>",
+   "question": "<p>Compute the integral\n\\[ \\int_0^{\\frac{\\sqrt2}{2}} \\frac{x^2}{\\sqrt{1 - x^2}}\\,dx \\]\nReminder: $\\sin(\\frac\\pi4) = \\cos(\\frac\\pi4) = \\frac{\\sqrt2}{2}$.</p>",
    "hints": [
     "<p>Substitute $x = \\sin t$, and then use the identity $\\sin^2 t = \\frac{1 - \\cos 2t}{2}$.</p>"
    ],
@@ -8823,7 +8823,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(10 pts) Find the general solution of the differential equation\n\\[ (x^4 + 4)yy' = x^3 \\]</p>",
+   "question": "<p>Find the general solution of the differential equation\n\\[ (x^4 + 4)yy' = x^3 \\]</p>",
    "hints": [
     "<p>This is a separable equation: $y\\,dy = \\frac{x^3}{x^4 + 4}\\,dx$.</p>"
    ],
@@ -8848,7 +8848,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(11 pts) Compute the volume of the solid of revolution about the $x$-axis on the interval $[1,4]$ of the function\n\\[ f(x) = \\frac{\\sqrt{2x+1}}{x^2 + x} \\]</p>",
+   "question": "<p>Compute the volume of the solid of revolution about the $x$-axis on the interval $[1,4]$ of the function\n\\[ f(x) = \\frac{\\sqrt{2x+1}}{x^2 + x} \\]</p>",
    "hints": [
     "<p>The volume of the solid of revolution is $V = \\pi\\int_a^b f^2(x)\\,dx$. Note that $(x^2 + x)' = 2x + 1$.</p>"
    ],
@@ -8873,7 +8873,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Compute the following improper integral, or show that it does not converge:\n\\[ \\int_1^\\infty \\frac{\\ln x}{x}\\,dx \\]</p>",
+   "question": "<p>Compute the following improper integral, or show that it does not converge:\n\\[ \\int_1^\\infty \\frac{\\ln x}{x}\\,dx \\]</p>",
    "hints": [
     "<p>Find an antiderivative using the substitution $u = \\ln x$.</p>"
    ],
@@ -8898,7 +8898,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Compute the limit\n\\[ \\lim_{x\\to\\infty}\\quad x\\cdot\\left(\\sqrt{x^2 + 4} - \\sqrt{x^2 - 4}\\right) \\]</p>",
+   "question": "<p>Compute the limit\n\\[ \\lim_{x\\to\\infty}\\quad x\\cdot\\left(\\sqrt{x^2 + 4} - \\sqrt{x^2 - 4}\\right) \\]</p>",
    "hints": [
     "<p>Multiply and divide by the conjugate $\\sqrt{x^2+4} + \\sqrt{x^2-4}$.</p>"
    ],
@@ -8923,7 +8923,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>(11 pts) Define a function by\n\\[ f(x) = \\begin{cases} x^3\\cdot\\cos(\\frac1x), &amp; \\text{if } x \\neq 0 \\\\ 0, &amp; \\text{if } x = 0 \\end{cases} \\]\nIs the function differentiable at $x = 0$? <br>\nIf so, compute its derivative at this point. If not, justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3\\cdot\\cos(\\frac1x), &amp; x \\neq 0 \\\\ 0, &amp; x = 0 \\end{cases} \\]\nIs the function differentiable at $x = 0$? <br>\nIf so, compute its derivative at this point. If not, justify.</p>",
    "hints": [
     "<p>Use the definition of the derivative and the fact that $|\\cos(\\frac1x)| \\le 1$.</p>"
    ],
@@ -8972,7 +8972,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(16 pts) Using a linear approximation, compute $\\sqrt[3]{10}$ and estimate the error. Justify your answer.</p>",
+   "question": "<p>Using a linear approximation, compute $\\sqrt[3]{10}$ and estimate the error. Justify your answer.</p>",
    "hints": [
     "<p>Choose a point close to $10$ at which the cube root is known: $x_0 = 8$. Estimate the error using the Lagrange remainder.</p>"
    ],
@@ -8997,7 +8997,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(11 pts) Compute the integral\n\\[ \\int\\frac{7x^2 + 6}{x^3 + 2x^2 + 2x}\\,dx \\]</p>",
+   "question": "<p>Compute the integral\n\\[ \\int\\frac{7x^2 + 6}{x^3 + 2x^2 + 2x}\\,dx \\]</p>",
    "hints": [
     "<p>$x^3 + 2x^2 + 2x = x\\left((x+1)^2 + 1\\right)$. Decompose into partial fractions.</p>"
    ],
@@ -9022,7 +9022,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(10 pts) Find the general solution of the differential equation\n\\[ y' - xy^2 = 4x \\]</p>",
+   "question": "<p>Find the general solution of the differential equation\n\\[ y' - xy^2 = 4x \\]</p>",
    "hints": [
     "<p>Rearrange: $y' = x(y^2 + 4)$ — this is a separable equation.</p>"
    ],
@@ -9047,7 +9047,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(11 pts) Compute the finite area enclosed between the graph of the function $f(x) = xe^x$ and the line $y = e\\cdot x$.</p>",
+   "question": "<p>Compute the finite area enclosed between the graph of the function $f(x) = xe^x$ and the line $y = e\\cdot x$.</p>",
    "hints": [
     "<p>First find the intersection points: $xe^x = ex \\iff x(e^x - e) = 0$. Compute $\\int xe^x\\,dx$ by integration by parts.</p>"
    ],
@@ -9072,7 +9072,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Compute the following improper integral, or show that it does not converge:\n\\[ \\int_e^\\infty\\frac{1}{x\\ln^2 x}\\,dx \\]</p>",
+   "question": "<p>Compute the following improper integral, or show that it does not converge:\n\\[ \\int_e^\\infty\\frac{1}{x\\ln^2 x}\\,dx \\]</p>",
    "hints": [
     "<p>Substitute $u = \\ln x$.</p>"
    ],
@@ -9097,7 +9097,7 @@ window.BANK = {
    "categories": [
     "functions"
    ],
-   "question": "<p>Define a function by\n\\[\nf(x)=\\begin{cases}\nx^3, &amp; \\text{if } x&lt;1,\\\\\n2x+1, &amp; \\text{if } x\\ge 1\n\\end{cases}\n\\]</p>\n<ol class=\"parts\">\n<li>\n(5 pts) Sketch the graph of the function.\n</li>\n<li>\n(15 pts) Is this function invertible as a function from $\\R$ to $\\R$?\n  If so, compute its inverse function $f^{-1}:\\R\\to\\R$.\n  If not, justify.\n</li>\n</ol>",
+   "question": "<p>Define a function by\n\\[\nf(x)=\\begin{cases}\nx^3, &amp; x&lt;1,\\\\\n2x+1, &amp; x\\ge 1\n\\end{cases}\n\\]</p>\n<ol class=\"parts\">\n<li>\n(5 pts) Sketch the graph of the function.\n</li>\n<li>\n(15 pts) Is this function invertible as a function from $\\R$ to $\\R$?\n  If so, compute its inverse function $f^{-1}:\\R\\to\\R$.\n  If not, justify.\n</li>\n</ol>",
    "hints": [
     "<p>A function that is invertible from $\\R$ to $\\R$ must be both one-to-one and onto $\\R$. What is the image of each of the two pieces?</p>"
    ],
@@ -9123,7 +9123,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x^2-4x+3}{x-1}, &amp; \\text{if } x&lt;1,\\\\\na, &amp; \\text{if } x=1,\\\\\n2b\\cdot\\frac{\\ln x}{x-1}, &amp; \\text{if } x&gt;1\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $1$ ? Justify your answer.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x^2-4x+3}{x-1}, &amp; x&lt;1,\\\\\na, &amp; x=1,\\\\\n2b\\cdot\\frac{\\ln x}{x-1}, &amp; x&gt;1\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $1$ ? Justify your answer.</p>",
    "hints": [
     "<p>For the left limit, factor the numerator. For the right limit, substitute $y=x-1$ and use the basic limit $\\frac{\\ln(1+y)}{y}\\to1$.</p>"
    ],
@@ -9250,7 +9250,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 3:\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sqrt{x+7}-\\sqrt{10}}{\\sqrt{x+4}-\\sqrt{7}}, &amp; \\text{if } x&gt;3,\\\\\n\\sqrt{x^2+1}, &amp; \\text{if } x\\le 3\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 3.\n</li>\n<li>\nThe function has a removable discontinuity at 3.\n</li>\n<li>\nThe function has a jump discontinuity at 3.\n</li>\n<li>\nThe function has an essential discontinuity at 3.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 3:\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sqrt{x+7}-\\sqrt{10}}{\\sqrt{x+4}-\\sqrt{7}}, &amp; x&gt;3,\\\\\n\\sqrt{x^2+1}, &amp; x\\le 3\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 3.\n</li>\n<li>\nThe function has a removable discontinuity at 3.\n</li>\n<li>\nThe function has a jump discontinuity at 3.\n</li>\n<li>\nThe function has an essential discontinuity at 3.\n</li>\n</ol>",
    "hints": [
     "<p>For the right limit, multiply the numerator and the denominator by the conjugates of both expressions: $\\sqrt{x+7}+\\sqrt{10}$ and $\\sqrt{x+4}+\\sqrt7$.</p>"
    ],
@@ -9276,7 +9276,7 @@ window.BANK = {
     "func-analysis",
     "ivt"
    ],
-   "question": "<p>(10 pts) How many real solutions does the following equation have?\n\\[ x^4 + 2x^2 = 1 \\]\nJustify your answer carefully.</p>",
+   "question": "<p>How many real solutions does the following equation have?\n\\[ x^4 + 2x^2 = 1 \\]\nJustify your answer carefully.</p>",
    "hints": [
     "<p>Substitute $t = x^2$ to get a quadratic equation in $t$; remember that $t = x^2$ must be non-negative.</p>"
    ],
@@ -9302,7 +9302,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>(10 pts) Compute the following limit\n\\[ \\lim_{x\\to 0} \\frac{x - \\sin x}{\\cos x - 1} \\]</p>",
+   "question": "<p>Compute the following limit\n\\[ \\lim_{x\\to 0} \\frac{x - \\sin x}{\\cos x - 1} \\]</p>",
    "hints": [
     "<p>Identify the type of the expression ($\\frac{0}{0}$) and use L'Hôpital's rule.</p>"
    ],
@@ -9328,7 +9328,7 @@ window.BANK = {
     "func-analysis",
     "func-limits"
    ],
-   "question": "<p>(12 pts) Compute all asymptotes of the function\n\\[ f(x) = \\frac{x^2 - 2\\ln(x)}{x - 1} \\]</p>",
+   "question": "<p>Compute all asymptotes of the function\n\\[ f(x) = \\frac{x^2 - 2\\ln(x)}{x - 1} \\]</p>",
    "hints": [
     "<p>Start from the domain: the “suspicious” points for a vertical asymptote are the endpoints of the domain and the points where the denominator vanishes. An oblique asymptote $y = ax + b$ needs to be checked only in a direction in which the domain is unbounded.</p>"
    ],
@@ -9353,7 +9353,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Find the absolute minimum and maximum of the function\n\\[ f(x) = \\frac{\\sqrt{x}}{e^x} \\]\non its domain, or explain why they do not exist.</p>",
+   "question": "<p>Find the absolute minimum and maximum of the function\n\\[ f(x) = \\frac{\\sqrt{x}}{e^x} \\]\non its domain, or explain why they do not exist.</p>",
    "hints": [
     "<p>Find the critical points, determine the intervals of increase and decrease, and check the behavior of $f$ at the ends of the domain ($x = 0$ and $x \\to \\infty$).</p>"
    ],
@@ -9378,7 +9378,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(16 pts) Using a second-order Taylor approximation, compute $\\ln\\left(\\frac{6}{5}\\right) = \\ln(1.2)$, and estimate the error.</p>\n<p>Note that the approximation and the error bound must be rational numbers.</p>",
+   "question": "<p>Using a second-order Taylor approximation, compute $\\ln\\left(\\frac{6}{5}\\right) = \\ln(1.2)$, and estimate the error.</p>\n<p>Note that the approximation and the error bound must be rational numbers.</p>",
    "hints": [
     "<p>Expand $f(x) = \\ln x$ around $x_0 = 1$ (where the values of $f$ and its derivatives are rational) and use the second-order Lagrange remainder.</p>"
    ],
@@ -9403,7 +9403,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(12 pts) Compute the integral\n\\[ \\int \\frac{-3x - 7}{x^3 + x^2 - 2}\\,dx \\]\nHint: note that the denominator vanishes at $x = 1$.</p>",
+   "question": "<p>Compute the integral\n\\[ \\int \\frac{-3x - 7}{x^3 + x^2 - 2}\\,dx \\]\nHint: note that the denominator vanishes at $x = 1$.</p>",
    "hints": [
     "<p>Divide the denominator by $(x - 1)$, check that the remaining quadratic factor is irreducible, and decompose into partial fractions of the form $\\frac{A}{x-1} + \\frac{Bx + C}{x^2 + 2x + 2}$.</p>"
    ],
@@ -9428,7 +9428,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(10 pts) Find the general solution of the differential equation\n\\[ y' = y^2 x \\sin x \\]</p>",
+   "question": "<p>Find the general solution of the differential equation\n\\[ y' = y^2 x \\sin x \\]</p>",
    "hints": [
     "<p>This is a separable equation: move $y^2$ to the side of $dy$, and compute $\\int x\\sin x\\,dx$ by integration by parts. Do not forget the solution $y \\equiv 0$.</p>"
    ],
@@ -9453,7 +9453,7 @@ window.BANK = {
    "categories": [
     "integral-applications"
    ],
-   "question": "<p>(10 pts) Compute the volume of the solid of revolution about the $x$-axis of the function\n\\[ f(x) = \\sin x + \\cos x \\]\non the interval $[0, \\frac{\\pi}{2}]$.</p>",
+   "question": "<p>Compute the volume of the solid of revolution about the $x$-axis of the function\n\\[ f(x) = \\sin x + \\cos x \\]\non the interval $[0, \\frac{\\pi}{2}]$.</p>",
    "hints": [
     "<p>Expand $(\\sin x + \\cos x)^2$ and use the identities $\\sin^2 x + \\cos^2 x = 1$ and $2\\sin x\\cos x = \\sin 2x$.</p>"
    ],
@@ -9478,7 +9478,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Compute the following improper integral, or show that it diverges:\n\\[ \\int_e^\\infty \\frac{dx}{x \\cdot \\ln^3 x} \\]</p>",
+   "question": "<p>Compute the following improper integral, or show that it diverges:\n\\[ \\int_e^\\infty \\frac{dx}{x \\cdot \\ln^3 x} \\]</p>",
    "hints": [
     "<p>Substitute $t = \\ln x$.</p>"
    ],
@@ -9504,7 +9504,7 @@ window.BANK = {
     "ivt",
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Compute the image of the function\n\\[ f(x) = x^3 - 12x + 8 \\]\non the interval $[-3, 5]$. That is, compute the set\n\\[ \\{ f(x) : -3 \\le x \\le 5 \\} \\]\nJustify your answer carefully.</p>",
+   "question": "<p>Compute the image of the function\n\\[ f(x) = x^3 - 12x + 8 \\]\non the interval $[-3, 5]$. That is, compute the set\n\\[ \\{ f(x) : -3 \\le x \\le 5 \\} \\]\nJustify your answer carefully.</p>",
    "hints": [
     "<p>A continuous function on a closed interval attains a minimum and a maximum (Weierstrass) and every value between them (Intermediate Value Theorem). It remains to find the minimum and the maximum.</p>"
    ],
@@ -9529,7 +9529,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>(10 pts) Compute the following limit\n\\[ \\lim_{x\\to\\infty} \\left( \\frac{x^3 + 1}{x^3 - 2} \\right)^{x^3 + 3} \\]</p>",
+   "question": "<p>Compute the following limit\n\\[ \\lim_{x\\to\\infty} \\left( \\frac{x^3 + 1}{x^3 - 2} \\right)^{x^3 + 3} \\]</p>",
    "hints": [
     "<p>This is an expression of the form $1^\\infty$. Write $\\frac{x^3 + 1}{x^3 - 2} = 1 + \\frac{3}{x^3 - 2}$ and use the limit $\\left(1 + \\frac{1}{u}\\right)^u \\to e$.</p>"
    ],
@@ -9555,7 +9555,7 @@ window.BANK = {
     "func-analysis",
     "derivatives"
    ],
-   "question": "<p>(12 pts) Compute the intervals of convexity and the inflection points of the function\n\\[ f(x) = \\sqrt[3]{6x + 12} \\]</p>",
+   "question": "<p>Compute the intervals of convexity and the inflection points of the function\n\\[ f(x) = \\sqrt[3]{6x + 12} \\]</p>",
    "hints": [
     "<p>Write $f(x) = (6x + 12)^{1/3}$, differentiate twice and check the sign of $f''$. Pay attention to the point where $f''$ is not defined.</p>"
    ],
@@ -9580,7 +9580,7 @@ window.BANK = {
    "categories": [
     "func-analysis"
    ],
-   "question": "<p>(10 pts) Prove that for every $x \\ge 0$\n\\[ 0 \\le \\frac{x^2}{e^x} \\le 1 \\]</p>",
+   "question": "<p>Prove that for every $x \\ge 0$\n\\[ 0 \\le \\frac{x^2}{e^x} \\le 1 \\]</p>",
    "hints": [
     "<p>Investigate $g(x) = \\frac{x^2}{e^x}$ on $[0, \\infty)$ and find its maximum.</p>"
    ],
@@ -9605,7 +9605,7 @@ window.BANK = {
    "categories": [
     "taylor"
    ],
-   "question": "<p>(16 pts) Using a Taylor approximation, compute $\\sqrt[3]{11}$ with an error less than $\\frac{1}{10}$. Justify your answer.</p>\n<p>Note that the approximation and the error bound must be rational numbers.</p>",
+   "question": "<p>Using a Taylor approximation, compute $\\sqrt[3]{11}$ with an error less than $\\frac{1}{10}$. Justify your answer.</p>\n<p>Note that the approximation and the error bound must be rational numbers.</p>",
    "hints": [
     "<p>Expand $f(x) = \\sqrt[3]{x}$ around $a = 8$ (since $\\sqrt[3]{8} = 2$). Start with a first-order polynomial and check whether the Lagrange remainder is already less than $\\frac{1}{10}$.</p>"
    ],
@@ -9630,7 +9630,7 @@ window.BANK = {
    "categories": [
     "antiderivatives"
    ],
-   "question": "<p>(12 pts) Compute the integral\n\\[ \\int \\frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2}\\,dx \\]</p>",
+   "question": "<p>Compute the integral\n\\[ \\int \\frac{6x^3 - 12x + 24}{x^4 - 4x^3 + 8x^2}\\,dx \\]</p>",
    "hints": [
     "<p>Factor the denominator: $x^4 - 4x^3 + 8x^2 = x^2(x^2 - 4x + 8)$, and the quadratic factor is irreducible. The partial fraction decomposition has the form $\\frac{A}{x} + \\frac{B}{x^2} + \\frac{Cx + D}{x^2 - 4x + 8}$.</p>"
    ],
@@ -9655,7 +9655,7 @@ window.BANK = {
    "categories": [
     "ode"
    ],
-   "question": "<p>(10 pts) Find the general solution of the differential equation\n\\[ \\sqrt{1 - x^2} \\cdot y' = y^2 \\arcsin x \\]</p>",
+   "question": "<p>Find the general solution of the differential equation\n\\[ \\sqrt{1 - x^2} \\cdot y' = y^2 \\arcsin x \\]</p>",
    "hints": [
     "<p>The equation is separable. After separating, on the $x$ side substitute $t = \\arcsin x$.</p>"
    ],
@@ -9681,7 +9681,7 @@ window.BANK = {
     "integral-applications",
     "definite-integrals"
    ],
-   "question": "<p>(10 pts) Compute the area enclosed between the $x$-axis and the graph of the function\n\\[ f(x) = xe^x \\]\non the interval $[-1, 1]$.</p>",
+   "question": "<p>Compute the area enclosed between the $x$-axis and the graph of the function\n\\[ f(x) = xe^x \\]\non the interval $[-1, 1]$.</p>",
    "hints": [
     "<p>Note that $f$ changes sign at $x = 0$: the area is $\\int_{-1}^1 |f(x)|\\,dx$. Find the antiderivative using integration by parts.</p>"
    ],
@@ -9706,7 +9706,7 @@ window.BANK = {
    "categories": [
     "improper-integrals"
    ],
-   "question": "<p>(10 pts) Determine whether the following improper integral converges or diverges:\n\\[ \\int_1^\\infty \\frac{\\cos x}{x^2 - \\ln x} \\]\nRemark: you may assume that the denominator is positive on the domain of integration.</p>",
+   "question": "<p>Determine whether the following improper integral converges or diverges:\n\\[ \\int_1^\\infty \\frac{\\cos x}{x^2 - \\ln x} \\]\nRemark: you may assume that the denominator is positive on the domain of integration.</p>",
    "hints": [
     "<p>The integrand does not have a constant sign. Check absolute convergence: bound $|f(x)| \\le \\frac{1}{x^2 - \\ln x}$ and compare (using the limit comparison test) with $\\frac{1}{x^2}$.</p>"
    ],
