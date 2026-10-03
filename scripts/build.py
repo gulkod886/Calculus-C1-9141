@@ -280,8 +280,6 @@ def source_label(q):
     s = f"{what} {q['year']}"
     if q["semester"]:
         s += f" סמסטר {q['semester']}'"
-    if q["note"]:
-        s += f" ({q['note']})"
     return s
 
 
@@ -299,8 +297,6 @@ def source_label_en(e):
     s = f"{english_what(e)}, {e['year']}"
     if e["semester"]:
         s += f", Semester {e['semester']}"
-    if e["note"]:
-        s += f" ({e['note']})"
     return s
 
 

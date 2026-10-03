@@ -15,7 +15,16 @@
       macros: { R: '\\mathbb{R}', N: '\\mathbb{N}', Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', eps: '\\varepsilon' }
     },
     loader: { load: ['[tex]/boldsymbol'] },
-    startup: { typeset: false }
+    startup: {
+      typeset: false,
+      // Every formula is shown in display style (also inline $..$).
+      ready() {
+        MathJax.startup.defaultReady();
+        MathJax.startup.document.inputJax[0].preFilters.add(({math}) => {
+          if (!math.display) math.math = '\\displaystyle ' + math.math;
+        });
+      }
+    }
   };
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>

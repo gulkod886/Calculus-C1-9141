@@ -6399,7 +6399,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "1",
@@ -6415,8 +6415,8 @@ window.BANK = {
     "<p>In part (b), note that $f(-|x|)$ is an even function, and for $x\\ge0$ it equals $f(-x)$, i.e. the reflection of the part of the graph of $f$ to the left of the $y$-axis.</p>"
    ],
    "solution": "<ol class=\"parts\">\n<li>\n<strong>Domain:</strong> $x\\neq -1$, i.e. $D=(-\\infty,-1)\\cup(-1,\\infty)$.\n\n  <strong>Intersections with the axes and sign:</strong> $e^{2x+1}&gt;0$ and $(x+1)^2&gt;0$ in the domain, hence $f(x)&gt;0$ for every $x\\in D$; there is no intersection with the $x$-axis. Intersection with the $y$-axis: $f(0)=e$, the point $(0,e)$.\n\n  <strong>Asymptotes:</strong>\n  \n<ul>\n<li>\nVertical: $\\lim_{x\\to-1^\\pm}f(x)=\\frac{e^{-1}}{0^+}=+\\infty$, hence $x=-1$ is a vertical asymptote (from both sides the function tends to $+\\infty$).\n</li>\n<li>\nAt $-\\infty$: $e^{2x+1}\\to 0$ and $(x+1)^2\\to\\infty$, so $f(x)\\to0$: $y=0$ is a horizontal asymptote on the left.\n</li>\n<li>\nAt $+\\infty$: by L'Hôpital's rule (twice) $\\lim_{x\\to\\infty}\\frac{e^{2x+1}}{(x+1)^2}=\\lim\\frac{4e^{2x+1}}{2}=\\infty$, and similarly $\\frac{f(x)}{x}\\to\\infty$, so there is no horizontal or oblique asymptote on the right.\n</li>\n</ul>\n<strong>Monotonicity and extrema:</strong> by the quotient rule,\n  \\[ f'(x)=\\frac{2e^{2x+1}(x+1)^2-e^{2x+1}\\cdot2(x+1)}{(x+1)^4}=\\frac{2e^{2x+1}\\,x}{(x+1)^3}. \\]\n  $f'(x)=0\\iff x=0$. The sign of $f'$ is the sign of $\\frac{x}{(x+1)^3}$:\n<ul>\n<li>\n$x&lt;-1$: negative numerator, negative denominator $\\Rightarrow f'&gt;0$, $f$ is <strong>increasing</strong>.\n</li>\n<li>\n$-1&lt;x&lt;0$: negative numerator, positive denominator $\\Rightarrow f'&lt;0$, $f$ is <strong>decreasing</strong>.\n</li>\n<li>\n$x&gt;0$: $f'&gt;0$, $f$ is <strong>increasing</strong>.\n</li>\n</ul>\n<p>Hence at $x=0$ there is a <strong>local minimum</strong> $(0,e)$. There is no local maximum (at $x=-1$ the function is not defined).</p>\n<p><strong>Convexity:</strong> differentiating again gives\n  \\[ f''(x)=\\frac{2e^{2x+1}(2x^2+1)}{(x+1)^4}. \\]\n  (Differentiate $f'=2e^{2x+1}\\cdot x(x+1)^{-3}$: $f''=2e^{2x+1}\\left[2x(x+1)^{-3}+(x+1)^{-3}-3x(x+1)^{-4}\\right]=\\frac{2e^{2x+1}\\left[(2x+1)(x+1)-3x\\right]}{(x+1)^4}$ and $(2x+1)(x+1)-3x=2x^2+1$.)\n  Since $2x^2+1&gt;0$, we have $f''&gt;0$ on the whole domain: $f$ is <strong>convex</strong> on $(-\\infty,-1)$ and on $(-1,\\infty)$, and there are <strong>no inflection points</strong>.</p>\n<p><strong>Sketch (described in words):</strong> on the left the graph starts just above the asymptote $y=0$ (close to $0$ at $-\\infty$), increases in a convex manner and tends to $+\\infty$ as $x\\to-1^-$. To the right of the asymptote $x=-1$ the graph decreases from $+\\infty$ to the minimum $(0,e)$ and then increases rapidly (exponentially) to $+\\infty$. The whole graph lies above the $x$-axis.</p>\n</li>\n<li>\n<p>Denote $g(x)=f(-|x|)$. We have $g(-x)=g(x)$, i.e. $g$ is <strong>even</strong> – the graph is symmetric with respect to the $y$-axis. For $x\\ge0$: $g(x)=f(-x)$, i.e. the graph of $g$ for $x\\ge0$ is the reflection with respect to the $y$-axis of the graph of $f$ for $x\\le 0$, and the graph for $x&lt;0$ is simply the graph of $f$ for $x&lt;0$.</p>\n<p>In particular: $g$ is defined for $x\\neq\\pm1$, $g(0)=e$, and it has vertical asymptotes $x=\\pm1$ (where $g\\to+\\infty$) and the horizontal asymptote $y=0$ at $\\pm\\infty$. On $(-1,0)$, $g=f$ is decreasing, and on $(0,1)$, $g$ is increasing; at $x=0$ there is a local minimum $(0,e)$ (and since $f'(0)=0$ there is no “corner” there: the one-sided derivatives of $g$ are both $0$). On $(-\\infty,-1)$, $g$ increases from $0$ to $+\\infty$, and on $(1,\\infty)$ it decreases from $+\\infty$ to $0$. $g$ is convex on each of the intervals.</p>\n</li>\n</ol>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q2a",
@@ -6426,7 +6426,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "2a",
@@ -6440,8 +6440,8 @@ window.BANK = {
     "<p>Decompose into partial fractions: $x^3-x=x(x-1)(x+1)$.</p>"
    ],
    "solution": "<p>$x^3-x=x(x-1)(x+1)$, and the degree of the numerator is less than the degree of the denominator. Decompose:\n\\[ \\frac{x^2+1}{x(x-1)(x+1)}=\\frac{A}{x}+\\frac{B}{x-1}+\\frac{C}{x+1}. \\]\nBy the cover-up method: $A=\\frac{0+1}{(0-1)(0+1)}=-1$, $B=\\frac{1+1}{1\\cdot 2}=1$, $C=\\frac{1+1}{(-1)(-2)}=1$. Hence\n\\[ \\int\\frac{x^2+1}{x^3-x}dx=-\\ln|x|+\\ln|x-1|+\\ln|x+1|+C=\\boxed{\\ln\\left|\\frac{x^2-1}{x}\\right|+C}. \\]</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q2b",
@@ -6451,7 +6451,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "2b",
@@ -6465,8 +6465,8 @@ window.BANK = {
     "<p>Use the power-reduction formulas $\\sin^2\\alpha=\\frac{1-\\cos2\\alpha}{2}$, $\\cos^2\\alpha=\\frac{1+\\cos2\\alpha}{2}$.</p>"
    ],
    "solution": "<p>By the power-reduction formulas:\n\\[ \\sin^2 4x\\cos^2x=\\frac{1-\\cos8x}{2}\\cdot\\frac{1+\\cos2x}{2}=\\frac14\\left(1+\\cos2x-\\cos8x-\\cos8x\\cos2x\\right). \\]\nBy the product-to-sum formula $\\cos8x\\cos2x=\\frac12(\\cos10x+\\cos6x)$, and therefore\n\\[ \\sin^2 4x\\cos^2x=\\frac14+\\frac14\\cos2x-\\frac14\\cos8x-\\frac18\\cos10x-\\frac18\\cos6x. \\]\nIntegrate term by term:\n\\[ \\boxed{\\int\\sin^2 4x\\cos^2x\\,dx=\\frac{x}{4}+\\frac{\\sin2x}{8}-\\frac{\\sin8x}{32}-\\frac{\\sin6x}{48}-\\frac{\\sin10x}{80}+C}. \\]</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q2c",
@@ -6476,7 +6476,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "2c",
@@ -6490,8 +6490,8 @@ window.BANK = {
     "<p>Substitute $t=x+2$ and pay attention to evenness/oddness.</p>"
    ],
    "solution": "<p>Substitute $t=x+2$, $dt=dx$; the limits: $x=-3\\mapsto t=-1$, $x=-1\\mapsto t=1$:\n\\[ \\int_{-3}^{-1}\\arctan(x+2)\\,dx=\\int_{-1}^{1}\\arctan t\\,dt. \\]\n$\\arctan$ is an odd continuous function, and the interval is symmetric about $0$, hence the integral $\\boxed{=0}$.</p>\n<p>(Directly: by integration by parts $\\int\\arctan t\\,dt=t\\arctan t-\\frac12\\ln(1+t^2)+C$, and between $-1$ and $1$: $\\left(\\frac\\pi4-\\frac12\\ln2\\right)-\\left(\\frac\\pi4-\\frac12\\ln2\\right)=0$.)</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q2d",
@@ -6501,7 +6501,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "2d",
@@ -6515,8 +6515,8 @@ window.BANK = {
     "<p>The numerator is exactly the derivative of the expression under the square root.</p>"
    ],
    "solution": "<p>On $[2,5]$ we have $x^2-x&gt;0$, so the integrand is continuous. Substitute $u=x^2-x$, $du=(2x-1)dx$; the limits are $u(2)=2$, $u(5)=20$:\n\\[ \\int_2^5\\frac{2x-1}{\\sqrt{x^2-x}}dx=\\int_2^{20}u^{-1/2}du=2\\sqrt u\\Big|_2^{20}=2\\sqrt{20}-2\\sqrt2=\\boxed{4\\sqrt5-2\\sqrt2}\\approx 6.116. \\]</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q3a",
@@ -6526,7 +6526,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "3a",
@@ -6540,8 +6540,8 @@ window.BANK = {
     "<p>Find where $e^x=3$ and split the integral at that point.</p>"
    ],
    "solution": "<p>$e^x\\le 3\\iff x\\le\\ln3$ (since $e^x$ is increasing). Hence on $[0,4]$:\n\\[ \\min(e^x,3)=\\begin{cases} e^x &amp; 0\\le x\\le\\ln 3\\\\ 3 &amp; \\ln3\\le x\\le 4\\end{cases} \\]\nand note that $\\ln3\\approx1.0986\\in[0,4]$. The function is positive, hence the area is\n\\[ S=\\int_0^{\\ln3}e^x\\,dx+\\int_{\\ln3}^{4}3\\,dx=\\left(e^{\\ln3}-e^0\\right)+3(4-\\ln3)=2+12-3\\ln3=\\boxed{14-3\\ln3}\\approx 10.70. \\]</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q3b",
@@ -6551,7 +6551,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "3b",
@@ -6565,8 +6565,8 @@ window.BANK = {
     "<p>Compute $f''$ and split into the cases $b&gt;0$, $b=0$, $b&lt;0$. Remember that an inflection point must lie in the domain.</p>"
    ],
    "solution": "<p>Differentiate: $f'(x)=-\\frac{2x}{(x^2+b)^2}$, and\n\\[ f''(x)=\\frac{-2(x^2+b)^2+2x\\cdot2(x^2+b)\\cdot2x}{(x^2+b)^4}=\\frac{6x^2-2b}{(x^2+b)^3}. \\]</p>\n<ul>\n<li>\n$b&gt;0$: $f$ is defined on all of $\\R$, the denominator is positive, and the numerator $6x^2-2b$ changes sign at $x=\\pm\\sqrt{b/3}$. Hence there are two inflection points.\n</li>\n<li>\n$b=0$: $f=\\frac1{x^2}$, $x\\neq0$, and $f''=\\frac{6}{x^4}&gt;0$: there are no inflection points.\n</li>\n<li>\n$b&lt;0$: $f$ is defined for $x\\neq\\pm\\sqrt{-b}$. The numerator $6x^2-2b=6x^2+2|b|&gt;0$ always, hence $f''$ does not vanish. The sign of $f''$ changes only when passing through $x=\\pm\\sqrt{-b}$, which are not in the domain (vertical asymptotes), and hence are not inflection points. There are no inflection points.\n</li>\n</ul>\n<p><strong>Answer:</strong> the graph has no inflection points exactly for $\\boxed{b\\le 0}$.</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q4a",
@@ -6576,7 +6576,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "4a",
@@ -6591,8 +6591,8 @@ window.BANK = {
     "<p>In limit (2), write the expression in the form $e^{g(x)}$ and compute the limit of the exponent.</p>"
    ],
    "solution": "<strong>(1)</strong> A limit of the form $\\frac00$; by L'Hôpital's rule:\n\\[ \\lim_{x\\to0}\\frac{\\ln(1+2x)}{\\sin2x-\\sin6x}=\\lim_{x\\to0}\\frac{\\frac{2}{1+2x}}{2\\cos2x-6\\cos6x}=\\frac{2}{2-6}=\\boxed{-\\frac12}. \\]\n(Alternatively, using $\\ln(1+2x)\\sim2x$, $\\sin2x\\sim2x$, $\\sin6x\\sim6x$: $\\frac{2x}{2x-6x}=-\\frac12$.)\n\n<strong>(2)</strong> For $x$ close to $0$ ($x&gt;-\\frac12$, $x\\neq0$) the base is positive, and\n\\[ \\left(\\sqrt{1+2x}\\right)^{-1/x}=e^{-\\frac{\\ln(1+2x)}{2x}}. \\]\nBy the fundamental limit (or L'Hôpital's rule) $\\lim_{x\\to0}\\frac{\\ln(1+2x)}{2x}=1$. By continuity of the exponential function,\n\\[ \\lim_{x\\to0}\\left(\\sqrt{1+2x}\\right)^{\\frac{1}{-x}}=e^{-1}=\\boxed{\\frac1e}. \\]",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q4b",
@@ -6602,7 +6602,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "4b",
@@ -6616,8 +6616,8 @@ window.BANK = {
     "<p>Compare $a$ with the minimum value of $x^2+x$. If the line $y=a$ intersects the parabola, what happens to the one-sided derivatives at the intersection point?</p>"
    ],
    "solution": "<p>The parabola $p(x)=x^2+x=\\left(x+\\frac12\\right)^2-\\frac14$ attains its minimum value $-\\frac14$ at $x=-\\frac12$.</p>\n<ul>\n<li>\nIf $a\\le-\\frac14$: $p(x)\\ge-\\frac14\\ge a$ for every $x$, hence $f(x)\\equiv a$ is constant, and differentiable on all of $\\R$.\n</li>\n<li>\nIf $a&gt;-\\frac14$: the equation $x^2+x=a$ has two roots $x_1&lt;x_2$, $x_{1,2}=\\frac{-1\\mp\\sqrt{1+4a}}{2}$. Then $f(x)=x^2+x$ on $[x_1,x_2]$ and $f(x)=a$ outside it. At the point $x_1$ (where $f$ is continuous) the left derivative is $0$ (a constant function), and the right derivative is $p'(x_1)=2x_1+1=-\\sqrt{1+4a}\\neq0$. The one-sided derivatives are different, hence $f$ is not differentiable at $x_1$ (and similarly at $x_2$, where the left derivative is $\\sqrt{1+4a}$ and the right derivative is $0$).\n</li>\n</ul>\n<p><strong>Answer:</strong> $f$ is differentiable for every real $x$ if and only if $\\boxed{a\\le-\\frac14}$.</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q5a",
@@ -6627,7 +6627,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "5a",
@@ -6642,8 +6642,8 @@ window.BANK = {
     "<p>First find the value of the parameter $t_0$ corresponding to the point $M_0$ (both equations must hold simultaneously), and then use $\\frac{dy}{dx}=\\frac{y'(t)}{x'(t)}$.</p>"
    ],
    "solution": "<strong>Finding the parameter:</strong> from $y=-2$: $t^3-3t+2=0\\iff(t-1)^2(t+2)=0$, i.e. $t=1$ or $t=-2$.\nFrom $x=1$: $3t^2+et-3=e$. For $t=1$: $3+e-3=e$ ✓. For $t=-2$: $12-2e-3=9-2e\\neq e$ (since $e\\neq3$). Hence $t_0=1$.\n\n<strong>The derivative:</strong> by the formula for the derivative of a parametrically given function,\n\\[ x'(t)=\\frac{6t+e}{3t^2+et-3},\\qquad y'(t)=3t^2-3. \\]\nAt $t_0=1$: $x'(1)=\\frac{6+e}{e}\\neq 0$ and $y'(1)=0$, hence\n\\[ \\frac{dy}{dx}\\Big|_{M_0}=\\frac{y'(1)}{x'(1)}=0. \\]\n<strong>Equation of the tangent line:</strong> $y-(-2)=0\\cdot(x-1)$, i.e. $\\boxed{y=-2}$ (a horizontal tangent).",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q5b",
@@ -6653,7 +6653,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "5b",
@@ -6665,8 +6665,8 @@ window.BANK = {
    "question": "<p>Give the definition of an antiderivative of a function $f(x)$. Include an example.</p>",
    "hints": [],
    "solution": "<strong>Definition:</strong> let $f$ be defined on an interval $I$. A function $F$ is called an <strong>antiderivative</strong> of $f$ on $I$ if $F$ is differentiable on $I$ and $F'(x)=f(x)$ for every $x\\in I$.\n(If $F$ is an antiderivative of $f$ on an interval, then all antiderivatives are of the form $F+C$, $C$ a constant.)\n\n<strong>Example:</strong> $F(x)=\\frac{x^3}{3}$ is an antiderivative of $f(x)=x^2$ on $\\R$, since $\\left(\\frac{x^3}{3}\\right)'=x^2$; $\\frac{x^3}{3}+5$ is also an antiderivative of it. Another example: $-\\cos x$ is an antiderivative of $\\sin x$.",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q6a",
@@ -6676,7 +6676,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "6a",
@@ -6689,8 +6689,8 @@ window.BANK = {
    "question": "<p>Write the Maclaurin polynomial of order 2 of the function $y=f(x)$ defined implicitly by: $x^2+x+e^x+2y=0$.</p>",
    "hints": [],
    "solution": "<p>We find $y(0)$, $y'(0)$, $y''(0)$ by implicit differentiation.</p>\n<ul>\n<li>\n$x=0$: $0+0+1+2y(0)=0\\Rightarrow y(0)=-\\frac12$.\n</li>\n<li>\nDifferentiating: $2x+1+e^x+2y'=0\\Rightarrow y'=-\\frac{2x+1+e^x}{2}$, hence $y'(0)=-\\frac{2}{2}=-1$.\n</li>\n<li>\nDifferentiating again: $2+e^x+2y''=0\\Rightarrow y''=-\\frac{2+e^x}{2}$, hence $y''(0)=-\\frac32$.\n</li>\n</ul>\n<p>The Maclaurin polynomial of order 2:\n\\[ P_2(x)=y(0)+y'(0)x+\\frac{y''(0)}{2}x^2=\\boxed{-\\frac12-x-\\frac34x^2}. \\]\n(Check: here one can also isolate $y=-\\frac12(x^2+x+e^x)$ and substitute $e^x=1+x+\\frac{x^2}{2}+\\dots$, which gives the same polynomial.)</p>",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5783/semB-moedA/q6b",
@@ -6700,7 +6700,7 @@ window.BANK = {
    "type": "Exam",
    "semester": "B",
    "moed": "A",
-   "note": "Dr. Peter Samovol",
+   "note": "",
    "officialSolution": false,
    "part": "",
    "number": "6b",
@@ -6714,8 +6714,8 @@ window.BANK = {
     "<p>Check what happens for $x&lt;0$: $e^x$ is very small, and $\\sin x$ reaches $1$. Try the Intermediate Value Theorem on a suitable interval.</p>"
    ],
    "solution": "<strong>No</strong> – the equation has real solutions. Define $g(x)=e^x-\\sin x$, continuous on $\\R$.\n\\[ g(-\\pi)=e^{-\\pi}-0&gt;0,\\qquad g\\left(-\\tfrac{3\\pi}{2}\\right)=e^{-3\\pi/2}-\\sin\\left(-\\tfrac{3\\pi}{2}\\right)=e^{-3\\pi/2}-1&lt;0, \\]\nsince $e^{-3\\pi/2}&lt;1$. By the <strong>Intermediate Value Theorem</strong> there exists $c\\in\\left(-\\frac{3\\pi}2,-\\pi\\right)$ with $g(c)=0$, i.e. $e^c=\\sin c$ (numerically $c\\approx-3.183$). In the same way, every interval $\\left(-\\frac{3\\pi}{2}-2\\pi k,\\,-\\pi-2\\pi k\\right)$ contains a solution, so there are infinitely many solutions (all of them negative: for $x\\ge0$, $e^x\\ge1\\ge\\sin x$ with equality impossible simultaneously, hence there are no non-negative solutions).",
-   "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
-   "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
+   "src": "Moed A, 2022/23, Semester B",
+   "exam": "2022/23 Semester B Moed A"
   },
   {
    "id": "5784/semA-moedA/q1",

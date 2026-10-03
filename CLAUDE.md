@@ -14,7 +14,7 @@
 % type: מבחן            (מבחן | בוחן; default מבחן)
 % semester: א           (א | ב)
 % moed: ב               (א | ב | ג | מיוחד | לדוגמה; optional for a בוחן)
-% note: קבוצת חודיסמן    (optional, distinguishes parallel versions)
+% note: קבוצת חודיסמן    (optional, only to distinguish parallel versions of the same exam; not shown in the question title — do not use it just for the lecturer's name)
 % part: ב               (optional: only if the exam is split into parts חלק א/ב with their own numbering)
 % number: 3             (question number as in the exam)
                          (number restarts within each part: part ב, number 1 — do NOT renumber or add a prefix to the question text)
@@ -27,7 +27,7 @@
 \begin{hint} ... \end{hint}        (zero or more, shown one at a time, easiest first)
 \begin{solution} ... \end{solution}  (exactly one)
 ```
-Supported text-mode LaTeX: `$..$`, `\[..\]`, `align*` and similar, `enumerate`/`itemize` (`\item[label]`), `\textbf`, `\emph`, `\underline`, `\\`. Avoid other packages/macros (no tikz, no `\usepackage`); the site renders math with MathJax, so stay within amsmath/amssymb. Macros `\R \N \Q \Z \eps` are defined. For sub-parts use `\begin{enumerate}` — the site numbers them א, ב, ג automatically. Figures cannot be shown; describe them in words. Piecewise functions: `\begin{cases} x^2 & x<0\\ 1 & x\ge 0 \end{cases}` — no comma before `&` and no `\text{if}`.
+Supported text-mode LaTeX: `$..$`, `\[..\]`, `align*` and similar, `enumerate`/`itemize` (`\item[label]`), `\textbf`, `\emph`, `\underline`, `\\`. Avoid other packages/macros (no tikz, no `\usepackage`); the site renders math with MathJax, so stay within amsmath/amssymb. Macros `\R \N \Q \Z \eps` are defined. All math (inline too) is rendered in `\displaystyle` automatically (MathJax prefilter in `site/index.html`/`site/en/index.html`, `\everymath` in `tex/preamble*.tex`) — no need to write it in the files. For sub-parts use `\begin{enumerate}` — the site numbers them א, ב, ג automatically. Figures cannot be shown; describe them in words. Piecewise functions: `\begin{cases} x^2 & x<0\\ 1 & x\ge 0 \end{cases}` — no comma before `&` and no `\text{if}`.
 
 ## Processing a new exam PDF
 1. Read the whole PDF. Identify every question. Sub-parts (א, ב, ג) stay in one file with `enumerate` **only if they are directly connected** (a later part uses an earlier result, or step-by-step investigation of the same function). Independent sub-parts are split: `q4a.tex`, `q4b.tex` with `% number: 4א` / `4ב`, each with its own points, categories, hints and self-contained solution; the shared stem is copied into each part (plural → singular, "בשאלה זו אין קשר בין הסעיפים" dropped). The question's total points go only in `% points:` (the site shows them in the title) — do **not** write them at the start of the question text. Points of individual sub-items inside one question stay in the text: `\item (5 נק') ...`.
