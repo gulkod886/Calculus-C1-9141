@@ -6485,11 +6485,11 @@ window.BANK = {
    "categories": [
     "definite-integrals"
    ],
-   "question": "<p>(Mandatory question)\nSolve the following integral:\n$\\displaystyle\\int_{-3}^{-1}\\operatorname{arctg}(x+2)\\,dx$</p>",
+   "question": "<p>(Mandatory question)\nSolve the following integral:\n$\\displaystyle\\int_{-3}^{-1}\\arctan(x+2)\\,dx$</p>",
    "hints": [
     "<p>Substitute $t=x+2$ and pay attention to evenness/oddness.</p>"
    ],
-   "solution": "<p>Substitute $t=x+2$, $dt=dx$; the limits: $x=-3\\mapsto t=-1$, $x=-1\\mapsto t=1$:\n\\[ \\int_{-3}^{-1}\\operatorname{arctg}(x+2)\\,dx=\\int_{-1}^{1}\\arctan t\\,dt. \\]\n$\\arctan$ is an odd continuous function, and the interval is symmetric about $0$, hence the integral $\\boxed{=0}$.</p>\n<p>(Directly: by integration by parts $\\int\\arctan t\\,dt=t\\arctan t-\\frac12\\ln(1+t^2)+C$, and between $-1$ and $1$: $\\left(\\frac\\pi4-\\frac12\\ln2\\right)-\\left(\\frac\\pi4-\\frac12\\ln2\\right)=0$.)</p>",
+   "solution": "<p>Substitute $t=x+2$, $dt=dx$; the limits: $x=-3\\mapsto t=-1$, $x=-1\\mapsto t=1$:\n\\[ \\int_{-3}^{-1}\\arctan(x+2)\\,dx=\\int_{-1}^{1}\\arctan t\\,dt. \\]\n$\\arctan$ is an odd continuous function, and the interval is symmetric about $0$, hence the integral $\\boxed{=0}$.</p>\n<p>(Directly: by integration by parts $\\int\\arctan t\\,dt=t\\arctan t-\\frac12\\ln(1+t^2)+C$, and between $-1$ and $1$: $\\left(\\frac\\pi4-\\frac12\\ln2\\right)-\\left(\\frac\\pi4-\\frac12\\ln2\\right)=0$.)</p>",
    "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
    "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
   },

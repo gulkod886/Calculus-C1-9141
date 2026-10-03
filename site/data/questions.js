@@ -6504,11 +6504,11 @@ window.BANK = {
    "categories": [
     "definite-integrals"
    ],
-   "question": "<p>(שאלה חובה)\nפתרו את האינטגרל הבא:\n$\\displaystyle\\int_{-3}^{-1}\\operatorname{arctg}(x+2)\\,dx$</p>",
+   "question": "<p>(שאלה חובה)\nפתרו את האינטגרל הבא:\n$\\displaystyle\\int_{-3}^{-1}\\arctan(x+2)\\,dx$</p>",
    "hints": [
     "<p>הציבו $t=x+2$ ושימו לב לזוגיות/אי-זוגיות.</p>"
    ],
-   "solution": "<p>נציב $t=x+2$, $dt=dx$; הגבולות: $x=-3\\mapsto t=-1$, $x=-1\\mapsto t=1$:\n\\[ \\int_{-3}^{-1}\\operatorname{arctg}(x+2)\\,dx=\\int_{-1}^{1}\\arctan t\\,dt. \\]\n$\\arctan$ פונקציה אי-זוגית ורציפה, והקטע סימטרי סביב $0$, לכן האינטגרל $\\boxed{=0}$.</p>\n<p>(ישירות: באינטגרציה בחלקים $\\int\\arctan t\\,dt=t\\arctan t-\\frac12\\ln(1+t^2)+C$, ובין $-1$ ל-$1$: $\\left(\\frac\\pi4-\\frac12\\ln2\\right)-\\left(\\frac\\pi4-\\frac12\\ln2\\right)=0$.)</p>",
+   "solution": "<p>נציב $t=x+2$, $dt=dx$; הגבולות: $x=-3\\mapsto t=-1$, $x=-1\\mapsto t=1$:\n\\[ \\int_{-3}^{-1}\\arctan(x+2)\\,dx=\\int_{-1}^{1}\\arctan t\\,dt. \\]\n$\\arctan$ פונקציה אי-זוגית ורציפה, והקטע סימטרי סביב $0$, לכן האינטגרל $\\boxed{=0}$.</p>\n<p>(ישירות: באינטגרציה בחלקים $\\int\\arctan t\\,dt=t\\arctan t-\\frac12\\ln(1+t^2)+C$, ובין $-1$ ל-$1$: $\\left(\\frac\\pi4-\\frac12\\ln2\\right)-\\left(\\frac\\pi4-\\frac12\\ln2\\right)=0$.)</p>",
    "src": "מועד א' תשפ\"ג סמסטר ב' (ד\"ר פיטר סמובול)",
    "exam": "תשפ\"ג סמסטר ב מועד א (ד\"ר פיטר סמובול)"
   },

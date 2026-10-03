@@ -4,7 +4,7 @@
 \begin{question}
 (Mandatory question)
 Solve the following integral:
-$\displaystyle\int_{-3}^{-1}\operatorname{arctg}(x+2)\,dx$
+$\displaystyle\int_{-3}^{-1}\arctan(x+2)\,dx$
 \end{question}
 
 \begin{hint}
@@ -13,7 +13,7 @@ Substitute $t=x+2$ and pay attention to evenness/oddness.
 
 \begin{solution}
 Substitute $t=x+2$, $dt=dx$; the limits: $x=-3\mapsto t=-1$, $x=-1\mapsto t=1$:
-\[ \int_{-3}^{-1}\operatorname{arctg}(x+2)\,dx=\int_{-1}^{1}\arctan t\,dt. \]
+\[ \int_{-3}^{-1}\arctan(x+2)\,dx=\int_{-1}^{1}\arctan t\,dt. \]
 $\arctan$ is an odd continuous function, and the interval is symmetric about $0$, hence the integral $\boxed{=0}$.
 
 (Directly: by integration by parts $\int\arctan t\,dt=t\arctan t-\frac12\ln(1+t^2)+C$, and between $-1$ and $1$: $\left(\frac\pi4-\frac12\ln2\right)-\left(\frac\pi4-\frac12\ln2\right)=0$.)
