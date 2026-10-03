@@ -123,7 +123,7 @@ window.BANK = {
     "true-false",
     "derivatives"
    ],
-   "question": "<strong>Prove or disprove:</strong> The following function is differentiable at zero:\n\\[ f(x)=\\begin{cases} x\\sqrt{|x|}\\cos(\\frac{1}{x}), &amp; x\\neq 0\\\\ 0, &amp; x=0\\end{cases}. \\]",
+   "question": "<strong>Prove or disprove:</strong> The following function is differentiable at zero:\n\\[ f(x)=\\begin{cases} x\\sqrt{|x|}\\cos(\\frac{1}{x}) &amp; x\\neq 0\\\\ 0 &amp; x=0\\end{cases}. \\]",
    "hints": [
     "<p>Compute the derivative by the definition, as the limit of the difference quotient, and use the fact that “bounded times tending to zero tends to zero”.</p>"
    ],
@@ -330,7 +330,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<strong>Prove or disprove:</strong> The following function is continuous at zero:\n\\[ f(x)=\\begin{cases} \\frac{\\sin(2x)}{\\sqrt{x+4}-2}, &amp; x\\neq 0\\\\ 5, &amp; x=0\\end{cases}. \\]",
+   "question": "<strong>Prove or disprove:</strong> The following function is continuous at zero:\n\\[ f(x)=\\begin{cases} \\frac{\\sin(2x)}{\\sqrt{x+4}-2} &amp; x\\neq 0\\\\ 5 &amp; x=0\\end{cases}. \\]",
    "hints": [
     "<p>Multiply the numerator and the denominator by the conjugate $\\sqrt{x+4}+2$.</p>"
    ],
@@ -840,7 +840,7 @@ window.BANK = {
    "categories": [
     "continuity"
    ],
-   "question": "<p>Is there a value $c$ such that\n\\[\nf(x)=\\begin{cases}\\dfrac1x, &amp; x\\ge1\\\\[1ex] 2x+c, &amp; x&lt;1\\end{cases}\n\\]\nis continuous at $x=1$?</p>",
+   "question": "<p>Is there a value $c$ such that\n\\[\nf(x)=\\begin{cases}\\dfrac1x &amp; x\\ge1\\\\[1ex] 2x+c &amp; x&lt;1\\end{cases}\n\\]\nis continuous at $x=1$?</p>",
    "hints": [],
    "solution": "<p>$f$ is continuous at $x=1$ if and only if $\\lim_{x\\to1^-}f(x)=\\lim_{x\\to1^+}f(x)=f(1)$.\n\\[\nf(1)=\\frac11=1,\\qquad \\lim_{x\\to1^+}\\frac1x=1,\\qquad \\lim_{x\\to1^-}(2x+c)=2+c.\n\\]\nHence we need $2+c=1$, i.e., $c=-1$.</p>\n<p><strong>Answer:</strong> Yes, for $c=-1$ (and only for it).</p>",
    "src": "Moed B, 2016/17, Semester A",
@@ -1403,7 +1403,7 @@ window.BANK = {
    "hints": [
     "<p>Look for a function that takes only the values $1$ and $-1$ in a “dense” way, similar to the Dirichlet function.</p>"
    ],
-   "solution": "<strong>The statement is false.</strong> (The converse is true: if $f$ is integrable then so is $|f|$.)\n\nA counterexample (for $a&lt;b$):\n\\[ f(x)=\\begin{cases}1, &amp; x\\in\\Q\\\\ -1, &amp; x\\notin\\Q\\end{cases}\\qquad x\\in[a,b]. \\]\nThen $|f(x)|=1$ for every $x$, a constant function, hence integrable, and $\\int_a^b|f|=b-a$.\n\nOn the other hand, $f$ is not Riemann integrable: let $P$ be any partition of $[a,b]$. Every subinterval $[x_{i-1},x_i]$ (of positive length) contains both a rational number and an irrational number (density of $\\Q$ and of $\\R\\setminus\\Q$ in $\\R$), hence $M_i=\\sup f=1$ and $m_i=\\inf f=-1$. Therefore\n\\[ U(f,P)=\\sum M_i\\Delta x_i=b-a,\\qquad L(f,P)=\\sum m_i\\Delta x_i=-(b-a), \\]\nso that $U(f,P)-L(f,P)=2(b-a)$ for every partition, and it cannot be made smaller than an arbitrary $\\eps$. By Riemann's criterion (or: the upper integral $b-a$ differs from the lower integral $-(b-a)$), $f$ is <strong>not</strong> integrable.",
+   "solution": "<strong>The statement is false.</strong> (The converse is true: if $f$ is integrable then so is $|f|$.)\n\nA counterexample (for $a&lt;b$):\n\\[ f(x)=\\begin{cases}1 &amp; x\\in\\Q\\\\ -1 &amp; x\\notin\\Q\\end{cases}\\qquad x\\in[a,b]. \\]\nThen $|f(x)|=1$ for every $x$, a constant function, hence integrable, and $\\int_a^b|f|=b-a$.\n\nOn the other hand, $f$ is not Riemann integrable: let $P$ be any partition of $[a,b]$. Every subinterval $[x_{i-1},x_i]$ (of positive length) contains both a rational number and an irrational number (density of $\\Q$ and of $\\R\\setminus\\Q$ in $\\R$), hence $M_i=\\sup f=1$ and $m_i=\\inf f=-1$. Therefore\n\\[ U(f,P)=\\sum M_i\\Delta x_i=b-a,\\qquad L(f,P)=\\sum m_i\\Delta x_i=-(b-a), \\]\nso that $U(f,P)-L(f,P)=2(b-a)$ for every partition, and it cannot be made smaller than an arbitrary $\\eps$. By Riemann's criterion (or: the upper integral $b-a$ differs from the lower integral $-(b-a)$), $f$ is <strong>not</strong> integrable.",
    "src": "Moed B, 2016/17, Semester B",
    "exam": "2016/17 Semester B Moed B"
   },
@@ -2402,7 +2402,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Is the function\n\\[\nf(x)=\\begin{cases}(1+\\sin2x)^{\\frac{2}{3x}}+\\arctan x\\cdot\\cos\\frac1x, &amp; x\\neq0\\\\ e^{4/3}, &amp; x=0\\end{cases}\n\\]\ncontinuous at the point $x=0$?</p>",
+   "question": "<p>Is the function\n\\[\nf(x)=\\begin{cases}(1+\\sin2x)^{\\frac{2}{3x}}+\\arctan x\\cdot\\cos\\frac1x &amp; x\\neq0\\\\ e^{4/3} &amp; x=0\\end{cases}\n\\]\ncontinuous at the point $x=0$?</p>",
    "hints": [
     "<p>Treat each summand separately: the first is of the form $1^\\infty$; the second is “tends to zero times bounded”.</p>"
    ],
@@ -2628,7 +2628,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[\nf(x)=\\begin{cases}\\dfrac{\\tan(2x)-x}{x+\\sin(2x)}, &amp; -\\frac\\pi4&lt;x&lt;0\\\\[1ex] ax+b, &amp; 0\\le x\\le1\\\\[0.5ex] x^{1/(x-1)}, &amp; x&gt;1\\end{cases}\n\\]\nbe continuous on the domain $x&gt;-\\frac\\pi4$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[\nf(x)=\\begin{cases}\\dfrac{\\tan(2x)-x}{x+\\sin(2x)} &amp; -\\frac\\pi4&lt;x&lt;0\\\\[1ex] ax+b &amp; 0\\le x\\le1\\\\[0.5ex] x^{1/(x-1)} &amp; x&gt;1\\end{cases}\n\\]\nbe continuous on the domain $x&gt;-\\frac\\pi4$?</p>",
    "hints": [
     "<p>The function is continuous inside each of the three intervals; only the junction points $x=0$ and $x=1$ need to be checked. At $x=0$ divide the numerator and denominator by $x$; at $x=1$ this is a limit of the form $1^\\infty$.</p>"
    ],
@@ -3551,7 +3551,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{1-\\cos x}{x\\ln(1+x)}, &amp; -1&lt;x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[1mm] x^{1/(x-1)}, &amp; x&gt;1\\end{cases} \\]\nbe continuous on the domain $x&gt;-1$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{1-\\cos x}{x\\ln(1+x)} &amp; -1&lt;x&lt;0\\\\[2mm] ax+b &amp; 0\\le x\\le1\\\\[1mm] x^{1/(x-1)} &amp; x&gt;1\\end{cases} \\]\nbe continuous on the domain $x&gt;-1$?</p>",
    "hints": [
     "<p>On each of the open intervals the function is continuous as a composition of elementary functions; only $x=0$ and $x=1$ need to be checked.</p>",
     "<p>Compute the limit $\\lim_{x\\to1^+}x^{1/(x-1)}$ using $x^{1/(x-1)}=e^{\\frac{\\ln x}{x-1}}$.</p>"
@@ -3782,7 +3782,7 @@ window.BANK = {
     "func-limits",
     "lhopital"
    ],
-   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{\\sin(3x)}{\\ln(1-x)}, &amp; x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[1mm] \\big(\\cos(x-1)\\big)^{1/(x-1)}, &amp; x&gt;1\\end{cases} \\]\nbe continuous for every real $x$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases}\\dfrac{\\sin(3x)}{\\ln(1-x)} &amp; x&lt;0\\\\[2mm] ax+b &amp; 0\\le x\\le1\\\\[1mm] \\big(\\cos(x-1)\\big)^{1/(x-1)} &amp; x&gt;1\\end{cases} \\]\nbe continuous for every real $x$?</p>",
    "hints": [
     "<p>Continuity needs to be checked only at the junction points $x=0$ and $x=1$. Write the right-hand limit at $1$ in the form $e^{\\frac{\\ln\\cos(x-1)}{x-1}}$.</p>"
    ],
@@ -3940,7 +3940,7 @@ window.BANK = {
    "hints": [
     "<p>Continuity does not imply differentiability. Think of $f(x)=|x|$ at the point $x_0=0$.</p>"
    ],
-   "solution": "<strong>The correct answer: (c)</strong>.\n\nBy definition, $f$ is continuous at $x_0$ if and only if $\\lim_{x\\to x_0}f(x)=f(x_0)$. By the arithmetic of limits (the limit of a constant is the constant itself) this is equivalent to\n\\[\n\\lim_{x\\to x_0}\\bigl(f(x)-f(x_0)\\bigr)=f(x_0)-f(x_0)=0 ,\n\\]\nand in particular the limit in statement (c) exists (and equals 0).\n\n<strong>Why the others are wrong:</strong> consider $f(x)=|x|$ and $x_0=0$. The function is continuous at 0, but\n\\[\n\\frac{f(0+h)-f(0)}{h}=\\frac{|h|}{h}=\\begin{cases}1,&amp; h&gt;0\\\\ -1,&amp; h&lt;0\\end{cases}\n\\]\nhence the one-sided limits of the difference quotient are $1$ and $-1$ and the limit does not exist. Therefore:\n\n<ul>\n<li>\n(b) and (d) are wrong: these are two ways of writing the definition of the derivative $f'(x_0)$, and we showed that the limit does not exist.\n</li>\n<li>\n(a) is wrong: differentiability at $x_0$ means exactly the existence of the limit in (b)/(d).\n</li>\n<li>\n(e) is wrong: $f'(0)$ is not even defined, hence $f'$ is not continuous at 0. (Moreover, even a differentiable function can have a discontinuous derivative, for example $x^2\\sin\\frac1x$ with $f(0)=0$.)\n</li>\n</ul>",
+   "solution": "<strong>The correct answer: (c)</strong>.\n\nBy definition, $f$ is continuous at $x_0$ if and only if $\\lim_{x\\to x_0}f(x)=f(x_0)$. By the arithmetic of limits (the limit of a constant is the constant itself) this is equivalent to\n\\[\n\\lim_{x\\to x_0}\\bigl(f(x)-f(x_0)\\bigr)=f(x_0)-f(x_0)=0 ,\n\\]\nand in particular the limit in statement (c) exists (and equals 0).\n\n<strong>Why the others are wrong:</strong> consider $f(x)=|x|$ and $x_0=0$. The function is continuous at 0, but\n\\[\n\\frac{f(0+h)-f(0)}{h}=\\frac{|h|}{h}=\\begin{cases}1 &amp; h&gt;0\\\\ -1 &amp; h&lt;0\\end{cases}\n\\]\nhence the one-sided limits of the difference quotient are $1$ and $-1$ and the limit does not exist. Therefore:\n\n<ul>\n<li>\n(b) and (d) are wrong: these are two ways of writing the definition of the derivative $f'(x_0)$, and we showed that the limit does not exist.\n</li>\n<li>\n(a) is wrong: differentiability at $x_0$ means exactly the existence of the limit in (b)/(d).\n</li>\n<li>\n(e) is wrong: $f'(0)$ is not even defined, hence $f'$ is not continuous at 0. (Moreover, even a differentiable function can have a discontinuous derivative, for example $x^2\\sin\\frac1x$ with $f(0)=0$.)\n</li>\n</ul>",
    "src": "Quiz, 2019/20, Semester A",
    "exam": "2019/20 Semester A Quiz"
   },
@@ -4469,7 +4469,7 @@ window.BANK = {
     "continuity",
     "multiple-choice"
    ],
-   "question": "<p>Given $h(x)=\\begin{cases}x^2+a, &amp; x&lt;-1\\\\ x^3-8, &amp; x\\ge-1\\end{cases}$. For which value of the parameter $a$ is the function continuous for every real $x$,</p>\n<ol class=\"parts\">\n<li>\n$-1$\n</li>\n<li>\n$-9$\n</li>\n<li>\n$-10$\n</li>\n<li>\n$-8$\n</li>\n<li>\n$-2$\n</li>\n</ol>",
+   "question": "<p>Given $h(x)=\\begin{cases}x^2+a &amp; x&lt;-1\\\\ x^3-8 &amp; x\\ge-1\\end{cases}$. For which value of the parameter $a$ is the function continuous for every real $x$,</p>\n<ol class=\"parts\">\n<li>\n$-1$\n</li>\n<li>\n$-9$\n</li>\n<li>\n$-10$\n</li>\n<li>\n$-8$\n</li>\n<li>\n$-2$\n</li>\n</ol>",
    "hints": [],
    "solution": "<strong>The correct answer: c ($a=-10$).</strong>\n\nOn each of the intervals $x&lt;-1$ and $x&gt;-1$ the function is a polynomial and hence continuous. It remains to check $x=-1$:\n\\[ h(-1)=\\lim_{x\\to-1^+}h(x)=(-1)^3-8=-9,\\qquad \\lim_{x\\to-1^-}h(x)=(-1)^2+a=1+a . \\]\nContinuity at $-1$ holds if and only if $1+a=-9$, i.e. $a=-10$.",
    "src": "Moed C, 2019/20, Semester A",
@@ -4776,7 +4776,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(3x)}{\\ln(1-x)}, &amp; x&lt;0\\\\[2mm] ax+b, &amp; 0\\le x\\le1\\\\[2mm] (\\cos(x-1))^{1/(x-1)}, &amp; 1&lt;x&lt;\\dfrac{\\pi}{2}+1\\end{cases} \\]\nbe continuous for every real $x$ less than $\\frac{\\pi}{2}+1$?</p>",
+   "question": "<p>For which values of the parameters $a$ and $b$ will the function\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(3x)}{\\ln(1-x)} &amp; x&lt;0\\\\[2mm] ax+b &amp; 0\\le x\\le1\\\\[2mm] (\\cos(x-1))^{1/(x-1)} &amp; 1&lt;x&lt;\\dfrac{\\pi}{2}+1\\end{cases} \\]\nbe continuous for every real $x$ less than $\\frac{\\pi}{2}+1$?</p>",
    "hints": [
     "<p>Require the one-sided limits at the junction points $x=0$ and $x=1$ to equal the value of the function. For the limit at $x=1^+$ (of the form $1^\\infty$), pass to $e^{\\ln(\\cdot)}$.</p>"
    ],
@@ -4852,7 +4852,7 @@ window.BANK = {
     "continuity",
     "derivatives"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases} x^3 \\sin(\\frac{5}{x}), &amp; x\\neq 0,\\\\ 0, &amp; x=0 \\end{cases} \\]</p>\n<ol class=\"parts\">\n<li>\n(6 pts) Is $f$ continuous at the point $x=0$ ? Justify.\n</li>\n<li>\n(6 pts) Is $f$ differentiable at the point $x=0$ ? Justify.\n</li>\n<li>\n(5 pts) Is the derivative $f'(x)$ continuous at the point $x=0$ ? Justify.\n</li>\n</ol>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases} x^3 \\sin(\\frac{5}{x}) &amp; x\\neq 0,\\\\ 0 &amp; x=0 \\end{cases} \\]</p>\n<ol class=\"parts\">\n<li>\n(6 pts) Is $f$ continuous at the point $x=0$ ? Justify.\n</li>\n<li>\n(6 pts) Is $f$ differentiable at the point $x=0$ ? Justify.\n</li>\n<li>\n(5 pts) Is the derivative $f'(x)$ continuous at the point $x=0$ ? Justify.\n</li>\n</ol>",
    "hints": [
     "<p>“Tends to zero times bounded”: $\\left|\\sin(\\frac{5}{x})\\right|\\le 1$ for every $x\\neq 0$.</p>",
     "<p>In part (b), compute the derivative at $0$ by definition (limit of the difference quotient). In part (c), compute $f'(x)$ for $x\\neq0$ using the differentiation rules and check the limit as $x\\to 0$.</p>"
@@ -5082,7 +5082,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} \\sin(ax)\\sin(\\frac{1}{x}), &amp; x&lt;0,\\\\ b+3, &amp; x=0,\\\\ x\\ln(x), &amp; x&gt;0 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous at $0$? Justify.</p>",
+   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} \\sin(ax)\\sin(\\frac{1}{x}) &amp; x&lt;0,\\\\ b+3 &amp; x=0,\\\\ x\\ln(x) &amp; x&gt;0 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous at $0$? Justify.</p>",
    "hints": [
     "<p>Compute the one-sided limits at $0$ separately. From the left: “tends to zero times bounded”. From the right: write $x\\ln x=\\frac{\\ln x}{1/x}$ and use L'Hôpital's rule.</p>"
    ],
@@ -5309,7 +5309,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} e^{\\frac1x}, &amp; x&lt;0,\\\\ ax+b-6, &amp; 0\\le x\\le 9,\\\\ \\frac{x^2-8x-9}{3-\\sqrt{x}}, &amp; x&gt;9 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on $\\R$? Justify.</p>",
+   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} e^{\\frac1x} &amp; x&lt;0,\\\\ ax+b-6 &amp; 0\\le x\\le 9,\\\\ \\frac{x^2-8x-9}{3-\\sqrt{x}} &amp; x&gt;9 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on $\\R$? Justify.</p>",
    "hints": [
     "<p>On each of the open intervals, $f$ is a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=9$.</p>",
     "<p>At $x=9$: $x^2-8x-9=(x-9)(x+1)$ and $x-9=(\\sqrt x-3)(\\sqrt x+3)$.</p>"
@@ -5540,7 +5540,7 @@ window.BANK = {
    "hints": [
     "<p>Open the absolute value: what is the value of $f$ for $x&lt;0$? A function has an inverse only if it is one-to-one.</p>"
    ],
-   "solution": "<p>The function is defined for every $x\\in\\R$. Open the absolute value:\n\\[ f(x)=\\begin{cases} 2x, &amp; x\\ge 0\\\\ 0, &amp; x&lt;0.\\end{cases} \\]\nA function has an inverse function (on its domain) if and only if it is one-to-one. But, for example, $f(-1)=f(-2)=0$ while $-1\\neq -2$, hence $f$ is not one-to-one on $\\R$, and <strong>it has no inverse function</strong> on its domain.</p>\n<p>(Remark: if we restrict $f$ to the ray $[0,\\infty)$, there it is $f(x)=2x$, one-to-one and onto $[0,\\infty)$, and the inverse of the restriction is $f^{-1}(y)=\\frac{y}{2}$, $y\\ge 0$. But this is no longer $f$ on its whole domain.)</p>",
+   "solution": "<p>The function is defined for every $x\\in\\R$. Open the absolute value:\n\\[ f(x)=\\begin{cases} 2x &amp; x\\ge 0\\\\ 0 &amp; x&lt;0.\\end{cases} \\]\nA function has an inverse function (on its domain) if and only if it is one-to-one. But, for example, $f(-1)=f(-2)=0$ while $-1\\neq -2$, hence $f$ is not one-to-one on $\\R$, and <strong>it has no inverse function</strong> on its domain.</p>\n<p>(Remark: if we restrict $f$ to the ray $[0,\\infty)$, there it is $f(x)=2x$, one-to-one and onto $[0,\\infty)$, and the inverse of the restriction is $f^{-1}(y)=\\frac{y}{2}$, $y\\ge 0$. But this is no longer $f$ on its whole domain.)</p>",
    "src": "Moed A, 2022/23, Semester A",
    "exam": "2022/23 Semester A Moed A"
   },
@@ -5561,7 +5561,7 @@ window.BANK = {
    "categories": [
     "func-limits"
    ],
-   "question": "<p>For which values of the parameter $a$ does the following function have a limit at $x=0$?\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(2x)}{x}, &amp; x&lt;0 \\\\[2mm] \\dfrac{x+3}{4x+a}, &amp; x\\ge 0 \\end{cases} \\]</p>",
+   "question": "<p>For which values of the parameter $a$ does the following function have a limit at $x=0$?\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(2x)}{x} &amp; x&lt;0 \\\\[2mm] \\dfrac{x+3}{4x+a} &amp; x\\ge 0 \\end{cases} \\]</p>",
    "hints": [
     "<p>Compute the one-sided limits separately and require them to be equal. Pay attention to the case $a=0$.</p>"
    ],
@@ -5853,7 +5853,7 @@ window.BANK = {
    "categories": [
     "continuity"
    ],
-   "question": "<p>Classify the points of discontinuity of the function\n\\[ f(x)=\\begin{cases}\\dfrac{x^3-8}{x-2}, &amp; x\\neq 2\\\\[2mm] 1, &amp; x=2\\end{cases} \\]</p>",
+   "question": "<p>Classify the points of discontinuity of the function\n\\[ f(x)=\\begin{cases}\\dfrac{x^3-8}{x-2} &amp; x\\neq 2\\\\[2mm] 1 &amp; x=2\\end{cases} \\]</p>",
    "hints": [],
    "solution": "<p>For every $x\\neq 2$ the function is a quotient of polynomials with a nonzero denominator, and hence it is continuous there. We check $x=2$. By the difference of cubes formula $x^3-8=(x-2)(x^2+2x+4)$, and hence for $x\\neq2$:\n\\[ f(x)=x^2+2x+4\\ \\Longrightarrow\\ \\lim_{x\\to2}f(x)=4+4+4=12. \\]\nThe limit exists and is finite, but $f(2)=1\\neq 12$. Hence $x=2$ is a <strong>removable</strong> discontinuity (of the first kind, removable): if we redefine $f(2)=12$, the function becomes continuous. This is the only point of discontinuity.</p>",
    "src": "Moed B, 2022/23, Semester A",
@@ -6125,7 +6125,7 @@ window.BANK = {
    "hints": [
     "<p>Open the absolute value: write $f$ separately for $x\\ge 0$ and for $x&lt;0$, and check that it is one-to-one and onto.</p>"
    ],
-   "solution": "<p>The function is defined on all of $\\R$. Open the absolute value:\n\\[ f(x)=\\begin{cases} 3x, &amp; x\\ge 0\\\\ x, &amp; x&lt;0. \\end{cases} \\]\n<strong>One-to-one:</strong> on each of the two domains $f$ is strictly increasing (slope $3$ and slope $1$), and in addition $f(x)\\ge 0$ for $x\\ge0$ and $f(x)&lt;0$ for $x&lt;0$, so values from the two domains cannot coincide. Hence $f$ is strictly increasing on all of $\\R$, and in particular one-to-one.</p>\n<p><strong>Onto:</strong> the image of $[0,\\infty)$ under $3x$ is $[0,\\infty)$, and the image of $(-\\infty,0)$ under $x$ is $(-\\infty,0)$. Hence the image is all of $\\R$.</p>\n<p>It follows that $f:\\R\\to\\R$ is invertible. We find the inverse: if $y\\ge 0$ then $y=3x$ with $x\\ge 0$, i.e. $x=y/3$; if $y&lt;0$ then $y=x$. Hence\n\\[ \\boxed{f^{-1}(y)=\\begin{cases} \\dfrac{y}{3}, &amp; y\\ge 0\\\\[2mm] y, &amp; y&lt;0. \\end{cases}} \\]\n(Check: $f^{-1}(f(x))=x$ on both domains.)</p>",
+   "solution": "<p>The function is defined on all of $\\R$. Open the absolute value:\n\\[ f(x)=\\begin{cases} 3x &amp; x\\ge 0\\\\ x &amp; x&lt;0. \\end{cases} \\]\n<strong>One-to-one:</strong> on each of the two domains $f$ is strictly increasing (slope $3$ and slope $1$), and in addition $f(x)\\ge 0$ for $x\\ge0$ and $f(x)&lt;0$ for $x&lt;0$, so values from the two domains cannot coincide. Hence $f$ is strictly increasing on all of $\\R$, and in particular one-to-one.</p>\n<p><strong>Onto:</strong> the image of $[0,\\infty)$ under $3x$ is $[0,\\infty)$, and the image of $(-\\infty,0)$ under $x$ is $(-\\infty,0)$. Hence the image is all of $\\R$.</p>\n<p>It follows that $f:\\R\\to\\R$ is invertible. We find the inverse: if $y\\ge 0$ then $y=3x$ with $x\\ge 0$, i.e. $x=y/3$; if $y&lt;0$ then $y=x$. Hence\n\\[ \\boxed{f^{-1}(y)=\\begin{cases} \\dfrac{y}{3} &amp; y\\ge 0\\\\[2mm] y &amp; y&lt;0. \\end{cases}} \\]\n(Check: $f^{-1}(f(x))=x$ on both domains.)</p>",
    "src": "Moed C, 2022/23, Semester A",
    "exam": "2022/23 Semester A Moed C"
   },
@@ -6146,7 +6146,7 @@ window.BANK = {
    "categories": [
     "continuity"
    ],
-   "question": "<p>Classify the points of discontinuity of the function\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(2x)}{x}, &amp; x\\neq 0\\\\[2mm] 1, &amp; x=0 \\end{cases} \\]</p>",
+   "question": "<p>Classify the points of discontinuity of the function\n\\[ f(x)=\\begin{cases} \\dfrac{\\sin(2x)}{x} &amp; x\\neq 0\\\\[2mm] 1 &amp; x=0 \\end{cases} \\]</p>",
    "hints": [],
    "solution": "<p>For every $x\\neq 0$ the function is a quotient of continuous functions ($\\sin(2x)$ and $x$) whose denominator does not vanish, hence it is continuous. We check $x=0$: by the fundamental limit $\\lim_{t\\to0}\\frac{\\sin t}{t}=1$,\n\\[ \\lim_{x\\to0}\\frac{\\sin(2x)}{x}=\\lim_{x\\to0}2\\cdot\\frac{\\sin(2x)}{2x}=2. \\]\nThe limit exists and is finite, but $f(0)=1\\neq 2$. Hence $x=0$ is a <strong>removable discontinuity</strong> (it can be fixed by redefining $f(0)=2$), and it is the only point of discontinuity.</p>",
    "src": "Moed C, 2022/23, Semester A",
@@ -6539,7 +6539,7 @@ window.BANK = {
    "hints": [
     "<p>Find where $e^x=3$ and split the integral at that point.</p>"
    ],
-   "solution": "<p>$e^x\\le 3\\iff x\\le\\ln3$ (since $e^x$ is increasing). Hence on $[0,4]$:\n\\[ \\min(e^x,3)=\\begin{cases} e^x, &amp; 0\\le x\\le\\ln 3\\\\ 3, &amp; \\ln3\\le x\\le 4,\\end{cases} \\]\nand note that $\\ln3\\approx1.0986\\in[0,4]$. The function is positive, hence the area is\n\\[ S=\\int_0^{\\ln3}e^x\\,dx+\\int_{\\ln3}^{4}3\\,dx=\\left(e^{\\ln3}-e^0\\right)+3(4-\\ln3)=2+12-3\\ln3=\\boxed{14-3\\ln3}\\approx 10.70. \\]</p>",
+   "solution": "<p>$e^x\\le 3\\iff x\\le\\ln3$ (since $e^x$ is increasing). Hence on $[0,4]$:\n\\[ \\min(e^x,3)=\\begin{cases} e^x &amp; 0\\le x\\le\\ln 3\\\\ 3 &amp; \\ln3\\le x\\le 4,\\end{cases} \\]\nand note that $\\ln3\\approx1.0986\\in[0,4]$. The function is positive, hence the area is\n\\[ S=\\int_0^{\\ln3}e^x\\,dx+\\int_{\\ln3}^{4}3\\,dx=\\left(e^{\\ln3}-e^0\\right)+3(4-\\ln3)=2+12-3\\ln3=\\boxed{14-3\\ln3}\\approx 10.70. \\]</p>",
    "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
    "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
   },
@@ -6760,7 +6760,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[ f(x)=\\begin{cases} \\frac{\\sin(8x)}{x}, &amp; x&lt;0,\\\\[2pt] ax+b, &amp; 0\\le x\\le 4,\\\\[2pt] \\frac{x^2-3x-4}{2-\\sqrt{x}}, &amp; x&gt;4 \\end{cases} \\]\nFor which values of $a,b$ is the function continuous on $\\R$? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[ f(x)=\\begin{cases} \\frac{\\sin(8x)}{x} &amp; x&lt;0,\\\\[2pt] ax+b &amp; 0\\le x\\le 4,\\\\[2pt] \\frac{x^2-3x-4}{2-\\sqrt{x}} &amp; x&gt;4 \\end{cases} \\]\nFor which values of $a,b$ is the function continuous on $\\R$? Justify.</p>",
    "hints": [
     "<p>In each of the three open intervals the function is continuous as a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=4$.</p>",
     "<p>For the limit at $x=4$, factor the numerator $x^2-3x-4=(x-4)(x+1)$ and write $x-4=(\\sqrt x-2)(\\sqrt x+2)$.</p>"
@@ -6940,7 +6940,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}\\frac{\\ln(1+x^2)}{\\sin^2 x}, &amp; x&lt;0,\\\\ 0, &amp; 0\\le x\\le 1,\\\\ \\frac{x}{x^2-1}, &amp; x&gt;1\\end{cases} \\]\nFind all the points of discontinuity of the function, and classify them as removable, jump or essential discontinuities. Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}\\frac{\\ln(1+x^2)}{\\sin^2 x} &amp; x&lt;0,\\\\ 0 &amp; 0\\le x\\le 1,\\\\ \\frac{x}{x^2-1} &amp; x&gt;1\\end{cases} \\]\nFind all the points of discontinuity of the function, and classify them as removable, jump or essential discontinuities. Justify.</p>",
    "hints": [
     "<p>Inside each of the intervals the function is a composition/quotient of elementary functions. Check where a denominator vanishes, and separately the junction points $x=0$ and $x=1$.</p>",
     "<p>Near $0$: $\\ln(1+x^2)\\approx x^2$ and $\\sin^2x\\approx x^2$.</p>"
@@ -7120,7 +7120,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}2^{\\frac{\\sin x}{x}}, &amp; x&lt;0,\\\\ ax+b, &amp; 0\\le x\\le 1,\\\\ \\frac{x^2+x-2}{\\sqrt{x}-1}, &amp; x&gt;1\\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on all of $\\R$? Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}2^{\\frac{\\sin x}{x}} &amp; x&lt;0,\\\\ ax+b &amp; 0\\le x\\le 1,\\\\ \\frac{x^2+x-2}{\\sqrt{x}-1} &amp; x&gt;1\\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on all of $\\R$? Justify.</p>",
    "hints": [
     "<p>Inside each interval the function is continuous; it remains to require continuity at the junction points $x=0$ and $x=1$.</p>",
     "<p>For $x&gt;1$: $x^2+x-2=(x-1)(x+2)$ and $x-1=(\\sqrt x-1)(\\sqrt x+1)$.</p>"
@@ -7906,7 +7906,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sin(8x)}{x}, &amp; x&lt;0,\\\\\nax+b, &amp; 0\\le x\\le 4,\\\\\n\\frac{x^2-3x-4}{2-\\sqrt{x}}, &amp; x&gt;4\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous on $\\R$ ? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sin(8x)}{x} &amp; x&lt;0,\\\\\nax+b &amp; 0\\le x\\le 4,\\\\\n\\frac{x^2-3x-4}{2-\\sqrt{x}} &amp; x&gt;4\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous on $\\R$ ? Justify.</p>",
    "hints": [
     "<p>At every point $x\\neq0,4$ the function is continuous regardless of $a,b$. Check only the junction points $x=0$ and $x=4$.</p>",
     "<p>At $x=4$: $x^2-3x-4=(x-4)(x+1)$; multiply and divide by $2+\\sqrt x$.</p>"
@@ -7984,7 +7984,7 @@ window.BANK = {
     "functions",
     "multiple-choice"
    ],
-   "question": "<p>Let\n\\[\nf(x)=\\begin{cases}\n3x-1, &amp; x&lt;0,\\\\\nx^2, &amp; x&gt;0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is not monotone.\n</li>\n<li>\nThe function is strictly decreasing.\n</li>\n<li>\nThe function is strictly increasing.\n</li>\n<li>\nThe function is monotone but not strictly.\n</li>\n</ol>",
+   "question": "<p>Let\n\\[\nf(x)=\\begin{cases}\n3x-1 &amp; x&lt;0,\\\\\nx^2 &amp; x&gt;0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is not monotone.\n</li>\n<li>\nThe function is strictly decreasing.\n</li>\n<li>\nThe function is strictly increasing.\n</li>\n<li>\nThe function is monotone but not strictly.\n</li>\n</ol>",
    "hints": [
     "<p>Check each piece separately, then compare some value to the left of 0 with some value to the right of 0.</p>"
    ],
@@ -8035,7 +8035,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 0:\n\\[\nf(x)=\\begin{cases}\n\\sin(x)\\cos(\\frac{1}{x}), &amp; x&lt;0,\\\\\n\\frac{1}{1+x^2}, &amp; x\\ge 0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 0.\n</li>\n<li>\nThe function has a removable discontinuity at 0.\n</li>\n<li>\nThe function has a jump discontinuity at 0.\n</li>\n<li>\nThe function has an essential discontinuity at 0.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 0:\n\\[\nf(x)=\\begin{cases}\n\\sin(x)\\cos(\\frac{1}{x}) &amp; x&lt;0,\\\\\n\\frac{1}{1+x^2} &amp; x\\ge 0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 0.\n</li>\n<li>\nThe function has a removable discontinuity at 0.\n</li>\n<li>\nThe function has a jump discontinuity at 0.\n</li>\n<li>\nThe function has an essential discontinuity at 0.\n</li>\n</ol>",
    "hints": [
     "<p>From the left: a function tending to 0 times a bounded function.</p>"
    ],
@@ -8086,7 +8086,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x\\sin(ax)}{1-\\cos x}, &amp; x&lt;0,\\\\\nb, &amp; x=0,\\\\\n\\frac{e^x-1}{xe^x}, &amp; x&gt;0\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $0$ ? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x\\sin(ax)}{1-\\cos x} &amp; x&lt;0,\\\\\nb &amp; x=0,\\\\\n\\frac{e^x-1}{xe^x} &amp; x&gt;0\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $0$ ? Justify.</p>",
    "hints": [
     "<p>$f$ is continuous at 0 if and only if both one-sided limits at 0 exist and are equal to $f(0)=b$.</p>",
     "<p>Use the fundamental limits $\\frac{\\sin t}{t}\\to1$, $\\frac{1-\\cos x}{x^2}\\to\\frac12$, $\\frac{e^x-1}{x}\\to1$ (L'Hôpital's rule is not allowed in the quiz).</p>"
@@ -8214,7 +8214,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 2:\n\\[\nf(x)=\\begin{cases}\n\\frac{1}{1+4^{\\frac{1}{x-2}}}, &amp; x\\neq 2,\\\\\n0, &amp; x=2\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 2.\n</li>\n<li>\nThe function has a removable discontinuity at 2.\n</li>\n<li>\nThe function has a jump discontinuity at 2.\n</li>\n<li>\nThe function has an essential discontinuity at 2.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 2:\n\\[\nf(x)=\\begin{cases}\n\\frac{1}{1+4^{\\frac{1}{x-2}}} &amp; x\\neq 2,\\\\\n0 &amp; x=2\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 2.\n</li>\n<li>\nThe function has a removable discontinuity at 2.\n</li>\n<li>\nThe function has a jump discontinuity at 2.\n</li>\n<li>\nThe function has an essential discontinuity at 2.\n</li>\n</ol>",
    "hints": [
     "<p>Compute the one-sided limits separately: where does $\\frac{1}{x-2}$ tend as $x\\to2^+$ and as $x\\to2^-$?</p>"
    ],
@@ -8240,7 +8240,7 @@ window.BANK = {
     "continuity",
     "derivatives"
    ],
-   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3 \\sin(\\frac{5}{x}), &amp; x \\ne 0, \\\\ 0, &amp; x = 0 \\end{cases} \\]\nIs the function continuous and differentiable at the point $x = 0$? Justify your answer.</p>",
+   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3 \\sin(\\frac{5}{x}) &amp; x \\ne 0, \\\\ 0 &amp; x = 0 \\end{cases} \\]\nIs the function continuous and differentiable at the point $x = 0$? Justify your answer.</p>",
    "hints": [
     "<p>Use the fact that $\\sin$ is bounded: “a null function times a bounded function” tends to zero. For differentiability, compute the limit of the difference quotient by definition.</p>"
    ],
@@ -8469,7 +8469,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} ax^2 + b, &amp; x \\le 0 \\\\ \\dfrac{\\ln(e^x - 1)}{2\\ln x}, &amp; x &gt; 0 \\end{cases} \\]\nFor which values of the parameters $a, b$ is the function continuous at the point $x=0$? Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} ax^2 + b &amp; x \\le 0 \\\\ \\dfrac{\\ln(e^x - 1)}{2\\ln x} &amp; x &gt; 0 \\end{cases} \\]\nFor which values of the parameters $a, b$ is the function continuous at the point $x=0$? Justify.</p>",
    "hints": [
     "<p>Write $e^x - 1 = x \\cdot \\frac{e^x - 1}{x}$ and use the known limit $\\lim_{x\\to 0}\\frac{e^x-1}{x} = 1$.</p>"
    ],
@@ -8699,7 +8699,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x}, &amp; x &lt; 0 \\\\ a\\cdot|x - 1|, &amp; x \\ge 0 \\end{cases} \\]\n(11 pts) For which value of $a$ is the function continuous at the point $x = 0$? Justify.</p>",
+   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x} &amp; x &lt; 0 \\\\ a\\cdot|x - 1| &amp; x \\ge 0 \\end{cases} \\]\n(11 pts) For which value of $a$ is the function continuous at the point $x = 0$? Justify.</p>",
    "hints": [
     "<p>Multiply the numerator and denominator by the conjugate $\\sqrt{x+4} + 2$.</p>"
    ],
@@ -8724,7 +8724,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x}, &amp; x &lt; 0 \\\\ a\\cdot|x - 1|, &amp; x \\ge 0 \\end{cases} \\]\n(10 pts) For which value of $a$ is the function differentiable at the point $x = 1$? Justify.</p>",
+   "question": "<p>For a real number $a$ define a function by\n\\[ f(x) = \\begin{cases} \\dfrac{\\sqrt{x+4} - 2}{x^2 + 2x} &amp; x &lt; 0 \\\\ a\\cdot|x - 1| &amp; x \\ge 0 \\end{cases} \\]\n(10 pts) For which value of $a$ is the function differentiable at the point $x = 1$? Justify.</p>",
    "hints": [
     "<p>Compute the one-sided derivatives of $a|x-1|$ at $x=1$.</p>"
    ],
@@ -8923,7 +8923,7 @@ window.BANK = {
    "categories": [
     "derivatives"
    ],
-   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3\\cdot\\cos(\\frac1x), &amp; x \\neq 0 \\\\ 0, &amp; x = 0 \\end{cases} \\]\nIs the function differentiable at $x = 0$? <br>\nIf so, compute its derivative at this point. If not, justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3\\cdot\\cos(\\frac1x) &amp; x \\neq 0 \\\\ 0 &amp; x = 0 \\end{cases} \\]\nIs the function differentiable at $x = 0$? <br>\nIf so, compute its derivative at this point. If not, justify.</p>",
    "hints": [
     "<p>Use the definition of the derivative and the fact that $|\\cos(\\frac1x)| \\le 1$.</p>"
    ],
@@ -9097,7 +9097,7 @@ window.BANK = {
    "categories": [
     "functions"
    ],
-   "question": "<p>Define a function by\n\\[\nf(x)=\\begin{cases}\nx^3, &amp; x&lt;1,\\\\\n2x+1, &amp; x\\ge 1\n\\end{cases}\n\\]</p>\n<ol class=\"parts\">\n<li>\n(5 pts) Sketch the graph of the function.\n</li>\n<li>\n(15 pts) Is this function invertible as a function from $\\R$ to $\\R$?\n  If so, compute its inverse function $f^{-1}:\\R\\to\\R$.\n  If not, justify.\n</li>\n</ol>",
+   "question": "<p>Define a function by\n\\[\nf(x)=\\begin{cases}\nx^3 &amp; x&lt;1,\\\\\n2x+1 &amp; x\\ge 1\n\\end{cases}\n\\]</p>\n<ol class=\"parts\">\n<li>\n(5 pts) Sketch the graph of the function.\n</li>\n<li>\n(15 pts) Is this function invertible as a function from $\\R$ to $\\R$?\n  If so, compute its inverse function $f^{-1}:\\R\\to\\R$.\n  If not, justify.\n</li>\n</ol>",
    "hints": [
     "<p>A function that is invertible from $\\R$ to $\\R$ must be both one-to-one and onto $\\R$. What is the image of each of the two pieces?</p>"
    ],
@@ -9123,7 +9123,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x^2-4x+3}{x-1}, &amp; x&lt;1,\\\\\na, &amp; x=1,\\\\\n2b\\cdot\\frac{\\ln x}{x-1}, &amp; x&gt;1\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $1$ ? Justify your answer.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x^2-4x+3}{x-1} &amp; x&lt;1,\\\\\na &amp; x=1,\\\\\n2b\\cdot\\frac{\\ln x}{x-1} &amp; x&gt;1\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $1$ ? Justify your answer.</p>",
    "hints": [
     "<p>For the left limit, factor the numerator. For the right limit, substitute $y=x-1$ and use the basic limit $\\frac{\\ln(1+y)}{y}\\to1$.</p>"
    ],
@@ -9250,7 +9250,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 3:\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sqrt{x+7}-\\sqrt{10}}{\\sqrt{x+4}-\\sqrt{7}}, &amp; x&gt;3,\\\\\n\\sqrt{x^2+1}, &amp; x\\le 3\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 3.\n</li>\n<li>\nThe function has a removable discontinuity at 3.\n</li>\n<li>\nThe function has a jump discontinuity at 3.\n</li>\n<li>\nThe function has an essential discontinuity at 3.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 3:\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sqrt{x+7}-\\sqrt{10}}{\\sqrt{x+4}-\\sqrt{7}} &amp; x&gt;3,\\\\\n\\sqrt{x^2+1} &amp; x\\le 3\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 3.\n</li>\n<li>\nThe function has a removable discontinuity at 3.\n</li>\n<li>\nThe function has a jump discontinuity at 3.\n</li>\n<li>\nThe function has an essential discontinuity at 3.\n</li>\n</ol>",
    "hints": [
     "<p>For the right limit, multiply the numerator and the denominator by the conjugates of both expressions: $\\sqrt{x+7}+\\sqrt{10}$ and $\\sqrt{x+4}+\\sqrt7$.</p>"
    ],

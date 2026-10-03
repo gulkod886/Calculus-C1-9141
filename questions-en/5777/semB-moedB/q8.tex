@@ -12,7 +12,7 @@ Look for a function that takes only the values $1$ and $-1$ in a ``dense'' way, 
 \textbf{The statement is false.} (The converse is true: if $f$ is integrable then so is $|f|$.)
 
 A counterexample (for $a<b$):
-\[ f(x)=\begin{cases}1, & x\in\Q\\ -1, & x\notin\Q\end{cases}\qquad x\in[a,b]. \]
+\[ f(x)=\begin{cases}1 & x\in\Q\\ -1 & x\notin\Q\end{cases}\qquad x\in[a,b]. \]
 Then $|f(x)|=1$ for every $x$, a constant function, hence integrable, and $\int_a^b|f|=b-a$.
 
 On the other hand, $f$ is not Riemann integrable: let $P$ be any partition of $[a,b]$. Every subinterval $[x_{i-1},x_i]$ (of positive length) contains both a rational number and an irrational number (density of $\Q$ and of $\R\setminus\Q$ in $\R$), hence $M_i=\sup f=1$ and $m_i=\inf f=-1$. Therefore

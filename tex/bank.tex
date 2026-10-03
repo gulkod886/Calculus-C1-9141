@@ -38,7 +38,7 @@
 
 \begin{question}
 \textbf{הוכיחו או הפריכו:} הפונקציה הבאה גזירה באפס:
-\[ f(x)=\begin{cases} x\sqrt{|x|}\cos(\frac{1}{x}), & x\neq 0\\ 0, & x=0\end{cases}. \]
+\[ f(x)=\begin{cases} x\sqrt{|x|}\cos(\frac{1}{x}) & x\neq 0\\ 0 & x=0\end{cases}. \]
 \end{question}
 
 \begin{hint}
@@ -240,7 +240,7 @@
 
 \begin{question}
 \textbf{הוכיחו או הפריכו:} הפונקציה הבאה רציפה באפס:
-\[ f(x)=\begin{cases} \frac{\sin(2x)}{\sqrt{x+4}-2}, & x\neq 0\\ 5, & x=0\end{cases}. \]
+\[ f(x)=\begin{cases} \frac{\sin(2x)}{\sqrt{x+4}-2} & x\neq 0\\ 5 & x=0\end{cases}. \]
 \end{question}
 
 \begin{hint}
@@ -848,7 +848,7 @@ $\displaystyle\lim_{x\to0}\left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}$
 \begin{question}
 האם קיים ערך $c$ כך ש-
 \[
-f(x)=\begin{cases}\dfrac1x, & x\ge1\\[1ex] 2x+c, & x<1\end{cases}
+f(x)=\begin{cases}\dfrac1x & x\ge1\\[1ex] 2x+c & x<1\end{cases}
 \]
 תהיה רציפה ב-$x=1$?
 \end{question}
@@ -1400,7 +1400,7 @@ $f$ רציפה ב-$0$ אם ורק אם $\lim_{x\to0}f(x)=f(0)=A$. לפי הזה�
 \textbf{הטענה אינה נכונה.} (הכיוון ההפוך נכון: אם $f$ אינטגרבילית אז גם $|f|$.)
 
 דוגמה נגדית (עבור $a<b$):
-\[ f(x)=\begin{cases}1, & x\in\Q\\ -1, & x\notin\Q\end{cases}\qquad x\in[a,b]. \]
+\[ f(x)=\begin{cases}1 & x\in\Q\\ -1 & x\notin\Q\end{cases}\qquad x\in[a,b]. \]
 אז $|f(x)|=1$ לכל $x$, פונקציה קבועה, ולכן אינטגרבילית ו-$\int_a^b|f|=b-a$.
 
 לעומת זאת $f$ אינה אינטגרבילית לפי רימן: תהי $P$ חלוקה כלשהי של $[a,b]$. בכל תת-קטע $[x_{i-1},x_i]$ (באורך חיובי) יש גם מספר רציונלי וגם מספר אי-רציונלי (צפיפות $\Q$ ו-$\R\setminus\Q$ ב-$\R$), ולכן $M_i=\sup f=1$ ו-$m_i=\inf f=-1$. מכאן
@@ -2396,7 +2396,7 @@ $\displaystyle\lim_{x\to3}\frac{\sqrt{x^2-2x+6}-\sqrt{x^2+2x-6}}{x^2-4x+3}$.
 \begin{question}
 האם הפונקציה
 \[
-f(x)=\begin{cases}(1+\sin2x)^{\frac{2}{3x}}+\arctan x\cdot\cos\frac1x, & x\neq0\\ e^{4/3}, & x=0\end{cases}
+f(x)=\begin{cases}(1+\sin2x)^{\frac{2}{3x}}+\arctan x\cdot\cos\frac1x & x\neq0\\ e^{4/3} & x=0\end{cases}
 \]
 רציפה בנקודה $x=0$?
 \end{question}
@@ -2622,7 +2622,7 @@ P_2(x)=1-\frac\pi4-\frac12x-\frac74x^2.
 \begin{question}
 לאילו ערכים של של הפרמטרים $a$ ו-$b$ הפונקציה
 \[
-f(x)=\begin{cases}\dfrac{\tan(2x)-x}{x+\sin(2x)}, & -\frac\pi4<x<0\\[1ex] ax+b, & 0\le x\le1\\[0.5ex] x^{1/(x-1)}, & x>1\end{cases}
+f(x)=\begin{cases}\dfrac{\tan(2x)-x}{x+\sin(2x)} & -\frac\pi4<x<0\\[1ex] ax+b & 0\le x\le1\\[0.5ex] x^{1/(x-1)} & x>1\end{cases}
 \]
 תהיה רציפה בתחום $x>-\frac\pi4$?
 \end{question}
@@ -3483,7 +3483,7 @@ f'(x)&=\lim_{h\to0}\frac{\sqrt{5(x+h)+3}-\sqrt{5x+3}}{h}
 
 \begin{question}
 לאילו ערכים של של הפרמטרים $a$ ו-$b$ הפונקציה
-\[ f(x)=\begin{cases}\dfrac{1-\cos x}{x\ln(1+x)}, & -1<x<0\\[2mm] ax+b, & 0\le x\le1\\[1mm] x^{1/(x-1)}, & x>1\end{cases} \]
+\[ f(x)=\begin{cases}\dfrac{1-\cos x}{x\ln(1+x)} & -1<x<0\\[2mm] ax+b & 0\le x\le1\\[1mm] x^{1/(x-1)} & x>1\end{cases} \]
 תהיה רציפה בתחום $x>-1$?
 \end{question}
 
@@ -3683,7 +3683,7 @@ $y'=2x+a\cos x$, $y''=2-a\sin x$. נקודת פיתול היא נקודה שבה
 
 \begin{question}
 לאילו ערכים של של הפרמטרים $a$ ו-$b$ הפונקציה
-\[ f(x)=\begin{cases}\dfrac{\sin(3x)}{\ln(1-x)}, & x<0\\[2mm] ax+b, & 0\le x\le1\\[1mm] \big(\cos(x-1)\big)^{1/(x-1)}, & x>1\end{cases} \]
+\[ f(x)=\begin{cases}\dfrac{\sin(3x)}{\ln(1-x)} & x<0\\[2mm] ax+b & 0\le x\le1\\[1mm] \big(\cos(x-1)\big)^{1/(x-1)} & x>1\end{cases} \]
 תהיה רציפה לכל $x$ ממשי?
 \end{question}
 
@@ -3894,7 +3894,7 @@ $\cos\left(\frac{\pi}{2}+x+y\right)-y=0$ בסביבה של הנקודה $(0,0)$ 
 
 \textbf{למה האחרות שגויות:} נתבונן ב-$f(x)=|x|$ וב-$x_0=0$. הפונקציה רציפה ב-0, אבל
 \[
-\frac{f(0+h)-f(0)}{h}=\frac{|h|}{h}=\begin{cases}1,& h>0\\ -1,& h<0\end{cases}
+\frac{f(0+h)-f(0)}{h}=\frac{|h|}{h}=\begin{cases}1 & h>0\\ -1 & h<0\end{cases}
 \]
 ולכן הגבולות החד-צדדיים של מנת ההפרשים הם $1$ ו-$-1$ והגבול אינו קיים. מכאן:
 \begin{itemize}
@@ -4570,7 +4570,7 @@ $f$ גזירה בכל $\R$, ולכן נקודות קיצון אפשריות רק
 \subsection*{חלק ב', שאלה 1}
 
 \begin{question}
-נתונה $h(x)=\begin{cases}x^2+a, & x<-1\\ x^3-8, & x\ge-1\end{cases}$. לאיזה ערך של הפרמטר $a$ הפונקציה היא רציפה לכל $x$ ממשי,
+נתונה $h(x)=\begin{cases}x^2+a & x<-1\\ x^3-8 & x\ge-1\end{cases}$. לאיזה ערך של הפרמטר $a$ הפונקציה היא רציפה לכל $x$ ממשי,
 \begin{enumerate}
   \item $-1$
   \item $-9$
@@ -4868,7 +4868,7 @@ $e^x>0$, ולכן $g'>0$ ב-$(-\infty,-1)$, $g'<0$ ב-$(-1,1)$ ו-$g'>0$ ב-$(1,
 
 \begin{question}
 לאילו ערכים של הפרמטרים $a$ ו-$b$ הפונקציה
-\[ f(x)=\begin{cases} \dfrac{\sin(3x)}{\ln(1-x)}, & x<0\\[2mm] ax+b, & 0\le x\le1\\[2mm] (\cos(x-1))^{1/(x-1)}, & 1<x<\dfrac{\pi}{2}+1\end{cases} \]
+\[ f(x)=\begin{cases} \dfrac{\sin(3x)}{\ln(1-x)} & x<0\\[2mm] ax+b & 0\le x\le1\\[2mm] (\cos(x-1))^{1/(x-1)} & 1<x<\dfrac{\pi}{2}+1\end{cases} \]
 תהיה רציפה לכל $x$ ממשי קטן מ-$\frac{\pi}{2}+1$?
 \end{question}
 
@@ -4930,7 +4930,7 @@ $e^x>0$, ולכן $g'>0$ ב-$(-\infty,-1)$, $g'<0$ ב-$(-1,1)$ ו-$g'>0$ ב-$(1,
 
 \begin{question}
 נגדיר פונקציה על ידי
-\[ f(x)=\begin{cases} x^3 \sin(\frac{5}{x}), & x\neq 0,\\ 0, & x=0 \end{cases} \]
+\[ f(x)=\begin{cases} x^3 \sin(\frac{5}{x}) & x\neq 0,\\ 0 & x=0 \end{cases} \]
 \begin{enumerate}
   \item (6 נק') האם $f$ רציפה בנקודה $x=0$ ? נמקו.
   \item (6 נק') האם $f$ גזירה בנקודה $x=0$ ? נמקו.
@@ -5168,7 +5168,7 @@ $2.0625-\frac{3}{1024}<\sqrt[4]{18}<2.0625$.
 
 \begin{question}
 עבור פרמטרים כלשהם $a,b\in\R$ נגדיר פונקציה על ידי
-\[ f(x)=\begin{cases} \sin(ax)\sin(\frac{1}{x}), & x<0,\\ b+3, & x=0,\\ x\ln(x), & x>0 \end{cases} \]
+\[ f(x)=\begin{cases} \sin(ax)\sin(\frac{1}{x}) & x<0,\\ b+3 & x=0,\\ x\ln(x) & x>0 \end{cases} \]
 לאילו ערכים של הפרמטרים $a,b$ הפונקציה רציפה ב-$0$? נמקו.
 \end{question}
 
@@ -5389,7 +5389,7 @@ $x^4+4x^2=x^2(x^2+4)$. הפירוק לשברים חלקיים הוא מהצור�
 
 \begin{question}
 עבור פרמטרים כלשהם $a,b\in\R$ נגדיר פונקציה על ידי
-\[ f(x)=\begin{cases} e^{\frac1x}, & x<0,\\ ax+b-6, & 0\le x\le 9,\\ \frac{x^2-8x-9}{3-\sqrt{x}}, & x>9 \end{cases} \]
+\[ f(x)=\begin{cases} e^{\frac1x} & x<0,\\ ax+b-6 & 0\le x\le 9,\\ \frac{x^2-8x-9}{3-\sqrt{x}} & x>9 \end{cases} \]
 לאילו ערכים של הפרמטרים $a,b$ הפונקציה רציפה ב-$\R$? נמקו.
 \end{question}
 
@@ -5623,7 +5623,7 @@ $x^3-1=(x-1)(x^2+x+1)$, והגורם הריבועי אי-פריק. פרקו לש
 
 \begin{solution}
 הפונקציה מוגדרת לכל $x\in\R$. נפתח את הערך המוחלט:
-\[ f(x)=\begin{cases} 2x, & x\ge 0\\ 0, & x<0.\end{cases} \]
+\[ f(x)=\begin{cases} 2x & x\ge 0\\ 0 & x<0.\end{cases} \]
 לפונקציה קיימת פונקציה הפוכה (בתחום הגדרתה) אם ורק אם היא חד-חד-ערכית. אבל למשל $f(-1)=f(-2)=0$ בעוד $-1\neq -2$, ולכן $f$ אינה חד-חד-ערכית על $\R$, ו\textbf{לא קיימת לה פונקציה הפוכה} בתחום הגדרתה.
 
 (הערה: אם מצמצמים את $f$ לקרן $[0,\infty)$ היא שם $f(x)=2x$, חד-חד-ערכית ועל $[0,\infty)$, וההפוכה של הצמצום היא $f^{-1}(y)=\frac{y}{2}$, $y\ge 0$. אך זו כבר לא $f$ על כל תחום הגדרתה.)
@@ -5633,7 +5633,7 @@ $x^3-1=(x-1)(x^2+x+1)$, והגורם הריבועי אי-פריק. פרקו לש
 
 \begin{question}
 לאילו ערכים של הפרמטר $a$ יש לפונקציה הבאה גבול ב-$x=0$?
-\[ f(x)=\begin{cases} \dfrac{\sin(2x)}{x}, & x<0 \\[2mm] \dfrac{x+3}{4x+a}, & x\ge 0 \end{cases} \]
+\[ f(x)=\begin{cases} \dfrac{\sin(2x)}{x} & x<0 \\[2mm] \dfrac{x+3}{4x+a} & x\ge 0 \end{cases} \]
 \end{question}
 
 \begin{hint}
@@ -5863,7 +5863,7 @@ J&=-e^{-2x}\cos x-\int 2e^{-2x}\cos x\,dx
 
 \begin{question}
 מיינו את נקודות אי הרציפות של הפונקציה
-\[ f(x)=\begin{cases}\dfrac{x^3-8}{x-2}, & x\neq 2\\[2mm] 1, & x=2\end{cases} \]
+\[ f(x)=\begin{cases}\dfrac{x^3-8}{x-2} & x\neq 2\\[2mm] 1 & x=2\end{cases} \]
 \end{question}
 
 \begin{solution}
@@ -6063,13 +6063,13 @@ $c^{-11/4}$ יורדת, ולכן $c^{-11/4}<81^{-11/4}=3^{-11}$, ומכאן
 
 \begin{solution}
 הפונקציה מוגדרת על כל $\R$. נפרק את הערך המוחלט:
-\[ f(x)=\begin{cases} 3x, & x\ge 0\\ x, & x<0. \end{cases} \]
+\[ f(x)=\begin{cases} 3x & x\ge 0\\ x & x<0. \end{cases} \]
 \textbf{חח"ע:} בכל אחד מהתחומים $f$ עולה ממש (שיפוע $3$ ושיפוע $1$), ובנוסף $f(x)\ge 0$ עבור $x\ge0$ ו-$f(x)<0$ עבור $x<0$, כך שערכים משני התחומים אינם יכולים להתלכד. לכן $f$ עולה ממש על כל $\R$, ובפרט חח"ע.
 
 \textbf{על:} התמונה של $[0,\infty)$ תחת $3x$ היא $[0,\infty)$, והתמונה של $(-\infty,0)$ תחת $x$ היא $(-\infty,0)$. לכן התמונה היא כל $\R$.
 
 מכאן ש-$f:\R\to\R$ הפיכה. נמצא את ההפכית: אם $y\ge 0$ אז $y=3x$ עם $x\ge 0$, כלומר $x=y/3$; אם $y<0$ אז $y=x$. לכן
-\[ \boxed{f^{-1}(y)=\begin{cases} \dfrac{y}{3}, & y\ge 0\\[2mm] y, & y<0. \end{cases}} \]
+\[ \boxed{f^{-1}(y)=\begin{cases} \dfrac{y}{3} & y\ge 0\\[2mm] y & y<0. \end{cases}} \]
 (בדיקה: $f^{-1}(f(x))=x$ בשני התחומים.)
 \end{solution}
 
@@ -6077,7 +6077,7 @@ $c^{-11/4}$ יורדת, ולכן $c^{-11/4}<81^{-11/4}=3^{-11}$, ומכאן
 
 \begin{question}
 מיינו את נקודות אי הרציפות של הפונקציה
-\[ f(x)=\begin{cases} \dfrac{\sin(2x)}{x}, & x\neq 0\\[2mm] 1, & x=0 \end{cases} \]
+\[ f(x)=\begin{cases} \dfrac{\sin(2x)}{x} & x\neq 0\\[2mm] 1 & x=0 \end{cases} \]
 \end{question}
 
 \begin{solution}
@@ -6391,7 +6391,7 @@ $\displaystyle\int_2^5\frac{2x-1}{\sqrt{x^2-x}}\,dx$
 
 \begin{solution}
 $e^x\le 3\iff x\le\ln3$ (כי $e^x$ עולה). לכן על $[0,4]$:
-\[ \min(e^x,3)=\begin{cases} e^x, & 0\le x\le\ln 3\\ 3, & \ln3\le x\le 4,\end{cases} \]
+\[ \min(e^x,3)=\begin{cases} e^x & 0\le x\le\ln 3\\ 3 & \ln3\le x\le 4,\end{cases} \]
 ושימו לב ש-$\ln3\approx1.0986\in[0,4]$. הפונקציה חיובית, ולכן השטח הוא
 \[ S=\int_0^{\ln3}e^x\,dx+\int_{\ln3}^{4}3\,dx=\left(e^{\ln3}-e^0\right)+3(4-\ln3)=2+12-3\ln3=\boxed{14-3\ln3}\approx 10.70. \]
 \end{solution}
@@ -6561,7 +6561,7 @@ $e^x\le 3\iff x\le\ln3$ (כי $e^x$ עולה). לכן על $[0,4]$:
 
 \begin{question}
 יהיו $a,b\in\R$. נגדיר פונקציה על ידי
-\[ f(x)=\begin{cases} \frac{\sin(8x)}{x}, & x<0,\\[2pt] ax+b, & 0\le x\le 4,\\[2pt] \frac{x^2-3x-4}{2-\sqrt{x}}, & x>4 \end{cases} \]
+\[ f(x)=\begin{cases} \frac{\sin(8x)}{x} & x<0,\\[2pt] ax+b & 0\le x\le 4,\\[2pt] \frac{x^2-3x-4}{2-\sqrt{x}} & x>4 \end{cases} \]
 לאילו ערכים של $a,b$ הפונקציה רציפה ב-$\R$? נמקו.
 \end{question}
 
@@ -6770,7 +6770,7 @@ $f''(x)=-\frac29x^{-5/3}$, ולכן
 
 \begin{question}
 נגדיר פונקציה על ידי
-\[ f(x)=\begin{cases}\frac{\ln(1+x^2)}{\sin^2 x}, & x<0,\\ 0, & 0\le x\le 1,\\ \frac{x}{x^2-1}, & x>1\end{cases} \]
+\[ f(x)=\begin{cases}\frac{\ln(1+x^2)}{\sin^2 x} & x<0,\\ 0 & 0\le x\le 1,\\ \frac{x}{x^2-1} & x>1\end{cases} \]
 מצאו את כל נקודות אי הרציפות של הפונקציה, ומיינו אותן לאי רציפות מסוג סליקה, קפיצה או עיקרית. נמקו.
 \end{question}
 
@@ -6954,7 +6954,7 @@ $f''(x)=-\frac29x^{-5/3}$, ולכן
 
 \begin{question}
 נגדיר פונקציה על ידי
-\[ f(x)=\begin{cases}2^{\frac{\sin x}{x}}, & x<0,\\ ax+b, & 0\le x\le 1,\\ \frac{x^2+x-2}{\sqrt{x}-1}, & x>1\end{cases} \]
+\[ f(x)=\begin{cases}2^{\frac{\sin x}{x}} & x<0,\\ ax+b & 0\le x\le 1,\\ \frac{x^2+x-2}{\sqrt{x}-1} & x>1\end{cases} \]
 לאילו ערכים של הפרמטרים $a,b$ הפונקציה רציפה בכל $\R$? נמקו.
 \end{question}
 
@@ -7694,9 +7694,9 @@ $f(x)=\sqrt[3]{x^2}=x^{2/3}$ סביב $a=8$, שם $f(8)=4$. $f'(x)=\frac23x^{-1/
 יהיו $a,b\in\R$. נגדיר פונקציה על ידי
 \[
 f(x)=\begin{cases}
-\frac{\sin(8x)}{x}, & x<0,\\
-ax+b, & 0\le x\le 4,\\
-\frac{x^2-3x-4}{2-\sqrt{x}}, & x>4
+\frac{\sin(8x)}{x} & x<0,\\
+ax+b & 0\le x\le 4,\\
+\frac{x^2-3x-4}{2-\sqrt{x}} & x>4
 \end{cases}
 \]
 לאילו ערכים של $a,b$ הפונקציה רציפה ב-$\R$ ? נמקו.
@@ -7801,8 +7801,8 @@ g(-x)=(-x)^2f(-x)-\frac{1}{|-x|+1}=x^2f(x)-\frac{1}{|x|+1}=g(x).
 תהי
 \[
 f(x)=\begin{cases}
-3x-1, & x<0,\\
-x^2, & x>0
+3x-1 & x<0,\\
+x^2 & x>0
 \end{cases}
 \]
 אילו מהטענות הבאות נכונה?
@@ -7865,8 +7865,8 @@ x^2, & x>0
 בדקו רציפות של הפונקציה הבאה בנקודה 0:
 \[
 f(x)=\begin{cases}
-\sin(x)\cos(\frac{1}{x}), & x<0,\\
-\frac{1}{1+x^2}, & x\ge 0
+\sin(x)\cos(\frac{1}{x}) & x<0,\\
+\frac{1}{1+x^2} & x\ge 0
 \end{cases}
 \]
 אילו מהטענות הבאות נכונה?
@@ -7934,9 +7934,9 @@ f(x)=\begin{cases}
 יהיו $a,b\in\R$. נגדיר פונקציה על ידי
 \[
 f(x)=\begin{cases}
-\frac{x\sin(ax)}{1-\cos x}, & x<0,\\
-b, & x=0,\\
-\frac{e^x-1}{xe^x}, & x>0
+\frac{x\sin(ax)}{1-\cos x} & x<0,\\
+b & x=0,\\
+\frac{e^x-1}{xe^x} & x>0
 \end{cases}
 \]
 לאילו ערכים של $a,b$ הפונקציה רציפה ב-$0$ ? נמקו.
@@ -8100,8 +8100,8 @@ $f$ היא הרכבה $f=h\circ u$ של $u(x)=-3x+3$ ו-$h(t)=3^t$. הפונקצ
 בדקו רציפות של הפונקציה הבאה בנקודה 2:
 \[
 f(x)=\begin{cases}
-\frac{1}{1+4^{\frac{1}{x-2}}}, & x\neq 2,\\
-0, & x=2
+\frac{1}{1+4^{\frac{1}{x-2}}} & x\neq 2,\\
+0 & x=2
 \end{cases}
 \]
 אילו מהטענות הבאות נכונה?
@@ -8141,7 +8141,7 @@ f(x)=\begin{cases}
 
 \begin{question}
 נגדיר פונקציה על ידי
-\[ f(x) = \begin{cases} x^3 \sin(\frac{5}{x}), & x \ne 0, \\ 0, & x = 0 \end{cases} \]
+\[ f(x) = \begin{cases} x^3 \sin(\frac{5}{x}) & x \ne 0, \\ 0 & x = 0 \end{cases} \]
 האם הפונקציה רציפה וגזירה בנקודה $x = 0$? נמקו.
 \end{question}
 
@@ -8380,7 +8380,7 @@ $x^3 + 2x^2 + 2x = x(x^2 + 2x + 2)$ והגורם הריבועי אי-פריק. �
 
 \begin{question}
 נגדיר פונקציה על ידי
-\[ f(x) = \begin{cases} ax^2 + b, & x \le 0 \\ \dfrac{\ln(e^x - 1)}{2\ln x}, & x > 0 \end{cases} \]
+\[ f(x) = \begin{cases} ax^2 + b & x \le 0 \\ \dfrac{\ln(e^x - 1)}{2\ln x} & x > 0 \end{cases} \]
 לאילו ערכים של הפרמטרים $a, b$ הפונקציה רציפה בנקודה $x=0$? נמקו.
 \end{question}
 
@@ -8619,7 +8619,7 @@ $y' = e^x e^y$. מכיוון ש-$e^y > 0$ תמיד, אין פתרונות קבו
 
 \begin{question}
 עבור מספר ממשי $a$ נגדיר פונקציה על ידי
-\[ f(x) = \begin{cases} \dfrac{\sqrt{x+4} - 2}{x^2 + 2x}, & x < 0 \\ a\cdot|x - 1|, & x \ge 0 \end{cases} \]
+\[ f(x) = \begin{cases} \dfrac{\sqrt{x+4} - 2}{x^2 + 2x} & x < 0 \\ a\cdot|x - 1| & x \ge 0 \end{cases} \]
 (11 נק') לאיזה ערך של $a$ הפונקציה רציפה בנקודה $x = 0$? נמקו.
 \end{question}
 
@@ -8642,7 +8642,7 @@ $f(0) = a\cdot|0 - 1| = a$, ומימין ל-$0$ (בסביבה ימנית) $f(x) 
 
 \begin{question}
 עבור מספר ממשי $a$ נגדיר פונקציה על ידי
-\[ f(x) = \begin{cases} \dfrac{\sqrt{x+4} - 2}{x^2 + 2x}, & x < 0 \\ a\cdot|x - 1|, & x \ge 0 \end{cases} \]
+\[ f(x) = \begin{cases} \dfrac{\sqrt{x+4} - 2}{x^2 + 2x} & x < 0 \\ a\cdot|x - 1| & x \ge 0 \end{cases} \]
 (10 נק') לאיזה ערך של $a$ הפונקציה גזירה בנקודה $x = 1$? נמקו.
 \end{question}
 
@@ -8836,7 +8836,7 @@ $f(x)^2 = \frac{2x+1}{(x^2 + x)^2}$, רציפה על $[1,4]$. נציב $u = x^2 
 
 \begin{question}
 נגדיר פונקציה על ידי
-\[ f(x) = \begin{cases} x^3\cdot\cos(\frac1x), & x \neq 0 \\ 0, & x = 0 \end{cases} \]
+\[ f(x) = \begin{cases} x^3\cdot\cos(\frac1x) & x \neq 0 \\ 0 & x = 0 \end{cases} \]
 האם הפונקציה גזירה ב-$x = 0$? \\
 אם כן חשבו את הנגזרת שלה בנקודה זו. אם לא נמקו.
 \end{question}
@@ -9012,8 +9012,8 @@ $x^3 + 2x^2 + 2x = x\left((x+1)^2 + 1\right)$. פרקו לשברים חלקיי�
 נגדיר פונקציה על ידי
 \[
 f(x)=\begin{cases}
-x^3, & x<1,\\
-2x+1, & x\ge 1
+x^3 & x<1,\\
+2x+1 & x\ge 1
 \end{cases}
 \]
 \begin{enumerate}
@@ -9049,9 +9049,9 @@ x^3, & x<1,\\
 יהיו $a,b\in\R$. נגדיר פונקציה על ידי
 \[
 f(x)=\begin{cases}
-\frac{x^2-4x+3}{x-1}, & x<1,\\
-a, & x=1,\\
-2b\cdot\frac{\ln x}{x-1}, & x>1
+\frac{x^2-4x+3}{x-1} & x<1,\\
+a & x=1,\\
+2b\cdot\frac{\ln x}{x-1} & x>1
 \end{cases}
 \]
 לאילו ערכים של $a,b$ הפונקציה רציפה ב-$1$ ? נמקו.
@@ -9216,8 +9216,8 @@ $(f\circ g)(x)=f(g(x))=\sqrt[3]{\cos x-\sin x}$, מוגדרת לכל $x\in\R$ (�
 בדקו את רציפות הפונקציה הבאה בנקודה 3:
 \[
 f(x)=\begin{cases}
-\frac{\sqrt{x+7}-\sqrt{10}}{\sqrt{x+4}-\sqrt{7}}, & x>3,\\
-\sqrt{x^2+1}, & x\le 3
+\frac{\sqrt{x+7}-\sqrt{10}}{\sqrt{x+4}-\sqrt{7}} & x>3,\\
+\sqrt{x^2+1} & x\le 3
 \end{cases}
 \]
 אילו מהטענות הבאות נכונה?
