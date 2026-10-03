@@ -4852,7 +4852,7 @@ window.BANK = {
     "continuity",
     "derivatives"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases} x^3 \\sin(\\frac{5}{x}) &amp; x\\neq 0,\\\\ 0 &amp; x=0 \\end{cases} \\]</p>\n<ol class=\"parts\">\n<li>\n(6 pts) Is $f$ continuous at the point $x=0$ ? Justify.\n</li>\n<li>\n(6 pts) Is $f$ differentiable at the point $x=0$ ? Justify.\n</li>\n<li>\n(5 pts) Is the derivative $f'(x)$ continuous at the point $x=0$ ? Justify.\n</li>\n</ol>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases} x^3 \\sin(\\frac{5}{x}) &amp; x\\neq 0\\\\ 0 &amp; x=0 \\end{cases} \\]</p>\n<ol class=\"parts\">\n<li>\n(6 pts) Is $f$ continuous at the point $x=0$ ? Justify.\n</li>\n<li>\n(6 pts) Is $f$ differentiable at the point $x=0$ ? Justify.\n</li>\n<li>\n(5 pts) Is the derivative $f'(x)$ continuous at the point $x=0$ ? Justify.\n</li>\n</ol>",
    "hints": [
     "<p>“Tends to zero times bounded”: $\\left|\\sin(\\frac{5}{x})\\right|\\le 1$ for every $x\\neq 0$.</p>",
     "<p>In part (b), compute the derivative at $0$ by definition (limit of the difference quotient). In part (c), compute $f'(x)$ for $x\\neq0$ using the differentiation rules and check the limit as $x\\to 0$.</p>"
@@ -5082,7 +5082,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} \\sin(ax)\\sin(\\frac{1}{x}) &amp; x&lt;0,\\\\ b+3 &amp; x=0,\\\\ x\\ln(x) &amp; x&gt;0 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous at $0$? Justify.</p>",
+   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} \\sin(ax)\\sin(\\frac{1}{x}) &amp; x&lt;0\\\\ b+3 &amp; x=0\\\\ x\\ln(x) &amp; x&gt;0 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous at $0$? Justify.</p>",
    "hints": [
     "<p>Compute the one-sided limits at $0$ separately. From the left: “tends to zero times bounded”. From the right: write $x\\ln x=\\frac{\\ln x}{1/x}$ and use L'Hôpital's rule.</p>"
    ],
@@ -5309,7 +5309,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} e^{\\frac1x} &amp; x&lt;0,\\\\ ax+b-6 &amp; 0\\le x\\le 9,\\\\ \\frac{x^2-8x-9}{3-\\sqrt{x}} &amp; x&gt;9 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on $\\R$? Justify.</p>",
+   "question": "<p>For arbitrary parameters $a,b\\in\\R$ define a function by\n\\[ f(x)=\\begin{cases} e^{\\frac1x} &amp; x&lt;0\\\\ ax+b-6 &amp; 0\\le x\\le 9\\\\ \\frac{x^2-8x-9}{3-\\sqrt{x}} &amp; x&gt;9 \\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on $\\R$? Justify.</p>",
    "hints": [
     "<p>On each of the open intervals, $f$ is a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=9$.</p>",
     "<p>At $x=9$: $x^2-8x-9=(x-9)(x+1)$ and $x-9=(\\sqrt x-3)(\\sqrt x+3)$.</p>"
@@ -6539,7 +6539,7 @@ window.BANK = {
    "hints": [
     "<p>Find where $e^x=3$ and split the integral at that point.</p>"
    ],
-   "solution": "<p>$e^x\\le 3\\iff x\\le\\ln3$ (since $e^x$ is increasing). Hence on $[0,4]$:\n\\[ \\min(e^x,3)=\\begin{cases} e^x &amp; 0\\le x\\le\\ln 3\\\\ 3 &amp; \\ln3\\le x\\le 4,\\end{cases} \\]\nand note that $\\ln3\\approx1.0986\\in[0,4]$. The function is positive, hence the area is\n\\[ S=\\int_0^{\\ln3}e^x\\,dx+\\int_{\\ln3}^{4}3\\,dx=\\left(e^{\\ln3}-e^0\\right)+3(4-\\ln3)=2+12-3\\ln3=\\boxed{14-3\\ln3}\\approx 10.70. \\]</p>",
+   "solution": "<p>$e^x\\le 3\\iff x\\le\\ln3$ (since $e^x$ is increasing). Hence on $[0,4]$:\n\\[ \\min(e^x,3)=\\begin{cases} e^x &amp; 0\\le x\\le\\ln 3\\\\ 3 &amp; \\ln3\\le x\\le 4\\end{cases} \\]\nand note that $\\ln3\\approx1.0986\\in[0,4]$. The function is positive, hence the area is\n\\[ S=\\int_0^{\\ln3}e^x\\,dx+\\int_{\\ln3}^{4}3\\,dx=\\left(e^{\\ln3}-e^0\\right)+3(4-\\ln3)=2+12-3\\ln3=\\boxed{14-3\\ln3}\\approx 10.70. \\]</p>",
    "src": "Moed A, 2022/23, Semester B (Dr. Peter Samovol)",
    "exam": "2022/23 Semester B Moed A (Dr. Peter Samovol)"
   },
@@ -6760,7 +6760,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[ f(x)=\\begin{cases} \\frac{\\sin(8x)}{x} &amp; x&lt;0,\\\\[2pt] ax+b &amp; 0\\le x\\le 4,\\\\[2pt] \\frac{x^2-3x-4}{2-\\sqrt{x}} &amp; x&gt;4 \\end{cases} \\]\nFor which values of $a,b$ is the function continuous on $\\R$? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[ f(x)=\\begin{cases} \\frac{\\sin(8x)}{x} &amp; x&lt;0\\\\[2pt] ax+b &amp; 0\\le x\\le 4\\\\[2pt] \\frac{x^2-3x-4}{2-\\sqrt{x}} &amp; x&gt;4 \\end{cases} \\]\nFor which values of $a,b$ is the function continuous on $\\R$? Justify.</p>",
    "hints": [
     "<p>In each of the three open intervals the function is continuous as a composition/quotient of continuous functions. It remains to check the junction points $x=0$ and $x=4$.</p>",
     "<p>For the limit at $x=4$, factor the numerator $x^2-3x-4=(x-4)(x+1)$ and write $x-4=(\\sqrt x-2)(\\sqrt x+2)$.</p>"
@@ -6940,7 +6940,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}\\frac{\\ln(1+x^2)}{\\sin^2 x} &amp; x&lt;0,\\\\ 0 &amp; 0\\le x\\le 1,\\\\ \\frac{x}{x^2-1} &amp; x&gt;1\\end{cases} \\]\nFind all the points of discontinuity of the function, and classify them as removable, jump or essential discontinuities. Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}\\frac{\\ln(1+x^2)}{\\sin^2 x} &amp; x&lt;0\\\\ 0 &amp; 0\\le x\\le 1\\\\ \\frac{x}{x^2-1} &amp; x&gt;1\\end{cases} \\]\nFind all the points of discontinuity of the function, and classify them as removable, jump or essential discontinuities. Justify.</p>",
    "hints": [
     "<p>Inside each of the intervals the function is a composition/quotient of elementary functions. Check where a denominator vanishes, and separately the junction points $x=0$ and $x=1$.</p>",
     "<p>Near $0$: $\\ln(1+x^2)\\approx x^2$ and $\\sin^2x\\approx x^2$.</p>"
@@ -7120,7 +7120,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}2^{\\frac{\\sin x}{x}} &amp; x&lt;0,\\\\ ax+b &amp; 0\\le x\\le 1,\\\\ \\frac{x^2+x-2}{\\sqrt{x}-1} &amp; x&gt;1\\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on all of $\\R$? Justify.</p>",
+   "question": "<p>Define a function by\n\\[ f(x)=\\begin{cases}2^{\\frac{\\sin x}{x}} &amp; x&lt;0\\\\ ax+b &amp; 0\\le x\\le 1\\\\ \\frac{x^2+x-2}{\\sqrt{x}-1} &amp; x&gt;1\\end{cases} \\]\nFor which values of the parameters $a,b$ is the function continuous on all of $\\R$? Justify.</p>",
    "hints": [
     "<p>Inside each interval the function is continuous; it remains to require continuity at the junction points $x=0$ and $x=1$.</p>",
     "<p>For $x&gt;1$: $x^2+x-2=(x-1)(x+2)$ and $x-1=(\\sqrt x-1)(\\sqrt x+1)$.</p>"
@@ -7906,7 +7906,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sin(8x)}{x} &amp; x&lt;0,\\\\\nax+b &amp; 0\\le x\\le 4,\\\\\n\\frac{x^2-3x-4}{2-\\sqrt{x}} &amp; x&gt;4\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous on $\\R$ ? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sin(8x)}{x} &amp; x&lt;0\\\\\nax+b &amp; 0\\le x\\le 4\\\\\n\\frac{x^2-3x-4}{2-\\sqrt{x}} &amp; x&gt;4\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous on $\\R$ ? Justify.</p>",
    "hints": [
     "<p>At every point $x\\neq0,4$ the function is continuous regardless of $a,b$. Check only the junction points $x=0$ and $x=4$.</p>",
     "<p>At $x=4$: $x^2-3x-4=(x-4)(x+1)$; multiply and divide by $2+\\sqrt x$.</p>"
@@ -7984,7 +7984,7 @@ window.BANK = {
     "functions",
     "multiple-choice"
    ],
-   "question": "<p>Let\n\\[\nf(x)=\\begin{cases}\n3x-1 &amp; x&lt;0,\\\\\nx^2 &amp; x&gt;0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is not monotone.\n</li>\n<li>\nThe function is strictly decreasing.\n</li>\n<li>\nThe function is strictly increasing.\n</li>\n<li>\nThe function is monotone but not strictly.\n</li>\n</ol>",
+   "question": "<p>Let\n\\[\nf(x)=\\begin{cases}\n3x-1 &amp; x&lt;0\\\\\nx^2 &amp; x&gt;0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is not monotone.\n</li>\n<li>\nThe function is strictly decreasing.\n</li>\n<li>\nThe function is strictly increasing.\n</li>\n<li>\nThe function is monotone but not strictly.\n</li>\n</ol>",
    "hints": [
     "<p>Check each piece separately, then compare some value to the left of 0 with some value to the right of 0.</p>"
    ],
@@ -8035,7 +8035,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 0:\n\\[\nf(x)=\\begin{cases}\n\\sin(x)\\cos(\\frac{1}{x}) &amp; x&lt;0,\\\\\n\\frac{1}{1+x^2} &amp; x\\ge 0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 0.\n</li>\n<li>\nThe function has a removable discontinuity at 0.\n</li>\n<li>\nThe function has a jump discontinuity at 0.\n</li>\n<li>\nThe function has an essential discontinuity at 0.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 0:\n\\[\nf(x)=\\begin{cases}\n\\sin(x)\\cos(\\frac{1}{x}) &amp; x&lt;0\\\\\n\\frac{1}{1+x^2} &amp; x\\ge 0\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 0.\n</li>\n<li>\nThe function has a removable discontinuity at 0.\n</li>\n<li>\nThe function has a jump discontinuity at 0.\n</li>\n<li>\nThe function has an essential discontinuity at 0.\n</li>\n</ol>",
    "hints": [
     "<p>From the left: a function tending to 0 times a bounded function.</p>"
    ],
@@ -8086,7 +8086,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x\\sin(ax)}{1-\\cos x} &amp; x&lt;0,\\\\\nb &amp; x=0,\\\\\n\\frac{e^x-1}{xe^x} &amp; x&gt;0\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $0$ ? Justify.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x\\sin(ax)}{1-\\cos x} &amp; x&lt;0\\\\\nb &amp; x=0\\\\\n\\frac{e^x-1}{xe^x} &amp; x&gt;0\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $0$ ? Justify.</p>",
    "hints": [
     "<p>$f$ is continuous at 0 if and only if both one-sided limits at 0 exist and are equal to $f(0)=b$.</p>",
     "<p>Use the fundamental limits $\\frac{\\sin t}{t}\\to1$, $\\frac{1-\\cos x}{x^2}\\to\\frac12$, $\\frac{e^x-1}{x}\\to1$ (L'Hôpital's rule is not allowed in the quiz).</p>"
@@ -8214,7 +8214,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 2:\n\\[\nf(x)=\\begin{cases}\n\\frac{1}{1+4^{\\frac{1}{x-2}}} &amp; x\\neq 2,\\\\\n0 &amp; x=2\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 2.\n</li>\n<li>\nThe function has a removable discontinuity at 2.\n</li>\n<li>\nThe function has a jump discontinuity at 2.\n</li>\n<li>\nThe function has an essential discontinuity at 2.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 2:\n\\[\nf(x)=\\begin{cases}\n\\frac{1}{1+4^{\\frac{1}{x-2}}} &amp; x\\neq 2\\\\\n0 &amp; x=2\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 2.\n</li>\n<li>\nThe function has a removable discontinuity at 2.\n</li>\n<li>\nThe function has a jump discontinuity at 2.\n</li>\n<li>\nThe function has an essential discontinuity at 2.\n</li>\n</ol>",
    "hints": [
     "<p>Compute the one-sided limits separately: where does $\\frac{1}{x-2}$ tend as $x\\to2^+$ and as $x\\to2^-$?</p>"
    ],
@@ -8240,7 +8240,7 @@ window.BANK = {
     "continuity",
     "derivatives"
    ],
-   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3 \\sin(\\frac{5}{x}) &amp; x \\ne 0, \\\\ 0 &amp; x = 0 \\end{cases} \\]\nIs the function continuous and differentiable at the point $x = 0$? Justify your answer.</p>",
+   "question": "<p>Define a function by\n\\[ f(x) = \\begin{cases} x^3 \\sin(\\frac{5}{x}) &amp; x \\ne 0 \\\\ 0 &amp; x = 0 \\end{cases} \\]\nIs the function continuous and differentiable at the point $x = 0$? Justify your answer.</p>",
    "hints": [
     "<p>Use the fact that $\\sin$ is bounded: “a null function times a bounded function” tends to zero. For differentiability, compute the limit of the difference quotient by definition.</p>"
    ],
@@ -9097,7 +9097,7 @@ window.BANK = {
    "categories": [
     "functions"
    ],
-   "question": "<p>Define a function by\n\\[\nf(x)=\\begin{cases}\nx^3 &amp; x&lt;1,\\\\\n2x+1 &amp; x\\ge 1\n\\end{cases}\n\\]</p>\n<ol class=\"parts\">\n<li>\n(5 pts) Sketch the graph of the function.\n</li>\n<li>\n(15 pts) Is this function invertible as a function from $\\R$ to $\\R$?\n  If so, compute its inverse function $f^{-1}:\\R\\to\\R$.\n  If not, justify.\n</li>\n</ol>",
+   "question": "<p>Define a function by\n\\[\nf(x)=\\begin{cases}\nx^3 &amp; x&lt;1\\\\\n2x+1 &amp; x\\ge 1\n\\end{cases}\n\\]</p>\n<ol class=\"parts\">\n<li>\n(5 pts) Sketch the graph of the function.\n</li>\n<li>\n(15 pts) Is this function invertible as a function from $\\R$ to $\\R$?\n  If so, compute its inverse function $f^{-1}:\\R\\to\\R$.\n  If not, justify.\n</li>\n</ol>",
    "hints": [
     "<p>A function that is invertible from $\\R$ to $\\R$ must be both one-to-one and onto $\\R$. What is the image of each of the two pieces?</p>"
    ],
@@ -9123,7 +9123,7 @@ window.BANK = {
     "continuity",
     "func-limits"
    ],
-   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x^2-4x+3}{x-1} &amp; x&lt;1,\\\\\na &amp; x=1,\\\\\n2b\\cdot\\frac{\\ln x}{x-1} &amp; x&gt;1\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $1$ ? Justify your answer.</p>",
+   "question": "<p>Let $a,b\\in\\R$. Define a function by\n\\[\nf(x)=\\begin{cases}\n\\frac{x^2-4x+3}{x-1} &amp; x&lt;1\\\\\na &amp; x=1\\\\\n2b\\cdot\\frac{\\ln x}{x-1} &amp; x&gt;1\n\\end{cases}\n\\]\nFor which values of $a,b$ is the function continuous at $1$ ? Justify your answer.</p>",
    "hints": [
     "<p>For the left limit, factor the numerator. For the right limit, substitute $y=x-1$ and use the basic limit $\\frac{\\ln(1+y)}{y}\\to1$.</p>"
    ],
@@ -9250,7 +9250,7 @@ window.BANK = {
     "func-limits",
     "multiple-choice"
    ],
-   "question": "<p>Check the continuity of the following function at the point 3:\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sqrt{x+7}-\\sqrt{10}}{\\sqrt{x+4}-\\sqrt{7}} &amp; x&gt;3,\\\\\n\\sqrt{x^2+1} &amp; x\\le 3\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 3.\n</li>\n<li>\nThe function has a removable discontinuity at 3.\n</li>\n<li>\nThe function has a jump discontinuity at 3.\n</li>\n<li>\nThe function has an essential discontinuity at 3.\n</li>\n</ol>",
+   "question": "<p>Check the continuity of the following function at the point 3:\n\\[\nf(x)=\\begin{cases}\n\\frac{\\sqrt{x+7}-\\sqrt{10}}{\\sqrt{x+4}-\\sqrt{7}} &amp; x&gt;3\\\\\n\\sqrt{x^2+1} &amp; x\\le 3\n\\end{cases}\n\\]\nWhich of the following statements is true?</p>\n<ol class=\"parts\">\n<li>\nThe function is continuous at 3.\n</li>\n<li>\nThe function has a removable discontinuity at 3.\n</li>\n<li>\nThe function has a jump discontinuity at 3.\n</li>\n<li>\nThe function has an essential discontinuity at 3.\n</li>\n</ol>",
    "hints": [
     "<p>For the right limit, multiply the numerator and the denominator by the conjugates of both expressions: $\\sqrt{x+7}+\\sqrt{10}$ and $\\sqrt{x+4}+\\sqrt7$.</p>"
    ],

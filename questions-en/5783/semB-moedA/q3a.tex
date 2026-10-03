@@ -11,7 +11,7 @@ Find where $e^x=3$ and split the integral at that point.
 
 \begin{solution}
 $e^x\le 3\iff x\le\ln3$ (since $e^x$ is increasing). Hence on $[0,4]$:
-\[ \min(e^x,3)=\begin{cases} e^x & 0\le x\le\ln 3\\ 3 & \ln3\le x\le 4,\end{cases} \]
+\[ \min(e^x,3)=\begin{cases} e^x & 0\le x\le\ln 3\\ 3 & \ln3\le x\le 4\end{cases} \]
 and note that $\ln3\approx1.0986\in[0,4]$. The function is positive, hence the area is
 \[ S=\int_0^{\ln3}e^x\,dx+\int_{\ln3}^{4}3\,dx=\left(e^{\ln3}-e^0\right)+3(4-\ln3)=2+12-3\ln3=\boxed{14-3\ln3}\approx 10.70. \]
 \end{solution}
